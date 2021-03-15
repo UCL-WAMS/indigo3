@@ -1,0 +1,81 @@
+/* INDIGO RESET -------------------------------
+---------------------------------------------- */
+
+
+html {
+  box-sizing: border-box;
+  overflow-x: hidden;
+  // NEEDED FOR PSEUDO CLASS BREAKOUTS FROM MAIN CONTENT AREAS
+  -ms-overflow-style: scrollbar;
+  //BOOTSTRAP RESET
+}
+
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+      overflow-x: hidden;
+    	overflow-wrap: break-word;
+  		word-wrap: break-word;
+  		word-break: break-all;
+  		word-break: break-word;
+	    -ms-hyphens: auto;
+  		-moz-hyphens: auto;
+  		-webkit-hyphens: auto;
+  		hyphens: auto;
+  }
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, var,
+b, i, fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+}
+
+article,
+aside,
+figure,
+footer,
+header,
+aside,
+main,
+nav {
+  display: block;
+}
+
+
+embed,
+iframe,
+img,
+object,
+video {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+}
+
+
+hr {
+	display: block;
+	height: 1px;
+	border: 0;
+	border-top: 1px solid #cccccc;
+	margin: 1em 0;
+	padding: 0;
+	clear: both;
+}
+

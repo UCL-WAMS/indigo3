@@ -1,0 +1,117 @@
+
+/*-------------------------------------------------------------------
+
+// PATTERNS TO BE DEFINED AS GENERIC TYPES AND MOVED TO OWN PARTIALS
+
+-------------------------------------------------------------------*/
+
+
+		.right-page-nav {
+			background: #E6F5F6 ;
+			border-top: 2px solid $brightblue;
+			padding: 30px; 
+			margin-bottom: 40px;
+			position: -webkit-sticky;
+			position: sticky;
+  			top: 0;	
+  				ul {
+				list-style-type: none;
+				padding: 0 0 0 15px;
+				margin: 0;
+			}
+			li {margin-bottom: .5em;}
+		}
+
+
+
+
+
+
+
+// KEY INFORMATION PANEL WOULD THIS BE USED ANYWHERE ELSE?------------------------------
+
+.key-info {
+	margin-bottom: 40px;
+		.tabs__navigation {
+			margin-bottom: 40px;
+			 a {
+			 	border-radius: 0 5px 5px  0; 
+			 	border: solid #0D68CF 1px;
+				padding: 4px 6px;
+				text-decoration: none;
+				display: block;
+			 	&[href="#tab-1"] {
+			 		border-radius: 5px 0  0 5px;
+			 	}
+			}
+		}
+		.two-col-layout__left {
+			background-color: #EBEBEB;
+			padding-top: 40px;
+			}
+		.two-col-layout__right {
+			background-color: #F5F5F5; 
+			padding-top: 40px;
+			}
+		.key-info__icon, 
+		.key-info__text {
+			margin-bottom: 30px;
+			}
+		.key-info__text p { 
+			padding-left: 12px; 
+			margin: 0;
+		}
+		.key-info__content {
+			font-weight: bold;
+		}
+		.key-info__label , 
+		.key-info__note {
+			font-size: .7em; 
+			margin: 0; 
+			padding-left: 3px;
+		}
+}
+
+
+
+
+// PANELS AT BOTTOM OF PAGE MOVE TO PATTERNS EVENTUALLY
+
+
+.similar-courses {
+	padding-top: 60px; 
+	padding-bottom: 60px;
+	.more-link {
+		padding: 20px; 
+		background-color: $brightblue;
+	}
+}
+		
+.questions  {
+	background-color: #F5F5F5; 
+	padding-top: 80px; 
+	padding-bottom: 70px;
+}
+
+.questions__details-content > div {
+ 	margin-bottom: 20px;
+  		.col-md-4 {
+  			background-color: #fff;
+  		}
+  		img {
+  			float: left;
+  			width: 40%; 
+  			margin-bottom: 0;
+  		}
+}
+.questions__details-content-text  {
+		float: left; 
+		width: 60%;
+		padding: 15px 0 0 15px; 
+		p {
+			margin: 0 0 0 15px;
+		}
+	}
+
+	
+

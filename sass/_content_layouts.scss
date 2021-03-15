@@ -1,0 +1,35 @@
+	
+// CUSTOM SITE WIDTH BOOTSTRAP CONTAINER
+// see also bootstrap variable $container-max-widths(xl)
+
+.site-width.container { 
+	overflow-x: initial;
+	max-width: 1472px;
+	min-width: 320px; 
+	width: 100%; 
+	margin: 0 auto;  
+			}
+
+
+@include media-breakpoint-up(sm){
+	.site-width.container {
+   		width: 90%;
+   		}
+ }
+
+/* TWO COLUMN LAYOUT */
+/* LEFT COLUMN */
+
+.main-content {
+	color: #1F1F1F; /* CL suggested colour not accessable with link colour*/
+	width: 100%; 
+	padding-right: 10.9%;
+	margin-top: 50px;
+}
+
+/*	RIGHT COLUMN */
+
+.right-column {
+	padding-top: 50px;
+}
+
