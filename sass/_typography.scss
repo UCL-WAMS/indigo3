@@ -15,17 +15,28 @@ p, ul, ol, dl, blockquote, hgroup, address, table, fieldset, figure, pre, img, .
 
 a {
 	color: $linkblue;
-	&:focus {
-		border: #86B3E7 solid 1px;
-	}
+	line-height: normal;
+	// &:focus {
+	// 	border: #86B3E7 solid 1px;
+	// 	padding: 5px;
+	// 	} NEEDS FUTHER WORK IF INCLUDE
 }
+
+
 
 /*-------------------------------------------*/
 
+.main-content H1 {
+	margin-top: 30px;
+}
 
 .main-content H2 {
 	border-top: solid 1px #333;
 	padding-top: 30px;
 	margin-top: 30px;
-
 }
+
+
+/*------------------------------------------------ */
+
+

@@ -25,6 +25,7 @@
 		a {
 			font-size: .8em; 
 			color: #EA7600;
+			text-decoration: none;
 			}
 @include media-breakpoint-down(xs) {
 			display:none;
