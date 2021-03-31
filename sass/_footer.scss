@@ -1,3 +1,4 @@
+
 .footer{
 	background: #333;
 		.footer__content {
@@ -32,6 +33,44 @@
 			 }
 			
 }
+
+
+// BOOTSTRAP LAYOUT
+
+.footer__card-one,
+.footer__card-two,
+.footer__card-three {
+
+@include media-breakpoint-up(sm) {
+	position: relative;
+	width: 100%;
+	padding-right: 15px;
+	padding-left: 15px;
+	flex-basis: 0;
+	flex-grow: 1;
+	max-width: 100%;
+  }
+
+
+}
+
+
+.footer__strap{
+
+@include media-breakpoint-up(md) {
+	position: relative;
+	width: 100%;
+	padding-right: 15px;
+	padding-left: 15px;
+	flex-basis: 0;
+	flex-grow: 1;
+	max-width: 100%;
+  }
+
+
+}
+
+// BOOTSTRAP LAYOUT ENDS
 		
 
 .bottom-menu {

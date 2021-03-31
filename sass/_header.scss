@@ -19,7 +19,7 @@
 		svg, span {
 			vertical-align: middle;
 		}
-@include media-breakpoint-up(sm) {
+@include media-breakpoint-up(md) {
 	left: 42.8%;
 	.top-menu-tab__sm {
 		display: none;
@@ -75,32 +75,45 @@
 		.header__menu {
 			color: white;
 			display: inline-block;
-			font-weight: bold;
-			line-height: 1;
+			line-height: 1.2;
 			display: flex;
+			font-weight: bold;
 			align-items: center;
 			width:100%;
 			 	p {
 				display: inline-block; 
-				padding-left: 10px; 
+				padding: 5px 0 5px 10px; 
 				margin: 0; 
-				font-size: .8em; 
-				width:75px;
+				font-size: .9em; 
+				width: 75px;
+				.header-menu__dt-text {
+					display: none;
+					}
+				.header-menu__sm-text {
+					text-transform: capitalize;
+				}
 				}
 			}
 		#logo {
 		 	background: $brightblue;
 		 	min-height: 20px;
 		 	min-width: 100px;
+		 	margin-top: 10px;
 		}
 @include media-breakpoint-up(sm) {
 	.header__menu {
+		line-height: 1.7;
 		p {
 			font-size: 1em;
 			width: auto;
+			.header-menu__dt-text {
+				display: inline;
+				}
+			.header-menu__sm-text {
+				text-transform: none;
+				}
 			}
-		line-height: 1.7;
-	}
+		}
 }
 }
 .column-top  {
@@ -124,7 +137,7 @@
   				left:100%;  
 			}
 	}
-@include media-breakpoint-down(xs) { 
+@include media-breakpoint-down(sm) { 
 	display: none;
 	 }
 }	

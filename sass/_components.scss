@@ -99,32 +99,35 @@ ucl-widget[type="youtube"], ucl-widget[type="vimeo"]{
 
 // INLINE LINK IN TYPOGRAPHY
 
-// ARROW BACK LINK
+// ARROW BACK AND FORWARD LINK
 
-.back-link__svg {
+.back-link__svg, 
+.forward-link__svg  {
 	display: inline-block;
 	vertical-align: middle; 
 	margin-right: 5px;
+	&:hover {
+		color: $linkbluehover;
+	}
 	} 
 
 
-a.back-link {
+a.back-link, 
+a.forward-link {
 	text-decoration: none;
 	display: inline-block;
 	vertical-align: middle;
-	&:focus {
-	border: none;
-	padding:0;
-	}
 }
 
 
+// CARD LINK
 
 a.card-link  {
 	background: $brightblue;
 	color: #ffffff;
 	display: block;
 	font-size: 1.25em;
+	line-height: 1.5em;
 	text-decoration: none;
 	width: 100%;
 	max-width: 100%;
@@ -132,14 +135,13 @@ a.card-link  {
 	padding: 30px 30px 40px 30px;
 	font-weight: bold;
 		svg {
-			display:block; 
+			display: block; 
 			margin-bottom: 30px;
 		}
 
-	@include media-breakpoint-up(sm) { 
-		padding: 12px 15px 14px 12px;
-		font-size: .8em; 
-		font-weight: normal;
+@include media-breakpoint-up(sm) { 
+	padding: 12px 15px 14px 12px;
+	font-size: .8em; 
 		svg {
 			width: 35px;
 			height: 35px;
@@ -147,25 +149,28 @@ a.card-link  {
 			}
 	}
 	
-
-	height:auto;@include media-breakpoint-up(md) { 
-		padding: 20px;
-		font-size: .8em; 
-		font-weight: normal;
-			svg {
-				width: 50px; 
-				height: 50px;
-				margin-bottom: 20px;
+@include media-breakpoint-up(md) {
+		svg {
+			width: 50px;
+			height: 50px;
+			margin-bottom: 30px;
 			}
-
 	}
-	
-	@include media-breakpoint-up(lg) { 
+
+@include media-breakpoint-up (lg) {
 		padding: 30px 30px 40px 30px;
 		font-size: 1.25em; 
+		line-height: 1.5em;
 		font-weight: bold;
+		svg {
+			width: 70px;
+			height: 70px;
+			margin-bottom: 30px;
+			}
+
 		}
 
+	
 }
 
 

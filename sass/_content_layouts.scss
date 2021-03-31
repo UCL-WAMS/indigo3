@@ -1,5 +1,7 @@
 	
-// CUSTOM SITE WIDTH BOOTSTRAP CONTAINER
+/*----------------------------------- 
+CUSTOM SITE WIDTH BOOTSTRAP CONTAINER
+--------------------------------*/
 // see also bootstrap variable $container-max-widths(xl)
 
 .site-width.container { 
@@ -8,18 +10,40 @@
 	min-width: 320px; 
 	width: 100%; 
 	margin: 0 auto;  
-			}
-
 
 @include media-breakpoint-up(sm){
-	.site-width.container {
-   		width: 90%;
-   		}
+	width: 90%;   	 
  }
+}
 
-/* TWO COLUMN LAYOUT */
-/* LEFT COLUMN */
+/* ----------------MAIN PAGE TEMPLATE TWO COLUMN LAYOUT  ----------------- */
 
+
+// TWO COLUMN LAYOUT SMALL RIGHT COLUMN
+
+
+// LEFT COLUMN 
+
+
+.content-columns  {
+
+	.left-column {
+	 	@include make-col-ready();
+
+		@include media-breakpoint-up(sm) {
+   		@include make-col(9);
+  		}
+	}
+
+	.right-column {	
+		@include make-col-ready();
+
+		@include media-breakpoint-up(sm) {
+   		@include make-col(3);
+ 		}
+	}
+
+}
 .main-content {
 	color: #333333;
 	width: 100%; 
@@ -27,9 +51,12 @@
 	margin-top: 50px;
 }
 
-/*	RIGHT COLUMN */
+ // RIGHT COLUMN 
 
 .right-column {
 	padding-top: 50px;
 }
+
+
+
 

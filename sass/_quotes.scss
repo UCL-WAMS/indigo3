@@ -1,0 +1,81 @@
+
+// IN TEXT FLOW QUOTE.
+
+.blockquote.container {
+	padding:0;
+}
+
+
+.blockquote  blockquote {
+		color: #AC145A;
+		line-height: 1.5;
+		position: relative;
+		margin-top: 3em;
+		margin-left: 0;	
+		padding: 0;
+
+			@include media-breakpoint-up(sm) {
+			margin: 1em 0;
+			}
+		&:before {
+		content: "\275D";
+		font-size: 6em;
+		position: absolute;
+		top: -85px;
+		@include media-breakpoint-up(sm) {
+			top: -25px;	
+		}
+	
+		}
+		
+		.blockquote-quote , .blockquote-detail{
+			margin-left: 0;
+		@include media-breakpoint-up(sm) {
+			margin-left: 18%;
+		}
+			
+					
+		}
+		
+		p.blockquote-quote {
+			float: right;
+			position: relative;
+			font-size: 1.25em;
+		@include media-breakpoint-up(sm) {
+			font-size: 1.5em;
+		}
+			
+		} 
+		
+		.blockquote-detail {
+			clear:both; 
+			}
+
+
+		img{
+			height: 80px; 
+			width: 80px; 
+			border-radius: 50%;
+			display: inline-block;
+			margin-right: 25px;
+			margin-bottom: 0;
+			vertical-align: middle;
+
+
+		}
+
+		.blockquote-detail__text {
+				display: inline-block; 
+				vertical-align:  middle;
+					p.blockquote-detail__name {
+				font-weight: bold;
+				}
+					p{
+				margin-bottom: .25em;
+				font-size: 1em;
+				}
+		}
+
+
+	} 	
+

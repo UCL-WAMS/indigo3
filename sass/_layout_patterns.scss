@@ -28,7 +28,8 @@
 
 
 
-// KEY INFORMATION PANEL WOULD THIS BE USED ANYWHERE ELSE?------------------------------
+/* -------------------KEY INFORMATION PANEL WOULD THIS BE USED ANYWHERE ELSE?
+------------------------------ */
 
 .key-info {
 	margin-bottom: 40px;
@@ -75,7 +76,10 @@
 
 
 
-// PANELS AT BOTTOM OF PAGE MOVE TO PATTERNS EVENTUALLY
+/* ----------------- 
+PANELS AT BOTTOM OF PAGE - 
+MOVE TO PATTERNS EVENTUALLY 
+-------------------------- */
 
 
 .similar-courses {
@@ -110,4 +114,20 @@
 	}
 
 	
+
+/* -------------  TWO COLUMN SUB-LAYOUT  ---------------------- */
+
+.container.six-by-six {
+	padding: 0;
+}
+
+.six-by-six__left,
+.six-by-six__right {
+	 @include make-col-ready();
+
+	 @include media-breakpoint-up(md) {
+   	 @include make-col(6);
+  }
+	padding: 0;
+}
 

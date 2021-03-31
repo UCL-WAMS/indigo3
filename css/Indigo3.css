@@ -18,7 +18,7 @@ body {
   word-break: break-word; }
 
 html, body, div, span, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+h1, h2, h3, h4, h5, h6, p, pre,
 abbr, address, cite, code,
 del, dfn, em, img, ins, kbd, q, samp,
 small, strong, var,
@@ -69,12 +69,6 @@ hr {
   .clearfix:after {
     clear: both; }
 
-/*!
- * Bootstrap Grid v4.6.0 (https://getbootstrap.com/)
- * Copyright 2011-2021 The Bootstrap Authors
- * Copyright 2011-2021 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
- */
 .container,
 .container-fluid,
 .container-sm,
@@ -2634,7 +2628,7 @@ hr {
   padding-left: 15px;
   flex: 0 0 50%;
   max-width: 50%; }
-  @media (min-width: 576px) {
+  @media (min-width: 768px) {
     .header__menu {
       flex: 0 0 75%;
       max-width: 75%; } }
@@ -2646,7 +2640,7 @@ hr {
   padding-left: 15px;
   flex: 0 0 50%;
   max-width: 50%; }
-  @media (min-width: 576px) {
+  @media (min-width: 768px) {
     .header__logo {
       flex: 0 0 25%;
       max-width: 25%; } }
@@ -2667,6 +2661,83 @@ hr {
   flex: 0 0 25%;
   max-width: 25%; }
 
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; }
+
+p, ul, ol, dl, blockquote, hgroup, address, table, fieldset, figure, pre, img, .page-head, .media, .island, .islet, .pill, .responsive-container, .advert, .menu-block, .box, .input-group, .accordion, .video-wrap {
+  margin-bottom: 1.5em; }
+
+a {
+  color: #0D68CF;
+  line-height: normal; }
+  a:hover {
+    color: #094991; }
+
+h1 {
+  font-size: 1.875em;
+  line-height: 2.5;
+  margin-bottom: 1.5em; }
+
+h2 {
+  font-size: 1.5em;
+  line-height: 1.8;
+  margin-bottom: 1.5em; }
+
+h3 {
+  font-size: 1.25em;
+  line-height: 1.5;
+  margin-bottom: 1.5em; }
+
+h4 {
+  font-size: 1.125em;
+  line-height: 1.35;
+  margin-bottom: 1.5em; }
+
+h5 {
+  font-size: 1em;
+  line-height: 1.2;
+  margin-bottom: 1.5em; }
+
+.small-header,
+h6 {
+  font-size: 0.75em;
+  line-height: 0 0.9;
+  margin-bottom: 1.5em; }
+
+/*-----  TEMPLATE CONTENT ---------- 
+--------------------------------------*/
+.site-content p {
+  line-height: 150%;
+  font-size: 1em; }
+  @media (min-width: 1200px) {
+    .site-content p {
+      line-height: 150%;
+      font-size: 1.125em; } }
+
+.site-content h1 {
+  margin: 1.562 0; }
+
+.main-content h2 {
+  border-top: solid 1px #333;
+  padding-top: 30px;
+  margin-top: 30px;
+  clear: both; }
+
+/*------------------------------------------------ */
+/*----------------------------------- 
+CUSTOM SITE WIDTH BOOTSTRAP CONTAINER
+--------------------------------*/
+.site-width.container {
+  overflow-x: initial;
+  max-width: 1472px;
+  min-width: 320px;
+  width: 100%;
+  margin: 0 auto; }
+  @media (min-width: 576px) {
+    .site-width.container {
+      width: 90%; } }
+
+/* ----------------MAIN PAGE TEMPLATE TWO COLUMN LAYOUT  ----------------- */
 .content-columns .left-column {
   position: relative;
   width: 100%;
@@ -2687,71 +2758,12 @@ hr {
       flex: 0 0 25%;
       max-width: 25%; } }
 
-@media (min-width: 576px) {
-  .footer__card-one,
-  .footer__card-two,
-  .footer__card-three {
-    position: relative;
-    width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
-    flex-basis: 0;
-    flex-grow: 1;
-    max-width: 100%; } }
-
-@media (min-width: 768px) {
-  .footer__strap {
-    position: relative;
-    width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
-    flex-basis: 0;
-    flex-grow: 1;
-    max-width: 100%; } }
-
-body {
-  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; }
-
-.site-content {
-  line-height: 1.7; }
-
-p, ul, ol, dl, blockquote, hgroup, address, table, fieldset, figure, pre, img, .page-head, .media, .island, .islet, .pill, .responsive-container, .advert, .menu-block, .box, .input-group, .accordion, .video-wrap {
-  margin-bottom: 1.5em; }
-
-a {
-  color: #0D68CF;
-  line-height: normal; }
-
-/*-------------------------------------------*/
-.main-content H1 {
-  margin-top: 30px; }
-
-.main-content H2 {
-  border-top: solid 1px #333;
-  padding-top: 30px;
-  margin-top: 30px; }
-
-/*------------------------------------------------ */
-.site-width.container {
-  overflow-x: initial;
-  max-width: 1472px;
-  min-width: 320px;
-  width: 100%;
-  margin: 0 auto; }
-
-@media (min-width: 576px) {
-  .site-width.container {
-    width: 90%; } }
-
-/* TWO COLUMN LAYOUT */
-/* LEFT COLUMN */
 .main-content {
   color: #333333;
   width: 100%;
   padding-right: 10.9%;
   margin-top: 50px; }
 
-/*	RIGHT COLUMN */
 .right-column {
   padding-top: 50px; }
 
@@ -2775,6 +2787,8 @@ a {
   .right-page-nav li {
     margin-bottom: .5em; }
 
+/* -------------------KEY INFORMATION PANEL WOULD THIS BE USED ANYWHERE ELSE?
+------------------------------ */
 .key-info {
   margin-bottom: 40px; }
   .key-info .tabs__navigation {
@@ -2807,6 +2821,10 @@ a {
     margin: 0;
     padding-left: 3px; }
 
+/* ----------------- 
+PANELS AT BOTTOM OF PAGE - 
+MOVE TO PATTERNS EVENTUALLY 
+-------------------------- */
 .similar-courses {
   padding-top: 60px;
   padding-bottom: 60px; }
@@ -2832,15 +2850,35 @@ a {
   .questions__details-content-text p {
     margin: 0 0 0 15px; }
 
+/* -------------  TWO COLUMN SUB-LAYOUT  ---------------------- */
+.container.six-by-six {
+  padding: 0; }
+
+.six-by-six__left,
+.six-by-six__right {
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  padding: 0; }
+  @media (min-width: 768px) {
+    .six-by-six__left,
+    .six-by-six__right {
+      flex: 0 0 50%;
+      max-width: 50%; } }
+
 table {
   display: table;
   table-layout: auto;
   width: 100%;
-  border: 1px solid #e6e6e6;
   border-collapse: collapse;
-  clear: left;
+  clear: both;
   border-spacing: 0;
-  font-size: 0.8em; }
+  border-width: 1px 0 0 0;
+  border-color: #333;
+  border-style: solid;
+  font-size: 1em;
+  margin-bottom: 1.5em; }
 
 thead, tbody, tfoot {
   display: table-row-group; }
@@ -2861,32 +2899,20 @@ th, td {
   display: table-cell;
   text-align: left;
   width: auto;
-  border-bottom: 1px solid #e6e6e6;
+  border-bottom: 1px solid #D6D6D6;
   border-top: none;
   vertical-align: middle;
-  padding: 0.25em 1em 0.25em 0; }
+  padding: 0.75em 1em 0.75em 0; }
 
-th {
-  border-right: 1px solid #e6e6e6;
-  border-bottom-color: #e6e6e6;
-  color: #333333;
-  font-weight: 700;
-  background-color: #eee; }
-
-th, td, caption {
+caption {
   padding: 4px 10px 4px 5px; }
-
-tr.even td {
-  background: #e5ecf9; }
 
 tfoot {
   font-style: italic; }
 
 caption {
   caption-side: bottom;
-  color: #666666;
-  font-size: 0.875em;
-  line-height: 1.4286;
+  color: #0D68CF;
   padding: 0.8571em 0 0.2857em;
   text-align: left; }
 
@@ -2910,7 +2936,7 @@ td, td img {
     display: none; }
   .top-menu-tab svg, .top-menu-tab span {
     vertical-align: middle; }
-  @media (min-width: 576px) {
+  @media (min-width: 768px) {
     .top-menu-tab {
       left: 42.8%; }
       .top-menu-tab .top-menu-tab__sm {
@@ -2950,27 +2976,36 @@ td, td img {
   .header .header__menu {
     color: white;
     display: inline-block;
-    font-weight: bold;
-    line-height: 1;
+    line-height: 1.2;
     display: flex;
+    font-weight: bold;
     align-items: center;
     width: 100%; }
     .header .header__menu p {
       display: inline-block;
-      padding-left: 10px;
+      padding: 5px 0 5px 10px;
       margin: 0;
-      font-size: .8em;
+      font-size: .9em;
       width: 75px; }
+      .header .header__menu p .header-menu__dt-text {
+        display: none; }
+      .header .header__menu p .header-menu__sm-text {
+        text-transform: capitalize; }
   .header #logo {
     background: #00818F;
     min-height: 20px;
-    min-width: 100px; }
+    min-width: 100px;
+    margin-top: 10px; }
   @media (min-width: 576px) {
     .header .header__menu {
       line-height: 1.7; }
       .header .header__menu p {
         font-size: 1em;
-        width: auto; } }
+        width: auto; }
+        .header .header__menu p .header-menu__dt-text {
+          display: inline; }
+        .header .header__menu p .header-menu__sm-text {
+          text-transform: none; } }
 
 .column-top .column-top__left {
   background: #fff;
@@ -2991,7 +3026,7 @@ td, td img {
     width: 9600px;
     left: 100%; }
 
-@media (max-width: 575.98px) {
+@media (max-width: 767.98px) {
   .column-top {
     display: none; } }
 
@@ -3020,6 +3055,28 @@ td, td img {
   @media (max-width: 575.98px) {
     .footer {
       display: none; } }
+
+@media (min-width: 576px) {
+  .footer__card-one,
+  .footer__card-two,
+  .footer__card-three {
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    flex-basis: 0;
+    flex-grow: 1;
+    max-width: 100%; } }
+
+@media (min-width: 768px) {
+  .footer__strap {
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    flex-basis: 0;
+    flex-grow: 1;
+    max-width: 100%; } }
 
 .bottom-menu {
   position: relative;
@@ -3121,57 +3178,59 @@ ucl-widget[type="youtube"], ucl-widget[type="vimeo"] {
     .video__embed--video {
       margin-bottom: 30px; } }
 
-.back-link__svg {
+.back-link__svg,
+.forward-link__svg {
   display: inline-block;
   vertical-align: middle;
   margin-right: 5px; }
+  .back-link__svg:hover,
+  .forward-link__svg:hover {
+    color: #094991; }
 
-a.back-link {
+a.back-link,
+a.forward-link {
   text-decoration: none;
   display: inline-block;
   vertical-align: middle; }
-  a.back-link:focus {
-    border: none;
-    padding: 0; }
 
 a.card-link {
   background: #00818F;
   color: #ffffff;
   display: block;
   font-size: 1.25em;
+  line-height: 1.5em;
   text-decoration: none;
   width: 100%;
   max-width: 100%;
   height: auto;
   padding: 30px 30px 40px 30px;
-  font-weight: bold;
-  height: auto; }
+  font-weight: bold; }
   a.card-link svg {
     display: block;
     margin-bottom: 30px; }
   @media (min-width: 576px) {
     a.card-link {
       padding: 12px 15px 14px 12px;
-      font-size: .8em;
-      font-weight: normal; }
+      font-size: .8em; }
       a.card-link svg {
         width: 35px;
         height: 35px;
         margin-bottom: 10px; } }
   @media (min-width: 768px) {
-    a.card-link {
-      padding: 20px;
-      font-size: .8em;
-      font-weight: normal; }
-      a.card-link svg {
-        width: 50px;
-        height: 50px;
-        margin-bottom: 20px; } }
+    a.card-link svg {
+      width: 50px;
+      height: 50px;
+      margin-bottom: 30px; } }
   @media (min-width: 992px) {
     a.card-link {
       padding: 30px 30px 40px 30px;
       font-size: 1.25em;
-      font-weight: bold; } }
+      line-height: 1.5em;
+      font-weight: bold; }
+      a.card-link svg {
+        width: 70px;
+        height: 70px;
+        margin-bottom: 30px; } }
 
 .feature-link__image {
   position: relative;
@@ -3236,14 +3295,54 @@ a.card-link {
   .feature-link__header {
     font-size: .7em; } }
 
-blockquote {
-  color: #AC145A; }
+.blockquote.container {
+  padding: 0; }
 
-blockquote:before {
-  font-size: 10em;
-  content: open-quote;
-  display: inline;
-  font-size: 8em;
-  line-height: .1em;
-  margin-right: .25em;
-  vertical-align: -.8em; }
+.blockquote blockquote {
+  color: #AC145A;
+  line-height: 1.5;
+  position: relative;
+  margin-top: 3em;
+  margin-left: 0;
+  padding: 0; }
+  @media (min-width: 576px) {
+    .blockquote blockquote {
+      margin: 1em 0; } }
+  .blockquote blockquote:before {
+    content: "\275D";
+    font-size: 6em;
+    position: absolute;
+    top: -85px; }
+    @media (min-width: 576px) {
+      .blockquote blockquote:before {
+        top: -25px; } }
+  .blockquote blockquote .blockquote-quote, .blockquote blockquote .blockquote-detail {
+    margin-left: 0; }
+    @media (min-width: 576px) {
+      .blockquote blockquote .blockquote-quote, .blockquote blockquote .blockquote-detail {
+        margin-left: 18%; } }
+  .blockquote blockquote p.blockquote-quote {
+    float: right;
+    position: relative;
+    font-size: 1.25em; }
+    @media (min-width: 576px) {
+      .blockquote blockquote p.blockquote-quote {
+        font-size: 1.5em; } }
+  .blockquote blockquote .blockquote-detail {
+    clear: both; }
+  .blockquote blockquote img {
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 25px;
+    margin-bottom: 0;
+    vertical-align: middle; }
+  .blockquote blockquote .blockquote-detail__text {
+    display: inline-block;
+    vertical-align: middle; }
+    .blockquote blockquote .blockquote-detail__text p.blockquote-detail__name {
+      font-weight: bold; }
+    .blockquote blockquote .blockquote-detail__text p {
+      margin-bottom: .25em;
+      font-size: 1em; }

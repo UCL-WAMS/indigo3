@@ -4,36 +4,87 @@
 body {
 	font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 }
-.site-content
- {
-	line-height: 1.7;
-}
+
 
 p, ul, ol, dl, blockquote, hgroup, address, table, fieldset, figure, pre, img, .page-head, .media, .island, .islet, .pill, .responsive-container, .advert, .menu-block, .box, .input-group, .accordion, .video-wrap {
 	margin-bottom: 1.5em;
 }
 
+
 a {
 	color: $linkblue;
 	line-height: normal;
-	// &:focus {
-	// 	 outline: #86B3E7 solid 1px;
- //  		outline-offset: 5px;
-	// 	} 
+	&:hover{
+		color: $linkbluehover;
+		}
+}
+
+// MOVE TO VARIABLES.....
+ 
+h1  {
+	font-size: 1.875em;
+	line-height: 2.5;
+	margin-bottom: 1.5em;
+}
+
+h2 {
+	font-size: 1.5em;
+	line-height: 1.8;
+	margin-bottom: 1.5em;
+}
+
+h3 {
+	font-size: 1.25em;
+	line-height: 1.5;
+	margin-bottom: 1.5em;
+}
+
+h4 {
+	font-size: 1.125em;
+	line-height: 1.35;
+	margin-bottom: 1.5em;
+}
+
+h5 {
+	font-size: 1em;
+	line-height: 1.2;
+	margin-bottom: 1.5em;
+}
+
+.small-header,
+h6 {
+	font-size: 0.75em;
+	line-height: .0.9;
+	margin-bottom: 1.5em;
 }
 
 
+/*-----  TEMPLATE CONTENT ---------- 
+--------------------------------------*/
 
-/*-------------------------------------------*/
 
-.main-content H1 {
-	margin-top: 30px;
+.site-content {
+	p {
+	line-height: 150%;
+	font-size: 1em; 
+@include media-breakpoint-up(xl){ 
+	line-height: 150%;
+	font-size: 1.125em;
+	 }
+}
+	h1 {
+		margin: 1.562 0;
+	}
+
 }
 
-.main-content H2 {
+
+.main-content h2 {
 	border-top: solid 1px #333;
-	padding-top: 30px;
+	padding-top: 30px ;
 	margin-top: 30px;
+	clear:both;
+
 }
 
 

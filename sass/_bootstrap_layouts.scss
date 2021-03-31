@@ -8,7 +8,7 @@
    @include media-breakpoint-up(xs) {
     @include make-col(6);
   }
-   @include media-breakpoint-up(sm) {
+   @include media-breakpoint-up(md) {
     @include make-col(9);
   }
 }
@@ -19,7 +19,7 @@
   @include media-breakpoint-up(xs) {
     @include make-col(6);
   }
- @include media-breakpoint-up(sm) {
+ @include media-breakpoint-up(md) {
     @include make-col(3);
   }
 
@@ -45,60 +45,5 @@
 
 }
 
-// TWO COLUMN LAYOUT SMALL RIGHT COLUMN
-
-.content-columns  {
-
-.left-column {
-	 @include make-col-ready();
-
-	 @include media-breakpoint-up(sm) {
-   	 @include make-col(9);
-  }
-}
-
-.right-column {
-	 @include make-col-ready();
-
-	@include media-breakpoint-up(sm) {
-    @include make-col(3);
-  }
-}
-
-}
 
 
-// FOOTER
-
-.footer__card-one,
-.footer__card-two,
-.footer__card-three {
-
-@include media-breakpoint-up(sm) {
-	position: relative;
-	width: 100%;
-	padding-right: 15px;
-	padding-left: 15px;
-	flex-basis: 0;
-	flex-grow: 1;
-	max-width: 100%;
-  }
-
-
-}
-
-
-.footer__strap{
-
-@include media-breakpoint-up(md) {
-	position: relative;
-	width: 100%;
-	padding-right: 15px;
-	padding-left: 15px;
-	flex-basis: 0;
-	flex-grow: 1;
-	max-width: 100%;
-  }
-
-
-}
