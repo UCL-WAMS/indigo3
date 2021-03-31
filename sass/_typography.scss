@@ -83,11 +83,47 @@ h6 {
 	border-top: solid 1px #333;
 	padding-top: 30px ;
 	margin-top: 30px;
-	clear:both;
-
+	clear: both;
 }
 
 
-/*------------------------------------------------ */
+/*--------------------------------
+FEATURE LIST 
+--------------------------- */
 
 
+.feature-list	{
+	position: relative;
+	padding-right: 15%; 
+	margin-top: 2em;
+	svg.feather {
+		display: inline-block; 
+		margin-right: 20px; 
+		vertical-align: top; 
+		}
+	h4 {
+		display: inline-block; 
+		width: 70%;
+	}
+	ul {
+		padding-left: 75px; 
+		position: relative; 
+		list-style: none;
+	}
+	li {
+		font-size:1.125em; 
+		line-height: 1.5; 
+		color: #5C5C5C;
+		 }
+}
+
+
+
+.feature-list li:before {
+	content: "\2022"; 
+	color: #00818F;
+	font-size: 1.3em;
+  	display: inline-block; 
+  	width: 1em;
+  	margin-left: -1em
+}
