@@ -3,6 +3,7 @@
 
 .blockquote.container {
 	padding:0;
+	margin-bottom: 45px;
 }
 
 
@@ -40,9 +41,11 @@
 		p.blockquote-quote {
 			float: right;
 			position: relative;
-			font-size: 1.25em;
+			font-size: 20px;
+			line-height: 30px;
 		@include media-breakpoint-up(sm) {
-			font-size: 1.5em;
+			font-size: 24px;
+			line-height: 36px;
 		}
 			
 		} 
@@ -53,13 +56,17 @@
 
 
 		img{
-			height: 80px; 
-			width: 80px; 
+			height: 60px; 
+			width: 60px; 
 			border-radius: 50%;
 			display: inline-block;
 			margin-right: 25px;
 			margin-bottom: 0;
 			vertical-align: middle;
+			@include media-breakpoint-up(sm) {
+			height: 80px; 
+			width: 80px; 
+		}
 
 
 		}
@@ -67,15 +74,25 @@
 		.blockquote-detail__text {
 				display: inline-block; 
 				vertical-align:  middle;
-					p.blockquote-detail__name {
-				font-weight: bold;
-				}
-					p{
-				margin-bottom: .25em;
-				font-size: 1em;
-				}
+					
+				p {
+					margin-bottom: .25em;
+					font-size: .75em;
+					@include media-breakpoint-up(sm) { 
+						font-size: 1em; 
+						}
+					}
+				a { 
+					font-size: .75em;
+					@include media-breakpoint-up(sm) { 
+						font-size: 1em; 
+						} 
+					}
+				p.blockquote-detail__name {
+					font-weight: bold;
+					}
 		}
 
 
-	} 	
+	}	
 
