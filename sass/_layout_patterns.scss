@@ -115,10 +115,10 @@ MOVE TO PATTERNS EVENTUALLY
 
 	
 
-/* -------------  TWO COLUMN SUB-LAYOUT  ---------------------- */
+/* -------------  TWO COLUMN SUB-LAYOUTs  ---------------------- */
 
 .container.six-by-six {
-	padding: 0;
+	padding: 0 0 30px;
 }
 
 .six-by-six__left,
@@ -131,3 +131,67 @@ MOVE TO PATTERNS EVENTUALLY
 	padding: 0;
 }
 
+.six-by-six__left {
+	padding-right: 16px;
+}
+
+.six-by-six__right {
+	padding-left: 16px;
+}
+
+
+
+.container.eight-by-four {
+	padding: 0 0 30px;
+}
+
+
+.eight-by-four__left
+ {
+	 @include make-col-ready();
+
+	 @include media-breakpoint-up(md) {
+   	 @include make-col(8);
+  }
+	padding: 0;
+}
+
+
+.eight-by-four__right
+ {
+	 @include make-col-ready();
+
+	 @include media-breakpoint-up(md) {
+   	 @include make-col(4);
+  }
+	padding: 0;
+}
+
+
+.eight-by-four__left {
+	padding-right: 32px;
+}
+
+.eight-by-four__right a.card-link {
+	margin-right:-32px;
+}
+
+/*----------------------------
+RIGHT COLUMN
+----------------------------- */
+
+// RIGHT COLUMN CONTACT INFORMATION
+
+.right-column {
+
+	.contact-info {
+		margin-bottom: 50px;
+		p {
+			margin-bottom: 12px;
+		}
+	}
+	p.contact-info__title {
+		font-weight: bold;
+		margin-top: 30px;
+	}
+}

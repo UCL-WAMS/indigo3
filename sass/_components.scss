@@ -101,23 +101,28 @@ ucl-widget[type="youtube"], ucl-widget[type="vimeo"]{
 
 // ARROW BACK AND FORWARD LINK
 
+.back-link,
+.foward-link {
+	line-height: 1.5;
+}
+
 .back-link__svg, 
 .forward-link__svg  {
-	display: inline-block;
-	vertical-align: middle; 
 	margin-right: 5px;
 	&:hover {
-		color: $linkbluehover;
-	}
+		text-decoration: underline;
+		}
 	} 
 
 
-a.back-link, 
-a.forward-link {
+a.back-link__anchor, 
+a.forward-link__anchor{
 	text-decoration: none;
-	display: inline-block;
-	vertical-align: middle;
-	width: 80%;
+	vertical-align: 2px;
+	&:hover {
+		text-decoration: underline;
+	}
+
 }
 
 
@@ -127,11 +132,9 @@ a.card-link  {
 	background: $brightblue;
 	color: #ffffff;
 	display: block;
-	font-size: 1.25em;
-	line-height: 1.5em;
+	font-size: 20px;
+	line-height: 24px;
 	text-decoration: none;
-	width: 100%;
-	max-width: 100%;
 	height:auto;
 	padding: 30px 30px 40px 30px;
 	font-weight: bold;
@@ -140,17 +143,10 @@ a.card-link  {
 			margin-bottom: 30px;
 		}
 
-@include media-breakpoint-up(sm) { 
-	padding: 12px 15px 14px 12px;
-	font-size: .8em; 
-		svg {
-			width: 35px;
-			height: 35px;
-			margin-bottom: 10px;
-			}
-	}
-	
+
 @include media-breakpoint-up(md) {
+		font-size: 16px;
+		line-height: 19.2px;
 		svg {
 			width: 50px;
 			height: 50px;
@@ -160,8 +156,8 @@ a.card-link  {
 
 @include media-breakpoint-up (lg) {
 		padding: 30px 30px 40px 30px;
-		font-size: 1.25em; 
-		line-height: 1.5em;
+		font-size: 20px; 
+		line-height: 24px ;
 		font-weight: bold;
 		svg {
 			width: 70px;
@@ -173,6 +169,52 @@ a.card-link  {
 
 	
 }
+
+
+// BOXOUTS
+
+.box-out__grey {
+	background-color: #333333;
+	padding: 24px;
+	margin-bottom: 30px;
+
+	h3,
+	 {
+		color: #ffffff;
+		}
+	p {
+		color: #d6d6d6;
+	}
+	p, 
+	a {
+	line-height: 24px;
+	font-size: 16px; 
+	}
+	a {
+		color: $yellow;
+	}
+
+}
+
+
+.box-out__yellow {
+	background-color: $yellow;
+	padding: 24px;
+
+	
+	p, 
+	a {
+	line-height: 24px;
+	font-size: 16px; 
+	}
+	a {
+		color: #333333;
+	}
+	margin-bottom: 30px;
+}
+
+
+
 
 
 

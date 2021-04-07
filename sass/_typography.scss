@@ -69,7 +69,7 @@ h5 {
 .small-header,
 h6 {
 	font-size: 0.75em;
-	line-height: .0.9;
+	line-height: 0.9;
 	margin-bottom: 1.5em;
 }
 
@@ -79,7 +79,9 @@ h6 {
 
 
 .site-content {
-	p {
+	p, 
+	.eight-by-four,
+	.six-by-six {
 	line-height: 24px;
 	font-size: 16px; 
 	@include media-breakpoint-up(lg){ 
@@ -104,13 +106,33 @@ h6 {
 		margin-top: 30px;
 		clear: both;
 	}
+	
 	.right-column {
-		&>h3{
-			border-top: solid 1px #333; 
+		&>h3,
+		.contact-info h3  {
+			border-top: solid 1px #333;
+			 }
+		h3{
+			
 			padding-top: 20px;
 		}
+	
+	p {
+		margin-bottom: 12px;
+		}
+	
+	p.contact-info__title {
+		font-weight: bold;
+		margin-top: 30px;
+		}
+	
 	}
+	
 }
+
+
+
+
 
 
 /*--------------------------
@@ -164,7 +186,7 @@ FEATURE LIST
 	&.forward-link__svg {
 		margin-right: 0;
 		margin-left:3em;
-		margin-top: 3px;
+		vertical-align: 1px;
 	@include media-breakpoint-only(md)  {
 		width: 16px;
 		height: 16px;
