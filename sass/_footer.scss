@@ -4,7 +4,11 @@ footer {
 	// @include media-breakpoint-down(xs) {
 // 			display:none;
 // 			 }
-	
+
+	@include media-breakpoint-down(sm) {
+			img,
+			.footer__card-one{display:none;}
+			 }	
 }
 
 .footer__strap-line { 
@@ -19,17 +23,6 @@ footer {
 	}
 }
 
-// .footer__card-one {
-// 	padding-right:0 !important;
-// 	padding-left: 0 !important;
-// }
-
-// .footer__card-two,
-// .footer__card-three, 
-// .footer__card-four {
-// 	padding-right: 0;
-// 	padding-left: 32px
-// }
 
 .footer {
 	padding-top: 30px;
@@ -49,10 +42,7 @@ footer {
  		a {
  			color: $yellow; 			
  		}
- 		div {
- 			margin-bottom: 30px;
- 			 }
-
+ 		
 }
 
 
@@ -66,7 +56,7 @@ footer {
 .bottom-menu__tab {
 	position: absolute;
 	top: -20px;
-	left: 42.8%;
+	left: 33%;
 	text-align: center;
 	background: #fff;
 	z-index: 100;
@@ -85,8 +75,7 @@ footer {
 		display: none;
 	}
 }
-@include media-breakpoint-up(sm)
- {
+@include media-breakpoint-up(sm) {
  	.bottom-menu-tab__sm {
 		display: none;
 	}
@@ -94,6 +83,10 @@ footer {
 		display: inline-block;
 	}
 }
+@include media-breakpoint-up(md){
+	 left: 42.8%
+}
+
 }
 
 

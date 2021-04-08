@@ -13,7 +13,7 @@
 			margin-bottom: 40px;
 			position: -webkit-sticky;
 			position: sticky;
-  			top: 0;	
+			top:0;
   				ul {
 				list-style-type: none;
 				padding: 0 0 0 15px;
@@ -173,25 +173,9 @@ MOVE TO PATTERNS EVENTUALLY
 }
 
 .eight-by-four__right a.card-link {
-	margin-right:-32px;
+	
+	@include media-breakpoint-up(md) {
+		margin-right:-32px; 
+		 }
 }
 
-/*----------------------------
-RIGHT COLUMN
------------------------------ */
-
-// RIGHT COLUMN CONTACT INFORMATION
-
-.right-column {
-
-	.contact-info {
-		margin-bottom: 50px;
-		p {
-			margin-bottom: 12px;
-		}
-	}
-	p.contact-info__title {
-		font-weight: bold;
-		margin-top: 30px;
-	}
-}

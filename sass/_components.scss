@@ -102,8 +102,10 @@ ucl-widget[type="youtube"], ucl-widget[type="vimeo"]{
 // ARROW BACK AND FORWARD LINK
 
 .back-link,
-.foward-link {
+.forward-link {
 	line-height: 1.5;
+	margin-bottom: 15px;
+	
 }
 
 .back-link__svg, 
@@ -240,42 +242,47 @@ a.card-link  {
 .feature-link img {
 	max-height: 500px;
 }
+
+.feature-link__wrapper {
+	width: 100%;
+	background: $yellow;
+}
 			
 .feature-link__header {
 	text-transform: uppercase;
-	font-size: 1em;
-	font-weight: normal;
+	font-size: 16px;
+	line-height: 19.2px;
+	font-weight: bold;
 	float: left;
 	background: $yellow;
 	display: block;
-	width: 100%;
-	padding: 6px 1.25em ;
+	width: 80%;
+	padding: 12px 1.25em ;
 	font-weight: bold;	
 	h3 { 
-		width: 80%;
+		width: 60%;
 	}		
 }
 
 .feature-link .feather {
 	background: $yellow; 
-	width: 18%; 
 	float: right; 
 	margin-top: -1.8em;
+	width:15%;
 }
 			
 .feature-link__content {
-	padding: 3em 2em 2em;
-	margin-top: 30px;
+	padding: 50px 2em 2em;
+	
 	line-height: 1.4;
 
 	h4 {
 	clear: both ;
-	font-size: 1.5em;
 	padding-bottom: 30px;
 	padding-top: 12px;
 	}
 	p {
-		font-size: 1em;
+		
 		margin-bottom: 1em;
 	}
 }

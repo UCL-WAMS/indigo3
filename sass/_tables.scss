@@ -1,4 +1,7 @@
 
+
+
+
 table {
 	display: table;
 	table-layout: auto;
@@ -11,6 +14,7 @@ table {
 	border-style: solid;
 	font-size: 1em;
 	margin-bottom: 1.5em;
+	overflow-x: scroll;
 	}
 
 thead, tbody, tfoot {
@@ -65,3 +69,61 @@ td, td img {
 	vertical-align: top;
 }
 
+/* reponsive */
+
+// .table-responsive {
+// 	width: 100%;
+// 	border-collapse: collapse;
+// 	border-spacing: 0;
+// }
+
+// .table-responsive th, .table-responsive td {
+// 	margin: 0;
+// 	vertical-align: top;
+// 	border: 1px solid #e6e6e6;
+// }
+
+// .table-responsive th {
+// 	text-align: left;
+// }
+
+// @include media-breakpoint-up(md) {
+// 	.table-responsive {
+// 		display: block;
+// 		position: relative;
+// 		width: 100%;
+// 		border-top: 0;
+// 		thead {
+// 			display: block;
+// 			float: left;
+// 			tr {
+// 				display: block;
+// 			}
+// 		}
+// 		tbody {
+// 			display: block;
+// 			width: auto;
+// 			position: relative;
+// 			overflow-x: auto;
+// 			overflow-y: hidden;
+// 			-webkit-overflow-scrolling: touch;
+// 			white-space: nowrap;
+// 			tr {
+// 				vertical-align: top;
+// 				border-right: 1px solid #eee;
+// 				display:inline-block;
+// 			}
+// 		}
+// 		th {
+// 			display: block;
+// 			border-bottom: 0;
+// 		}
+// 		td {
+// 			display: block;
+// 			min-height: 1.25em;
+// 			border-left: 0;
+// 			border-right: 0;
+// 			border-bottom: 0;
+// 		}
+// 	}
+// }
