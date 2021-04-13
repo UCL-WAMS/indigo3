@@ -6,8 +6,9 @@ CUSTOM SITE WIDTH BOOTSTRAP CONTAINER
 
 .site-width.container, .site-width { 
 	overflow-x: initial;
-	max-width: 1472px;
-	min-width: 320px; 
+	max-width: 1408px;
+	min-width: 320px;
+	padding:0; 
 	width: 100%; 
 	margin: 0 auto;  
 
@@ -35,7 +36,7 @@ CUSTOM SITE WIDTH BOOTSTRAP CONTAINER
 	margin-top: 50px;
 
 @include media-breakpoint-up(md){
-	padding-right:10.9%;   	 
+	padding-right: 10.7954%;   	 
  }
 }
 

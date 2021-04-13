@@ -11,11 +11,7 @@ html {
   box-sizing: inherit; }
 
 body {
-  overflow-x: hidden;
-  overflow-wrap: break-word;
-  word-wrap: break-word;
-  word-break: break-all;
-  word-break: break-word; }
+  overflow-x: hidden; }
 
 html, body, div, span, object, iframe,
 h1, h2, h3, h4, h5, h6, p, pre,
@@ -2631,7 +2627,8 @@ hr {
   @media (min-width: 768px) {
     .header__menu {
       flex: 0 0 75%;
-      max-width: 75%; } }
+      max-width: 75%;
+      padding-left: 0; } }
 
 .header__logo {
   position: relative;
@@ -2643,7 +2640,8 @@ hr {
   @media (min-width: 768px) {
     .header__logo {
       flex: 0 0 25%;
-      max-width: 25%; } }
+      max-width: 25%;
+      padding-right: 0; } }
 
 .column-top__left {
   position: relative;
@@ -2651,7 +2649,8 @@ hr {
   padding-right: 16px;
   padding-left: 16px;
   flex: 0 0 75%;
-  max-width: 75%; }
+  max-width: 75%;
+  padding: 0; }
 
 .column-top__right {
   position: relative;
@@ -2669,7 +2668,8 @@ hr {
   @media (min-width: 768px) {
     .content-columns .left-column {
       flex: 0 0 75%;
-      max-width: 75%; } }
+      max-width: 75%;
+      padding-left: 0; } }
 
 .content-columns .right-column {
   position: relative;
@@ -2679,9 +2679,10 @@ hr {
   @media (min-width: 768px) {
     .content-columns .right-column {
       flex: 0 0 25%;
-      max-width: 25%; } }
+      max-width: 25%;
+      padding: 0; } }
 
-FOOTER .footer__card-one,
+.footer__card-one,
 .footer__card-two,
 .footer__card-three,
 .footer__card-four {
@@ -2690,12 +2691,23 @@ FOOTER .footer__card-one,
   padding-right: 16px;
   padding-left: 16px; }
   @media (min-width: 768px) {
-    FOOTER .footer__card-one,
+    .footer__card-one,
     .footer__card-two,
     .footer__card-three,
     .footer__card-four {
       flex: 0 0 25%;
       max-width: 25%; } }
+
+@media (min-width: 768px) {
+  .footer__card-one {
+    padding-right: 0; } }
+
+@media (min-width: 768px) {
+  .footer__card-two,
+  .footer__card-three,
+  .footer__card-four {
+    padding-right: 0;
+    padding-left: 32px; } }
 
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; }
@@ -2876,8 +2888,9 @@ CUSTOM SITE WIDTH BOOTSTRAP CONTAINER
 --------------------------------*/
 .site-width.container, .site-width {
   overflow-x: initial;
-  max-width: 1472px;
+  max-width: 1408px;
   min-width: 320px;
+  padding: 0;
   width: 100%;
   margin: 0 auto; }
   @media (min-width: 768px) {
@@ -2895,7 +2908,7 @@ CUSTOM SITE WIDTH BOOTSTRAP CONTAINER
   margin-top: 50px; }
   @media (min-width: 768px) {
     .main-content {
-      padding-right: 10.9%; } }
+      padding-right: 10.7954%; } }
 
 .content-columns .right-column {
   padding-top: 50px; }
@@ -2920,70 +2933,9 @@ CUSTOM SITE WIDTH BOOTSTRAP CONTAINER
   .right-page-nav li {
     margin-bottom: .5em; }
 
-/* -------------------KEY INFORMATION PANEL WOULD THIS BE USED ANYWHERE ELSE?
------------------------------- */
-.key-info {
-  margin-bottom: 40px; }
-  .key-info .tabs__navigation {
-    margin-bottom: 40px; }
-    .key-info .tabs__navigation a {
-      border-radius: 0 5px 5px  0;
-      border: solid #0D68CF 1px;
-      padding: 4px 6px;
-      text-decoration: none;
-      display: block; }
-      .key-info .tabs__navigation a[href="#tab-1"] {
-        border-radius: 5px 0  0 5px; }
-  .key-info .two-col-layout__left {
-    background-color: #EBEBEB;
-    padding-top: 40px; }
-  .key-info .two-col-layout__right {
-    background-color: #F5F5F5;
-    padding-top: 40px; }
-  .key-info .key-info__icon,
-  .key-info .key-info__text {
-    margin-bottom: 30px; }
-  .key-info .key-info__text p {
-    padding-left: 12px;
-    margin: 0; }
-  .key-info .key-info__content {
-    font-weight: bold; }
-  .key-info .key-info__label,
-  .key-info .key-info__note {
-    font-size: .7em;
-    margin: 0;
-    padding-left: 3px; }
-
-/* ----------------- 
-PANELS AT BOTTOM OF PAGE - 
-MOVE TO PATTERNS EVENTUALLY 
--------------------------- */
-.similar-courses {
-  padding-top: 60px;
-  padding-bottom: 60px; }
-
-.questions {
-  background-color: #F5F5F5;
-  padding-top: 80px;
-  padding-bottom: 70px; }
-
-.questions__details-content > div {
-  margin-bottom: 20px; }
-  .questions__details-content > div .col-md-4 {
-    background-color: #fff; }
-  .questions__details-content > div img {
-    float: left;
-    width: 40%;
-    margin-bottom: 0; }
-
-.questions__details-content-text {
-  float: left;
-  width: 60%;
-  padding: 15px 0 0 15px; }
-  .questions__details-content-text p {
-    margin: 0 0 0 15px; }
-
+/* --------------- 	RESUSABLE LAYOUTS --------------------------- */
 /* -------------  TWO COLUMN SUB-LAYOUTs  ---------------------- */
+/*------------------- HALF AND HALF --------------------------*/
 .container.six-by-six {
   padding: 0 0 30px; }
 
@@ -3006,6 +2958,8 @@ MOVE TO PATTERNS EVENTUALLY
 .six-by-six__right {
   padding-left: 16px; }
 
+/* ------------- TWO THIRDS AND A THIRD ------------------------*/
+/* ----------------- BIG COLUMN LEFT SMALL RIGHT -----------------*/
 .container.eight-by-four {
   padding: 0 0 30px; }
 
@@ -3031,12 +2985,182 @@ MOVE TO PATTERNS EVENTUALLY
       flex: 0 0 33.3333333333%;
       max-width: 33.3333333333%; } }
 
-.eight-by-four__left {
-  padding-right: 32px; }
-
 @media (min-width: 768px) {
   .eight-by-four__right a.card-link {
-    margin-right: -32px; } }
+    margin-right: -32px;
+    margin-left: 32px; } }
+
+/*---------------------- THREE 	EQUAL COLUMNS SUB LAYOUT -------------------------*/
+.four-by-four-by-four.container {
+  padding: 0;
+  margin: 40px auto; }
+
+.four-by-four-by-four__left,
+.four-by-four-by-four__middle,
+.four-by-four-by-four__right {
+  position: relative;
+  width: 100%;
+  padding-right: 16px;
+  padding-left: 16px; }
+  @media (min-width: 768px) {
+    .four-by-four-by-four__left,
+    .four-by-four-by-four__middle,
+    .four-by-four-by-four__right {
+      flex: 0 0 33.3333333333%;
+      max-width: 33.3333333333%; } }
+
+.four-by-four-by-four__left {
+  padding-left: 0; }
+
+.four-by-four-by-four__right {
+  padding-right: 0; }
+
+/* --------------------- CUSTOM LAYOUTS ----------------------*/
+/*------------------- RELATED INFO PANEL  --------------------*/
+.container.site-width.related-info {
+  padding: 40px 16px;
+  border-top: 1px solid #d6d6d6;
+  margin-top: 20px; }
+  @media (min-width: 768px) {
+    .container.site-width.related-info {
+      padding: 40px 0; } }
+
+.related-info .related-info__column {
+  margin-bottom: 30px;
+  position: relative;
+  width: 100%;
+  padding-right: 16px;
+  padding-left: 16px; }
+  @media (min-width: 768px) {
+    .related-info .related-info__column {
+      flex: 0 0 25%;
+      max-width: 25%; }
+      .related-info .related-info__column:nth-of-type(1) {
+        padding-left: 0; }
+      .related-info .related-info__column:nth-of-type(4) {
+        padding-right: 0; } }
+
+/* --------------- CONTACT WITH TWO ADDRESS CARDS  -------------- */
+.contact-panel__background {
+  background-color: #f5f5f5; }
+
+.contact-panel.container {
+  padding: 60px 0; }
+
+.contact-panel .column-left {
+  position: relative;
+  width: 100%;
+  padding-right: 16px;
+  padding-left: 16px; }
+  @media (min-width: 768px) {
+    .contact-panel .column-left {
+      flex: 0 0 75%;
+      max-width: 75%;
+      padding: 0;
+      padding-right: 9.1%; } }
+
+.contact-panel .column-right {
+  position: relative;
+  width: 100%;
+  padding-right: 16px;
+  padding-left: 16px; }
+  @media (min-width: 768px) {
+    .contact-panel .column-right {
+      flex: 0 0 25%;
+      max-width: 25%;
+      padding: 0; } }
+
+.contact-panel .contact-panel__card-one {
+  position: relative;
+  width: 100%;
+  padding-right: 16px;
+  padding-left: 16px; }
+  @media (min-width: 768px) {
+    .contact-panel .contact-panel__card-one {
+      flex: 0 0 50%;
+      max-width: 50%;
+      padding: 0; } }
+
+.contact-panel .contact-panel__card-two {
+  position: relative;
+  width: 100%;
+  padding-right: 16px;
+  padding-left: 16px; }
+  @media (min-width: 768px) {
+    .contact-panel .contact-panel__card-two {
+      flex: 0 0 50%;
+      max-width: 50%;
+      padding: 0; } }
+
+.contact-panel .contact-panel__card.container {
+  padding: 40px 0 60px; }
+
+.contact-panel .card-wrapper {
+  background-color: #ffffff;
+  overflow: hidden;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-all;
+  word-break: break-word;
+  box-shadow: 3px 10px 10px -6px rgba(51, 51, 51, 0.75);
+  -webkit-box-shadow: 3px 10px 10px -6px rgba(51, 51, 51, 0.75);
+  -moz-box-shadow: 3px 10px 10px -6px rgba(51, 51, 51, 0.75); }
+  @media (min-width: 768px) {
+    .contact-panel .card-wrapper {
+      padding-right: 16px; } }
+
+.contact-panel .contact-panel__card-one .card-wrapper {
+  margin-top: 30px; }
+  @media (min-width: 768px) {
+    .contact-panel .contact-panel__card-one .card-wrapper {
+      margin-right: 16px;
+      margin-top: 0; } }
+
+.contact-panel .contact-panel__card-two .card-wrapper {
+  margin-top: 30px; }
+  @media (min-width: 768px) {
+    .contact-panel .contact-panel__card-two .card-wrapper {
+      margin-left: 16px;
+      margin-top: 0; } }
+
+.contact-panel .responsive-square {
+  position: relative;
+  width: 40.17%;
+  max-height: 180px;
+  max-width: 180px;
+  display: inline-block;
+  float: left; }
+  .contact-panel .responsive-square:after {
+    content: "";
+    display: block;
+    padding-bottom: 100%; }
+  .contact-panel .responsive-square .contact-panel__image {
+    position: absolute;
+    width: 100%;
+    height: 100%; }
+    .contact-panel .responsive-square .contact-panel__image img {
+      height: 100%;
+      width: 100%;
+      margin-bottom: 0; }
+
+.contact-panel .contact-panel__content {
+  float: left;
+  padding: 7% 0 15px 20px;
+  width: 57%; }
+  .contact-panel .contact-panel__content p,
+  .contact-panel .contact-panel__content h5 {
+    margin-bottom: 12px; }
+    @media (min-width: 768px) and (max-width: 1199.98px) {
+      .contact-panel .contact-panel__content p,
+      .contact-panel .contact-panel__content h5 {
+        font-size: 12px; } }
+
+/*-------------- SIMILAR COURSES PANEL ---------------*/
+.similar-courses .card-link {
+  width: 79.4123%; }
+
+.similar-courses img {
+  max-height: 252px; }
 
 table {
   display: table;
@@ -3190,9 +3314,7 @@ td, td img {
 .column-top .column-top__right {
   background: #00818F;
   border: 0;
-  height: .5em;
-  margin-left: 0.63%;
-  margin-right: -0.63%; }
+  height: .5em; }
   .column-top .column-top__right:after {
     content: '';
     position: absolute;
@@ -3225,18 +3347,18 @@ footer {
     .footer__strap-line {
       font-size: 40px; } }
 
-.footer {
+.site-width.container.footer {
   padding-top: 30px; }
-  .footer img {
+  .site-width.container.footer img {
     max-height: 185px;
     margin-bottom: .7em; }
-  .footer h5 {
+  .site-width.container.footer h5 {
     text-transform: uppercase;
     color: #ADADAD; }
-  .footer h2,
-  .footer p {
+  .site-width.container.footer h2,
+  .site-width.container.footer p {
     color: #fff; }
-  .footer a {
+  .site-width.container.footer a {
     color: #F6BE00; }
 
 .bottom-menu {
