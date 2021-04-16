@@ -2769,19 +2769,19 @@ h6 {
 /*--------------------------
 PLAIN LIST
 -------------------------*/
-ul {
+.main-content ul {
   padding-left: 75px;
   position: relative;
   list-style: none; }
 
-li {
+.main-content li {
   font-size: 1em;
   line-height: 1.5;
   color: #333333; }
   @media (min-width: 768px) and (max-width: 991.98px) {
-    li {
+    .main-content li {
       font-size: .75em; } }
-  li:before {
+  .main-content li:before {
     content: "\2022";
     color: #00818F;
     font-size: 1.3em;
