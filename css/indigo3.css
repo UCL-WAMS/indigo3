@@ -2700,7 +2700,8 @@ hr {
 
 @media (min-width: 768px) {
   .footer__card-one {
-    padding-right: 0; } }
+    padding-right: 0;
+    padding-left: 0; } }
 
 @media (min-width: 768px) {
   .footer__card-two,
@@ -2710,7 +2711,8 @@ hr {
     padding-left: 32px; } }
 
 body {
-  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; }
+  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  color: #333333; }
 
 p, ul, ol, dl, blockquote, hgroup, address, table, fieldset, figure, pre, img, .page-head, .media, .island, .islet, .pill, .responsive-container, .advert, .menu-block, .box, .input-group, .accordion, .video-wrap {
   margin-bottom: 1.5rem; }
@@ -2898,8 +2900,7 @@ CUSTOM SITE WIDTH BOOTSTRAP CONTAINER
       width: 90%; } }
 
 .site-content.container {
-  padding: 0;
-  color: #333333; }
+  padding: 0; }
 
 /* ----------------MAIN PAGE TEMPLATE TWO COLUMN LAYOUT  ----------------- */
 .main-content {
@@ -2912,6 +2913,69 @@ CUSTOM SITE WIDTH BOOTSTRAP CONTAINER
 
 .content-columns .right-column {
   padding-top: 50px; }
+
+/* -------------- STYLED CALL TO ACTIONS LINKS ie not form/input buttons ---------------- */
+.btn-cta {
+  background-color: #0D68CF;
+  color: #ffffff;
+  display: block;
+  padding: 20px;
+  font-weight: bold;
+  margin-bottom: 1.5em; }
+
+a.btn-cta {
+  text-decoration: none;
+  margin-bottom: 1.5em; }
+  a.btn-cta:hover {
+    background-color: #094991;
+    color: #ffffff; }
+  a.btn-cta:focus {
+    text-decoration: underline; }
+
+.btn-cta__inline {
+  display: inline-block; }
+
+.btn-cta__icon {
+  margin-bottom: 20px; }
+
+.btn-cta__icon .btn-cta,
+.btn-cta a.btn-cta__icon {
+  margin-bottom: 0; }
+
+.btn-cta__icon__text {
+  flex: 0 0 91.6666666667%;
+  max-width: 91.6666666667%;
+  position: relative;
+  width: 100%;
+  padding-right: 0;
+  padding-left: 0; }
+
+.btn-cta__icon__svg {
+  flex: 0 0 8.3333333333%;
+  max-width: 8.3333333333%;
+  position: relative;
+  width: 100%;
+  padding-right: 0;
+  padding-left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #3586D2; }
+
+.btn-cta__border,
+.btn-cta__border--inline {
+  background-color: #ffffff;
+  border: solid 1px #0D68CF;
+  color: #0D68CF; }
+
+a.btn-cta__border:hover,
+a.btn-cta__border--inline:hover {
+  background-color: #ffffff;
+  color: #094991;
+  border-color: #094991; }
+
+.btn-cta__border--inline {
+  display: inline-block; }
 
 /*-------------------------------------------------------------------
 
@@ -2932,6 +2996,16 @@ CUSTOM SITE WIDTH BOOTSTRAP CONTAINER
     margin: 0; }
   .right-page-nav li {
     margin-bottom: .5em; }
+
+.background__grey {
+  background-color: #f5f5f5; }
+
+.page-update {
+  margin-bottom: 50px;
+  padding-left: 16px; }
+  .page-update svg {
+    vertical-align: top;
+    margin-right: 15px; }
 
 /* --------------- 	RESUSABLE LAYOUTS --------------------------- */
 /* -------------  TWO COLUMN SUB-LAYOUTs  ---------------------- */
@@ -2992,8 +3066,8 @@ CUSTOM SITE WIDTH BOOTSTRAP CONTAINER
 
 /*---------------------- THREE 	EQUAL COLUMNS SUB LAYOUT -------------------------*/
 .four-by-four-by-four.container {
-  padding: 0;
-  margin: 40px auto; }
+  margin: 40px auto;
+  padding: 0; }
 
 .four-by-four-by-four__left,
 .four-by-four-by-four__middle,
@@ -3009,8 +3083,9 @@ CUSTOM SITE WIDTH BOOTSTRAP CONTAINER
       flex: 0 0 33.3333333333%;
       max-width: 33.3333333333%; } }
 
-.four-by-four-by-four__left {
-  padding-left: 0; }
+@media (min-width: 768px) {
+  .four-by-four-by-four__left {
+    padding-left: 0; } }
 
 .four-by-four-by-four__right {
   padding-right: 0; }
@@ -3041,9 +3116,6 @@ CUSTOM SITE WIDTH BOOTSTRAP CONTAINER
         padding-right: 0; } }
 
 /* --------------- CONTACT WITH TWO ADDRESS CARDS  -------------- */
-.contact-panel__background {
-  background-color: #f5f5f5; }
-
 .contact-panel.container {
   padding: 60px 0; }
 
@@ -3156,66 +3228,24 @@ CUSTOM SITE WIDTH BOOTSTRAP CONTAINER
         font-size: 12px; } }
 
 /*-------------- SIMILAR COURSES PANEL ---------------*/
+@media (min-width: 768px) and (max-width: 1199.98px) {
+  .similar-courses .four-by-four-by-four.container {
+    margin-left: 0; } }
+
 .similar-courses .card-link {
   width: 79.4123%; }
 
 .similar-courses img {
   max-height: 252px; }
 
-table {
-  display: table;
-  table-layout: auto;
-  width: 100%;
-  border-collapse: collapse;
-  clear: both;
-  border-spacing: 0;
-  border-width: 1px 0 0 0;
-  border-color: #333;
-  border-style: solid;
-  font-size: 1em;
-  margin-bottom: 1.5em;
-  overflow-x: scroll; }
+/*---------------- PROGRAMME CHOICE --------------------*/
+.programme-choice {
+  padding: 50px 50px 30px 50px;
+  margin: 60px 0; }
+  .programme-choice .btn-cta__icon {
+    margin-top: 60px;
+    max-width: 430px; }
 
-thead, tbody, tfoot {
-  display: table-row-group; }
-
-thead {
-  display: table-header-group; }
-
-tbody {
-  display: table-row-group; }
-
-tfoot {
-  display: table-footer-group; }
-
-tr {
-  display: table-row; }
-
-th, td {
-  display: table-cell;
-  text-align: left;
-  width: auto;
-  border-bottom: 1px solid #D6D6D6;
-  border-top: none;
-  vertical-align: middle;
-  padding: 0.75em 1em 0.75em 0; }
-
-caption {
-  padding: 4px 10px 4px 5px; }
-
-tfoot {
-  font-style: italic; }
-
-caption {
-  caption-side: bottom;
-  color: #0D68CF;
-  padding: 0.8571em 0 0.2857em;
-  text-align: left; }
-
-td, td img {
-  vertical-align: top; }
-
-/* reponsive */
 /* --------------------- HEADER ------------------------
 -----------------------*/
 .top-menu-tab {
@@ -3607,6 +3637,60 @@ a.card-link {
   .feature-link__header {
     font-size: .7em; } }
 
+table {
+  display: table;
+  table-layout: auto;
+  width: 100%;
+  border-collapse: collapse;
+  clear: both;
+  border-spacing: 0;
+  border-width: 1px 0 0 0;
+  border-color: #333;
+  border-style: solid;
+  font-size: 1em;
+  margin-bottom: 60px;
+  overflow-x: scroll; }
+
+thead, tbody, tfoot {
+  display: table-row-group; }
+
+thead {
+  display: table-header-group; }
+
+tbody {
+  display: table-row-group; }
+
+tfoot {
+  display: table-footer-group; }
+
+tr {
+  display: table-row; }
+
+th, td {
+  display: table-cell;
+  text-align: left;
+  width: auto;
+  border-bottom: 1px solid #D6D6D6;
+  border-top: none;
+  vertical-align: middle;
+  padding: 0.75em 1em 0.75em 0; }
+
+caption {
+  padding: 4px 10px 4px 5px; }
+
+tfoot {
+  font-style: italic; }
+
+caption {
+  caption-side: bottom;
+  color: #0D68CF;
+  padding: 0.8571em 0 0.2857em;
+  text-align: left; }
+
+td, td img {
+  vertical-align: top; }
+
+/* reponsive */
 .blockquote.container {
   padding: 0;
   margin-bottom: 45px; }

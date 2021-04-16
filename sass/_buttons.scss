@@ -1,0 +1,86 @@
+	
+/* -------------- STYLED CALL TO ACTIONS LINKS ie not form/input buttons ---------------- */
+
+// PRIMARY BUTTONS
+
+	.btn-cta {
+		background-color: $utilityblue;
+		color: #ffffff;
+		display: block;
+		padding: 20px;
+		font-weight: bold;
+		margin-bottom: 1.5em;
+	}
+
+
+	a.btn-cta  {
+		text-decoration: none;
+		margin-bottom: 1.5em;
+		&:hover{
+			background-color:  #094991;
+			color: #ffffff;
+			}
+		&:focus {
+			text-decoration: underline;
+			}
+	}
+
+	.btn-cta__inline {
+		display: inline-block;
+	}
+
+// ICONS
+
+
+.btn-cta__icon {
+	margin-bottom: 20px;
+	}
+
+.btn-cta__icon .btn-cta, 
+.btn-cta  a.btn-cta__icon{ 
+		margin-bottom: 0
+	}
+
+.btn-cta__icon__text {  
+	flex: 0 0 91.6666666667%;
+    max-width: 91.6666666667%;
+  	position: relative;
+  	width: 100%;
+ 	padding-right:0;
+  	padding-left: 0; 
+  	}
+
+ .btn-cta__icon__svg {
+  	flex: 0 0 8.3333333333%;
+  	max-width: 8.3333333333%; 
+  	position: relative;
+  	width: 100%;
+  	padding-right: 0;
+  	padding-left: 0 ;
+  	display:flex;
+  	align-items: center;
+  	justify-content: center;
+  	background-color: #3586D2;
+	}
+
+	
+
+// SECONDARY BUTTONS
+
+.btn-cta__border,
+.btn-cta__border--inline {
+	background-color: #ffffff;
+	border:solid 1px $utilityblue;
+	color: $utilityblue;
+}
+
+a.btn-cta__border:hover,
+a.btn-cta__border--inline:hover {
+			background-color:  #ffffff;
+			color: #094991;
+			border-color: #094991;
+			}
+
+.btn-cta__border--inline {
+		display: inline-block;
+}
