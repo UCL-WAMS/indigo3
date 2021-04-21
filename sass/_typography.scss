@@ -55,7 +55,7 @@ h3 {
 
 h4 {
 	font-size: 20px;
-	line-height: 24px ;
+	line-height: 26px ;
 	margin-bottom: 1.5rem;
 }
 
@@ -126,12 +126,12 @@ FEATURE LIST
 		margin-right: 20px; 
 		vertical-align: top;
 		@include media-breakpoint-only(md)  {
-		width:30px;
+		width: 30px;
 		height: 30px;
 	}
 	&.forward-link__svg {
 		margin-right: 0;
-		margin-left:3em;
+		margin-left: 3em;
 		vertical-align: 1px;
 	@include media-breakpoint-only(md)  {
 		width: 16px;
