@@ -1,0 +1,144 @@
+
+/* ------------------------ INPAGE FEED -------------------- */
+
+// BOOTSTRAP AND FLEX LAYOUT ELEMENTS
+
+.inpage-feed__left {
+
+   @include make-col-ready();
+
+
+    @include media-breakpoint-up(md) {
+      @include make-col(3);
+     
+    }
+}
+
+.inpage-feed__right{
+
+   @include make-col-ready();
+
+
+    @include media-breakpoint-up(md) {
+      @include make-col(9);
+      padding-right: 0;
+     
+    }
+}
+
+
+// col-8
+.inpage-feed-content__text {
+	flex: 0 0 66.6666666667%;
+	max-width: 66.6666666667%;
+	position: relative;
+	width: 100%;
+	padding-right: 16px;
+	padding-left: 16px; 
+	}
+
+// col-4
+.inpage-feed-content__image {
+    flex: 0 0 33.3333333333%;
+	max-width: 33.3333333333%;
+	position: relative;
+	width: 100%;
+	padding-right: 0; 
+ }
+
+
+/*----------------- INDIGO STYLING -----------------*/
+
+.inpage-feed {		
+		padding: 0;
+		margin-bottom: 1.5em;
+		 h1 {
+		 	margin-bottom: 30px;
+		 }
+		 img {
+		 	max-height: 117px; 
+		 	min-width: 102px; 
+		 	min-height: 44px ;
+		 	float:right;
+		 }
+}
+
+
+
+.inpage-feed__left{
+	background-color: #F6BE00;
+	padding-left: 40px;
+	padding-bottom: 32px;
+	align-self: flex-start !important;
+	.forward-link a {
+		color: #000;
+		}							
+	.forward-link svg {
+		stroke: #000;
+	}
+	&:after {
+  			content: '';
+  			position: absolute;
+  			z-index: -1; 
+  			top: 0;
+  			background-color: inherit;
+  			height:100%;
+  			width: 9600px;
+  			right:100%;  
+  		} 
+}
+
+.inpage-feed__right{
+		border-top: 0;	
+	}
+
+
+.inpage-feed-content {
+	padding: 40px 0 40px 40px;
+	border-left: #f6BE00 20px solid;
+	margin-left: -32px;
+	clear: both;
+		.events-feed__type {
+ 			color: #858585;
+ 			font-size: 12px;
+ 			text-transform: uppercase;
+ 			line-height: 12.5px;
+ 			margin-bottom: 1em;
+ 		}
+ 		.row {
+ 			border-top: black solid 1px; 
+ 			padding-top: 1.5em; 
+ 			margin-top:  1.5em;
+ 				&:first-child {
+ 		 		border-top: 0;
+ 		 		padding-top: 0; 
+ 		 		margin-top: 0;
+ 		 		}
+ 		}
+ 		.inpage-feed-content__text {
+ 			padding-right: 20px;
+
+ 		}
+}
+
+
+
+@include media-breakpoint-up(md){
+
+.inpage-feed__right {
+	border-top: #f6BE00 40px solid;	
+	}
+
+.inpage-feed__left {
+	padding:0 70px 40px 0 ;
+	}
+
+.inpage-feed-content {
+	border-left: 0;
+	}
+
+.inpage-feed img {
+	min-width: 102px; 
+	min-height: 44px ;
+	}
+ }
