@@ -1,0 +1,225 @@
+
+
+
+body {
+	font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	color: #333333;
+}
+
+
+p, ul, ol, dl, blockquote, hgroup, address, table, fieldset, figure, pre, img, .page-head, .media, .island, .islet, .pill, .responsive-container, .advert, .menu-block, .box, .input-group, .accordion, .video-wrap {
+	margin-bottom: 1.5rem;
+}
+
+
+a {
+	color: $linkblue;
+	line-height: normal;
+	&:hover{
+		color: $linkbluehover;
+		}
+}
+
+// MOVE TO VARIABLES..... WILL UPDATE WITH REMS .....
+ 
+h1  {
+	font-size: 30px;
+	line-height: 36px;
+	margin-bottom: 1.5rem;
+	@include media-breakpoint-up(lg) {
+		font-size: 36px;
+		line-height:43px;
+		}
+}
+
+
+h2 {
+	font-size: 24px;
+	line-height: 28.8px;
+	margin-bottom: 1.5rem;
+	@include media-breakpoint-up(lg) {
+		font-size: 30px;
+		line-height: 36px;
+		}
+}
+
+h3 {
+	font-size: 20px;
+	line-height: 24px ;
+	margin-bottom: 1.5rem;
+	@include media-breakpoint-up(lg) {
+		font-size: 24px;
+		line-height: 28.8px;
+		}
+}
+
+h4 {
+	font-size: 20px;
+	line-height: 26px ;
+	margin-bottom: 1.5rem;
+}
+
+
+
+h5 {
+	font-size: 16px;
+	line-height: 19.24px;
+	margin-bottom: 1.5rem;
+}
+
+.small-header,
+h6 {
+	font-size: 0.75em;
+	line-height: 0.9;
+	margin-bottom: 1.5em;
+}
+
+
+
+/*--------------------------
+PLAIN LIST
+-------------------------*/
+section, 
+.site-content {
+
+	ul {
+		padding-left: 75px; 
+		position: relative; 
+		list-style: none;
+	}
+	li {
+		font-size: 1em; 
+		line-height: 1.5; 
+		color: #333333;
+	@include media-breakpoint-only(md){ 
+		font-size: .75em;
+		}
+		&:before {
+	content: "\2022"; 
+	color: #00818F;
+	font-size: 1.3em;
+  	display: inline-block; 
+  	width: 1em;
+  	margin-left: -1em
+}
+	}
+
+	
+}
+
+/*--------------------------------
+FEATURE LIST 
+--------------------------- */
+
+
+.feature-list	{
+	position: relative;
+	padding-right: 15%; 
+	margin-top: 2em;
+	margin-bottom: 1.5em;
+	svg.feather {
+		display: inline-block; 
+		margin-right: 20px; 
+		vertical-align: top;
+		@include media-breakpoint-only(md)  {
+		width: 30px;
+		height: 30px;
+	}
+	&.forward-link__svg {
+		margin-right: 0;
+		margin-left: 3em;
+		vertical-align: 1px;
+	@include media-breakpoint-only(md)  {
+		width: 16px;
+		height: 16px;
+	}
+		}
+	}
+	h4 {
+		display: inline-block; 
+		width: 60%;
+		margin-bottom: .5em;
+	@include media-breakpoint-up(lg){ 
+		width: 70%;
+		}
+	}
+	
+a.forward-link {
+		font-size: 0.75em;
+		@include media-breakpoint-up(xl){ 
+		font-size: 1em;
+		}
+}
+
+}
+
+
+/*-----  TEMPLATE CONTENT ---------- 
+--------------------------------------*/
+
+
+.site-content {
+	p, 
+	.eight-by-four,
+	.six-by-six {
+	line-height: 24px;
+	font-size: 16px; 
+	@include media-breakpoint-up(lg){ 
+		line-height: 28.8px;
+		font-size: 18px;
+	 	}
+	}
+	h1 {
+		margin: 30px 0 40px;
+	}
+	.page-intro {
+		font-size: 18px;
+		line-height: 27px;
+		@include media-breakpoint-up(lg) {
+			font-size: 20px;
+			line-height: 30px;
+		}
+	}
+	.main-content h2 {
+		border-top: solid 1px #333;
+		padding-top: 30px ;
+		margin-top: 30px;
+		clear: both;
+	}
+	
+	.right-column {
+		& > h3,
+		.view-list h3,
+		.contact-info h3  {
+			border-top: solid 1px #333;
+			padding-top: 20px;
+			 }
+	p {
+		margin-bottom: 12px;
+		}
+
+	.contact-info {
+		margin-bottom: 40px;
+	}
+
+	p.contact-info__title {
+		font-weight: bold;
+		margin-top: 30px;
+		}
+	
+	}
+	.view-list ul,
+	.right-page-nav ul {
+		padding:0;
+		list-style: none;
+		
+		li {
+			font-size: 18px;
+			line-height: 30px;
+			&:before {
+				content: none;
+			}
+		}
+	}
+}
+	
