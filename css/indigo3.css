@@ -3096,8 +3096,14 @@ a.btn-cta__border--inline:hover {
   .four-by-four-by-four__left {
     padding-left: 0; } }
 
-.four-by-four-by-four__right {
-  padding-right: 0; }
+@media (min-width: 768px) {
+  .four-by-four-by-four__right {
+    padding-right: 0; } }
+
+@media (min-width: 768px) {
+  .four-by-four-by-four__middle {
+    padding-right: 8px;
+    padding-left: 8px; } }
 
 /* --------------------- CUSTOM LAYOUTS ----------------------*/
 /*------------------- RELATED INFO PANEL  --------------------*/
@@ -3628,6 +3634,32 @@ ALERTS
 .alert-fail {
   background: #fbe6eb;
   border-color: #D50032; }
+
+/*---------------------
+	CARDS
+
+---------------*/
+.card {
+  max-height: 252px;
+  position: relative; }
+
+.card__icon {
+  position: absolute;
+  top: 0;
+  background-color: #F6BE00; }
+
+.four-by-four-by-four__left .card__icon {
+  right: 0; }
+
+.four-by-four-by-four__right .card__icon,
+.four-by-four-by-four__middle .card__icon {
+  right: 16px; }
+
+@media (min-width: 768px) {
+  .four-by-four-by-four__right .card__icon {
+    right: 0; }
+  .four-by-four-by-four__middle .card__icon {
+    right: 8px; } }
 
 /* ------------------------ INPAGE FEED -------------------- */
 .inpage-feed__left {

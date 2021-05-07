@@ -281,8 +281,43 @@ ALERTS
 	}
 
 
+/*---------------------
+	CARDS
 
+---------------*/
 
+.card {
+	max-height: 252px; 
+	position: relative;
+	}
+.card__icon {
+	position: absolute; 
+	top: 0; 
+	background-color: #F6BE00;
+	}
+
+// CARDS IN THREE EQUAL COLUMNS.
+
+	
+.four-by-four-by-four__left .card__icon {
+	right: 0;
+	}
+.four-by-four-by-four__right .card__icon,
+.four-by-four-by-four__middle .card__icon  {
+	right: 16px;
+	}
+
+@include media-breakpoint-up(md) {	
+	.four-by-four-by-four__right .card__icon {
+		right: 0;
+		}
+	.four-by-four-by-four__middle .card__icon {
+		right: 8px;
+		} 
+}
+
+	
+	
 
 
 
