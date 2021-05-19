@@ -162,6 +162,8 @@ a.forward-link {
 --------------------------------------*/
 
 
+
+
 .site-content {
 	p, 
 	.eight-by-four,
@@ -173,9 +175,6 @@ a.forward-link {
 		font-size: 18px;
 	 	}
 	}
-	h1 {
-		margin: 30px 0 40px;
-	}
 	.page-intro {
 		font-size: 18px;
 		line-height: 27px;
@@ -184,6 +183,10 @@ a.forward-link {
 			line-height: 30px;
 		}
 	}
+	.main-content h1 {
+		margin: 30px 0 40px;
+		}
+
 	.main-content h2 {
 		border-top: solid 1px #333;
 		padding-top: 30px ;
