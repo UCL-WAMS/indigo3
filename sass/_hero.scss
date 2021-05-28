@@ -13,12 +13,12 @@ HERO
 	font-weight: bold;
 	padding: 40px 16px;
 	h1 {
-		font-size: 40px;
-		line-height:  48px;
+		font-size: 2.25rem;
+		line-height: 1.2
 	}
 	p {
-		font-size: 24px;
-		line-height: 28.8px;
+		font-size: 1.5rem;
+		line-height: 1.9rem;
 	}
 	&:after, 
 	&:before {
@@ -39,12 +39,12 @@ HERO
 @include media-breakpoint-up(md) {
 	 padding: 66px 120px 70px 120px;
 	 	h1 {
-			font-size: 60px;
-			line-height: 66px;
+	 		font-size: 3.8rem;
+			line-height:  1;
 			}
 		p {
-			font-size: 30px;
-			line-height: 36px;
+			font-size: 1.875rem;
+			line-height: 1.25;
 			}
 }
 

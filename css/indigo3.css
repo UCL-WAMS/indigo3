@@ -3,6 +3,7 @@
 html {
   box-sizing: border-box;
   overflow-x: hidden;
+  font-size: 16px;
   -ms-overflow-style: scrollbar; }
 
 *,
@@ -2729,47 +2730,53 @@ a {
     color: #094991; }
 
 h1 {
-  font-size: 30px;
-  line-height: 36px;
-  margin-bottom: 1.5rem; }
+  font-size: 1.875rem;
+  line-height: 2.25;
+  margin-bottom: 1.5rem;
+  font-weight: bold; }
   @media (min-width: 992px) {
     h1 {
-      font-size: 36px;
-      line-height: 43px; } }
+      font-size: 2.25rem;
+      line-height: 2.688; } }
 
 h2 {
-  font-size: 24px;
-  line-height: 28.8px;
-  margin-bottom: 1.5rem; }
+  font-size: 1.5rem;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+  font-weight: bold; }
   @media (min-width: 992px) {
     h2 {
-      font-size: 30px;
-      line-height: 36px; } }
+      font-size: 1.875rem;
+      line-height: 1.15; } }
 
 h3 {
-  font-size: 20px;
-  line-height: 24px;
-  margin-bottom: 1.5rem; }
+  font-size: 1.25rem;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+  font-weight: bold; }
   @media (min-width: 992px) {
     h3 {
-      font-size: 24px;
-      line-height: 28.8px; } }
+      font-size: 1.5rem;
+      line-height: 1.8; } }
 
 h4 {
-  font-size: 20px;
-  line-height: 26px;
-  margin-bottom: 1.5rem; }
+  font-size: 1.25rem;
+  line-height: 1.625;
+  margin-bottom: 1.5rem;
+  font-weight: bold; }
 
 h5 {
-  font-size: 16px;
-  line-height: 19.24px;
-  margin-bottom: 1.5rem; }
+  font-size: 1rem;
+  line-height: 1.203;
+  margin-bottom: 1.5rem;
+  font-weight: bold; }
 
 .small-header,
 h6 {
   font-size: 0.75em;
   line-height: 0.9;
-  margin-bottom: 1.5em; }
+  margin-bottom: 1.5em;
+  font-weight: bold; }
 
 /*--------------------------
 PLAIN LIST
@@ -2782,18 +2789,18 @@ section ul,
 
 section li,
 .site-content li {
-  font-size: 1em;
+  font-size: 1rem;
   line-height: 1.5;
   color: #333333; }
   @media (min-width: 768px) and (max-width: 991.98px) {
     section li,
     .site-content li {
-      font-size: .75em; } }
+      font-size: .75rem; } }
   section li:before,
   .site-content li:before {
     content: "\2022";
     color: #00818F;
-    font-size: 1.3em;
+    font-size: 1.3rem;
     display: inline-block;
     width: 1em;
     margin-left: -1em; }
@@ -2830,32 +2837,34 @@ FEATURE LIST
       .feature-list h4 {
         width: 70%; } }
   .feature-list a.forward-link {
-    font-size: 0.75em; }
+    font-size: 0.75rem; }
     @media (min-width: 1200px) {
       .feature-list a.forward-link {
-        font-size: 1em; } }
+        font-size: 1rem; } }
 
 /*-----  TEMPLATE CONTENT ---------- 
 --------------------------------------*/
 .site-content p,
 .site-content .eight-by-four,
 .site-content .six-by-six {
-  line-height: 24px;
-  font-size: 16px; }
+  font-size: 1rem;
+  line-height: 1.3;
+  margin-bottom: 1.5rem; }
   @media (min-width: 992px) {
     .site-content p,
     .site-content .eight-by-four,
     .site-content .six-by-six {
-      line-height: 28.8px;
-      font-size: 18px; } }
+      font-size: 1.125rem;
+      line-height: 1.5; } }
 
 .site-content .page-intro {
-  font-size: 18px;
-  line-height: 27px; }
+  font-size: 1.125rem;
+  line-height: 1.75;
+  margin-bottom: 1.5rem; }
   @media (min-width: 992px) {
     .site-content .page-intro {
-      font-size: 20px;
-      line-height: 30px; } }
+      font-size: 1.25rem;
+      line-height: 1.65; } }
 
 .site-content .main-content h1 {
   margin: 30px 0 40px; }
@@ -2878,7 +2887,7 @@ FEATURE LIST
 .site-content .right-column .contact-info {
   margin-bottom: 40px; }
 
-.site-content .right-column p.contact-info__title {
+.site-content .right-column .contact-info h4 {
   font-weight: bold;
   margin-top: 30px; }
 
@@ -2888,8 +2897,8 @@ FEATURE LIST
   list-style: none; }
   .site-content .view-list ul li,
   .site-content .right-page-nav ul li {
-    font-size: 18px;
-    line-height: 30px; }
+    font-size: 1.125rem;
+    line-height: 1.875; }
     .site-content .view-list ul li:before,
     .site-content .right-page-nav ul li:before {
       content: none; }
@@ -3240,7 +3249,7 @@ a.btn-cta__border--inline:hover {
     @media (min-width: 768px) and (max-width: 1199.98px) {
       .contact-panel .contact-panel__content p,
       .contact-panel .contact-panel__content h5 {
-        font-size: 12px; } }
+        font-size: .075rem; } }
 
 /*-------------- SIMILAR COURSES PANEL ---------------*/
 @media (min-width: 768px) and (max-width: 1199.98px) {
@@ -3275,7 +3284,7 @@ a.btn-cta__border--inline:hover {
   color: #0D68CF;
   font-weight: bold;
   box-shadow: 0px 5px 5px -1px rgba(64, 64, 64, 0.75);
-  font-size: .8em; }
+  font-size: .8rem; }
   .top-menu-tab .top-menu-tab__dt {
     display: none; }
   .top-menu-tab svg, .top-menu-tab span {
@@ -3329,7 +3338,7 @@ a.btn-cta__border--inline:hover {
       display: inline-block;
       padding: 5px 0 5px 10px;
       margin: 0;
-      font-size: .9em;
+      font-size: .9rem;
       width: 75px; }
       .header .header__menu p .header-menu__dt-text {
         display: none; }
@@ -3344,7 +3353,7 @@ a.btn-cta__border--inline:hover {
     .header .header__menu {
       line-height: 1.7; }
       .header .header__menu p {
-        font-size: 1em;
+        font-size: 1rem;
         width: auto; }
         .header .header__menu p .header-menu__dt-text {
           display: inline; }
@@ -3382,15 +3391,15 @@ footer {
       display: none; } }
 
 .footer__strap-line {
-  font-size: 30px;
+  font-size: 1.875rem;
   font-weight: bold;
   color: #ffffff; }
   @media (min-width: 1200px) {
     .footer__strap-line {
-      font-size: 48px; } }
+      font-size: 3rem; } }
   @media (min-width: 992px) {
     .footer__strap-line {
-      font-size: 40px; } }
+      font-size: 2.5rem; } }
 
 .site-width.container.footer {
   padding-top: 30px; }
@@ -3423,7 +3432,7 @@ footer {
   color: #0D68CF;
   font-weight: bold;
   box-shadow: -1px -1px 4px 1px rgba(64, 64, 64, 0.75);
-  font-size: .8em; }
+  font-size: .8rem; }
   .bottom-menu__tab svg, .bottom-menu__tab span {
     vertical-align: middle; }
   @media (max-width: 575.98px) {
@@ -3538,8 +3547,8 @@ a.card-link {
   background: #00818F;
   color: #ffffff;
   display: block;
-  font-size: 20px;
-  line-height: 24px;
+  font-size: 1.25rem;
+  line-height: 1.5;
   text-decoration: none;
   height: auto;
   padding: 30px 30px 40px 30px;
@@ -3549,8 +3558,8 @@ a.card-link {
     margin-bottom: 30px; }
   @media (min-width: 768px) {
     a.card-link {
-      font-size: 16px;
-      line-height: 19.2px; }
+      font-size: 1rem;
+      line-height: 1.2; }
       a.card-link svg {
         width: 50px;
         height: 50px;
@@ -3558,8 +3567,8 @@ a.card-link {
   @media (min-width: 992px) {
     a.card-link {
       padding: 30px 30px 40px 30px;
-      font-size: 20px;
-      line-height: 24px;
+      font-size: 1.25rem;
+      line-height: 1.5;
       font-weight: bold; }
       a.card-link svg {
         width: 70px;
@@ -3576,8 +3585,8 @@ a.card-link {
     color: #d6d6d6; }
   .box-out__grey p,
   .box-out__grey a {
-    line-height: 24px;
-    font-size: 16px; }
+    line-height: 1.5;
+    font-size: 1rem; }
   .box-out__grey a {
     color: #F6BE00; }
 
@@ -3587,8 +3596,8 @@ a.card-link {
   margin-bottom: 30px; }
   .box-out__yellow p,
   .box-out__yellow a {
-    line-height: 24px;
-    font-size: 16px; }
+    line-height: 1.5;
+    font-size: 1rem; }
   .box-out__yellow a {
     color: #333333; }
 
@@ -3604,7 +3613,7 @@ ALERTS
   margin-bottom: 30px; }
   .alert h3 {
     font-weight: normal;
-    font-size: 16px; }
+    font-size: 1rem; }
   .alert h3,
   .alert p {
     display: inline; }
@@ -3646,6 +3655,9 @@ ALERTS
 ---------------*/
 .card {
   position: relative; }
+  .card img {
+    float: right;
+    width: 100%; }
 
 .card__icon {
   position: absolute;
@@ -3718,11 +3730,11 @@ HERO
   font-weight: bold;
   padding: 40px 16px; }
   .hero-content h1 {
-    font-size: 40px;
-    line-height: 48px; }
+    font-size: 2.25rem;
+    line-height: 1.2; }
   .hero-content p {
-    font-size: 24px;
-    line-height: 28.8px; }
+    font-size: 1.5rem;
+    line-height: 1.9rem; }
   .hero-content:after, .hero-content:before {
     content: '';
     position: absolute;
@@ -3739,11 +3751,11 @@ HERO
     .hero-content {
       padding: 66px 120px 70px 120px; }
       .hero-content h1 {
-        font-size: 60px;
-        line-height: 66px; }
+        font-size: 3.8rem;
+        line-height: 1; }
       .hero-content p {
-        font-size: 30px;
-        line-height: 36px; } }
+        font-size: 1.875rem;
+        line-height: 1.25; } }
 
 .column-top-hero__left {
   background: #00818F;
@@ -3837,9 +3849,9 @@ HERO
   clear: both; }
   .inpage-feed-content .events-feed__type {
     color: #858585;
-    font-size: 12px;
+    font-size: .75rem;
     text-transform: uppercase;
-    line-height: 12.5px;
+    line-height: 0.781;
     margin-bottom: 1em; }
   .inpage-feed-content .row {
     border-top: black solid 1px;
@@ -3873,7 +3885,7 @@ table {
   border-width: 1px 0 0 0;
   border-color: #333;
   border-style: solid;
-  font-size: 1em;
+  font-size: 1rem;
   margin-bottom: 60px;
   overflow-x: scroll; }
 
@@ -3912,7 +3924,7 @@ tfoot {
 caption {
   caption-side: top;
   font-weight: bold;
-  font-size: 24px;
+  font-size: 1.5rem;
   margin-bottom: 1.5em;
   text-align: left; }
 
@@ -3936,7 +3948,7 @@ td, td img {
       margin: 1em 0; } }
   .blockquote blockquote:before {
     content: "\275D";
-    font-size: 6em;
+    font-size: 6rem;
     position: absolute;
     top: -85px; }
     @media (min-width: 576px) {
@@ -3950,12 +3962,12 @@ td, td img {
   .blockquote blockquote p.blockquote-quote {
     float: right;
     position: relative;
-    font-size: 20px;
-    line-height: 30px; }
+    font-size: 1.25rem;
+    line-height: 1.675; }
     @media (min-width: 576px) {
       .blockquote blockquote p.blockquote-quote {
-        font-size: 24px;
-        line-height: 36px; } }
+        font-size: 1.5rem;
+        line-height: 1.75; } }
   .blockquote blockquote .blockquote-detail {
     clear: both; }
   .blockquote blockquote img {
@@ -3975,14 +3987,14 @@ td, td img {
     vertical-align: middle; }
     .blockquote blockquote .blockquote-detail__text p {
       margin-bottom: .25em;
-      font-size: .75em; }
+      font-size: .75rem; }
       @media (min-width: 576px) {
         .blockquote blockquote .blockquote-detail__text p {
-          font-size: 1em; } }
+          font-size: 1rem; } }
     .blockquote blockquote .blockquote-detail__text a {
-      font-size: .75em; }
+      font-size: .75rem; }
       @media (min-width: 576px) {
         .blockquote blockquote .blockquote-detail__text a {
-          font-size: 1em; } }
+          font-size: 1rem; } }
     .blockquote blockquote .blockquote-detail__text p.blockquote-detail__name {
       font-weight: bold; }

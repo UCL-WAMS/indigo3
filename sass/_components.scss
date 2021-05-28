@@ -140,8 +140,8 @@ a.card-link  {
 	background: $brightblue;
 	color: #ffffff;
 	display: block;
-	font-size: 20px;
-	line-height: 24px;
+	font-size: 1.25rem;
+	line-height: 1.5;
 	text-decoration: none;
 	height:auto;
 	padding: 30px 30px 40px 30px;
@@ -153,8 +153,8 @@ a.card-link  {
 
 
 @include media-breakpoint-up(md) {
-		font-size: 16px;
-		line-height: 19.2px;
+		font-size: 1rem;
+		line-height: 1.2;
 		svg {
 			width: 50px;
 			height: 50px;
@@ -164,8 +164,8 @@ a.card-link  {
 
 @include media-breakpoint-up (lg) {
 		padding: 30px 30px 40px 30px;
-		font-size: 20px; 
-		line-height: 24px ;
+		font-size: 1.25rem; 
+		line-height: 1.5 ;
 		font-weight: bold;
 		svg {
 			width: 70px;
@@ -195,8 +195,8 @@ a.card-link  {
 	}
 	p, 
 	a {
-	line-height: 24px;
-	font-size: 16px; 
+	line-height: 1.5;
+	font-size: 1rem; 
 	}
 	a {
 		color: $yellow;
@@ -212,8 +212,8 @@ a.card-link  {
 	
 	p, 
 	a {
-	line-height: 24px;
-	font-size: 16px; 
+	line-height: 1.5;
+	font-size: 1rem; 
 	}
 	a {
 		color: #333333;
@@ -238,7 +238,7 @@ ALERTS
 	margin-bottom: 30px;
 			h3 {
 			font-weight: normal; 
-			font-size: 16px;
+			font-size: 1rem;
 		}
 		h3, 
 		p  {
@@ -294,6 +294,10 @@ ALERTS
 
 .card {
 	position: relative;
+	img {
+		float: right;
+		width: 100%;
+		}
 	}
 .card__icon {
 	position: absolute; 

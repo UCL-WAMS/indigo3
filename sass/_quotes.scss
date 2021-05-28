@@ -21,7 +21,7 @@
 			}
 		&:before {
 		content: "\275D";
-		font-size: 6em;
+		font-size: 6rem;
 		position: absolute;
 		top: -85px;
 		@include media-breakpoint-up(sm) {
@@ -42,11 +42,11 @@
 		p.blockquote-quote {
 			float: right;
 			position: relative;
-			font-size: 20px;
-			line-height: 30px;
+			font-size: 1.25rem;
+			line-height: 1.675;
 		@include media-breakpoint-up(sm) {
-			font-size: 24px;
-			line-height: 36px;
+			font-size: 1.5rem;
+			line-height: 1.75;
 		}
 			
 		} 
@@ -78,15 +78,15 @@
 					
 				p {
 					margin-bottom: .25em;
-					font-size: .75em;
+					font-size: .75rem;
 					@include media-breakpoint-up(sm) { 
-						font-size: 1em; 
+						font-size: 1rem; 
 						}
 					}
 				a { 
-					font-size: .75em;
+					font-size: .75rem;
 					@include media-breakpoint-up(sm) { 
-						font-size: 1em; 
+						font-size: 1rem; 
 						} 
 					}
 				p.blockquote-detail__name {

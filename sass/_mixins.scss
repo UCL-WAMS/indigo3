@@ -1,0 +1,145 @@
+
+// CLEAR LEFT TYPOGRAPH 
+
+// HEADER STYLES
+
+@mixin bold-four {
+	font-size: 1.875rem;
+	line-height: 2.25;
+	margin-bottom: 1.5rem;
+	font-weight: bold;
+	@include media-breakpoint-up(lg) {
+		font-size: 2.25rem;
+		line-height: 2.688;
+		}
+}
+// h1 36px 30px
+
+@mixin bold-three {
+	font-size: 1.5rem;
+	line-height:1.2;
+	margin-bottom: 1.5rem;
+	font-weight: bold;
+	@include media-breakpoint-up(lg) {
+		font-size: 1.875rem;
+		line-height: 1.15;
+		}
+}
+//h2 30px 24px
+
+@mixin bold-two {
+	font-size: 1.25rem;
+	line-height: 1.5 ;
+	margin-bottom: 1.5rem;
+	font-weight: bold;
+	@include media-breakpoint-up(lg) {
+		font-size: 1.5rem;
+		line-height: 1.8;
+		}
+}
+//h3 24px 20px
+
+@mixin bold-one {
+	font-size: 1.25rem;
+	line-height: 1.625 ;
+	margin-bottom: 1.5rem;
+	font-weight: bold;
+	} 
+//h4 20px
+
+
+@mixin bold-zero {
+	font-size: 1rem;
+	line-height: 1.203;
+	margin-bottom: 1.5rem;
+	font-weight: bold;
+	}
+//h5 16px
+
+@mixin bold-zero-uc {
+	@include bold-zero;
+	text-transform: uppercase;
+	}
+// uppercase 
+
+@mixin bold-minus-one {
+	font-size: 0.75em;
+	line-height: 0.9;
+	margin-bottom: 1.5em;
+	font-weight: bold;
+}
+//h6 12px
+
+@mixin bold-minus-one-uc {
+	text-transform: uppercase;
+}
+
+
+// DEFAULT STYLES 
+
+@mixin normal-one {
+	font-size: 1.25rem;
+	line-height: 1.6 ;
+	margin-bottom: 1.5em;
+} 
+// 20px
+
+@mixin normal-zero {
+	font-size: 1rem;
+	line-height: 1.3;
+	margin-bottom: 1.5rem;
+}
+//16px
+
+@mixin normal-minus-one {
+	font-size: 0.75rem;
+	line-height: 1;
+	margin-bottom: 1.5rem;
+} 
+// 12px
+
+// PROSE STYLES
+
+@mixin prose-two {
+	font-size: 1.25rem;
+	line-height: 1.6;
+	margin-bottom: 1.5em;
+	@include media-breakpoint-up(lg) {
+		font-size: 1.5rem;
+		line-height: 1.8;
+		}
+}
+// 24px 20px
+
+@mixin prose-one {
+	font-size: 1.125rem;
+	line-height: 1.75;
+	margin-bottom: 1.5rem;
+	@include media-breakpoint-up(lg) {
+		font-size: 1.25rem;	
+		line-height: 1.65;	
+		}		
+}
+//20px 18px
+
+@mixin prose-zero {
+	font-size: 1rem;
+	line-height: 1.3;
+	margin-bottom: 1.5rem;
+	@include media-breakpoint-up(lg) {
+		font-size: 1.125rem;
+		line-height: 1.5;	
+		}
+}
+// 15px 24px
+
+@mixin prose-minus-one {
+	font-size: 0.75rem;
+	line-height: 1rem;
+	margin-bottom: 1.5rem;
+	
+}
+
+// 12px
+
+

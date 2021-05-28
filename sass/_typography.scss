@@ -20,58 +20,24 @@ a {
 		}
 }
 
-// MOVE TO VARIABLES..... WILL UPDATE WITH REMS .....
- 
 h1  {
-	font-size: 30px;
-	line-height: 36px;
-	margin-bottom: 1.5rem;
-	@include media-breakpoint-up(lg) {
-		font-size: 36px;
-		line-height:43px;
-		}
+	@include bold-four;
 }
-
-
 h2 {
-	font-size: 24px;
-	line-height: 28.8px;
-	margin-bottom: 1.5rem;
-	@include media-breakpoint-up(lg) {
-		font-size: 30px;
-		line-height: 36px;
-		}
+	@include bold-three;
 }
-
 h3 {
-	font-size: 20px;
-	line-height: 24px ;
-	margin-bottom: 1.5rem;
-	@include media-breakpoint-up(lg) {
-		font-size: 24px;
-		line-height: 28.8px;
-		}
+	@include bold-two;
 }
-
 h4 {
-	font-size: 20px;
-	line-height: 26px ;
-	margin-bottom: 1.5rem;
+	@include bold-one;
 }
-
-
-
 h5 {
-	font-size: 16px;
-	line-height: 19.24px;
-	margin-bottom: 1.5rem;
+	@include bold-zero;
 }
-
 .small-header,
 h6 {
-	font-size: 0.75em;
-	line-height: 0.9;
-	margin-bottom: 1.5em;
+	@include bold-minus-one; 
 }
 
 
@@ -88,16 +54,16 @@ section,
 		list-style: none;
 	}
 	li {
-		font-size: 1em; 
+		font-size: 1rem; 
 		line-height: 1.5; 
 		color: #333333;
 	@include media-breakpoint-only(md){ 
-		font-size: .75em;
+		font-size: .75rem;
 		}
 		&:before {
 	content: "\2022"; 
 	color: #00818F;
-	font-size: 1.3em;
+	font-size: 1.3rem;
   	display: inline-block; 
   	width: 1em;
   	margin-left: -1em
@@ -149,9 +115,9 @@ FEATURE LIST
 	}
 	
 a.forward-link {
-		font-size: 0.75em;
+		font-size: 0.75rem;
 		@include media-breakpoint-up(xl){ 
-		font-size: 1em;
+		font-size: 1rem;
 		}
 }
 
@@ -168,21 +134,14 @@ a.forward-link {
 	p, 
 	.eight-by-four,
 	.six-by-six {
-	line-height: 24px;
-	font-size: 16px; 
-	@include media-breakpoint-up(lg){ 
-		line-height: 28.8px;
-		font-size: 18px;
-	 	}
-	}
-	.page-intro {
-		font-size: 18px;
-		line-height: 27px;
-		@include media-breakpoint-up(lg) {
-			font-size: 20px;
-			line-height: 30px;
+		@include prose-zero;
 		}
-	}
+
+
+	.page-intro {
+		@include prose-one;
+		}
+		
 	.main-content h1 {
 		margin: 30px 0 40px;
 		}
@@ -209,7 +168,7 @@ a.forward-link {
 		margin-bottom: 40px;
 	}
 
-	p.contact-info__title {
+	.contact-info h4{
 		font-weight: bold;
 		margin-top: 30px;
 		}
@@ -221,8 +180,8 @@ a.forward-link {
 		list-style: none;
 		
 		li {
-			font-size: 18px;
-			line-height: 30px;
+			font-size: 1.125rem;
+			line-height: 1.875;
 			&:before {
 				content: none;
 			}
