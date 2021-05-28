@@ -2849,9 +2849,6 @@ FEATURE LIST
       line-height: 28.8px;
       font-size: 18px; } }
 
-.site-content h1 {
-  margin: 30px 0 40px; }
-
 .site-content .page-intro {
   font-size: 18px;
   line-height: 27px; }
@@ -2859,6 +2856,9 @@ FEATURE LIST
     .site-content .page-intro {
       font-size: 20px;
       line-height: 30px; } }
+
+.site-content .main-content h1 {
+  margin: 30px 0 40px; }
 
 .site-content .main-content h2 {
   border-top: solid 1px #333;
