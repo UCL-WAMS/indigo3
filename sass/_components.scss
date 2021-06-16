@@ -1,9 +1,9 @@
 
 
-//SEPERATE INTO SMALLER PARTIALS IF NECESSARY AFTER DEV STAGE
+//BREAK INTO SMALLER PARTIALS IF NECESSARY AFTER DEV STAGE
 
 
-// /* DEFAULT YOUTUBE AND VIMEO OG WIDGET STYLES */
+// /* DEFAULT YOUTUBE AND VIMEO OG WIDGET STYLES FROM INDIGO 2 */
 
 ucl-widget[type="youtube"], ucl-widget[type="vimeo"]{
 	position: relative;
@@ -17,10 +17,34 @@ ucl-widget[type="youtube"], ucl-widget[type="vimeo"]{
     		width: 100%;
    			height: 100%;
     		border: 0;
+    		overflow: hidden;
 		}
 }
 
-// VIDEO WITH CAPTION
+
+// STYLES FOR IFRAME - SIZES TO WIDTH OF CONTAINER AND  RETAINS ASPECT RATIO
+
+
+.embedded-video .player{
+	position: relative;
+    overflow: hidden;
+    padding-bottom: 56%;
+    padding-top: 20px;
+    height:0;
+    iframe {
+			position: absolute;
+    		top: 0;
+   			left: 0;
+    		width: 100%;
+   			height: 100%;
+    		border: 0;
+		}
+    
+}
+
+
+
+// VIDEO WITH CAPTION see above for video sizing
 
 //BOOTSTRAP LAYOUT
 
@@ -60,7 +84,7 @@ ucl-widget[type="youtube"], ucl-widget[type="vimeo"]{
 
 .video__embed--text {
 		font-size: .7em;
-	.video__embed--text-position {
+	.position-bottom{
 		width: 95%;
 		float: right;
 		padding-bottom:15px;
@@ -69,7 +93,7 @@ ucl-widget[type="youtube"], ucl-widget[type="vimeo"]{
 
 @include media-breakpoint-up(lg) {
 	position: relative;
-		.video__embed--text-position {
+		.position-bottom {
 		padding: 40px 0;
 		position: absolute;
 		bottom: 0;
