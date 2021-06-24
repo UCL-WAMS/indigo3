@@ -3122,11 +3122,11 @@ a.btn-cta__border--inline:hover {
       flex: 0 0 50%;
       max-width: 50%; } }
 
-.six-by-six__left {
-  padding-right: 16px; }
-
-.six-by-six__right {
-  padding-left: 16px; }
+@media (min-width: 768px) {
+  .six-by-six__left {
+    padding-right: 16px; }
+  .six-by-six__right {
+    padding-left: 16px; } }
 
 /* ------------- TWO THIRDS AND A THIRD ------------------------*/
 /* ----------------- BIG COLUMN LEFT SMALL RIGHT -----------------*/
@@ -3751,6 +3751,10 @@ ALERTS
   .card img {
     float: right;
     width: 100%; }
+  .card a {
+    text-decoration: none; }
+    .card a:hover {
+      text-decoration: underline; }
 
 .card__icon {
   position: absolute;
@@ -3761,55 +3765,63 @@ ALERTS
 /*------------------
 FIVE CARD LAYOUT
 ----------------------------*/
-.five-card-layout .six-by-six__right .six-by-six__right,
-.five-card-layout .six-by-six__right .six-by-six__left {
-  position: relative;
-  width: 100%;
-  flex: 0 0 50%;
-  max-width: 50%; }
-
-.five-card-layout {
-  padding: 16px; }
-  .five-card-layout .half-column-card img {
-    max-height: 459px; }
-  .five-card-layout > .six-by-six .row.no-gutters .six-by-six__right {
-    padding-left: 0;
-    padding-right: 16px; }
-  .five-card-layout > .six-by-six .row.no-gutters .six-by-six__left {
-    margin-bottom: 1.5em; }
-  .five-card-layout .card__icon {
+.five-card {
+  margin-top: 64px; }
+  .five-card .card__icon {
     display: none; }
-  .five-card-layout .card * {
-    margin-bottom: .5em; }
-  .five-card-layout .card {
-    padding-bottom: 35px;
-    margin-bottom: 1.5em; }
-    .five-card-layout .card a {
-      text-decoration: none; }
-      .five-card-layout .card a:hover {
-        text-decoration: underline; }
-    .five-card-layout .card:last-of-type {
-      border-bottom: 0;
-      margin-bottom: 0;
-      padding-bottom: 0; }
-    .five-card-layout .card img {
-      margin-bottom: 1em; }
-    .five-card-layout .card svg {
-      margin-bottom: 0; }
-  @media (min-width: 768px) {
-    .five-card-layout {
-      padding: 40px 0 80px 0; }
-      .five-card-layout .six-by-six__left {
-        border-right: 1px solid #adadad; }
-      .five-card-layout .six-by-six__left .six-by-six .six-by-six__left {
-        border-right: 0; }
-      .five-card-layout > .six-by-six .row.no-gutters .six-by-six__right {
-        padding-left: 16px;
-        padding-right: 0; }
-      .five-card-layout > .six-by-six .row.no-gutters .six-by-six__left {
-        margin-bottom: 0; }
-      .five-card-layout .card {
-        border-bottom: 1px solid #adadad; } }
+  .five-card .five-card__right {
+    order: 2; }
+  .five-card .five-card__left-top {
+    order: 1;
+    padding: 0 16px 30px 16px; }
+  .five-card .five-card__left-bottom {
+    order: 3;
+    border-top: solid 1px #d6d6d6;
+    padding-top: 35px;
+    padding-left: 16px; }
+  .five-card .six-by-six__left,
+  .five-card .six-by-six__right {
+    position: relative;
+    width: 100%;
+    padding-right: 16px;
+    padding-left: 16px;
+    flex: 0 0 50%;
+    max-width: 50%; }
+    .five-card .six-by-six__left a, .five-card .six-by-six__left p,
+    .five-card .six-by-six__right a,
+    .five-card .six-by-six__right p {
+      font-size: 0.75em;
+      line-height: 0.9;
+      margin-bottom: 1.5em;
+      font-weight: bold; }
+
+@media (min-width: 768px) {
+  .five-card__right .six-by-six__left {
+    border-right: solid 1px #d6d6d6; } }
+
+@media (min-width: 576px) {
+  .five-card .card__icon {
+    display: none; }
+  .five-card .float.row {
+    display: block; }
+  .five-card .five-card__right {
+    float: right;
+    width: 50%;
+    border-left: solid 1px #d6d6d6; }
+  .five-card .five-card__left-top {
+    float: left;
+    width: 50%;
+    padding-right: 20px;
+    padding-left: 0; }
+  .five-card .card {
+    margin-bottom: 15px; }
+  .five-card .five-card__left-bottom {
+    float: left;
+    width: 50%;
+    clear: left;
+    padding-right: 20px;
+    border-top: 0;
+    padding-top: 0; } }
 
 /*-----------
 HERO
