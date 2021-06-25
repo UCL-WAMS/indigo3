@@ -3766,7 +3766,7 @@ ALERTS
 FIVE CARD LAYOUT
 ----------------------------*/
 .five-card {
-  margin-top: 64px; }
+  margin-top: 30px; }
   .five-card .card__icon {
     display: none; }
   .five-card .five-card__right {
@@ -3778,7 +3778,12 @@ FIVE CARD LAYOUT
     order: 3;
     border-top: solid 1px #d6d6d6;
     padding-top: 35px;
-    padding-left: 16px; }
+    padding-left: 16px;
+    width: 100%; }
+    .five-card .five-card__left-bottom h2 {
+      border: none;
+      padding-top: 0;
+      margin-top: 0; }
   .five-card .six-by-six__left,
   .five-card .six-by-six__right {
     position: relative;
@@ -3813,6 +3818,8 @@ FIVE CARD LAYOUT
     width: 50%;
     padding-right: 20px;
     padding-left: 0; }
+    .five-card .five-card__left-top .card {
+      border-bottom: solid 1px #d6d6d6; }
   .five-card .card {
     margin-bottom: 15px; }
   .five-card .five-card__left-bottom {
