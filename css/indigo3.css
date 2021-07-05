@@ -2991,7 +2991,8 @@ CUSTOM SITE WIDTH BOOTSTRAP CONTAINER
   padding-right: 12px; }
 
 .prog-key-info .prog-key-info__text {
-  float: left; }
+  float: left;
+  max-width: 35%; }
 
 .prog-key-info p {
   font-size: 0.75rem;
@@ -3829,6 +3830,37 @@ FIVE CARD LAYOUT
     padding-right: 20px;
     border-top: 0;
     padding-top: 0; } }
+
+.accordion {
+  border-top: #d6d6d6 solid 1px; }
+  .accordion .accordion__title {
+    font-size: 1rem;
+    line-height: 1.203;
+    font-weight: bold;
+    padding: 20px 0;
+    border-bottom: solid 1px #d6d6d6; }
+    .accordion .accordion__title.active {
+      border-bottom: 0; }
+      .accordion .accordion__title.active span:after {
+        content: "\02C4"; }
+    .accordion .accordion__title span {
+      display: block;
+      position: relative; }
+      .accordion .accordion__title span:after {
+        content: "\02C5";
+        position: absolute;
+        right: 0;
+        font-size: 1.5em;
+        color: #0D68CF;
+        top: -5px;
+        font-weight: normal; }
+  .accordion dd.accordion__description {
+    margin-left: 0;
+    padding-top: 30px; }
+    .accordion dd.accordion__description.active {
+      border-bottom: solid 1px #d6d6d6;
+      padding-bottom: 30px;
+      margin-left: 0; }
 
 /*-----------
 HERO
