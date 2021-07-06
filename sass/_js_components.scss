@@ -1,3 +1,6 @@
+/*-----------
+ACCORDION
+--------------------*/
 
 .accordion {
 	border-top: #d6d6d6 solid 1px;
@@ -7,6 +10,9 @@
 		font-weight: bold; 
 		padding: 20px 0; 
 		border-bottom: solid 1px #d6d6d6;
+		&:hover {
+            cursor: pointer;
+        }
 		&.active {
 			border-bottom: 0;
 			span:after{
@@ -40,6 +46,100 @@
 
 }
 
+/*------------- 
+TABS 
+--------------- */
+
+// BASE STYLES
+
+.tabs__navigation  {
+	span {
+		display: block;
+		a {
+			text-decoration: none; 
+			display: block; 
+			margin-right: 30px;
+		}
+	}
+}   
+
+.tabs__content {
+	margin-bottom: 1.5em;
+	.tab-content {
+		padding: 30px 0;
+		// toggle classes
+		display:none;
+			 &.active {
+		 		display:block
+		 }
+	}
+}
+
+// FLAVOURS
+
+.tabs--all-transparent {
+	.tabs__navigation {
+		border-bottom: 3px solid #ebebeb;
+		span a  {
+			padding-bottom: 29px; 
+			padding-top: 10px; 
+		}
+		a.active {
+			border-bottom: 3px solid #0d68cf;  
+			font-weight: bold; 
+			margin-bottom: 1em; 
+		}
+	}
+}
+
+
+ .tabs--active-grey  {
+	.tabs__navigation
+		span a {
+			padding: 12px 24px; 
+			font-size: 1rem; 
+			line-height: 1.203; 
+			font-weight: bold;
+		}
+		 a.active {
+		 	border-top: 3px solid #0d68cf; 
+		 	background: #f5f5f5;
+		 }
+	}  
+
+
+.tabs--active-blue  {
+	.tabs__navigation {
+		background: #ebebeb;
+		span a {
+			padding: 32px; 
+			font-size: 1rem; 
+			line-height: 1.203; 
+			font-weight: bold;
+		}
+		a.active {
+			background: #0d68cf; 
+			color: #ffffff;
+		}
+
+	}
+}
+
+
+
+@include media-breakpoint-up(md){ 
+	.tabs__navigation  span {
+		display:inline-block;
+	} 
+	.tabs--all-transparent .tabs__navigation  {
+		 span a  {
+		 	padding-top: 0;
+		 }
+		 a.active {
+		  	margin-bottom: -3px;
+		 }
+	}
+}
 
 
 
