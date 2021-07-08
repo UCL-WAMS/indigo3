@@ -70,12 +70,22 @@ section,
 }
 	}
 
-	
 }
 
 	
-
-
+	// removes bullet points on tabs in editor view
+ul.primary {
+	padding-left: 0;
+	li {
+	line-height: normal;
+		a {
+		padding-top:5px;
+		}
+		&:before {
+		content: none;
+		}
+	}
+}
 
 /*--------------------------------
 FEATURE LIST 
