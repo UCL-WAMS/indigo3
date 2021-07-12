@@ -1,82 +1,106 @@
 	
-// GENERIC TABS MARK UP - MOVE WHEN FINALISED
-
- .prog-key-info {
-
-	.tabs__navigation  {
-
-	
-
-		span {
-			display:inline-block; 
-					margin-bottom: -1px;
-					margin-right: -5px;
-					&:nth-of-type(1)  a {
-						border-radius: 12px 0 0 12px ;
-						}
-					&:nth-of-type(2)  a {
-						border-radius:0  12px 12px  0 ;
-												}				
-				a { border:1px solid #0d68cf;
-					text-decoration: none;
-					padding-right: 1rem; 
-					padding-left: 1rem;
-					padding-top: 8px; 
-					padding-bottom: 8px; 
-					line-height: 1.25rem;
-					&.active, 
-					&.focus,
-					&.hover {
-						background-color: #0d68cf;
-						color: #ffffff;
-						}
-				}
-
-			}
+.uk-inter-switch {
+	padding-bottom: 1.5em;
+	span {
+	display: inline-block;
+	border: 1px solid $utilityblue;
+    text-decoration: none;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    line-height: 1.25rem;
+    margin-right: -5px;
+    color: $utilityblue;
+    &:nth-of-type(1) {
+		border-radius: 12px 0 0 12px ;
+		}
+	&:nth-of-type(2)  {
+		border-radius:0  12px 12px  0 ;  
 	}
+	&:hover {
+    	background-color: $buttonrollover;
+    	color: #ffffff;
+    }
 
-
-	.six-by-six__left {
-		padding:48px 64px 0 64px;
-		background: #ebebeb;
+       &.active  {
+    	background: $utilityblue; 
+    	color: #ffffff;
+       	}
 	}
-	.six-by-six__right {
+    
+}
+
+
+
+
+// KEY INFO BOOTSTRAP LAYOUT COLUMNS
+
+.prog-key-info__icon {
+  @include make-col-ready();
+
+    @include media-breakpoint-up(sm) {
+    @include make-col(2);
+   }
+
+}
+
+
+.prog-key-info__text {
+  @include make-col-ready();
+
+    @include media-breakpoint-up(sm) {
+    @include make-col(10);
+   }
+
+}
+
+// KEY INFO STYLING
+
+.prog-key-info {
+	margin-bottom: 1.875rem;
+	.prog-key-info__content {
 		background: #f5f5f5;
-		padding:48px 64px;
 	}
-	.prog-key-info__details{
-		padding-bottom: 40px;
+	.prog-key-info__first-row .prog-key-info__icon {
+		padding-top: 33px;
 	}
-
+	.prog-key-info__first-row .prog-key-info__text {
+		padding-top: 30px;
+	}
 	.prog-key-info__icon {
-		float:left;
-		padding-right: 12px;
-		}
-
-
+		text-align: center; 
+		padding-top: 3px;
+		 }
 	.prog-key-info__text {
-		float: left;
-		max-width: 35%;
-	}
-	p {
-		
-		@include prose-minus-one;
-		margin-bottom: 0;
-	
-	}	
-	.prog-key-info__status-open {
-			color: #238628;
+		padding-left: 1%; 
+		padding-right: 5%;
+		div, p {
+			font-size: 0.875rem;
 		}
-	h4 {
-		font-size: 1.125rem;
-		line-height: 1.8;
-		margin-bottom: 0;
+	}
+	.prog-key-info__text, 
+	.prog-key-info__icon  {
+		padding-bottom: 2em; 
 	}
 
-	.prog-key-info__text label{
-		display: none;
+	.prog-key-info__status-closed {
+		color: $utilityred;
 	}
 
-	
+	.prog-key-info__status-open {
+		color: $utilitygreen;
+	}
+
+
+ @include media-breakpoint-down(sm) { 
+ 	.prog-key-info__icon {
+ 		display:none;
+ 	}
+ 	.prog-key-info__text {
+ 		padding-left:5%;
+ 		padding-right: 5%;
+ 	}
+ }
 }
 

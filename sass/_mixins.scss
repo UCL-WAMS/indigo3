@@ -6,7 +6,7 @@
 @mixin bold-four {
 	font-size: 1.875rem;
 	line-height: 1.3;
-	margin-bottom: 1.5rem;
+	margin-bottom: .5rem;
 	font-weight: bold;
 	@include media-breakpoint-up(lg) {
 		font-size: 2.25rem;
@@ -17,7 +17,7 @@
 @mixin bold-three {
 	font-size: 1.5rem;
 	line-height:1.2;
-	margin-bottom: 1.5rem;
+	margin-bottom: .5rem;
 	font-weight: bold;
 	@include media-breakpoint-up(lg) {
 		font-size: 1.875rem;
@@ -29,7 +29,7 @@
 @mixin bold-two {
 	font-size: 1.25rem;
 	line-height: 1.5 ;
-	margin-bottom: 1.5rem;
+	margin-bottom: .5rem;
 	font-weight: bold;
 	@include media-breakpoint-up(lg) {
 		font-size: 1.5rem;
@@ -41,7 +41,7 @@
 @mixin bold-one {
 	font-size: 1.25rem;
 	line-height: 1.625 ;
-	margin-bottom: 1.5rem;
+	margin-bottom: .5rem;
 	font-weight: bold;
 	@include media-breakpoint-up(lg) {
 		font-size: 1.125rem;
@@ -54,7 +54,7 @@
 @mixin bold-zero {
 	font-size: 1rem;
 	line-height: 1.203;
-	margin-bottom: 1.5rem;
+	margin-bottom: .5rem;
 	font-weight: bold;
 	}
 //h5 16px
@@ -68,7 +68,7 @@
 @mixin bold-minus-one {
 	font-size: 0.75em;
 	line-height: 0.9;
-	margin-bottom: 1.5em;
+	margin-bottom: .5rem;
 	font-weight: bold;
 }
 //h6 12px
@@ -90,14 +90,14 @@
 @mixin normal-zero {
 	font-size: 1rem;
 	line-height: 1.3;
-	margin-bottom: 1.5rem;
+	margin-bottom: .5rem;
 }
 //16px
 
 @mixin normal-minus-one {
 	font-size: 0.75rem;
 	line-height: 1;
-	margin-bottom: 1.5rem;
+	margin-bottom: .5rem;
 } 
 // 12px
 
@@ -117,7 +117,7 @@
 @mixin prose-one {
 	font-size: 1.125rem;
 	line-height: 1.75;
-	margin-bottom: 1.5rem;
+	margin-bottom: .5rem;
 	@include media-breakpoint-up(lg) {
 		font-size: 1.25rem;	
 		line-height: 1.65;	
@@ -128,7 +128,7 @@
 @mixin prose-zero {
 	font-size: 1rem;
 	line-height: 1.3;
-	margin-bottom: 1.5rem;
+	margin-bottom: .5rem;
 	@include media-breakpoint-up(lg) {
 		font-size: 1.125rem;
 		line-height: 1.5;	
@@ -139,7 +139,7 @@
 @mixin prose-minus-one {
 	font-size: 0.75rem;
 	line-height: 1rem;
-	margin-bottom: 1.5rem;
+	margin-bottom: .5rem;
 	
 }
 
