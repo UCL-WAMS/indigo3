@@ -264,47 +264,41 @@ FEATURE LINK
  BOXOUTS
 ----------------------------*/
 
-
-.box-out__grey {
-	background-color: #333333;
+.box-out { 
 	padding: 24px;
 	margin-bottom: 30px;
-
-	h3,
-	 {
-		color: #ffffff;
-		}
-	p {
-		color: #d6d6d6;
+	.box-out__content.div {
+		margin: 0;
 	}
 	p, 
 	a {
 	line-height: 1.5;
 	font-size: 1rem; 
+	}
+ }
+
+
+
+.box-out--gray {
+	background: $darkgray;
+	h3 {
+		color: #ffffff;
+	}
+	p {
+		color: #d6d6d6;
 	}
 	a {
 		color: $yellow;
 	}
-
 }
 
 
-.box-out__yellow {
+.box-out--yellow {
 	background-color: $yellow;
-	padding: 24px;
-
-	
-	p, 
 	a {
-	line-height: 1.5;
-	font-size: 1rem; 
+		color: $darkgray;
 	}
-	a {
-		color: #333333;
-	}
-	margin-bottom: 30px;
 }
-
 
 
 
@@ -490,4 +484,21 @@ FIVE CARD LAYOUT
 	}
 }
 
+}
+
+/* ------------------------
+THREE CARD LAYOUT
+---------------------------- */
+
+// SETS EQUAL HEIGHT ON CARDS
+.three-card-layout {
+	.paragraphs-item-card-link{
+		background:#00818F; 
+		width: 100%;
+	}
+ 	.four-by-four-by-four__left,
+ 	.four-by-four-by-four__middle, 
+ 	.four-by-four-by-four__right{ 
+	display: flex;
+	}
 }

@@ -3102,7 +3102,7 @@ a.btn-cta__border--inline:hover {
   .right-page-nav li {
     margin-bottom: .5em; }
 
-.background__grey {
+.background__gray {
   background-color: #f5f5f5; }
 
 .page-update {
@@ -3779,30 +3779,28 @@ FEATURE LINK
 /*---------------------------
  BOXOUTS
 ----------------------------*/
-.box-out__grey {
-  background-color: #333333;
+.box-out {
   padding: 24px;
   margin-bottom: 30px; }
-  .box-out__grey h3 {
-    color: #ffffff; }
-  .box-out__grey p {
-    color: #d6d6d6; }
-  .box-out__grey p,
-  .box-out__grey a {
+  .box-out .box-out__content.div {
+    margin: 0; }
+  .box-out p,
+  .box-out a {
     line-height: 1.5;
     font-size: 1rem; }
-  .box-out__grey a {
+
+.box-out--gray {
+  background: #333333; }
+  .box-out--gray h3 {
+    color: #ffffff; }
+  .box-out--gray p {
+    color: #d6d6d6; }
+  .box-out--gray a {
     color: #F6BE00; }
 
-.box-out__yellow {
-  background-color: #F6BE00;
-  padding: 24px;
-  margin-bottom: 30px; }
-  .box-out__yellow p,
-  .box-out__yellow a {
-    line-height: 1.5;
-    font-size: 1rem; }
-  .box-out__yellow a {
+.box-out--yellow {
+  background-color: #F6BE00; }
+  .box-out--yellow a {
     color: #333333; }
 
 /* ------------ 
@@ -3940,6 +3938,18 @@ FIVE CARD LAYOUT
     padding-right: 20px;
     border-top: 0;
     padding-top: 0; } }
+
+/* ------------------------
+THREE CARD LAYOUT
+---------------------------- */
+.three-card-layout .paragraphs-item-card-link {
+  background: #00818F;
+  width: 100%; }
+
+.three-card-layout .four-by-four-by-four__left,
+.three-card-layout .four-by-four-by-four__middle,
+.three-card-layout .four-by-four-by-four__right {
+  display: flex; }
 
 /*-----------
 ACCORDION
