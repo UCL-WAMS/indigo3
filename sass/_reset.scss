@@ -78,7 +78,7 @@ hr {
 
 // MAYBE MOVE TO A HELPER CLASS PARTIAL?
 
-.clearfix {
+%clearfix, .clearfix  {
   zoom: 1;
   &:before, 
   &:after {

@@ -3762,6 +3762,10 @@ FEATURE LINK
   @media (min-width: 768px) {
     .feature-link {
       margin-bottom: 30px; }
+      .feature-link.clearfix {
+        box-shadow: 3px 10px 10px -6px rgba(51, 51, 51, 0.75);
+        -webkit-box-shadow: 3px 10px 10px -6px rgba(51, 51, 51, 0.75);
+        -moz-box-shadow: 3px 10px 10px -6px rgba(51, 51, 51, 0.75); }
       .feature-link .feature-link_title {
         position: relative; }
         .feature-link .feature-link_title h5 {
@@ -3938,18 +3942,6 @@ FIVE CARD LAYOUT
     padding-right: 20px;
     border-top: 0;
     padding-top: 0; } }
-
-/* ------------------------
-THREE CARD LAYOUT
----------------------------- */
-.three-card-layout .paragraphs-item-card-link {
-  background: #00818F;
-  width: 100%; }
-
-.three-card-layout .four-by-four-by-four__left,
-.three-card-layout .four-by-four-by-four__middle,
-.three-card-layout .four-by-four-by-four__right {
-  display: flex; }
 
 /*-----------
 ACCORDION

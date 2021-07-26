@@ -210,7 +210,7 @@ FEATURE LINK
 .feature-link {
 		position: relative;
 		clear:both;
-	.feature-link_title {
+		.feature-link_title {
 		background: $yellow; 
 		padding: 12px; 
 		text-transform: uppercase; 
@@ -239,6 +239,11 @@ FEATURE LINK
 	
 @include media-breakpoint-up(md) {
 	margin-bottom: 30px; 
+		&.clearfix {
+		box-shadow: 3px 10px 10px -6px rgba(51,51,51,0.75);
+		-webkit-box-shadow: 3px 10px 10px -6px rgba(51,51,51,0.75);
+		-moz-box-shadow: 3px 10px 10px -6px rgba(51,51,51,0.75);
+		}
 	.feature-link_title { 
 		position: relative;
 		h5 {
@@ -486,19 +491,3 @@ FIVE CARD LAYOUT
 
 }
 
-/* ------------------------
-THREE CARD LAYOUT
----------------------------- */
-
-// SETS EQUAL HEIGHT ON CARDS
-.three-card-layout {
-	.paragraphs-item-card-link{
-		background:#00818F; 
-		width: 100%;
-	}
- 	.four-by-four-by-four__left,
- 	.four-by-four-by-four__middle, 
- 	.four-by-four-by-four__right{ 
-	display: flex;
-	}
-}
