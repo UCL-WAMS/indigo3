@@ -134,11 +134,8 @@ a.forward-link {
 }
 
 
-/*-----  TEMPLATE CONTENT ---------- 
+/*-----  TEMPLATE CONTENT CUSTOM STYLES ---------- 
 --------------------------------------*/
-
-
-
 
 .site-content {
 	p, 
@@ -150,37 +147,43 @@ a.forward-link {
 
 	.page-intro {
 		@include prose-one;
+		margin-bottom: 1.8rem;
 		}
 		
 	.main-content h1 {
-		margin: 30px 0 40px;
+		margin: 1.875rem 0 10px 0;
 		}
 
 	.main-content h2 {
 		border-top: solid 1px #333;
-		padding-top: 30px ;
-		margin-top: 30px;
+		padding-top: 1.875rem;
+		margin-top: 1.875rem;
 		clear: both;
+	}
+
+	.top-course-details {
+		color: #5c5c5c;
+		margin-bottom: 2.8125rem;
 	}
 	
 	.right-column {
 		& > h3,
 		.view-list h3,
 		.contact-info h3  {
-			border-top: solid 1px #333;
-			padding-top: 20px;
+			border-top: solid 1px $darkgray;
+			padding-top: 1.25rem;
 			 }
 	p {
-		margin-bottom: 12px;
+		margin-bottom: 0.75rem;
 		}
 
 	.contact-info {
-		margin-bottom: 40px;
+		margin-bottom: 2.5rem;
 	}
 
 	.contact-info h4{
 		font-weight: bold;
-		margin-top: 30px;
+		margin-top: 1.875rem;
 		}
 	
 	}

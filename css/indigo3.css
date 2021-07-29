@@ -2855,14 +2855,14 @@ FEATURE LIST
       .feature-list a.forward-link {
         font-size: 1rem; } }
 
-/*-----  TEMPLATE CONTENT ---------- 
+/*-----  TEMPLATE CONTENT CUSTOM STYLES ---------- 
 --------------------------------------*/
 .site-content p,
 .site-content .eight-by-four,
 .site-content .six-by-six {
   font-size: 1rem;
-  line-height: 1.3;
-  margin-bottom: .5rem; }
+  line-height: 1.6;
+  margin-bottom: 1.3rem; }
   @media (min-width: 992px) {
     .site-content p,
     .site-content .eight-by-four,
@@ -2872,37 +2872,43 @@ FEATURE LIST
 
 .site-content .page-intro {
   font-size: 1.125rem;
-  line-height: 1.75;
-  margin-bottom: .5rem; }
+  line-height: 1.5;
+  margin-bottom: .5rem;
+  margin-bottom: 1.8rem; }
   @media (min-width: 992px) {
     .site-content .page-intro {
       font-size: 1.25rem;
-      line-height: 1.65; } }
+      line-height: 1.5;
+      margin-bottom: 1.3rem; } }
 
 .site-content .main-content h1 {
-  margin: 30px 0 40px; }
+  margin: 1.875rem 0 10px 0; }
 
 .site-content .main-content h2 {
   border-top: solid 1px #333;
-  padding-top: 30px;
-  margin-top: 30px;
+  padding-top: 1.875rem;
+  margin-top: 1.875rem;
   clear: both; }
+
+.site-content .top-course-details {
+  color: #5c5c5c;
+  margin-bottom: 2.8125rem; }
 
 .site-content .right-column > h3,
 .site-content .right-column .view-list h3,
 .site-content .right-column .contact-info h3 {
-  border-top: solid 1px #333;
-  padding-top: 20px; }
+  border-top: solid 1px #333333;
+  padding-top: 1.25rem; }
 
 .site-content .right-column p {
-  margin-bottom: 12px; }
+  margin-bottom: 0.75rem; }
 
 .site-content .right-column .contact-info {
-  margin-bottom: 40px; }
+  margin-bottom: 2.5rem; }
 
 .site-content .right-column .contact-info h4 {
   font-weight: bold;
-  margin-top: 30px; }
+  margin-top: 1.875rem; }
 
 .site-content .view-list ul,
 .site-content .right-page-nav ul {
@@ -2937,10 +2943,11 @@ CUSTOM SITE WIDTH BOOTSTRAP CONTAINER
 .main-content {
   width: 100%;
   padding-right: 0;
-  margin-top: 50px; }
+  margin-top: 2.5em; }
   @media (min-width: 768px) {
     .main-content {
-      padding-right: 10.7954%; } }
+      padding-right: 10.7954%;
+      margin-top: 5rem; } }
 
 .content-columns .right-column {
   padding-top: 50px; }
@@ -2990,13 +2997,19 @@ CUSTOM SITE WIDTH BOOTSTRAP CONTAINER
       max-width: 83.3333333333%; } }
 
 .prog-key-info {
-  margin-bottom: 1.875rem; }
+  margin-bottom: 1.875rem;
+  border-top: 1px solid #d6d6d6;
+  padding-top: 1.8rem; }
   .prog-key-info .prog-key-info__content {
-    background: #f5f5f5; }
+    background: #f5f5f5;
+    padding-bottom: 1.8rem; }
+    .prog-key-info .prog-key-info__content .btn-cta__icon {
+      margin-left: 3%;
+      width: 55%; }
   .prog-key-info .prog-key-info__first-row .prog-key-info__icon {
-    padding-top: 33px; }
+    padding-top: 1.875rem; }
   .prog-key-info .prog-key-info__first-row .prog-key-info__text {
-    padding-top: 30px; }
+    padding-top: 1.875rem; }
   .prog-key-info .prog-key-info__icon {
     text-align: center;
     padding-top: 3px; }
@@ -3007,7 +3020,7 @@ CUSTOM SITE WIDTH BOOTSTRAP CONTAINER
       font-size: 0.875rem; }
   .prog-key-info .prog-key-info__text,
   .prog-key-info .prog-key-info__icon {
-    padding-bottom: 2em; }
+    padding-bottom: 2rem; }
   .prog-key-info .prog-key-info__status-closed {
     color: #D50032; }
   .prog-key-info .prog-key-info__status-open {
@@ -3018,6 +3031,95 @@ CUSTOM SITE WIDTH BOOTSTRAP CONTAINER
     .prog-key-info .prog-key-info__text {
       padding-left: 5%;
       padding-right: 5%; } }
+
+/*--------------------------
+TEACHER TRAINING
+----------------------------*/
+.practical-summary {
+  padding-top: 1.875rem; }
+  .practical-summary .practical-summary__content svg.feather-check {
+    float: left; }
+  .practical-summary .practical-summary__content h4 {
+    float: left;
+    padding: 6px 1.25rem; }
+  .practical-summary .practical-summary__content p {
+    clear: both; }
+  .practical-summary .practical-summary__content .forward-link {
+    padding-left: 3.125rem; }
+
+.six-by-six__left .practical-summary__content p {
+  padding: 0 3.125rem; }
+
+.six-by-six__right .practical-summary__content p {
+  padding-left: 3.125rem; }
+
+.prog-requirements .tabs--active-grey {
+  margin: 2.5rem 0 3rem 0; }
+  .prog-requirements .tabs--active-grey .tabs__content {
+    background: #F5F5F5; }
+  .prog-requirements .tabs--active-grey .prog-requiremements__other, .prog-requirements .tabs--active-grey .prog-equivalencies {
+    padding: 1rem 1.8rem; }
+
+.prog-requirements .exam-l {
+  position: relative;
+  width: 100%;
+  padding-right: 16px;
+  padding-left: 16px;
+  padding: 0; }
+  @media (min-width: 576px) {
+    .prog-requirements .exam-l {
+      flex: 0 0 16.6666666667%;
+      max-width: 16.6666666667%; } }
+
+.prog-requirements .exam-m {
+  position: relative;
+  width: 100%;
+  padding-right: 16px;
+  padding-left: 16px;
+  padding: 0; }
+  @media (min-width: 576px) {
+    .prog-requirements .exam-m {
+      flex: 0 0 16.6666666667%;
+      max-width: 16.6666666667%; } }
+  @media (min-width: 1200px) {
+    .prog-requirements .exam-m {
+      flex: 0 0 8.3333333333%;
+      max-width: 8.3333333333%; } }
+
+.prog-requirements .exam-r {
+  position: relative;
+  width: 100%;
+  padding-right: 16px;
+  padding-left: 16px;
+  padding: 0; }
+  @media (min-width: 576px) {
+    .prog-requirements .exam-r {
+      flex: 0 0 66.6666666667%;
+      max-width: 66.6666666667%; } }
+  @media (min-width: 1200px) {
+    .prog-requirements .exam-r {
+      flex: 0 0 75%;
+      max-width: 75%; } }
+
+.prog-requirements .exam-l {
+  font-weight: bold;
+  padding: 8px; }
+
+.prog-requirements .exam-m span {
+  margin: 10px;
+  background: #238638;
+  color: #ffffff;
+  font-weight: bold;
+  display: block;
+  font-size: 0.9375rem;
+  padding-left: 10px; }
+  @media (min-width: 576px) {
+    .prog-requirements .exam-m span {
+      text-align: center;
+      padding: 0; } }
+
+.prog-requirements .exam-r {
+  padding: 8px 20px; }
 
 /* -------------- STYLED CALL TO ACTIONS LINKS ie not form/input buttons ---------------- */
 .btn-cta {
@@ -3426,7 +3528,7 @@ a.btn-cta__border--inline:hover {
       padding: 5px 0 5px 10px;
       margin: 0;
       font-size: .9rem;
-      width: 75px; }
+      width: 5.32670%; }
       .header .header__menu p .header-menu__dt-text {
         display: none; }
       .header .header__menu p .header-menu__sm-text {
@@ -4250,17 +4352,23 @@ td, td img {
   vertical-align: top; }
 
 .blockquote.container {
+  max-width: 100%;
   padding: 0;
-  margin-bottom: 45px; }
+  margin-bottom: 1.5em;
+  margin-top: 1em; }
+  @media (min-width: 576px) {
+    .blockquote.container {
+      margin-top: 0; } }
 
 .blockquote blockquote {
   color: #AC145A;
   line-height: 1.5;
   position: relative;
   margin-top: 3em;
-  margin-left: 0;
+  margin-left: 2%;
   margin-right: 1em;
-  padding: 0; }
+  padding: 0;
+  width: 100%; }
   @media (min-width: 576px) {
     .blockquote blockquote {
       margin: 1em 0; } }
@@ -4276,16 +4384,17 @@ td, td img {
     margin-left: 0; }
     @media (min-width: 576px) {
       .blockquote blockquote .blockquote-quote, .blockquote blockquote .blockquote-detail {
-        margin-left: 18%; } }
+        margin-left: 5rem; } }
   .blockquote blockquote p.blockquote-quote {
-    float: right;
     position: relative;
     font-size: 1.25rem;
-    line-height: 1.675; }
+    line-height: 1.4;
+    display: block;
+    margin-bottom: 1em; }
     @media (min-width: 576px) {
       .blockquote blockquote p.blockquote-quote {
         font-size: 1.5rem;
-        line-height: 1.75; } }
+        line-height: 1.5; } }
   .blockquote blockquote .blockquote-detail {
     clear: both; }
   .blockquote blockquote img {
