@@ -22,11 +22,12 @@ ACCORDION
 		span {
 			display:block;
 			position: relative;
+			padding-right: 1rem;
 			&:after{ 
 				content: "\02C5";
 				position: absolute;
 				right: 0;
-				font-size: 1.5em;
+				font-size: 1.5rem;
 				color: #0D68CF;
 				top: -5px;
 	 			font-weight: normal; 

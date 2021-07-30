@@ -67,6 +67,7 @@
 		.btn-cta__icon {
 			margin-left: 3%;
 			width:55%;
+			padding-left:13%;
 		}
 	}
 	.prog-key-info__first-row .prog-key-info__icon {
@@ -99,6 +100,9 @@
 		color: $utilitygreen;
 	}
 
+	.international {
+		padding-top: 1.5rem;
+	}
 
  @include media-breakpoint-down(sm) { 
  	.prog-key-info__icon {
@@ -110,6 +114,21 @@
  	}
  }
 }
+
+// adds some horizontal spacing at edges on small screens
+.prog-double-list {
+	padding: 0 1rem ;
+@include media-breakpoint-up(md) {
+	padding:0;
+}
+
+}
+
+
+// APPLY FOR THIS COURSE/PROGRAMME BOX
+
+
+
 
 /*--------------------------
 TEACHER TRAINING
@@ -225,5 +244,63 @@ TEACHER TRAINING
 	
 	.exam-r {
 		padding: 8px 20px;
+	}
+}
+
+
+// CAREER SECTION
+
+.tt-career, .tt-course-structure {
+	.eight-by-four{
+		margin-top: 3rem;
+	}
+
+}
+
+
+
+// MODULE ACCORDIONS WITH ICONS
+
+.tt-course-structure .accordion .accordion__title {
+	svg {
+		margin-right: 1.25rem; 
+		vertical-align: top;
+	}
+	span {
+		line-height: 1.5;
+		padding-right: 1.5rem;
+	}
+}
+
+
+// OFSTEAD BOX
+
+.ofsted-box {
+	border: solid 1px #d6d6d6;
+	padding: 2.8rem 2.8rem 0 2.8rem;
+	margin: 3rem 0;
+	img {
+		width: 142px;
+		float:left;
+		padding-right: 1.5rem;
+
+	}
+}
+
+// IOE ADDRESS BOX
+
+.about-ioe .four-by-eight .four-by-eight__left img{
+	padding-right: 1.5rem;
+	margin-bottom: 0;
+}
+
+
+// APPLY BOX
+
+.tt-course-apply {
+	padding: 2.8rem;
+	margin-bottom: 3rem;
+	.btn-cta__icon {
+		width: 45%;
 	}
 }

@@ -50,6 +50,7 @@
 
 .container.six-by-six {
 	padding: 0 0 30px;
+	margin: 0;
 }
 
 .six-by-six__left,
@@ -81,6 +82,7 @@
 
 .container.eight-by-four {
 	padding: 0 0 30px;
+	margin: 0;
 }
 
 
@@ -116,6 +118,39 @@
 		 }
 }
 
+
+
+/* ------------- THIRD AND TWO THIRDS ------------------------*/
+
+/* ----------------- BIG COLUMN RIGHT SMALL LEFT -----------------*/
+
+
+.container.four-by-eight {
+	padding: 0 0 30px;
+	margin: 0;
+}
+
+
+.four-by-eight__left
+ {
+	 @include make-col-ready();
+
+	 @include media-breakpoint-up(md) {
+   	 @include make-col(4);
+  	}
+	padding: 0;
+	}
+
+
+.four-by-eight__right
+ {
+	 @include make-col-ready();
+
+	 @include media-breakpoint-up(md) {
+   	 @include make-col(8);
+  	}
+	padding: 0;
+	}
 
 
 
@@ -209,9 +244,13 @@
 /* --------------- CONTACT WITH TWO ADDRESS CARDS  -------------- */
 
 
+.contact-panel__background {
+	background: #f5f5f5;
+}
 
 .contact-panel.container {
-		padding: 60px 0;		
+		padding: 60px 0;
+
 	}
 
 
@@ -239,42 +278,7 @@
    	 	padding: 0;
    	 	}
    	 }
-
-
-   	 // IMAGE AND TEXT CARDS
-
-   	 .contact-panel__card-one {
-   	 	@include make-col-ready();
-
-	@include media-breakpoint-up(md) {
-   	 	@include make-col(6);
-   	 	padding: 0;
-   	 	}
-   	 }
-
-
-   	 .contact-panel__card-two {
-   	 	 @include make-col-ready();
-
-	@include media-breakpoint-up(md) {
-   	 	@include make-col(6);
-   	 	padding: 0;
-   	 	}
-
-   	 }
-
-
-// END OF BOOTSTRAP LAYOUTS
-
-
-
-   	 .contact-panel__card.container {
-   	 	padding: 40px 0 60px;
-   	 	 }
-
-
-
-  	 .card-wrapper  {
+	 .card-wrapper  {
    	 	background-color: #ffffff; 
 		overflow: hidden; 
 		overflow-wrap: break-word;
@@ -290,24 +294,18 @@
    	 } 	 
 
 
-
-	.contact-panel__card-one .card-wrapper {
-	margin-top: 30px;
+	.contact-panel__card-one {
+		margin-bottom: 3rem;	
+		.card-wrapper {
+			margin-top: 30px;
+			width:60%;
 	@include media-breakpoint-up(md) {
    		margin-right:16px; 
    		margin-top: 0;
    		}
    	}
 
-.contact-panel__card-two .card-wrapper {
-	margin-top: 30px;
-	@include media-breakpoint-up(md) {
-		margin-left: 16px; 
-		margin-top: 0;
-		}
-	
-	}
- 
+}
 	.responsive-square {
 		position: relative;
   		width: 40.17%;
@@ -336,15 +334,12 @@
 
 	.contact-panel__content {
 		float: left; 
-		padding: 7% 0 15px 20px;  
 		width: 57%;	
+		padding: 1.5rem 1.5rem 0 1.5rem;
 		p,
    		h5 {
    			margin-bottom: 12px;
-   			@include media-breakpoint-between(md, lg) {
-   				font-size: .075rem;
-   			}
-			
+   				
 		}
 
     }

@@ -2737,7 +2737,8 @@ h1 {
   @media (min-width: 992px) {
     h1 {
       font-size: 2.25rem;
-      line-height: 1.25; } }
+      line-height: 1.25;
+      margin-bottom: 1.5rem; } }
 
 h2 {
   font-size: 1.5rem;
@@ -2747,7 +2748,8 @@ h2 {
   @media (min-width: 992px) {
     h2 {
       font-size: 1.875rem;
-      line-height: 1.35; } }
+      line-height: 1.35;
+      margin-bottom: 1.5rem; } }
 
 h3 {
   font-size: 1.25rem;
@@ -2757,7 +2759,8 @@ h3 {
   @media (min-width: 992px) {
     h3 {
       font-size: 1.5rem;
-      line-height: 1.4; } }
+      line-height: 1.4;
+      margin-bottom: 1.5rem; } }
 
 h4 {
   font-size: 1.25rem;
@@ -2943,14 +2946,14 @@ CUSTOM SITE WIDTH BOOTSTRAP CONTAINER
 .main-content {
   width: 100%;
   padding-right: 0;
-  margin-top: 2.5em; }
+  margin-top: 2.5rem; }
   @media (min-width: 768px) {
     .main-content {
       padding-right: 10.7954%;
       margin-top: 5rem; } }
 
 .content-columns .right-column {
-  padding-top: 50px; }
+  padding-top: 7.5rem; }
 
 .uk-inter-switch {
   padding-bottom: 1.5em; }
@@ -3005,7 +3008,8 @@ CUSTOM SITE WIDTH BOOTSTRAP CONTAINER
     padding-bottom: 1.8rem; }
     .prog-key-info .prog-key-info__content .btn-cta__icon {
       margin-left: 3%;
-      width: 55%; }
+      width: 55%;
+      padding-left: 13%; }
   .prog-key-info .prog-key-info__first-row .prog-key-info__icon {
     padding-top: 1.875rem; }
   .prog-key-info .prog-key-info__first-row .prog-key-info__text {
@@ -3025,12 +3029,20 @@ CUSTOM SITE WIDTH BOOTSTRAP CONTAINER
     color: #D50032; }
   .prog-key-info .prog-key-info__status-open {
     color: #238638; }
+  .prog-key-info .international {
+    padding-top: 1.5rem; }
   @media (max-width: 767.98px) {
     .prog-key-info .prog-key-info__icon {
       display: none; }
     .prog-key-info .prog-key-info__text {
       padding-left: 5%;
       padding-right: 5%; } }
+
+.prog-double-list {
+  padding: 0 1rem; }
+  @media (min-width: 768px) {
+    .prog-double-list {
+      padding: 0; } }
 
 /*--------------------------
 TEACHER TRAINING
@@ -3120,6 +3132,36 @@ TEACHER TRAINING
 
 .prog-requirements .exam-r {
   padding: 8px 20px; }
+
+.tt-career .eight-by-four, .tt-course-structure .eight-by-four {
+  margin-top: 3rem; }
+
+.tt-course-structure .accordion .accordion__title svg {
+  margin-right: 1.25rem;
+  vertical-align: top; }
+
+.tt-course-structure .accordion .accordion__title span {
+  line-height: 1.5;
+  padding-right: 1.5rem; }
+
+.ofsted-box {
+  border: solid 1px #d6d6d6;
+  padding: 2.8rem 2.8rem 0 2.8rem;
+  margin: 3rem 0; }
+  .ofsted-box img {
+    width: 142px;
+    float: left;
+    padding-right: 1.5rem; }
+
+.about-ioe .four-by-eight .four-by-eight__left img {
+  padding-right: 1.5rem;
+  margin-bottom: 0; }
+
+.tt-course-apply {
+  padding: 2.8rem;
+  margin-bottom: 3rem; }
+  .tt-course-apply .btn-cta__icon {
+    width: 45%; }
 
 /* -------------- STYLED CALL TO ACTIONS LINKS ie not form/input buttons ---------------- */
 .btn-cta {
@@ -3218,7 +3260,8 @@ a.btn-cta__border--inline:hover {
 /* -------------  TWO COLUMN SUB-LAYOUTs  ---------------------- */
 /*------------------- HALF AND HALF STANDARD LAYOUT  --------------------------*/
 .container.six-by-six {
-  padding: 0 0 30px; }
+  padding: 0 0 30px;
+  margin: 0; }
 
 .six-by-six__left,
 .six-by-six__right {
@@ -3242,7 +3285,8 @@ a.btn-cta__border--inline:hover {
 /* ------------- TWO THIRDS AND A THIRD ------------------------*/
 /* ----------------- BIG COLUMN LEFT SMALL RIGHT -----------------*/
 .container.eight-by-four {
-  padding: 0 0 30px; }
+  padding: 0 0 30px;
+  margin: 0; }
 
 .eight-by-four__left {
   position: relative;
@@ -3270,6 +3314,34 @@ a.btn-cta__border--inline:hover {
   .eight-by-four__right a.card-link {
     margin-right: -32px;
     margin-left: 32px; } }
+
+/* ------------- THIRD AND TWO THIRDS ------------------------*/
+/* ----------------- BIG COLUMN RIGHT SMALL LEFT -----------------*/
+.container.four-by-eight {
+  padding: 0 0 30px;
+  margin: 0; }
+
+.four-by-eight__left {
+  position: relative;
+  width: 100%;
+  padding-right: 16px;
+  padding-left: 16px;
+  padding: 0; }
+  @media (min-width: 768px) {
+    .four-by-eight__left {
+      flex: 0 0 33.3333333333%;
+      max-width: 33.3333333333%; } }
+
+.four-by-eight__right {
+  position: relative;
+  width: 100%;
+  padding-right: 16px;
+  padding-left: 16px;
+  padding: 0; }
+  @media (min-width: 768px) {
+    .four-by-eight__right {
+      flex: 0 0 66.6666666667%;
+      max-width: 66.6666666667%; } }
 
 /*---------------------- THREE 	EQUAL COLUMNS SUB LAYOUT -------------------------*/
 .four-by-four-by-four.container {
@@ -3329,6 +3401,9 @@ a.btn-cta__border--inline:hover {
         padding-right: 0; } }
 
 /* --------------- CONTACT WITH TWO ADDRESS CARDS  -------------- */
+.contact-panel__background {
+  background: #f5f5f5; }
+
 .contact-panel.container {
   padding: 60px 0; }
 
@@ -3355,31 +3430,6 @@ a.btn-cta__border--inline:hover {
       max-width: 25%;
       padding: 0; } }
 
-.contact-panel .contact-panel__card-one {
-  position: relative;
-  width: 100%;
-  padding-right: 16px;
-  padding-left: 16px; }
-  @media (min-width: 768px) {
-    .contact-panel .contact-panel__card-one {
-      flex: 0 0 50%;
-      max-width: 50%;
-      padding: 0; } }
-
-.contact-panel .contact-panel__card-two {
-  position: relative;
-  width: 100%;
-  padding-right: 16px;
-  padding-left: 16px; }
-  @media (min-width: 768px) {
-    .contact-panel .contact-panel__card-two {
-      flex: 0 0 50%;
-      max-width: 50%;
-      padding: 0; } }
-
-.contact-panel .contact-panel__card.container {
-  padding: 40px 0 60px; }
-
 .contact-panel .card-wrapper {
   background-color: #ffffff;
   overflow: hidden;
@@ -3394,19 +3444,15 @@ a.btn-cta__border--inline:hover {
     .contact-panel .card-wrapper {
       padding-right: 16px; } }
 
-.contact-panel .contact-panel__card-one .card-wrapper {
-  margin-top: 30px; }
-  @media (min-width: 768px) {
-    .contact-panel .contact-panel__card-one .card-wrapper {
-      margin-right: 16px;
-      margin-top: 0; } }
-
-.contact-panel .contact-panel__card-two .card-wrapper {
-  margin-top: 30px; }
-  @media (min-width: 768px) {
-    .contact-panel .contact-panel__card-two .card-wrapper {
-      margin-left: 16px;
-      margin-top: 0; } }
+.contact-panel .contact-panel__card-one {
+  margin-bottom: 3rem; }
+  .contact-panel .contact-panel__card-one .card-wrapper {
+    margin-top: 30px;
+    width: 60%; }
+    @media (min-width: 768px) {
+      .contact-panel .contact-panel__card-one .card-wrapper {
+        margin-right: 16px;
+        margin-top: 0; } }
 
 .contact-panel .responsive-square {
   position: relative;
@@ -3430,15 +3476,11 @@ a.btn-cta__border--inline:hover {
 
 .contact-panel .contact-panel__content {
   float: left;
-  padding: 7% 0 15px 20px;
-  width: 57%; }
+  width: 57%;
+  padding: 1.5rem 1.5rem 0 1.5rem; }
   .contact-panel .contact-panel__content p,
   .contact-panel .contact-panel__content h5 {
     margin-bottom: 12px; }
-    @media (min-width: 768px) and (max-width: 1199.98px) {
-      .contact-panel .contact-panel__content p,
-      .contact-panel .contact-panel__content h5 {
-        font-size: .075rem; } }
 
 /*-------------- SIMILAR COURSES PANEL ---------------*/
 @media (min-width: 768px) and (max-width: 1199.98px) {
@@ -3863,7 +3905,7 @@ FEATURE LINK
     margin-bottom: 0; }
   @media (min-width: 768px) {
     .feature-link {
-      margin-bottom: 30px; }
+      margin-bottom: 3.5rem; }
       .feature-link.clearfix {
         box-shadow: 3px 10px 10px -6px rgba(51, 51, 51, 0.75);
         -webkit-box-shadow: 3px 10px 10px -6px rgba(51, 51, 51, 0.75);
@@ -4064,12 +4106,13 @@ ACCORDION
         content: "\02C4"; }
     .accordion .accordion__title span {
       display: block;
-      position: relative; }
+      position: relative;
+      padding-right: 1rem; }
       .accordion .accordion__title span:after {
         content: "\02C5";
         position: absolute;
         right: 0;
-        font-size: 1.5em;
+        font-size: 1.5rem;
         color: #0D68CF;
         top: -5px;
         font-weight: normal; }
