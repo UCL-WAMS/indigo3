@@ -5,6 +5,7 @@
 html {
   box-sizing: border-box;
   overflow-x: hidden;
+  font-size: 16px;
   // NEEDED FOR PSEUDO CLASS BREAKOUTS FROM MAIN CONTENT AREAS
   -ms-overflow-style: scrollbar;
   //BOOTSTRAP RESET
@@ -77,7 +78,7 @@ hr {
 
 // MAYBE MOVE TO A HELPER CLASS PARTIAL?
 
-.clearfix {
+%clearfix, .clearfix  {
   zoom: 1;
   &:before, 
   &:after {

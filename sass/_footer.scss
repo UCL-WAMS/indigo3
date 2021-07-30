@@ -1,6 +1,6 @@
 
 footer {
-	background: $backgrounddarkgray;
+	background: $darkgray;
 	// @include media-breakpoint-down(xs) {
 // 			display:none;
 // 			 }
@@ -12,14 +12,14 @@ footer {
 }
 
 .footer__strap-line { 
-	font-size: 30px ;
+	font-size: 1.875rem ;
 	font-weight: bold; 
 	color: #ffffff; 
 	@include media-breakpoint-up(xl) {
-	font-size: 48px;
+	font-size: 3rem;
 	}
 	@include media-breakpoint-up(lg) {
-	font-size: 40px;
+	font-size: 2.5rem;
 	}
 }
 
@@ -65,7 +65,7 @@ footer {
 	color: #0D68CF;
 	font-weight: bold;
 	box-shadow: -1px -1px 4px 1px rgba(64,64,64,0.75);
-	font-size: .8em;
+	font-size: .8rem;
 		svg, span {
 			vertical-align: middle;
 		}

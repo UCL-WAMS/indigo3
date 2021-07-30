@@ -1,0 +1,229 @@
+	
+.uk-inter-switch {
+	padding-bottom: 1.5em;
+	span {
+	display: inline-block;
+	border: 1px solid $utilityblue;
+    text-decoration: none;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    line-height: 1.25rem;
+    margin-right: -5px;
+    color: $utilityblue;
+    &:nth-of-type(1) {
+		border-radius: 12px 0 0 12px ;
+		}
+	&:nth-of-type(2)  {
+		border-radius:0  12px 12px  0 ;  
+	}
+	&:hover {
+    	background-color: $buttonrollover;
+    	color: #ffffff;
+    }
+
+       &.active  {
+    	background: $utilityblue; 
+    	color: #ffffff;
+       	}
+	}
+    
+}
+
+
+
+
+// KEY INFO BOOTSTRAP LAYOUT COLUMNS
+
+.prog-key-info__icon {
+  @include make-col-ready();
+
+    @include media-breakpoint-up(sm) {
+    @include make-col(2);
+   }
+
+}
+
+
+.prog-key-info__text {
+  @include make-col-ready();
+
+    @include media-breakpoint-up(sm) {
+    @include make-col(10);
+   }
+
+}
+
+// KEY INFO STYLING
+
+.prog-key-info {
+	margin-bottom: 1.875rem;
+	border-top: 1px solid #d6d6d6;
+	padding-top: 1.8rem;
+	.prog-key-info__content {
+		background: #f5f5f5;
+		padding-bottom: 1.8rem;
+		.btn-cta__icon {
+			margin-left: 3%;
+			width:55%;
+		}
+	}
+	.prog-key-info__first-row .prog-key-info__icon {
+		padding-top: 1.875rem;
+	}
+	.prog-key-info__first-row .prog-key-info__text {
+		padding-top: 1.875rem;
+	}
+	.prog-key-info__icon {
+		text-align: center; 
+		padding-top: 3px;
+		 }
+	.prog-key-info__text {
+		padding-left: 1%; 
+		padding-right: 5%;
+		div, p {
+			font-size: 0.875rem;
+		}
+	}
+	.prog-key-info__text, 
+	.prog-key-info__icon  {
+		padding-bottom: 2rem; 
+	}
+
+	.prog-key-info__status-closed {
+		color: $utilityred;
+	}
+
+	.prog-key-info__status-open {
+		color: $utilitygreen;
+	}
+
+
+ @include media-breakpoint-down(sm) { 
+ 	.prog-key-info__icon {
+ 		display:none;
+ 	}
+ 	.prog-key-info__text {
+ 		padding-left:5%;
+ 		padding-right: 5%;
+ 	}
+ }
+}
+
+/*--------------------------
+TEACHER TRAINING
+----------------------------*/
+
+
+// PRACTICAL GRID
+
+ .practical-summary  {
+ 	padding-top: 1.875rem;
+ 	.container .row:first-of-type {
+  		}
+ 	.practical-summary__content {
+		svg.feather-check {
+		float: left;
+		}
+		h4 {
+		float: left; 
+		padding: 6px 1.25rem;
+		}
+		p {
+		clear: both;
+		}
+		.forward-link {
+		padding-left: 3.125rem;
+		}
+	}
+ }
+
+.six-by-six__left  .practical-summary__content p { 
+	padding: 0 3.125rem;
+ }
+
+ .six-by-six__right  .practical-summary__content p { 
+	padding-left: 3.125rem;
+ }
+
+
+// QUALIFICATIONS SECTION
+
+
+.prog-requirements .tabs--active-grey {
+	margin: 2.5rem 0 3rem 0;
+	.tabs__content {
+		background: #F5F5F5;
+		}
+	.prog-requiremements__other, .prog-equivalencies {
+	padding: 1rem 1.8rem;
+	}
+
+}
+
+// Layout of exam grid
+
+
+.prog-requirements{
+	.exam-l {
+		 @include make-col-ready();
+	
+		 @include media-breakpoint-up(sm) {
+	   	 @include make-col(2);
+	  }
+		padding: 0;
+	}
+	
+	.exam-m {
+		 @include make-col-ready();
+	
+		 @include media-breakpoint-up(sm) {
+	   	 @include make-col(2);
+	  }
+	  	 @include media-breakpoint-up(xl) {
+	   	 @include make-col(1);
+	  }
+		padding: 0;
+		}
+	
+	
+	.exam-r {
+		 @include make-col-ready();
+	
+		 @include media-breakpoint-up(sm) {
+	   	 @include make-col(8);   	 
+	  }
+	     @include media-breakpoint-up(xl) {
+	   	 @include make-col(9);
+	  }
+		padding: 0;
+		
+	}
+	
+	.exam-l {
+		font-weight: bold;
+		padding: 8px;
+		}
+	
+	.exam-m {
+		 span {
+		margin: 10px;
+		background: $utilitygreen;
+		color: #ffffff;
+		font-weight: bold;
+		display: block;
+		font-size: 0.9375rem; 
+		padding-left: 10px;
+		@include media-breakpoint-up(sm) { 
+	 	text-align: center;
+	 	padding: 0;
+	 	
+	 	}
+		}
+	}
+	
+	.exam-r {
+		padding: 8px 20px;
+	}
+}

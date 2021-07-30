@@ -1,0 +1,79 @@
+/*-----------
+HERO
+-----------*/
+
+
+.hero, .column-top-hero {
+	position: relative;
+}
+
+.hero-content {
+	background-color: #00818F;
+	color: white;
+	font-weight: bold;
+	padding: 40px 16px;
+	h1 {
+		font-size: 2.25rem;
+		line-height: 1.2
+	}
+	p {
+		font-size: 1.5rem;
+		line-height: 1.9rem;
+	}
+	&:after, 
+	&:before {
+	  	content: '';
+  		position: absolute;
+  		z-index: -1; 
+  		top: 0;
+  		bottom: 0;
+  		background-color: inherit;
+  		height: 100%;
+  		width: 9600px;
+  		right: 100%;
+	}
+	&:after {		
+		left: 100%;
+		}
+
+@include media-breakpoint-up(md) {
+	 padding: 66px 120px 70px 120px;
+	 	h1 {
+	 		font-size: 3.8rem;
+			line-height:  1;
+			}
+		p {
+			font-size: 1.875rem;
+			line-height: 1.25;
+			}
+}
+
+
+}
+
+
+// LEFT DROP COLOUR BLOCK
+
+
+.column-top-hero__left {
+	background: #00818F; 
+	border: 0; 
+	height: 1.8em;
+		&:after  {
+  			content: '';
+  			position: absolute;
+  			z-index: -1; 
+  			top: 0;
+  			background-color: inherit;
+  			height:100%;
+  			width: 9600px;
+  			right:100%;  
+  		}
+}
+
+
+
+
+
+	
+

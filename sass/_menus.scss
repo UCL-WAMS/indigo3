@@ -1,0 +1,78 @@
+/*-------------------------------
+IN THIS SECTION MENU
+--------------------------------*/
+
+.in-this-section-menu { 
+ background-color: #333;
+ h1{
+ 	border-bottom: 1px solid #fff;
+ 	padding-bottom: 30px;
+
+ }
+ *::marker{
+ 	color: transparent;
+ }
+ color: #fff;
+  ul, ul li.leaf {
+   margin:0;
+   padding: 0;
+   text-indent: 0;
+   list-style-type: none;
+   list-style-image: none;
+}
+ ul li:before {
+ 	content:none;
+ }
+ a {
+ 	color: #ffffff;
+ 	text-decoration: none;
+ }
+.region-menu{
+	margin: 0 auto; 
+	width: 50%;}
+
+.close-in-this-section-menu {
+	float: right;
+} 
+.menu__accordion {
+	position: relative;
+	border-left: solid 1px #5c5c5c;
+	padding-left: 20px;
+}
+.menu__accordion__title {
+	font-weight: bold;
+}
+
+.menu__accordion__title {
+	&:before {
+	content: "\02C5";
+	position: absolute;
+	left: -50px;
+	font-size: 1.5em;
+	color: $orange;
+	top: -5px;
+	font-weight: normal;
+	}
+	&.active:before {
+	 	content: "\02C4";
+	 }	
+}
+ul.menu__accordion__description {
+	padding-left: 50px;
+}
+.menu-block-wrapper {
+	padding-left: 20px; 	
+	margin-left: 30px;
+}
+.view-list {
+	margin-top: 30px;
+	padding-bottom: 30px;
+}
+}
+
+//  CHECK ALL CLASSES WHEN MORE EXAMPLES AVAILABLE ETC
+
+.leaf.active-trail  {margin-top: 20px;}
+
+
+
