@@ -60,6 +60,9 @@ hr {
   padding: 0;
   clear: both; }
 
+svg {
+  overflow: hidden; }
+
 .clearfix {
   zoom: 1; }
   .clearfix:before, .clearfix:after {
@@ -68,8 +71,22 @@ hr {
   .clearfix:after {
     clear: both; }
 
-svg {
-  overflow: hidden; }
+.visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px; }
+  .visually-hidden.focusable:active, .visually-hidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto; }
 
 .container,
 .container-fluid,
@@ -2732,40 +2749,37 @@ a {
 h1 {
   font-size: 1.875rem;
   line-height: 1.25;
-  margin-bottom: .5rem;
+  margin-bottom: 1.5rem;
   font-weight: bold; }
   @media (min-width: 992px) {
     h1 {
       font-size: 2.25rem;
-      line-height: 1.25;
-      margin-bottom: 1.5rem; } }
+      line-height: 1.25; } }
 
 h2 {
   font-size: 1.5rem;
   line-height: 1.23;
-  margin-bottom: .5rem;
+  margin-bottom: 1.5rem;
   font-weight: bold; }
   @media (min-width: 992px) {
     h2 {
       font-size: 1.875rem;
-      line-height: 1.35;
-      margin-bottom: 1.5rem; } }
+      line-height: 1.35; } }
 
 h3 {
   font-size: 1.25rem;
   line-height: 1.3;
-  margin-bottom: .5rem;
+  margin-bottom: 1.5rem;
   font-weight: bold; }
   @media (min-width: 992px) {
     h3 {
       font-size: 1.5rem;
-      line-height: 1.4;
-      margin-bottom: 1.5rem; } }
+      line-height: 1.4; } }
 
 h4 {
   font-size: 1.25rem;
   line-height: 1.35;
-  margin-bottom: .5rem;
+  margin-bottom: 1.5rem;
   font-weight: bold; }
   @media (min-width: 992px) {
     h4 {
@@ -2839,7 +2853,6 @@ FEATURE LIST
         height: 30px; } }
     .feature-list svg.feather.forward-link__svg {
       margin-right: 0;
-      margin-left: 3em;
       vertical-align: 1px; }
       @media (min-width: 768px) and (max-width: 991.98px) {
         .feature-list svg.feather.forward-link__svg {
@@ -2852,11 +2865,10 @@ FEATURE LIST
     @media (min-width: 992px) {
       .feature-list h4 {
         width: 70%; } }
-  .feature-list a.forward-link {
-    font-size: 0.75rem; }
-    @media (min-width: 1200px) {
-      .feature-list a.forward-link {
-        font-size: 1rem; } }
+  .feature-list .forward-link {
+    margin-left: 3em; }
+  .feature-list a.forward-link__anchor {
+    font-size: 1rem; }
 
 /*-----  TEMPLATE CONTENT CUSTOM STYLES ---------- 
 --------------------------------------*/
@@ -2865,7 +2877,7 @@ FEATURE LIST
 .site-content .six-by-six {
   font-size: 1rem;
   line-height: 1.6;
-  margin-bottom: 1.3rem; }
+  margin-bottom: 1.5rem; }
   @media (min-width: 992px) {
     .site-content p,
     .site-content .eight-by-four,
@@ -2873,16 +2885,17 @@ FEATURE LIST
       font-size: 1.125rem;
       line-height: 1.5; } }
 
-.site-content .page-intro {
+.site-content .page-intro,
+.site-content .page-intro p {
   font-size: 1.125rem;
   line-height: 1.5;
-  margin-bottom: .5rem;
+  margin-bottom: 1.5rem;
   margin-bottom: 1.8rem; }
   @media (min-width: 992px) {
-    .site-content .page-intro {
+    .site-content .page-intro,
+    .site-content .page-intro p {
       font-size: 1.25rem;
-      line-height: 1.5;
-      margin-bottom: 1.3rem; } }
+      line-height: 1.5; } }
 
 .site-content .main-content h1 {
   margin: 1.875rem 0 10px 0; }
@@ -2931,7 +2944,7 @@ CUSTOM SITE WIDTH BOOTSTRAP CONTAINER
 .site-width.container, .site-width {
   overflow-x: initial;
   max-width: 1408px;
-  min-width: 320px;
+  min-width: 280px;
   padding: 0;
   width: 100%;
   margin: 0 auto; }
@@ -2961,23 +2974,19 @@ CUSTOM SITE WIDTH BOOTSTRAP CONTAINER
     display: inline-block;
     border: 1px solid #0D68CF;
     text-decoration: none;
-    padding-right: 1rem;
-    padding-left: 1rem;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
+    padding: 0.5rem 1rem;
     line-height: 1.25rem;
     margin-right: -5px;
     color: #0D68CF; }
-    .uk-inter-switch span:nth-of-type(1) {
-      border-radius: 12px 0 0 12px; }
-    .uk-inter-switch span:nth-of-type(2) {
-      border-radius: 0  12px 12px  0; }
     .uk-inter-switch span:hover {
       background-color: #094991;
       color: #ffffff; }
     .uk-inter-switch span.active {
       background: #0D68CF;
       color: #ffffff; }
+  @media (max-width: 767.98px) {
+    .uk-inter-switch {
+      font-size: 0.75rem; } }
 
 .prog-key-info__icon {
   position: relative;
@@ -3002,10 +3011,12 @@ CUSTOM SITE WIDTH BOOTSTRAP CONTAINER
 .prog-key-info {
   margin-bottom: 1.875rem;
   border-top: 1px solid #d6d6d6;
-  padding-top: 1.8rem; }
+  padding-top: 1.5rem; }
   .prog-key-info .prog-key-info__content {
     background: #f5f5f5;
     padding-bottom: 1.8rem; }
+    .prog-key-info .prog-key-info__content.container {
+      max-width: 100%; }
     .prog-key-info .prog-key-info__content .btn-cta__icon {
       margin-left: 3%;
       width: 55%;
@@ -3043,6 +3054,35 @@ CUSTOM SITE WIDTH BOOTSTRAP CONTAINER
   @media (min-width: 768px) {
     .prog-double-list {
       padding: 0; } }
+  .prog-double-list .prog-double-list__content.container {
+    max-width: 100%; }
+
+.tt-course-structure .accordion .accordion__title svg,
+.prog-teaching .accordion .accordion__title svg {
+  margin-right: 1.25rem;
+  vertical-align: top; }
+
+.tt-course-structure .accordion .accordion__title span,
+.prog-teaching .accordion .accordion__title span {
+  line-height: 1.5;
+  padding-right: 1.5rem; }
+
+.eight-by-four__right .card-link {
+  margin-top: 1.5rem; }
+  @media (min-width: 768px) {
+    .eight-by-four__right .card-link {
+      margin-top: 0; } }
+
+.prog-choice.background__gray {
+  padding: 6%;
+  margin-bottom: 3rem; }
+  .prog-choice.background__gray .btn-cta__icon {
+    width: 100%;
+    max-width: 100%; }
+    @media (min-width: 768px) {
+      .prog-choice.background__gray .btn-cta__icon {
+        width: 50%;
+        max-width: 50%; } }
 
 /*--------------------------
 TEACHER TRAINING
@@ -3135,14 +3175,6 @@ TEACHER TRAINING
 
 .tt-career .eight-by-four, .tt-course-structure .eight-by-four {
   margin-top: 3rem; }
-
-.tt-course-structure .accordion .accordion__title svg {
-  margin-right: 1.25rem;
-  vertical-align: top; }
-
-.tt-course-structure .accordion .accordion__title span {
-  line-height: 1.5;
-  padding-right: 1.5rem; }
 
 .ofsted-box {
   border: solid 1px #d6d6d6;
@@ -3345,8 +3377,11 @@ a.btn-cta__border--inline:hover {
 
 /*---------------------- THREE 	EQUAL COLUMNS SUB LAYOUT -------------------------*/
 .four-by-four-by-four.container {
-  margin: 40px auto;
+  margin: 1.5em  auto;
   padding: 0; }
+  @media (min-width: 768px) {
+    .four-by-four-by-four.container {
+      margin-top: 0; } }
 
 .four-by-four-by-four__left,
 .four-by-four-by-four__middle,
@@ -3401,11 +3436,12 @@ a.btn-cta__border--inline:hover {
         padding-right: 0; } }
 
 /* --------------- CONTACT WITH TWO ADDRESS CARDS  -------------- */
-.contact-panel__background {
-  background: #f5f5f5; }
+.contact-panel-screen-width.container,
+.contact-panel.container {
+  max-width: 100%; }
 
 .contact-panel.container {
-  padding: 60px 0; }
+  padding: 2rem 0; }
 
 .contact-panel .column-left {
   position: relative;
@@ -3442,17 +3478,23 @@ a.btn-cta__border--inline:hover {
   -moz-box-shadow: 3px 10px 10px -6px rgba(51, 51, 51, 0.75); }
   @media (min-width: 768px) {
     .contact-panel .card-wrapper {
-      padding-right: 16px; } }
+      padding-right: 1rem; } }
 
 .contact-panel .contact-panel__card-one {
   margin-bottom: 3rem; }
   .contact-panel .contact-panel__card-one .card-wrapper {
-    margin-top: 30px;
-    width: 60%; }
+    margin-top: 1.875rem;
+    width: 100%; }
+    @media (min-width: 576px) {
+      .contact-panel .contact-panel__card-one .card-wrapper {
+        font-size: 0.75rem; } }
     @media (min-width: 768px) {
       .contact-panel .contact-panel__card-one .card-wrapper {
-        margin-right: 16px;
+        margin-right: 1.875rem;
         margin-top: 0; } }
+    @media (min-width: 992px) {
+      .contact-panel .contact-panel__card-one .card-wrapper {
+        width: 70%; } }
 
 .contact-panel .responsive-square {
   position: relative;
@@ -3473,14 +3515,20 @@ a.btn-cta__border--inline:hover {
       height: 100%;
       width: 100%;
       margin-bottom: 0; }
+  @media (max-width: 575.98px) {
+    .contact-panel .responsive-square {
+      display: none; } }
 
 .contact-panel .contact-panel__content {
   float: left;
-  width: 57%;
+  width: 100%;
   padding: 1.5rem 1.5rem 0 1.5rem; }
   .contact-panel .contact-panel__content p,
   .contact-panel .contact-panel__content h5 {
     margin-bottom: 12px; }
+  @media (min-width: 576px) {
+    .contact-panel .contact-panel__content {
+      width: 57%; } }
 
 /*-------------- SIMILAR COURSES PANEL ---------------*/
 @media (min-width: 768px) and (max-width: 1199.98px) {
@@ -3503,36 +3551,7 @@ a.btn-cta__border--inline:hover {
 
 /* --------------------- HEADER ------------------------
 -----------------------*/
-.top-menu-tab {
-  position: absolute;
-  top: 0;
-  left: 35%;
-  text-align: center;
-  background: #fff;
-  z-index: 100;
-  border-radius: 0 0 20px 20px;
-  padding: 11px 23px;
-  color: #0D68CF;
-  font-weight: bold;
-  box-shadow: 0px 5px 5px -1px rgba(64, 64, 64, 0.75);
-  font-size: .8rem; }
-  .top-menu-tab .top-menu-tab__dt {
-    display: none; }
-  .top-menu-tab svg, .top-menu-tab span {
-    vertical-align: middle; }
-  @media (min-width: 768px) {
-    .top-menu-tab {
-      left: 42.8%; }
-      .top-menu-tab .top-menu-tab__sm {
-        display: none; }
-      .top-menu-tab .top-menu-tab__dt {
-        display: inline-block; }
-      .top-menu-tab .masthead svg {
-        display: none; } }
-
 .masthead {
-  background-color: #EBEBEB;
-  height: 32px;
   /*SEARCH BOX PLACEHOLDER*/ }
   .masthead .login-placeholder {
     float: left;
@@ -3551,6 +3570,53 @@ a.btn-cta__border--inline:hover {
   @media (min-width: 576px) {
     .masthead svg {
       display: none; } }
+
+.masthead {
+  background-color: #EBEBEB;
+  height: 32px;
+  /*GLOBAL SEARCH*/ }
+  .masthead .search-login {
+    float: left;
+    width: 20%;
+    font-size: .8rem;
+    padding-left: 16px; }
+    @media (min-width: 576px) {
+      .masthead .search-login {
+        font-size: 1rem;
+        padding-left: 0; } }
+  .masthead .global-search {
+    float: right;
+    width: 60%;
+    background-color: #f5f5f5;
+    margin-right: 10px; }
+    .masthead .global-search form input[type="search"] {
+      appearance: none;
+      -webkit-appearance: none;
+      padding: 0 10px 0 18px;
+      background-color: #f5f5f5;
+      color: #333;
+      border: 0;
+      outline: none;
+      float: left;
+      width: 80%;
+      height: 32px; }
+    .masthead .global-search form input[type="submit"] {
+      float: right;
+      width: 20%;
+      appearance: none;
+      -webkit-appearance: none;
+      border: none;
+      height: 32px;
+      background: #d6d6d6;
+      color: #333; }
+    @media (min-width: 576px) {
+      .masthead .global-search {
+        width: 30%; } }
+
+.masthead__search-icon {
+  float: right;
+  padding-right: 5px;
+  display: none; }
 
 .header {
   background: #333;
@@ -3590,29 +3656,6 @@ a.btn-cta__border--inline:hover {
           display: inline; }
         .header .header__menu p .header-menu__sm-text {
           text-transform: none; } }
-
-.column-top .column-top__left {
-  background: #fff;
-  border: 0;
-  height: .5em; }
-
-.column-top .column-top__right {
-  background: #00818F;
-  border: 0;
-  height: .5em; }
-  .column-top .column-top__right:after {
-    content: '';
-    position: absolute;
-    z-index: -1;
-    top: 0;
-    background-color: inherit;
-    height: 100%;
-    width: 9600px;
-    left: 100%; }
-
-@media (max-width: 767.98px) {
-  .column-top {
-    display: none; } }
 
 footer {
   background: #333333; }
@@ -3913,7 +3956,9 @@ FEATURE LINK
       .feature-link .feature-link_title {
         position: relative; }
         .feature-link .feature-link_title h5 {
-          width: 90%; }
+          width: 90%;
+          font-size: 1.5rem;
+          margin-bottom: 0; }
       .feature-link .feature-link.row {
         display: block; }
       .feature-link .feature-link_image {
@@ -4348,9 +4393,12 @@ table {
   border-width: 1px 0 0 0;
   border-color: #333;
   border-style: solid;
-  font-size: 1rem;
+  font-size: .8rem;
   margin-bottom: 60px;
   overflow-x: scroll; }
+  @media (min-width: 768px) {
+    table {
+      font-size: 1rem; } }
 
 thead, tbody, tfoot {
   display: table-row-group; }
@@ -4447,7 +4495,7 @@ td, td img {
     display: inline-block;
     margin-right: 25px;
     margin-bottom: 0;
-    vertical-align: middle; }
+    vertical-align: top; }
     @media (min-width: 576px) {
       .blockquote blockquote img {
         height: 80px;

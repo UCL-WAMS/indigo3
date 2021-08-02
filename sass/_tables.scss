@@ -12,9 +12,12 @@ table {
 	border-width:1px 0 0 0 ;
 	border-color: #333;
 	border-style: solid;
-	font-size: 1rem;
+	font-size: .8rem;
 	margin-bottom: 60px;
 	overflow-x: scroll;
+	@include media-breakpoint-up(md) {
+		font-size: 1rem;
+		}
 	}
 
 thead, tbody, tfoot {
