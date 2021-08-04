@@ -63,13 +63,12 @@ hr {
 svg {
   overflow: hidden; }
 
-.clearfix {
-  zoom: 1; }
-  .clearfix:before, .clearfix:after {
-    content: "";
-    display: table; }
-  .clearfix:after {
-    clear: both; }
+.clearfix:before, .clearfix:after {
+  content: "";
+  display: table; }
+
+.clearfix:after {
+  clear: both; }
 
 .visually-hidden {
   border: 0;
@@ -3266,8 +3265,8 @@ a.btn-cta__border--inline:hover {
 .right-page-nav {
   background: #E6F5F6;
   border-top: 2px solid #00818F;
-  padding: 30px;
-  margin-bottom: 40px;
+  padding: 1.875rem;
+  margin-bottom: 2.5rem;
   position: -webkit-sticky;
   position: sticky;
   top: 0; }
@@ -3276,23 +3275,23 @@ a.btn-cta__border--inline:hover {
     padding: 0 0 0 15px;
     margin: 0; }
   .right-page-nav li {
-    margin-bottom: .5em; }
+    margin-bottom: .5rem; }
 
 .background__gray {
   background-color: #f5f5f5; }
 
 .page-update {
-  margin-bottom: 50px;
-  padding-left: 16px; }
+  margin-bottom: 3.125rem;
+  padding-left: 1rem; }
   .page-update svg {
     vertical-align: top;
-    margin-right: 15px; }
+    margin-right: 0.9375rem; }
 
 /* --------------- 	RESUSABLE LAYOUTS --------------------------- */
 /* -------------  TWO COLUMN SUB-LAYOUTs  ---------------------- */
 /*------------------- HALF AND HALF STANDARD LAYOUT  --------------------------*/
 .container.six-by-six {
-  padding: 0 0 30px;
+  padding: 0 0 1.875rem;
   margin: 0; }
 
 .six-by-six__left,
@@ -3310,14 +3309,14 @@ a.btn-cta__border--inline:hover {
 
 @media (min-width: 768px) {
   .six-by-six__left {
-    padding-right: 16px; }
+    padding-right: 1em; }
   .six-by-six__right {
-    padding-left: 16px; } }
+    padding-left: 1em; } }
 
 /* ------------- TWO THIRDS AND A THIRD ------------------------*/
 /* ----------------- BIG COLUMN LEFT SMALL RIGHT -----------------*/
 .container.eight-by-four {
-  padding: 0 0 30px;
+  padding: 0 0 1.875rem;
   margin: 0; }
 
 .eight-by-four__left {
@@ -3344,13 +3343,13 @@ a.btn-cta__border--inline:hover {
 
 @media (min-width: 768px) {
   .eight-by-four__right a.card-link {
-    margin-right: -32px;
-    margin-left: 32px; } }
+    margin-right: -2rem;
+    margin-left: 2rem; } }
 
 /* ------------- THIRD AND TWO THIRDS ------------------------*/
 /* ----------------- BIG COLUMN RIGHT SMALL LEFT -----------------*/
 .container.four-by-eight {
-  padding: 0 0 30px;
+  padding: 0 0 1.875rem;
   margin: 0; }
 
 .four-by-eight__left {
@@ -3377,7 +3376,7 @@ a.btn-cta__border--inline:hover {
 
 /*---------------------- THREE 	EQUAL COLUMNS SUB LAYOUT -------------------------*/
 .four-by-four-by-four.container {
-  margin: 1.5em  auto;
+  margin: 1.5rem  auto;
   padding: 0; }
   @media (min-width: 768px) {
     .four-by-four-by-four.container {
@@ -3413,15 +3412,15 @@ a.btn-cta__border--inline:hover {
 /* --------------------- CUSTOM LAYOUTS ----------------------*/
 /*------------------- RELATED INFO PANEL  --------------------*/
 .container.site-width.related-info {
-  padding: 40px 16px;
+  padding: 2.5rem 1rem;
   border-top: 1px solid #d6d6d6;
-  margin-top: 20px; }
+  margin-top: 1.25rem; }
   @media (min-width: 768px) {
     .container.site-width.related-info {
-      padding: 40px 0; } }
+      padding: 2.5rem 0; } }
 
 .related-info .related-info__column {
-  margin-bottom: 30px;
+  margin-bottom: 1.875rem;
   position: relative;
   width: 100%;
   padding-right: 16px;
@@ -3436,12 +3435,12 @@ a.btn-cta__border--inline:hover {
         padding-right: 0; } }
 
 /* --------------- CONTACT WITH TWO ADDRESS CARDS  -------------- */
-.contact-panel-screen-width.container,
-.contact-panel.container {
+.contact-panel-screen-width.container {
   max-width: 100%; }
 
 .contact-panel.container {
-  padding: 2rem 0; }
+  padding: 2rem 0;
+  margin: 0 auto; }
 
 .contact-panel .column-left {
   position: relative;
@@ -3543,10 +3542,10 @@ a.btn-cta__border--inline:hover {
 
 /*---------------- PROGRAMME CHOICE --------------------*/
 .programme-choice {
-  padding: 50px 50px 30px 50px;
-  margin: 60px 0; }
+  padding: 3.125rem 3.125rem 1.875rem 3.125rem;
+  margin: 3.75rem 0; }
   .programme-choice .btn-cta__icon {
-    margin-top: 60px;
+    margin-top: 3.75rem;
     max-width: 430px; }
 
 /* --------------------- HEADER ------------------------
@@ -4067,44 +4066,43 @@ ALERTS
 /*------------------
 FIVE CARD LAYOUT
 ----------------------------*/
-.five-card {
-  margin-top: 30px; }
-  .five-card .card__icon {
+.five-card-layout {
+  margin-top: 1.8rem;
+  margin-bottom: 1.5rem; }
+  .five-card-layout .card__icon {
     display: none; }
-  .five-card .five-card__right {
+  .five-card-layout .five-card__right {
     order: 2; }
-  .five-card .five-card__left-top {
+  .five-card-layout .five-card__left-top {
     order: 1;
     padding: 0 16px 30px 16px; }
-  .five-card .five-card__left-bottom {
+  .five-card-layout .five-card__left-bottom {
     order: 3;
     border-top: solid 1px #d6d6d6;
     padding-top: 35px;
     padding-left: 16px;
     width: 100%; }
-    .five-card .five-card__left-bottom h2 {
+    .five-card-layout .five-card__left-bottom h2 {
       border: none;
       padding-top: 0;
       margin-top: 0; }
-  .five-card .six-by-six__left,
-  .five-card .six-by-six__right {
+  .five-card-layout .field-content-summary {
+    margin-bottom: 1.5rem; }
+  .five-card-layout .six-by-six__left,
+  .five-card-layout .six-by-six__right {
     position: relative;
     width: 100%;
     padding-right: 16px;
     padding-left: 16px;
     flex: 0 0 50%;
     max-width: 50%; }
-    .five-card .six-by-six__left a, .five-card .six-by-six__left p,
-    .five-card .six-by-six__right a,
-    .five-card .six-by-six__right p {
+    .five-card-layout .six-by-six__left a, .five-card-layout .six-by-six__left p,
+    .five-card-layout .six-by-six__right a,
+    .five-card-layout .six-by-six__right p {
       font-size: 0.75em;
       line-height: 1.4;
       margin-bottom: .5rem;
       font-weight: bold; }
-
-@media (min-width: 768px) {
-  .five-card__right .six-by-six__left {
-    border-right: solid 1px #d6d6d6; } }
 
 @media (min-width: 576px) {
   .five-card .card__icon {
@@ -4113,7 +4111,9 @@ FIVE CARD LAYOUT
     display: block; }
   .five-card .five-card__right {
     float: right;
-    width: 50%;
+    width: 50%; }
+  .five-card .five-card__right .six-by-six__left {
+    border-right: solid 1px #d6d6d6;
     border-left: solid 1px #d6d6d6; }
   .five-card .five-card__left-top {
     float: left;
@@ -4236,7 +4236,7 @@ HERO
   background-color: #00818F;
   color: white;
   font-weight: bold;
-  padding: 40px 16px; }
+  padding: 2.5rem 1rem; }
   .hero-content h1 {
     font-size: 2.25rem;
     line-height: 1.2; }
@@ -4257,7 +4257,7 @@ HERO
     left: 100%; }
   @media (min-width: 768px) {
     .hero-content {
-      padding: 66px 120px 70px 120px; }
+      padding: 4.125rem 7.5rem 4.125rem 7.5rem; }
       .hero-content h1 {
         font-size: 3.8rem;
         line-height: 1; }
@@ -4266,9 +4266,9 @@ HERO
         line-height: 1.25; } }
 
 .column-top-hero__left {
-  background: #00818F;
+  background: transparent;
   border: 0;
-  height: 1.8em; }
+  height: 1.8rem; }
   .column-top-hero__left:after {
     content: '';
     position: absolute;

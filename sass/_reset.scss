@@ -83,7 +83,6 @@ svg {
 // MAYBE MOVE TO A HELPER CLASS PARTIAL?
 
 .clearfix  {
-  zoom: 1;
   &:before, 
   &:after {
     content: "";

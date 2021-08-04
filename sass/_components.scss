@@ -404,8 +404,9 @@ FIVE CARD LAYOUT
 // NEW FLOAT BASED LAYOUT
 
 
-.five-card {
-	margin-top: 30px;
+.five-card-layout {
+	margin-top: 1.8rem;
+	margin-bottom: 1.5rem;
 	.card__icon {
 		display: none;
 	}
@@ -430,6 +431,10 @@ FIVE CARD LAYOUT
 			margin-top: 0;
 		}
 	}
+	.field-content-summary {
+		margin-bottom: 1.5rem;
+	}
+
 	// PREVENTS COLUMNS COLLAPSING IN MOBILE VIEW
 	.six-by-six__left, 
 	.six-by-six__right {
@@ -446,14 +451,6 @@ FIVE CARD LAYOUT
 	
 }
 
-
- @include media-breakpoint-up(md) {
- 		.five-card__right .six-by-six__left {
- 			border-right: solid 1px #d6d6d6;
- 			 }
- 		 }
-
-
  @include media-breakpoint-up(sm) {
 
 .five-card {
@@ -467,15 +464,19 @@ FIVE CARD LAYOUT
 	.five-card__right { 
 	float: right; 
 	width: 50%; 
-	border-left: solid 1px #d6d6d6; 
+	
 	}
+	.five-card__right .six-by-six__left {
+ 			border-right: solid 1px $pxlinegraylight;
+ 			border-left: solid 1px $pxlinegraylight; 
+ 			 }
 	.five-card__left-top {
 		float: left; 
 		width: 50%; 
 		padding-right: 20px;
 		padding-left: 0; 
 		.card {
-			border-bottom: solid 1px #d6d6d6;
+			border-bottom: solid 1px $pxlinegraylight;
 		}
 	}
 	.card { 
@@ -492,4 +493,3 @@ FIVE CARD LAYOUT
 }
 
 }
-
