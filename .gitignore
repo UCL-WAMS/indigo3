@@ -1,0 +1,8 @@
+# Ignore IDE/editors files
+/nbproject
+.idea/
+
+# Ignore MACOS and Windows system files
+.DS_Store
+Thumbs.db
+*:Zone.Identifier
