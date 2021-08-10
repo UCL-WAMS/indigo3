@@ -1,4 +1,7 @@
-$(document).ready(function() {
+
+(function ($) {
+    Drupal.behaviors.ucl_indigo_lightbox = {
+        attach: function (context, settings) {
 
     /* IE support for this object */
     if (!window.getComputedStyle) {
@@ -54,3 +57,6 @@ $(document).ready(function() {
 
 
 });
+}
+};
+})(jQuery, Drupal);

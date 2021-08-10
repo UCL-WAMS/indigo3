@@ -1,4 +1,6 @@
-$(document).ready(function(){
+(function ($) {
+    Drupal.behaviors.ucl_indigo_carousel = {
+        attach: function (context, settings) {
 // DO WE NEED THIS GLOBAL VARIABLE ANY MORE, OR CAN WE BE SMARTER?
 /*    if(typeof(globalSiteSpecificVars.carouselConfig)==="undefined"){
         carouselConfig = {
@@ -78,4 +80,6 @@ $(document).ready(function(){
     }
 });
 
-
+}
+};
+})(jQuery, Drupal);

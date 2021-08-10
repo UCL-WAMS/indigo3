@@ -1,4 +1,6 @@
-$(document).ready(function() {
+(function ($) {
+  Drupal.behaviors.ucl_indigo_tabs = {
+    attach: function (context, settings) {
     var Tabs = {
 
       init: function() {
@@ -59,3 +61,6 @@ $(document).ready(function() {
     // $('html').removeClass('js');
     // $('html').addClass('no-js');
 });
+}
+};
+})(jQuery, Drupal);
