@@ -49,4 +49,17 @@ CUSTOM SITE WIDTH BOOTSTRAP CONTAINER
 
 
 
+/*-------------------- HUB PAGE SINGLE COLUMN LAYOUT -------------------*/
+
+// ADD HUB BODY CLASS WHEN AVAILABLE
+
+// .site-content {padding: 0;}
+// @media (max-width: 768px) {.hub .main-content h1 {padding-left: 1.5rem; padding-right: 1rem;}}
+
+.single-full-width-column {
+	width: 100%;
+	.main-content {
+		padding-right: 0;
+	}
+}        
 

@@ -80,6 +80,7 @@ ucl-widget[type="youtube"], ucl-widget[type="vimeo"]{
 @include media-breakpoint-up(sm) {
 		margin-bottom: 20px;
 	}
+
 }
 
 .video__embed--text {
@@ -115,9 +116,25 @@ ucl-widget[type="youtube"], ucl-widget[type="vimeo"]{
 @include media-breakpoint-up(lg) {
 	margin-bottom: 30px;
 }
+	
 }
 
+// REMOVES MARGIN OVERFLOWS FOR LAYOUT COMPONENTS
 
+.four-by-eight, 
+.six-by-six, 
+.eight-by-four, 
+.four-by-four-by-four {
+	.video__embed--video {
+		margin-left: 0;
+	}
+	.video__embed--wrapper{
+	 margin-right: 0; 
+	  @include media-breakpoint-up(sm) {
+		margin-right: -16px;
+		}
+	}
+}
 
 // LINKS 
 
@@ -170,6 +187,7 @@ a.card-link  {
 	height:auto;
 	padding: 30px 30px 40px 30px;
 	font-weight: bold;
+	overflow: hidden;
 		svg {
 			display: block; 
 			margin-bottom: 30px;
@@ -213,7 +231,6 @@ FEATURE LINK
 		.feature-link_title {
 		background: $yellow; 
 		padding: 12px; 
-		text-transform: uppercase; 
 		width: 100%; 
 		order: 2;
 		overflow: hidden;
@@ -317,10 +334,10 @@ ALERTS
 
 
 .alert {
-	padding: 24px;
+	padding: 1.5rem;
 	border-left: 4px;
 	border-style: solid; 
-	margin-bottom: 30px;
+	margin-bottom: 1.5rem;
 			h3 {
 			font-weight: normal; 
 			font-size: 1rem;

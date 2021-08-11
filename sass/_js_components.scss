@@ -37,11 +37,13 @@ ACCORDION
 	
 	dd.accordion__description  {
 		margin-left: 0; 
-		padding-top: 30px;
 		&.active {
 			border-bottom: solid 1px #d6d6d6; 
 			padding-bottom: 30px; 
 			margin-left:0;
+		}
+		h2 {
+			border-top: none;
 		}
 	}
 
@@ -73,6 +75,9 @@ TABS
 			 &.active {
 		 		display:block
 		 }
+	h2 {
+		border-top: none;
+	}
 	}
 }
 

@@ -51,6 +51,9 @@
 .container.six-by-six {
 	padding: 0 0 1.875rem;
 	margin: 0;
+	h2 {
+		border-top: 0
+	} 
 }
 
 .six-by-six__left,
@@ -83,6 +86,9 @@
 .container.eight-by-four {
 	padding: 0 0 1.875rem;
 	margin: 0;
+	h2 {
+		border-top: 0
+	} 
 }
 
 
@@ -128,6 +134,9 @@
 .container.four-by-eight {
 	padding: 0 0 1.875rem;
 	margin: 0;
+	h2 {
+		border-top: 0
+	} 
 }
 
 
@@ -161,6 +170,9 @@
 .four-by-four-by-four.container { 
 		margin: 1.5rem  auto;
 		padding: 0;
+		h2 {
+		border-top: 0
+		} 
 	 @include media-breakpoint-up(md) {
 	 	margin-top:0;
 	 	
