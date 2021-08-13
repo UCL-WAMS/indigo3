@@ -13,7 +13,6 @@
         // Delegation
         $(document)
           .on("click", ".tabs__navigation a[href^='#']:not('.active')", function(event) {
-//          .on("click", ".tabs__navigation a:not('.active')", function(event) {
             Tabs.changeTab(this.hash);
             event.preventDefault();
           })
@@ -53,14 +52,11 @@
         $(el).closest("ul").toggleClass("open");
       }
 
-    }
+    };
 
     Tabs.init();
     // This adds some style to the tabs. Check with Louise/Joel about use.
     $('body').addClass('js');
-    // $('html').removeClass('js');
-    // $('html').addClass('no-js');
-});
 }
 };
 })(jQuery, Drupal);

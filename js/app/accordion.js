@@ -35,7 +35,6 @@ It also toggles a single item open and closed on repeated clicks.
 	}
 
     initAccordions();
-});
 }
 };
 })(jQuery, Drupal);

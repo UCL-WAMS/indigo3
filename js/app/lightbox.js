@@ -54,9 +54,6 @@
     $(window).resize(function() {
         size = window.getComputedStyle(document.body,':after').getPropertyValue('content');
     });
-
-
-});
 }
 };
 })(jQuery, Drupal);
