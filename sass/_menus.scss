@@ -1,54 +1,106 @@
 /*-------------------------------
 IN THIS SECTION MENU
+HAMBURGER MENU POPUP
 --------------------------------*/
 
 .in-this-section-menu { 
- background-color: #333;
- h1{
- 	border-bottom: 1px solid #fff;
- 	padding-bottom: 30px;
+	background-color: #333; 
+ 	color: #fff;
+ 	top: 0;
+ 	height: 100%;
+ 	width: 100%;
+ 	position: fixed;
+ 	transition: ease-in;
+ 	&.hide {
+  		display: none;
+  		height: 0%;
+  		transition: ease-out;
+  		}
+  	.in-this-section-menu-content{
+  		margin-top: 3rem;
+  	}
+ 	h1{
+ 		border-bottom: 1px solid #fff;
+ 		padding-bottom: 1.875rem;
 
- }
- *::marker{
- 	color: transparent;
- }
- color: #fff;
-  ul, ul li.leaf {
-   margin:0;
-   padding: 0;
-   text-indent: 0;
-   list-style-type: none;
-   list-style-image: none;
-}
- ul li:before {
- 	content:none;
- }
- a {
- 	color: #ffffff;
- 	text-decoration: none;
- }
-.region-menu{
-	margin: 0 auto; 
-	width: 50%;}
+ 	}
+ 	*::marker{
+ 		color: transparent;
+ 	}
 
-.close-in-this-section-menu {
-	float: right;
-} 
+	ul li a {
+		margin:0 0 1rem 0; 
+		display: block;
+	}
+
+ 	 ul, ul li.leaf, 
+ 	 ul li.expanded {
+   		padding: 0;
+   		text-indent: 0;
+  		list-style-type: none;
+  		list-style-image: none;
+		}
+ 	ul li:before {
+ 		content: none;
+ 	}
+
+ 	a {
+ 		color: #ffffff;
+ 		text-decoration: none;
+ 	}
+	.region-menu{
+		margin: 0 auto; 
+		width: 90%;
+	
+	@include media-breakpoint-up(sm) {
+		width: 80%;
+	}
+	@include media-breakpoint-up(md) {
+		width: 50%;
+	}
+	}
+
+	.close-in-this-section-menu {
+		position: absolute;
+		right: 5%;
+		top: 1rem;
+		background: #333;
+		color: $orange;
+		font-family: inherit;
+		font-size: 1rem;
+		box-shadow: 0px 0px 0px transparent;
+		border: 0px solid transparent;
+		text-shadow: 0px 0px 0px transparent;
+		@include media-breakpoint-up(sm) {
+		right: 15%;
+		}
+		svg {
+			vertical-align: -7px;
+			height: 24px;
+			width: 24px ;
+		}
+	} 
 .menu__accordion {
 	position: relative;
 	border-left: solid 1px #5c5c5c;
-	padding-left: 20px;
+	margin-left: -1.25rem;
+	
 }
+ul.menu__accordion  {
+		margin-bottom: 0;
+	}
 .menu__accordion__title {
 	font-weight: bold;
+	margin-left: 1.25rem;
+	margin-bottom: 1rem;
 }
 
 .menu__accordion__title {
 	&:before {
 	content: "\02C5";
 	position: absolute;
-	left: -50px;
-	font-size: 1.5em;
+	left: -7%;
+	font-size: 1.5rem;
 	color: $orange;
 	top: -5px;
 	font-weight: normal;
@@ -58,21 +110,29 @@ IN THIS SECTION MENU
 	 }	
 }
 ul.menu__accordion__description {
-	padding-left: 50px;
+	padding-left: 5.6%;
+	@include media-breakpoint-up(sm) {
+		padding-left: 8.23%;
+		}
 }
 .menu-block-wrapper {
-	padding-left: 20px; 	
-	margin-left: 30px;
+	padding-left: 2.130%; 	
+	margin-left: 5px;
+	@include media-breakpoint-up(sm) {
+		padding-left: 2.840%;
+		margin-left: 4.2613%;
+		}
 }
 .view-list {
-	margin-top: 30px;
-	padding-bottom: 30px;
+	margin-top: 1.875rem;
+	padding-bottom: 1.875rem;
 }
+
+
 }
 
 //  CHECK ALL CLASSES WHEN MORE EXAMPLES AVAILABLE ETC
 
 .leaf.active-trail  {margin-top: 20px;}
-
 
 

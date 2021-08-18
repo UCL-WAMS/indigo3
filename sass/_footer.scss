@@ -1,4 +1,11 @@
 
+/*----------------------------------
+ STANDARD UCL MENU FOOTER WITH LINKS ETC.
+ ----------------------------------------*/
+
+ // BOOTSTRAP LAYOUT MIXINS
+
+
   .footer-menu__links__content  { 
     @include make-col-ready();
 
@@ -31,31 +38,99 @@
 
 }
 
+// MENU STYLING
+
+.footer-global {
+    color: #ffffff; 
+    background: $darkgray;
+  a {
+    color: #ffffff; 
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  } 
+  ul{
+    list-style: none; 
+    padding: 0; 
+    margin: 0; 
+    font-size: 0.75rem; 
+    line-height: 1.7;
+  } 
+  .footer__inner.wrapper  {
+    padding: 2.7rem 0;
+  }
+  .footer-menu__social {
+    border-bottom: #ffffff solid 1px;
+    padding:0 16px;
+   @include media-breakpoint-up(md) {
+   padding: 0;
+    }
+    h2 {
+      font-size: 1rem; 
+      margin-bottom: 1.2rem; 
+    }
+    li {
+      display: inline-block; 
+      margin-right: 1.17rem; 
+      margin-bottom: 1.2rem; 
+      padding-top:  0.3125rem; 
+      padding-bottom:  0.25rem;
+    }
+
+  }
+  .footer-menu__links {
+    margin-top: 1.6rem; 
+    border-bottom: 1px solid #fff; 
+    padding-bottom: 1.5rem;
+    h2 {
+      font-size: 1rem;
+      line-height: 1.5;
+      margin-bottom: 0.7rem; 
+    }
+    li {
+      margin-bottom: 0.5625rem;
+    }
+  }
+ .footer-menu__details {
+    margin-top: 2rem;
+    address {
+      font-style: normal; 
+      font-size: 0.75rem;
+      }
+    .copyright-text {
+      font-size: 0.75rem; 
+      display: block; 
+      line-height: 2.2; 
+      margin-bottom: 0.7rem;
+    }
+    li {
+      display: inline-block;  
+      &:after {
+        content: " | ";
+      }
+      &.footer-login-cross {
+        padding-left: 5px;
+        &:after {
+          content: normal;
+        }
+      }     
+    }  
+   // LOGIN CROSS
+    .ad_login_button_cross {
+    vertical-align:-4px;
+    border: none;
+    padding: 0;
+    width: 10px;
+    height: 10px;
+  }
+  } 
+
+ 
+}
 
 
-  .footer-global-menu {color: white; background: #333; }
-  .footer-global-menu a {color: white; text-decoration:none;}
-    .footer-global-menu a:hover {text-decoration:underline;}
-  .footer-menu__social {border-bottom: white solid 1px;}
-  .footer-global-menu ul{list-style:none; padding: 0; margin: 0; font-size: .75rem; line-height:1.275rem;}
-  .footer-menu__social li {display: inline-block; margin-right: 1.17rem; margin-bottom: 1.2rem; padding-top:  0.3125rem; padding-bottom:  0.25rem;}
-  .footer-menu__social h2 {font-size: 1rem; margin-bottom: 1.2rem;}
-  .footer__inner.wrapper  {padding: 2.7rem 0;}
-  .footer-menu__links {margin-top: 1.6rem; border-bottom: 1px solid #fff; padding-bottom:1.5rem;}
-  .footer-menu__links h2 {font-size: 1rem; }
-  .footer-menu__details {margin-top: 2em;}
-  .footer-menu__details address {font-style: normal; font-size:.75rem;}
-  .copyright-text {font-size:.75rem;}
-  .footer-menu-details__list li {display: inline-block; }
-    .footer-menu-details__list li:after {content: " | ";}
-
-
-
-
-
-
-
-// // NOT IN USE FOR PROSPECTUS 
+// // NOT IN USE FOR PROSPECTUS  TAB TO OPEN BOTTOM MENU (CHANGE VALUES TO REMS ETC WHEN NEEDED)
 
 // .bottom-menu {
 // 	position: relative; 

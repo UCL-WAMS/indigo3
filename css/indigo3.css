@@ -2704,34 +2704,6 @@ svg {
       max-width: 25%;
       padding: 0; } }
 
-.footer__card-one,
-.footer__card-two,
-.footer__card-three,
-.footer__card-four {
-  position: relative;
-  width: 100%;
-  padding-right: 16px;
-  padding-left: 16px; }
-  @media (min-width: 768px) {
-    .footer__card-one,
-    .footer__card-two,
-    .footer__card-three,
-    .footer__card-four {
-      flex: 0 0 25%;
-      max-width: 25%; } }
-
-@media (min-width: 768px) {
-  .footer__card-one {
-    padding-right: 0;
-    padding-left: 0; } }
-
-@media (min-width: 768px) {
-  .footer__card-two,
-  .footer__card-three,
-  .footer__card-four {
-    padding-right: 0;
-    padding-left: 32px; } }
-
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   color: #333333; }
@@ -2803,27 +2775,29 @@ PLAIN LIST
 -------------------------*/
 section ul,
 .site-content ul {
-  padding-left: 75px;
   position: relative;
   list-style: none; }
-
-section li,
-.site-content li {
-  font-size: 1rem;
-  line-height: 1.5;
-  color: #333333; }
-  @media (min-width: 768px) and (max-width: 991.98px) {
-    section li,
-    .site-content li {
-      font-size: .75rem; } }
-  section li:before,
-  .site-content li:before {
-    content: "\2022";
-    color: #00818F;
-    font-size: 1.3rem;
-    display: inline-block;
-    width: 1em;
-    margin-left: -1em; }
+  @media (min-width: 576px) {
+    section ul,
+    .site-content ul {
+      padding-left: 4.6875rem; } }
+  section ul li,
+  .site-content ul li {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #333333; }
+    @media (min-width: 768px) and (max-width: 991.98px) {
+      section ul li,
+      .site-content ul li {
+        font-size: .75rem; } }
+    section ul li:before,
+    .site-content ul li:before {
+      content: "\2022";
+      color: #00818F;
+      font-size: 1.3rem;
+      display: inline-block;
+      width: 1rem;
+      margin-left: -1rem; }
 
 ul.primary {
   padding-left: 0; }
@@ -2895,9 +2869,6 @@ FEATURE LIST
     .site-content .page-intro p {
       font-size: 1.25rem;
       line-height: 1.5; } }
-
-.site-content .main-content h1 {
-  margin: 1.875rem 0 0.7rem 0; }
 
 .site-content .main-content h2 {
   border-top: solid 1px #333;
@@ -2972,6 +2943,12 @@ CUSTOM SITE WIDTH BOOTSTRAP CONTAINER
   width: 100%; }
   .single-full-width-column .main-content {
     padding-right: 0; }
+
+.eu-cookie-withdraw-tab {
+  position: absolute;
+  top: 0;
+  transform: translate(-50%, -100%);
+  left: 90%; }
 
 /* -------------- STYLED CALL TO ACTIONS LINKS ie not form/input buttons ---------------- */
 .btn-cta {
@@ -3075,6 +3052,9 @@ a.btn-cta__border--inline:hover {
     .prog-key-info__text {
       flex: 0 0 83.3333333333%;
       max-width: 83.3333333333%; } }
+
+.node-type-graduate-taught-programme-page .main-content h1 {
+  margin: 1.875rem 0 0.7rem 0; }
 
 .prog-key-info {
   margin-bottom: 1.875rem;
@@ -3618,11 +3598,13 @@ ol.alpha-list {
 
 /* --------------- CONTACT WITH TWO ADDRESS CARDS  -------------- */
 .contact-panel-screen-width.container {
-  max-width: 100%; }
+  max-width: 100%;
+  padding-left: 0; }
 
 .contact-panel.container {
-  padding: 2rem 0;
-  margin: 0 auto; }
+  padding: 0;
+  margin: 0 auto 1.5rem 0;
+  width: 100%; }
 
 .contact-panel .column-left {
   position: relative;
@@ -3631,10 +3613,9 @@ ol.alpha-list {
   padding-left: 16px; }
   @media (min-width: 768px) {
     .contact-panel .column-left {
-      flex: 0 0 75%;
-      max-width: 75%;
-      padding: 0;
-      padding-right: 9.1%; } }
+      flex: 0 0 83.3333333333%;
+      max-width: 83.3333333333%;
+      padding: 0; } }
 
 .contact-panel .column-right {
   position: relative;
@@ -3643,8 +3624,8 @@ ol.alpha-list {
   padding-left: 16px; }
   @media (min-width: 768px) {
     .contact-panel .column-right {
-      flex: 0 0 25%;
-      max-width: 25%;
+      flex: 0 0 16.6666666667%;
+      max-width: 16.6666666667%;
       padding: 0; } }
 
 .contact-panel .card-wrapper {
@@ -3666,24 +3647,19 @@ ol.alpha-list {
   .contact-panel .contact-panel__card-one .card-wrapper {
     margin-top: 1.875rem;
     width: 100%; }
-    @media (min-width: 576px) {
-      .contact-panel .contact-panel__card-one .card-wrapper {
-        font-size: 0.75rem; } }
     @media (min-width: 768px) {
       .contact-panel .contact-panel__card-one .card-wrapper {
         margin-right: 1.875rem;
         margin-top: 0; } }
-    @media (min-width: 992px) {
-      .contact-panel .contact-panel__card-one .card-wrapper {
-        width: 70%; } }
 
 .contact-panel .responsive-square {
   position: relative;
+  padding-left: .5rem;
   width: 40.17%;
   max-height: 180px;
   max-width: 180px;
   display: inline-block;
-  float: left; }
+  float: none; }
   .contact-panel .responsive-square:after {
     content: "";
     display: block;
@@ -3696,19 +3672,24 @@ ol.alpha-list {
       height: 100%;
       width: 100%;
       margin-bottom: 0; }
-  @media (max-width: 575.98px) {
+  @media (min-width: 576px) {
     .contact-panel .responsive-square {
-      display: none; } }
+      float: left;
+      padding-left: 0; } }
 
 .contact-panel .contact-panel__content {
-  float: left;
+  float: none;
   width: 100%;
-  padding: 1.5rem 1.5rem 0 1.5rem; }
+  padding: 1.5rem .5rem; }
   .contact-panel .contact-panel__content p,
-  .contact-panel .contact-panel__content h5 {
-    margin-bottom: 12px; }
+  .contact-panel .contact-panel__content h5,
+  .contact-panel .contact-panel__content a {
+    margin-bottom: 12px;
+    font-size: 1rem; }
   @media (min-width: 576px) {
     .contact-panel .contact-panel__content {
+      float: left;
+      padding: 1.5rem 1.5rem 0 1.5rem;
       width: 57%; } }
 
 /*-------------- SIMILAR COURSES PANEL ---------------*/
@@ -3741,9 +3722,6 @@ ol.alpha-list {
   .node-type-hub-page .single-full-width-column .main-content {
     margin-top: 1rem; }
 
-.node-type-hub-page .three-card-layout .row > div {
-  margin-bottom: 1.5rem; }
-
 .node-type-hub-page .five-card-layout .container {
   max-width: 100%; }
 
@@ -3758,24 +3736,6 @@ ol.alpha-list {
     margin-left: -10.1%; }
     .node-type-hub-page .five-card-layout .container {
       padding-left: 0; } }
-
-.node-type-hub-page .three-card-layout .four-by-four-by-four__middle,
-.node-type-hub-page .three-card-layout .four-by-four-by-four__right,
-.node-type-hub-page .three-card-layout .four-by-four-by-four__left {
-  display: flex; }
-  .node-type-hub-page .three-card-layout .four-by-four-by-four__middle .paragraphs-item-card-link,
-  .node-type-hub-page .three-card-layout .four-by-four-by-four__right .paragraphs-item-card-link,
-  .node-type-hub-page .three-card-layout .four-by-four-by-four__left .paragraphs-item-card-link {
-    width: 100%;
-    display: flex; }
-    .node-type-hub-page .three-card-layout .four-by-four-by-four__middle .paragraphs-item-card-link .content,
-    .node-type-hub-page .three-card-layout .four-by-four-by-four__right .paragraphs-item-card-link .content,
-    .node-type-hub-page .three-card-layout .four-by-four-by-four__left .paragraphs-item-card-link .content {
-      width: 100%;
-      background: #00818F; }
-
-.node-type-hub-page .three-card-layout .card .forward-link {
-  margin-top: 1.5em; }
 
 /* --------------------- HEADER ------------------------
 -----------------------*/
@@ -3888,83 +3848,136 @@ ol.alpha-list {
         .header .header__menu p .header-menu__sm-text {
           text-transform: none; } }
 
-footer {
-  background: #333333; }
-  @media (max-width: 767.98px) {
-    footer img,
-    footer .footer__card-one {
-      display: none; } }
-
-.footer__strap-line {
-  font-size: 1.875rem;
-  font-weight: bold;
-  color: #ffffff; }
-  @media (min-width: 1200px) {
-    .footer__strap-line {
-      font-size: 3rem; } }
-  @media (min-width: 992px) {
-    .footer__strap-line {
-      font-size: 2.5rem; } }
-
-.site-width.container.footer {
-  padding-top: 30px; }
-  .site-width.container.footer img {
-    max-height: 185px;
-    margin-bottom: .7em; }
-  .site-width.container.footer h5 {
-    text-transform: uppercase;
-    color: #ADADAD; }
-  .site-width.container.footer h2,
-  .site-width.container.footer p {
-    color: #fff; }
-  .site-width.container.footer a {
-    color: #F6BE00; }
-
-.bottom-menu {
+/*----------------------------------
+ STANDARD UCL MENU FOOTER WITH LINKS ETC.
+ ----------------------------------------*/
+.footer-menu__links__content {
   position: relative;
-  height: 28px;
-  background: #EBEBEB; }
-
-.bottom-menu__tab {
-  position: absolute;
-  top: -20px;
-  left: 33%;
-  text-align: center;
-  background: #fff;
-  z-index: 100;
-  border-radius: 20px 20px 0 0;
-  padding: 11px 23px;
-  color: #0D68CF;
-  font-weight: bold;
-  box-shadow: -1px -1px 4px 1px rgba(64, 64, 64, 0.75);
-  font-size: .8rem; }
-  .bottom-menu__tab svg, .bottom-menu__tab span {
-    vertical-align: middle; }
-  @media (max-width: 575.98px) {
-    .bottom-menu__tab .bottom-menu-tab__dt {
-      display: none; } }
-  @media (min-width: 576px) {
-    .bottom-menu__tab .bottom-menu-tab__sm {
-      display: none; }
-    .bottom-menu__tab .bottom-menu-tab__dt {
-      display: inline-block; } }
+  width: 100%;
+  padding-right: 16px;
+  padding-left: 16px; }
   @media (min-width: 768px) {
-    .bottom-menu__tab {
-      left: 42.8%; } }
+    .footer-menu__links__content {
+      flex: 0 0 25%;
+      max-width: 25%;
+      padding: 0; } }
+
+.footer-menu__details .footer-menu__details__address {
+  position: relative;
+  width: 100%;
+  padding-right: 16px;
+  padding-left: 16px; }
+  @media (min-width: 768px) {
+    .footer-menu__details .footer-menu__details__address {
+      flex: 0 0 25%;
+      max-width: 25%;
+      padding-left: 0; } }
+
+.footer-menu__details .footer-menu__details__links {
+  position: relative;
+  width: 100%;
+  padding-right: 16px;
+  padding-left: 16px; }
+  @media (min-width: 768px) {
+    .footer-menu__details .footer-menu__details__links {
+      flex: 0 0 75%;
+      max-width: 75%;
+      padding: 0; } }
+
+.footer-global {
+  color: #ffffff;
+  background: #333333; }
+  .footer-global a {
+    color: #ffffff;
+    text-decoration: none; }
+    .footer-global a:hover {
+      text-decoration: underline; }
+  .footer-global ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 0.75rem;
+    line-height: 1.7; }
+  .footer-global .footer__inner.wrapper {
+    padding: 2.7rem 0; }
+  .footer-global .footer-menu__social {
+    border-bottom: #ffffff solid 1px;
+    padding: 0 16px; }
+    @media (min-width: 768px) {
+      .footer-global .footer-menu__social {
+        padding: 0; } }
+    .footer-global .footer-menu__social h2 {
+      font-size: 1rem;
+      margin-bottom: 1.2rem; }
+    .footer-global .footer-menu__social li {
+      display: inline-block;
+      margin-right: 1.17rem;
+      margin-bottom: 1.2rem;
+      padding-top: 0.3125rem;
+      padding-bottom: 0.25rem; }
+  .footer-global .footer-menu__links {
+    margin-top: 1.6rem;
+    border-bottom: 1px solid #fff;
+    padding-bottom: 1.5rem; }
+    .footer-global .footer-menu__links h2 {
+      font-size: 1rem;
+      line-height: 1.5;
+      margin-bottom: 0.7rem; }
+    .footer-global .footer-menu__links li {
+      margin-bottom: 0.5625rem; }
+  .footer-global .footer-menu__details {
+    margin-top: 2rem; }
+    .footer-global .footer-menu__details address {
+      font-style: normal;
+      font-size: 0.75rem; }
+    .footer-global .footer-menu__details .copyright-text {
+      font-size: 0.75rem;
+      display: block;
+      line-height: 2.2;
+      margin-bottom: 0.7rem; }
+    .footer-global .footer-menu__details li {
+      display: inline-block; }
+      .footer-global .footer-menu__details li:after {
+        content: " | "; }
+      .footer-global .footer-menu__details li.footer-login-cross {
+        padding-left: 5px; }
+        .footer-global .footer-menu__details li.footer-login-cross:after {
+          content: normal; }
+    .footer-global .footer-menu__details .ad_login_button_cross {
+      vertical-align: -4px;
+      border: none;
+      padding: 0;
+      width: 10px;
+      height: 10px; }
 
 /*-------------------------------
 IN THIS SECTION MENU
+HAMBURGER MENU POPUP
 --------------------------------*/
 .in-this-section-menu {
   background-color: #333;
-  color: #fff; }
+  color: #fff;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  transition: ease-in; }
+  .in-this-section-menu.hide {
+    display: none;
+    height: 0%;
+    transition: ease-out; }
+  .in-this-section-menu .in-this-section-menu-content {
+    margin-top: 3rem; }
   .in-this-section-menu h1 {
     border-bottom: 1px solid #fff;
-    padding-bottom: 30px; }
+    padding-bottom: 1.875rem; }
   .in-this-section-menu *::marker {
     color: transparent; }
-  .in-this-section-menu ul, .in-this-section-menu ul li.leaf {
-    margin: 0;
+  .in-this-section-menu ul li a {
+    margin: 0 0 1rem 0;
+    display: block; }
+  .in-this-section-menu ul, .in-this-section-menu ul li.leaf,
+  .in-this-section-menu ul li.expanded {
     padding: 0;
     text-indent: 0;
     list-style-type: none;
@@ -3976,33 +3989,66 @@ IN THIS SECTION MENU
     text-decoration: none; }
   .in-this-section-menu .region-menu {
     margin: 0 auto;
-    width: 50%; }
+    width: 90%; }
+    @media (min-width: 576px) {
+      .in-this-section-menu .region-menu {
+        width: 80%; } }
+    @media (min-width: 768px) {
+      .in-this-section-menu .region-menu {
+        width: 50%; } }
   .in-this-section-menu .close-in-this-section-menu {
-    float: right; }
+    position: absolute;
+    right: 5%;
+    top: 1rem;
+    background: #333;
+    color: #ea7600;
+    font-family: inherit;
+    font-size: 1rem;
+    box-shadow: 0px 0px 0px transparent;
+    border: 0px solid transparent;
+    text-shadow: 0px 0px 0px transparent; }
+    @media (min-width: 576px) {
+      .in-this-section-menu .close-in-this-section-menu {
+        right: 15%; } }
+    .in-this-section-menu .close-in-this-section-menu svg {
+      vertical-align: -7px;
+      height: 24px;
+      width: 24px; }
   .in-this-section-menu .menu__accordion {
     position: relative;
     border-left: solid 1px #5c5c5c;
-    padding-left: 20px; }
+    margin-left: -1.25rem; }
+  .in-this-section-menu ul.menu__accordion {
+    margin-bottom: 0; }
   .in-this-section-menu .menu__accordion__title {
-    font-weight: bold; }
+    font-weight: bold;
+    margin-left: 1.25rem;
+    margin-bottom: 1rem; }
   .in-this-section-menu .menu__accordion__title:before {
     content: "\02C5";
     position: absolute;
-    left: -50px;
-    font-size: 1.5em;
+    left: -7%;
+    font-size: 1.5rem;
     color: #ea7600;
     top: -5px;
     font-weight: normal; }
   .in-this-section-menu .menu__accordion__title.active:before {
     content: "\02C4"; }
   .in-this-section-menu ul.menu__accordion__description {
-    padding-left: 50px; }
+    padding-left: 5.6%; }
+    @media (min-width: 576px) {
+      .in-this-section-menu ul.menu__accordion__description {
+        padding-left: 8.23%; } }
   .in-this-section-menu .menu-block-wrapper {
-    padding-left: 20px;
-    margin-left: 30px; }
+    padding-left: 2.130%;
+    margin-left: 5px; }
+    @media (min-width: 576px) {
+      .in-this-section-menu .menu-block-wrapper {
+        padding-left: 2.840%;
+        margin-left: 4.2613%; } }
   .in-this-section-menu .view-list {
-    margin-top: 30px;
-    padding-bottom: 30px; }
+    margin-top: 1.875rem;
+    padding-bottom: 1.875rem; }
 
 .leaf.active-trail {
   margin-top: 20px; }
@@ -4239,6 +4285,8 @@ FEATURE LINK
     color: #d6d6d6; }
   .box-out--gray a {
     color: #F6BE00; }
+  .box-out--gray .forward-link svg {
+    stroke: #F6BE00; }
 
 .box-out--yellow {
   background-color: #F6BE00; }
@@ -4257,7 +4305,7 @@ ALERTS
   margin-bottom: 1.5rem; }
   .alert h3 {
     font-weight: normal;
-    font-size: 1rem; }
+    font-size: 1.125rem; }
   .alert h3,
   .alert p {
     display: inline; }
@@ -4325,12 +4373,12 @@ FIVE CARD LAYOUT
     order: 2; }
   .five-card-layout .five-card__left-top {
     order: 1;
-    padding: 0 16px 30px 16px; }
+    padding: 0 1rem 1.875rem 1rem; }
   .five-card-layout .five-card__left-bottom {
     order: 3;
     border-top: solid 1px #d6d6d6;
-    padding-top: 35px;
-    padding-left: 16px;
+    padding-top: 2.1875rem;
+    padding-left: 1rem;
     width: 100%; }
     .five-card-layout .five-card__left-bottom h2 {
       border: none;
@@ -4342,13 +4390,12 @@ FIVE CARD LAYOUT
   .five-card-layout .six-by-six__right {
     position: relative;
     width: 100%;
-    padding-right: 16px;
-    padding-left: 16px;
+    padding-right: 1rem;
+    padding-left: 1rem;
     flex: 0 0 50%;
     max-width: 50%; }
-    .five-card-layout .six-by-six__left a, .five-card-layout .six-by-six__left p,
-    .five-card-layout .six-by-six__right a,
-    .five-card-layout .six-by-six__right p {
+    .five-card-layout .six-by-six__left a,
+    .five-card-layout .six-by-six__right a {
       font-size: 0.75em;
       line-height: 1.4;
       margin-bottom: .5rem;
@@ -4368,7 +4415,7 @@ FIVE CARD LAYOUT
   .five-card .five-card__left-top {
     float: left;
     width: 50%;
-    padding-right: 20px;
+    padding-right: 1.25rem;
     padding-left: 0; }
     .five-card .five-card__left-top .card {
       border-bottom: solid 1px #d6d6d6; }
@@ -4378,9 +4425,92 @@ FIVE CARD LAYOUT
     float: left;
     width: 50%;
     clear: left;
-    padding-right: 20px;
+    padding-right: 1.25rem;
     border-top: 0;
     padding-top: 0; } }
+
+/* ------------------- THREE CARD LAYOUT 
+not working at the moment as specified, this layout has been used for a generic
+three item layout.  The cards need to be flex to align to baseline.
+----------------------------------------*/
+.three-card-layout .row > div {
+  margin-bottom: 1.5rem; }
+
+.three-card-layout .four-by-four-by-four__middle h2,
+.three-card-layout .four-by-four-by-four__right h2,
+.three-card-layout .four-by-four-by-four__left h2 {
+  padding: 0;
+  margin-top: 0; }
+
+.three-card-layout .card .forward-link {
+  margin-top: 1.5em; }
+
+.item-background a.card-link,
+.item-background .content,
+.item-background .paragraphs-item-card-link {
+  height: 100%; }
+
+/*------------------ PROMO SUB FOOTER ------------
+-------*/
+.promo-footer__card-one,
+.promo-footer__card-two,
+.promo-footer__card-three,
+.promo-footer__card-four {
+  position: relative;
+  width: 100%;
+  padding-right: 16px;
+  padding-left: 16px; }
+  @media (min-width: 768px) {
+    .promo-footer__card-one,
+    .promo-footer__card-two,
+    .promo-footer__card-three,
+    .promo-footer__card-four {
+      flex: 0 0 25%;
+      max-width: 25%; } }
+
+@media (min-width: 768px) {
+  .promo-footer__card-one {
+    padding-right: 0;
+    padding-left: 0; } }
+
+@media (min-width: 768px) {
+  .promo-footer__card-two,
+  .promo-footer__card-three,
+  .promo-footer__card-four {
+    padding-right: 0;
+    padding-left: 32px; } }
+
+.promo-pre-footer {
+  background: #333333; }
+  @media (max-width: 767.98px) {
+    .promo-pre-footer img,
+    .promo-pre-footer .promo-footer__card-one {
+      display: none; } }
+
+.promo-footer__strap-line {
+  font-size: 1.875rem;
+  font-weight: bold;
+  color: #ffffff; }
+  @media (min-width: 1200px) {
+    .promo-footer__strap-line {
+      font-size: 3rem; } }
+  @media (min-width: 992px) {
+    .promo-footer__strap-line {
+      font-size: 2.5rem; } }
+
+.site-width.container.promo-footer {
+  padding-top: 30px; }
+  .site-width.container.promo-footer img {
+    max-height: 185px;
+    margin-bottom: .7em; }
+  .site-width.container.promo-footer h5 {
+    text-transform: uppercase;
+    color: #ADADAD; }
+  .site-width.container.promo-footer h2,
+  .site-width.container.promo-footer p {
+    color: #fff; }
+  .site-width.container.promo-footer a {
+    color: #F6BE00; }
 
 /*-----------
 ACCORDION

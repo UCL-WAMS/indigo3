@@ -314,6 +314,9 @@ FEATURE LINK
 	a {
 		color: $yellow;
 	}
+	.forward-link svg {
+		stroke: $yellow;
+	}
 }
 
 
@@ -340,7 +343,7 @@ ALERTS
 	margin-bottom: 1.5rem;
 			h3 {
 			font-weight: normal; 
-			font-size: 1rem;
+			font-size: 1.125rem;
 		}
 		h3, 
 		p  {
@@ -414,6 +417,8 @@ ALERTS
 	}
 
 
+
+
 /*------------------
 FIVE CARD LAYOUT
 ----------------------------*/
@@ -433,14 +438,14 @@ FIVE CARD LAYOUT
 	}
 	.five-card__left-top {
 		order: 1; 
-		padding: 0 16px 30px 16px;
+		padding: 0 1rem 1.875rem 1rem;
 
 	}
 	.five-card__left-bottom {
 		order: 3;
 		border-top: solid 1px #d6d6d6;
-		padding-top: 35px;
-		padding-left: 16px;
+		padding-top: 2.1875rem;
+		padding-left: 1rem;
 		width: 100%;
 		h2 {
 			border:none;
@@ -457,13 +462,14 @@ FIVE CARD LAYOUT
 	.six-by-six__right {
   		position: relative;
   		width: 100%;
-  		padding-right: 16px;
-  		padding-left: 16px;
+  		padding-right: 1rem;
+  		padding-left: 1rem;
   		flex: 0 0 50%;
   		max-width: 50%; 
-  		a,p {
+  		a{
 			@include bold-minus-one; 
 		}
+		
 	}
 	
 }
@@ -490,7 +496,7 @@ FIVE CARD LAYOUT
 	.five-card__left-top {
 		float: left; 
 		width: 50%; 
-		padding-right: 20px;
+		padding-right: 1.25rem;
 		padding-left: 0; 
 		.card {
 			border-bottom: solid 1px $pxlinegraylight;
@@ -503,7 +509,7 @@ FIVE CARD LAYOUT
 		float: left; 
 		width: 50%; 
 		clear: left; 
-		padding-right: 20px; 
+		padding-right: 1.25rem; 
 		border-top: 0;
 		padding-top: 0;
 	}
@@ -511,6 +517,43 @@ FIVE CARD LAYOUT
 
 }
 
+
+
+/* ------------------- THREE CARD LAYOUT 
+not working at the moment as specified, this layout has been used for a generic
+three item layout.  The cards need to be flex to align to baseline.
+----------------------------------------*/
+
+
+	.three-card-layout .row > div {
+ 		margin-bottom: 1.5rem;
+ 		}
+
+	.three-card-layout {
+		.four-by-four-by-four__middle,
+		.four-by-four-by-four__right,
+		.four-by-four-by-four__left {
+			h2 {
+				padding: 0;
+				margin-top: 0;
+			}			
+		}
+	.card .forward-link {
+		margin-top: 1.5em;
+
+	}
+
+
+	}
+.item-background {
+	a.card-link, 
+	.content,
+	.paragraphs-item-card-link {
+				height: 100%;
+			}		
+		}
+		
+	
 
 /*------------------ PROMO SUB FOOTER ------------
 -------*/

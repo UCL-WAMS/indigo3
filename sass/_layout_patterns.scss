@@ -218,6 +218,9 @@
 
 	}
 	
+// SEE ALSO THREE CARD LAYOUT - MORE WORK NEEDED FOR DEDICATED TEMPLATE?
+
+
 /* --------------------- CUSTOM LAYOUTS ----------------------*/
 
 /*------------------- RELATED INFO PANEL  --------------------*/
@@ -260,11 +263,13 @@
 .contact-panel-screen-width.container, 
 	{
 	max-width: 100%;
+	padding-left: 0;
 	}
 
 .contact-panel.container {
-		padding: 2rem 0;
-		margin:0 auto;
+		padding: 0;
+		margin: 0 auto 1.5rem 0;
+		width: 100%;
 	}
 
 
@@ -278,9 +283,8 @@
 		 	@include make-col-ready();
 
 	@include media-breakpoint-up(md) {
-   	 	@include make-col(9);
+   	 	@include make-col(10);
    	 	padding: 0;
-   	 	padding-right: 9.1%;
    	 	}
    	 }
 
@@ -288,7 +292,7 @@
 		 	@include make-col-ready();
 
 	@include media-breakpoint-up(md) {
-   	 	@include make-col(3);
+   	 	@include make-col(2);
    	 	padding: 0;
    	 	}
    	 }
@@ -312,28 +316,23 @@
 		margin-bottom: 3rem;	
 		.card-wrapper {
 			margin-top: 1.875rem;
-			width: 100%;	 	   		
-	@include media-breakpoint-up(sm) {
-  			font-size: 0.75rem;
-  			}
+			width: 100%;	
 	@include media-breakpoint-up(md) {
    			margin-right: 1.875rem; 
    			margin-top: 0;   			
    	   		}
-	@include media-breakpoint-up(lg) {
-  			width:70%;
-  			}
 
    	}
 
 }
 	.responsive-square {
 		position: relative;
+		padding-left: .5rem;
   		width: 40.17%;
  		max-height: 180px;
   		max-width: 180px;
   		display: inline-block;
-  		float: left;
+  		float: none;
   		&:after {
   		 	content: "";
   			display: block;
@@ -351,23 +350,31 @@
 			}
   
 		}
-	@include media-breakpoint-down(xs) {
-		display:none;
-	}
+		@include media-breakpoint-up(sm) {
+			float: left;
+			padding-left: 0;
+		}
 	}
 
 	.contact-panel__content {
-		float: left; 
-		width: 100%;	
-		padding: 1.5rem 1.5rem 0 1.5rem;
+		float: none; 
+		width: 100%;
+		padding: 1.5rem .5rem;
+
 		p,
-   		h5 {
+   		h5,
+   		a {
    			margin-bottom: 12px;
+   			font-size: 1rem;	
    				
 		}
-		@include media-breakpoint-up(sm) {
+	
+
+	@include media-breakpoint-up(sm) {
+		float: left;
+		padding: 1.5rem 1.5rem 0 1.5rem;
 		width: 57%;
-		}
+	}
 
     }
 

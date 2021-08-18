@@ -14,10 +14,7 @@
 			margin-top: 1rem;
 			} 
 		}	
-	.three-card-layout .row > div {
- 		margin-bottom: 1.5rem;
- 		}
-
+	
 	.five-card-layout .container {
 		max-width: 100%;
 		}
@@ -37,27 +34,6 @@
 		 		}
 		}
 }	
-	.three-card-layout {
-		.four-by-four-by-four__middle,
-		.four-by-four-by-four__right,
-		.four-by-four-by-four__left {
-			display: flex;
-			.paragraphs-item-card-link {
-				width: 100%;
-				display: flex;
-			.content {
-				width: 100%;
-				background: $brightblue;
-			}
-			}		
-		}
-	.card .forward-link {
-		margin-top: 1.5em;
-
-	}
-
-
-	}
 
 
 

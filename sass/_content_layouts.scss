@@ -63,3 +63,13 @@ CUSTOM SITE WIDTH BOOTSTRAP CONTAINER
 	}
 }        
 
+
+
+// TEST COOKIES TAB POSITION
+
+.eu-cookie-withdraw-tab {
+    position: absolute;
+    top: 0;
+    transform: translate(-50%, -100%);
+    left: 90%;
+    }

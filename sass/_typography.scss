@@ -49,11 +49,12 @@ section,
 .site-content {
 
 	ul {
-		padding-left: 75px; 
 		position: relative; 
 		list-style: none;
-	}
-	li {
+	   @include media-breakpoint-up(sm) {
+	   	padding-left: 4.6875rem;
+	   }
+	   li {
 		font-size: 1rem; 
 		line-height: 1.5; 
 		color: #333333;
@@ -61,14 +62,16 @@ section,
 		font-size: .75rem;
 		}
 		&:before {
-	content: "\2022"; 
-	color: #00818F;
-	font-size: 1.3rem;
-  	display: inline-block; 
-  	width: 1em;
-  	margin-left: -1em
-}
+			content: "\2022"; 
+			color: $brightblue;
+			font-size: 1.3rem;
+  			display: inline-block; 
+  			width: 1rem;
+  			margin-left: -1rem
+			}
+		}
 	}
+	
 
 }
 
@@ -149,10 +152,6 @@ FEATURE LIST
 		margin-bottom: 1.8rem;
 		}
 		
-	.main-content h1 {
-		margin: 1.875rem 0 0.7rem 0;
-		}
-
 	.main-content h2 {
 		border-top: solid 1px #333;
 		padding-top: 1.875rem;
