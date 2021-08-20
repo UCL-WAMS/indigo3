@@ -21,7 +21,6 @@ $(document).ready(function() {
 
     var size = $(window).width();
 
-
     $(document).ready(function(){
         // We only want to target images / links with a
             $('.lightbox-img').addClass("let-there-be-light");
@@ -51,6 +50,5 @@ $(document).ready(function() {
     $(window).resize(function() {
         size = window.getComputedStyle(document.body,':after').getPropertyValue('content');
     });
-
 
 });

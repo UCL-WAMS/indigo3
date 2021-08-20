@@ -24,7 +24,6 @@ $(document).ready(function() {
                 $(this).removeClass("active");
                 $(this).next(".accordion__description").removeClass("active").slideUp();
             } else {
-//                removeAllActiveClassesFromCurrentAccordion($(this).parent())
                 $(this).addClass("active");
                 $(this).next(".accordion__description").addClass("active").slideDown();
         	    closeAllInactiveAccordionPanels();
