@@ -2816,19 +2816,23 @@ FEATURE LIST
   padding-right: 15%;
   margin-top: 2em;
   margin-bottom: 1.5em; }
-  .feature-list svg.feather {
+  .feature-list svg.feather,
+  .feature-list svg.icon {
     display: inline-block;
     margin-right: 20px;
     vertical-align: top; }
     @media (min-width: 768px) and (max-width: 991.98px) {
-      .feature-list svg.feather {
+      .feature-list svg.feather,
+      .feature-list svg.icon {
         width: 30px;
         height: 30px; } }
-    .feature-list svg.feather.forward-link__svg {
+    .feature-list svg.feather.forward-link__svg,
+    .feature-list svg.icon.forward-link__svg {
       margin-right: 0;
       vertical-align: 1px; }
       @media (min-width: 768px) and (max-width: 991.98px) {
-        .feature-list svg.feather.forward-link__svg {
+        .feature-list svg.feather.forward-link__svg,
+        .feature-list svg.icon.forward-link__svg {
           width: 16px;
           height: 16px; } }
   .feature-list h4 {
@@ -2925,7 +2929,7 @@ CUSTOM SITE WIDTH BOOTSTRAP CONTAINER
 .site-content.container {
   padding: 0; }
 
-/* ----------------MAIN PAGE TEMPLATE TWO COLUMN LAYOUT  ----------------- */
+/* ---------------- GENERIC MAIN PAGE TEMPLATE TWO COLUMN LAYOUT  ----------------- */
 .main-content {
   width: 100%;
   padding-right: 0;
@@ -2935,10 +2939,11 @@ CUSTOM SITE WIDTH BOOTSTRAP CONTAINER
       padding-right: 10.7954%;
       margin-top: 5rem; } }
 
-.content-columns .right-column {
-  padding-top: 7.5rem; }
+@media (min-width: 768px) {
+  .content-columns .right-column {
+    padding-top: 7.5rem; } }
 
-/*-------------------- HUB PAGE SINGLE COLUMN LAYOUT -------------------*/
+/*-------------------- HUB CONTENT TYPE PAGE SINGLE COLUMN LAYOUT -------------------*/
 .single-full-width-column {
   width: 100%; }
   .single-full-width-column .main-content {
@@ -2949,6 +2954,12 @@ CUSTOM SITE WIDTH BOOTSTRAP CONTAINER
   top: 0;
   transform: translate(-50%, -100%);
   left: 90%; }
+
+/* --------------------- INDIGO CONTENT TYPE STYLING TWO COLUMNS --------------------------- */
+.node-type-indigo-page div.field-content-summary {
+  margin-bottom: 1.5rem;
+  font-size: 1.25rem;
+  line-height: 1.5; }
 
 /* -------------- STYLED CALL TO ACTIONS LINKS ie not form/input buttons ---------------- */
 .btn-cta {
@@ -3596,7 +3607,7 @@ ol.alpha-list {
       .related-info .related-info__column:nth-of-type(4) {
         padding-right: 0; } }
 
-/* --------------- CONTACT WITH TWO ADDRESS CARDS  -------------- */
+/* --------------- CONTACT PANEL -------------- */
 .contact-panel-screen-width.container {
   max-width: 100%;
   padding-left: 0; }
@@ -3643,7 +3654,8 @@ ol.alpha-list {
       padding-right: 1rem; } }
 
 .contact-panel .contact-panel__card-one {
-  margin-bottom: 3rem; }
+  margin-bottom: 3rem;
+  width: 100%; }
   .contact-panel .contact-panel__card-one .card-wrapper {
     margin-top: 1.875rem;
     width: 100%; }
@@ -3651,6 +3663,12 @@ ol.alpha-list {
       .contact-panel .contact-panel__card-one .card-wrapper {
         margin-right: 1.875rem;
         margin-top: 0; } }
+  @media (min-width: 768px) {
+    .contact-panel .contact-panel__card-one {
+      width: 90%; } }
+  @media (min-width: 992px) {
+    .contact-panel .contact-panel__card-one {
+      width: 70%; } }
 
 .contact-panel .responsive-square {
   position: relative;
@@ -3802,7 +3820,8 @@ ol.alpha-list {
       color: #333; }
     @media (min-width: 576px) {
       .masthead .global-search {
-        width: 30%; } }
+        width: 30%;
+        margin-right: 0; } }
 
 .masthead__search-icon {
   float: right;
@@ -3984,7 +4003,8 @@ HAMBURGER MENU POPUP
     list-style-image: none; }
   .in-this-section-menu ul li:before {
     content: none; }
-  .in-this-section-menu a {
+  .in-this-section-menu a,
+  .in-this-section-menu li a.active {
     color: #ffffff;
     text-decoration: none; }
   .in-this-section-menu .region-menu {
@@ -4014,6 +4034,9 @@ HAMBURGER MENU POPUP
       vertical-align: -7px;
       height: 24px;
       width: 24px; }
+    @media (min-width: 768px) {
+      .in-this-section-menu .close-in-this-section-menu {
+        top: 1.5rem; } }
   .in-this-section-menu .menu__accordion {
     position: relative;
     border-left: solid 1px #5c5c5c;
@@ -4047,8 +4070,10 @@ HAMBURGER MENU POPUP
         padding-left: 2.840%;
         margin-left: 4.2613%; } }
   .in-this-section-menu .view-list {
+    border-top: 1px solid #fff;
     margin-top: 1.875rem;
-    padding-bottom: 1.875rem; }
+    padding: 2rem 0 1.875rem 2.840%;
+    margin-left: 4.2613%; }
 
 .leaf.active-trail {
   margin-top: 20px; }
@@ -4241,6 +4266,10 @@ FEATURE LINK
     padding: 20px 12px; }
   .feature-link .feature-link_image img {
     margin-bottom: 0; }
+  .feature-link a {
+    text-decoration: none; }
+    .feature-link a:hover {
+      text-decoration: underline; }
   @media (min-width: 768px) {
     .feature-link {
       margin-bottom: 3.5rem; }
@@ -4378,7 +4407,6 @@ FIVE CARD LAYOUT
     order: 3;
     border-top: solid 1px #d6d6d6;
     padding-top: 2.1875rem;
-    padding-left: 1rem;
     width: 100%; }
     .five-card-layout .five-card__left-bottom h2 {
       border: none;
@@ -4427,7 +4455,9 @@ FIVE CARD LAYOUT
     clear: left;
     padding-right: 1.25rem;
     border-top: 0;
-    padding-top: 0; } }
+    padding-top: 0; }
+    .five-card .five-card__left-bottom .six-by-six__left {
+      padding-left: 0; } }
 
 /* ------------------- THREE CARD LAYOUT 
 not working at the moment as specified, this layout has been used for a generic

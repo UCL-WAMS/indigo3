@@ -257,7 +257,7 @@
 
 
 
-/* --------------- CONTACT WITH TWO ADDRESS CARDS  -------------- */
+/* --------------- CONTACT PANEL -------------- */
 
 
 .contact-panel-screen-width.container, 
@@ -313,7 +313,8 @@
 
 
 	.contact-panel__card-one {
-		margin-bottom: 3rem;	
+		margin-bottom: 3rem;
+		width: 100%;	
 		.card-wrapper {
 			margin-top: 1.875rem;
 			width: 100%;	
@@ -323,6 +324,12 @@
    	   		}
 
    	}
+  @include media-breakpoint-up(md) { 
+  		width: 90%;
+  		}
+   @include media-breakpoint-up(lg) { 
+  		width: 70%;
+  		 }
 
 }
 	.responsive-square {

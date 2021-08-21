@@ -253,6 +253,12 @@ FEATURE LINK
 	.feature-link_image img {
 		margin-bottom: 0;
 	}
+	a {
+		text-decoration: none;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
 	
 @include media-breakpoint-up(md) {
 	margin-bottom:  3.5rem; 
@@ -445,7 +451,6 @@ FIVE CARD LAYOUT
 		order: 3;
 		border-top: solid 1px #d6d6d6;
 		padding-top: 2.1875rem;
-		padding-left: 1rem;
 		width: 100%;
 		h2 {
 			border:none;
@@ -512,6 +517,9 @@ FIVE CARD LAYOUT
 		padding-right: 1.25rem; 
 		border-top: 0;
 		padding-top: 0;
+	   .six-by-six__left {
+	   	padding-left: 0;
+	   }
 	}
 }
 

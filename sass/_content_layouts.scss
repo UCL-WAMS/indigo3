@@ -21,7 +21,7 @@ CUSTOM SITE WIDTH BOOTSTRAP CONTAINER
 	
 }
 
-/* ----------------MAIN PAGE TEMPLATE TWO COLUMN LAYOUT  ----------------- */
+/* ---------------- GENERIC MAIN PAGE TEMPLATE TWO COLUMN LAYOUT  ----------------- */
 
 
 // TWO COLUMN LAYOUT SMALL RIGHT COLUMN
@@ -42,14 +42,18 @@ CUSTOM SITE WIDTH BOOTSTRAP CONTAINER
 
  // RIGHT COLUMN 
 
+
 .content-columns .right-column {
+	
+	@include media-breakpoint-up(md){
 	padding-top: 7.5rem;
+	}
 
 	}
 
 
 
-/*-------------------- HUB PAGE SINGLE COLUMN LAYOUT -------------------*/
+/*-------------------- HUB CONTENT TYPE PAGE SINGLE COLUMN LAYOUT -------------------*/
 
 // ADD HUB BODY CLASS WHEN AVAILABLE
 
@@ -73,3 +77,17 @@ CUSTOM SITE WIDTH BOOTSTRAP CONTAINER
     transform: translate(-50%, -100%);
     left: 90%;
     }
+
+
+    /* --------------------- INDIGO CONTENT TYPE STYLING TWO COLUMNS --------------------------- */
+
+
+    .node-type-indigo-page {
+    	 div.field-content-summary {
+    	 		margin-bottom: 1.5rem;
+    	 		font-size: 1.25rem;
+    	 		line-height: 1.5;
+    	 }
+    }
+
+   
