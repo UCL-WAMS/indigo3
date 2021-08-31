@@ -335,3 +335,104 @@ TEACHER TRAINING
 		width: 45%;
 	}
 }
+
+/*------------------------------------
+IN PAGE NAV MENU
+--------------------------------------*/
+
+
+.floating-menu-widget {
+        background: $darkgray;
+        color: #fff;
+        padding: 1rem 0.8rem 0;
+        width: 10.5rem;
+        position: fixed ;
+        top: 10%;
+        // right: 0;
+
+        .feather-menu {
+        	vertical-align: -7px;
+        	stroke: $orange;
+        	display:inline-block;
+        	margin-right: 0.7rem;
+        }
+        a {
+        	color: #d6d6d6;
+        	text-decoration: none;
+        	&:hover {
+        		text-decoration: underline;        	}
+        }
+        h3 {
+            display: inline-block;
+            font-size: 0.9rem;
+        }
+        ul {
+        	padding-left: 0.1rem; 
+        	margin-top: -0.5rem;
+
+        	li {
+        		font-size: 0.8rem;
+        		line-height: 2;
+        		&::before {
+        		content: none;
+        		}
+        		&.active-menu-item{ 
+            	padding-left: 7px;  
+            	}
+            	&.active-menu-item::before {
+   				content: "\2023";
+        		color: $orange;
+        		font-size: 0.8rem;
+        		margin-left: 0;
+        		}
+        	}       
+        }
+
+        @include media-breakpoint-up(md) { 
+        	position: static;
+        	border-bottom: $brightblue 1em solid;
+        	padding: 1.5rem 1rem 0;
+        	width: 13rem;
+        	ul li {
+        		font-size: 1rem;
+        		line-height: 1.5;
+        		&.active-menu-item::before {
+        		font-size: 1rem;
+        		}        		
+        	}
+        	h3 {
+        		font: 1rem;
+        		}
+       }   
+       // MENU POSTIONS TABLET AND MOBILE
+       @include media-breakpoint-down(sm) {
+        	right: 0; 
+        	top: 140px;
+        }
+        @include media-breakpoint-between(sm,md) {
+        	right: 0; 
+        	top: 170px;
+        }
+     // TOGGLE CLASS FOR MENU LINKS	
+      .hidden-menu-links.hide {
+        display: none;
+      }
+       
+  }
+
+// JS RELATED CLASSES LEAVE HERE 
+
+    // DESK TOP POSITION
+      .floating-menu {
+        position: fixed;
+        top: 10px;     
+       }
+
+      .floating-widget-area {
+        height: 80%;
+      }
+
+      .affixed-end-of-container {
+        position: relative;
+        top: 100%;
+      }

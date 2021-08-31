@@ -2862,6 +2862,10 @@ FEATURE LIST
       font-size: 1.125rem;
       line-height: 1.5; } }
 
+.site-content .eight-by-four .forward-link a,
+.site-content .six-by-six .forward-link a {
+  font-size: 1rem; }
+
 .site-content .page-intro,
 .site-content .page-intro p {
   font-size: 1.125rem;
@@ -3253,6 +3257,79 @@ TEACHER TRAINING
   margin-bottom: 3rem; }
   .tt-course-apply .btn-cta__icon {
     width: 45%; }
+
+/*------------------------------------
+IN PAGE NAV MENU
+--------------------------------------*/
+.floating-menu-widget {
+  background: #333333;
+  color: #fff;
+  padding: 1rem 0.8rem 0;
+  width: 10.5rem;
+  position: fixed;
+  top: 10%; }
+  .floating-menu-widget .feather-menu {
+    vertical-align: -7px;
+    stroke: #ea7600;
+    display: inline-block;
+    margin-right: 0.7rem; }
+  .floating-menu-widget a {
+    color: #d6d6d6;
+    text-decoration: none; }
+    .floating-menu-widget a:hover {
+      text-decoration: underline; }
+  .floating-menu-widget h3 {
+    display: inline-block;
+    font-size: 0.9rem; }
+  .floating-menu-widget ul {
+    padding-left: 0.1rem;
+    margin-top: -0.5rem; }
+    .floating-menu-widget ul li {
+      font-size: 0.8rem;
+      line-height: 2; }
+      .floating-menu-widget ul li::before {
+        content: none; }
+      .floating-menu-widget ul li.active-menu-item {
+        padding-left: 7px; }
+      .floating-menu-widget ul li.active-menu-item::before {
+        content: "\2023";
+        color: #ea7600;
+        font-size: 0.8rem;
+        margin-left: 0; }
+  @media (min-width: 768px) {
+    .floating-menu-widget {
+      position: static;
+      border-bottom: #00818F 1em solid;
+      padding: 1.5rem 1rem 0;
+      width: 13rem; }
+      .floating-menu-widget ul li {
+        font-size: 1rem;
+        line-height: 1.5; }
+        .floating-menu-widget ul li.active-menu-item::before {
+          font-size: 1rem; }
+      .floating-menu-widget h3 {
+        font: 1rem; } }
+  @media (max-width: 767.98px) {
+    .floating-menu-widget {
+      right: 0;
+      top: 140px; } }
+  @media (min-width: 576px) and (max-width: 991.98px) {
+    .floating-menu-widget {
+      right: 0;
+      top: 170px; } }
+  .floating-menu-widget .hidden-menu-links.hide {
+    display: none; }
+
+.floating-menu {
+  position: fixed;
+  top: 10px; }
+
+.floating-widget-area {
+  height: 80%; }
+
+.affixed-end-of-container {
+  position: relative;
+  top: 100%; }
 
 .course-finder {
   padding-top: .7rem; }
@@ -3733,7 +3810,9 @@ ol.alpha-list {
   margin-bottom: 1.5rem; }
 
 .node-type-hub-page .site-content .main-content h2 {
-  border-top: 0; }
+  border-top: 0;
+  padding-top: 0;
+  margin-top: 0; }
 
 .node-type-hub-page .single-full-width-column {
   padding: 0 16px; }
@@ -4078,20 +4157,6 @@ HAMBURGER MENU POPUP
 .leaf.active-trail {
   margin-top: 20px; }
 
-ucl-widget[type="youtube"], ucl-widget[type="vimeo"] {
-  position: relative;
-  overflow: hidden;
-  padding-top: 56.25%;
-  display: block; }
-  ucl-widget[type="youtube"] iframe, ucl-widget[type="vimeo"] iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: 0;
-    overflow: hidden; }
-
 .embedded-video .player {
   position: relative;
   overflow: hidden;
@@ -4106,6 +4171,9 @@ ucl-widget[type="youtube"], ucl-widget[type="vimeo"] {
     height: 100%;
     border: 0; }
 
+/*----------------------------------------
+VIDEO WITH CAPTION
+----------------------------------------*/
 .video__embed--video {
   position: relative;
   width: 100%;
@@ -4128,41 +4196,47 @@ ucl-widget[type="youtube"], ucl-widget[type="vimeo"] {
       max-width: 16.6666666667%; } }
 
 .video__embed--wrapper {
-  margin-bottom: 30px;
+  margin-bottom: 1.5rem;
   background: linear-gradient(90deg, white 0%, white 8%, #d6d6d6 8%, #d6d6d6 100%);
-  margin-top: 60px;
-  margin-right: -16px; }
-  @media (min-width: 576px) {
+  margin-top: 3.75rem;
+  margin-right: -1.1528%; }
+  .video__embed--wrapper.container {
+    margin-left: 1rem;
+    width: 95%; }
+  @media (min-width: 768px) {
     .video__embed--wrapper {
-      margin-bottom: 20px; } }
+      margin-right: -1.676%; }
+      .video__embed--wrapper.container {
+        margin-left: auto;
+        width: 100%; } }
 
 .video__embed--text {
   font-size: .7em; }
   .video__embed--text .position-bottom {
     width: 95%;
     float: right;
-    padding-bottom: 15px; }
+    padding-bottom: 0.9375rem; }
   @media (min-width: 992px) {
     .video__embed--text {
       position: relative; }
       .video__embed--text .position-bottom {
-        padding: 40px 0;
+        padding: 2.5rem 0;
         position: absolute;
         bottom: 0;
         width: 100%;
         float: none; } }
 
 .video__embed--video {
-  margin-left: -40px;
-  margin-top: -30px;
-  margin-bottom: 15px;
+  margin-left: -4.192%;
+  margin-top: -1.875rem;
+  margin-bottom: 0.9375rem;
   padding: 0; }
-  @media (min-width: 768px) {
+  @media (min-width: 576px) {
     .video__embed--video {
-      margin-left: -60px; } }
+      margin-left: -6.2882%; } }
   @media (min-width: 992px) {
     .video__embed--video {
-      margin-bottom: 30px; } }
+      margin-bottom: 1.875rem; } }
 
 .four-by-eight .video__embed--video,
 .six-by-six .video__embed--video,
@@ -4180,12 +4254,18 @@ ucl-widget[type="youtube"], ucl-widget[type="vimeo"] {
     .six-by-six .video__embed--wrapper,
     .eight-by-four .video__embed--wrapper,
     .four-by-four-by-four .video__embed--wrapper {
-      margin-right: -16px; } }
+      margin-right: -1rem; } }
 
+/*--------------------------------
+LINKS 
+----------------------------------*/
+/*---------------------------------
+ARROW BACK AND FORWARD LINK
+---------------------------------*/
 .back-link,
 .forward-link {
   line-height: 1.5;
-  margin-bottom: 15px; }
+  margin-bottom: 0.9375rem; }
 
 .back-link__svg,
 .forward-link__svg {
@@ -4207,6 +4287,21 @@ a.forward-link__anchor {
   a.forward-link__anchor:hover {
     text-decoration: underline; }
 
+/* ------------------- 
+DOWNLOAD LINKS 
+------------------------------------------*/
+.download-prospectus-link,
+.paragraphs-item-file-download {
+  margin-bottom: 1.5rem; }
+  .download-prospectus-link a,
+  .download-prospectus-link span,
+  .paragraphs-item-file-download a,
+  .paragraphs-item-file-download span {
+    vertical-align: 4px; }
+
+/*--------------------------------
+CARD LINK
+--------------------------------*/
 a.card-link {
   background: #00818F;
   color: #ffffff;
@@ -4215,30 +4310,30 @@ a.card-link {
   line-height: 1.5;
   text-decoration: none;
   height: auto;
-  padding: 30px 30px 40px 30px;
+  padding: 1.875rem 1.875rem 2.5rem 1.875rem;
   font-weight: bold;
   overflow: hidden; }
   a.card-link svg {
     display: block;
-    margin-bottom: 30px; }
+    margin-bottom: 1.875rem; }
   @media (min-width: 768px) {
     a.card-link {
       font-size: 1rem;
       line-height: 1.2; }
       a.card-link svg {
-        width: 50px;
-        height: 50px;
-        margin-bottom: 30px; } }
+        width: 3.125rem;
+        height: 3.125rem;
+        margin-bottom: 1.875rem; } }
   @media (min-width: 992px) {
     a.card-link {
-      padding: 30px 30px 40px 30px;
+      padding: 1.875rem 1.875rem 2.5rem 1.875rem;
       font-size: 1.25rem;
       line-height: 1.5;
       font-weight: bold; }
       a.card-link svg {
         width: 70px;
         height: 70px;
-        margin-bottom: 30px; } }
+        margin-bottom: 1.875rem; } }
 
 /*------------------
 FEATURE LINK
@@ -4403,6 +4498,8 @@ FIVE CARD LAYOUT
   .five-card-layout .five-card__left-top {
     order: 1;
     padding: 0 1rem 1.875rem 1rem; }
+    .five-card-layout .five-card__left-top div.field-content-summary {
+      font-size: 1.125rem; }
   .five-card-layout .five-card__left-bottom {
     order: 3;
     border-top: solid 1px #d6d6d6;
@@ -4422,12 +4519,6 @@ FIVE CARD LAYOUT
     padding-left: 1rem;
     flex: 0 0 50%;
     max-width: 50%; }
-    .five-card-layout .six-by-six__left a,
-    .five-card-layout .six-by-six__right a {
-      font-size: 0.75em;
-      line-height: 1.4;
-      margin-bottom: .5rem;
-      font-weight: bold; }
 
 @media (min-width: 576px) {
   .five-card .card__icon {

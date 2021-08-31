@@ -146,6 +146,10 @@ FEATURE LIST
 		@include prose-zero;
 		}
 
+	.eight-by-four .forward-link a,
+	.six-by-six  .forward-link a {
+		font-size: 1rem;
+	}
 
 	.page-intro, 
 	.page-intro p {
