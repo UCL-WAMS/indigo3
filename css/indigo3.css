@@ -4294,10 +4294,12 @@ a.block-link__anchor {
     text-decoration: underline; }
 
 a.back-link__anchor,
+.back-link a,
 a.forward-link__anchor {
   text-decoration: none;
   vertical-align: 2px; }
   a.back-link__anchor:hover,
+  .back-link a:hover,
   a.forward-link__anchor:hover {
     text-decoration: underline; }
 
