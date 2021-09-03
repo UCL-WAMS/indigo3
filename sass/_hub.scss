@@ -1,0 +1,46 @@
+// UPDATE WITH BODY CLASSES ETC WHEN IN PLACE ON LIVE SANDBOX.
+
+.node-type-hub-page {
+	.site-content .main-content h1 {
+		margin-bottom: 1.5rem;
+	}
+
+	.site-content .main-content h2 {
+		border-top: 0;
+		padding-top: 0;
+		margin-top: 0;
+	}
+	.single-full-width-column {
+		padding: 0 16px;
+		.main-content{
+			margin-top: 1rem;
+			} 
+		}	
+	
+	.five-card-layout .container {
+		max-width: 100%;
+		}
+@include media-breakpoint-up(md){
+	.single-full-width-column { 
+		padding-right: 8.522%; 
+		padding-left: 8.522%;
+		}
+		.main-content {
+			margin-top: 2rem;
+			}
+		.five-card-layout {
+		 	width: 123.3%; 
+		 	margin-left: -10.1%;
+		 	.container{
+		 		padding-left: 0;
+		 		}
+		}
+}	
+
+
+
+
+}
+
+
+

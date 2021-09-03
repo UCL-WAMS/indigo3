@@ -51,9 +51,9 @@
 
 .inpage-feed {		
 		padding: 0;
-		margin-bottom: 1.5em;
+		margin-bottom: 1.5rem;
 		 h1 {
-		 	margin-bottom: 30px;
+		 	margin-bottom: 1.875rem;
 		 }
 		 img {
 		 	max-height: 117px; 
@@ -67,8 +67,8 @@
 
 .inpage-feed__left{
 	background-color: #F6BE00;
-	padding-left: 40px;
-	padding-bottom: 32px;
+	padding: 2rem 0 2rem 5.442%;
+	padding-bottom: 3rem;
 	align-self: flex-start !important;
 	.forward-link a {
 		color: #000;
@@ -94,8 +94,8 @@
 
 
 .inpage-feed-content {
-	padding: 40px 0 40px 40px;
-	border-left: #f6BE00 20px solid;
+	padding: 2.5rem 0 2.5rem 5.6899%;
+	border-left: #f6BE00 1.25rem solid;
 	margin-left: -32px;
 	clear: both;
 		.events-feed__type {
@@ -103,12 +103,12 @@
  			font-size: .75rem;
  			text-transform: uppercase;
  			line-height: 0.781;
- 			margin-bottom: 1em;
+ 			margin-bottom: 1rem;
  		}
  		.row {
  			border-top: black solid 1px; 
- 			padding-top: 1.5em; 
- 			margin-top:  1.5em;
+ 			padding-top: 1.5rem; 
+ 			margin-top:  1.5rem;
  				&:first-child {
  		 		border-top: 0;
  		 		padding-top: 0; 
@@ -116,7 +116,7 @@
  		 		}
  		}
  		.inpage-feed-content__text {
- 			padding-right: 20px;
+ 			padding-right: 2.9629%;
 
  		}
 }
@@ -126,11 +126,11 @@
 @include media-breakpoint-up(md){
 
 .inpage-feed__right {
-	border-top: #f6BE00 40px solid;	
+	border-top: #f6BE00 5rem solid;	
 	}
 
 .inpage-feed__left {
-	padding:0 70px 40px 0 ;
+	padding:5rem 8.39% 5rem 0 ;
 	}
 
 .inpage-feed-content {

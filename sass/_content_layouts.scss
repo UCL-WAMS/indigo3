@@ -7,7 +7,7 @@ CUSTOM SITE WIDTH BOOTSTRAP CONTAINER
 .site-width.container, .site-width { 
 	overflow-x: initial;
 	max-width: 1408px;
-	min-width: 320px;
+	min-width: 280px;
 	padding:0; 
 	width: 100%; 
 	margin: 0 auto;  
@@ -21,7 +21,7 @@ CUSTOM SITE WIDTH BOOTSTRAP CONTAINER
 	
 }
 
-/* ----------------MAIN PAGE TEMPLATE TWO COLUMN LAYOUT  ----------------- */
+/* ---------------- GENERIC MAIN PAGE TEMPLATE TWO COLUMN LAYOUT  ----------------- */
 
 
 // TWO COLUMN LAYOUT SMALL RIGHT COLUMN
@@ -33,7 +33,7 @@ CUSTOM SITE WIDTH BOOTSTRAP CONTAINER
 .main-content {
 	width: 100%; 
 	padding-right: 0;
-	margin-top: 2.5em;
+	margin-top: 2.5rem;
 @include media-breakpoint-up(md){
 	padding-right: 10.7954%;  
 	margin-top: 5rem; 	 
@@ -42,11 +42,52 @@ CUSTOM SITE WIDTH BOOTSTRAP CONTAINER
 
  // RIGHT COLUMN 
 
+
 .content-columns .right-column {
-	padding-top: 50px;
+	
+	@include media-breakpoint-up(md){
+	padding-top: 7.5rem;
+	}
 
 	}
 
 
 
+/*-------------------- HUB CONTENT TYPE PAGE SINGLE COLUMN LAYOUT -------------------*/
 
+// ADD HUB BODY CLASS WHEN AVAILABLE
+
+// .site-content {padding: 0;}
+// @media (max-width: 768px) {.hub .main-content h1 {padding-left: 1.5rem; padding-right: 1rem;}}
+
+.single-full-width-column {
+	width: 100%;
+	.main-content {
+		padding-right: 0;
+	}
+}        
+
+
+
+// TEST COOKIES TAB POSITION
+
+.eu-cookie-withdraw-tab {
+    position: absolute;
+    top: 0;
+    transform: translate(-50%, -100%);
+    left: 90%;
+    }
+
+
+    /* --------------------- INDIGO CONTENT TYPE STYLING TWO COLUMNS --------------------------- */
+
+
+    .node-type-indigo-page {
+    	 div.field-content-summary {
+    	 		margin-bottom: 1.5rem;
+    	 		font-size: 1.25rem;
+    	 		line-height: 1.5;
+    	 }
+    }
+
+   

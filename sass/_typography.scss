@@ -49,11 +49,12 @@ section,
 .site-content {
 
 	ul {
-		padding-left: 75px; 
 		position: relative; 
 		list-style: none;
-	}
-	li {
+	   @include media-breakpoint-up(sm) {
+	   	padding-left: 4.6875rem;
+	   }
+	   li {
 		font-size: 1rem; 
 		line-height: 1.5; 
 		color: #333333;
@@ -61,14 +62,16 @@ section,
 		font-size: .75rem;
 		}
 		&:before {
-	content: "\2022"; 
-	color: #00818F;
-	font-size: 1.3rem;
-  	display: inline-block; 
-  	width: 1em;
-  	margin-left: -1em
-}
+			content: "\2022"; 
+			color: $brightblue;
+			font-size: 1.3rem;
+  			display: inline-block; 
+  			width: 1rem;
+  			margin-left: -1rem
+			}
+		}
 	}
+	
 
 }
 
@@ -97,7 +100,8 @@ FEATURE LIST
 	padding-right: 15%; 
 	margin-top: 2em;
 	margin-bottom: 1.5em;
-	svg.feather {
+	svg.feather,
+	svg.icon {
 		display: inline-block; 
 		margin-right: 20px; 
 		vertical-align: top;
@@ -107,7 +111,6 @@ FEATURE LIST
 	}
 	&.forward-link__svg {
 		margin-right: 0;
-		margin-left: 3em;
 		vertical-align: 1px;
 	@include media-breakpoint-only(md)  {
 		width: 16px;
@@ -123,13 +126,12 @@ FEATURE LIST
 		width: 70%;
 		}
 	}
-	
-a.forward-link {
-		font-size: 0.75rem;
-		@include media-breakpoint-up(xl){ 
+	.forward-link{
+		margin-left: 3em;
+	}
+	a.forward-link__anchor {
 		font-size: 1rem;
-		}
-}
+	}
 
 }
 
@@ -144,16 +146,17 @@ a.forward-link {
 		@include prose-zero;
 		}
 
+	.eight-by-four .forward-link a,
+	.six-by-six  .forward-link a {
+		font-size: 1rem;
+	}
 
-	.page-intro {
+	.page-intro, 
+	.page-intro p {
 		@include prose-one;
 		margin-bottom: 1.8rem;
 		}
 		
-	.main-content h1 {
-		margin: 1.875rem 0 10px 0;
-		}
-
 	.main-content h2 {
 		border-top: solid 1px #333;
 		padding-top: 1.875rem;

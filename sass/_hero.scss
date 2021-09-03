@@ -2,7 +2,6 @@
 HERO
 -----------*/
 
-
 .hero, .column-top-hero {
 	position: relative;
 }
@@ -11,7 +10,7 @@ HERO
 	background-color: #00818F;
 	color: white;
 	font-weight: bold;
-	padding: 40px 16px;
+	padding: 2.5rem 1rem;
 	h1 {
 		font-size: 2.25rem;
 		line-height: 1.2
@@ -37,7 +36,7 @@ HERO
 		}
 
 @include media-breakpoint-up(md) {
-	 padding: 66px 120px 70px 120px;
+	 padding: 4.125rem 8.522% 4.125rem 8.522%;
 	 	h1 {
 	 		font-size: 3.8rem;
 			line-height:  1;
@@ -52,13 +51,14 @@ HERO
 }
 
 
-// LEFT DROP COLOUR BLOCK
+// LEFT DROP COLOUR BLOCK BACKGROUND SET TO TRANSPARENT FOR NOW
+// NOT FOR PROSPECTUS
 
 
 .column-top-hero__left {
-	background: #00818F; 
+	background: transparent; 
 	border: 0; 
-	height: 1.8em;
+	height: 1.8rem;
 		&:after  {
   			content: '';
   			position: absolute;
