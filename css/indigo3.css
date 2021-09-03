@@ -3236,6 +3236,40 @@ TEACHER TRAINING
 .prog-requirements .exam-r {
   padding: 8px 20px; }
 
+.prog-equivalencies {
+  background-color: #f5f5f5;
+  padding: 2rem;
+  margin-bottom: 3.56rem; }
+  .prog-equivalencies select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+    background: #ffffff url("img/chevron-down.svg") no-repeat right 3% top 50%;
+    border: #858585 1px solid;
+    padding: 1rem;
+    margin: 0;
+    width: 100%;
+    font-family: inherit;
+    font-size: 1rem;
+    cursor: inherit; }
+  .prog-equivalencies label {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px; }
+    .prog-equivalencies label.focusable:active, .prog-equivalencies label.focusable:focus {
+      clip: auto;
+      height: auto;
+      margin: 0;
+      overflow: visible;
+      position: static;
+      width: auto; }
+
 .tt-career .eight-by-four, .tt-course-structure .eight-by-four {
   margin-top: 3rem; }
 
@@ -3838,26 +3872,6 @@ ol.alpha-list {
 -----------------------*/
 .top-menu-tab {
   display: none; }
-
-.masthead {
-  /*SEARCH BOX PLACEHOLDER*/ }
-  .masthead .login-placeholder {
-    float: left;
-    width: 20%; }
-  .masthead .search-placeholder {
-    float: right; }
-  .masthead .search-form__input {
-    width: 90%; }
-  .masthead .search-form__input--search {
-    background: #fff; }
-  .masthead svg {
-    float: right; }
-  @media (max-width: 575.98px) {
-    .masthead .search-placeholder {
-      display: none; } }
-  @media (min-width: 576px) {
-    .masthead svg {
-      display: none; } }
 
 .masthead {
   background-color: #EBEBEB;
@@ -4823,9 +4837,9 @@ HERO
 /*----------------- INDIGO STYLING -----------------*/
 .inpage-feed {
   padding: 0;
-  margin-bottom: 1.5em; }
+  margin-bottom: 1.5rem; }
   .inpage-feed h1 {
-    margin-bottom: 30px; }
+    margin-bottom: 1.875rem; }
   .inpage-feed img {
     max-height: 117px;
     min-width: 102px;
@@ -4834,8 +4848,8 @@ HERO
 
 .inpage-feed__left {
   background-color: #F6BE00;
-  padding-left: 40px;
-  padding-bottom: 32px;
+  padding: 2rem 0 2rem 5.442%;
+  padding-bottom: 3rem;
   align-self: flex-start !important; }
   .inpage-feed__left .forward-link a {
     color: #000; }
@@ -4855,8 +4869,8 @@ HERO
   border-top: 0; }
 
 .inpage-feed-content {
-  padding: 40px 0 40px 40px;
-  border-left: #f6BE00 20px solid;
+  padding: 2.5rem 0 2.5rem 5.6899%;
+  border-left: #f6BE00 1.25rem solid;
   margin-left: -32px;
   clear: both; }
   .inpage-feed-content .events-feed__type {
@@ -4864,23 +4878,23 @@ HERO
     font-size: .75rem;
     text-transform: uppercase;
     line-height: 0.781;
-    margin-bottom: 1em; }
+    margin-bottom: 1rem; }
   .inpage-feed-content .row {
     border-top: black solid 1px;
-    padding-top: 1.5em;
-    margin-top: 1.5em; }
+    padding-top: 1.5rem;
+    margin-top: 1.5rem; }
     .inpage-feed-content .row:first-child {
       border-top: 0;
       padding-top: 0;
       margin-top: 0; }
   .inpage-feed-content .inpage-feed-content__text {
-    padding-right: 20px; }
+    padding-right: 2.9629%; }
 
 @media (min-width: 768px) {
   .inpage-feed__right {
-    border-top: #f6BE00 40px solid; }
+    border-top: #f6BE00 5rem solid; }
   .inpage-feed__left {
-    padding: 0 70px 40px 0; }
+    padding: 5rem 8.39% 5rem 0; }
   .inpage-feed-content {
     border-left: 0; }
   .inpage-feed img {

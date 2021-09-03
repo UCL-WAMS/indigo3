@@ -293,6 +293,48 @@ TEACHER TRAINING
 	}
 }
 
+// INTERNATIONAL EQUIVALENCIES 
+
+.prog-equivalencies {
+	background-color: #f5f5f5;
+	padding: 2rem;
+	margin-bottom: 3.56rem;
+	select {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	-o-appearance: none;
+	appearance: none;
+   	// background: #ffffff url("../images/chevron-down.svg") no-repeat right 3% top 50%; FOR LIVE
+   	background: #ffffff url("img/chevron-down.svg") no-repeat right 3% top 50%;
+ 	border: #858585 1px solid;
+  	padding:1rem;
+  	margin: 0;
+  	width: 100%;
+  	font-family: inherit;
+  	font-size: 1rem;  	
+  	cursor: inherit;
+  	}
+	label {
+	  border: 0;
+	  clip: rect(0 0 0 0);
+	  height: 1px;
+	  margin: -1px;
+	  overflow: hidden;
+	  padding: 0;
+	  position: absolute;
+	  width: 1px;
+	  &.focusable:active,
+	  &.focusable:focus {
+	    clip: auto;
+	    height: auto;
+	    margin: 0;
+	    overflow: visible;
+	    position: static;
+	    width: auto;
+		}
+	}
+}
+
 
 // CAREER SECTION
 

@@ -45,36 +45,36 @@
 
 // OLD MASTHEAD STYLING REMOVE WHEN HTML IS IN PLACE.
 
-.masthead {
+// .masthead {
 	
-	.login-placeholder {
-		float: left; 
-		width: 20%;
-	}
-/*SEARCH BOX PLACEHOLDER*/
-	.search-placeholder {
-		float: right;
-		}
-	.search-form__input{
-		width: 90%;
-		}
-	.search-form__input--search {
-		background: #fff;
-		}
-	 svg{
-		float: right;
-		}
-@include media-breakpoint-down(xs) { 
-	.search-placeholder {
-		display: none;
-	}
-}
-@include media-breakpoint-up(sm) { 
-	 svg {
-	 	display: none;
-		 }
-}
-}
+// 	.login-placeholder {
+// 		float: left; 
+// 		width: 20%;
+// 	}
+// /*SEARCH BOX PLACEHOLDER*/
+// 	.search-placeholder {
+// 		float: right;
+// 		}
+// 	.search-form__input{
+// 		width: 90%;
+// 		}
+// 	.search-form__input--search {
+// 		background: #fff;
+// 		}
+// 	 svg{
+// 		float: right;
+// 		}
+// @include media-breakpoint-down(xs) { 
+// 	.search-placeholder {
+// 		display: none;
+// 	}
+// }
+// @include media-breakpoint-up(sm) { 
+// 	 svg {
+// 	 	display: none;
+// 		 }
+// }
+// }
 
 
 
