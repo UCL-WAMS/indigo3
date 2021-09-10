@@ -31,9 +31,8 @@ to cover the UG programme content type when that becomes an indigo 3 type.
             $(".uk-overseas-button").css("textDecoration", "none");
             $(".uk-overseas-button").css("padding", "3px");
             $(".prog-key-info .international").css("paddingTop", "0");
-            $(".uk-overseas-button").on("click", function(e) {
-                $(".uk-overseas-button").css
-                e.preventDefault();
+            $(".uk-overseas-button").on("click", function(event) {
+                event.preventDefault();
                 if ($(this).hasClass("uk-button")) {
                     $(".international").css("display", "none");
                     $(".uk").fadeIn();
