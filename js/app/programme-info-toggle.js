@@ -31,19 +31,25 @@ to cover the UG programme content type when that becomes an indigo 3 type.
             $(".uk-overseas-button").css("textDecoration", "none");
             $(".uk-overseas-button").css("padding", "3px");
             $(".prog-key-info .international").css("paddingTop", "0");
-            $(".uk-overseas-button").on("click", function(e) {
-                $(".uk-overseas-button").css
-                e.preventDefault();
-                if ($(this).hasClass("uk-button")) {
-                    $(".international").css("display", "none");
-                    $(".uk").fadeIn();
-                } else if ($(this).hasClass("overseas-button")) {
-                    $(".uk").css("display", "none");
-                    $(".international").fadeIn();
-                }
-                $(".uk-overseas-button").toggleClass("highlight");
-                setButtons();
-            });
+            
+            // Check the event isn't already bound
+            var jqObject = $(".uk-overseas-button");
+            var rawDOMElement = jqObject.get(0);
+            var eventObject = $._data(rawDOMElement, "events");
+            if (typeof eventObject == "undefined" || typeof eventObject.click == "undefined") {
+                $(".uk-overseas-button").on("click", function(event) {
+                    event.preventDefault();
+                    if ($(this).hasClass("uk-button")) {
+                        $(".international").css("display", "none");
+                        $(".uk").fadeIn();
+                    } else if ($(this).hasClass("overseas-button")) {
+                        $(".uk").css("display", "none");
+                        $(".international").fadeIn();
+                    }
+                    $(".uk-overseas-button").toggleClass("highlight");
+                    setButtons();
+                });
+            }
         }
     }
 })(jQuery, Drupal);
