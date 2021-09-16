@@ -78,30 +78,23 @@
     }
     
     function printVideoEvent(event, n) {
-      var html = '' +
-      '<tr class="row' + (n > 9?' hidden-row':'') + '">' +
-        '<td>' +
-          '<p>' +
-            '<span class="fa fa-youtube-play event-icon">&nbsp;</span>' +
-            '<a target="_top" href="' +
-               event['video_url'] + 
-               '" class="clicktracker singleeventclick">Watch on demand event' +
-            '</a>' +
+      var html = '<div class="row no-gutters">' +
+          '<div class="inpage-feed-content__text">' +
+
+          '<p class="events-feed__type">' +
+          event['location'] +
+          ' - ON DEMAND' +
           '</p>' +
-        '</td>' +
-        '<td>' +
-          '<h4 class="heading">';
-            if (event['video_url']) {
-              html += '<a target="_top" href="' + event['video_url'] + '" class="clicktracker singleeventclick">' + event['name'] + '</a>';
-            } else {
-              html += '<span>' + event['name'] + '</span>';
-            }
-          html += '</h4>' +
-          '<div>' +
-            event['description'] +
-          '</div>' +
-        '</td>' +
-      '</tr>';
+
+          '<h4 class="events-feed__title">' +
+          event['name'] +
+          '</h4>';
+
+      if (event['video_url']) {
+        html += '<div class="forward-link"> <a href="' + event['video_url'] + '" class="events-feed__title-link">Watch on demand event</a></div>';
+      }
+      html += '</div>' +
+          '</div>';
       return html;
     }
     
@@ -135,40 +128,32 @@
         }
         return time;
       }
-      var timehtml = "";
-      if (event['time_start']) {
-        timehtml = "<br />" + formatTime(event["time_start"]);
-        if (event["time_end"]) {
-          timehtml += " - " + formatTime(event["time_end"]);
-        }
-      }
-      var html = '' +
-      '<tr class="row' + (n > 9?' hidden-row':'') + '">' +
-        '<td>' +
-          '<p>' +
-            '<span class="fa fa-calendar event-icon">&nbsp;</span>' +
-            '<span class="mobile-hide hidden-sm">' +
-              '<strong>' + event['final_date'] + '</strong>' +
-            '</span>' +
-            '<span class="mobile-display visible-sm">' +
-              '<strong>' + event['mobiledate'] + '</strong>' +
-            '</span>' + timehtml +
+      var html = '<div class="row no-gutters">' +
+          '<div class="inpage-feed-content__text">' +
+          '<h4 class="events-feed__date-start">' +
+            '<time dateTime="' + event['final_date'] + '">' + event['final_date'] + '</time>' +
+          '</h4>' +
+
+          '<p class="events-feed__type">' +
+            event['location'] +
           '</p>' +
-          '<span>' + event['location'] + '</span>' +
-        '</td>' +
-        '<td>' +
-          '<h4 class="heading">';
-            if (event['link']) {
-              html += '<a target="_top" href="' + event['link'] + '" class="clicktracker singleeventclick">' + event['name'] + '</a>';
-            } else {
-              html += '<span>' + event['name'] + '</span>';
-            }
-          html += '</h4>' +
-          '<div>' +
-            event['description'] +
-          '</div>' +
-        '</td>' +
-      '</tr>';
+
+          '<h4 class="events-feed__title">' +
+            event['name'] +
+          '</h4>';
+
+      html += '<p class="events-feed__time">';
+      if (event['time_start']) {
+        html += '<time dateTime="' + formatTime(event["time_start"]) + '">' + formatTime(event["time_start"]) + '</time>';
+      }
+      if (event["time_end"]) {
+        html += ' - ' + '<time dateTime="' + formatTime(event["time_end"]) + '">' + formatTime(event["time_end"]) + '</time>';
+      }
+      if (event['link']) {
+        html += '<div class="forward-link"> <a href="' + event['link'] + '" class="events-feed__title-link">Find out more and book your place</a></div>';
+      }
+      html += '</div>' +
+              '</div>';
       return html;
     }
 
