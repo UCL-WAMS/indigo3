@@ -365,7 +365,17 @@ FEATURE LINK
 	}
 }
 
+.box-out--gray-border {
+	border: solid 1px #d6d6d6;
+	padding: 2.5rem 2.5rem 0;
+	margin-bottom: 1.5rem;
+		img {
+		height: 62px;
+		float: left;
+		margin-right: 2rem;
 
+	}
+}
 
 /* ------------ 
 
