@@ -5,7 +5,6 @@ $(document).ready(function() {
   var isTop = self == top;
   var mywin = (isTop?window:window.parent);
   var iframeTop = (isTop?0:$("#ifrm",parent.document).offset().top);
-  var isEventsWidget = $("#event-query").is("input");
   var fadeIn = false;
 
   // Utility functions to render the event, faculty and department selector HTML.
@@ -70,11 +69,7 @@ $(document).ready(function() {
   }
 
   function printEvent(event, n) {
-    if (isEventsWidget) {
-      return (isFutureEvent(event)?printFutureEvent(event, n):printVideoEvent(event, n));
-    } else {
-      return (isFutureEvent(event));
-    }
+    return (isFutureEvent(event)?printFutureEvent(event, n):printVideoEvent(event, n));
   }
 
   function printVideoEvent(event, n) {
@@ -91,7 +86,9 @@ $(document).ready(function() {
         '</h4>';
 
     if (event['video_url']) {
-      html += '<div class="forward-link"> <a href="' + event['video_url'] + '" class="events-feed__title-link">Watch on demand event</a></div>';
+      html += '<div class="forward-link">' +
+          '<svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24" fill="none" stroke="#0D68CF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right forward-link__svg small-svg-link "><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>' +
+          ' <a href="' + event['video_url'] + '" class="events-feed__title-link">Watch on demand event</a></div>';
     }
     html += '</div>' +
         '</div>';
@@ -248,15 +245,11 @@ $(document).ready(function() {
   }
 
   function setUpTripleSearch() {
-    if (isEventsWidget) {
-      var txt = $("#event-query").val().toLowerCase();
-      if (txt.length < 3) {
-        txt = "";
-      }
-      filteredEvents = searchFields(txt, $("#faculties").val(), $("#departments").val());
-    } else {
-      filteredEvents = searchFields("", "", "");
+    var txt = $("#event-query").val().toLowerCase();
+    if (txt.length < 3) {
+      txt = "";
     }
+    filteredEvents = searchFields(txt, $("#faculties").val(), $("#departments").val());
     if (filteredEvents) {
       var newHTML = printEventsHTML(filteredEvents);
       if (newHTML) {
