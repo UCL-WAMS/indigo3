@@ -236,7 +236,6 @@ $(document).ready(function() {
   function searchFields(txt, facultyID, departmentID) {
     var newevents = [];
     for (var i = 0; i < events.length; i++) {
-//        if (testEvent(events[i]) && eventFreeTextSearch(events[i], txt) && filterByFaculty(events[i], facultyID) && filterByDepartment(events[i], departmentID)) {
       if (eventFreeTextSearch(events[i], txt) && filterByFaculty(events[i], facultyID) && filterByDepartment(events[i], departmentID)) {
         newevents.push(events[i]);
       }
@@ -251,14 +250,8 @@ $(document).ready(function() {
     }
     filteredEvents = searchFields(txt, $("#faculties").val(), $("#departments").val());
     if (filteredEvents) {
-      var newHTML = printEventsHTML(filteredEvents);
-      if (newHTML) {
-        $("#event-data").html(newHTML);
-        $(".eventslist").css("display","table");
-      } else {
-        $("#event-data").html("<tr><td colspan='2'>&nbsp;</td></tr>");
-        $(".eventslist").css("display","none");
-      }
+      newHTML = printEventsHTML(filteredEvents);
+      $("#event-data").html(newHTML);
       $("#event-count").html(printEventCounter(filteredEvents));
       resizeParentIframe();
       if (filteredEvents.length > 10) {
