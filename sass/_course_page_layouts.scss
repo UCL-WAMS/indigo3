@@ -573,7 +573,7 @@ IN PAGE NAV MENU
    			border: 0;
    			outline: none;
    			float: left;
-  			width: 80%;
+  			width: 100%;
   			height: 3.8rem;
        		border: 1px solid $utilityblue;
        		font-size: 1.125rem;
@@ -639,6 +639,10 @@ IN PAGE NAV MENU
  @include media-breakpoint-down(sm) {
     font-size: 0.75rem;
      }
+}
+
+ .row.no-gutters.openday-feed-listing {
+    width: 100%;
 }
 
 }

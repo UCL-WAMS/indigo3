@@ -3446,7 +3446,7 @@ IN PAGE NAV MENU
       border: 0;
       outline: none;
       float: left;
-      width: 80%;
+      width: 100%;
       height: 3.8rem;
       border: 1px solid #0D68CF;
       font-size: 1.125rem; }
@@ -3499,13 +3499,15 @@ IN PAGE NAV MENU
     @media (max-width: 767.98px) {
       .openday #open-day-type {
         font-size: 0.75rem; } }
+  .openday .row.no-gutters.openday-feed-listing {
+    width: 100%; }
 
 .course-finder {
   padding-top: .7rem; }
 
 .course-search-box {
   width: 100%; }
-  .course-search-box form input[type="text"] {
+  .course-search-box form input[type="search"] {
     appearance: none;
     -webkit-appearance: none;
     padding: 0 10px 0 18px;
