@@ -63,11 +63,17 @@ hr {
 svg {
   overflow: hidden; }
 
-.clearfix:before, .clearfix:after {
+.clearfix:before, .clearfix:after,
+.main-content div:before,
+.main-content div:after,
+.main-content section:before,
+.main-content section:after {
   content: "";
   display: table; }
 
-.clearfix:after {
+.clearfix:after,
+.main-content div:after,
+.main-content section:after {
   clear: both; }
 
 .visually-hidden {
@@ -3365,6 +3371,137 @@ IN PAGE NAV MENU
   position: relative;
   top: 100%; }
 
+.openday {
+  margin-top: 1rem; }
+  .openday .inpage-feed__right,
+  .openday .inpage-feed__left {
+    border-top: none; }
+  .openday .openday-search__left {
+    position: relative;
+    width: 100%;
+    padding-right: 16px;
+    padding-left: 16px;
+    padding: 0; }
+    @media (min-width: 768px) {
+      .openday .openday-search__left {
+        flex: 0 0 25%;
+        max-width: 25%; } }
+  .openday .openday-search__right {
+    position: relative;
+    width: 100%;
+    padding-right: 16px;
+    padding-left: 16px;
+    padding: 0; }
+    @media (min-width: 768px) {
+      .openday .openday-search__right {
+        flex: 0 0 75%;
+        max-width: 75%; } }
+  .openday h1 {
+    font-size: 1.5rem;
+    line-height: 1.23;
+    margin-bottom: 1.5rem;
+    font-weight: bold; }
+    @media (min-width: 992px) {
+      .openday h1 {
+        font-size: 1.875rem;
+        line-height: 1.35; } }
+  .openday .inpage-feed__right,
+  .openday .inpage-feed__left {
+    border-top: none; }
+  @media (max-width: 991.98px) {
+    .openday .inpage-feed__left {
+      display: none; } }
+  .openday .openday-search__left {
+    background: #f6BE00;
+    padding: 2rem 3.39% .5rem 3.5%; }
+    @media (min-width: 768px) {
+      .openday .openday-search__left {
+        padding-left: 0; } }
+  .openday .openday-search__right {
+    background: #f6BE00;
+    padding: 2rem 3.5% .5rem 4%; }
+    @media (min-width: 768px) {
+      .openday .openday-search__right {
+        padding-right: 2%; } }
+  .openday .forward-link a {
+    color: #333; }
+  .openday .forward-link svg {
+    stroke: #333; }
+  .openday .openday-search__left::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    background-color: inherit;
+    height: 100%;
+    width: 9600px;
+    right: 100%; }
+  .openday .openday-search-container {
+    width: 100%; }
+    .openday .openday-search-container form input[type="text"] {
+      appearance: none;
+      -webkit-appearance: none;
+      padding: 0 10px 0 18px;
+      color: #333;
+      border: 0;
+      outline: none;
+      float: left;
+      width: 100%;
+      height: 3.8rem;
+      border: 1px solid #0D68CF;
+      font-size: 1.125rem; }
+    .openday .openday-search-container form input[type="submit"] {
+      float: right;
+      width: 20%;
+      appearance: none;
+      -webkit-appearance: none;
+      border: none;
+      height: 3.8rem;
+      background: #0D68CF;
+      color: #fff;
+      font-size: 1rem; }
+    .openday .openday-search-container #search-box {
+      margin-bottom: .5rem; }
+  .openday .dropdown__inner {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+    display: block;
+    background-color: #f5f5f5;
+    color: #333;
+    padding: 1rem;
+    background: #ffffff url("chevron-down.svg") no-repeat right 3% top 50%;
+    border: #858585 1px solid;
+    width: 100%;
+    font-family: inherit;
+    font-size: 1rem;
+    cursor: inherit; }
+  .openday #reset {
+    margin-top: 1.5rem; }
+  .openday #open-day-type {
+    padding-bottom: 1.5em; }
+    .openday #open-day-type span {
+      display: inline-block;
+      border: 1px solid #0D68CF;
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      line-height: 1.25rem;
+      margin-right: -5px;
+      color: #0D68CF;
+      background: #fff; }
+      .openday #open-day-type span:hover {
+        background-color: #094991;
+        color: #ffffff; }
+      .openday #open-day-type span.active {
+        background: #0D68CF;
+        color: #ffffff; }
+    @media (max-width: 767.98px) {
+      .openday #open-day-type {
+        font-size: 0.75rem; } }
+  .openday .row.no-gutters.openday-feed-listing {
+    width: 100%; }
+
 .course-finder {
   padding-top: .7rem; }
 
@@ -4433,6 +4570,15 @@ FEATURE LINK
   .box-out--yellow a {
     color: #333333; }
 
+.box-out--gray-border {
+  border: solid 1px #d6d6d6;
+  padding: 2.5rem 2.5rem 0;
+  margin-bottom: 1.5rem; }
+  .box-out--gray-border img {
+    height: 62px;
+    float: left;
+    margin-right: 2rem; }
+
 /* ------------ 
 
 ALERTS 
@@ -4876,7 +5022,7 @@ HERO
   margin-left: -32px;
   clear: both; }
   .inpage-feed-content .events-feed__type {
-    color: #858585;
+    color: #737373;
     font-size: .75rem;
     text-transform: uppercase;
     line-height: 0.781;

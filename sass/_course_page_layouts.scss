@@ -1,4 +1,7 @@
 	
+// CUSTOM STYLING FOR MICROSERVICE PAGES.
+
+
 .uk-inter-switch {
 	padding-bottom: 1.5em;
 	span {
@@ -446,7 +449,7 @@ IN PAGE NAV MENU
         		font: 1rem;
         		}
        }   
-       // MENU POSTIONS TABLET AND MOBILE
+// MENU POSTIONS TABLET AND MOBILE
        @include media-breakpoint-down(sm) {
         	right: 0; 
         	top: 140px;
@@ -455,7 +458,7 @@ IN PAGE NAV MENU
         	right: 0; 
         	top: 170px;
         }
-     // TOGGLE CLASS FOR MENU LINKS	
+ // TOGGLE CLASS FOR MENU LINKS	
       .hidden-menu-links.hide {
         display: none;
       }
@@ -478,3 +481,181 @@ IN PAGE NAV MENU
         position: relative;
         top: 100%;
       }
+
+
+// TEMPORARY 09/21 OPENDAYS EVENT FINDER - REPEATS SOME OF THE GLOBAL STYLES BUT ADDED HERE UNTIL FINAL STYLED PAGE IS DEPLOYED-DEVELOPED.
+
+
+.openday {
+	margin-top: 1rem;
+
+	.inpage-feed__right, 
+	.inpage-feed__left {
+		border-top: none;
+	}
+
+	.openday-search__left{
+		 @include make-col-ready();
+	
+		 @include media-breakpoint-up(md) {
+	   	 @include make-col(3);
+	  }
+		padding: 0;
+	}
+
+	.openday-search__right{
+		 @include make-col-ready();
+	
+		 @include media-breakpoint-up(md) {
+	   	 @include make-col(9);
+	  }
+		padding: 0;
+	}
+
+	h1 {
+	 	@include bold-three;
+	}
+	.inpage-feed__right, 
+	.inpage-feed__left {
+		border-top: none;		
+	}
+ @include media-breakpoint-down(md) {
+	.inpage-feed__left {
+		display: none;
+	}
+}
+	.openday-search__left {
+		background: #f6BE00; 
+		padding: 2rem 3.39% .5rem 3.5%;
+	 @include media-breakpoint-up(md) {
+	 	padding-left:0;
+	 }
+		}
+
+	.openday-search__right {
+		background: #f6BE00;
+		padding: 2rem 3.5% .5rem 4%;
+		@include media-breakpoint-up(md) {
+	 	padding-right:2%;
+	 	
+	 }
+		}
+
+	.forward-link{
+		a  { 
+			color: #333; 
+		  	}
+		 svg {
+		 	stroke: #333;
+		 }
+	}
+
+	.openday-search__left::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    background-color: inherit;
+    height: 100%;
+    width: 9600px;
+    right: 100%;
+	}
+
+
+	.openday-search-container {
+		width: 100%;
+		
+	  	form input[type="text"]  {
+      		appearance: none;
+   			-webkit-appearance: none;
+   			padding: 0 10px 0 18px;
+   			color: #333;
+   			border: 0;
+   			outline: none;
+   			float: left;
+  			width: 100%;
+  			height: 3.8rem;
+       		border: 1px solid $utilityblue;
+       		font-size: 1.125rem;
+   		}
+   	    form input[type="submit"]  {
+       		float: right; 
+      		width: 20%; 
+     		appearance: none; 
+     		-webkit-appearance: none; 
+     		border: none; 
+     		height: 3.8rem;
+     		background: $utilityblue;
+     		color: #fff;
+        	font-size: 1rem;
+        }
+        #search-box {
+		margin-bottom: .5rem;
+		}
+   }
+
+   .dropdown__inner {
+ 	-webkit-appearance: none;
+	-moz-appearance: none;
+	-o-appearance: none;
+	appearance: none;
+    display: block;    
+	background-color: #f5f5f5;
+	color: #333;
+	padding: 1rem;
+	// background: #ffffff url("../images/chevron-down.svg") no-repeat right 3% top 50%; FOR LIVE
+   	background: #ffffff url("chevron-down.svg") no-repeat right 3% top 50%;
+   	border: #858585 1px solid;
+   	width: 100%;
+   	font-family: inherit;
+   	font-size: 1rem;  	
+   	cursor: inherit;
+}
+
+#reset {
+	margin-top: 1.5rem;
+	}
+
+#open-day-type {
+	padding-bottom: 1.5em;
+		span {
+		display: inline-block;
+		border: 1px solid $utilityblue;
+    	text-decoration: none;
+    	padding: 0.5rem 1rem;
+    	line-height: 1.25rem;
+   		margin-right: -5px;
+    	color: $utilityblue;
+   		background: #fff;
+			&:hover {
+    			background-color: $buttonrollover;
+    			color: #ffffff;
+    			}
+   			&.active  {
+    			background: $utilityblue; 
+    			color: #ffffff;
+       			}
+		}
+ @include media-breakpoint-down(sm) {
+    font-size: 0.75rem;
+     }
+}
+
+ .row.no-gutters.openday-feed-listing {
+    width: 100%;
+}
+
+}
+
+
+
+
+
+	
+
+
+
+
+
+
+
