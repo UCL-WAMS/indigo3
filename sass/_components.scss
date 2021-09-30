@@ -689,3 +689,21 @@ three item layout.  The cards need to be flex to align to baseline.
  		}
  		
 }
+
+/*--------------------------------
+ MEDIA CENTRAL WIDGET
+---------------------------------*/
+
+.media-central__container   {
+	position: relative;
+	padding-bottom: 56%;
+	padding-top: 20px;
+	height: 0;
+	}
+.media-central__iframe {
+	position: absolute; 
+	top: 0; 
+	left: 0;
+	width: 100%;
+	height: 100%;
+}

@@ -76,6 +76,10 @@ svg {
 .main-content section:after {
   clear: both; }
 
+.hidden {
+  display: none !important;
+  visibility: hidden; }
+
 .visually-hidden {
   border: 0;
   clip: rect(0 0 0 0);
@@ -2937,7 +2941,8 @@ CUSTOM SITE WIDTH BOOTSTRAP CONTAINER
       width: 90%; } }
 
 .site-content.container {
-  padding: 0; }
+  padding: 0;
+  margin-bottom: 1.5rem; }
 
 /* ---------------- GENERIC MAIN PAGE TEMPLATE TWO COLUMN LAYOUT  ----------------- */
 .main-content {
@@ -3530,6 +3535,13 @@ IN PAGE NAV MENU
     color: #fff;
     font-size: 1rem; }
 
+.tabs__content .course-search-box {
+  margin-bottom: 1.8rem; }
+
+html.js input.form-autocomplete,
+html.js input.throbbing {
+  background-image: none !important; }
+
 .course-compare {
   float: right;
   margin-bottom: 4.625rem; }
@@ -3657,6 +3669,10 @@ ol.alpha-list {
   margin: 0;
   padding: 0; }
 
+.alpha-list .alpha-list__inactive {
+  color: #adadad;
+  padding: .6rem; }
+
 .alpha-list li {
   display: inline-block;
   padding-top: .6em; }
@@ -3664,11 +3680,29 @@ ol.alpha-list {
     content: none; }
   .alpha-list li a {
     text-decoration: none;
-    padding: .6em; }
+    padding: .6rem; }
     .alpha-list li a:hover, .alpha-list li a.active {
       color: #fff;
       background: #0D68CF;
       text-decoration: underline; }
+
+.facet-manage__top {
+  margin: 1rem 0 1.5rem 0; }
+
+.facet-list_container .facet-count {
+  color: #adadad;
+  display: inline-block;
+  padding-left: .3rem; }
+
+.facet-list_container ul.facet-list {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0; }
+  .facet-list_container ul.facet-list li.facet-item {
+    margin-bottom: 1rem; }
+    .facet-list_container ul.facet-list li.facet-item:before {
+      content: none;
+      color: transparent; }
 
 /*-------------------------------------------------------------------
 
@@ -4795,6 +4829,22 @@ three item layout.  The cards need to be flex to align to baseline.
   .site-width.container.promo-footer a {
     color: #F6BE00; }
 
+/*--------------------------------
+ MEDIA CENTRAL WIDGET
+---------------------------------*/
+.media-central__container {
+  position: relative;
+  padding-bottom: 56%;
+  padding-top: 20px;
+  height: 0; }
+
+.media-central__iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
+
 /*-----------
 ACCORDION
 --------------------*/
@@ -4846,7 +4896,7 @@ TABS
 .tabs__content {
   margin-bottom: 1.5em; }
   .tabs__content .tab-content {
-    padding: 30px 0;
+    padding: 30px 0 0 0;
     display: none; }
     .tabs__content .tab-content.active {
       display: block; }
