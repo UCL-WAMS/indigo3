@@ -35,6 +35,16 @@
 
     }
 
+// SEARCH BOX WIDGET FOR DEGREE HUB PAGE
+.tabs__content .course-search-box  {
+  margin-bottom: 1.8rem;
+  }
+
+// REMOVES BROKEN ANIMATION IN SEARCH BOX 
+  html.js input.form-autocomplete,
+  html.js input.throbbing {
+    background-image: none !important;
+    }
 
 
 // LINK TO COURSES
@@ -112,7 +122,8 @@
    }
   }
   }
-  
+
+ 
 // MORE SEARCH RESULTS.
 
   .search-results__more__anchor {
@@ -158,13 +169,21 @@
           } 
 
        .alpha-list {
+            .alpha-list__inactive {
+            color: #adadad;
+            padding: .6rem;
+            
+            }
             li {
             display: inline-block; 
             padding-top: .6em;
-            &:before {content: none;}
+           
+            &:before {
+              content: none;
+            }
             a {
               text-decoration: none; 
-              padding:.6em;
+              padding:.6rem;
               &:hover, &.active {
                 color: #fff;  
                 background: #0D68CF; 
@@ -174,3 +193,31 @@
           }
         }  
 
+
+
+// FACET STYLING
+
+.facet-manage__top {
+  margin: 1rem 0 1.5rem 0; 
+}
+
+.facet-list_container {
+   .facet-count {
+      color: #adadad; 
+      display: inline-block; 
+      padding-left: .3rem;
+    }
+  ul.facet-list {
+    list-style: none; 
+    padding: 0; 
+    margin: 1rem 0 ;
+    li.facet-item {
+       margin-bottom: 1rem;
+      &:before  {
+        content: none;
+        color: transparent;
+        }
+      }    
+  }
+
+}

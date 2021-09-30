@@ -96,7 +96,10 @@ svg {
 }
 
 
-
+ .hidden {
+  display: none !important;
+  visibility: hidden;
+}
 
 .visually-hidden {
   border: 0;
@@ -117,3 +120,4 @@ svg {
     width: auto;
   }
 }
+
