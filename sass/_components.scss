@@ -567,17 +567,17 @@ FIVE CARD LAYOUT
 
 
 
-/* ------------------- THREE CARD LAYOUT 
+/* ------------------- THREE CARD LINK LAYOUT 
 not working at the moment as specified, this layout has been used for a generic
 three item layout.  The cards need to be flex to align to baseline.
 ----------------------------------------*/
 
 
-	.three-card-layout .row > div {
+	.item-background .row > div {
  		margin-bottom: 1.5rem;
  		}
 
-	.three-card-layout {
+	.item-background {
 		.four-by-four-by-four__middle,
 		.four-by-four-by-four__right,
 		.four-by-four-by-four__left {

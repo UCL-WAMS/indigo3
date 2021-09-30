@@ -4746,20 +4746,20 @@ FIVE CARD LAYOUT
     .five-card .five-card__left-bottom .six-by-six__left {
       padding-left: 0; } }
 
-/* ------------------- THREE CARD LAYOUT 
+/* ------------------- THREE CARD LINK LAYOUT 
 not working at the moment as specified, this layout has been used for a generic
 three item layout.  The cards need to be flex to align to baseline.
 ----------------------------------------*/
-.three-card-layout .row > div {
+.item-background .row > div {
   margin-bottom: 1.5rem; }
 
-.three-card-layout .four-by-four-by-four__middle h2,
-.three-card-layout .four-by-four-by-four__right h2,
-.three-card-layout .four-by-four-by-four__left h2 {
+.item-background .four-by-four-by-four__middle h2,
+.item-background .four-by-four-by-four__right h2,
+.item-background .four-by-four-by-four__left h2 {
   padding: 0;
   margin-top: 0; }
 
-.three-card-layout .card .forward-link {
+.item-background .card .forward-link {
   margin-top: 1.5em; }
 
 .item-background a.card-link,
@@ -4900,6 +4900,8 @@ TABS
     display: none; }
     .tabs__content .tab-content.active {
       display: block; }
+    .tabs__content .tab-content .container.four-by-four-by-four {
+      margin-bottom: 0; }
     .tabs__content .tab-content h2 {
       border-top: none; }
 
