@@ -29,7 +29,7 @@ to cover the UG programme content type when that becomes an indigo 3 type.
             // This next four lines will also go when CSS is sorted...
             setButtons();
             $(".uk-overseas-button").css("textDecoration", "none");
-            $(".uk-overseas-button").css("padding", "3px");
+            $(".uk-overseas-button").css("padding", "0.5rem 1rem");
             $(".prog-key-info .international").css("paddingTop", "0");
             
             // Check the event isn't already bound
