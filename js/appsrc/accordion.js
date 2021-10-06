@@ -6,7 +6,10 @@ allows each accordion on the page to have one item open at a time.
 It also toggles a single item open and closed on repeated clicks.
 *
 */
-$(document).ready(function() {
+
+(function ($) {
+    Drupal.behaviors.ucl_indigo_accordion = {
+        attach: function (context, settings) {
 	
     function closeAllInactiveAccordionPanels() {
         $(".accordion__description").not(".active").slideUp();
@@ -32,4 +35,6 @@ $(document).ready(function() {
 	}
 
     initAccordions();
-});
+}
+};
+})(jQuery, Drupal);
