@@ -16,13 +16,22 @@ to cover the UG programme content type when that becomes an indigo 3 type.
             }
         
             // Course mode toggle
-            // First line should be done by CSS, but for now...
-            $(".parttime, .flexible").css("display", "none");
+            // Next line should only apply when there is a full time study mode
+            if ($(".study-mode.fulltime.fees").is("div")) {
+                $(".parttime, .flexible").css("display", "none");
+            }
+            // Load correct state when the page loads.
+            if ($("#mode-selector").is("select")) {
+                var init_klass = "." + $("#mode-selector").val();
+                $(".study-mode").css("display", "none");
+                $(init_klass).fadeIn();
+            }
+            // Change state when new modes are selected.
             $("#mode-selector").on("change", function() {
                 $(".study-mode").css("display", "none");
                 var klass = "." + $(this).val();
                 $(klass).fadeIn();
-            })
+            });
             // UK/Overseas toggle
             // First line should be done by CSS, but for now...
             $(".international").css("display", "none");
