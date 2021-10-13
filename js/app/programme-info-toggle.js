@@ -59,11 +59,12 @@ to cover the UG programme content type when that becomes an indigo 3 type.
                     setButtons();
                 });
             }
-            var htm = $("div.node-graduate-ite-programme-page > p").first().html();
-            console.log(htm);
-            if (htm.indexOf("11 - 16 Secondary") > -1) {
-                htm = htm.replace("11 - 16 Secondary", "11 - 19 Secondary");
-                $("div.node-graduate-ite-programme-page > p").first().html(htm);
+            if ($(".node-graduate-ite-programme-page").is("div")) {
+                var htm = $("div.node-graduate-ite-programme-page > p").first().html();
+                if (htm.indexOf("11 - 16 Secondary") > -1) {
+                    htm = htm.replace("11 - 16 Secondary", "11 - 19 Secondary");
+                    $("div.node-graduate-ite-programme-page > p").first().html(htm);
+                }
             }
         }
     }
