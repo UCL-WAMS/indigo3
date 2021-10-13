@@ -22,7 +22,7 @@ It also toggles a single item open and closed on repeated clicks.
 
 	function initAccordions(){
 	    closeAllInactiveAccordionPanels();
-        $(".accordion__title").on("click", function() {
+        $(".accordion__title").off("click").on("click", function() {
             if ($(this).hasClass("active")) {
                 $(this).removeClass("active");
                 $(this).next(".accordion__description").removeClass("active").slideUp();
