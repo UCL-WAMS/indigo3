@@ -1,5 +1,5 @@
 	
-// CUSTOM STYLING FOR MICROSERVICE PAGES.
+// CUSTOM STYLING FOR MICROSERVICE PAGES AND CUSTOM BITS FOR PRE-LAUNCH
 
 
 .uk-inter-switch {
@@ -545,9 +545,6 @@ IN PAGE NAV MENU
 	.openday-search__left {
 		background: #f6BE00; 
 		padding: 2rem 3.39% .5rem 3.5%;
-	 @include media-breakpoint-up(md) {
-	 	padding-left:0;
-	 }
 		}
 
 	.openday-search__right {
@@ -665,9 +662,27 @@ IN PAGE NAV MENU
 
 }
 
+//FIX FOR MARGINS THIS PAGE ONLY
 
+ @include media-breakpoint-up(md) {
+#events-and-open-days.node-type-hub-page.page-node-2642 .single-full-width-column {         
+	padding-right: 0;
+	padding-left: 0;
+	}
+}
 
+// TEACHER TRANING HUB PAGES PRE LAUNCH FIX
 
+.node-hub-page {
+	.tab-container {
+	 	.accordion__title:last-of-type {
+	 		margin-bottom: 2.5rem;
+	 	}
+	 	.accordion__title.active:last-of-type {
+	 		margin-bottom: 0;
+	 	}
+	 }
+}
 
 	
 

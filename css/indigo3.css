@@ -1,5 +1,6 @@
-/* INDIGO RESET -------------------------------
----------------------------------------------- */
+/* -------------------
+INDIGO RESET 
+--------------------- */
 html {
   box-sizing: border-box;
   overflow-x: hidden;
@@ -63,6 +64,9 @@ hr {
 svg {
   overflow: hidden; }
 
+/* --------------------
+HELPER CLASSES
+---------------------*/
 .clearfix:before, .clearfix:after,
 .main-content div:before,
 .main-content div:after,
@@ -96,6 +100,20 @@ svg {
     overflow: visible;
     position: static;
     width: auto; }
+
+.greyout {
+  opacity: 0.5; }
+
+/*-------------------------------
+DEBUGGING AND BACKEND
+--------------------------------*/
+.find-a-phd--noscript {
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid gray;
+  color: red;
+  font-family: arial;
+  font-size: 14px; }
 
 .container,
 .container-fluid,
@@ -3440,9 +3458,6 @@ IN PAGE NAV MENU
   .openday .openday-search__left {
     background: #f6BE00;
     padding: 2rem 3.39% .5rem 3.5%; }
-    @media (min-width: 768px) {
-      .openday .openday-search__left {
-        padding-left: 0; } }
   .openday .openday-search__right {
     background: #f6BE00;
     padding: 2rem 3.5% .5rem 4%; }
@@ -3527,6 +3542,17 @@ IN PAGE NAV MENU
         font-size: 0.75rem; } }
   .openday .row.no-gutters.openday-feed-listing {
     width: 100%; }
+
+@media (min-width: 768px) {
+  #events-and-open-days.node-type-hub-page.page-node-2642 .single-full-width-column {
+    padding-right: 0;
+    padding-left: 0; } }
+
+.node-hub-page .tab-container .accordion__title:last-of-type {
+  margin-bottom: 2.5rem; }
+
+.node-hub-page .tab-container .accordion__title.active:last-of-type {
+  margin-bottom: 0; }
 
 .course-finder {
   padding-top: .7rem; }
@@ -3850,13 +3876,10 @@ ol.alpha-list {
 
 /*---------------------- THREE 	EQUAL COLUMNS SUB LAYOUT -------------------------*/
 .four-by-four-by-four.container {
-  margin: 1.5rem  auto;
+  margin: 1rem  auto 2rem auto;
   padding: 0; }
   .four-by-four-by-four.container h2 {
     border-top: 0; }
-  @media (min-width: 768px) {
-    .four-by-four-by-four.container {
-      margin-top: 0; } }
 
 .four-by-four-by-four__left,
 .four-by-four-by-four__middle,
@@ -3964,8 +3987,7 @@ ol.alpha-list {
     width: 100%; }
     @media (min-width: 768px) {
       .contact-panel .contact-panel__card-one .card-wrapper {
-        margin-right: 1.875rem;
-        margin-top: 0; } }
+        margin-right: 1.875rem; } }
   @media (min-width: 768px) {
     .contact-panel .contact-panel__card-one {
       width: 90%; } }
@@ -4054,10 +4076,10 @@ ol.alpha-list {
     padding-left: 8.522%; }
   .node-type-hub-page .main-content {
     margin-top: 2rem; }
-  .node-type-hub-page .five-card-layout {
+  .node-type-hub-page .section-five-item {
     width: 123.3%;
     margin-left: -10.1%; }
-    .node-type-hub-page .five-card-layout .container {
+    .node-type-hub-page .section-five-item .container {
       padding-left: 0; } }
 
 /* --------------------- HEADER ------------------------
@@ -4402,9 +4424,9 @@ VIDEO WITH CAPTION
       max-width: 16.6666666667%; } }
 
 .video__embed--wrapper {
-  margin-bottom: 1.5rem;
+  margin-bottom: 2.5rem;
   background: linear-gradient(90deg, white 0%, white 8%, #d6d6d6 8%, #d6d6d6 100%);
-  margin-top: 3.75rem;
+  margin-top: 2.75rem;
   margin-right: -1.1528%; }
   .video__embed--wrapper.container {
     margin-left: 1rem;
@@ -4574,27 +4596,28 @@ FEATURE LINK
     .feature-link a:hover {
       text-decoration: underline; }
   @media (min-width: 768px) {
-    .feature-link {
-      margin-bottom: 3.5rem; }
-      .feature-link.clearfix {
-        box-shadow: 3px 10px 10px -6px rgba(51, 51, 51, 0.75);
-        -webkit-box-shadow: 3px 10px 10px -6px rgba(51, 51, 51, 0.75);
-        -moz-box-shadow: 3px 10px 10px -6px rgba(51, 51, 51, 0.75); }
-      .feature-link .feature-link_title {
-        position: relative; }
-        .feature-link .feature-link_title h5 {
-          width: 90%;
-          font-size: 1.5rem;
-          margin-bottom: 0; }
-      .feature-link .feature-link.row {
-        display: block; }
-      .feature-link .feature-link_image {
-        float: left;
-        width: 50%; }
-      .feature-link .feature-link_content {
-        padding: 20px;
-        float: right;
-        width: 50%; } }
+    .feature-link.container {
+      margin-bottom: 3.5rem;
+      margin-top: 1.5rem; }
+    .feature-link.clearfix {
+      box-shadow: 3px 10px 10px -6px rgba(51, 51, 51, 0.75);
+      -webkit-box-shadow: 3px 10px 10px -6px rgba(51, 51, 51, 0.75);
+      -moz-box-shadow: 3px 10px 10px -6px rgba(51, 51, 51, 0.75); }
+    .feature-link .feature-link_title {
+      position: relative; }
+      .feature-link .feature-link_title h5 {
+        width: 90%;
+        font-size: 1.5rem;
+        margin-bottom: 0; }
+    .feature-link .feature-link.row {
+      display: block; }
+    .feature-link .feature-link_image {
+      float: left;
+      width: 50%; }
+    .feature-link .feature-link_content {
+      padding: 20px;
+      float: right;
+      width: 50%; } }
 
 /*---------------------------
  BOXOUTS
@@ -4866,6 +4889,12 @@ three item layout.  The cards need to be flex to align to baseline.
   width: 100%;
   height: 100%; }
 
+/*---------------------------
+FORMS
+--------------------------*/
+.paragraphs-item-gecko-form-embed iframe {
+  width: 100%; }
+
 /*-----------
 ACCORDION
 --------------------*/
@@ -4891,10 +4920,11 @@ ACCORDION
         content: "\02C5";
         position: absolute;
         right: 0;
-        font-size: 1.5rem;
+        font-size: 1.8rem;
         color: #0D68CF;
-        top: -5px;
-        font-weight: normal; }
+        top: -7px;
+        font-weight: normal;
+        padding-right: 1%; }
   .accordion dd.accordion__description {
     margin-left: 0; }
     .accordion dd.accordion__description.active {
@@ -5101,7 +5131,7 @@ HERO
     line-height: 0.781;
     margin-bottom: 1rem; }
   .inpage-feed-content .row {
-    border-top: black solid 1px;
+    border-top: #333 solid 1px;
     padding-top: 1.5rem;
     margin-top: 1.5rem; }
     .inpage-feed-content .row:first-child {
