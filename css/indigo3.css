@@ -3140,6 +3140,8 @@ a.btn-cta__border--inline:hover {
     .prog-key-info .prog-key-info__text div {
       font-size: 1.125rem;
       font-weight: bold; }
+    .prog-key-info .prog-key-info__text .prog-key-info__details {
+      font-weight: normal; }
     .prog-key-info .prog-key-info__text h5 {
       color: #5c5c5c;
       font-weight: normal; }
@@ -4287,7 +4289,8 @@ HAMBURGER MENU POPUP
   height: 100%;
   width: 100%;
   position: fixed;
-  transition: ease-in; }
+  transition: ease-in;
+  overflow-y: scroll; }
   .in-this-section-menu.hide {
     display: none;
     height: 0%;
@@ -4581,7 +4584,7 @@ FEATURE LINK
     word-wrap: break-word; }
   .feature-link .feature-link__icon {
     position: absolute;
-    top: 1px;
+    top: 4px;
     right: 0;
     background-color: #F6BE00; }
   .feature-link .feature-link_image {
@@ -5107,8 +5110,9 @@ HERO
   .inpage-feed__left .forward-link svg {
     stroke: #000; }
   .inpage-feed__left:after {
-    content: '';
+    content: '' !important;
     position: absolute;
+    display: block !important;
     z-index: -1;
     top: 0;
     background-color: inherit;

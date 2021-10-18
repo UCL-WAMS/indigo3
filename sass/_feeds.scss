@@ -77,8 +77,9 @@
 		stroke: #000;
 	}
 	&:after {
-  			content: '';
+  			content: '' !important;
   			position: absolute;
+  			display: block !important;
   			z-index: -1; 
   			top: 0;
   			background-color: inherit;
@@ -86,6 +87,7 @@
   			width: 9600px;
   			right:100%;  
   		} 
+ // IMPORTANT RULES OVERRIDE GLOBAL RESET CLEAR FIX ON MAIN TO SORT IPAD BUG
 }
 
 .inpage-feed__right{

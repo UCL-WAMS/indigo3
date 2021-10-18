@@ -11,6 +11,7 @@ HAMBURGER MENU POPUP
  	width: 100%;
  	position: fixed;
  	transition: ease-in;
+ 	overflow-y:scroll;
  	&.hide {
   		display: none;
   		height: 0%;
