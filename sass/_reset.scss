@@ -1,5 +1,6 @@
-/* INDIGO RESET -------------------------------
----------------------------------------------- */
+/* -------------------
+INDIGO RESET 
+--------------------- */
 
 
 html {
@@ -80,6 +81,10 @@ svg {
  }
 
 
+
+/* --------------------
+HELPER CLASSES
+---------------------*/
 // MAYBE MOVE TO A HELPER CLASS PARTIAL?
 
 .clearfix, 
@@ -121,3 +126,19 @@ svg {
   }
 }
 
+.greyout {
+    opacity: 0.5;
+}
+
+/*-------------------------------
+DEBUGGING AND BACKEND
+--------------------------------*/
+
+.find-a-phd--noscript {
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid gray;
+  color: red; 
+  font-family: arial;
+  font-size: 14px;
+}

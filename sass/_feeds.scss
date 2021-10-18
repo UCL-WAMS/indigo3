@@ -77,8 +77,9 @@
 		stroke: #000;
 	}
 	&:after {
-  			content: '';
+  			content: '' !important;
   			position: absolute;
+  			display: block !important;
   			z-index: -1; 
   			top: 0;
   			background-color: inherit;
@@ -86,6 +87,7 @@
   			width: 9600px;
   			right:100%;  
   		} 
+ // IMPORTANT RULES OVERRIDE GLOBAL RESET CLEAR FIX ON MAIN TO SORT IPAD BUG
 }
 
 .inpage-feed__right{
@@ -106,7 +108,7 @@
  			margin-bottom: 1rem;
  		}
  		.row {
- 			border-top: black solid 1px; 
+ 			border-top: #333 solid 1px; 
  			padding-top: 1.5rem; 
  			margin-top:  1.5rem;
  				&:first-child {

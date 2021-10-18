@@ -168,15 +168,12 @@
 
 
 .four-by-four-by-four.container { 
-		margin: 1.5rem  auto;
+		margin: 1rem  auto 2rem auto;
 		padding: 0;
 		h2 {
 		border-top: 0
 		} 
-	 @include media-breakpoint-up(md) {
-	 	margin-top:0;
-	 	
-	 }
+	
 }
 
 
@@ -320,7 +317,6 @@
 			width: 100%;	
 	@include media-breakpoint-up(md) {
    			margin-right: 1.875rem; 
-   			margin-top: 0;   			
    	   		}
 
    	}

@@ -1,5 +1,6 @@
-/* INDIGO RESET -------------------------------
----------------------------------------------- */
+/* -------------------
+INDIGO RESET 
+--------------------- */
 html {
   box-sizing: border-box;
   overflow-x: hidden;
@@ -63,6 +64,9 @@ hr {
 svg {
   overflow: hidden; }
 
+/* --------------------
+HELPER CLASSES
+---------------------*/
 .clearfix:before, .clearfix:after,
 .main-content div:before,
 .main-content div:after,
@@ -96,6 +100,20 @@ svg {
     overflow: visible;
     position: static;
     width: auto; }
+
+.greyout {
+  opacity: 0.5; }
+
+/*-------------------------------
+DEBUGGING AND BACKEND
+--------------------------------*/
+.find-a-phd--noscript {
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid gray;
+  color: red;
+  font-family: arial;
+  font-size: 14px; }
 
 .container,
 .container-fluid,
@@ -3063,21 +3081,33 @@ a.btn-cta__border--inline:hover {
   position: relative;
   width: 100%;
   padding-right: 16px;
-  padding-left: 16px; }
-  @media (min-width: 576px) {
+  padding-left: 16px;
+  flex: 0 0 25%;
+  max-width: 25%; }
+  @media (min-width: 768px) {
     .prog-key-info__icon {
-      flex: 0 0 16.6666666667%;
-      max-width: 16.6666666667%; } }
+      flex: 0 0 41.6666666667%;
+      max-width: 41.6666666667%; } }
+  @media (min-width: 992px) {
+    .prog-key-info__icon {
+      flex: 0 0 33.3333333333%;
+      max-width: 33.3333333333%; } }
 
 .prog-key-info__text {
   position: relative;
   width: 100%;
   padding-right: 16px;
-  padding-left: 16px; }
-  @media (min-width: 576px) {
+  padding-left: 16px;
+  flex: 0 0 75%;
+  max-width: 75%; }
+  @media (min-width: 768px) {
     .prog-key-info__text {
-      flex: 0 0 83.3333333333%;
-      max-width: 83.3333333333%; } }
+      flex: 0 0 58.3333333333%;
+      max-width: 58.3333333333%; } }
+  @media (min-width: 992px) {
+    .prog-key-info__text {
+      flex: 0 0 66.6666666667%;
+      max-width: 66.6666666667%; } }
 
 .node-type-graduate-taught-programme-page .main-content h1 {
   margin: 1.875rem 0 0.7rem 0; }
@@ -3086,42 +3116,63 @@ a.btn-cta__border--inline:hover {
   margin-bottom: 1.875rem;
   border-top: 1px solid #d6d6d6;
   padding-top: 1.5rem; }
-  .prog-key-info .prog-key-info__content {
+  .prog-key-info .prog-key-info__content.container {
+    max-width: 100%; }
+  .prog-key-info .prog-key-info__content .six-by-six__left {
+    background: #ebebeb;
+    padding: 3rem 0; }
+  .prog-key-info .prog-key-info__content .six-by-six__right {
     background: #f5f5f5;
-    padding-bottom: 1.8rem; }
-    .prog-key-info .prog-key-info__content.container {
-      max-width: 100%; }
-    .prog-key-info .prog-key-info__content .btn-cta__icon {
-      margin-left: 3%;
-      width: 55%;
-      padding-left: 13%; }
-  .prog-key-info .prog-key-info__first-row .prog-key-info__icon {
-    padding-top: 1.875rem; }
-  .prog-key-info .prog-key-info__first-row .prog-key-info__text {
-    padding-top: 1.875rem; }
+    padding: 3rem 0; }
+  .prog-key-info .prog-key-info__content .btn-cta__icon {
+    margin-left: 3%;
+    width: 55%;
+    padding-left: 13%; }
   .prog-key-info .prog-key-info__icon {
     text-align: center;
-    padding-top: 3px; }
+    padding-top: 3px;
+    padding-left: 0;
+    padding-right: 0; }
   .prog-key-info .prog-key-info__text {
     padding-left: 1%;
-    padding-right: 5%; }
-    .prog-key-info .prog-key-info__text div, .prog-key-info .prog-key-info__text p {
-      font-size: 0.875rem; }
+    padding-right: 8%;
+    padding-top: 0.55rem; }
+    .prog-key-info .prog-key-info__text div {
+      font-size: 1.125rem;
+      font-weight: bold; }
+    .prog-key-info .prog-key-info__text .prog-key-info__details {
+      font-weight: normal; }
+    .prog-key-info .prog-key-info__text h5 {
+      color: #5c5c5c;
+      font-weight: normal; }
   .prog-key-info .prog-key-info__text,
   .prog-key-info .prog-key-info__icon {
     padding-bottom: 2rem; }
   .prog-key-info .prog-key-info__status-closed {
-    color: #D50032; }
+    margin-top: 0.7rem;
+    color: #D50032;
+    font-size: 0.875rem; }
   .prog-key-info .prog-key-info__status-open {
-    color: #238638; }
+    margin-top: 0.7rem;
+    color: #238638;
+    font-size: 0.875rem; }
   .prog-key-info .international {
     padding-top: 1.5rem; }
-  @media (max-width: 767.98px) {
+  @media (min-width: 576px) {
     .prog-key-info .prog-key-info__icon {
-      display: none; }
+      padding-left: 2rem; } }
+  @media (min-width: 768px) {
     .prog-key-info .prog-key-info__text {
-      padding-left: 5%;
-      padding-right: 5%; } }
+      padding-left: 3%; } }
+  @media (min-width: 768px) and (max-width: 1199.98px) {
+    .prog-key-info .prog-key-info__text div {
+      font-size: 1rem; }
+    .prog-key-info .prog-key-info__icon svg {
+      width: 50px;
+      height: 50px; } }
+
+.prog-overview .feature-list svg {
+  margin-bottom: 1rem; }
 
 .prog-double-list {
   padding: 0 1rem; }
@@ -3131,15 +3182,20 @@ a.btn-cta__border--inline:hover {
   .prog-double-list .prog-double-list__content.container {
     max-width: 100%; }
 
-.tt-course-structure .accordion .accordion__title svg,
-.prog-teaching .accordion .accordion__title svg {
+.prog-modules svg {
   margin-right: 1.25rem;
   vertical-align: top; }
 
-.tt-course-structure .accordion .accordion__title span,
-.prog-teaching .accordion .accordion__title span {
+.prog-modules span {
   line-height: 1.5;
   padding-right: 1.5rem; }
+
+@media (max-width: 767.98px) {
+  .prog-modules svg {
+    float: left; }
+  .prog-modules a {
+    float: right;
+    width: 80%; } }
 
 .eight-by-four__right .card-link {
   margin-top: 1.5rem; }
@@ -3161,23 +3217,8 @@ a.btn-cta__border--inline:hover {
 /*--------------------------
 TEACHER TRAINING
 ----------------------------*/
-.practical-summary {
-  padding-top: 1.875rem; }
-  .practical-summary .practical-summary__content svg.feather-check {
-    float: left; }
-  .practical-summary .practical-summary__content h4 {
-    float: left;
-    padding: 6px 1.25rem; }
-  .practical-summary .practical-summary__content p {
-    clear: both; }
-  .practical-summary .practical-summary__content .forward-link {
-    padding-left: 3.125rem; }
-
-.six-by-six__left .practical-summary__content p {
-  padding: 0 3.125rem; }
-
-.six-by-six__right .practical-summary__content p {
-  padding-left: 3.125rem; }
+.prog-double-list__content .feature-list svg.icon {
+  vertical-align: middle; }
 
 .prog-requirements .tabs--active-grey {
   margin: 2.5rem 0 3rem 0; }
@@ -3419,9 +3460,6 @@ IN PAGE NAV MENU
   .openday .openday-search__left {
     background: #f6BE00;
     padding: 2rem 3.39% .5rem 3.5%; }
-    @media (min-width: 768px) {
-      .openday .openday-search__left {
-        padding-left: 0; } }
   .openday .openday-search__right {
     background: #f6BE00;
     padding: 2rem 3.5% .5rem 4%; }
@@ -3506,6 +3544,17 @@ IN PAGE NAV MENU
         font-size: 0.75rem; } }
   .openday .row.no-gutters.openday-feed-listing {
     width: 100%; }
+
+@media (min-width: 768px) {
+  #events-and-open-days.node-type-hub-page.page-node-2642 .single-full-width-column {
+    padding-right: 0;
+    padding-left: 0; } }
+
+.node-hub-page .tab-container .accordion__title:last-of-type {
+  margin-bottom: 2.5rem; }
+
+.node-hub-page .tab-container .accordion__title.active:last-of-type {
+  margin-bottom: 0; }
 
 .course-finder {
   padding-top: .7rem; }
@@ -3829,13 +3878,10 @@ ol.alpha-list {
 
 /*---------------------- THREE 	EQUAL COLUMNS SUB LAYOUT -------------------------*/
 .four-by-four-by-four.container {
-  margin: 1.5rem  auto;
+  margin: 1rem  auto 2rem auto;
   padding: 0; }
   .four-by-four-by-four.container h2 {
     border-top: 0; }
-  @media (min-width: 768px) {
-    .four-by-four-by-four.container {
-      margin-top: 0; } }
 
 .four-by-four-by-four__left,
 .four-by-four-by-four__middle,
@@ -3943,8 +3989,7 @@ ol.alpha-list {
     width: 100%; }
     @media (min-width: 768px) {
       .contact-panel .contact-panel__card-one .card-wrapper {
-        margin-right: 1.875rem;
-        margin-top: 0; } }
+        margin-right: 1.875rem; } }
   @media (min-width: 768px) {
     .contact-panel .contact-panel__card-one {
       width: 90%; } }
@@ -4033,10 +4078,10 @@ ol.alpha-list {
     padding-left: 8.522%; }
   .node-type-hub-page .main-content {
     margin-top: 2rem; }
-  .node-type-hub-page .five-card-layout {
+  .node-type-hub-page .section-five-item {
     width: 123.3%;
     margin-left: -10.1%; }
-    .node-type-hub-page .five-card-layout .container {
+    .node-type-hub-page .section-five-item .container {
       padding-left: 0; } }
 
 /* --------------------- HEADER ------------------------
@@ -4244,7 +4289,8 @@ HAMBURGER MENU POPUP
   height: 100%;
   width: 100%;
   position: fixed;
-  transition: ease-in; }
+  transition: ease-in;
+  overflow-y: scroll; }
   .in-this-section-menu.hide {
     display: none;
     height: 0%;
@@ -4381,9 +4427,9 @@ VIDEO WITH CAPTION
       max-width: 16.6666666667%; } }
 
 .video__embed--wrapper {
-  margin-bottom: 1.5rem;
+  margin-bottom: 2.5rem;
   background: linear-gradient(90deg, white 0%, white 8%, #d6d6d6 8%, #d6d6d6 100%);
-  margin-top: 3.75rem;
+  margin-top: 2.75rem;
   margin-right: -1.1528%; }
   .video__embed--wrapper.container {
     margin-left: 1rem;
@@ -4538,7 +4584,7 @@ FEATURE LINK
     word-wrap: break-word; }
   .feature-link .feature-link__icon {
     position: absolute;
-    top: 1px;
+    top: 4px;
     right: 0;
     background-color: #F6BE00; }
   .feature-link .feature-link_image {
@@ -4553,27 +4599,28 @@ FEATURE LINK
     .feature-link a:hover {
       text-decoration: underline; }
   @media (min-width: 768px) {
-    .feature-link {
-      margin-bottom: 3.5rem; }
-      .feature-link.clearfix {
-        box-shadow: 3px 10px 10px -6px rgba(51, 51, 51, 0.75);
-        -webkit-box-shadow: 3px 10px 10px -6px rgba(51, 51, 51, 0.75);
-        -moz-box-shadow: 3px 10px 10px -6px rgba(51, 51, 51, 0.75); }
-      .feature-link .feature-link_title {
-        position: relative; }
-        .feature-link .feature-link_title h5 {
-          width: 90%;
-          font-size: 1.5rem;
-          margin-bottom: 0; }
-      .feature-link .feature-link.row {
-        display: block; }
-      .feature-link .feature-link_image {
-        float: left;
-        width: 50%; }
-      .feature-link .feature-link_content {
-        padding: 20px;
-        float: right;
-        width: 50%; } }
+    .feature-link.container {
+      margin-bottom: 3.5rem;
+      margin-top: 1.5rem; }
+    .feature-link.clearfix {
+      box-shadow: 3px 10px 10px -6px rgba(51, 51, 51, 0.75);
+      -webkit-box-shadow: 3px 10px 10px -6px rgba(51, 51, 51, 0.75);
+      -moz-box-shadow: 3px 10px 10px -6px rgba(51, 51, 51, 0.75); }
+    .feature-link .feature-link_title {
+      position: relative; }
+      .feature-link .feature-link_title h5 {
+        width: 90%;
+        font-size: 1.5rem;
+        margin-bottom: 0; }
+    .feature-link .feature-link.row {
+      display: block; }
+    .feature-link .feature-link_image {
+      float: left;
+      width: 50%; }
+    .feature-link .feature-link_content {
+      padding: 20px;
+      float: right;
+      width: 50%; } }
 
 /*---------------------------
  BOXOUTS
@@ -4845,6 +4892,12 @@ three item layout.  The cards need to be flex to align to baseline.
   width: 100%;
   height: 100%; }
 
+/*---------------------------
+FORMS
+--------------------------*/
+.paragraphs-item-gecko-form-embed iframe {
+  width: 100%; }
+
 /*-----------
 ACCORDION
 --------------------*/
@@ -4870,10 +4923,11 @@ ACCORDION
         content: "\02C5";
         position: absolute;
         right: 0;
-        font-size: 1.5rem;
+        font-size: 1.8rem;
         color: #0D68CF;
-        top: -5px;
-        font-weight: normal; }
+        top: -7px;
+        font-weight: normal;
+        padding-right: 1%; }
   .accordion dd.accordion__description {
     margin-left: 0; }
     .accordion dd.accordion__description.active {
@@ -5056,8 +5110,9 @@ HERO
   .inpage-feed__left .forward-link svg {
     stroke: #000; }
   .inpage-feed__left:after {
-    content: '';
+    content: '' !important;
     position: absolute;
+    display: block !important;
     z-index: -1;
     top: 0;
     background-color: inherit;
@@ -5080,7 +5135,7 @@ HERO
     line-height: 0.781;
     margin-bottom: 1rem; }
   .inpage-feed-content .row {
-    border-top: black solid 1px;
+    border-top: #333 solid 1px;
     padding-top: 1.5rem;
     margin-top: 1.5rem; }
     .inpage-feed-content .row:first-child {
