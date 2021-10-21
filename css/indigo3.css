@@ -3125,9 +3125,7 @@ a.btn-cta__border--inline:hover {
     background: #f5f5f5;
     padding: 3rem 0; }
   .prog-key-info .prog-key-info__content .btn-cta__icon {
-    margin-left: 3%;
-    width: 55%;
-    padding-left: 13%; }
+    margin: 0 14.3967%; }
   .prog-key-info .prog-key-info__icon {
     text-align: center;
     padding-top: 3px;
@@ -3136,7 +3134,8 @@ a.btn-cta__border--inline:hover {
   .prog-key-info .prog-key-info__text {
     padding-left: 1%;
     padding-right: 8%;
-    padding-top: 0.55rem; }
+    padding-top: 0.55rem;
+    font-weight: bold; }
     .prog-key-info .prog-key-info__text div {
       font-size: 1.125rem;
       font-weight: bold; }
@@ -3583,6 +3582,14 @@ IN PAGE NAV MENU
     background: #0D68CF;
     color: #fff;
     font-size: 1rem; }
+  .course-search-box #autocomplete li {
+    line-height: normal; }
+    .course-search-box #autocomplete li:before {
+      content: none; }
+    .course-search-box #autocomplete li div {
+      padding-left: 1.5%; }
+    .course-search-box #autocomplete li.selected {
+      background: #0D68CF; }
 
 .tabs__content .course-search-box {
   margin-bottom: 1.8rem; }
@@ -4592,6 +4599,14 @@ FEATURE LINK
   .feature-link .feature-link_content {
     order: 3;
     padding: 20px 12px; }
+    .feature-link .feature-link_content .field-content-summary {
+      font-size: 1rem;
+      line-height: 1.6;
+      margin-bottom: 1.5rem; }
+      @media (min-width: 992px) {
+        .feature-link .feature-link_content .field-content-summary {
+          font-size: 1.125rem;
+          line-height: 1.5; } }
   .feature-link .feature-link_image img {
     margin-bottom: 0; }
   .feature-link a {
@@ -4683,9 +4698,7 @@ ALERTS
   .alert .alert__content {
     float: right;
     display: block;
-    width: 87%;
-    word-break: break-all;
-    word-wrap: break-word; }
+    width: 87%; }
   @media (min-width: 768px) {
     .alert .alert__icon {
       width: 5%; }
@@ -4934,8 +4947,6 @@ ACCORDION
       border-bottom: solid 1px #d6d6d6;
       padding-bottom: 30px;
       margin-left: 0; }
-    .accordion dd.accordion__description h2 {
-      border-top: none; }
 
 /*------------- 
 TABS 
@@ -4956,8 +4967,12 @@ TABS
       display: block; }
     .tabs__content .tab-content .container.four-by-four-by-four {
       margin-bottom: 0; }
-    .tabs__content .tab-content h2 {
-      border-top: none; }
+
+.main-content .tab-content.active > div:first-of-type h2,
+.main-content.tab-content.active > h2:first-of-type {
+  border: none;
+  padding-top: 0;
+  margin-top: 0; }
 
 .tabs--all-transparent .tabs__navigation {
   border-bottom: 3px solid #ebebeb; }

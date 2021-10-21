@@ -4,6 +4,7 @@
     
 
 
+
   .course-search-box{
 		width: 100%;
 		    form input[type="search"]  {
@@ -32,8 +33,24 @@
         font-size: 1rem;
         }
 
-
+//AUTO COMPLETE OVERIDES 
+      #autocomplete  {
+        li {
+          line-height: normal;
+        &:before {
+          content: none; 
+          }
+        div {
+          padding-left: 1.5%;
+          }
+        &.selected {
+          background: $utilityblue;
+          }
+        }
+      }  
     }
+
+
 
 // SEARCH BOX WIDGET FOR DEGREE HUB PAGE
 .tabs__content .course-search-box  {
@@ -79,6 +96,8 @@
 }
 
 
+
+// RESULTS LIST CONTENT
 
 .course-finder-search-results,
 .faculty-list-results,
