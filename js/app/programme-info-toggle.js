@@ -32,7 +32,8 @@ to cover the UG programme content type when that becomes an indigo 3 type.
                 headings.each(function() {
                     if ($(this).text() == "Study mode") {
                         var el = $(this).siblings("div").first();
-                        var mode = $(el).text().toLowerCase().replace(" ", "-");
+                        var mode = $(el).text().toLowerCase().replace(" ", "");
+                        console.log(mode);
                         $(".study-mode").css("display", "none");
                         $("." + mode).fadeIn();
                     }
