@@ -149,6 +149,7 @@
 
 
 // SETS FULL WIDTH BACKGROUND ON BLOCK
+
 @mixin colour-breakout {
 	&:after, 
 	&:before {content: '';
