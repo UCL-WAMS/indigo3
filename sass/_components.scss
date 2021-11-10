@@ -262,7 +262,10 @@ FEATURE LINK
 	}
 	.feature-link_content {
 		order: 3; 
-		padding: 20px 12px; 
+		padding: 20px 12px;
+		.field-content-summary {
+			@include prose-zero;
+			} 
 	}
 	.feature-link_image img {
 		margin-bottom: 0;
@@ -392,8 +395,6 @@ ALERTS
 		float: right; 
 		display: block; 
 		width: 87%; 
-		word-break: break-all; 
-		word-wrap: break-word; 
 		} 
 @include media-breakpoint-up(md) { 
 		.alert__icon {
@@ -698,3 +699,18 @@ FORMS
 .paragraphs-item-gecko-form-embed iframe {
 width: 100%;
 }
+
+
+/*-------------------------
+VISUAL STYLING FOR COMPONENTS - COLOURS ETC
+-------------------------- */
+
+.section-background  { 
+	position:relative;
+	padding: 3.75rem 1.875rem 0;
+	margin-bottom: 3rem;
+	@include colour-breakout;
+	}
+.section-background--lightgray {
+	background: $backgroundlightgray; 	
+	}

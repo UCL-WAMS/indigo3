@@ -148,3 +148,21 @@
 // 12px
 
 
+// SETS FULL WIDTH BACKGROUND ON BLOCK
+
+@mixin colour-breakout {
+	&:after, 
+	&:before {content: '';
+  		position: absolute;
+  		z-index: -1; 
+  		top: 0;
+  		bottom: 0;
+  		background-color: inherit;
+  		height: 100%;
+  		width: 9600px;
+  		right: 100%;
+	}
+	&:after {		
+		left: 100%;
+		}
+	}
