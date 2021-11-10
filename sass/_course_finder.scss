@@ -3,8 +3,6 @@
   }
     
 
-
-
   .course-search-box{
 		width: 100%;
 		    form input[type="search"]  {
@@ -31,6 +29,7 @@
      		background: $utilityblue;
      		color: #fff;
         font-size: 1rem;
+        cursor: pointer;
         }
 
 //AUTO COMPLETE OVERIDES 

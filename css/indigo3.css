@@ -3058,7 +3058,8 @@ a.btn-cta__border--inline:hover {
   display: inline-block; }
 
 .uk-inter-switch {
-  padding-bottom: 1.5em; }
+  padding-bottom: 1.5em;
+  cursor: pointer; }
   .uk-inter-switch span {
     display: inline-block;
     border: 1px solid #0D68CF;
@@ -3109,8 +3110,15 @@ a.btn-cta__border--inline:hover {
       flex: 0 0 66.6666666667%;
       max-width: 66.6666666667%; } }
 
-.node-type-graduate-taught-programme-page .main-content h1 {
+.node-type-graduate-taught-programme-page .main-content h1,
+.node-graduate-research-programme-page .main-content h1,
+.node-type-graduate-ite-programme-page .main-content h1 {
   margin: 1.875rem 0 0.7rem 0; }
+
+.node-type-graduate-taught-programme-page p:first-of-type .feather-map-pin,
+.node-graduate-research-programme-page p:first-of-type .feather-map-pin,
+.node-type-graduate-ite-programme-page p:first-of-type .feather-map-pin {
+  vertical-align: text-top; }
 
 .prog-key-info {
   margin-bottom: 1.875rem;
@@ -3581,7 +3589,8 @@ IN PAGE NAV MENU
     height: 3.8rem;
     background: #0D68CF;
     color: #fff;
-    font-size: 1rem; }
+    font-size: 1rem;
+    cursor: pointer; }
   .course-search-box #autocomplete li {
     line-height: normal; }
     .course-search-box #autocomplete li:before {

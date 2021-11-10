@@ -4,6 +4,7 @@
 
 .uk-inter-switch {
 	padding-bottom: 1.5em;
+	cursor: pointer;
 	span {
 	display: inline-block;
 	border: 1px solid $utilityblue;
@@ -12,12 +13,6 @@
     line-height: 1.25rem;
     margin-right: -5px;
     color: $utilityblue;
- //    &:nth-of-type(1) {
-	// 	border-radius: 12px 0 0 12px ;
-	// 	}
-	// &:nth-of-type(2)  {
-	// 	border-radius:0  12px 12px  0 ;  
-	// }
 	&:hover {
     	background-color: $buttonrollover;
     	color: #ffffff;
@@ -66,9 +61,17 @@
 }
 
 
-.node-type-graduate-taught-programme-page .main-content h1 {
-	margin: 1.875rem 0 0.7rem 0;
+.node-type-graduate-taught-programme-page,
+.node-graduate-research-programme-page,
+.node-type-graduate-ite-programme-page  {
+	.main-content h1 {
+		margin: 1.875rem 0 0.7rem 0;
 	}
+	p:first-of-type  .feather-map-pin {
+		vertical-align: text-top;
+	}
+}
+
 
 // KEY INFO STYLING
 
