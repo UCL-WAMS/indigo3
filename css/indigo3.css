@@ -4142,7 +4142,8 @@ ol.alpha-list {
       border: none;
       height: 32px;
       background: #d6d6d6;
-      color: #333; }
+      color: #333;
+      cursor: pointer; }
     @media (min-width: 576px) {
       .masthead .global-search {
         width: 30%;
@@ -4171,11 +4172,14 @@ ol.alpha-list {
       padding: 5px 0 5px 10px;
       margin: 0;
       font-size: .9rem;
-      width: 5.32670%; }
+      width: 5.32670%;
+      cursor: pointer; }
       .header .header__menu p .header-menu__dt-text {
         display: none; }
       .header .header__menu p .header-menu__sm-text {
         text-transform: capitalize; }
+    .header .header__menu .feather-menu.icon {
+      cursor: pointer; }
   .header #logo {
     background: #00818F;
     min-height: 20px;
@@ -4352,7 +4356,8 @@ HAMBURGER MENU POPUP
     font-size: 1rem;
     box-shadow: 0px 0px 0px transparent;
     border: 0px solid transparent;
-    text-shadow: 0px 0px 0px transparent; }
+    text-shadow: 0px 0px 0px transparent;
+    cursor: pointer; }
     @media (min-width: 576px) {
       .in-this-section-menu .close-in-this-section-menu {
         right: 15%; } }
@@ -4372,7 +4377,8 @@ HAMBURGER MENU POPUP
   .in-this-section-menu .menu__accordion__title {
     font-weight: bold;
     margin-left: 1.25rem;
-    margin-bottom: 1rem; }
+    margin-bottom: 1rem;
+    cursor: pointer; }
   .in-this-section-menu .menu__accordion__title:before {
     content: "\02C5";
     position: absolute;
@@ -4936,7 +4942,8 @@ VISUAL STYLING FOR COMPONENTS - COLOURS ETC
     background-color: inherit;
     height: 100%;
     width: 9600px;
-    right: 100%; }
+    right: 100%;
+    visibility: visible; }
   .section-background:after {
     left: 100%; }
 

@@ -73,6 +73,7 @@ HAMBURGER MENU POPUP
 		box-shadow: 0px 0px 0px transparent;
 		border: 0px solid transparent;
 		text-shadow: 0px 0px 0px transparent;
+		cursor: pointer;
 		@include media-breakpoint-up(sm) {
 		right: 15%;
 		}
@@ -98,6 +99,7 @@ ul.menu__accordion  {
 	font-weight: bold;
 	margin-left: 1.25rem;
 	margin-bottom: 1rem;
+	cursor: pointer;
 }
 
 .menu__accordion__title {
