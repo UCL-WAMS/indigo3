@@ -1,0 +1,48 @@
+/*----------------------------------------------------------------------------------------------
+THESE STYLES WERE USED DURING THE DEVELOPMENT OF INDIGO3 
+IN THE PHASE ONE PILOT GRAD PROSPECTUS PAGES. 
+THEY ARE ALL NOW OBSOLETE IN INDIGO3 AND SHOULD NOT BE USED.
+HEROS USE DIFFERENT HTML
+WHERE POSSIBLE THEY NEED TO BE REPLACED IN THE PROSPECTUS BY 
+GENERIC STYLES IN THE NEXT ITERATION OF THIS SITE
+AND THIS FOLDER DELETED.  THESE ARE NOT CUSTOM STYLES!
+--------------------------------------------------------------------------------------------*/
+
+.site-prospective-students-graduate {
+	.header {
+		border-bottom: $brightblue 1em solid;
+		#logo {  
+			background: $brightblue;
+		}
+	}
+	.hero-content {
+		background-color: $brightblue;
+		color: #fff;
+		padding: 2.5rem 1rem;
+		h1 {
+			font-size: 2.25rem;
+			line-height: 1.2
+		}
+		p {
+			font-size: 1.5rem;
+			line-height: 1.9rem;
+		}
+	@include media-breakpoint-up(md) {
+	 	padding: 4.125rem 8.522% 4.125rem 8.522%;	
+	 	h1 {
+	 		font-size: 3.8rem;
+			line-height:  1;
+			}
+		p {
+			font-size: 1.875rem;
+			line-height: 1.25;
+			}	
+	}
+	
+	}
+
+}
+
+
+
+
