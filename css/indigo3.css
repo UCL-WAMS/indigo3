@@ -2667,6 +2667,40 @@ DEBUGGING AND BACKEND
   .mx-xl-auto {
     margin-left: auto !important; } }
 
+/*----------------------------------------------------------------------------------------------
+THESE STYLES WERE USED DURING THE DEVELOPMENT OF INDIGO3 
+IN THE PHASE ONE PILOT GRAD PROSPECTUS PAGES. 
+THEY ARE ALL NOW OBSOLETE IN INDIGO3 AND SHOULD NOT BE USED.
+HEROS USE DIFFERENT HTML
+WHERE POSSIBLE THEY NEED TO BE REPLACED IN THE PROSPECTUS BY 
+GENERIC STYLES IN THE NEXT ITERATION OF THIS SITE
+AND THIS FOLDER DELETED.  THESE ARE NOT CUSTOM STYLES!
+--------------------------------------------------------------------------------------------*/
+.site-prospective-students-graduate .header {
+  border-bottom: #00818F 1em solid; }
+  .site-prospective-students-graduate .header #logo {
+    background: #00818F; }
+
+.site-prospective-students-graduate .hero-content {
+  background-color: #00818F;
+  color: #fff;
+  padding: 2.5rem 1rem; }
+  .site-prospective-students-graduate .hero-content h1 {
+    font-size: 2.25rem;
+    line-height: 1.2; }
+  .site-prospective-students-graduate .hero-content p {
+    font-size: 1.5rem;
+    line-height: 1.9rem; }
+  @media (min-width: 768px) {
+    .site-prospective-students-graduate .hero-content {
+      padding: 4.125rem 8.522% 4.125rem 8.522%; }
+      .site-prospective-students-graduate .hero-content h1 {
+        font-size: 3.8rem;
+        line-height: 1; }
+      .site-prospective-students-graduate .hero-content p {
+        font-size: 1.875rem;
+        line-height: 1.25; } }
+
 .header__menu {
   position: relative;
   width: 100%;
@@ -4156,7 +4190,7 @@ ol.alpha-list {
 
 .header {
   background: #333;
-  border-bottom: #00818F 1em solid; }
+  border-bottom: #fff 1em solid; }
   .header img {
     margin-bottom: 0; }
   .header .header__menu {
@@ -4181,7 +4215,7 @@ ol.alpha-list {
     .header .header__menu .feather-menu.icon {
       cursor: pointer; }
   .header #logo {
-    background: #00818F;
+    background: #fff;
     min-height: 20px;
     min-width: 100px;
     margin-top: 10px; }
@@ -5057,20 +5091,13 @@ TABS
 /*-----------
 HERO
 -----------*/
-.hero, .column-top-hero {
-  position: relative; }
-
 .hero-content {
-  background-color: #00818F;
-  color: white;
+  background: transparent;
+  padding: 0;
+  color: inherit;
+  margin: 0;
   font-weight: bold;
-  padding: 2.5rem 1rem; }
-  .hero-content h1 {
-    font-size: 2.25rem;
-    line-height: 1.2; }
-  .hero-content p {
-    font-size: 1.5rem;
-    line-height: 1.9rem; }
+  position: relative; }
   .hero-content:after, .hero-content:before {
     content: '';
     position: absolute;
@@ -5080,32 +5107,160 @@ HERO
     background-color: inherit;
     height: 100%;
     width: 9600px;
-    right: 100%; }
+    right: 100%;
+    visibility: visible; }
   .hero-content:after {
     left: 100%; }
-  @media (min-width: 768px) {
-    .hero-content {
-      padding: 4.125rem 8.522% 4.125rem 8.522%; }
-      .hero-content h1 {
-        font-size: 3.8rem;
-        line-height: 1; }
-      .hero-content p {
-        font-size: 1.875rem;
-        line-height: 1.25; } }
 
-.column-top-hero__left {
-  background: transparent;
-  border: 0;
-  height: 1.8rem; }
-  .column-top-hero__left:after {
-    content: '';
-    position: absolute;
-    z-index: -1;
-    top: 0;
-    background-color: inherit;
-    height: 100%;
-    width: 9600px;
-    right: 100%; }
+.hero-text h1 {
+  font-size: 2.1875rem; }
+  @media (min-width: 576px) {
+    .hero-text h1 {
+      font-size: 1.5625rem;
+      margin-bottom: 1rem; } }
+  @media (min-width: 768px) {
+    .hero-text h1 {
+      font-size: 2.1875rem; } }
+  @media (min-width: 992px) {
+    .hero-text h1 {
+      font-size: 2.8125rem; } }
+
+.hero-text p {
+  font-size: 1.5rem;
+  line-height: 120%;
+  font-weight: bold; }
+  @media (min-width: 576px) {
+    .hero-text p {
+      font-size: 0.875rem;
+      line-height: 125%;
+      font-weight: normal; } }
+  @media (min-width: 768px) {
+    .hero-text p {
+      font-size: 1rem;
+      line-height: 130%; } }
+  @media (min-width: 992px) {
+    .hero-text p {
+      font-size: 1.25rem;
+      line-height: 130%; } }
+
+/* -------------------------
+TEXT HERO
+-------------------------*/
+.hero-content.text-only .overflow-img {
+  display: none; }
+
+.hero-content.text-only .hero-text {
+  position: relative;
+  width: 100%;
+  padding-right: 16px;
+  padding-left: 16px;
+  padding: 0; }
+  @media (min-width: 576px) {
+    .hero-content.text-only .hero-text {
+      flex: 0 0 66.6666666667%;
+      max-width: 66.6666666667%; } }
+
+.hero-content.text-only .hero-pic {
+  position: relative;
+  width: 100%;
+  padding-right: 16px;
+  padding-left: 16px;
+  padding: 0; }
+  @media (min-width: 576px) {
+    .hero-content.text-only .hero-pic {
+      flex: 0 0 33.3333333333%;
+      max-width: 33.3333333333%; } }
+
+.hero-content.text-only .hero-text {
+  padding: 1.25rem 1rem 1.875rem; }
+  @media (min-width: 768px) {
+    .hero-content.text-only .hero-text {
+      padding: 1.5625rem 6.33% 1.25rem 0; } }
+  @media (min-width: 992px) {
+    .hero-content.text-only .hero-text {
+      padding: 2.5rem 8.33% 1.875rem 0; } }
+
+/* -------------------------
+ IMAGE HERO
+-------------------------*/
+.hero-content.image-block .hero-text {
+  position: relative;
+  width: 100%;
+  padding-right: 16px;
+  padding-left: 16px;
+  padding: 0; }
+  @media (min-width: 576px) {
+    .hero-content.image-block .hero-text {
+      flex: 0 0 58.3333333333%;
+      max-width: 58.3333333333%; } }
+
+.hero-content.image-block .hero-pic {
+  position: relative;
+  width: 100%;
+  padding-right: 16px;
+  padding-left: 16px;
+  padding: 0; }
+  @media (min-width: 576px) {
+    .hero-content.image-block .hero-pic {
+      flex: 0 0 41.6666666667%;
+      max-width: 41.6666666667%; } }
+
+.hero-content.image-block .hero-text {
+  padding: 1.25rem 1rem; }
+  @media (min-width: 768px) {
+    .hero-content.image-block .hero-text {
+      padding: 1.5625rem 6.33% 1.25rem 0; } }
+  @media (min-width: 992px) {
+    .hero-content.image-block .hero-text {
+      padding: 2.5rem 8.33% 1.875rem 0; } }
+
+.hero-content.image-block .hero-pic {
+  padding: 0;
+  overflow: visible; }
+  .hero-content.image-block .hero-pic img {
+    margin-bottom: 0;
+    display: block;
+    width: auto;
+    max-width: 100%;
+    max-height: none;
+    height: auto; }
+    @media (min-width: 1200px) {
+      .hero-content.image-block .hero-pic img {
+        max-width: 130%; } }
+    @media (min-width: 768px) {
+      .hero-content.image-block .hero-pic img {
+        max-width: 115%; } }
+  @media (max-width: 575.98px) {
+    .hero-content.image-block .hero-pic {
+      display: none; } }
+
+.hero--green-pink .hero-content {
+  background-color: #00534c;
+  color: #f9b5c4; }
+
+.hero--violet-turquoise .hero-content {
+  background-color: #440099;
+  color: #8ce2d0; }
+
+.hero--purple-peach .hero-content {
+  background-color: #702082;
+  color: #F3CFB3; }
+
+.hero--turquoise-violet .hero-content {
+  background-color: #8ce2d0;
+  color: #440099; }
+
+.hero--orange-violet .hero-content {
+  background-color: #FF8200;
+  color: #440099; }
+
+.hero--yellow-violet .hero-content {
+  background-color: #FCE300;
+  color: #440099; }
+
+.hero--blue-peach .hero-content {
+  background-color: #1A2BF2;
+  color: #F3CFB3; }
 
 /* ------------------------ INPAGE FEED -------------------- */
 .inpage-feed__left {
