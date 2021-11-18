@@ -255,9 +255,18 @@
         .facet-scroll{
           overflow-y: scroll;
           }
+          .floating-filter-search {
+          position: fixed;
+          top: 0;
+          width: 100%;
+          background: #ffffff;
+          padding-right: 1rem;
+          z-index: 1;
+          margin-left: -1rem;
+          padding-left: 1rem;
+          } 
 
     .site-content .main-content  {
-
       .search-filter { 
         border-bottom: #0D68CF 1px solid; 
         padding-bottom: 1rem;
@@ -268,16 +277,7 @@
           padding: 1rem 0 ;
           margin: 0 ;
           }    
-        .floating-filter-search {
-          position: fixed;
-          top: 0;
-          width: 100%;
-          background: #ffffff;
-          padding-right: 1rem;
-          z-index: 1;
-          margin-left: -1rem;
-          padding-left: 1rem;
-          }   
+          
         .facet-manage__top {
           margin: 0;
           }

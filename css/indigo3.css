@@ -2681,23 +2681,36 @@ AND THIS FOLDER DELETED.  THESE ARE NOT CUSTOM STYLES!
   .site-prospective-students-graduate .header #logo {
     background: #00818F; }
 
-.site-prospective-students-graduate .hero-content {
+.site-prospective-students-graduate .hero-content.text-only {
   background-color: #00818F;
   color: #fff;
   padding: 2.5rem 1rem; }
-  .site-prospective-students-graduate .hero-content h1 {
+  .site-prospective-students-graduate .hero-content.text-only .hero-text {
+    position: relative;
+    width: 100%;
+    padding-right: 16px;
+    padding-left: 16px;
+    padding: 0; }
+    @media (min-width: 576px) {
+      .site-prospective-students-graduate .hero-content.text-only .hero-text {
+        flex: 0 0 100%;
+        max-width: 100%; } }
+  .site-prospective-students-graduate .hero-content.text-only h1 {
     font-size: 2.25rem;
     line-height: 1.2; }
-  .site-prospective-students-graduate .hero-content p {
+  .site-prospective-students-graduate .hero-content.text-only p {
+    font-weight: bold;
     font-size: 1.5rem;
     line-height: 1.9rem; }
+  .site-prospective-students-graduate .hero-content.text-only .hero-pic {
+    display: none; }
   @media (min-width: 768px) {
-    .site-prospective-students-graduate .hero-content {
+    .site-prospective-students-graduate .hero-content.text-only {
       padding: 4.125rem 8.522% 4.125rem 8.522%; }
-      .site-prospective-students-graduate .hero-content h1 {
+      .site-prospective-students-graduate .hero-content.text-only h1 {
         font-size: 3.8rem;
         line-height: 1; }
-      .site-prospective-students-graduate .hero-content p {
+      .site-prospective-students-graduate .hero-content.text-only p {
         font-size: 1.875rem;
         line-height: 1.25; } }
 
@@ -3814,6 +3827,15 @@ ol.alpha-list {
     overflow-y: hidden; }
   .facet-scroll {
     overflow-y: scroll; }
+  .floating-filter-search {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #ffffff;
+    padding-right: 1rem;
+    z-index: 1;
+    margin-left: -1rem;
+    padding-left: 1rem; }
   .site-content .main-content .search-filter {
     border-bottom: #0D68CF 1px solid;
     padding-bottom: 1rem;
@@ -3823,15 +3845,6 @@ ol.alpha-list {
       margin-top: 0;
       padding: 1rem 0;
       margin: 0; }
-    .site-content .main-content .search-filter .floating-filter-search {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      background: #ffffff;
-      padding-right: 1rem;
-      z-index: 1;
-      margin-left: -1rem;
-      padding-left: 1rem; }
     .site-content .main-content .search-filter .facet-manage__top {
       margin: 0; }
     .site-content .main-content .search-filter .floating-filter-search .facet-filters {
