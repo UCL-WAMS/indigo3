@@ -4894,15 +4894,15 @@ FIVE CARD LAYOUT
   /*section-five-item targets the 'Why choose UCL' h1*/
   section.section-five-item h1.field-paragraph-heading   {
     margin-left: 16px;
-    margin-right: 16px;
-    color: red;
-    background-color: green;}
+    margin-right: 16px;}
   .five-card-layout .five-card__left-bottom{
     border-top: none;}
- .five-card-layout .six-by-six__left, .five-card-layout six-by-six__right{
+ .five-card-layout .six-by-six__left, .five-card-layout .six-by-six__right{
     flex: none;
     max-width: 100%;
     }
+ .five-card__right .card {
+   margin-bottom: 2.2rem; }
 
 @media (max-width: 576px) {
   .five-card .card__icon {
@@ -5578,4 +5578,4 @@ td, td img {
         .blockquote blockquote .blockquote-detail__text a {
           font-size: 1rem; } }
     .blockquote blockquote .blockquote-detail__text p.blockquote-detail__name {
-      font-weight: bold; }
+      font-weight: bold; }}
