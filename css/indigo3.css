@@ -4759,14 +4759,14 @@ FIVE CARD LAYOUT
   .five-card-layout .card__icon {
     display: none; }
   .five-card-layout .five-card__right {
-    order: 2; }
+    order: 3; }
   .five-card-layout .five-card__left-top {
     order: 1;
     padding: 0 1rem 1.875rem 1rem; }
     .five-card-layout .five-card__left-top div.field-content-summary {
       font-size: 1.125rem; }
   .five-card-layout .five-card__left-bottom {
-    order: 3;
+    order: 2;
     border-top: solid 1px #d6d6d6;
     padding-top: 2.1875rem;
     width: 100%; }
@@ -4785,7 +4785,25 @@ FIVE CARD LAYOUT
     flex: 0 0 50%;
     max-width: 50%; }
 
-@media (min-width: 576px) {
+@media (max-width: 768px) and (min-width: 577px ){
+  .five-card-layout {
+    margin-left: 16px;
+    margin-right: 16px;
+    padding: 0 1rem 1.875rem 1rem; }
+  /*section-five-item targets the 'Why choose UCL' h1*/
+  section.section-five-item h1.field-paragraph-heading   {
+    margin-left: 16px;
+    margin-right: 16px;
+    color: red;
+    background-color: green;}
+  .five-card-layout .five-card__left-bottom{
+    border-top: none;}
+ .five-card-layout .six-by-six__left, .five-card-layout six-by-six__right{
+    flex: none;
+    max-width: 100%;
+    }
+
+@media (max-width: 576px) {
   .five-card .card__icon {
     display: none; }
   .five-card .float.row {
