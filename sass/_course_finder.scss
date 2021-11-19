@@ -50,7 +50,6 @@
     }
 
 
-
 // SEARCH BOX WIDGET FOR DEGREE HUB PAGE
 .tabs__content .course-search-box  {
   margin-bottom: 1.8rem;
@@ -84,14 +83,20 @@
   padding-top: 1rem;
   h2 {
     float:left;
-    margin-bottom: .5rem;
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+    width: 70%;
   }
   .search-filter__svg-dt {
     float: right;
     background: $utilityblue;
-    border-radius: 50%;
-    padding: .6em;
+    border-radius: 100%;
+    padding: .9rem 0.7rem 0.5rem 0.7rem ;
+    width: auto;
     }
+  #facets-slider-icon {
+    width: 25px; height:25px;
+  }
 }
 
 
@@ -239,3 +244,58 @@
   }
 
 }
+
+// MOBILE FACETS
+
+   @include media-breakpoint-down (md)  {
+        
+        .facet-no-scroll {
+          overflow-y: hidden;
+          }
+        .facet-scroll{
+          overflow-y: scroll;
+          }
+          .floating-filter-search {
+          position: fixed;
+          top: 0;
+          width: 100%;
+          background: #ffffff;
+          padding-right: 1rem;
+          z-index: 1;
+          margin-left: -1rem;
+          padding-left: 1rem;
+          } 
+
+    .site-content .main-content  {
+      .search-filter { 
+        border-bottom: #0D68CF 1px solid; 
+        padding-bottom: 1rem;
+        margin-bottom: 1.5rem;   
+        .search-filter__heading h2 {
+          border-top: none;
+          margin-top: 0 ;
+          padding: 1rem 0 ;
+          margin: 0 ;
+          }    
+          
+        .facet-manage__top {
+          margin: 0;
+          }
+        .floating-filter-search .facet-filters  {
+          height: 100vh;
+          }
+     
+        .floating-filter-search #ucl-programme-search-facets-form {
+          height: 100vh;
+          }
+        .search-filter--close {
+          background: unset;
+          border: 3px solid $linkblue;
+        }
+
+      } 
+  }
+
+}
+
+

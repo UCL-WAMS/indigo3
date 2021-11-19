@@ -149,6 +149,9 @@
 
 
 // SETS FULL WIDTH BACKGROUND ON BLOCK
+// PARENT NEEDS TO BE RELATIVE
+// REMOVE LEFT OR RIGHT AS REQUIRED
+
 
 @mixin colour-breakout {
 	&:after, 
@@ -161,6 +164,7 @@
   		height: 100%;
   		width: 9600px;
   		right: 100%;
+  		visibility: visible;
 	}
 	&:after {		
 		left: 100%;
