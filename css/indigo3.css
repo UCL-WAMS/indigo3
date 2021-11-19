@@ -3847,11 +3847,20 @@ ol.alpha-list {
       margin: 0; }
     .site-content .main-content .search-filter .facet-manage__top {
       margin: 0; }
-    .site-content .main-content .search-filter .floating-filter-search .facet-filters {
+  .floating-filter-search {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #ffffff;
+    padding-right: 1rem;
+    z-index: 1;
+    margin-left: -1rem;
+    padding-left: 1rem; }
+    .floating-filter-search .facet-filters {
       height: 100vh; }
-    .site-content .main-content .search-filter .floating-filter-search #ucl-programme-search-facets-form {
+    .floating-filter-search #ucl-programme-search-facets-form {
       height: 100vh; }
-    .site-content .main-content .search-filter .search-filter--close {
+    .floating-filter-search .search-filter--close {
       background: unset;
       border: 3px solid #0D68CF; } }
 

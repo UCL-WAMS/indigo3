@@ -20,11 +20,23 @@ to cover the UG programme content type when that becomes an indigo 3 type.
             if ($(".study-mode.fulltime.fees").is("div")) {
                 $(".parttime, .flexible").css("display", "none");
             }
-            // Load correct state when the page loads.
+            // Load correct state when the page loads via the mode selector.
             if ($("#mode-selector").is("select")) {
                 var init_klass = "." + $("#mode-selector").val();
                 $(".study-mode").css("display", "none");
                 $(init_klass).fadeIn();
+            }
+            else {
+                // No mode selector, so select based on the content of the page.
+                var headings = $(".prog-key-info__text > h5");
+                headings.each(function() {
+                    if ($(this).text() == "Study mode") {
+                        var el = $(this).siblings("div").first();
+                        var mode = $(el).text().toLowerCase().replace(" ", "").replace("-", "");
+                        $(".study-mode").css("display", "none");
+                        $("." + mode).fadeIn();
+                    }
+                });
             }
             // Change state when new modes are selected.
             $("#mode-selector").on("change", function() {
