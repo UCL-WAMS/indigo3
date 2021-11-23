@@ -73,22 +73,29 @@ $(document).ready(function() {
   }
 
   function printVideoEvent(event, n) {
+    var eventtitle = (event['video_url'] ? '<a target="_top" href="' + event['video_url'] + '" class="events-feed__title-link">' +  event['name'] + '</a>' :  event['name']);
     var html = '<div class="row no-gutters">' +
         '<div class="inpage-feed-content__text">' +
 
         '<p class="events-feed__type">' +
-        event['location'] +
-        ' - ON DEMAND' +
+          event['location'] +
+          ' - ON DEMAND' +
         '</p>' +
 
         '<h4 class="events-feed__title">' +
-        event['name'] +
-        '</h4>';
+            eventtitle +
+        '</h4>' +
+
+        '<p>' +
+          event['description'] +
+        '</p>';
 
     if (event['video_url']) {
       html += '<div class="forward-link">' +
-          '<svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24" fill="none" stroke="#0D68CF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right forward-link__svg small-svg-link "><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>' +
-          ' <a href="' + event['video_url'] + '" class="events-feed__title-link">Watch on demand event</a></div>';
+          '<a target="_top" href="' + event['video_url'] + '" class="events-feed__title-link">' +
+            '<svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24" fill="none" stroke="#0D68CF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right forward-link__svg small-svg-link "><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>' +
+          '</a>' +
+          ' <a target="_top" href="' + event['video_url'] + '" class="events-feed__title-link">Watch on demand event</a></div>';
     }
     html += '</div>' +
         '</div>';
@@ -102,31 +109,40 @@ $(document).ready(function() {
       }
       return time;
     }
+    var eventtitle = (event['link'] ? '<a target="_top" href="' + event['link'] + '" class="events-feed__title-link">' +  event['name'] + '</a>' :  event['name']);
     var html = '<div class="row no-gutters">' +
         '<div class="inpage-feed-content__text">' +
         '<h4>' +
-        '<time dateTime="' + event['final_date'] + '">' + event['final_date'] + '</time>' +
+          '<time dateTime="' + event['final_date'] + '">' + event['final_date'] + '</time>' +
         '</h4>' +
 
         '<p class="events-feed__type">' +
-        event['location'] +
+          event['location'] +
         '</p>' +
 
         '<h4 class="events-feed__title">' +
-        event['name'] +
-        '</h4>';
+            eventtitle +
+        '</h4>' +
+        
+        '<p class="events-feed__time">';
+        if (event['time_start']) {
+          html += '<time dateTime="' + formatTime(event["time_start"]) + '">' + formatTime(event["time_start"]) + '</time>';
+        }
+        if (event["time_end"]) {
+          html += ' - ' + '<time dateTime="' + formatTime(event["time_end"]) + '">' + formatTime(event["time_end"]) + '</time>';
+        }
+        html += '</p>' +
+    
+        '<p>' +
+          event['description'] +
+        '</p>';
 
-    html += '<p class="events-feed__time">';
-    if (event['time_start']) {
-      html += '<time dateTime="' + formatTime(event["time_start"]) + '">' + formatTime(event["time_start"]) + '</time>';
-    }
-    if (event["time_end"]) {
-      html += ' - ' + '<time dateTime="' + formatTime(event["time_end"]) + '">' + formatTime(event["time_end"]) + '</time>';
-    }
     if (event['link']) {
       html += '<div class="forward-link">' +
-          '<svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24" fill="none" stroke="#0D68CF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right forward-link__svg small-svg-link "><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>' +
-          ' <a href="' + event['link'] + '" class="events-feed__title-link">Find out more and book your place</a></div>';
+          '<a target="_top" href="' + event['link'] + '" class="events-feed__title-link">' +
+            '<svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24" fill="none" stroke="#0D68CF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right forward-link__svg small-svg-link "><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>' +
+          '</a>' +
+          ' <a target="_top" href="' + event['link'] + '" class="events-feed__title-link">Find out more and book your place</a></div>';
     }
     html += '</div>' +
         '</div>';
