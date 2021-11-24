@@ -466,6 +466,9 @@ FIVE CARD LAYOUT
 
 	.five-card__right  {
 		order: 2 ;
+		.card {
+			margin-bottom: 2rem;
+		}
 	}
 	.five-card__left-top {
 		order: 1; 
@@ -476,8 +479,8 @@ FIVE CARD LAYOUT
 	}
 	.five-card__left-bottom {
 		order: 3;
-		border-top: solid 1px #d6d6d6;
-		padding-top: 2.1875rem;
+		//border-top: solid 1px #d6d6d6;
+		//padding-top: 2.1875rem;
 		width: 100%;
 		h2 {
 			border:none;
@@ -492,19 +495,31 @@ FIVE CARD LAYOUT
 	// PREVENTS COLUMNS COLLAPSING IN MOBILE VIEW
 	.six-by-six__left, 
 	.six-by-six__right {
-  		position: relative;
-  		width: 100%;
+  		//position: relative;
+  		//width: 100%;
   		padding-right: 1rem;
   		padding-left: 1rem;
-  		flex: 0 0 50%;
-  		max-width: 50%; 		
+  		//flex: 0 0 50%;
+  		max-width: 100%;
 	}
+	@include media-breakpoint-up(md) {
+		.six-by-six__left,
+		.six-by-six__right {
+			//position: relative;
+			//width: 100%;
+			padding-right: 1rem;
+			padding-left: 1rem;
+			//flex: 0 0 50%;
+			max-width:50%;
+		}
+	}
+
 	
 }
 
- @include media-breakpoint-up(sm) {
-
+ @include media-breakpoint-up(md) {
 .five-card {
+
 
 	.card__icon {
 		display:none;
@@ -513,8 +528,8 @@ FIVE CARD LAYOUT
   		display: block;
   	}
 	.five-card__right { 
-	float: right; 
-	width: 50%; 
+	float: right;
+	width: 50%;
 	
 	}
 	.five-card__right .six-by-six__left {
@@ -535,7 +550,7 @@ FIVE CARD LAYOUT
 	}
 	.five-card__left-bottom  {
 		float: left; 
-		width: 50%; 
+		width: 50%;
 		clear: left; 
 		padding-right: 1.25rem; 
 		border-top: 0;

@@ -51,6 +51,9 @@
 .container.six-by-six {
 	padding: 0 0 1.875rem;
 	margin: 0;
+	@include media-breakpoint-down(sm){
+		padding: 0 0 0.5rem;
+	}
 	h2 {
 		border-top: 0
 	} 
