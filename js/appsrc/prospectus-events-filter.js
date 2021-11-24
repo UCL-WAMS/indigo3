@@ -218,7 +218,10 @@ $(document).ready(function() {
   }
 
   function eventFreeTextSearch(event, txt) {
-    // Need to add faculty names and related degrees searches to the below
+    // Fix bad progTitles data prior to searching.
+    if (event["progTitles"] == null) {
+        event["progTitles"] = "";
+    }
     if (event["name"].toLowerCase().indexOf(txt) > -1 || getFacultyNames(event).toLowerCase().indexOf(txt) > -1 || getDepartmentNames(event["dept_codes"]).toLowerCase().indexOf(txt) > -1 || event["progTitles"].toLowerCase().indexOf(txt) > -1) {
       return true;
     }
