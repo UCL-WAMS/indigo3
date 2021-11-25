@@ -48,16 +48,28 @@
 
 /*------------------- HALF AND HALF STANDARD LAYOUT  --------------------------*/
 
+
+// CONTAINER 
 .container.six-by-six {
-	padding: 0 0 1.875rem;
+	padding: 0;
 	margin: 0;
 	h2 {
 		border-top: 0
 	} 
+ @include media-breakpoint-up(xs) {
+	max-width: none;
+	}
+
+ @include media-breakpoint-up(sm) {
+	max-width: none;
+	}
 }
 
+// COLUMNS
+// BOOTSTRAP LAYOUT MIXINS FOR COLUMNS
 .six-by-six__left,
 .six-by-six__right {
+
 	 @include make-col-ready();
 
 	 @include media-breakpoint-up(md) {
@@ -66,16 +78,24 @@
 	padding: 0;
 }
 
+// OTHER MEDIA QUERY STYLES FOR COLUMNS
+
+.six-by-six__right, .six-by-six__left {
+	margin-bottom: 1.5rem;
+	 @include media-breakpoint-up(md) {
+	 	margin-bottom: 0;
+	 }
+	}
+
  @include media-breakpoint-up(md) {
+ 	.six-by-six__right,
  	.six-by-six__left {
 	padding-right: 1em;
+	padding-bottom: 1.875rem;
+
 	}
-	.six-by-six__right {
-	padding-left: 1em;
-	}
+
 }
-
-
 
 
 /* ------------- TWO THIRDS AND A THIRD ------------------------*/
@@ -168,13 +188,21 @@
 
 
 .four-by-four-by-four.container { 
-		margin: 1rem  auto 2rem auto;
-		padding: 0;
-		h2 {
-		border-top: 0
-		} 
-	
+	margin: 1rem  auto 1.5rem auto;
+	padding: 0;
+	h2 {
+	border-top: 0
+	} 
+	 @include media-breakpoint-up(xs) {
+	max-width: none;
+	}
+
+ 	@include media-breakpoint-up(sm) {
+	max-width: none;
+	}
 }
+
+
 
 
 	.four-by-four-by-four__left,
@@ -187,19 +215,21 @@
    	 @include make-col(4);
 	
   	}
+  	padding: 0;
 	}
 
 	
 	.four-by-four-by-four__left {
 		 @include media-breakpoint-up(md) {
-			 	padding-left: 0;
+			 	padding-right: 16px;
+
 			 }
 	
 
 	}
 	.four-by-four-by-four__right {
 		 @include media-breakpoint-up(md) {
-			 	padding-right: 0;
+			 	padding-left: 16px;
 			 }
 	
 
@@ -215,7 +245,6 @@
 
 	}
 	
-// SEE ALSO THREE CARD LAYOUT - MORE WORK NEEDED FOR DEDICATED TEMPLATE?
 
 
 /* --------------------- CUSTOM LAYOUTS ----------------------*/
