@@ -466,6 +466,9 @@ FIVE CARD LAYOUT
 
 	.five-card__right  {
 		order: 2 ;
+		.card {
+			margin-bottom: 2rem;
+		}
 	}
 	.five-card__left-top {
 		order: 1; 
@@ -492,17 +495,21 @@ FIVE CARD LAYOUT
 	// PREVENTS COLUMNS COLLAPSING IN MOBILE VIEW
 	.six-by-six__left, 
 	.six-by-six__right {
-  		position: relative;
-  		width: 100%;
   		padding-right: 1rem;
   		padding-left: 1rem;
-  		flex: 0 0 50%;
-  		max-width: 50%; 		
+  		max-width: 100%;
 	}
-	
+	@include media-breakpoint-up(md){
+		.six-by-six__left,
+		.six-by-six__right {
+			padding-right: 1rem;
+			padding-left: 1rem;
+			max-width: 50%;
+		}
+	}
 }
 
- @include media-breakpoint-up(sm) {
+ @include media-breakpoint-up(md) {
 
 .five-card {
 

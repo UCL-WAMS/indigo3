@@ -11,6 +11,12 @@ HERO
 	color: white;
 	font-weight: bold;
 	padding: 2.5rem 1rem;
+	@include media-breakpoint-down(md){
+		.hero-text {
+			padding-left: 2.5rem;
+			padding-right: 2.5rem;
+		}
+	}
 	h1 {
 		font-size: 2.25rem;
 		line-height: 1.2
