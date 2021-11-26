@@ -460,49 +460,74 @@ FIVE CARD LAYOUT
 .five-card-layout {
 	margin-top: 1.8rem;
 	margin-bottom: 1.5rem;
+
 	.card__icon {
 		display: none;
 	}
 
-	.five-card__right  {
-		order: 2 ;
+	.five-card__right {
+		order: 2;
+		.card {
+			margin-bottom: 2rem;
+		}
 	}
+
 	.five-card__left-top {
-		order: 1; 
+		order: 1;
 		padding: 0 1rem 1.875rem 1rem;
+
 		div.field-content-summary {
 			font-size: 1.125rem;
-		}		
+		}
 	}
+
 	.five-card__left-bottom {
 		order: 3;
 		border-top: solid 1px #d6d6d6;
 		padding-top: 2.1875rem;
 		width: 100%;
+
 		h2 {
-			border:none;
+			border: none;
 			padding-top: 0;
 			margin-top: 0;
 		}
 	}
+
 	.field-content-summary {
 		margin-bottom: 1.5rem;
 	}
 
 	// PREVENTS COLUMNS COLLAPSING IN MOBILE VIEW
-	.six-by-six__left, 
+	.six-by-six__left,
 	.six-by-six__right {
-  		position: relative;
-  		width: 100%;
-  		padding-right: 1rem;
-  		padding-left: 1rem;
-  		flex: 0 0 50%;
-  		max-width: 50%; 		
+		//position: relative;
+		//width: 100%;
+		padding-right: 1rem;
+		padding-left: 1rem;
+		//flex: 0 0 50%;
+		max-width: 100%;
 	}
-	
-}
 
- @include media-breakpoint-up(sm) {
+	@include media-breakpoint-up(md) {
+		.six-by-six__left,
+		.six-by-six__right {
+			padding-right: 1rem;
+			padding-left: 1rem;
+			max-width: 50%;
+		}
+	}
+}
+	.site-prospective-students-graduate section.section-five-item h1.field-paragraph-heading   {
+		margin-left: 30px;
+	}
+
+
+ @include media-breakpoint-up(md) {
+
+	 .site-prospective-students-graduate section.section-five-item h1.field-paragraph-heading   {
+		 margin-left: 0;
+	 }
 
 .five-card {
 
@@ -512,9 +537,9 @@ FIVE CARD LAYOUT
 	.float.row {
   		display: block;
   	}
-	.five-card__right { 
+	.five-card__right {
 	float: right; 
-	width: 50%; 
+	width: 50%;
 	
 	}
 	.five-card__right .six-by-six__left {
