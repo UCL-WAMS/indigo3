@@ -3847,20 +3847,11 @@ ol.alpha-list {
       margin: 0; }
     .site-content .main-content .search-filter .facet-manage__top {
       margin: 0; }
-  .floating-filter-search {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background: #ffffff;
-    padding-right: 1rem;
-    z-index: 1;
-    margin-left: -1rem;
-    padding-left: 1rem; }
-    .floating-filter-search .facet-filters {
+    .site-content .main-content .search-filter .floating-filter-search .facet-filters {
       height: 100vh; }
-    .floating-filter-search #ucl-programme-search-facets-form {
+    .site-content .main-content .search-filter .floating-filter-search #ucl-programme-search-facets-form {
       height: 100vh; }
-    .floating-filter-search .search-filter--close {
+    .site-content .main-content .search-filter .search-filter--close {
       background: unset;
       border: 3px solid #0D68CF; } }
 
@@ -3898,10 +3889,14 @@ ol.alpha-list {
 /* -------------  TWO COLUMN SUB-LAYOUTs  ---------------------- */
 /*------------------- HALF AND HALF STANDARD LAYOUT  --------------------------*/
 .container.six-by-six {
-  padding: 0 0 1.875rem;
-  margin: 0; }
+  padding: 0;
+  margin: 0;
+  max-width: none; }
   .container.six-by-six h2 {
     border-top: 0; }
+  @media (min-width: 576px) {
+    .container.six-by-six {
+      max-width: none; } }
 
 .six-by-six__left,
 .six-by-six__right {
@@ -3916,11 +3911,17 @@ ol.alpha-list {
       flex: 0 0 50%;
       max-width: 50%; } }
 
+.six-by-six__right, .six-by-six__left {
+  margin-bottom: 1.5rem; }
+  @media (min-width: 768px) {
+    .six-by-six__right, .six-by-six__left {
+      margin-bottom: 0; } }
+
 @media (min-width: 768px) {
+  .six-by-six__right,
   .six-by-six__left {
-    padding-right: 1em; }
-  .six-by-six__right {
-    padding-left: 1em; } }
+    padding-right: 1em;
+    padding-bottom: 1.875rem; } }
 
 /* ------------- TWO THIRDS AND A THIRD ------------------------*/
 /* ----------------- BIG COLUMN LEFT SMALL RIGHT -----------------*/
@@ -3989,10 +3990,14 @@ ol.alpha-list {
 
 /*---------------------- THREE 	EQUAL COLUMNS SUB LAYOUT -------------------------*/
 .four-by-four-by-four.container {
-  margin: 1rem  auto 2rem auto;
-  padding: 0; }
+  margin: 1rem  auto 1.5rem auto;
+  padding: 0;
+  max-width: none; }
   .four-by-four-by-four.container h2 {
     border-top: 0; }
+  @media (min-width: 576px) {
+    .four-by-four-by-four.container {
+      max-width: none; } }
 
 .four-by-four-by-four__left,
 .four-by-four-by-four__middle,
@@ -4000,7 +4005,8 @@ ol.alpha-list {
   position: relative;
   width: 100%;
   padding-right: 16px;
-  padding-left: 16px; }
+  padding-left: 16px;
+  padding: 0; }
   @media (min-width: 768px) {
     .four-by-four-by-four__left,
     .four-by-four-by-four__middle,
@@ -4010,11 +4016,11 @@ ol.alpha-list {
 
 @media (min-width: 768px) {
   .four-by-four-by-four__left {
-    padding-left: 0; } }
+    padding-right: 16px; } }
 
 @media (min-width: 768px) {
   .four-by-four-by-four__right {
-    padding-right: 0; } }
+    padding-left: 16px; } }
 
 @media (min-width: 768px) {
   .four-by-four-by-four__middle {
