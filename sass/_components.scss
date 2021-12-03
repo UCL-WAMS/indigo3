@@ -235,9 +235,34 @@ a.card-link  {
 }
 
 
-/*------------------
+/* -------------------------
+ HIGHLIGHT CARD
+ NB WHOLE CARD NEEDS TO BE A LINK
+ ICON
+ COLOURS
+ --------------------------*/
+
+
+.highlight-card  {
+	background: pink; height:100%;
+
+	.highlight-card__title  {
+	text-transform: uppercase;
+	margin-bottom: 1.5rem;
+	}
+	.highlight-card__text {
+	padding: 1.25rem;
+	}
+}
+
+
+
+
+
+
+/*-----------------------
 FEATURE LINK
-----------------*/
+-------------------------*/
 
 .feature-link {
 		position: relative;

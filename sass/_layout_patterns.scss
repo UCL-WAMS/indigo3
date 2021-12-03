@@ -191,7 +191,7 @@
 	margin: 1rem  auto 1.5rem auto;
 	padding: 0;
 	h2 {
-	border-top: 0
+		border-top: 0
 	} 
 	 @include media-breakpoint-up(xs) {
 	max-width: none;
@@ -245,6 +245,77 @@
 
 	}
 	
+
+
+/*--------------------------------------------------------------
+FOUR EQUAL COLUMNS SUB LAYOUT
+-------------------------------------------------------------*/
+
+.three-by-three-by-three-by-three,  
+.four-item-layout {
+	&.container {
+	margin: 1rem  auto 1.5rem auto;
+	padding: 0;
+	h2 {
+		border-top: 0
+	} 
+	 @include media-breakpoint-up(xs) {
+	max-width: none;
+	}
+
+ 	@include media-breakpoint-up(sm) {
+	max-width: none;
+	}
+	}
+
+	.four-item-column__one, 
+	.four-item-column__two, 
+	.four-item-column__three, 
+	.four-item-column__four {
+	 @include make-col-ready();
+
+	 @include media-breakpoint-up(md) {
+
+   	 @include make-col(3);
+	
+  	}
+  		padding: 0;
+	}
+
+// REASSIGNS BOOTSTRAP COLUMN PADDING SO LEFT AND RIGHT ITEMS ARE FLUSH TO CONTAINER MARGINS
+
+
+	 @include media-breakpoint-up(md) {
+	.four-item-column__one {
+		padding-left: 0px; 
+		padding-right: 24px;
+		}
+	.four-item-column__two {
+		padding-left: 6.5px; 
+		padding-right: 16px;
+		}  
+	.four-item-column__three {
+		padding-right: 6px; 
+		padding-left: 16.5px;
+		}  
+	.four-item-column__four {
+		padding-right: 0px; 
+		padding-left: 24px;
+		} 
+	}
+
+// SETS DRUPAL CLASSES TO 100% TO ALLOW COMPONENT TO PICK UP FLEX HEIGHTS OF COLUMN
+.content,
+.entity-paragraphs-item {
+	height: 100%;
+	}
+
+
+}
+
+
+
+
 
 
 /* --------------------- CUSTOM LAYOUTS ----------------------*/
