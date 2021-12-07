@@ -460,50 +460,72 @@ FIVE CARD LAYOUT
 .five-card-layout {
 	margin-top: 1.8rem;
 	margin-bottom: 1.5rem;
+
+	.container {
+		padding: 0;
+	}
+
 	.card__icon {
 		display: none;
 	}
 
-	.five-card__right  {
-		order: 2 ;
+	.five-card__right {
+		order: 2;
 	}
+
 	.five-card__left-top {
-		order: 1; 
-		padding: 0 1rem 1.875rem 1rem;
+		order: 1;
+		margin-bottom: 0;
+
 		div.field-content-summary {
 			font-size: 1.125rem;
-		}		
+		}
 	}
+
 	.five-card__left-bottom {
 		order: 3;
 		border-top: solid 1px #d6d6d6;
 		padding-top: 2.1875rem;
 		width: 100%;
+
 		h2 {
-			border:none;
+			border: none;
 			padding-top: 0;
 			margin-top: 0;
 		}
 	}
+
 	.field-content-summary {
 		margin-bottom: 1.5rem;
 	}
 
 	// PREVENTS COLUMNS COLLAPSING IN MOBILE VIEW
-	.six-by-six__left, 
+	.six-by-six__left,
 	.six-by-six__right {
-  		position: relative;
-  		width: 100%;
-  		padding-right: 1rem;
-  		padding-left: 1rem;
-  		flex: 0 0 50%;
-  		max-width: 50%; 		
+		max-width: 100%;
+		margin-bottom: 0;
 	}
-	
+	.site-prospective-students-graduate section.section-five-item h1.field-paragraph-heading   {
+		margin-left: 0;
+	}
+
 }
 
- @include media-breakpoint-up(sm) {
 
+ @include media-breakpoint-up(md) {
+
+.five-card-layout{
+
+	.five-card__left-top {
+		 padding: 0 1rem 1.875rem;
+	}
+	 .six-by-six__left, .six-by-six__right {
+		 position: relative;
+		 width: 100%;
+		 flex: 0 0 50%;
+		 max-width: 50%;
+	 }
+}
 .five-card {
 
 	.card__icon {
@@ -512,20 +534,28 @@ FIVE CARD LAYOUT
 	.float.row {
   		display: block;
   	}
-	.five-card__right { 
+	.five-card__right {
 	float: right; 
-	width: 50%; 
+	width: 50%;
 	
 	}
+
 	.five-card__right .six-by-six__left {
  			border-right: solid 1px $pxlinegraylight;
- 			border-left: solid 1px $pxlinegraylight; 
+ 			border-left: solid 1px $pxlinegraylight;
+			padding-right: 1rem;
+			padding-left: 1rem;
  			 }
+	.five-card__right .six-by-six__right {
+			padding-right: 1rem;
+			padding-left: 1rem;
+	}
 	.five-card__left-top {
 		float: left; 
 		width: 50%; 
 		padding-right: 1.25rem;
-		padding-left: 0; 
+		padding-left: 0;
+
 		.card {
 			border-bottom: solid 1px $pxlinegraylight;
 		}
