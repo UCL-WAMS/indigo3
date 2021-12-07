@@ -8,6 +8,7 @@ GENERIC STYLES IN THE NEXT ITERATION OF THIS SITE
 AND THIS FOLDER DELETED.  THESE ARE NOT CUSTOM STYLES!
 --------------------------------------------------------------------------------------------*/
 
+
 .site-prospective-students-graduate { 
 
 	.header {
@@ -57,6 +58,47 @@ AND THIS FOLDER DELETED.  THESE ARE NOT CUSTOM STYLES!
 		}
 
 	}
-}
 
+	/* ------------------- THREE CARD LINK LAYOUT 
+Has pre-process class item-background on container, when three cards are present,
+Heights on cards set to flex sized parents.  This is because
+mutiple paragraph types have been enabled on this pattern's columns, in the
+grad prospectus.
+----------------------------------------*/
+
+.four-by-four-by-four.container {	
+	.content,
+	.entity-paragraphs-item {
+		height: auto;
+		}
+
+	&.item-background {
+	a.card-link, 
+	.content,
+	.paragraphs-item-card-link {
+				height: 100%;				
+			}		
+		}
+
+	.item-background .row > div {
+ 		margin-bottom: 1.5rem;
+ 		}
+
+	.item-background {
+		.four-by-four-by-four__middle,
+		.four-by-four-by-four__right,
+		.four-by-four-by-four__left {
+			h2 {
+				padding: 0;
+				margin-top: 0;
+			}			
+		}
+		.card .forward-link {
+			margin-top: 1.5em;	
+			}	
+		}
+
+	}
+		
+}
 
