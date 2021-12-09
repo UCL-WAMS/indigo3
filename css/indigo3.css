@@ -3998,6 +3998,9 @@ ol.alpha-list {
   @media (min-width: 576px) {
     .four-by-four-by-four.container {
       max-width: none; } }
+  .four-by-four-by-four.container .content,
+  .four-by-four-by-four.container .entity-paragraphs-item {
+    height: 100%; }
 
 .four-by-four-by-four__left,
 .four-by-four-by-four__middle,
@@ -4006,7 +4009,8 @@ ol.alpha-list {
   width: 100%;
   padding-right: 16px;
   padding-left: 16px;
-  padding: 0; }
+  padding: 0;
+  margin-bottom: 1.5rem; }
   @media (min-width: 768px) {
     .four-by-four-by-four__left,
     .four-by-four-by-four__middle,
@@ -4026,6 +4030,72 @@ ol.alpha-list {
   .four-by-four-by-four__middle {
     padding-right: 8px;
     padding-left: 8px; } }
+
+/*--------------------------------------------------------------
+FOUR EQUAL COLUMNS SUB LAYOUT
+-------------------------------------------------------------*/
+.three-by-three-by-three-by-three.container,
+.four-item-layout.container {
+  margin: 1rem  auto 0 auto;
+  padding: 0;
+  max-width: none; }
+  .three-by-three-by-three-by-three.container h2,
+  .four-item-layout.container h2 {
+    border-top: 0; }
+  @media (min-width: 576px) {
+    .three-by-three-by-three-by-three.container,
+    .four-item-layout.container {
+      max-width: none; } }
+
+.three-by-three-by-three-by-three .four-item-column__one,
+.three-by-three-by-three-by-three .four-item-column__two,
+.three-by-three-by-three-by-three .four-item-column__three,
+.three-by-three-by-three-by-three .four-item-column__four,
+.four-item-layout .four-item-column__one,
+.four-item-layout .four-item-column__two,
+.four-item-layout .four-item-column__three,
+.four-item-layout .four-item-column__four {
+  position: relative;
+  width: 100%;
+  padding-right: 16px;
+  padding-left: 16px;
+  padding: 0;
+  margin-bottom: 1.5rem; }
+  @media (min-width: 768px) {
+    .three-by-three-by-three-by-three .four-item-column__one,
+    .three-by-three-by-three-by-three .four-item-column__two,
+    .three-by-three-by-three-by-three .four-item-column__three,
+    .three-by-three-by-three-by-three .four-item-column__four,
+    .four-item-layout .four-item-column__one,
+    .four-item-layout .four-item-column__two,
+    .four-item-layout .four-item-column__three,
+    .four-item-layout .four-item-column__four {
+      flex: 0 0 25%;
+      max-width: 25%; } }
+
+@media (min-width: 768px) {
+  .three-by-three-by-three-by-three .four-item-column__one,
+  .four-item-layout .four-item-column__one {
+    padding-left: 0px;
+    padding-right: 24px; }
+  .three-by-three-by-three-by-three .four-item-column__two,
+  .four-item-layout .four-item-column__two {
+    padding-left: 6.5px;
+    padding-right: 16px; }
+  .three-by-three-by-three-by-three .four-item-column__three,
+  .four-item-layout .four-item-column__three {
+    padding-right: 6px;
+    padding-left: 16.5px; }
+  .three-by-three-by-three-by-three .four-item-column__four,
+  .four-item-layout .four-item-column__four {
+    padding-right: 0px;
+    padding-left: 24px; } }
+
+.three-by-three-by-three-by-three .content,
+.three-by-three-by-three-by-three .entity-paragraphs-item,
+.four-item-layout .content,
+.four-item-layout .entity-paragraphs-item {
+  height: 100%; }
 
 /* --------------------- CUSTOM LAYOUTS ----------------------*/
 /*------------------- RELATED INFO PANEL  --------------------*/
@@ -4691,9 +4761,9 @@ a.card-link {
         height: 70px;
         margin-bottom: 1.875rem; } }
 
-/*------------------
+/*-----------------------
 FEATURE LINK
-----------------*/
+-------------------------*/
 .feature-link {
   position: relative;
   clear: both; }
@@ -4857,19 +4927,174 @@ ALERTS
   right: 0;
   background-color: #F6BE00; }
 
+/* -------------------------
+ HIGHLIGHT CARD
+ --------------------------*/
+.highlight-card {
+  position: relative;
+  height: 100%; }
+  .highlight-card .highlight-card__pic {
+    background-color: inherit;
+    color: inherit; }
+  .highlight-card .card__icon {
+    padding: 5px;
+    width: 45px;
+    height: 45px;
+    background-color: inherit;
+    color: inherit; }
+    .highlight-card .card__icon svg {
+      width: 35px;
+      height: 35px;
+      stroke-width: 3px; }
+      .highlight-card .card__icon svg .cls-1 {
+        stroke: currentColor; }
+  .highlight-card a {
+    text-decoration: none;
+    color: inherit;
+    background-color: inherit; }
+  .highlight-card .highlight-card__eyebrow {
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+    font-weight: bold; }
+  .highlight-card .highlight-card__text {
+    padding: 1.25rem; }
+    @media (min-width: 768px) {
+      .highlight-card .highlight-card__text {
+        padding: 1rem; }
+        .highlight-card .highlight-card__text h2 {
+          font-size: 0.9rem; } }
+    @media (min-width: 992px) {
+      .highlight-card .highlight-card__text {
+        padding: 1.25rem; }
+        .highlight-card .highlight-card__text h2 {
+          font-size: 1.5rem; } }
+  .highlight-card.highlight-card--violet-turquoise {
+    background-color: #440099;
+    color: #8ce2d0; }
+  .highlight-card.highlight-card--peach-purple {
+    background-color: #F3CFB3;
+    color: #702082; }
+  .highlight-card.highlight-card--purple-peach {
+    background-color: #702082;
+    color: #F3CFB3; }
+  .highlight-card.highlight-card--green-pink {
+    background-color: #00534c;
+    color: #f9b5c4; }
+  .highlight-card.highlight-card--pink-violet {
+    background-color: #f9b5c4;
+    color: #440099; }
+  .highlight-card.highlight-card--blue-peach {
+    background-color: #1A2BF2;
+    color: #F3CFB3; }
+  .highlight-card.highlight-card--turquoise-violet {
+    background-color: #8ce2d0;
+    color: #440099; }
+
+/*------------------
+ CTA CARD/BOXES
+ ---------------------*/
+.paragraphs-item-call-to-action a {
+  text-decoration: none; }
+
+.site-content .main-content .cta-box h2 {
+  border-top: 0;
+  margin-top: 0;
+  padding-top: 0; }
+
+.cta-box {
+  height: 100%;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column; }
+  .cta-box a {
+    text-decoration: none;
+    color: inherit; }
+  .cta-box p {
+    font-size: 1rem;
+    line-height: 1.3;
+    margin-bottom: 1.5rem; }
+  .cta-box p:hover,
+  .cta-box .cta-box__btn__text:hover {
+    text-decoration: underline; }
+  .cta-box .cta-box__btn {
+    width: 100%;
+    border-color: inherit;
+    border-width: 1px;
+    border-style: solid;
+    margin-top: 2.5rem;
+    display: flex;
+    margin-top: auto; }
+  .cta-box .cta-box__btn__svg {
+    width: 19%;
+    display: flex;
+    align-items: center; }
+    .cta-box .cta-box__btn__svg svg {
+      stroke: currentColor;
+      margin: auto; }
+  .cta-box .cta-box__btn__text {
+    width: 80.5806%;
+    border-color: inherit;
+    border-width: 0 1px 0 0;
+    border-style: solid;
+    padding: 1rem 2rem; }
+  @media (min-width: 576px) {
+    .cta-box {
+      padding: 3rem; } }
+  @media (min-width: 768px) {
+    .cta-box .cta-box__btn {
+      width: 70.42415%; } }
+  @media (min-width: 992px) {
+    .cta-box .cta-box__btn {
+      width: 40.42415%; } }
+  .cta-box.cta-box--violet-turquoise {
+    background: #440099;
+    color: #8ce2d0; }
+  .cta-box.cta-box--gray {
+    background: #333333;
+    color: #ffffff; }
+  .cta-box.cta-box--purple-peach {
+    background: #702082;
+    color: #F3CFB3; }
+  .cta-box.cta-box--turquoise-violet {
+    background: #8ce2d0;
+    color: #440099; }
+
+@media (min-width: 768px) {
+  .four-by-four-by-four .cta-box, .six-by-six .cta-box {
+    padding: 2rem; } }
+
+@media (min-width: 992px) {
+  .four-by-four-by-four .cta-box, .six-by-six .cta-box {
+    padding: 3rem; } }
+
+@media (min-width: 768px) {
+  .four-by-four-by-four .cta-box__btn, .six-by-six .cta-box__btn {
+    width: 100%; } }
+
+@media (min-width: 1200px) {
+  .four-by-four-by-four .cta-box__btn, .six-by-six .cta-box__btn {
+    width: 70.42415%; } }
+
+@media (min-width: 1200px) {
+  .six-by-six .cta-box__btn {
+    width: 60%; } }
+
 /*------------------
 FIVE CARD LAYOUT
 ----------------------------*/
 .five-card-layout {
   margin-top: 1.8rem;
   margin-bottom: 1.5rem; }
+  .five-card-layout .container {
+    padding: 0; }
   .five-card-layout .card__icon {
     display: none; }
   .five-card-layout .five-card__right {
     order: 2; }
   .five-card-layout .five-card__left-top {
     order: 1;
-    padding: 0 1rem 1.875rem 1rem; }
+    margin-bottom: 0; }
     .five-card-layout .five-card__left-top div.field-content-summary {
       font-size: 1.125rem; }
   .five-card-layout .five-card__left-bottom {
@@ -4885,14 +5110,17 @@ FIVE CARD LAYOUT
     margin-bottom: 1.5rem; }
   .five-card-layout .six-by-six__left,
   .five-card-layout .six-by-six__right {
+    max-width: 100%;
+    margin-bottom: 0; }
+
+@media (min-width: 768px) {
+  .five-card-layout .five-card__left-top {
+    padding: 0 1rem 1.875rem; }
+  .five-card-layout .six-by-six__left, .five-card-layout .six-by-six__right {
     position: relative;
     width: 100%;
-    padding-right: 1rem;
-    padding-left: 1rem;
     flex: 0 0 50%;
     max-width: 50%; }
-
-@media (min-width: 576px) {
   .five-card .card__icon {
     display: none; }
   .five-card .float.row {
@@ -4902,7 +5130,12 @@ FIVE CARD LAYOUT
     width: 50%; }
   .five-card .five-card__right .six-by-six__left {
     border-right: solid 1px #d6d6d6;
-    border-left: solid 1px #d6d6d6; }
+    border-left: solid 1px #d6d6d6;
+    padding-right: 1rem;
+    padding-left: 1rem; }
+  .five-card .five-card__right .six-by-six__right {
+    padding-right: 1rem;
+    padding-left: 1rem; }
   .five-card .five-card__left-top {
     float: left;
     width: 50%;
@@ -4921,27 +5154,6 @@ FIVE CARD LAYOUT
     padding-top: 0; }
     .five-card .five-card__left-bottom .six-by-six__left {
       padding-left: 0; } }
-
-/* ------------------- THREE CARD LINK LAYOUT 
-not working at the moment as specified, this layout has been used for a generic
-three item layout.  The cards need to be flex to align to baseline.
-----------------------------------------*/
-.item-background .row > div {
-  margin-bottom: 1.5rem; }
-
-.item-background .four-by-four-by-four__middle h2,
-.item-background .four-by-four-by-four__right h2,
-.item-background .four-by-four-by-four__left h2 {
-  padding: 0;
-  margin-top: 0; }
-
-.item-background .card .forward-link {
-  margin-top: 1.5em; }
-
-.item-background a.card-link,
-.item-background .content,
-.item-background .paragraphs-item-card-link {
-  height: 100%; }
 
 /*------------------ PROMO SUB FOOTER ------------
 -------*/
@@ -5050,6 +5262,33 @@ VISUAL STYLING FOR COMPONENTS - COLOURS ETC
 
 .section-background--lightgray {
   background: #f5f5f5; }
+
+/* ------------------- THREE CARD LINK LAYOUT 
+Has pre-process class item-background on container, when three cards are present,
+Heights on cards set to flex sized parents.  This is because
+mutiple paragraph types have been enabled on this pattern's columns, in the
+grad prospectus.
+----------------------------------------*/
+.four-by-four-by-four.container .content,
+.four-by-four-by-four.container .entity-paragraphs-item {
+  height: auto; }
+
+.four-by-four-by-four.container.item-background a.card-link,
+.four-by-four-by-four.container.item-background .content,
+.four-by-four-by-four.container.item-background .paragraphs-item-card-link {
+  height: 100%; }
+
+.four-by-four-by-four.container .item-background .row > div {
+  margin-bottom: 1.5rem; }
+
+.four-by-four-by-four.container .item-background .four-by-four-by-four__middle h2,
+.four-by-four-by-four.container .item-background .four-by-four-by-four__right h2,
+.four-by-four-by-four.container .item-background .four-by-four-by-four__left h2 {
+  padding: 0;
+  margin-top: 0; }
+
+.four-by-four-by-four.container .item-background .card .forward-link {
+  margin-top: 1.5em; }
 
 /*-----------
 ACCORDION
@@ -5291,12 +5530,12 @@ TEXT HERO
     max-width: 100%;
     max-height: none;
     height: auto; }
-    @media (min-width: 1200px) {
-      .hero-content.image-block .hero-pic img {
-        max-width: 130%; } }
     @media (min-width: 768px) {
       .hero-content.image-block .hero-pic img {
         max-width: 115%; } }
+    @media (min-width: 1200px) {
+      .hero-content.image-block .hero-pic img {
+        max-width: 135%; } }
   @media (max-width: 575.98px) {
     .hero-content.image-block .hero-pic {
       display: none; } }
