@@ -135,13 +135,13 @@ TEXT HERO
           width: auto; 
           max-width: 100%; 
           max-height: none; 
-          height: auto;    
+          height: auto;     
+         @include media-breakpoint-up(md) {
+          max-width: 115%;
+          }  
         @include media-breakpoint-up(xl) {
-           max-width: 130%;
-          }
-        @include media-breakpoint-up(md) {
-           max-width: 115%;
-          }          
+          max-width: 135%;
+          }              
         }         
         @include media-breakpoint-down(xs) {
           display: none;  

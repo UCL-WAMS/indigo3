@@ -235,9 +235,9 @@ a.card-link  {
 }
 
 
-/*------------------
+/*-----------------------
 FEATURE LINK
-----------------*/
+-------------------------*/
 
 .feature-link {
 		position: relative;
@@ -451,6 +451,214 @@ ALERTS
 	}
 
 
+/* -------------------------
+ HIGHLIGHT CARD
+ --------------------------*/
+
+.highlight-card  {
+	position: relative;
+	height: 100%;
+	.highlight-card__pic {
+		background-color: inherit; 
+		color: inherit;
+	}
+	.card__icon {
+		padding: 5px;
+		width: 45px;
+		height: 45px;
+		background-color: inherit;
+		color: inherit;
+		svg{
+			width: 35px;
+			height: 35px;
+			stroke-width: 3px;
+			.cls-1 {
+				stroke: currentColor;
+			}
+		}
+		
+	}
+	a {
+		text-decoration: none;
+		color: inherit;
+		background-color: inherit;
+		}
+	.highlight-card__eyebrow  {
+	text-transform: uppercase;
+	margin-bottom: 1.5rem;
+	font-weight: bold;
+	}
+	
+	.highlight-card__text {
+		padding: 1.25rem;
+	 @include media-breakpoint-up(md) {
+	 	padding: 1rem;
+ 		h2 {
+ 			font-size: 0.9rem;
+ 			}
+ 		}
+ 	 @include media-breakpoint-up(lg) { 
+ 	 	padding: 1.25rem;		
+ 		h2 {
+ 			font-size: 1.5rem;	
+ 			}
+ 	}
+	
+}
+
+	// COLORS
+	&.highlight-card--violet-turquoise {
+       background-color: $bartlettviolet;
+       color: $bartlettturquoise;
+       }
+     &.highlight-card--peach-purple {
+       background-color: $bartlettpeach;
+       color: $bartlettpurple;
+       }
+     &.highlight-card--purple-peach {
+       background-color: $bartlettpurple;
+       color: $bartlettpeach;
+       }
+     &.highlight-card--green-pink {
+       background-color: $bartlettgreen;
+       color: $bartlettpink;
+       }
+     &.highlight-card--pink-violet {
+       background-color: $bartlettpink;
+       color: $bartlettviolet;
+       }
+    &.highlight-card--blue-peach {
+       background-color: $bartlettblue;
+       color: $bartlettpeach;
+       }
+    &.highlight-card--turquoise-violet {
+       background-color: $bartlettturquoise;
+       color: $bartlettviolet;
+       }	
+}
+
+/*------------------
+ CTA CARD/BOXES
+ ---------------------*/
+
+.paragraphs-item-call-to-action a {
+	text-decoration: none; 
+	}
+.site-content .main-content .cta-box h2 {
+	border-top: 0;
+	margin-top: 0;
+	padding-top: 0;
+	}
+
+.cta-box {
+	height: 100%; 
+	padding: 1.5rem;
+	margin-bottom: 1.5rem;
+	display:flex;
+	flex-direction: column;
+	a {
+		text-decoration: none; 
+		color: inherit;
+	}
+	p {
+		@include normal-zero;
+	}
+		p:hover, 
+	.cta-box__btn__text:hover {
+		text-decoration: underline; 
+		} 
+	.cta-box__btn {
+		width: 100%; 
+		border-color: inherit; 
+		border-width: 1px; 
+		border-style: solid;  
+		margin-top: 2.5rem;
+		display: flex;
+		margin-top: auto;
+		}
+	.cta-box__btn__svg {	
+		width: 19%; 
+		display: flex;
+		align-items: center;
+		svg {
+			stroke: currentColor; 
+			margin: auto;
+			}
+		}
+	.cta-box__btn__text { 
+		width: 80.5806%;
+		border-color: inherit; 
+		border-width: 0 1px 0 0; 
+		border-style: solid; 
+		padding: 1rem 2rem;
+		
+	
+		}
+
+ @include media-breakpoint-up(sm) {
+ 	padding: 3rem;
+ 	}
+
+ @include media-breakpoint-up(md) {
+	.cta-box__btn {
+ 		width: 70.42415%; 
+ 		} 
+ 	}
+  @include media-breakpoint-up(lg) {
+	.cta-box__btn {
+ 		width: 40.42415%; 
+ 		} 
+ 	}
+ 	//COLORS
+ 	&.cta-box--violet-turquoise {
+ 		background: $bartlettviolet ;
+ 		color: $bartlettturquoise ;
+ 		}
+ 	&.cta-box--gray {
+ 		background: $darkgray ;
+ 		color: #ffffff ;
+ 		}
+ 	&.cta-box--purple-peach {
+ 		background: $bartlettpurple ;
+ 		color: $bartlettpeach ;
+ 		}
+ 	&.cta-box--turquoise-violet {
+ 		background: $bartlettturquoise;
+ 		color: $bartlettviolet;
+ 		}
+}
+
+
+// MODIFICATONS TO BUTTON RESPONSIVE BEHAVIOUR FOR COLUMN LAYOUTS.
+.four-by-four-by-four, .six-by-six { 
+	.cta-box {
+			@include media-breakpoint-up(md) {
+			padding: 2rem;
+			}
+			@include media-breakpoint-up(lg) {
+			padding: 3rem;
+			}
+	}
+	.cta-box__btn { 
+			@include media-breakpoint-up(md) { 
+			width: 100%;
+			}				
+			@include media-breakpoint-up(xl) {
+			width: 70.42415%; 
+			}
+	}
+
+}
+
+.six-by-six {
+	.cta-box__btn {
+		@include media-breakpoint-up(xl) {
+			width: 60%; 
+			}
+		}
+}
+		
+
 
 
 /*------------------
@@ -575,42 +783,6 @@ FIVE CARD LAYOUT
 }
 
 
-
-/* ------------------- THREE CARD LINK LAYOUT 
-not working at the moment as specified, this layout has been used for a generic
-three item layout.  The cards need to be flex to align to baseline.
-----------------------------------------*/
-
-
-	.item-background .row > div {
- 		margin-bottom: 1.5rem;
- 		}
-
-	.item-background {
-		.four-by-four-by-four__middle,
-		.four-by-four-by-four__right,
-		.four-by-four-by-four__left {
-			h2 {
-				padding: 0;
-				margin-top: 0;
-			}			
-		}
-	.card .forward-link {
-		margin-top: 1.5em;
-
-	}
-
-
-	}
-.item-background {
-	a.card-link, 
-	.content,
-	.paragraphs-item-card-link {
-				height: 100%;
-			}		
-		}
-		
-	
 
 /*------------------ PROMO SUB FOOTER ------------
 -------*/
@@ -739,4 +911,45 @@ VISUAL STYLING FOR COMPONENTS - COLOURS ETC
 	}
 .section-background--lightgray {
 	background: $backgroundlightgray; 	
+	}
+
+	/* ------------------- THREE CARD LINK LAYOUT 
+Has pre-process class item-background on container, when three cards are present,
+Heights on cards set to flex sized parents.  This is because
+mutiple paragraph types have been enabled on this pattern's columns, in the
+grad prospectus.
+----------------------------------------*/
+
+.four-by-four-by-four.container {	
+	.content,
+	.entity-paragraphs-item {
+		height: auto;
+		}
+
+	&.item-background {
+	a.card-link, 
+	.content,
+	.paragraphs-item-card-link {
+				height: 100%;				
+			}		
+		}
+
+	.item-background .row > div {
+ 		margin-bottom: 1.5rem;
+ 		}
+
+	.item-background {
+		.four-by-four-by-four__middle,
+		.four-by-four-by-four__right,
+		.four-by-four-by-four__left {
+			h2 {
+				padding: 0;
+				margin-top: 0;
+			}			
+		}
+		.card .forward-link {
+			margin-top: 1.5em;	
+			}	
+		}
+
 	}
