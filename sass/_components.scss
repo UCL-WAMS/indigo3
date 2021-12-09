@@ -499,14 +499,10 @@ FIVE CARD LAYOUT
 		margin-bottom: 1.5rem;
 	}
 
-	// PREVENTS COLUMNS COLLAPSING IN MOBILE VIEW
 	.six-by-six__left,
 	.six-by-six__right {
 		max-width: 100%;
 		margin-bottom: 0;
-	}
-	.site-prospective-students-graduate section.section-five-item h1.field-paragraph-heading   {
-		margin-left: 0;
 	}
 
 }
