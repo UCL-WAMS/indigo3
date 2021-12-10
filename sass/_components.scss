@@ -587,17 +587,15 @@ ALERTS
 		}
 	.cta-box__btn__text { 
 		width: 80.5806%;
-		border-color: inherit; 
-		border-width: 0 1px 0 0; 
 		border-style: solid; 
-		padding: 1rem 2rem;
-		
-	
+		padding: 1rem 1rem 1rem 2rem;	
 		}
 
  @include media-breakpoint-up(sm) {
  	padding: 3rem;
  	}
+
+ // SEE ALSO COLUMN CUSTOM WIDTHS BELOW
 
  @include media-breakpoint-up(md) {
 	.cta-box__btn {
@@ -648,6 +646,10 @@ ALERTS
 			}
 	}
 
+}
+
+.four-by-four-by-four.item-background div.paragraphs-item-call-to-action {
+	height: 100%;
 }
 
 .six-by-six {

@@ -5034,10 +5034,8 @@ ALERTS
       margin: auto; }
   .cta-box .cta-box__btn__text {
     width: 80.5806%;
-    border-color: inherit;
-    border-width: 0 1px 0 0;
     border-style: solid;
-    padding: 1rem 2rem; }
+    padding: 1rem 1rem 1rem 2rem; }
   @media (min-width: 576px) {
     .cta-box {
       padding: 3rem; } }
@@ -5075,6 +5073,9 @@ ALERTS
 @media (min-width: 1200px) {
   .four-by-four-by-four .cta-box__btn, .six-by-six .cta-box__btn {
     width: 70.42415%; } }
+
+.four-by-four-by-four.item-background div.paragraphs-item-call-to-action {
+  height: 100%; }
 
 @media (min-width: 1200px) {
   .six-by-six .cta-box__btn {
@@ -5591,24 +5592,15 @@ TEXT HERO
       padding-right: 0; } }
 
 .inpage-feed-content__text {
-  flex: 0 0 66.6666666667%;
-  max-width: 66.6666666667%;
-  position: relative;
-  width: 100%;
-  padding-right: 16px;
-  padding-left: 16px; }
-
-.inpage-feed-content__image {
-  flex: 0 0 33.3333333333%;
-  max-width: 33.3333333333%;
-  position: relative;
-  width: 100%;
-  padding-right: 0; }
+  flex: 100%;
+  max-width: 100%;
+  padding: 0 16px; }
 
 /*----------------- INDIGO STYLING -----------------*/
 .inpage-feed {
   padding: 0;
-  margin-bottom: 1.5rem; }
+  margin-bottom: 1.5rem;
+  margin-right: -16px; }
   .inpage-feed h1 {
     margin-bottom: 1.875rem; }
   .inpage-feed img {
@@ -5642,7 +5634,7 @@ TEXT HERO
 
 .inpage-feed-content {
   padding: 2.5rem 0 2.5rem 5.6899%;
-  border-left: #f6BE00 1.25rem solid;
+  border-left: #F6BE00 0.7rem solid;
   margin-left: -32px;
   clear: both; }
   .inpage-feed-content .events-feed__type {
@@ -5663,15 +5655,17 @@ TEXT HERO
     padding-right: 2.9629%; }
 
 @media (min-width: 768px) {
+  .inpage-feed {
+    margin-right: 0; }
+    .inpage-feed img {
+      min-width: 102px;
+      min-height: 44px; }
   .inpage-feed__right {
-    border-top: #f6BE00 5rem solid; }
+    border-top: #F6BE00 5rem solid; }
   .inpage-feed__left {
     padding: 5rem 8.39% 5rem 0; }
   .inpage-feed-content {
-    border-left: 0; }
-  .inpage-feed img {
-    min-width: 102px;
-    min-height: 44px; } }
+    border-left: 0; } }
 
 table {
   display: table;
