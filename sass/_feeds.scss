@@ -26,25 +26,34 @@
     }
 }
 
+// STYLING FOR FEED WITH TEXT AND IMAGE NOT CURRENTLY IN USE IN PROSPECTUS 12/21
 
-// col-8
-.inpage-feed-content__text {
-	flex: 0 0 66.6666666667%;
-	max-width: 66.6666666667%;
-	position: relative;
-	width: 100%;
-	padding-right: 16px;
-	padding-left: 16px; 
+// // col-8
+// .inpage-feed-content__text {
+// 	flex: 0 0 66.6666666667%;
+// 	max-width: 66.6666666667%;
+// 	position: relative;
+// 	width: 100%;
+// 	padding-right: 16px;
+// 	padding-left: 16px; 
+// 	}
+
+// // col-4
+// .inpage-feed-content__image {
+//     flex: 0 0 33.3333333333%;
+// 	max-width: 33.3333333333%;
+// 	position: relative;
+// 	width: 100%;
+// 	padding-right: 0; 
+//  }
+
+
+.inpage-feed-content__text { 
+	flex: 100%;
+	max-width: 100%;
+	padding:0 16px;
 	}
 
-// col-4
-.inpage-feed-content__image {
-    flex: 0 0 33.3333333333%;
-	max-width: 33.3333333333%;
-	position: relative;
-	width: 100%;
-	padding-right: 0; 
- }
 
 
 /*----------------- INDIGO STYLING -----------------*/
@@ -52,6 +61,7 @@
 .inpage-feed {		
 		padding: 0;
 		margin-bottom: 1.5rem;
+		margin-right: -16px;
 		 h1 {
 		 	margin-bottom: 1.875rem;
 		 }
@@ -66,7 +76,7 @@
 
 
 .inpage-feed__left{
-	background-color: #F6BE00;
+	background-color: $yellow;
 	padding: 2rem 0 2rem 5.442%;
 	padding-bottom: 3rem;
 	align-self: flex-start !important;
@@ -97,7 +107,7 @@
 
 .inpage-feed-content {
 	padding: 2.5rem 0 2.5rem 5.6899%;
-	border-left: #f6BE00 1.25rem solid;
+	border-left: $yellow 0.7rem solid;
 	margin-left: -32px;
 	clear: both;
 		.events-feed__type {
@@ -126,9 +136,18 @@
 
 
 @include media-breakpoint-up(md){
+// NO IMAGES IN USE A THE MOMENT 12/21 
+
+.inpage-feed {
+	margin-right: 0;
+	img {
+	min-width: 102px; 
+	min-height: 44px ;
+	}
+}
 
 .inpage-feed__right {
-	border-top: #f6BE00 5rem solid;	
+	border-top: $yellow 5rem solid;	
 	}
 
 .inpage-feed__left {
@@ -139,8 +158,4 @@
 	border-left: 0;
 	}
 
-.inpage-feed img {
-	min-width: 102px; 
-	min-height: 44px ;
-	}
- }
+}
