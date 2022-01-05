@@ -1,3 +1,14 @@
+/*--------------------------------------
+ BODY CONTENT TEXT STYLES
+ DEFAULT PARAGRAPH STYLES 
+ ---------------------------------------*/
+/* ------------------------------ 
+CLEAR LEFT STYLES 
+ILLUSTRATED IN COMPONENT SECTION 
+--------------------------------*/
+/*---------------------------
+SETS FULL WIDTH BACKGROUND ON BLOCK
+---------------------------*/
 /* -------------------
 INDIGO RESET 
 --------------------- */
@@ -2794,54 +2805,50 @@ a {
 
 h1 {
   font-size: 1.875rem;
-  line-height: 1.25;
+  line-height: 1.2;
   margin-bottom: 1.5rem;
   font-weight: bold; }
   @media (min-width: 992px) {
     h1 {
-      font-size: 2.25rem;
-      line-height: 1.25; } }
+      font-size: 2.25rem; } }
 
 h2 {
   font-size: 1.5rem;
-  line-height: 1.23;
+  line-height: 1.2;
   margin-bottom: 1.5rem;
   font-weight: bold; }
   @media (min-width: 992px) {
     h2 {
-      font-size: 1.875rem;
-      line-height: 1.35; } }
+      font-size: 1.875rem; } }
 
 h3 {
   font-size: 1.25rem;
-  line-height: 1.3;
+  line-height: 1.2;
   margin-bottom: 1.5rem;
   font-weight: bold; }
   @media (min-width: 992px) {
     h3 {
-      font-size: 1.5rem;
-      line-height: 1.4; } }
+      font-size: 1.5rem; } }
 
 h4 {
   font-size: 1.25rem;
-  line-height: 1.35;
+  line-height: 1.2;
   margin-bottom: 1.5rem;
   font-weight: bold; }
   @media (min-width: 992px) {
     h4 {
-      font-size: 1.125rem;
-      line-height: 1.3; } }
+      font-size: 1.125rem; } }
 
 h5 {
   font-size: 1rem;
-  line-height: 1.203;
+  line-height: 1.2;
   margin-bottom: .5rem;
   font-weight: bold; }
 
 .small-header,
 h6 {
   font-size: 0.75em;
-  line-height: 1.4;
+  line-height: 1.2;
   margin-bottom: .5rem;
   font-weight: bold; }
 
@@ -2928,14 +2935,13 @@ FEATURE LIST
 .site-content .eight-by-four,
 .site-content .six-by-six {
   font-size: 1rem;
-  line-height: 1.6;
+  line-height: 1.5;
   margin-bottom: 1.5rem; }
   @media (min-width: 992px) {
     .site-content p,
     .site-content .eight-by-four,
     .site-content .six-by-six {
-      font-size: 1.125rem;
-      line-height: 1.5; } }
+      font-size: 1.125rem; } }
 
 .site-content .eight-by-four .forward-link a,
 .site-content .six-by-six .forward-link a {
@@ -2950,8 +2956,7 @@ FEATURE LIST
   @media (min-width: 992px) {
     .site-content .page-intro,
     .site-content .page-intro p {
-      font-size: 1.25rem;
-      line-height: 1.5; } }
+      font-size: 1.25rem; } }
 
 .site-content .main-content h2 {
   border-top: solid 1px #333;
@@ -3498,13 +3503,12 @@ IN PAGE NAV MENU
         max-width: 75%; } }
   .openday h1 {
     font-size: 1.5rem;
-    line-height: 1.23;
+    line-height: 1.2;
     margin-bottom: 1.5rem;
     font-weight: bold; }
     @media (min-width: 992px) {
       .openday h1 {
-        font-size: 1.875rem;
-        line-height: 1.35; } }
+        font-size: 1.875rem; } }
   .openday .inpage-feed__right,
   .openday .inpage-feed__left {
     border-top: none; }
@@ -3692,14 +3696,13 @@ html.js input.throbbing {
   .faculty-list-results .search-results__result-counter,
   .course-finder-subject-list .search-results__result-counter {
     font-size: 1rem;
-    line-height: 1.6;
+    line-height: 1.5;
     margin-bottom: 1.5rem; }
     @media (min-width: 992px) {
       .course-finder-search-results .search-results__result-counter,
       .faculty-list-results .search-results__result-counter,
       .course-finder-subject-list .search-results__result-counter {
-        font-size: 1.125rem;
-        line-height: 1.5; } }
+        font-size: 1.125rem; } }
   .course-finder-search-results .result-item,
   .faculty-list-results .result-item,
   .course-finder-subject-list .result-item {
@@ -3714,7 +3717,7 @@ html.js input.throbbing {
     .faculty-list-results .result-item a,
     .course-finder-subject-list .result-item a {
       font-size: 1.25rem;
-      line-height: 1.35;
+      line-height: 1.2;
       margin-bottom: 1.5rem;
       font-weight: bold;
       margin-bottom: 0; }
@@ -3722,8 +3725,7 @@ html.js input.throbbing {
         .course-finder-search-results .result-item a,
         .faculty-list-results .result-item a,
         .course-finder-subject-list .result-item a {
-          font-size: 1.125rem;
-          line-height: 1.3; } }
+          font-size: 1.125rem; } }
     .course-finder-search-results .result-item a, .course-finder-search-results .result-item span,
     .faculty-list-results .result-item a,
     .faculty-list-results .result-item span,
@@ -3736,14 +3738,13 @@ html.js input.throbbing {
     .faculty-list-results .result-item .search-results__dept,
     .course-finder-subject-list .result-item .search-results__dept {
       font-size: 1rem;
-      line-height: 1.6;
+      line-height: 1.5;
       margin-bottom: 1.5rem; }
       @media (min-width: 992px) {
         .course-finder-search-results .result-item .search-results__dept,
         .faculty-list-results .result-item .search-results__dept,
         .course-finder-subject-list .result-item .search-results__dept {
-          font-size: 1.125rem;
-          line-height: 1.5; } }
+          font-size: 1.125rem; } }
     @media (min-width: 576px) {
       .course-finder-search-results .result-item svg,
       .faculty-list-results .result-item svg,
@@ -3770,14 +3771,13 @@ html.js input.throbbing {
 
 .course-finder-faculty-list .accordion__title p {
   font-size: 1rem;
-  line-height: 1.6;
+  line-height: 1.5;
   margin-bottom: 1.5rem;
   font-weight: normal;
   margin-bottom: 0; }
   @media (min-width: 992px) {
     .course-finder-faculty-list .accordion__title p {
-      font-size: 1.125rem;
-      line-height: 1.5; } }
+      font-size: 1.125rem; } }
 
 .course-finder-subject-list .accordion__title h3 {
   margin-bottom: 0; }
@@ -4787,12 +4787,11 @@ FEATURE LINK
     padding: 20px 12px; }
     .feature-link .feature-link_content .field-content-summary {
       font-size: 1rem;
-      line-height: 1.6;
+      line-height: 1.5;
       margin-bottom: 1.5rem; }
       @media (min-width: 992px) {
         .feature-link .feature-link_content .field-content-summary {
-          font-size: 1.125rem;
-          line-height: 1.5; } }
+          font-size: 1.125rem; } }
   .feature-link .feature-link_image img {
     margin-bottom: 0; }
   .feature-link a {
@@ -5114,7 +5113,7 @@ ALERTS
     color: inherit; }
   .cta-box p {
     font-size: 1rem;
-    line-height: 1.3;
+    line-height: 1.5;
     margin-bottom: 1.5rem; }
   .cta-box p:hover,
   .cta-box .cta-box__btn__text:hover {
