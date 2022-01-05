@@ -75,8 +75,8 @@ section,
 
 }
 
-	
-	// removes bullet points on tabs in editor view
+
+// removes bullet points on tabs in editor view
 ul.primary {
 	padding-left: 0;
 	li {
@@ -136,8 +136,12 @@ FEATURE LIST
 }
 
 
-/*-----  TEMPLATE CONTENT CUSTOM STYLES ---------- 
---------------------------------------*/
+/*----------------------------------------------  
+TEMPLATE CONTENT CUSTOM STYLES - SEE ALSO MIXINS 
+------------------------------------------------*/
+
+
+//INCLUDES MAIN BODY P TEXT
 
 .site-content {
 	p, 
@@ -151,12 +155,17 @@ FEATURE LIST
 		font-size: 1rem;
 	}
 
+
+// STANDFIRST
+
 	.page-intro, 
 	.page-intro p {
 		@include standfirst;
 		margin-bottom: 1.8rem;
 		}
-		
+
+
+// SECTION HEADER WITH BLACK TOP BORDER
 	.main-content h2 {
 		border-top: solid 1px #333;
 		padding-top: 1.875rem;
@@ -164,10 +173,14 @@ FEATURE LIST
 		clear: both;
 	}
 
+	// COURSE PAGE LOCATION DETAILS NOT USED IN CURRENT VERSION.
+
 	.top-course-details {
 		color: #5c5c5c;
 		margin-bottom: 2.8125rem;
 	}
+
+
 	
 	.right-column {
 		& > h3,
@@ -176,20 +189,19 @@ FEATURE LIST
 			border-top: solid 1px $darkgray;
 			padding-top: 1.25rem;
 			 }
-	p {
-		margin-bottom: 0.75rem;
+		p {
+			margin-bottom: 0.75rem;
+			}
+
+		.contact-info { 
+			h4 {
+				font-weight: bold;
+				margin-top: 1.875rem;
+				}	
+			margin-bottom: 2.5rem;
+			}	
 		}
 
-	.contact-info {
-		margin-bottom: 2.5rem;
-	}
-
-	.contact-info h4{
-		font-weight: bold;
-		margin-top: 1.875rem;
-		}
-	
-	}
 	.view-list ul,
 	.right-page-nav ul {
 		padding:0;

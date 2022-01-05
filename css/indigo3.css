@@ -1,10 +1,11 @@
 /*--------------------------------------
  BODY CONTENT TEXT STYLES
- DEFAULT PARAGRAPH STYLES 
+ BASE PARAGRAPH STYLES 
  ---------------------------------------*/
 /* ------------------------------ 
 CLEAR LEFT STYLES 
 ILLUSTRATED IN COMPONENT SECTION 
+NOT REALLY USED AT THE MOMENT
 --------------------------------*/
 /*---------------------------
 SETS FULL WIDTH BACKGROUND ON BLOCK
@@ -2929,8 +2930,9 @@ FEATURE LIST
   .feature-list a.forward-link__anchor {
     font-size: 1rem; }
 
-/*-----  TEMPLATE CONTENT CUSTOM STYLES ---------- 
---------------------------------------*/
+/*----------------------------------------------  
+TEMPLATE CONTENT CUSTOM STYLES - SEE ALSO MIXINS 
+------------------------------------------------*/
 .site-content p,
 .site-content .eight-by-four,
 .site-content .six-by-six {
@@ -2979,10 +2981,9 @@ FEATURE LIST
 
 .site-content .right-column .contact-info {
   margin-bottom: 2.5rem; }
-
-.site-content .right-column .contact-info h4 {
-  font-weight: bold;
-  margin-top: 1.875rem; }
+  .site-content .right-column .contact-info h4 {
+    font-weight: bold;
+    margin-top: 1.875rem; }
 
 .site-content .view-list ul,
 .site-content .right-page-nav ul {

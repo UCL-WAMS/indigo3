@@ -76,7 +76,7 @@
 
 /*--------------------------------------
  BODY CONTENT TEXT STYLES
- DEFAULT PARAGRAPH STYLES 
+ BASE PARAGRAPH STYLES 
  ---------------------------------------*/
 
 @mixin body-content-text {
@@ -87,7 +87,7 @@
 		font-size: 1.125rem;
 		}
 }
-//  BODY CONTENT PARAGRAPH TEXT - PROSE ONE 16px 18px
+//  BODY CONTENT PARAGRAPH TEXT - ALSO SEE PROSE ONE 16px 18px
 
 
 @mixin standfirst {
@@ -104,6 +104,7 @@
 /* ------------------------------ 
 CLEAR LEFT STYLES 
 ILLUSTRATED IN COMPONENT SECTION 
+NOT REALLY USED AT THE MOMENT
 --------------------------------*/
 
 // DEFAULT STYLES 
