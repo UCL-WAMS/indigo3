@@ -130,7 +130,7 @@ NOT REALLY USED AT THE MOMENT
 } 
 // 12px
 
-// PROSE STYLES  
+// PROSE STYLES  includes an extra step for body content size not included in components.
 
 @mixin prose-two {
 	font-size: 1.25rem;
@@ -150,7 +150,7 @@ NOT REALLY USED AT THE MOMENT
 		font-size: 1.25rem;	
 		}		
 }
-//20px 18px 
+//20px 18px  min-prose-step one (18) used for body text
 
 @mixin prose-zero {
 	font-size: 1rem;
@@ -160,7 +160,7 @@ NOT REALLY USED AT THE MOMENT
 		font-size: 1.125rem;
 		}
 }
-// 16px 18px
+// 16px 18px prose one in components
 
 @mixin prose-minus-one {
 	font-size: 0.75rem;
@@ -168,7 +168,6 @@ NOT REALLY USED AT THE MOMENT
 	margin-bottom: .5rem;
 }
 // 12px
-
 
 
 /*---------------------------

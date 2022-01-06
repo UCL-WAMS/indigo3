@@ -41,48 +41,32 @@ h6 {
 }
 
 
+/*---------------------------
+LISTS
+----------------------------*/
 
-/*--------------------------
-PLAIN LIST
--------------------------*/
-section, 
-.site-content {
-
-	ul {
-		position: relative; 
-		list-style: none;
-	   @include media-breakpoint-up(sm) {
-	   	padding-left: 4.6875rem;
-	   }
-	   li {
-		font-size: 1rem; 
-		line-height: 1.5; 
-		color: #333333;
-	@include media-breakpoint-only(md){ 
-		font-size: .75rem;
-		}
-		&:before {
-			content: "\2022"; 
-			color: $brightblue;
-			font-size: 1.3rem;
-  			display: inline-block; 
-  			width: 1rem;
-  			margin-left: -1rem
-			}
-		}
+ol,
+dl {
+	padding-left: 0; 
+	@include body-content-text;
+	color: #000;
 	}
-	
 
-}
+// BULLET LIST USE SMALLER FONT SIZE - OL DL USE BODY TEXT SIZE.
 
+ul { 
+	font-size: 1rem; 
+	padding-left: 0;
+	line-height: 1.5;
+	}
 
-// removes bullet points on tabs in editor view
+	// removes bullet points on tabs in editor view
 ul.primary {
 	padding-left: 0;
 	li {
 	line-height: normal;
 		a {
-		padding-top:5px;
+		padding-top: 5px;
 		}
 		&:before {
 		content: none;
@@ -96,20 +80,32 @@ FEATURE LIST
 
 
 .feature-list	{
-	position: relative;
-	padding-right: 15%; 
-	margin-top: 2em;
+	padding-right: 5%; 
 	margin-bottom: 1.5em;
+	ul {
+		padding-left: 1rem;
+		clear: both;
+		padding-top: 1.5rem;
+ @include media-breakpoint-up(sm) {
+	   	padding-left: 4.6875rem;
+	   }
+		li {
+			padding-left: 1.25rem;
+			color: #858585;
+			margin-bottom: 1rem;
+			&::marker {
+				color: #000;
+			}
+		}
+	}
+	svg {
+		stroke: currentColor;
+		}
 	svg.feather,
 	svg.icon {
-		display: inline-block; 
-		margin-right: 20px; 
-		vertical-align: top;
-		@include media-breakpoint-only(md)  {
-		width: 30px;
-		height: 30px;
-	}
-	&.forward-link__svg {
+		float: left;
+		margin-right: 1.25rem; 
+		&.forward-link__svg {
 		margin-right: 0;
 		vertical-align: 1px;
 	@include media-breakpoint-only(md)  {
@@ -119,18 +115,28 @@ FEATURE LIST
 		}
 	}
 	h4 {
-		display: inline-block; 
+		float: left;
 		width: 60%;
-		margin-bottom: .5em;
+		margin-bottom: 0.5rem;
+		padding-top: 0.75rem;
+	@include media-breakpoint-up(md){ 
+		padding-top: 0;
+		vertical-align: top;
+		}
 	@include media-breakpoint-up(lg){ 
 		width: 70%;
 		}
 	}
 	.forward-link{
-		margin-left: 3em;
+		margin-left: 0;
+		@include media-breakpoint-up(sm) {
+			margin-left: 3.8rem;
+		}
 	}
 	a.forward-link__anchor {
 		font-size: 1rem;
+		vertical-align: top;
+		padding-left: 0.5rem;
 	}
 
 }

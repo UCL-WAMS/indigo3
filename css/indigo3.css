@@ -2688,43 +2688,66 @@ WHERE POSSIBLE THEY NEED TO BE REPLACED IN THE PROSPECTUS BY
 GENERIC STYLES IN THE NEXT ITERATION OF THIS SITE
 AND THIS FOLDER DELETED.  THESE ARE NOT CUSTOM STYLES!
 --------------------------------------------------------------------------------------------*/
-.site-prospective-students-graduate .header {
-  border-bottom: #00818F 1em solid; }
-  .site-prospective-students-graduate .header #logo {
-    background: #00818F; }
-
-.site-prospective-students-graduate .hero-content.text-only {
-  background-color: #00818F;
-  color: #fff;
-  padding: 2.5rem 1rem; }
-  .site-prospective-students-graduate .hero-content.text-only .hero-text {
-    position: relative;
-    width: 100%;
-    padding-right: 16px;
-    padding-left: 16px;
-    padding: 0; }
+.site-prospective-students-graduate {
+  /*--------------------------
+PLAIN LIST
+-------------------------*/ }
+  .site-prospective-students-graduate .header {
+    border-bottom: #00818F 1em solid; }
+    .site-prospective-students-graduate .header #logo {
+      background: #00818F; }
+  .site-prospective-students-graduate .hero-content.text-only {
+    background-color: #00818F;
+    color: #fff;
+    padding: 2.5rem 1rem; }
+    .site-prospective-students-graduate .hero-content.text-only .hero-text {
+      position: relative;
+      width: 100%;
+      padding-right: 16px;
+      padding-left: 16px;
+      padding: 0; }
+      @media (min-width: 576px) {
+        .site-prospective-students-graduate .hero-content.text-only .hero-text {
+          flex: 0 0 100%;
+          max-width: 100%; } }
+    .site-prospective-students-graduate .hero-content.text-only h1 {
+      font-size: 2.25rem;
+      line-height: 1.2; }
+    .site-prospective-students-graduate .hero-content.text-only p {
+      font-weight: bold;
+      font-size: 1.5rem;
+      line-height: 1.9rem; }
+    .site-prospective-students-graduate .hero-content.text-only .hero-pic {
+      display: none; }
+    @media (min-width: 768px) {
+      .site-prospective-students-graduate .hero-content.text-only {
+        padding: 4.125rem 8.522% 4.125rem 8.522%; }
+        .site-prospective-students-graduate .hero-content.text-only h1 {
+          font-size: 3.8rem;
+          line-height: 1; }
+        .site-prospective-students-graduate .hero-content.text-only p {
+          font-size: 1.875rem;
+          line-height: 1.25; } }
+  .site-prospective-students-graduate section ul,
+  .site-prospective-students-graduate .site-content ul {
+    padding-left: 1rem; }
     @media (min-width: 576px) {
-      .site-prospective-students-graduate .hero-content.text-only .hero-text {
-        flex: 0 0 100%;
-        max-width: 100%; } }
-  .site-prospective-students-graduate .hero-content.text-only h1 {
-    font-size: 2.25rem;
-    line-height: 1.2; }
-  .site-prospective-students-graduate .hero-content.text-only p {
-    font-weight: bold;
-    font-size: 1.5rem;
-    line-height: 1.9rem; }
-  .site-prospective-students-graduate .hero-content.text-only .hero-pic {
-    display: none; }
-  @media (min-width: 768px) {
-    .site-prospective-students-graduate .hero-content.text-only {
-      padding: 4.125rem 8.522% 4.125rem 8.522%; }
-      .site-prospective-students-graduate .hero-content.text-only h1 {
-        font-size: 3.8rem;
-        line-height: 1; }
-      .site-prospective-students-graduate .hero-content.text-only p {
-        font-size: 1.875rem;
-        line-height: 1.25; } }
+      .site-prospective-students-graduate section ul,
+      .site-prospective-students-graduate .site-content ul {
+        padding-left: 4.6875rem; } }
+    .site-prospective-students-graduate section ul li,
+    .site-prospective-students-graduate .site-content ul li {
+      font-size: 1rem;
+      line-height: 1.5;
+      padding-left: 1.25rem;
+      margin-bottom: 1rem; }
+      .site-prospective-students-graduate section ul li::marker,
+      .site-prospective-students-graduate .site-content ul li::marker {
+        color: #00818F; }
+  .site-prospective-students-graduate .feature-list li {
+    color: #333; }
+  .site-prospective-students-graduate .feature-list svg {
+    stroke: #00818F; }
 
 .header__menu {
   position: relative;
@@ -2853,34 +2876,25 @@ h6 {
   margin-bottom: .5rem;
   font-weight: bold; }
 
-/*--------------------------
-PLAIN LIST
--------------------------*/
-section ul,
-.site-content ul {
-  position: relative;
-  list-style: none; }
-  @media (min-width: 576px) {
-    section ul,
-    .site-content ul {
-      padding-left: 4.6875rem; } }
-  section ul li,
-  .site-content ul li {
-    font-size: 1rem;
-    line-height: 1.5;
-    color: #333333; }
-    @media (min-width: 768px) and (max-width: 991.98px) {
-      section ul li,
-      .site-content ul li {
-        font-size: .75rem; } }
-    section ul li:before,
-    .site-content ul li:before {
-      content: "\2022";
-      color: #00818F;
-      font-size: 1.3rem;
-      display: inline-block;
-      width: 1rem;
-      margin-left: -1rem; }
+/*---------------------------
+LISTS
+----------------------------*/
+ol,
+dl {
+  padding-left: 0;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+  color: #000; }
+  @media (min-width: 992px) {
+    ol,
+    dl {
+      font-size: 1.125rem; } }
+
+ul {
+  font-size: 1rem;
+  padding-left: 0;
+  line-height: 1.5; }
 
 ul.primary {
   padding-left: 0; }
@@ -2895,20 +2909,27 @@ ul.primary {
 FEATURE LIST 
 --------------------------- */
 .feature-list {
-  position: relative;
-  padding-right: 15%;
-  margin-top: 2em;
+  padding-right: 5%;
   margin-bottom: 1.5em; }
+  .feature-list ul {
+    padding-left: 1rem;
+    clear: both;
+    padding-top: 1.5rem; }
+    @media (min-width: 576px) {
+      .feature-list ul {
+        padding-left: 4.6875rem; } }
+    .feature-list ul li {
+      padding-left: 1.25rem;
+      color: #858585;
+      margin-bottom: 1rem; }
+      .feature-list ul li::marker {
+        color: #000; }
+  .feature-list svg {
+    stroke: currentColor; }
   .feature-list svg.feather,
   .feature-list svg.icon {
-    display: inline-block;
-    margin-right: 20px;
-    vertical-align: top; }
-    @media (min-width: 768px) and (max-width: 991.98px) {
-      .feature-list svg.feather,
-      .feature-list svg.icon {
-        width: 30px;
-        height: 30px; } }
+    float: left;
+    margin-right: 1.25rem; }
     .feature-list svg.feather.forward-link__svg,
     .feature-list svg.icon.forward-link__svg {
       margin-right: 0;
@@ -2919,16 +2940,26 @@ FEATURE LIST
           width: 16px;
           height: 16px; } }
   .feature-list h4 {
-    display: inline-block;
+    float: left;
     width: 60%;
-    margin-bottom: .5em; }
+    margin-bottom: 0.5rem;
+    padding-top: 0.75rem; }
+    @media (min-width: 768px) {
+      .feature-list h4 {
+        padding-top: 0;
+        vertical-align: top; } }
     @media (min-width: 992px) {
       .feature-list h4 {
         width: 70%; } }
   .feature-list .forward-link {
-    margin-left: 3em; }
+    margin-left: 0; }
+    @media (min-width: 576px) {
+      .feature-list .forward-link {
+        margin-left: 3.8rem; } }
   .feature-list a.forward-link__anchor {
-    font-size: 1rem; }
+    font-size: 1rem;
+    vertical-align: top;
+    padding-left: 0.5rem; }
 
 /*----------------------------------------------  
 TEMPLATE CONTENT CUSTOM STYLES - SEE ALSO MIXINS 
@@ -3407,63 +3438,62 @@ TEACHER TRAINING
 /*------------------------------------
 IN PAGE NAV MENU
 --------------------------------------*/
-.floating-menu-widget {
+.site-prospective-students-graduate .floating-menu-widget {
   background: #333333;
   color: #fff;
   padding: 1rem 0.8rem 0;
   width: 10.5rem;
   position: fixed;
   top: 10%; }
-  .floating-menu-widget .feather-menu {
+  .site-prospective-students-graduate .floating-menu-widget .feather-menu {
     vertical-align: -7px;
     stroke: #ea7600;
     display: inline-block;
     margin-right: 0.7rem; }
-  .floating-menu-widget a {
+  .site-prospective-students-graduate .floating-menu-widget a {
     color: #d6d6d6;
     text-decoration: none; }
-    .floating-menu-widget a:hover {
+    .site-prospective-students-graduate .floating-menu-widget a:hover {
       text-decoration: underline; }
-  .floating-menu-widget h3 {
+  .site-prospective-students-graduate .floating-menu-widget h3 {
     display: inline-block;
     font-size: 0.9rem; }
-  .floating-menu-widget ul {
+  .site-prospective-students-graduate .floating-menu-widget ul {
     padding-left: 0.1rem;
-    margin-top: -0.5rem; }
-    .floating-menu-widget ul li {
+    margin-top: -0.5rem;
+    list-style: none; }
+    .site-prospective-students-graduate .floating-menu-widget ul li {
       font-size: 0.8rem;
-      line-height: 2; }
-      .floating-menu-widget ul li::before {
-        content: none; }
-      .floating-menu-widget ul li.active-menu-item {
-        padding-left: 7px; }
-      .floating-menu-widget ul li.active-menu-item::before {
+      line-height: 2;
+      margin-bottom: 0; }
+      .site-prospective-students-graduate .floating-menu-widget ul li .active-menu-item a {
+        padding-left: 10px; }
+      .site-prospective-students-graduate .floating-menu-widget ul li.active-menu-item::before {
         content: "\2023";
         color: #ea7600;
-        font-size: 0.8rem;
-        margin-left: 0; }
+        margin-right: 7px; }
   @media (min-width: 768px) {
-    .floating-menu-widget {
+    .site-prospective-students-graduate .floating-menu-widget {
       position: static;
       border-bottom: #00818F 1em solid;
       padding: 1.5rem 1rem 0;
       width: 13rem; }
-      .floating-menu-widget ul li {
+      .site-prospective-students-graduate .floating-menu-widget ul li {
         font-size: 1rem;
         line-height: 1.5; }
-        .floating-menu-widget ul li.active-menu-item::before {
-          font-size: 1rem; }
-      .floating-menu-widget h3 {
+        .site-prospective-students-graduate .floating-menu-widget ul li.active-menu-item::before {
+          font-size: 1.5rem; }
+      .site-prospective-students-graduate .floating-menu-widget h3 {
         font: 1rem; } }
   @media (max-width: 767.98px) {
-    .floating-menu-widget {
+    .site-prospective-students-graduate .floating-menu-widget {
       right: 0;
       top: 140px; } }
   @media (min-width: 576px) and (max-width: 991.98px) {
-    .floating-menu-widget {
+    .site-prospective-students-graduate .floating-menu-widget {
       right: 0;
       top: 170px; } }
-  .floating-menu-widget .hidden-menu-links.hide {
+  .site-prospective-students-graduate .floating-menu-widget .hidden-menu-links.hide {
     display: none; }
 
 .floating-menu {
@@ -3476,6 +3506,11 @@ IN PAGE NAV MENU
 .affixed-end-of-container {
   position: relative;
   top: 100%; }
+
+.feature-list {
+  margin-top: 2em; }
+  .feature-list div, .feature-list p {
+    clear: both; }
 
 .openday {
   margin-top: 1rem; }
@@ -3643,13 +3678,14 @@ IN PAGE NAV MENU
     color: #fff;
     font-size: 1rem;
     cursor: pointer; }
-  .course-search-box #autocomplete li {
-    line-height: normal; }
-    .course-search-box #autocomplete li:before {
-      content: none; }
-    .course-search-box #autocomplete li div {
+  .course-search-box #autocomplete {
+    background: white;
+    padding-top: 1rem; }
+    .course-search-box #autocomplete div {
       padding-left: 1.5%; }
-    .course-search-box #autocomplete li.selected {
+    .course-search-box #autocomplete li {
+      padding: 10px 0; }
+    .course-search-box #autocomplete.selected {
       background: #0D68CF; }
 
 .tabs__content .course-search-box {
