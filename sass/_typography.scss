@@ -57,22 +57,39 @@ dl {
 ul { 
 	font-size: 1rem; 
 	padding-left: 0;
-	line-height: 1.5;
+	line-height: 1.5;	
 	}
 
-	// removes bullet points on tabs in editor view
-ul.primary {
-	padding-left: 0;
-	li {
-	line-height: normal;
-		a {
-		padding-top: 5px;
-		}
-		&:before {
-		content: none;
-		}
+.main-content {
+	ul,
+	dl {
+	padding-left: 16px;
+	}
+	ol {
+	padding-left: 19px;
 	}
 }
+
+// Styling for editor view/edit tabs at top of page when logged in
+
+.site-prospective-students-graduate {
+		ul.primary,
+	ul.primary li {
+		padding: 0;
+		margin-left: 0;
+		line-height: 0;
+		}
+	ul.primary a{
+		padding: 5px 1rem 1px 1rem;
+		}
+} 
+
+ul.primary {
+		margin-bottom: 1.5rem;
+		}
+
+
+
 
 /*--------------------------------
 FEATURE LIST 
@@ -91,7 +108,6 @@ FEATURE LIST
 	   }
 		li {
 			padding-left: 1.25rem;
-			color: #858585;
 			margin-bottom: 1rem;
 			&::marker {
 				color: #000;
@@ -172,12 +188,15 @@ TEMPLATE CONTENT CUSTOM STYLES - SEE ALSO MIXINS
 
 
 // SECTION HEADER WITH BLACK TOP BORDER
+// NB SEE ALSO LAYOUT PATTERNS FOR MODIFICATIONS TO H2 STYLING 
 	.main-content h2 {
 		border-top: solid 1px #333;
 		padding-top: 1.875rem;
 		margin-top: 1.875rem;
 		clear: both;
 	}
+
+
 
 	// COURSE PAGE LOCATION DETAILS NOT USED IN CURRENT VERSION.
 

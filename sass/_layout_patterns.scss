@@ -56,7 +56,9 @@
 	padding: 0;
 	margin: 0;
 	h2 {
-		border-top: 0
+		border-top: 0;
+		margin-top: 0;
+		padding-top: 0;
 	} 
  @include media-breakpoint-up(xs) {
 	max-width: none;
@@ -80,6 +82,7 @@
 	padding: 0;
 }
 
+
 // OTHER MEDIA QUERY STYLES FOR COLUMNS
 
 .six-by-six__right, .six-by-six__left {
@@ -92,11 +95,14 @@
  @include media-breakpoint-up(md) {
  	.six-by-six__right,
  	.six-by-six__left {
-	padding-right: 1em;
-	padding-bottom: 1.875rem;
-
-	}
-
+		padding-bottom: 1.875rem;
+		}
+	.six-by-six__left {
+		padding-right: 1rem;
+		}
+	.six-by-six__right {
+		padding-left: 1rem;
+		}
 }
 
 
@@ -108,9 +114,17 @@
 .container.eight-by-four {
 	padding: 0 0 1.875rem;
 	margin: 0;
-	h2 {
-		border-top: 0
+h2 {
+		border-top: 0;
+		margin-top: 0;
+		padding-top: 0;
 	} 
+@include media-breakpoint-up(xs) {
+	max-width: none;
+	}
+@include media-breakpoint-up(sm) {
+	max-width: none;
+	}
 }
 
 
@@ -136,6 +150,21 @@
 }
 
 
+.eight-by-four__right {
+	 @include media-breakpoint-up(md) {
+	 	padding-left: 1rem;
+	 }
+}
+.eight-by-four__left {
+	padding-bottom: 1.5rem;
+	 @include media-breakpoint-up(md) {
+	 	padding-right: 1rem;
+	 	padding-bottom: 0;
+	 }
+}
+
+
+// RIGHT COLUMN BREAKS OUT OF RIGHT ALIGNMENT
 
 
 .eight-by-four__right a.card-link {
@@ -159,6 +188,13 @@
 	h2 {
 		border-top: 0
 	} 
+	@include media-breakpoint-up(xs) {
+	max-width: none;
+	}
+
+ 	@include media-breakpoint-up(sm) {
+	max-width: none;
+	}
 }
 
 
@@ -183,6 +219,17 @@
 	padding: 0;
 	}
 
+
+.four-by-eight__right {
+	@include media-breakpoint-up(md) {
+		padding-left: 1rem;
+	}
+}
+.four-by-eight__left {
+	@include media-breakpoint-up(md) {
+		padding-right: 1rem;
+		}
+	}
 
 
 /*---------------------- THREE 	EQUAL COLUMNS SUB LAYOUT -------------------------*/

@@ -2896,14 +2896,24 @@ ul {
   padding-left: 0;
   line-height: 1.5; }
 
+.main-content ul,
+.main-content dl {
+  padding-left: 16px; }
+
+.main-content ol {
+  padding-left: 19px; }
+
+.site-prospective-students-graduate ul.primary,
+.site-prospective-students-graduate ul.primary li {
+  padding: 0;
+  margin-left: 0;
+  line-height: 0; }
+
+.site-prospective-students-graduate ul.primary a {
+  padding: 5px 1rem 1px 1rem; }
+
 ul.primary {
-  padding-left: 0; }
-  ul.primary li {
-    line-height: normal; }
-    ul.primary li a {
-      padding-top: 5px; }
-    ul.primary li:before {
-      content: none; }
+  margin-bottom: 1.5rem; }
 
 /*--------------------------------
 FEATURE LIST 
@@ -2920,7 +2930,6 @@ FEATURE LIST
         padding-left: 4.6875rem; } }
     .feature-list ul li {
       padding-left: 1.25rem;
-      color: #858585;
       margin-bottom: 1rem; }
       .feature-list ul li::marker {
         color: #000; }
@@ -3496,6 +3505,11 @@ IN PAGE NAV MENU
   .site-prospective-students-graduate .floating-menu-widget .hidden-menu-links.hide {
     display: none; }
 
+.site-prospective-students-graduate .feature-list {
+  margin-top: 2em; }
+  .site-prospective-students-graduate .feature-list div, .site-prospective-students-graduate .feature-list p {
+    clear: both; }
+
 .floating-menu {
   position: fixed;
   top: 10px; }
@@ -3506,11 +3520,6 @@ IN PAGE NAV MENU
 .affixed-end-of-container {
   position: relative;
   top: 100%; }
-
-.feature-list {
-  margin-top: 2em; }
-  .feature-list div, .feature-list p {
-    clear: both; }
 
 .openday {
   margin-top: 1rem; }
@@ -3930,7 +3939,9 @@ ol.alpha-list {
   margin: 0;
   max-width: none; }
   .container.six-by-six h2 {
-    border-top: 0; }
+    border-top: 0;
+    margin-top: 0;
+    padding-top: 0; }
   @media (min-width: 576px) {
     .container.six-by-six {
       max-width: none; } }
@@ -3957,16 +3968,25 @@ ol.alpha-list {
 @media (min-width: 768px) {
   .six-by-six__right,
   .six-by-six__left {
-    padding-right: 1em;
-    padding-bottom: 1.875rem; } }
+    padding-bottom: 1.875rem; }
+  .six-by-six__left {
+    padding-right: 1rem; }
+  .six-by-six__right {
+    padding-left: 1rem; } }
 
 /* ------------- TWO THIRDS AND A THIRD ------------------------*/
 /* ----------------- BIG COLUMN LEFT SMALL RIGHT -----------------*/
 .container.eight-by-four {
   padding: 0 0 1.875rem;
-  margin: 0; }
+  margin: 0;
+  max-width: none; }
   .container.eight-by-four h2 {
-    border-top: 0; }
+    border-top: 0;
+    margin-top: 0;
+    padding-top: 0; }
+  @media (min-width: 576px) {
+    .container.eight-by-four {
+      max-width: none; } }
 
 .eight-by-four__left {
   position: relative;
@@ -3991,6 +4011,17 @@ ol.alpha-list {
       max-width: 33.3333333333%; } }
 
 @media (min-width: 768px) {
+  .eight-by-four__right {
+    padding-left: 1rem; } }
+
+.eight-by-four__left {
+  padding-bottom: 1.5rem; }
+  @media (min-width: 768px) {
+    .eight-by-four__left {
+      padding-right: 1rem;
+      padding-bottom: 0; } }
+
+@media (min-width: 768px) {
   .eight-by-four__right a.card-link {
     margin-right: -2rem;
     margin-left: 2rem; } }
@@ -3999,9 +4030,13 @@ ol.alpha-list {
 /* ----------------- BIG COLUMN RIGHT SMALL LEFT -----------------*/
 .container.four-by-eight {
   padding: 0 0 1.875rem;
-  margin: 0; }
+  margin: 0;
+  max-width: none; }
   .container.four-by-eight h2 {
     border-top: 0; }
+  @media (min-width: 576px) {
+    .container.four-by-eight {
+      max-width: none; } }
 
 .four-by-eight__left {
   position: relative;
@@ -4024,6 +4059,14 @@ ol.alpha-list {
     .four-by-eight__right {
       flex: 0 0 66.6666666667%;
       max-width: 66.6666666667%; } }
+
+@media (min-width: 768px) {
+  .four-by-eight__right {
+    padding-left: 1rem; } }
+
+@media (min-width: 768px) {
+  .four-by-eight__left {
+    padding-right: 1rem; } }
 
 /*---------------------- THREE 	EQUAL COLUMNS SUB LAYOUT -------------------------*/
 .four-by-four-by-four.container {
@@ -5733,8 +5776,7 @@ FULL WIDTH HOME HERO
   max-height: 450px;
   background-size: cover;
   background-position: 50% 50%;
-  background-repeat: no-repeat;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)); }
+  background-repeat: no-repeat; }
   .hero-home .hero-home__container {
     color: #fff;
     max-width: 1408px;
