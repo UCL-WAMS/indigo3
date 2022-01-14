@@ -34,20 +34,19 @@
 
 //AUTO COMPLETE OVERIDES 
       #autocomplete  {
-        li {
-          line-height: normal;
-        &:before {
-          content: none; 
-          }
+        background: white;
+        padding-top: 1rem;
         div {
           padding-left: 1.5%;
           }
+        li {
+          padding: 10px 0;
+        }
         &.selected {
           background: $utilityblue;
           }
         }
-      }  
-    }
+      }
 
 
 // SEARCH BOX WIDGET FOR DEGREE HUB PAGE

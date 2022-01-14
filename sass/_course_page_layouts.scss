@@ -413,6 +413,7 @@ TEACHER TRAINING
 IN PAGE NAV MENU
 --------------------------------------*/
 
+.site-prospective-students-graduate {
 
 .floating-menu-widget {
         background: $darkgray;
@@ -428,35 +429,34 @@ IN PAGE NAV MENU
         	stroke: $orange;
         	display:inline-block;
         	margin-right: 0.7rem;
-        }
+        	}
         a {
         	color: #d6d6d6;
         	text-decoration: none;
         	&:hover {
-        		text-decoration: underline;        	}
-        }
+        		text-decoration: underline; 
+        		}
+        	}
         h3 {
             display: inline-block;
             font-size: 0.9rem;
-        }
+        	}
         ul {
         	padding-left: 0.1rem; 
         	margin-top: -0.5rem;
+        	list-style: none;
 
         	li {
         		font-size: 0.8rem;
         		line-height: 2;
-        		&::before {
-        		content: none;
-        		}
-        		&.active-menu-item{ 
-            	padding-left: 7px;  
+        		margin-bottom: 0;
+           		.active-menu-item a{ 
+            	padding-left: 10px;  
             	}
             	&.active-menu-item::before {
    				content: "\2023";
         		color: $orange;
-        		font-size: 0.8rem;
-        		margin-left: 0;
+           		margin-right: 7px;
         		}
         	}       
         }
@@ -470,8 +470,8 @@ IN PAGE NAV MENU
         		font-size: 1rem;
         		line-height: 1.5;
         		&.active-menu-item::before {
-        		font-size: 1rem;
-        		}        		
+        		font-size: 1.5rem;
+           		}        		
         	}
         	h3 {
         		font: 1rem;
@@ -493,6 +493,17 @@ IN PAGE NAV MENU
        
   }
 
+ // FEATURE LIST CONTENT THAT IS NOT A LIST.  CLEARS FLOATING HEADER AND ICON
+
+  	.feature-list{
+  		 margin-top: 2em;
+  		div, p {
+  			clear: both;
+  		}
+  	}  
+  
+}
+
 // JS RELATED CLASSES LEAVE HERE 
 
     // DESK TOP POSITION
@@ -509,6 +520,8 @@ IN PAGE NAV MENU
         position: relative;
         top: 100%;
       }
+
+ 
 
 
 // TEMPORARY 09/21 OPENDAYS EVENT FINDER - REPEATS SOME OF THE GLOBAL STYLES BUT ADDED HERE UNTIL FINAL STYLED PAGE IS DEPLOYED-DEVELOPED.

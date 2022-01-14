@@ -1,3 +1,15 @@
+/*--------------------------------------
+ BODY CONTENT TEXT STYLES
+ BASE PARAGRAPH STYLES 
+ ---------------------------------------*/
+/* ------------------------------ 
+CLEAR LEFT STYLES 
+ILLUSTRATED IN COMPONENT SECTION 
+NOT REALLY USED AT THE MOMENT
+--------------------------------*/
+/*---------------------------
+SETS FULL WIDTH BACKGROUND ON BLOCK
+---------------------------*/
 /* -------------------
 INDIGO RESET 
 --------------------- */
@@ -2676,43 +2688,66 @@ WHERE POSSIBLE THEY NEED TO BE REPLACED IN THE PROSPECTUS BY
 GENERIC STYLES IN THE NEXT ITERATION OF THIS SITE
 AND THIS FOLDER DELETED.  THESE ARE NOT CUSTOM STYLES!
 --------------------------------------------------------------------------------------------*/
-.site-prospective-students-graduate .header {
-  border-bottom: #00818F 1em solid; }
-  .site-prospective-students-graduate .header #logo {
-    background: #00818F; }
-
-.site-prospective-students-graduate .hero-content.text-only {
-  background-color: #00818F;
-  color: #fff;
-  padding: 2.5rem 1rem; }
-  .site-prospective-students-graduate .hero-content.text-only .hero-text {
-    position: relative;
-    width: 100%;
-    padding-right: 16px;
-    padding-left: 16px;
-    padding: 0; }
+.site-prospective-students-graduate {
+  /*--------------------------
+PLAIN LIST
+-------------------------*/ }
+  .site-prospective-students-graduate .header {
+    border-bottom: #00818F 1em solid; }
+    .site-prospective-students-graduate .header #logo {
+      background: #00818F; }
+  .site-prospective-students-graduate .hero-content.text-only {
+    background-color: #00818F;
+    color: #fff;
+    padding: 2.5rem 1rem; }
+    .site-prospective-students-graduate .hero-content.text-only .hero-text {
+      position: relative;
+      width: 100%;
+      padding-right: 16px;
+      padding-left: 16px;
+      padding: 0; }
+      @media (min-width: 576px) {
+        .site-prospective-students-graduate .hero-content.text-only .hero-text {
+          flex: 0 0 100%;
+          max-width: 100%; } }
+    .site-prospective-students-graduate .hero-content.text-only h1 {
+      font-size: 2.25rem;
+      line-height: 1.2; }
+    .site-prospective-students-graduate .hero-content.text-only p {
+      font-weight: bold;
+      font-size: 1.5rem;
+      line-height: 1.9rem; }
+    .site-prospective-students-graduate .hero-content.text-only .hero-pic {
+      display: none; }
+    @media (min-width: 768px) {
+      .site-prospective-students-graduate .hero-content.text-only {
+        padding: 4.125rem 8.522% 4.125rem 8.522%; }
+        .site-prospective-students-graduate .hero-content.text-only h1 {
+          font-size: 3.8rem;
+          line-height: 1; }
+        .site-prospective-students-graduate .hero-content.text-only p {
+          font-size: 1.875rem;
+          line-height: 1.25; } }
+  .site-prospective-students-graduate section ul,
+  .site-prospective-students-graduate .site-content ul {
+    padding-left: 1rem; }
     @media (min-width: 576px) {
-      .site-prospective-students-graduate .hero-content.text-only .hero-text {
-        flex: 0 0 100%;
-        max-width: 100%; } }
-  .site-prospective-students-graduate .hero-content.text-only h1 {
-    font-size: 2.25rem;
-    line-height: 1.2; }
-  .site-prospective-students-graduate .hero-content.text-only p {
-    font-weight: bold;
-    font-size: 1.5rem;
-    line-height: 1.9rem; }
-  .site-prospective-students-graduate .hero-content.text-only .hero-pic {
-    display: none; }
-  @media (min-width: 768px) {
-    .site-prospective-students-graduate .hero-content.text-only {
-      padding: 4.125rem 8.522% 4.125rem 8.522%; }
-      .site-prospective-students-graduate .hero-content.text-only h1 {
-        font-size: 3.8rem;
-        line-height: 1; }
-      .site-prospective-students-graduate .hero-content.text-only p {
-        font-size: 1.875rem;
-        line-height: 1.25; } }
+      .site-prospective-students-graduate section ul,
+      .site-prospective-students-graduate .site-content ul {
+        padding-left: 4.6875rem; } }
+    .site-prospective-students-graduate section ul li,
+    .site-prospective-students-graduate .site-content ul li {
+      font-size: 1rem;
+      line-height: 1.5;
+      padding-left: 1.25rem;
+      margin-bottom: 1rem; }
+      .site-prospective-students-graduate section ul li::marker,
+      .site-prospective-students-graduate .site-content ul li::marker {
+        color: #00818F; }
+  .site-prospective-students-graduate .feature-list li {
+    color: #333; }
+  .site-prospective-students-graduate .feature-list svg {
+    stroke: #00818F; }
 
 .header__menu {
   position: relative;
@@ -2794,113 +2829,116 @@ a {
 
 h1 {
   font-size: 1.875rem;
-  line-height: 1.25;
+  line-height: 1.2;
   margin-bottom: 1.5rem;
   font-weight: bold; }
   @media (min-width: 992px) {
     h1 {
-      font-size: 2.25rem;
-      line-height: 1.25; } }
+      font-size: 2.25rem; } }
 
 h2 {
   font-size: 1.5rem;
-  line-height: 1.23;
+  line-height: 1.2;
   margin-bottom: 1.5rem;
   font-weight: bold; }
   @media (min-width: 992px) {
     h2 {
-      font-size: 1.875rem;
-      line-height: 1.35; } }
+      font-size: 1.875rem; } }
 
 h3 {
   font-size: 1.25rem;
-  line-height: 1.3;
+  line-height: 1.2;
   margin-bottom: 1.5rem;
   font-weight: bold; }
   @media (min-width: 992px) {
     h3 {
-      font-size: 1.5rem;
-      line-height: 1.4; } }
+      font-size: 1.5rem; } }
 
 h4 {
   font-size: 1.25rem;
-  line-height: 1.35;
+  line-height: 1.2;
   margin-bottom: 1.5rem;
   font-weight: bold; }
   @media (min-width: 992px) {
     h4 {
-      font-size: 1.125rem;
-      line-height: 1.3; } }
+      font-size: 1.125rem; } }
 
 h5 {
   font-size: 1rem;
-  line-height: 1.203;
+  line-height: 1.2;
   margin-bottom: .5rem;
   font-weight: bold; }
 
 .small-header,
 h6 {
   font-size: 0.75em;
-  line-height: 1.4;
+  line-height: 1.2;
   margin-bottom: .5rem;
   font-weight: bold; }
 
-/*--------------------------
-PLAIN LIST
--------------------------*/
-section ul,
-.site-content ul {
-  position: relative;
-  list-style: none; }
-  @media (min-width: 576px) {
-    section ul,
-    .site-content ul {
-      padding-left: 4.6875rem; } }
-  section ul li,
-  .site-content ul li {
-    font-size: 1rem;
-    line-height: 1.5;
-    color: #333333; }
-    @media (min-width: 768px) and (max-width: 991.98px) {
-      section ul li,
-      .site-content ul li {
-        font-size: .75rem; } }
-    section ul li:before,
-    .site-content ul li:before {
-      content: "\2022";
-      color: #00818F;
-      font-size: 1.3rem;
-      display: inline-block;
-      width: 1rem;
-      margin-left: -1rem; }
+/*---------------------------
+LISTS
+----------------------------*/
+ol,
+dl {
+  padding-left: 0;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+  color: #000; }
+  @media (min-width: 992px) {
+    ol,
+    dl {
+      font-size: 1.125rem; } }
+
+ul {
+  font-size: 1rem;
+  padding-left: 0;
+  line-height: 1.5; }
+
+.main-content ul,
+.main-content dl {
+  padding-left: 16px; }
+
+.main-content ol {
+  padding-left: 19px; }
+
+.site-prospective-students-graduate ul.primary,
+.site-prospective-students-graduate ul.primary li {
+  padding: 0;
+  margin-left: 0;
+  line-height: 0; }
+
+.site-prospective-students-graduate ul.primary a {
+  padding: 5px 1rem 1px 1rem; }
 
 ul.primary {
-  padding-left: 0; }
-  ul.primary li {
-    line-height: normal; }
-    ul.primary li a {
-      padding-top: 5px; }
-    ul.primary li:before {
-      content: none; }
+  margin-bottom: 1.5rem; }
 
 /*--------------------------------
 FEATURE LIST 
 --------------------------- */
 .feature-list {
-  position: relative;
-  padding-right: 15%;
-  margin-top: 2em;
+  padding-right: 5%;
   margin-bottom: 1.5em; }
+  .feature-list ul {
+    padding-left: 1rem;
+    clear: both;
+    padding-top: 1.5rem; }
+    @media (min-width: 576px) {
+      .feature-list ul {
+        padding-left: 4.6875rem; } }
+    .feature-list ul li {
+      padding-left: 1.25rem;
+      margin-bottom: 1rem; }
+      .feature-list ul li::marker {
+        color: #000; }
+  .feature-list svg {
+    stroke: currentColor; }
   .feature-list svg.feather,
   .feature-list svg.icon {
-    display: inline-block;
-    margin-right: 20px;
-    vertical-align: top; }
-    @media (min-width: 768px) and (max-width: 991.98px) {
-      .feature-list svg.feather,
-      .feature-list svg.icon {
-        width: 30px;
-        height: 30px; } }
+    float: left;
+    margin-right: 1.25rem; }
     .feature-list svg.feather.forward-link__svg,
     .feature-list svg.icon.forward-link__svg {
       margin-right: 0;
@@ -2911,31 +2949,41 @@ FEATURE LIST
           width: 16px;
           height: 16px; } }
   .feature-list h4 {
-    display: inline-block;
+    float: left;
     width: 60%;
-    margin-bottom: .5em; }
+    margin-bottom: 0.5rem;
+    padding-top: 0.75rem; }
+    @media (min-width: 768px) {
+      .feature-list h4 {
+        padding-top: 0;
+        vertical-align: top; } }
     @media (min-width: 992px) {
       .feature-list h4 {
         width: 70%; } }
   .feature-list .forward-link {
-    margin-left: 3em; }
+    margin-left: 0; }
+    @media (min-width: 576px) {
+      .feature-list .forward-link {
+        margin-left: 3.8rem; } }
   .feature-list a.forward-link__anchor {
-    font-size: 1rem; }
+    font-size: 1rem;
+    vertical-align: top;
+    padding-left: 0.5rem; }
 
-/*-----  TEMPLATE CONTENT CUSTOM STYLES ---------- 
---------------------------------------*/
+/*----------------------------------------------  
+TEMPLATE CONTENT CUSTOM STYLES - SEE ALSO MIXINS 
+------------------------------------------------*/
 .site-content p,
 .site-content .eight-by-four,
 .site-content .six-by-six {
   font-size: 1rem;
-  line-height: 1.6;
+  line-height: 1.5;
   margin-bottom: 1.5rem; }
   @media (min-width: 992px) {
     .site-content p,
     .site-content .eight-by-four,
     .site-content .six-by-six {
-      font-size: 1.125rem;
-      line-height: 1.5; } }
+      font-size: 1.125rem; } }
 
 .site-content .eight-by-four .forward-link a,
 .site-content .six-by-six .forward-link a {
@@ -2950,8 +2998,7 @@ FEATURE LIST
   @media (min-width: 992px) {
     .site-content .page-intro,
     .site-content .page-intro p {
-      font-size: 1.25rem;
-      line-height: 1.5; } }
+      font-size: 1.25rem; } }
 
 .site-content .main-content h2 {
   border-top: solid 1px #333;
@@ -2974,10 +3021,9 @@ FEATURE LIST
 
 .site-content .right-column .contact-info {
   margin-bottom: 2.5rem; }
-
-.site-content .right-column .contact-info h4 {
-  font-weight: bold;
-  margin-top: 1.875rem; }
+  .site-content .right-column .contact-info h4 {
+    font-weight: bold;
+    margin-top: 1.875rem; }
 
 .site-content .view-list ul,
 .site-content .right-page-nav ul {
@@ -3401,64 +3447,68 @@ TEACHER TRAINING
 /*------------------------------------
 IN PAGE NAV MENU
 --------------------------------------*/
-.floating-menu-widget {
+.site-prospective-students-graduate .floating-menu-widget {
   background: #333333;
   color: #fff;
   padding: 1rem 0.8rem 0;
   width: 10.5rem;
   position: fixed;
   top: 10%; }
-  .floating-menu-widget .feather-menu {
+  .site-prospective-students-graduate .floating-menu-widget .feather-menu {
     vertical-align: -7px;
     stroke: #ea7600;
     display: inline-block;
     margin-right: 0.7rem; }
-  .floating-menu-widget a {
+  .site-prospective-students-graduate .floating-menu-widget a {
     color: #d6d6d6;
     text-decoration: none; }
-    .floating-menu-widget a:hover {
+    .site-prospective-students-graduate .floating-menu-widget a:hover {
       text-decoration: underline; }
-  .floating-menu-widget h3 {
+  .site-prospective-students-graduate .floating-menu-widget h3 {
     display: inline-block;
     font-size: 0.9rem; }
-  .floating-menu-widget ul {
+  .site-prospective-students-graduate .floating-menu-widget ul {
     padding-left: 0.1rem;
-    margin-top: -0.5rem; }
-    .floating-menu-widget ul li {
+    margin-top: -0.5rem;
+    list-style: none; }
+    .site-prospective-students-graduate .floating-menu-widget ul li {
       font-size: 0.8rem;
-      line-height: 2; }
-      .floating-menu-widget ul li::before {
-        content: none; }
-      .floating-menu-widget ul li.active-menu-item {
-        padding-left: 7px; }
-      .floating-menu-widget ul li.active-menu-item::before {
+      line-height: 2;
+      margin-bottom: 0; }
+      .site-prospective-students-graduate .floating-menu-widget ul li .active-menu-item a {
+        padding-left: 10px; }
+      .site-prospective-students-graduate .floating-menu-widget ul li.active-menu-item::before {
         content: "\2023";
         color: #ea7600;
-        font-size: 0.8rem;
-        margin-left: 0; }
+        margin-right: 7px; }
   @media (min-width: 768px) {
-    .floating-menu-widget {
+    .site-prospective-students-graduate .floating-menu-widget {
       position: static;
       border-bottom: #00818F 1em solid;
       padding: 1.5rem 1rem 0;
       width: 13rem; }
-      .floating-menu-widget ul li {
+      .site-prospective-students-graduate .floating-menu-widget ul li {
         font-size: 1rem;
         line-height: 1.5; }
-        .floating-menu-widget ul li.active-menu-item::before {
-          font-size: 1rem; }
-      .floating-menu-widget h3 {
+        .site-prospective-students-graduate .floating-menu-widget ul li.active-menu-item::before {
+          font-size: 1.5rem; }
+      .site-prospective-students-graduate .floating-menu-widget h3 {
         font: 1rem; } }
   @media (max-width: 767.98px) {
-    .floating-menu-widget {
+    .site-prospective-students-graduate .floating-menu-widget {
       right: 0;
       top: 140px; } }
   @media (min-width: 576px) and (max-width: 991.98px) {
-    .floating-menu-widget {
+    .site-prospective-students-graduate .floating-menu-widget {
       right: 0;
       top: 170px; } }
-  .floating-menu-widget .hidden-menu-links.hide {
+  .site-prospective-students-graduate .floating-menu-widget .hidden-menu-links.hide {
     display: none; }
+
+.site-prospective-students-graduate .feature-list {
+  margin-top: 2em; }
+  .site-prospective-students-graduate .feature-list div, .site-prospective-students-graduate .feature-list p {
+    clear: both; }
 
 .floating-menu {
   position: fixed;
@@ -3498,13 +3548,12 @@ IN PAGE NAV MENU
         max-width: 75%; } }
   .openday h1 {
     font-size: 1.5rem;
-    line-height: 1.23;
+    line-height: 1.2;
     margin-bottom: 1.5rem;
     font-weight: bold; }
     @media (min-width: 992px) {
       .openday h1 {
-        font-size: 1.875rem;
-        line-height: 1.35; } }
+        font-size: 1.875rem; } }
   .openday .inpage-feed__right,
   .openday .inpage-feed__left {
     border-top: none; }
@@ -3638,13 +3687,14 @@ IN PAGE NAV MENU
     color: #fff;
     font-size: 1rem;
     cursor: pointer; }
-  .course-search-box #autocomplete li {
-    line-height: normal; }
-    .course-search-box #autocomplete li:before {
-      content: none; }
-    .course-search-box #autocomplete li div {
+  .course-search-box #autocomplete {
+    background: white;
+    padding-top: 1rem; }
+    .course-search-box #autocomplete div {
       padding-left: 1.5%; }
-    .course-search-box #autocomplete li.selected {
+    .course-search-box #autocomplete li {
+      padding: 10px 0; }
+    .course-search-box #autocomplete.selected {
       background: #0D68CF; }
 
 .tabs__content .course-search-box {
@@ -3692,14 +3742,13 @@ html.js input.throbbing {
   .faculty-list-results .search-results__result-counter,
   .course-finder-subject-list .search-results__result-counter {
     font-size: 1rem;
-    line-height: 1.6;
+    line-height: 1.5;
     margin-bottom: 1.5rem; }
     @media (min-width: 992px) {
       .course-finder-search-results .search-results__result-counter,
       .faculty-list-results .search-results__result-counter,
       .course-finder-subject-list .search-results__result-counter {
-        font-size: 1.125rem;
-        line-height: 1.5; } }
+        font-size: 1.125rem; } }
   .course-finder-search-results .result-item,
   .faculty-list-results .result-item,
   .course-finder-subject-list .result-item {
@@ -3714,7 +3763,7 @@ html.js input.throbbing {
     .faculty-list-results .result-item a,
     .course-finder-subject-list .result-item a {
       font-size: 1.25rem;
-      line-height: 1.35;
+      line-height: 1.2;
       margin-bottom: 1.5rem;
       font-weight: bold;
       margin-bottom: 0; }
@@ -3722,8 +3771,7 @@ html.js input.throbbing {
         .course-finder-search-results .result-item a,
         .faculty-list-results .result-item a,
         .course-finder-subject-list .result-item a {
-          font-size: 1.125rem;
-          line-height: 1.3; } }
+          font-size: 1.125rem; } }
     .course-finder-search-results .result-item a, .course-finder-search-results .result-item span,
     .faculty-list-results .result-item a,
     .faculty-list-results .result-item span,
@@ -3736,14 +3784,13 @@ html.js input.throbbing {
     .faculty-list-results .result-item .search-results__dept,
     .course-finder-subject-list .result-item .search-results__dept {
       font-size: 1rem;
-      line-height: 1.6;
+      line-height: 1.5;
       margin-bottom: 1.5rem; }
       @media (min-width: 992px) {
         .course-finder-search-results .result-item .search-results__dept,
         .faculty-list-results .result-item .search-results__dept,
         .course-finder-subject-list .result-item .search-results__dept {
-          font-size: 1.125rem;
-          line-height: 1.5; } }
+          font-size: 1.125rem; } }
     @media (min-width: 576px) {
       .course-finder-search-results .result-item svg,
       .faculty-list-results .result-item svg,
@@ -3770,14 +3817,13 @@ html.js input.throbbing {
 
 .course-finder-faculty-list .accordion__title p {
   font-size: 1rem;
-  line-height: 1.6;
+  line-height: 1.5;
   margin-bottom: 1.5rem;
   font-weight: normal;
   margin-bottom: 0; }
   @media (min-width: 992px) {
     .course-finder-faculty-list .accordion__title p {
-      font-size: 1.125rem;
-      line-height: 1.5; } }
+      font-size: 1.125rem; } }
 
 .course-finder-subject-list .accordion__title h3 {
   margin-bottom: 0; }
@@ -3893,7 +3939,9 @@ ol.alpha-list {
   margin: 0;
   max-width: none; }
   .container.six-by-six h2 {
-    border-top: 0; }
+    border-top: 0;
+    margin-top: 0;
+    padding-top: 0; }
   @media (min-width: 576px) {
     .container.six-by-six {
       max-width: none; } }
@@ -3920,16 +3968,25 @@ ol.alpha-list {
 @media (min-width: 768px) {
   .six-by-six__right,
   .six-by-six__left {
-    padding-right: 1em;
-    padding-bottom: 1.875rem; } }
+    padding-bottom: 1.875rem; }
+  .six-by-six__left {
+    padding-right: 1rem; }
+  .six-by-six__right {
+    padding-left: 1rem; } }
 
 /* ------------- TWO THIRDS AND A THIRD ------------------------*/
 /* ----------------- BIG COLUMN LEFT SMALL RIGHT -----------------*/
 .container.eight-by-four {
   padding: 0 0 1.875rem;
-  margin: 0; }
+  margin: 0;
+  max-width: none; }
   .container.eight-by-four h2 {
-    border-top: 0; }
+    border-top: 0;
+    margin-top: 0;
+    padding-top: 0; }
+  @media (min-width: 576px) {
+    .container.eight-by-four {
+      max-width: none; } }
 
 .eight-by-four__left {
   position: relative;
@@ -3954,6 +4011,17 @@ ol.alpha-list {
       max-width: 33.3333333333%; } }
 
 @media (min-width: 768px) {
+  .eight-by-four__right {
+    padding-left: 1rem; } }
+
+.eight-by-four__left {
+  padding-bottom: 1.5rem; }
+  @media (min-width: 768px) {
+    .eight-by-four__left {
+      padding-right: 1rem;
+      padding-bottom: 0; } }
+
+@media (min-width: 768px) {
   .eight-by-four__right a.card-link {
     margin-right: -2rem;
     margin-left: 2rem; } }
@@ -3962,9 +4030,13 @@ ol.alpha-list {
 /* ----------------- BIG COLUMN RIGHT SMALL LEFT -----------------*/
 .container.four-by-eight {
   padding: 0 0 1.875rem;
-  margin: 0; }
+  margin: 0;
+  max-width: none; }
   .container.four-by-eight h2 {
     border-top: 0; }
+  @media (min-width: 576px) {
+    .container.four-by-eight {
+      max-width: none; } }
 
 .four-by-eight__left {
   position: relative;
@@ -3987,6 +4059,14 @@ ol.alpha-list {
     .four-by-eight__right {
       flex: 0 0 66.6666666667%;
       max-width: 66.6666666667%; } }
+
+@media (min-width: 768px) {
+  .four-by-eight__right {
+    padding-left: 1rem; } }
+
+@media (min-width: 768px) {
+  .four-by-eight__left {
+    padding-right: 1rem; } }
 
 /*---------------------- THREE 	EQUAL COLUMNS SUB LAYOUT -------------------------*/
 .four-by-four-by-four.container {
@@ -4787,12 +4867,11 @@ FEATURE LINK
     padding: 20px 12px; }
     .feature-link .feature-link_content .field-content-summary {
       font-size: 1rem;
-      line-height: 1.6;
+      line-height: 1.5;
       margin-bottom: 1.5rem; }
       @media (min-width: 992px) {
         .feature-link .feature-link_content .field-content-summary {
-          font-size: 1.125rem;
-          line-height: 1.5; } }
+          font-size: 1.125rem; } }
   .feature-link .feature-link_image img {
     margin-bottom: 0; }
   .feature-link a {
@@ -5114,7 +5193,7 @@ ALERTS
     color: inherit; }
   .cta-box p {
     font-size: 1rem;
-    line-height: 1.3;
+    line-height: 1.5;
     margin-bottom: 1.5rem; }
   .cta-box p:hover,
   .cta-box .cta-box__btn__text:hover {
@@ -5697,8 +5776,7 @@ FULL WIDTH HOME HERO
   max-height: 450px;
   background-size: cover;
   background-position: 50% 50%;
-  background-repeat: no-repeat;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)); }
+  background-repeat: no-repeat; }
   .hero-home .hero-home__container {
     color: #fff;
     max-width: 1408px;
