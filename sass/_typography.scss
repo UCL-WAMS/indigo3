@@ -41,54 +41,55 @@ h6 {
 }
 
 
+/*---------------------------
+LISTS
+----------------------------*/
 
-/*--------------------------
-PLAIN LIST
--------------------------*/
-section, 
-.site-content {
-
-	ul {
-		position: relative; 
-		list-style: none;
-	   @include media-breakpoint-up(sm) {
-	   	padding-left: 4.6875rem;
-	   }
-	   li {
-		font-size: 1rem; 
-		line-height: 1.5; 
-		color: #333333;
-	@include media-breakpoint-only(md){ 
-		font-size: .75rem;
-		}
-		&:before {
-			content: "\2022"; 
-			color: $brightblue;
-			font-size: 1.3rem;
-  			display: inline-block; 
-  			width: 1rem;
-  			margin-left: -1rem
-			}
-		}
+ol,
+dl {
+	padding-left: 0; 
+	@include body-content-text;
+	color: #000;
 	}
-	
 
-}
+// BULLET LIST USE SMALLER FONT SIZE - OL DL USE BODY TEXT SIZE.
 
-	
-	// removes bullet points on tabs in editor view
-ul.primary {
+ul { 
+	font-size: 1rem; 
 	padding-left: 0;
-	li {
-	line-height: normal;
-		a {
-		padding-top:5px;
-		}
-		&:before {
-		content: none;
-		}
+	line-height: 1.5;	
+	}
+
+.main-content {
+	ul,
+	dl {
+	padding-left: 16px;
+	}
+	ol {
+	padding-left: 19px;
 	}
 }
+
+// Styling for editor view/edit tabs at top of page when logged in
+
+.site-prospective-students-graduate {
+		ul.primary,
+	ul.primary li {
+		padding: 0;
+		margin-left: 0;
+		line-height: 0;
+		}
+	ul.primary a{
+		padding: 5px 1rem 1px 1rem;
+		}
+} 
+
+ul.primary {
+		margin-bottom: 1.5rem;
+		}
+
+
+
 
 /*--------------------------------
 FEATURE LIST 
@@ -96,20 +97,31 @@ FEATURE LIST
 
 
 .feature-list	{
-	position: relative;
-	padding-right: 15%; 
-	margin-top: 2em;
+	padding-right: 5%; 
 	margin-bottom: 1.5em;
+	ul {
+		padding-left: 1rem;
+		clear: both;
+		padding-top: 1.5rem;
+ @include media-breakpoint-up(sm) {
+	   	padding-left: 4.6875rem;
+	   }
+		li {
+			padding-left: 1.25rem;
+			margin-bottom: 1rem;
+			&::marker {
+				color: #000;
+			}
+		}
+	}
+	svg {
+		stroke: currentColor;
+		}
 	svg.feather,
 	svg.icon {
-		display: inline-block; 
-		margin-right: 20px; 
-		vertical-align: top;
-		@include media-breakpoint-only(md)  {
-		width: 30px;
-		height: 30px;
-	}
-	&.forward-link__svg {
+		float: left;
+		margin-right: 1.25rem; 
+		&.forward-link__svg {
 		margin-right: 0;
 		vertical-align: 1px;
 	@include media-breakpoint-only(md)  {
@@ -119,31 +131,45 @@ FEATURE LIST
 		}
 	}
 	h4 {
-		display: inline-block; 
+		float: left;
 		width: 60%;
-		margin-bottom: .5em;
+		margin-bottom: 0.5rem;
+		padding-top: 0.75rem;
+	@include media-breakpoint-up(md){ 
+		padding-top: 0;
+		vertical-align: top;
+		}
 	@include media-breakpoint-up(lg){ 
 		width: 70%;
 		}
 	}
 	.forward-link{
-		margin-left: 3em;
+		margin-left: 0;
+		@include media-breakpoint-up(sm) {
+			margin-left: 3.8rem;
+		}
 	}
 	a.forward-link__anchor {
 		font-size: 1rem;
+		vertical-align: top;
+		padding-left: 0.5rem;
 	}
 
 }
 
 
-/*-----  TEMPLATE CONTENT CUSTOM STYLES ---------- 
---------------------------------------*/
+/*----------------------------------------------  
+TEMPLATE CONTENT CUSTOM STYLES - SEE ALSO MIXINS 
+------------------------------------------------*/
+
+
+//INCLUDES MAIN BODY P TEXT
 
 .site-content {
 	p, 
 	.eight-by-four,
 	.six-by-six {
-		@include prose-zero;
+		@include body-content-text;
 		}
 
 	.eight-by-four .forward-link a,
@@ -151,12 +177,18 @@ FEATURE LIST
 		font-size: 1rem;
 	}
 
+
+// STANDFIRST
+
 	.page-intro, 
 	.page-intro p {
-		@include prose-one;
+		@include standfirst;
 		margin-bottom: 1.8rem;
 		}
-		
+
+
+// SECTION HEADER WITH BLACK TOP BORDER
+// NB SEE ALSO LAYOUT PATTERNS FOR MODIFICATIONS TO H2 STYLING 
 	.main-content h2 {
 		border-top: solid 1px #333;
 		padding-top: 1.875rem;
@@ -164,10 +196,16 @@ FEATURE LIST
 		clear: both;
 	}
 
+
+
+	// COURSE PAGE LOCATION DETAILS NOT USED IN CURRENT VERSION.
+
 	.top-course-details {
 		color: #5c5c5c;
 		margin-bottom: 2.8125rem;
 	}
+
+
 	
 	.right-column {
 		& > h3,
@@ -176,20 +214,19 @@ FEATURE LIST
 			border-top: solid 1px $darkgray;
 			padding-top: 1.25rem;
 			 }
-	p {
-		margin-bottom: 0.75rem;
+		p {
+			margin-bottom: 0.75rem;
+			}
+
+		.contact-info { 
+			h4 {
+				font-weight: bold;
+				margin-top: 1.875rem;
+				}	
+			margin-bottom: 2.5rem;
+			}	
 		}
 
-	.contact-info {
-		margin-bottom: 2.5rem;
-	}
-
-	.contact-info h4{
-		font-weight: bold;
-		margin-top: 1.875rem;
-		}
-	
-	}
 	.view-list ul,
 	.right-page-nav ul {
 		padding:0;

@@ -10,13 +10,15 @@ AND THIS FOLDER DELETED.  THESE ARE NOT CUSTOM STYLES!
 
 .site-prospective-students-graduate { 
 
+//BLUE HEADER 
+
 	.header {
 		border-bottom: $brightblue 1em solid;
 		#logo {  
 			background: $brightblue;
 			}
 		}
-
+// HERO
 	.hero-content.text-only {
 		background-color: $brightblue;
 		color: #fff;
@@ -57,6 +59,44 @@ AND THIS FOLDER DELETED.  THESE ARE NOT CUSTOM STYLES!
 		}
 
 	}
+
+// LIST STYLES
+
+/*--------------------------
+PLAIN LIST
+-------------------------*/
+section, 
+.site-content {
+
+	ul {
+		padding-left: 1rem;
+	   @include media-breakpoint-up(sm) {
+	   	padding-left: 4.6875rem;
+	   }
+	   li {
+		font-size: 1rem; 
+		line-height: 1.5; 
+		padding-left: 1.25rem;
+		margin-bottom: 1rem;
+		&::marker {
+			color: $brightblue;
+			}
+			
+		}
+	}
+	
+
+}
+
+// feature list icon colour
+.feature-list {
+	li {color: #333;
+	}
+	svg {
+	stroke: $brightblue;
+	}
+}
+
 }
 
 
