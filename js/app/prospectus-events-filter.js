@@ -152,8 +152,12 @@ $(document).ready(function() {
 
   function isFutureEvent(event) {
     var now = new Date();
-    var start = new Date(event["date_start"]);
-    var end = (event['date_end'] != "0000-00-00"?new Date(event["date_end"]):0);
+    // Adjust start to end of day if no end date i.e. it's a one day event.
+    var adjustedStart = (event['date_end'] == "0000-00-00" || !event['date_end']?event["date_start"] + " 23:59:59":event["date_start"]);
+    var start = new Date(adjustedStart);
+    // Always adjust the end date to the end of the day, to ensure that events ending today
+    // are displayed till the end of the day.
+    var end = (event['date_end'] != "0000-00-00"?new Date(event["date_end"] + " 23:59:59"):0);
     return (start >= now || end >= now);
   }
 
