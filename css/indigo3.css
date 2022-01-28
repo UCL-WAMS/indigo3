@@ -2749,6 +2749,10 @@ PLAIN LIST
   .site-prospective-students-graduate .feature-list svg {
     stroke: #00818F; }
 
+a.card-link {
+  background: #00818F;
+  color: #ffffff; }
+
 .header__menu {
   position: relative;
   width: 100%;
@@ -4840,6 +4844,12 @@ a.card-link {
         width: 70px;
         height: 70px;
         margin-bottom: 1.875rem; } }
+
+.site-bartlett a.card-link {
+  background: #440099;
+  color: #8ce2d0; }
+  .site-bartlett a.card-link svg {
+    stroke: currentColor; }
 
 /*-----------------------
 FEATURE LINK

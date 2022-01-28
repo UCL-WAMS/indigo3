@@ -234,6 +234,18 @@ a.card-link  {
 	
 }
 
+.site-bartlett {
+	a.card-link  {
+	background: $bartlettviolet;
+	color: $bartlettturquoise;
+		svg {
+			stroke: currentColor;
+			}
+	}
+
+
+}
+
 
 /*-----------------------
 FEATURE LINK
