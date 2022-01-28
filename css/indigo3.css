@@ -3496,8 +3496,7 @@ IN PAGE NAV MENU
         font: 1rem; } }
   @media (max-width: 767.98px) {
     .site-prospective-students-graduate .floating-menu-widget {
-      right: 0;
-      top: 140px; } }
+      display: none !important; } }
   @media (min-width: 576px) and (max-width: 991.98px) {
     .site-prospective-students-graduate .floating-menu-widget {
       right: 0;

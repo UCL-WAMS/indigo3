@@ -479,8 +479,10 @@ IN PAGE NAV MENU
        }   
 // MENU POSTIONS TABLET AND MOBILE
        @include media-breakpoint-down(sm) {
-        	right: 0; 
-        	top: 140px;
+		   display: none !important;
+		   // Not needed as we have now disabled this widget on mobile.
+        	//right: 0;
+        	//top: 140px;
         }
         @include media-breakpoint-between(sm,md) {
         	right: 0; 
