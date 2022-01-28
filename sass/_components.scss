@@ -624,10 +624,11 @@ ALERTS
 		height: 45px;
 		background-color: inherit;
 		color: inherit;
-		svg{
+				svg{
 			width: 35px;
 			height: 35px;
 			stroke-width: 3px;
+			stroke: currentColor;
 			.cls-1 {
 				stroke: currentColor;
 			}

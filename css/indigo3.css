@@ -5136,7 +5136,8 @@ ALERTS
     .highlight-card .card__icon svg {
       width: 35px;
       height: 35px;
-      stroke-width: 3px; }
+      stroke-width: 3px;
+      stroke: currentColor; }
       .highlight-card .card__icon svg .cls-1 {
         stroke: currentColor; }
   .highlight-card a {
