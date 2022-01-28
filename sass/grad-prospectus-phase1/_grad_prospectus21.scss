@@ -85,7 +85,6 @@ section,
 		}
 	}
 	
-
 }
 
 // feature list icon colour
@@ -96,13 +95,34 @@ section,
 	stroke: $brightblue;
 	}
 }
-
-}
-
-
 // TEAL CARDLINK - CURRENTLY USED IN GRADUATE PROSPECTUS.  LS 1.22
 
 a.card-link {
 	background: $brightblue;
 	color: #ffffff;
 }
+
+/*----------------------
+FEATURE LINK
+---------------------*/
+
+	.feature-link {
+		.feature-link_title {
+			background: $yellow; 
+			}
+		.feature-link__icon {
+			background-color: $yellow;
+			}
+	
+		
+	@include media-breakpoint-up(md) {
+			&.clearfix {
+			box-shadow: 3px 10px 10px -6px rgba(51,51,51,0.75);
+			-webkit-box-shadow: 3px 10px 10px -6px rgba(51,51,51,0.75);
+			-moz-box-shadow: 3px 10px 10px -6px rgba(51,51,51,0.75);
+			}
+		}
+	}
+
+}
+
