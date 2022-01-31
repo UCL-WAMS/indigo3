@@ -2691,7 +2691,10 @@ AND THIS FOLDER DELETED.  THESE ARE NOT CUSTOM STYLES!
 .site-prospective-students-graduate {
   /*--------------------------
 PLAIN LIST
--------------------------*/ }
+-------------------------*/
+  /*----------------------
+FEATURE LINK
+---------------------*/ }
   .site-prospective-students-graduate .header {
     border-bottom: #00818F 1em solid; }
     .site-prospective-students-graduate .header #logo {
@@ -2748,6 +2751,18 @@ PLAIN LIST
     color: #333; }
   .site-prospective-students-graduate .feature-list svg {
     stroke: #00818F; }
+  .site-prospective-students-graduate a.card-link {
+    background: #00818F;
+    color: #ffffff; }
+  .site-prospective-students-graduate .feature-link .feature-link_title {
+    background: #F6BE00; }
+  .site-prospective-students-graduate .feature-link .feature-link__icon {
+    background-color: #F6BE00; }
+  @media (min-width: 768px) {
+    .site-prospective-students-graduate .feature-link.clearfix {
+      box-shadow: 3px 10px 10px -6px rgba(51, 51, 51, 0.75);
+      -webkit-box-shadow: 3px 10px 10px -6px rgba(51, 51, 51, 0.75);
+      -moz-box-shadow: 3px 10px 10px -6px rgba(51, 51, 51, 0.75); } }
 
 .header__menu {
   position: relative;
@@ -4841,6 +4856,12 @@ a.card-link {
         height: 70px;
         margin-bottom: 1.875rem; } }
 
+.site-bartlett a.card-link {
+  background: #440099;
+  color: #8ce2d0; }
+  .site-bartlett a.card-link svg {
+    stroke: currentColor; }
+
 /*-----------------------
 FEATURE LINK
 -------------------------*/
@@ -4851,17 +4872,19 @@ FEATURE LINK
     background: #F6BE00;
     padding: 12px;
     width: 100%;
-    order: 2;
+    order: 1;
     overflow: hidden;
     word-break: break-all;
     word-wrap: break-word; }
   .feature-link .feature-link__icon {
     position: absolute;
     top: 4px;
-    right: 0;
+    right: 3px;
     background-color: #F6BE00; }
+  .feature-link svg {
+    stroke-width: 2px; }
   .feature-link .feature-link_image {
-    order: 1; }
+    order: 2; }
   .feature-link .feature-link_content {
     order: 3;
     padding: 20px 12px; }
@@ -4901,6 +4924,14 @@ FEATURE LINK
       padding: 20px;
       float: right;
       width: 50%; } }
+
+.site-bartlett .feature-link .feature-link__icon,
+.site-bartlett .feature-link .feature-link_title {
+  background: #000;
+  color: #fff; }
+
+.site-bartlett svg {
+  stroke: currentColor; }
 
 /*----------------------------
 PROMO CARD
@@ -5126,7 +5157,8 @@ ALERTS
     .highlight-card .card__icon svg {
       width: 35px;
       height: 35px;
-      stroke-width: 3px; }
+      stroke-width: 3px;
+      stroke: currentColor; }
       .highlight-card .card__icon svg .cls-1 {
         stroke: currentColor; }
   .highlight-card a {

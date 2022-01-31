@@ -234,6 +234,18 @@ a.card-link  {
 	
 }
 
+.site-bartlett {
+	a.card-link  {
+	background: $bartlettviolet;
+	color: $bartlettturquoise;
+		svg {
+			stroke: currentColor;
+			}
+	}
+
+
+}
+
 
 /*-----------------------
 FEATURE LINK
@@ -246,19 +258,22 @@ FEATURE LINK
 		background: $yellow; 
 		padding: 12px; 
 		width: 100%; 
-		order: 2;
+		order: 1;
 		overflow: hidden;
 		word-break: break-all;
 		word-wrap: break-word;	
 	}
 	.feature-link__icon {
 		position: absolute; 
-		top: 4px; 
-		right: 0;
+		top: 4px;
+		right: 3px;
 		background-color: $yellow;
 		}
+	svg {
+		stroke-width: 2px;
+		}
 	.feature-link_image  {
-		order: 1;
+		order: 2;
 	}
 	.feature-link_content {
 		order: 3; 
@@ -310,6 +325,18 @@ FEATURE LINK
 }
 }
 
+.site-bartlett { 
+	.feature-link {
+		.feature-link__icon,
+		.feature-link_title {
+			background: #000; 
+			color: #fff;
+			}
+		}
+		svg {
+			stroke: currentColor;
+			}	
+	 }
 
 /*----------------------------
 PROMO CARD
@@ -612,10 +639,11 @@ ALERTS
 		height: 45px;
 		background-color: inherit;
 		color: inherit;
-		svg{
+				svg{
 			width: 35px;
 			height: 35px;
 			stroke-width: 3px;
+			stroke: currentColor;
 			.cls-1 {
 				stroke: currentColor;
 			}
