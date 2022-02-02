@@ -4,26 +4,24 @@
 .blockquote.container {
 	max-width: 100%;
 	padding: 0;
-	margin-bottom: 1.5em;
-	margin-top: 1em;
+	margin-bottom: 1.5rem;
+	margin-top: 1rem;
 	@include media-breakpoint-up(sm) {
-			margin-top:0;
-			
-		}
+			margin-top:0;			
+			}
 }
 
 
 .blockquote  blockquote {
-		color: #AC145A;
 		line-height: 1.5;
 		position: relative;
-		margin-top: 3em;
+		margin-top: 3rem;
 		margin-left: 2%;	
 		margin-right: 1em;
 		padding: 0;
 		width: 100%;
 		@include media-breakpoint-up(sm) {
-		margin: 1em 0;
+		margin: 1rem 0;
 		}
 		&:before {
 		content: "\275D";
@@ -32,7 +30,7 @@
 		top: -85px;
 		@include media-breakpoint-up(sm) {
 			top: -25px;	
-		}
+			}
 	
 		}
 
@@ -43,9 +41,8 @@
 			margin-left: 0;
 	
 		@include media-breakpoint-up(sm) {
-			margin-left: 5rem;
-			
-		}
+			margin-left: 5rem;			
+			}
 							
 		}
 		
@@ -54,11 +51,11 @@
 			font-size: 1.25rem;
 			line-height: 1.4;
 			display:block;
-			margin-bottom: 1em;
+			margin-bottom: 1rem;
 		@include media-breakpoint-up(sm) {
 			font-size: 1.5rem;
 			line-height: 1.5;
-		}
+			}
 			
 		} 
 		
@@ -72,13 +69,13 @@
 			width: 60px; 
 			border-radius: 50%;
 			display: inline-block;
-			margin-right: 25px;
+			margin-right: 1.5625rem;
 			margin-bottom: 0;
 			vertical-align: top;
 			@include media-breakpoint-up(sm) {
 			height: 80px; 
 			width: 80px; 
-		}
+			}
 
 
 		}
@@ -87,22 +84,26 @@
 				display: inline-block; 
 				vertical-align:  middle;
 					
-				p {
-					margin-bottom: .25em;
-					font-size: .75rem;
-					@include media-breakpoint-up(sm) { 
-						font-size: 1rem; 
-						}
+			p {
+				margin-bottom: 0.25rem;
+				font-size: 0.75rem;
+				@include media-breakpoint-up(sm) { 
+					font-size: 1rem; 
 					}
-				a { 
-					font-size: .75rem;
-					@include media-breakpoint-up(sm) { 
-						font-size: 1rem; 
-						} 
-					}
-				p.blockquote-detail__name {
-					font-weight: bold;
-					}
+				}
+			a { 
+				font-size: 0.75rem;
+				@include media-breakpoint-up(sm) { 
+					font-size: 1rem; 
+					} 
+				}
+			p.blockquote-detail__name {
+				font-weight: bold;
+				}
+			.forward-link a {
+				vertical-align: 0.2rem;
+				padding-left: 0.5rem;
+				}
 		}
 
 
