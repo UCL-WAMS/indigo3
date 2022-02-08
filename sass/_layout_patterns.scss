@@ -537,7 +537,7 @@ FOUR EQUAL COLUMNS SUB LAYOUT
 
 // PROFILE CARD FOR NEWS AND EVENTS - THIS IS A TEMP FIX AND WILL BE REPLACED
 
-.node-type-news .contact-panel {
+.node-type-event, .node-type-news .contact-panel {
 	.responsive-square .contact-panel__image img {
 		border-radius: 50%;
 	}
@@ -547,15 +547,6 @@ FOUR EQUAL COLUMNS SUB LAYOUT
 	}
 }
 
-.node-type-event .contact-panel{
-	 .responsive-square .contact-panel__image img {
-		border-radius: 50%;
-	}
-
-	.card-wrapper {
-		box-shadow: 0px 0px;
-	}
-}
 
 /*-------------- SIMILAR COURSES PANEL ---------------*/
 
