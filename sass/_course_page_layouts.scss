@@ -450,7 +450,7 @@ IN PAGE NAV MENU
         		font-size: 0.8rem;
         		line-height: 2;
         		margin-bottom: 0;
-           		.active a{
+           		.active a {
             	padding-left: 10px;  
             	}
             	&.active::before {
@@ -481,8 +481,8 @@ IN PAGE NAV MENU
        @include media-breakpoint-down(sm) {
 		   display: none !important;
 		   // Not needed as we have now disabled this widget on mobile.
-        	//right: 0;
-        	//top: 140px;
+		   // right: 0;
+	       // top: 140px;
         }
         @include media-breakpoint-between(sm,md) {
         	right: 0; 
