@@ -37,12 +37,12 @@
 //h3 24px 20px
 
 @mixin bold-one {
-	font-size: 1.25rem;
+	font-size: 1.125rem;
 	line-height: 1.2 ;
 	margin-bottom: 1.5rem;
 	font-weight: bold;
 	@include media-breakpoint-up(lg) {
-		font-size: 1.125rem;
+		font-size: 1.25rem;
 		}
 	} 
 //h4 20px 18px
@@ -74,10 +74,10 @@
 	text-transform: uppercase;
 }
 
-/*--------------------------------------
- BODY CONTENT TEXT STYLES
- BASE PARAGRAPH STYLES 
- ---------------------------------------*/
+
+// BODY CONTENT TEXT STYLES
+// BASE PARAGRAPH STYLES 
+
 
 @mixin body-content-text {
 	font-size: 1rem;
@@ -101,11 +101,11 @@
 // STANDFIRST 20px 18px 
 
 
-/* ------------------------------ 
-CLEAR LEFT STYLES 
-ILLUSTRATED IN COMPONENT SECTION 
-NOT REALLY USED AT THE MOMENT
---------------------------------*/
+
+//CLEAR LEFT STYLES 
+//ILLUSTRATED IN COMPONENT SECTION 
+//NOT REALLY USED AT THE MOMENT
+
 
 // DEFAULT STYLES 
 
@@ -170,9 +170,7 @@ NOT REALLY USED AT THE MOMENT
 // 12px
 
 
-/*---------------------------
-SETS FULL WIDTH BACKGROUND ON BLOCK
----------------------------*/
+//SETS FULL WIDTH BACKGROUND ON BLOCK
 
 // PARENT NEEDS TO BE RELATIVE
 // REMOVE LEFT OR RIGHT AS REQUIRED

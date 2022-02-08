@@ -1,15 +1,3 @@
-/*--------------------------------------
- BODY CONTENT TEXT STYLES
- BASE PARAGRAPH STYLES 
- ---------------------------------------*/
-/* ------------------------------ 
-CLEAR LEFT STYLES 
-ILLUSTRATED IN COMPONENT SECTION 
-NOT REALLY USED AT THE MOMENT
---------------------------------*/
-/*---------------------------
-SETS FULL WIDTH BACKGROUND ON BLOCK
----------------------------*/
 /* -------------------
 INDIGO RESET 
 --------------------- */
@@ -2691,7 +2679,22 @@ AND THIS FOLDER DELETED.  THESE ARE NOT CUSTOM STYLES!
 .site-prospective-students-graduate {
   /*--------------------------
 PLAIN LIST
--------------------------*/ }
+-------------------------*/
+  /*-----------------------------
+FEATURE LIST
+------------------------------*/
+  /*-------------------------------
+CARD LINK
+--------------------------------*/
+  /*----------------------
+FEATURE LINK
+---------------------*/
+  /*-----------------------------------
+CARD - NODE TEASER
+------------------------------------*/
+  /*-----------------------------------
+QUOTES AND TESTIMONIALS
+----------------------------------*/ }
   .site-prospective-students-graduate .header {
     border-bottom: #00818F 1em solid; }
     .site-prospective-students-graduate .header #logo {
@@ -2748,6 +2751,22 @@ PLAIN LIST
     color: #333; }
   .site-prospective-students-graduate .feature-list svg {
     stroke: #00818F; }
+  .site-prospective-students-graduate a.card-link {
+    background: #00818F;
+    color: #ffffff; }
+  .site-prospective-students-graduate .feature-link .feature-link_title {
+    background: #F6BE00; }
+  .site-prospective-students-graduate .feature-link .feature-link__icon {
+    background-color: #F6BE00; }
+  @media (min-width: 768px) {
+    .site-prospective-students-graduate .feature-link.clearfix {
+      box-shadow: 3px 10px 10px -6px rgba(51, 51, 51, 0.75);
+      -webkit-box-shadow: 3px 10px 10px -6px rgba(51, 51, 51, 0.75);
+      -moz-box-shadow: 3px 10px 10px -6px rgba(51, 51, 51, 0.75); } }
+  .site-prospective-students-graduate .card__icon {
+    background-color: #F6BE00; }
+  .site-prospective-students-graduate .blockquote blockquote {
+    color: #AC145A; }
 
 .header__menu {
   position: relative;
@@ -2855,13 +2874,13 @@ h3 {
       font-size: 1.5rem; } }
 
 h4 {
-  font-size: 1.25rem;
+  font-size: 1.125rem;
   line-height: 1.2;
   margin-bottom: 1.5rem;
   font-weight: bold; }
   @media (min-width: 992px) {
     h4 {
-      font-size: 1.125rem; } }
+      font-size: 1.25rem; } }
 
 h5 {
   font-size: 1rem;
@@ -3754,7 +3773,7 @@ html.js input.throbbing {
     .course-finder-search-results .result-item a,
     .faculty-list-results .result-item a,
     .course-finder-subject-list .result-item a {
-      font-size: 1.25rem;
+      font-size: 1.125rem;
       line-height: 1.2;
       margin-bottom: 1.5rem;
       font-weight: bold;
@@ -3763,7 +3782,7 @@ html.js input.throbbing {
         .course-finder-search-results .result-item a,
         .faculty-list-results .result-item a,
         .course-finder-subject-list .result-item a {
-          font-size: 1.125rem; } }
+          font-size: 1.25rem; } }
     .course-finder-search-results .result-item a, .course-finder-search-results .result-item span,
     .faculty-list-results .result-item a,
     .faculty-list-results .result-item span,
@@ -4811,6 +4830,8 @@ a.card-link {
   padding: 1.875rem 1.875rem 2.5rem 1.875rem;
   font-weight: bold;
   overflow: hidden; }
+  a.card-link:hover {
+    text-decoration: underline; }
   a.card-link svg {
     display: block;
     margin-bottom: 1.875rem; }
@@ -4833,6 +4854,12 @@ a.card-link {
         height: 70px;
         margin-bottom: 1.875rem; } }
 
+.site-bartlett a.card-link {
+  background: #440099;
+  color: #8ce2d0; }
+  .site-bartlett a.card-link svg {
+    stroke: currentColor; }
+
 /*-----------------------
 FEATURE LINK
 -------------------------*/
@@ -4843,17 +4870,19 @@ FEATURE LINK
     background: #F6BE00;
     padding: 12px;
     width: 100%;
-    order: 2;
+    order: 1;
     overflow: hidden;
     word-break: break-all;
     word-wrap: break-word; }
   .feature-link .feature-link__icon {
     position: absolute;
     top: 4px;
-    right: 0;
+    right: 3px;
     background-color: #F6BE00; }
+  .feature-link svg {
+    stroke-width: 2px; }
   .feature-link .feature-link_image {
-    order: 1; }
+    order: 2; }
   .feature-link .feature-link_content {
     order: 3;
     padding: 20px 12px; }
@@ -4893,6 +4922,14 @@ FEATURE LINK
       padding: 20px;
       float: right;
       width: 50%; } }
+
+.site-bartlett .feature-link .feature-link__icon,
+.site-bartlett .feature-link .feature-link_title {
+  background: #000;
+  color: #fff; }
+
+.site-bartlett .feature-link svg {
+  stroke: currentColor; }
 
 /*----------------------------
 PROMO CARD
@@ -5082,23 +5119,37 @@ ALERTS
 
 /*---------------------
 	CARDS
-
 ---------------*/
 .card {
   position: relative; }
   .card img {
     float: right;
-    width: 100%; }
+    width: 100%;
+    margin-bottom: 1rem; }
   .card a {
     text-decoration: none; }
     .card a:hover {
       text-decoration: underline; }
+  .card p {
+    font-size: 1rem;
+    line-height: 1.5; }
+  .card h3 {
+    margin-bottom: 0.75rem; }
 
 .card__icon {
   position: absolute;
   top: 0;
-  right: 0;
-  background-color: #F6BE00; }
+  right: 0; }
+  .card__icon svg {
+    stroke-width: 2px; }
+
+.site-bartlett .card h3 a {
+  color: #333; }
+
+.site-bartlett .card__icon {
+  background: #000; }
+  .site-bartlett .card__icon svg {
+    stroke: #fff; }
 
 /* -------------------------
  HIGHLIGHT CARD
@@ -5118,7 +5169,8 @@ ALERTS
     .highlight-card .card__icon svg {
       width: 35px;
       height: 35px;
-      stroke-width: 3px; }
+      stroke-width: 3px;
+      stroke: currentColor; }
       .highlight-card .card__icon svg .cls-1 {
         stroke: currentColor; }
   .highlight-card a {
@@ -6052,24 +6104,23 @@ td, td img {
 .blockquote.container {
   max-width: 100%;
   padding: 0;
-  margin-bottom: 1.5em;
-  margin-top: 1em; }
+  margin-bottom: 1.5rem;
+  margin-top: 1rem; }
   @media (min-width: 576px) {
     .blockquote.container {
       margin-top: 0; } }
 
 .blockquote blockquote {
-  color: #AC145A;
   line-height: 1.5;
   position: relative;
-  margin-top: 3em;
+  margin-top: 3rem;
   margin-left: 2%;
   margin-right: 1em;
   padding: 0;
   width: 100%; }
   @media (min-width: 576px) {
     .blockquote blockquote {
-      margin: 1em 0; } }
+      margin: 1rem 0; } }
   .blockquote blockquote:before {
     content: "\275D";
     font-size: 6rem;
@@ -6088,7 +6139,7 @@ td, td img {
     font-size: 1.25rem;
     line-height: 1.4;
     display: block;
-    margin-bottom: 1em; }
+    margin-bottom: 1rem; }
     @media (min-width: 576px) {
       .blockquote blockquote p.blockquote-quote {
         font-size: 1.5rem;
@@ -6100,7 +6151,7 @@ td, td img {
     width: 60px;
     border-radius: 50%;
     display: inline-block;
-    margin-right: 25px;
+    margin-right: 1.5625rem;
     margin-bottom: 0;
     vertical-align: top; }
     @media (min-width: 576px) {
@@ -6111,15 +6162,18 @@ td, td img {
     display: inline-block;
     vertical-align: middle; }
     .blockquote blockquote .blockquote-detail__text p {
-      margin-bottom: .25em;
-      font-size: .75rem; }
+      margin-bottom: 0.25rem;
+      font-size: 0.75rem; }
       @media (min-width: 576px) {
         .blockquote blockquote .blockquote-detail__text p {
           font-size: 1rem; } }
     .blockquote blockquote .blockquote-detail__text a {
-      font-size: .75rem; }
+      font-size: 0.75rem; }
       @media (min-width: 576px) {
         .blockquote blockquote .blockquote-detail__text a {
           font-size: 1rem; } }
     .blockquote blockquote .blockquote-detail__text p.blockquote-detail__name {
       font-weight: bold; }
+    .blockquote blockquote .blockquote-detail__text .forward-link a {
+      vertical-align: 0.2rem;
+      padding-left: 0.5rem; }
