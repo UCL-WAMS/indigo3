@@ -3885,9 +3885,9 @@ IN PAGE NAV MENU
       font-size: 0.8rem;
       line-height: 2;
       margin-bottom: 0; }
-      .site-prospective-students-graduate .floating-menu-widget ul li .active-menu-item a {
+      .site-prospective-students-graduate .floating-menu-widget ul li .active a {
         padding-left: 10px; }
-      .site-prospective-students-graduate .floating-menu-widget ul li.active-menu-item::before {
+      .site-prospective-students-graduate .floating-menu-widget ul li.active::before {
         content: "\2023";
         color: #ea7600;
         margin-right: 7px; }
@@ -3900,14 +3900,13 @@ IN PAGE NAV MENU
       .site-prospective-students-graduate .floating-menu-widget ul li {
         font-size: 1rem;
         line-height: 1.5; }
-        .site-prospective-students-graduate .floating-menu-widget ul li.active-menu-item::before {
+        .site-prospective-students-graduate .floating-menu-widget ul li.active::before {
           font-size: 1.5rem; }
       .site-prospective-students-graduate .floating-menu-widget h3 {
         font: 1rem; } }
   @media (max-width: 767.98px) {
     .site-prospective-students-graduate .floating-menu-widget {
-      right: 0;
-      top: 140px; } }
+      display: none !important; } }
   @media (min-width: 576px) and (max-width: 991.98px) {
     .site-prospective-students-graduate .floating-menu-widget {
       right: 0;
@@ -3923,13 +3922,6 @@ IN PAGE NAV MENU
 .floating-menu {
   position: fixed;
   top: 10px; }
-
-.floating-widget-area {
-  height: 80%; }
-
-.affixed-end-of-container {
-  position: relative;
-  top: 100%; }
 
 .openday {
   margin-top: 1rem; }
