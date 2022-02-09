@@ -191,62 +191,60 @@ CARD LINK
 --------------------------------*/
 
 
-a.card-link  {
-	background: $brightblue;
-	color: #ffffff;
-	display: block;
-	font-size: 1.25rem;
-	line-height: 1.5;
-	text-decoration: none;
-	height:auto;
-	padding: 1.875rem 1.875rem 2.5rem 1.875rem;
-	font-weight: bold;
-	overflow: hidden;
-		&:hover {
-			text-decoration: underline;
-		}
-		svg {
-			display: block; 
-			margin-bottom: 1.875rem;
-		}
-
-
-@include media-breakpoint-up(md) {
-		font-size: 1rem;
-		line-height: 1.2;
-		svg {
-			width: 3.125rem;
-			height: 3.125rem;
-			margin-bottom: 1.875rem;
-			}
+.paragraphs-item-card-link {
+	height: 100%;
+	&.align-to-self{
+		height: auto;
 	}
-
-@include media-breakpoint-up (lg) {
+	a.card-link  {
+		color: inherit;
+		display: block;
+		font-size: 1.25rem;
+		line-height: 1.5;
+		text-decoration: none;
+		height: auto;
 		padding: 1.875rem 1.875rem 2.5rem 1.875rem;
-		font-size: 1.25rem; 
-		line-height: 1.5 ;
 		font-weight: bold;
-		svg {
-			width: 70px;
-			height: 70px;
-			margin-bottom: 1.875rem;
+		overflow: hidden;
+			&:hover {
+				text-decoration: underline;
 			}
-
-		}
-
+			svg {
+				display: block; 
+				margin-bottom: 1.875rem;
+				stroke:currentColor;
+			}
 	
+	
+	@include media-breakpoint-up(md) {
+			font-size: 1rem;
+			line-height: 1.2;
+			svg {
+				width: 3.125rem;
+				height: 3.125rem;
+				margin-bottom: 1.875rem;
+				}
+		}
+	
+	@include media-breakpoint-up (lg) {
+			padding: 1.875rem 1.875rem 2.5rem 1.875rem;
+			font-size: 1.25rem; 
+			line-height: 1.5 ;
+			font-weight: bold;
+			svg {
+				width: 70px;
+				height: 70px;
+				margin-bottom: 1.875rem;
+				}
+	
+			}		
+	}
 }
 
-.site-bartlett {
-	a.card-link  {
-	background: $bartlettviolet;
-	color: $bartlettturquoise;
-		svg {
-			stroke: currentColor;
-			}
-	}
-
-
+// BARTLETT CARD LINK COLOURS
+.site-bartlett .paragraphs-item-card-link { 
+	background: $bartlettviolet; 
+	color: $bartlettturquoise; 
 }
 
 
@@ -667,6 +665,9 @@ ALERTS
 		background-color: inherit; 
 		color: inherit;
 	}
+	&.align-to-self  {
+		height:auto;
+		}
 	.card__icon {
 		padding: 5px;
 		width: 45px;
@@ -756,7 +757,12 @@ ALERTS
 	padding-top: 0;
 	}
 
-.cta-box {
+.cta-box,
+.paragraphs-item-call-to-action-card-internal,
+.paragraphs-item-call-to-action-card-external {
+	&.align-to-self  {
+		height:auto;
+		}
 	height: 100%; 
 	padding: 1.5rem;
 	margin-bottom: 1.5rem;
@@ -1121,43 +1127,4 @@ VISUAL STYLING FOR COMPONENTS - COLOURS ETC
 	background: $backgroundlightgray; 	
 	}
 
-	/* ------------------- THREE CARD LINK LAYOUT 
-Has pre-process class item-background on container, when three cards are present,
-Heights on cards set to flex sized parents.  This is because
-mutiple paragraph types have been enabled on this pattern's columns, in the
-grad prospectus.
-----------------------------------------*/
-
-.four-by-four-by-four.container {	
-	.content,
-	.entity-paragraphs-item {
-		height: auto;
-		}
-
-	&.item-background {
-	a.card-link, 
-	.content,
-	.paragraphs-item-card-link {
-				height: 100%;				
-			}		
-		}
-
-	.item-background .row > div {
- 		margin-bottom: 1.5rem;
- 		}
-
-	.item-background {
-		.four-by-four-by-four__middle,
-		.four-by-four-by-four__right,
-		.four-by-four-by-four__left {
-			h2 {
-				padding: 0;
-				margin-top: 0;
-			}			
-		}
-		.card .forward-link {
-			margin-top: 1.5em;	
-			}	
-		}
-
-	}
+	

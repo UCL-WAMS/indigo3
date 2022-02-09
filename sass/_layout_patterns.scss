@@ -248,12 +248,6 @@ h2 {
  	@include media-breakpoint-up(sm) {
 	max-width: none;
 	}
-
-	// SETS DRUPAL CLASSES TO 100% TO ALLOW COMPONENT TO PICK UP FLEX HEIGHTS OF COLUMN
-	.content,
-	.entity-paragraphs-item {
-		height: 100%;
-		}
 	}
 
 	.four-by-four-by-four__left,
@@ -357,13 +351,6 @@ FOUR EQUAL COLUMNS SUB LAYOUT
 		padding-left: 24px;
 		} 
 	}
-
-// SETS DRUPAL CLASSES TO 100% TO ALLOW COMPONENT TO PICK UP FLEX HEIGHTS OF COLUMN
-.content,
-.entity-paragraphs-item {
-	height: 100%;
-	}
-
 
 }
 
