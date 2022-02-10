@@ -450,10 +450,10 @@ IN PAGE NAV MENU
         		font-size: 0.8rem;
         		line-height: 2;
         		margin-bottom: 0;
-           		.active-menu-item a{ 
+           		.active a {
             	padding-left: 10px;  
             	}
-            	&.active-menu-item::before {
+            	&.active::before {
    				content: "\2023";
         		color: $orange;
            		margin-right: 7px;
@@ -469,7 +469,7 @@ IN PAGE NAV MENU
         	ul li {
         		font-size: 1rem;
         		line-height: 1.5;
-        		&.active-menu-item::before {
+        		&.active::before {
         		font-size: 1.5rem;
            		}        		
         	}
@@ -479,8 +479,10 @@ IN PAGE NAV MENU
        }   
 // MENU POSTIONS TABLET AND MOBILE
        @include media-breakpoint-down(sm) {
-        	right: 0; 
-        	top: 140px;
+		   display: none !important;
+		   // Not needed as we have now disabled this widget on mobile.
+		   // right: 0;
+	       // top: 140px;
         }
         @include media-breakpoint-between(sm,md) {
         	right: 0; 
@@ -511,18 +513,6 @@ IN PAGE NAV MENU
         position: fixed;
         top: 10px;     
        }
-
-      .floating-widget-area {
-        height: 80%;
-      }
-
-      .affixed-end-of-container {
-        position: relative;
-        top: 100%;
-      }
-
- 
-
 
 // TEMPORARY 09/21 OPENDAYS EVENT FINDER - REPEATS SOME OF THE GLOBAL STYLES BUT ADDED HERE UNTIL FINAL STYLED PAGE IS DEPLOYED-DEVELOPED.
 
