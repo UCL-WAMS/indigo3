@@ -50,9 +50,19 @@ CUSTOM SITE WIDTH BOOTSTRAP CONTAINER
 	padding-top: 7.5rem;
 	}
 
-	}
+}
 
 
+/*-------------------------------
+TEMPORARILY HIDE SIDEBAR CONTENTS BARTLETT
+REMOVE WHEN DRUPAL PARAGRAPHS ARE IN 
+PLACE - BEFORE LIVE LS 14.2
+-------------------------------*/
+
+
+.site-bartlett .content-columns .right-column  {
+	display: none;
+}
 
 /*-------------------- HUB CONTENT TYPE PAGE SINGLE COLUMN LAYOUT -------------------*/
 
@@ -71,13 +81,14 @@ CUSTOM SITE WIDTH BOOTSTRAP CONTAINER
 
 
 // TEST COOKIES TAB POSITION
+// TAB ALIGNED TO RIGHT NOT NEEDED
 
-.eu-cookie-withdraw-tab {
-    position: absolute;
-    top: 0;
-    transform: translate(-50%, -100%);
-    left: 90%;
-    }
+// .eu-cookie-withdraw-tab {
+//     position: absolute;
+//     top: 0;
+//     transform: translate(-50%, -100%);
+//     left: 90%;
+//     }
 
 
     /* --------------------- INDIGO CONTENT TYPE STYLING TWO COLUMNS --------------------------- */
