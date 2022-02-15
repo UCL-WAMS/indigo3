@@ -2679,6 +2679,14 @@ WHERE POSSIBLE THEY NEED TO BE REPLACED IN THE PROSPECTUS BY
 GENERIC STYLES IN THE NEXT ITERATION OF THIS SITE
 AND THIS FOLDER DELETED.  THESE ARE NOT CUSTOM STYLES!
 --------------------------------------------------------------------------------------------*/
+/*-----------------------
+HUB PAGE LAYOUT
+------------------------*/
+@media (min-width: 768px) {
+  .site-prospective-students-graduate.node-type-hub-page .single-full-width-column {
+    padding-right: 8.522%;
+    padding-left: 8.522%; } }
+
 .site-prospective-students-graduate {
   /*--------------------------
 PLAIN LIST
@@ -2695,6 +2703,9 @@ FEATURE LINK
   /*-----------------------------------
 CARD - NODE TEASER
 ------------------------------------*/
+  /*---------------------------------
+SECTION PADDING
+-----------------------------*/
   /*-----------------------------------
 QUOTES AND TESTIMONIALS
 ----------------------------------*/ }
@@ -2768,6 +2779,8 @@ QUOTES AND TESTIMONIALS
       -moz-box-shadow: 3px 10px 10px -6px rgba(51, 51, 51, 0.75); } }
   .site-prospective-students-graduate .card__icon {
     background-color: #F6BE00; }
+  .site-prospective-students-graduate .section-background {
+    padding: 3.75rem 1.875rem 0; }
   .site-prospective-students-graduate .blockquote blockquote {
     color: #AC145A; }
 
@@ -3091,17 +3104,19 @@ CUSTOM SITE WIDTH BOOTSTRAP CONTAINER
   .content-columns .right-column {
     padding-top: 7.5rem; } }
 
+/*-------------------------------
+TEMPORARILY HIDE SIDEBAR CONTENTS BARTLETT
+REMOVE WHEN DRUPAL PARAGRAPHS ARE IN 
+PLACE - BEFORE LIVE LS 14.2
+-------------------------------*/
+.site-bartlett .content-columns .right-column {
+  display: none; }
+
 /*-------------------- HUB CONTENT TYPE PAGE SINGLE COLUMN LAYOUT -------------------*/
 .single-full-width-column {
   width: 100%; }
   .single-full-width-column .main-content {
     padding-right: 0; }
-
-.eu-cookie-withdraw-tab {
-  position: absolute;
-  top: 0;
-  transform: translate(-50%, -100%);
-  left: 90%; }
 
 /* --------------------- INDIGO CONTENT TYPE STYLING TWO COLUMNS --------------------------- */
 .node-type-indigo-page div.field-content-summary {
@@ -3497,9 +3512,9 @@ IN PAGE NAV MENU
       font-size: 0.8rem;
       line-height: 2;
       margin-bottom: 0; }
-      .site-prospective-students-graduate .floating-menu-widget ul li .active-menu-item a {
+      .site-prospective-students-graduate .floating-menu-widget ul li .active a {
         padding-left: 10px; }
-      .site-prospective-students-graduate .floating-menu-widget ul li.active-menu-item::before {
+      .site-prospective-students-graduate .floating-menu-widget ul li.active::before {
         content: "\2023";
         color: #ea7600;
         margin-right: 7px; }
@@ -3512,14 +3527,13 @@ IN PAGE NAV MENU
       .site-prospective-students-graduate .floating-menu-widget ul li {
         font-size: 1rem;
         line-height: 1.5; }
-        .site-prospective-students-graduate .floating-menu-widget ul li.active-menu-item::before {
+        .site-prospective-students-graduate .floating-menu-widget ul li.active::before {
           font-size: 1.5rem; }
       .site-prospective-students-graduate .floating-menu-widget h3 {
         font: 1rem; } }
   @media (max-width: 767.98px) {
     .site-prospective-students-graduate .floating-menu-widget {
-      right: 0;
-      top: 140px; } }
+      display: none !important; } }
   @media (min-width: 576px) and (max-width: 991.98px) {
     .site-prospective-students-graduate .floating-menu-widget {
       right: 0;
@@ -3535,13 +3549,6 @@ IN PAGE NAV MENU
 .floating-menu {
   position: fixed;
   top: 10px; }
-
-.floating-widget-area {
-  height: 80%; }
-
-.affixed-end-of-container {
-  position: relative;
-  top: 100%; }
 
 .openday {
   margin-top: 1rem; }
@@ -4317,6 +4324,12 @@ FOUR EQUAL COLUMNS SUB LAYOUT
       padding: 1.5rem 1.5rem 0 1.5rem;
       width: 57%; } }
 
+.node-type-event .contact-panel .responsive-square .contact-panel__image img, .node-type-news .contact-panel .responsive-square .contact-panel__image img {
+  border-radius: 50%; }
+
+.node-type-event .contact-panel .card-wrapper, .node-type-news .contact-panel .card-wrapper {
+  box-shadow: 0px 0px; }
+
 /*-------------- SIMILAR COURSES PANEL ---------------*/
 @media (min-width: 768px) and (max-width: 1199.98px) {
   .similar-courses .four-by-four-by-four.container {
@@ -4354,8 +4367,8 @@ FOUR EQUAL COLUMNS SUB LAYOUT
 
 @media (min-width: 768px) {
   .node-type-hub-page .single-full-width-column {
-    padding-right: 8.522%;
-    padding-left: 8.522%; }
+    padding-right: 0;
+    padding-left: 0; }
   .node-type-hub-page .main-content {
     margin-top: 2rem; }
   .node-type-hub-page .section-five-item {
@@ -5512,7 +5525,7 @@ VISUAL STYLING FOR COMPONENTS - COLOURS ETC
 -------------------------- */
 .section-background {
   position: relative;
-  padding: 3.75rem 1.875rem 0;
+  padding: 3.75rem 0;
   margin-bottom: 3rem; }
   .section-background:after, .section-background:before {
     content: '';
@@ -5910,7 +5923,6 @@ FULL WIDTH HOME HERO
 -----------------------------------*/
 .hero-home {
   height: 100vh;
-  width: 100vw;
   max-height: 450px;
   background-size: cover;
   background-position: 50% 50%;
