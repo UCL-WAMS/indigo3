@@ -66,10 +66,17 @@ TABS
 	}
 }   
 
+@include media-breakpoint-up(md){ 
+	.tabs__navigation  {
+		display: flex;
+		}
+	
+}
+
 .tabs__content {
-	margin-bottom: 1.5em;
+	margin-bottom: 1.5rem;
 	.tab-content {
-		padding: 30px 0 0 0;
+		padding: 1.875rem 0 0 0;
 		// toggle classes
 		display:none;
 			 &.active {
@@ -91,22 +98,33 @@ TABS
  	margin-top: 0;
  	}
 
-
 // FLAVOURS
 
 .tabs--all-transparent {
 	.tabs__navigation {
 		border-bottom: 3px solid #ebebeb;
 		span a  {
-			padding-bottom: 29px; 
-			padding-top: 10px;
-			margin-right: 30px; 
+			padding-bottom: 1.8125rem; 
+			padding-top: 0.625rem;
+			margin-right: 1.875rem; 
 		}
 		a.active {
 			border-bottom: 3px solid #0d68cf;  
 			font-weight: bold; 
-			margin-bottom: 1em; 
+			margin-bottom: 1rem; 
 		}
+	}
+}
+
+
+@include media-breakpoint-up(md){ 	
+	.tabs--all-transparent .tabs__navigation  {
+		 span a  {
+		 	padding-top: 0;
+		 }
+		 a.active {
+		  	margin-bottom: -3px;
+		 }
 	}
 }
 
@@ -115,7 +133,7 @@ TABS
  .tabs--active-gray  {
 	.tabs__navigation
 		span a {
-			padding: 12px 24px; 
+			padding: 0.75rem 1.5rem; 
 			font-size: 1rem; 
 			line-height: 1.203; 
 			font-weight: bold;
@@ -127,38 +145,37 @@ TABS
 	}  
 
 
+//TAB CLASS NAME SHOULD BE CHANGED IF POSSIBLE TO REMOVE BLUE AND ADD A MORE GENERIC CLASS NAME.
 .tabs--active-blue  {
 	.tabs__navigation {
-		background: #ebebeb;
 		span a {
-			padding: 32px; 
+			padding: 2rem; 
 			font-size: 1rem; 
 			line-height: 1.203; 
 			font-weight: bold;
 		}
-		a.active {
-			background: #0d68cf; 
-			color: #ffffff;
+	}
+}
+
+
+// BARTLETT PALETTE BLUE BECOMES BLACK!
+.site-bartlett {
+	.tabs--active-blue  {
+		.tabs__navigation {
+			background: $backgroundlightgray;
+			a { 
+				color: #000000;
+				}
+			a.active {
+				background: #000000; 
+				color: #ffffff;
+			}
+	
 		}
-
 	}
 }
 
 
-
-@include media-breakpoint-up(md){ 
-	.tabs__navigation  span {
-		display:inline-block;
-	} 
-	.tabs--all-transparent .tabs__navigation  {
-		 span a  {
-		 	padding-top: 0;
-		 }
-		 a.active {
-		  	margin-bottom: -3px;
-		 }
-	}
-}
 
 
 

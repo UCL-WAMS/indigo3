@@ -618,7 +618,8 @@ ALERTS
 			text-decoration: underline;
 		}
 	}
-	p {
+	p,
+	.page-intro {
 		font-size: 1rem;
 		line-height: 1.5;
 	}
@@ -766,7 +767,8 @@ ALERTS
 		text-decoration: none; 
 		color: inherit;
 	}
-	p {
+	p,
+	.page-intro {
 		@include normal-zero;
 	}
 		p:hover, 
