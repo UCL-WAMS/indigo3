@@ -50,11 +50,4 @@ $(document).ready(function () {
 			});
 		}
 	});
-	// UK equivalencies select event handling.
-	// This may no longer be required??
-	$(".dropdown_uk_qualifications").on("change", function(){
-		$(".alt-qualifications__hidden").css("display","None");
-		if ($(this).val())
-			$("#info-" + $(this).val()).fadeIn();
-	});
 });
