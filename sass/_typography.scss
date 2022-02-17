@@ -241,3 +241,12 @@ TEMPLATE CONTENT CUSTOM STYLES - SEE ALSO MIXINS
 		}
 	}
 }
+
+/*-----------------------
+HORIZONTAL RULES
+-------------------------*/
+
+hr.hr-line--dark-grey {
+	border-top: 1px solid #333333;
+	margin-bottom: 1.5em;
+}
