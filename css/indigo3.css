@@ -2682,6 +2682,11 @@ AND THIS FOLDER DELETED.  THESE ARE NOT CUSTOM STYLES!
 /*-----------------------
 HUB PAGE LAYOUT
 ------------------------*/
+.site-prospective-students-graduate.node-type-hub-page .site-content .main-content h2 {
+  border-top: 0;
+  padding-top: 0;
+  margin-top: 0; }
+
 @media (min-width: 768px) {
   .site-prospective-students-graduate.node-type-hub-page .single-full-width-column {
     padding-right: 8.522%;
@@ -2708,7 +2713,13 @@ SECTION PADDING
 -----------------------------*/
   /*-----------------------------------
 QUOTES AND TESTIMONIALS
-----------------------------------*/ }
+----------------------------------*/
+  /*---------------------------
+TABS
+--------------------------*/
+  /*---------------------------
+ACCORDIONS
+----------------------------*/ }
   .site-prospective-students-graduate .header {
     border-bottom: #00818F 1em solid; }
     .site-prospective-students-graduate .header #logo {
@@ -2783,6 +2794,13 @@ QUOTES AND TESTIMONIALS
     padding: 3.75rem 1.875rem 0; }
   .site-prospective-students-graduate .blockquote blockquote {
     color: #AC145A; }
+  .site-prospective-students-graduate .tabs--active-blue .tabs__navigation {
+    background: #ebebeb; }
+    .site-prospective-students-graduate .tabs--active-blue .tabs__navigation a.active {
+      background: #0D68CF;
+      color: #ffffff; }
+  .site-prospective-students-graduate .accordion .accordion__title span:after {
+    color: #0D68CF; }
 
 .header__menu {
   position: relative;
@@ -3071,6 +3089,13 @@ TEMPLATE CONTENT CUSTOM STYLES - SEE ALSO MIXINS
     .site-content .view-list ul li:before,
     .site-content .right-page-nav ul li:before {
       content: none; }
+
+/*-----------------------
+HORIZONTAL RULES
+-------------------------*/
+hr.hr-line--dark-grey {
+  border-top: 1px solid #333333;
+  margin-bottom: 1.5em; }
 
 /*----------------------------------- 
 CUSTOM SITE WIDTH BOOTSTRAP CONTAINER
@@ -3960,6 +3985,9 @@ ol.alpha-list {
     vertical-align: top;
     margin-right: 0.9375rem; }
 
+.left-column .main-content .container .row div .entity h2 {
+  border-top: 0; }
+
 /* --------------- 	RESUSABLE LAYOUTS --------------------------- */
 /* -------------  TWO COLUMN SUB-LAYOUTs  ---------------------- */
 /*------------------- HALF AND HALF STANDARD LAYOUT  --------------------------*/
@@ -3967,10 +3995,6 @@ ol.alpha-list {
   padding: 0;
   margin: 0;
   max-width: none; }
-  .container.six-by-six h2 {
-    border-top: 0;
-    margin-top: 0;
-    padding-top: 0; }
   @media (min-width: 576px) {
     .container.six-by-six {
       max-width: none; } }
@@ -4009,10 +4033,6 @@ ol.alpha-list {
   padding: 0 0 1.875rem;
   margin: 0;
   max-width: none; }
-  .container.eight-by-four h2 {
-    border-top: 0;
-    margin-top: 0;
-    padding-top: 0; }
   @media (min-width: 576px) {
     .container.eight-by-four {
       max-width: none; } }
@@ -4061,8 +4081,6 @@ ol.alpha-list {
   padding: 0 0 1.875rem;
   margin: 0;
   max-width: none; }
-  .container.four-by-eight h2 {
-    border-top: 0; }
   @media (min-width: 576px) {
     .container.four-by-eight {
       max-width: none; } }
@@ -4102,8 +4120,6 @@ ol.alpha-list {
   margin: 1rem  auto 1.5rem auto;
   padding: 0;
   max-width: none; }
-  .four-by-four-by-four.container h2 {
-    border-top: 0; }
   @media (min-width: 576px) {
     .four-by-four-by-four.container {
       max-width: none; } }
@@ -4145,9 +4161,6 @@ FOUR EQUAL COLUMNS SUB LAYOUT
   margin: 1rem  auto 0 auto;
   padding: 0;
   max-width: none; }
-  .three-by-three-by-three-by-three.container h2,
-  .four-item-layout.container h2 {
-    border-top: 0; }
   @media (min-width: 576px) {
     .three-by-three-by-three-by-three.container,
     .four-item-layout.container {
@@ -4351,11 +4364,6 @@ FOUR EQUAL COLUMNS SUB LAYOUT
 
 .node-type-hub-page .site-content .main-content h1 {
   margin-bottom: 1.5rem; }
-
-.node-type-hub-page .site-content .main-content h2 {
-  border-top: 0;
-  padding-top: 0;
-  margin-top: 0; }
 
 .node-type-hub-page .single-full-width-column {
   padding: 0 16px; }
@@ -5147,7 +5155,8 @@ ALERTS
     text-decoration: none; }
     .card a:hover {
       text-decoration: underline; }
-  .card p {
+  .card p,
+  .card .page-intro {
     font-size: 1rem;
     line-height: 1.5; }
   .card h3 {
@@ -5202,6 +5211,10 @@ ALERTS
     font-weight: bold; }
   .highlight-card .highlight-card__text {
     padding: 1.25rem; }
+    .highlight-card .highlight-card__text h2 {
+      border-top: 0;
+      padding-top: 0;
+      margin-top: 0; }
     @media (min-width: 768px) {
       .highlight-card .highlight-card__text {
         padding: 1rem; }
@@ -5263,8 +5276,12 @@ ALERTS
     text-decoration: none;
     color: inherit; }
   .cta-box p,
+<<<<<<< HEAD
   .paragraphs-item-call-to-action-card-internal p,
   .paragraphs-item-call-to-action-card-external p {
+=======
+  .cta-box .page-intro {
+>>>>>>> 5013e64e27a3408b90df7e2b47bff6139e3d3c58
     font-size: 1rem;
     line-height: 1.5;
     margin-bottom: 1.5rem; }
@@ -5553,7 +5570,7 @@ ACCORDION
     font-size: 1rem;
     line-height: 1.203;
     font-weight: bold;
-    padding: 20px 0;
+    padding: 1.25rem 0;
     border-bottom: solid 1px #d6d6d6; }
     .accordion .accordion__title:hover {
       cursor: pointer; }
@@ -5564,22 +5581,62 @@ ACCORDION
     .accordion .accordion__title span {
       display: block;
       position: relative;
-      padding-right: 1rem; }
+      padding-right: 2.2rem; }
       .accordion .accordion__title span:after {
         content: "\02C5";
         position: absolute;
         right: 0;
         font-size: 1.8rem;
-        color: #0D68CF;
         top: -7px;
         font-weight: normal;
         padding-right: 1%; }
-  .accordion dd.accordion__description {
+
+dd.accordion__description {
+  margin-left: 0; }
+  dd.accordion__description.active {
+    border-bottom: solid 1px #d6d6d6;
+    padding-bottom: 1.875rem;
     margin-left: 0; }
-    .accordion dd.accordion__description.active {
-      border-bottom: solid 1px #d6d6d6;
-      padding-bottom: 30px;
-      margin-left: 0; }
+
+.site-bartlett .accordion .accordion__title span:after {
+  color: #000000; }
+
+.site-bartlett.node-type-hub-page .node-hub-page .four-by-four-by-four .accordion {
+  border-top: none;
+  border-bottom: none;
+  margin-bottom: 0;
+  padding: 1.25rem  2.8125rem  0   2.8125rem; }
+  .site-bartlett.node-type-hub-page .node-hub-page .four-by-four-by-four .accordion .accordion__title {
+    font-size: 1.875rem;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    border-bottom: none; }
+    @media (min-width: 992px) {
+      .site-bartlett.node-type-hub-page .node-hub-page .four-by-four-by-four .accordion .accordion__title {
+        font-size: 2.25rem; } }
+    .site-bartlett.node-type-hub-page .node-hub-page .four-by-four-by-four .accordion .accordion__title span {
+      padding-left: 1rem;
+      border-left: #333333 5px solid; }
+      .site-bartlett.node-type-hub-page .node-hub-page .four-by-four-by-four .accordion .accordion__title span:hover {
+        text-decoration: underline; }
+    .site-bartlett.node-type-hub-page .node-hub-page .four-by-four-by-four .accordion .accordion__title span::after {
+      color: black;
+      top: -3px;
+      font-size: 2.5rem; }
+
+.site-bartlett.node-type-hub-page .node-hub-page .four-by-four-by-four dd.accordion__description.active {
+  border-bottom: 0;
+  padding-bottom: 0; }
+
+@media (min-width: 768px) {
+  .site-bartlett.node-type-hub-page .four-by-four-by-four .four-by-four-by-four__left {
+    margin-bottom: 0; }
+  .site-bartlett.node-type-hub-page .four-by-four-by-four .four-by-four-by-four__middle {
+    margin-bottom: 0; }
+  .site-bartlett.node-type-hub-page .four-by-four-by-four .four-by-four-by-four__right {
+    margin-bottom: 0; } }
 
 /*------------- 
 TABS 
@@ -5590,10 +5647,14 @@ TABS
     text-decoration: none;
     display: block; }
 
+@media (min-width: 768px) {
+  .tabs__navigation {
+    display: flex; } }
+
 .tabs__content {
-  margin-bottom: 1.5em; }
+  margin-bottom: 1.5rem; }
   .tabs__content .tab-content {
-    padding: 30px 0 0 0;
+    padding: 1.875rem 0 0 0;
     display: none; }
     .tabs__content .tab-content.active {
       display: block; }
@@ -5609,17 +5670,23 @@ TABS
 .tabs--all-transparent .tabs__navigation {
   border-bottom: 3px solid #ebebeb; }
   .tabs--all-transparent .tabs__navigation span a {
-    padding-bottom: 29px;
-    padding-top: 10px;
-    margin-right: 30px; }
+    padding-bottom: 1.8125rem;
+    padding-top: 0.625rem;
+    margin-right: 1.875rem; }
   .tabs--all-transparent .tabs__navigation a.active {
     border-bottom: 3px solid #0d68cf;
     font-weight: bold;
-    margin-bottom: 1em; }
+    margin-bottom: 1rem; }
+
+@media (min-width: 768px) {
+  .tabs--all-transparent .tabs__navigation span a {
+    padding-top: 0; }
+  .tabs--all-transparent .tabs__navigation a.active {
+    margin-bottom: -3px; } }
 
 .tabs--active-grey .tabs__navigation span a,
 .tabs--active-gray .tabs__navigation span a {
-  padding: 12px 24px;
+  padding: 0.75rem 1.5rem;
   font-size: 1rem;
   line-height: 1.203;
   font-weight: bold; }
@@ -5629,24 +5696,19 @@ TABS
   border-top: 3px solid #0d68cf;
   background: #f5f5f5; }
 
-.tabs--active-blue .tabs__navigation {
-  background: #ebebeb; }
-  .tabs--active-blue .tabs__navigation span a {
-    padding: 32px;
-    font-size: 1rem;
-    line-height: 1.203;
-    font-weight: bold; }
-  .tabs--active-blue .tabs__navigation a.active {
-    background: #0d68cf;
-    color: #ffffff; }
+.tabs--active-blue .tabs__navigation span a {
+  padding: 2rem;
+  font-size: 1rem;
+  line-height: 1.203;
+  font-weight: bold; }
 
-@media (min-width: 768px) {
-  .tabs__navigation span {
-    display: inline-block; }
-  .tabs--all-transparent .tabs__navigation span a {
-    padding-top: 0; }
-  .tabs--all-transparent .tabs__navigation a.active {
-    margin-bottom: -3px; } }
+.site-bartlett .tabs--active-blue .tabs__navigation {
+  background: #f5f5f5; }
+  .site-bartlett .tabs--active-blue .tabs__navigation a {
+    color: #000000; }
+  .site-bartlett .tabs--active-blue .tabs__navigation a.active {
+    background: #000000;
+    color: #ffffff; }
 
 /*-----------
 HERO
