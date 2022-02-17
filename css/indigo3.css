@@ -2713,7 +2713,10 @@ QUOTES AND TESTIMONIALS
 ----------------------------------*/
   /*---------------------------
 TABS
---------------------------*/ }
+--------------------------*/
+  /*---------------------------
+ACCORDIONS
+----------------------------*/ }
   .site-prospective-students-graduate .header {
     border-bottom: #00818F 1em solid; }
     .site-prospective-students-graduate .header #logo {
@@ -2793,6 +2796,8 @@ TABS
     .site-prospective-students-graduate .tabs--active-blue .tabs__navigation a.active {
       background: #0D68CF;
       color: #ffffff; }
+  .site-prospective-students-graduate .accordion .accordion__title span:after {
+    color: #0D68CF; }
 
 .header__menu {
   position: relative;
@@ -5208,6 +5213,10 @@ ALERTS
     font-weight: bold; }
   .highlight-card .highlight-card__text {
     padding: 1.25rem; }
+    .highlight-card .highlight-card__text h2 {
+      border-top: 0;
+      padding-top: 0;
+      margin-top: 0; }
     @media (min-width: 768px) {
       .highlight-card .highlight-card__text {
         padding: 1rem; }
@@ -5551,7 +5560,7 @@ ACCORDION
     font-size: 1rem;
     line-height: 1.203;
     font-weight: bold;
-    padding: 20px 0;
+    padding: 1.25rem 0;
     border-bottom: solid 1px #d6d6d6; }
     .accordion .accordion__title:hover {
       cursor: pointer; }
@@ -5562,22 +5571,62 @@ ACCORDION
     .accordion .accordion__title span {
       display: block;
       position: relative;
-      padding-right: 1rem; }
+      padding-right: 2.2rem; }
       .accordion .accordion__title span:after {
         content: "\02C5";
         position: absolute;
         right: 0;
         font-size: 1.8rem;
-        color: #0D68CF;
         top: -7px;
         font-weight: normal;
         padding-right: 1%; }
-  .accordion dd.accordion__description {
+
+dd.accordion__description {
+  margin-left: 0; }
+  dd.accordion__description.active {
+    border-bottom: solid 1px #d6d6d6;
+    padding-bottom: 1.875rem;
     margin-left: 0; }
-    .accordion dd.accordion__description.active {
-      border-bottom: solid 1px #d6d6d6;
-      padding-bottom: 30px;
-      margin-left: 0; }
+
+.site-bartlett .accordion .accordion__title span:after {
+  color: #000000; }
+
+.site-bartlett.node-type-hub-page .node-hub-page .four-by-four-by-four .accordion {
+  border-top: none;
+  border-bottom: none;
+  margin-bottom: 0;
+  padding: 1.25rem  2.8125rem  0   2.8125rem; }
+  .site-bartlett.node-type-hub-page .node-hub-page .four-by-four-by-four .accordion .accordion__title {
+    font-size: 1.875rem;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    border-bottom: none; }
+    @media (min-width: 992px) {
+      .site-bartlett.node-type-hub-page .node-hub-page .four-by-four-by-four .accordion .accordion__title {
+        font-size: 2.25rem; } }
+    .site-bartlett.node-type-hub-page .node-hub-page .four-by-four-by-four .accordion .accordion__title span {
+      padding-left: 1rem;
+      border-left: #333333 5px solid; }
+      .site-bartlett.node-type-hub-page .node-hub-page .four-by-four-by-four .accordion .accordion__title span:hover {
+        text-decoration: underline; }
+    .site-bartlett.node-type-hub-page .node-hub-page .four-by-four-by-four .accordion .accordion__title span::after {
+      color: black;
+      top: -3px;
+      font-size: 2.5rem; }
+
+.site-bartlett.node-type-hub-page .node-hub-page .four-by-four-by-four dd.accordion__description.active {
+  border-bottom: 0;
+  padding-bottom: 0; }
+
+@media (min-width: 768px) {
+  .site-bartlett.node-type-hub-page .four-by-four-by-four .four-by-four-by-four__left {
+    margin-bottom: 0; }
+  .site-bartlett.node-type-hub-page .four-by-four-by-four .four-by-four-by-four__middle {
+    margin-bottom: 0; }
+  .site-bartlett.node-type-hub-page .four-by-four-by-four .four-by-four-by-four__right {
+    margin-bottom: 0; } }
 
 /*------------- 
 TABS 

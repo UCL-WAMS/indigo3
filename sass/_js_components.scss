@@ -8,7 +8,7 @@ ACCORDION
 		font-size: 1rem; 
 		line-height: 1.203;
 		font-weight: bold; 
-		padding: 20px 0; 
+		padding: 1.25rem 0; 
 		border-bottom: solid 1px #d6d6d6;
 		&:hover {
             cursor: pointer;
@@ -22,33 +22,94 @@ ACCORDION
 		span {
 			display:block;
 			position: relative;
-			padding-right: 1rem;
+			padding-right: 2.2rem;
 			&:after{ 
 				content: "\02C5";
 				position: absolute;
 				right: 0;
 				font-size: 1.8rem;
-				color: #0D68CF;
 				top: -7px;
 	 			font-weight: normal; 
 	 			padding-right: 1%;
 				}	
 			}
+		}
 	}
-	
-	dd.accordion__description  {
+dd.accordion__description  {
 		margin-left: 0; 
 		&.active {
 			border-bottom: solid 1px #d6d6d6; 
-			padding-bottom: 30px; 
+			padding-bottom: 1.875rem; 
 			margin-left:0;
 		}
-		// h2 {
-		// 	border-top: none;
-		// }
-	}
 
 }
+
+// BARTLETT ACCORDION ARROW COLOUR
+
+.site-bartlett {
+	.accordion .accordion__title span:after {
+		color: #000000;
+		}
+}
+
+
+
+// BARTLETT TOP HOMEPAGE MENU - THREE COLUMNS ON A HUB PAGE.
+// IDEALLY THIS SHOULD BE REPLACED WITH A DEDICATED COMPONENT 
+
+.site-bartlett.node-type-hub-page {
+	.node-hub-page	.four-by-four-by-four {
+				.accordion {
+				border-top: none;
+				border-bottom: none;
+				margin-bottom: 0;
+				padding:  1.25rem  2.8125rem  0   2.8125rem;
+					.accordion__title{
+						@include bold-four;
+						color: #333;
+						border-bottom: none;									
+						span {
+							padding-left: 1rem; 
+							border-left: #333333 5px solid;
+							&:hover {
+								text-decoration: underline;
+								}	
+							}
+						& span::after {
+						color: black;
+						top: -3px;
+						font-size: 2.5rem;
+						}
+					}
+					 
+				}
+				dd.accordion__description  {
+					&.active {
+						border-bottom: 0; 
+						padding-bottom: 0			
+					}
+				}
+			}
+			@include media-breakpoint-up(md){ 
+				.four-by-four-by-four {
+					.four-by-four-by-four__left { 
+						margin-bottom: 0; 
+						}
+					.four-by-four-by-four__middle { 
+						margin-bottom: 0;
+						}
+					.four-by-four-by-four__right {
+						margin-bottom: 0;
+						}
+				}
+	
+			}
+		}	
+	
+
+
+	
 
 /*------------- 
 TABS 

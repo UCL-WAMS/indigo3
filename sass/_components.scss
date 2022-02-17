@@ -698,6 +698,11 @@ ALERTS
 	
 	.highlight-card__text {
 		padding: 1.25rem;
+		h2 {
+			border-top: 0;
+			padding-top: 0;
+			margin-top: 0;
+		}
 	 @include media-breakpoint-up(md) {
 	 	padding: 1rem;
  		h2 {
