@@ -5276,12 +5276,11 @@ ALERTS
     text-decoration: none;
     color: inherit; }
   .cta-box p,
-<<<<<<< HEAD
+  .cta-box .page-intro,
   .paragraphs-item-call-to-action-card-internal p,
-  .paragraphs-item-call-to-action-card-external p {
-=======
-  .cta-box .page-intro {
->>>>>>> 5013e64e27a3408b90df7e2b47bff6139e3d3c58
+  .paragraphs-item-call-to-action-card-internal .page-intro,
+  .paragraphs-item-call-to-action-card-external p,
+  .paragraphs-item-call-to-action-card-external .page-intro {
     font-size: 1rem;
     line-height: 1.5;
     margin-bottom: 1.5rem; }
@@ -5377,6 +5376,9 @@ ALERTS
 @media (min-width: 1200px) {
   .six-by-six .cta-box__btn {
     width: 60%; } }
+
+.container .row div div.cta-box:not(:first-child) {
+  height: auto; }
 
 /*------------------
 FIVE CARD LAYOUT
