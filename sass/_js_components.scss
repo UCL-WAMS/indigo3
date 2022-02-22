@@ -3,7 +3,12 @@ ACCORDION
 --------------------*/
 
 .accordion {
-	border-top: #d6d6d6 solid 1px;
+	 @at-root dl#{&} {
+	 	padding-left:0;
+	 	}
+	.accordion__title:first-of-type {
+		border-top: #d6d6d6 solid 1px; 
+		}
 	.accordion__title { 
 		font-size: 1rem; 
 		line-height: 1.203;
@@ -12,13 +17,13 @@ ACCORDION
 		border-bottom: solid 1px #d6d6d6;
 		&:hover {
             cursor: pointer;
-        }
+        	}
 		&.active {
 			border-bottom: 0;
 			span:after{
 				content: "\02C4";
+				}
 			}
-		}
 		span {
 			display:block;
 			position: relative;
@@ -54,21 +59,22 @@ dd.accordion__description  {
 }
 
 
-
 // BARTLETT TOP HOMEPAGE MENU - THREE COLUMNS ON A HUB PAGE.
 // IDEALLY THIS SHOULD BE REPLACED WITH A DEDICATED COMPONENT 
 
 .site-bartlett.node-type-hub-page {
-	.node-hub-page	.four-by-four-by-four {
+	.main-content {	
+		.node-hub-page {
+			.four-by-four-by-four {	
 				.accordion {
-				border-top: none;
-				border-bottom: none;
-				margin-bottom: 0;
-				padding:  1.25rem  2.8125rem  0   2.8125rem;
+					margin-bottom: 0;
+					padding-top:  1.25rem ;
+					
 					.accordion__title{
 						@include bold-four;
 						color: #333;
-						border-bottom: none;									
+						border-bottom: none;
+						border-top: none;									
 						span {
 							padding-left: 1rem; 
 							border-left: #333333 5px solid;
@@ -93,8 +99,11 @@ dd.accordion__description  {
 			}
 			@include media-breakpoint-up(md){ 
 				.four-by-four-by-four {
+					.accordion__title {
+						padding-right: 1rem;
+						}
 					.four-by-four-by-four__left { 
-						margin-bottom: 0; 
+						margin-bottom: 0;						
 						}
 					.four-by-four-by-four__middle { 
 						margin-bottom: 0;
@@ -105,11 +114,13 @@ dd.accordion__description  {
 				}
 	
 			}
-		}	
+		}
+	}	
 	
+}
 
 
-	
+
 
 /*------------- 
 TABS 
