@@ -133,6 +133,7 @@ CARD LINK
 	color: #ffffff; 
 	}
 
+
 /*----------------------
 FEATURE LINK
 ---------------------*/
@@ -210,3 +211,15 @@ DROP SHADOW FOR CONTACT BOX
 		}
 }
 // SITE CLASS CLOSES HERE 
+
+
+
+// TEMPORARY OVERRIDE OF FLEX HEIGHT FOR CARDS ON HOMEPAGE
+
+#graduate-degrees  .paragraphs-item-card-link {
+	height: auto;
+	}
+
+#graduate-degrees .item-background .paragraphs-item-card-link {
+	height: 100%;
+	}

@@ -104,6 +104,9 @@ HELPER CLASSES
 .greyout, .grayout {
   opacity: 0.5; }
 
+.align-to-self {
+  height: auto; }
+
 /*-------------------------------
 DEBUGGING AND BACKEND
 --------------------------------*/
@@ -2776,7 +2779,7 @@ DROP SHADOW FOR CONTACT BOX
     color: #333; }
   .site-prospective-students-graduate .feature-list svg {
     stroke: #00818F; }
-  .site-prospective-students-graduate a.card-link {
+  .site-prospective-students-graduate .paragraphs-item-card-link {
     background: #00818F;
     color: #ffffff; }
   .site-prospective-students-graduate .feature-link .feature-link_title {
@@ -2801,6 +2804,12 @@ DROP SHADOW FOR CONTACT BOX
     color: #0D68CF; }
   .site-prospective-students-graduate .contact-panel .card-wrapper {
     box-shadow: 3px 10px 10px -6px rgba(51, 51, 51, 0.75); }
+
+#graduate-degrees .paragraphs-item-card-link {
+  height: auto; }
+
+#graduate-degrees .item-background .paragraphs-item-card-link {
+  height: 100%; }
 
 .header__menu {
   position: relative;
@@ -3998,7 +4007,7 @@ ol.alpha-list {
 .node-type-hub-page .main-content .node-hub-page .container .row div h2 {
   margin-top: 0; }
 
-/* ---------------  RESUSABLE LAYOUTS --------------------------- */
+/* --------------- 	RESUSABLE LAYOUTS --------------------------- */
 /* -------------  TWO COLUMN SUB-LAYOUTs  ---------------------- */
 /*------------------- HALF AND HALF STANDARD LAYOUT  --------------------------*/
 .container.six-by-six {
@@ -4125,7 +4134,7 @@ ol.alpha-list {
   .four-by-eight__left {
     padding-right: 1rem; } }
 
-/*---------------------- THREE  EQUAL COLUMNS SUB LAYOUT -------------------------*/
+/*---------------------- THREE 	EQUAL COLUMNS SUB LAYOUT -------------------------*/
 .four-by-four-by-four.container {
   margin: 1rem  auto 1.5rem auto;
   padding: 0;
@@ -4133,9 +4142,6 @@ ol.alpha-list {
   @media (min-width: 576px) {
     .four-by-four-by-four.container {
       max-width: none; } }
-  .four-by-four-by-four.container .content,
-  .four-by-four-by-four.container .entity-paragraphs-item {
-    height: 100%; }
 
 .four-by-four-by-four__left,
 .four-by-four-by-four__middle,
@@ -4222,12 +4228,6 @@ FOUR EQUAL COLUMNS SUB LAYOUT
   .four-item-layout .four-item-column__four {
     padding-right: 0px;
     padding-left: 24px; } }
-
-.three-by-three-by-three-by-three .content,
-.three-by-three-by-three-by-three .entity-paragraphs-item,
-.four-item-layout .content,
-.four-item-layout .entity-paragraphs-item {
-  height: 100%; }
 
 /* --------------------- CUSTOM LAYOUTS MICROSERVICE----------------------*/
 /*------------------- RELATED INFO PANEL  --------------------*/
@@ -4861,46 +4861,48 @@ DOWNLOAD LINKS
 /*--------------------------------
 CARD LINK
 --------------------------------*/
-a.card-link {
-  background: #00818F;
-  color: #ffffff;
-  display: block;
-  font-size: 1.25rem;
-  line-height: 1.5;
-  text-decoration: none;
-  height: auto;
-  padding: 1.875rem 1.875rem 2.5rem 1.875rem;
-  font-weight: bold;
-  overflow: hidden; }
-  a.card-link:hover {
-    text-decoration: underline; }
-  a.card-link svg {
+.paragraphs-item-card-link {
+  height: 100%; }
+  .paragraphs-item-card-link.align-to-self {
+    height: auto; }
+  .paragraphs-item-card-link a.card-link {
+    color: inherit;
     display: block;
-    margin-bottom: 1.875rem; }
-  @media (min-width: 768px) {
-    a.card-link {
-      font-size: 1rem;
-      line-height: 1.2; }
-      a.card-link svg {
-        width: 3.125rem;
-        height: 3.125rem;
-        margin-bottom: 1.875rem; } }
-  @media (min-width: 992px) {
-    a.card-link {
-      padding: 1.875rem 1.875rem 2.5rem 1.875rem;
-      font-size: 1.25rem;
-      line-height: 1.5;
-      font-weight: bold; }
-      a.card-link svg {
-        width: 70px;
-        height: 70px;
-        margin-bottom: 1.875rem; } }
+    font-size: 1.25rem;
+    line-height: 1.5;
+    text-decoration: none;
+    height: auto;
+    padding: 1.875rem 1.875rem 2.5rem 1.875rem;
+    font-weight: bold;
+    overflow: hidden; }
+    .paragraphs-item-card-link a.card-link:hover {
+      text-decoration: underline; }
+    .paragraphs-item-card-link a.card-link svg {
+      display: block;
+      margin-bottom: 1.875rem;
+      stroke: currentColor; }
+    @media (min-width: 768px) {
+      .paragraphs-item-card-link a.card-link {
+        font-size: 1rem;
+        line-height: 1.2; }
+        .paragraphs-item-card-link a.card-link svg {
+          width: 3.125rem;
+          height: 3.125rem;
+          margin-bottom: 1.875rem; } }
+    @media (min-width: 992px) {
+      .paragraphs-item-card-link a.card-link {
+        padding: 1.875rem 1.875rem 2.5rem 1.875rem;
+        font-size: 1.25rem;
+        line-height: 1.5;
+        font-weight: bold; }
+        .paragraphs-item-card-link a.card-link svg {
+          width: 70px;
+          height: 70px;
+          margin-bottom: 1.875rem; } }
 
-.site-bartlett a.card-link {
+.site-bartlett .paragraphs-item-card-link {
   background: #440099;
   color: #8ce2d0; }
-  .site-bartlett a.card-link svg {
-    stroke: currentColor; }
 
 /*-----------------------
 FEATURE LINK
@@ -5157,7 +5159,7 @@ ALERTS
   border-color: #D50032; }
 
 /*---------------------
-  CARDS
+	CARDS
 ---------------*/
 .card {
   position: relative; }
@@ -5200,6 +5202,8 @@ ALERTS
   .highlight-card .highlight-card__pic {
     background-color: inherit;
     color: inherit; }
+  .highlight-card.align-to-self {
+    height: auto; }
   .highlight-card .card__icon {
     padding: 5px;
     width: 45px;
@@ -5270,24 +5274,42 @@ ALERTS
   margin-top: 0;
   padding-top: 0; }
 
-.cta-box {
+.cta-box,
+.paragraphs-item-call-to-action-card-internal,
+.paragraphs-item-call-to-action-card-external {
   height: 100%;
   padding: 1.5rem;
   margin-bottom: 1.5rem;
   display: flex;
   flex-direction: column; }
-  .cta-box a {
+  .cta-box.align-to-self,
+  .paragraphs-item-call-to-action-card-internal.align-to-self,
+  .paragraphs-item-call-to-action-card-external.align-to-self {
+    height: auto; }
+  .cta-box a,
+  .paragraphs-item-call-to-action-card-internal a,
+  .paragraphs-item-call-to-action-card-external a {
     text-decoration: none;
     color: inherit; }
   .cta-box p,
-  .cta-box .page-intro {
+  .cta-box .page-intro,
+  .paragraphs-item-call-to-action-card-internal p,
+  .paragraphs-item-call-to-action-card-internal .page-intro,
+  .paragraphs-item-call-to-action-card-external p,
+  .paragraphs-item-call-to-action-card-external .page-intro {
     font-size: 1rem;
     line-height: 1.5;
     margin-bottom: 1.5rem; }
   .cta-box p:hover,
-  .cta-box .cta-box__btn__text:hover {
+  .cta-box .cta-box__btn__text:hover,
+  .paragraphs-item-call-to-action-card-internal p:hover,
+  .paragraphs-item-call-to-action-card-internal .cta-box__btn__text:hover,
+  .paragraphs-item-call-to-action-card-external p:hover,
+  .paragraphs-item-call-to-action-card-external .cta-box__btn__text:hover {
     text-decoration: underline; }
-  .cta-box .cta-box__btn {
+  .cta-box .cta-box__btn,
+  .paragraphs-item-call-to-action-card-internal .cta-box__btn,
+  .paragraphs-item-call-to-action-card-external .cta-box__btn {
     width: 100%;
     border-color: inherit;
     border-width: 1px;
@@ -5295,36 +5317,56 @@ ALERTS
     margin-top: 2.5rem;
     display: flex;
     margin-top: auto; }
-  .cta-box .cta-box__btn__svg {
+  .cta-box .cta-box__btn__svg,
+  .paragraphs-item-call-to-action-card-internal .cta-box__btn__svg,
+  .paragraphs-item-call-to-action-card-external .cta-box__btn__svg {
     width: 19%;
     display: flex;
     align-items: center; }
-    .cta-box .cta-box__btn__svg svg {
+    .cta-box .cta-box__btn__svg svg,
+    .paragraphs-item-call-to-action-card-internal .cta-box__btn__svg svg,
+    .paragraphs-item-call-to-action-card-external .cta-box__btn__svg svg {
       stroke: currentColor;
       margin: auto; }
-  .cta-box .cta-box__btn__text {
+  .cta-box .cta-box__btn__text,
+  .paragraphs-item-call-to-action-card-internal .cta-box__btn__text,
+  .paragraphs-item-call-to-action-card-external .cta-box__btn__text {
     width: 80.5806%;
     border-style: solid;
     padding: 1rem 1rem 1rem 2rem; }
   @media (min-width: 576px) {
-    .cta-box {
+    .cta-box,
+    .paragraphs-item-call-to-action-card-internal,
+    .paragraphs-item-call-to-action-card-external {
       padding: 3rem; } }
   @media (min-width: 768px) {
-    .cta-box .cta-box__btn {
+    .cta-box .cta-box__btn,
+    .paragraphs-item-call-to-action-card-internal .cta-box__btn,
+    .paragraphs-item-call-to-action-card-external .cta-box__btn {
       width: 70.42415%; } }
   @media (min-width: 992px) {
-    .cta-box .cta-box__btn {
+    .cta-box .cta-box__btn,
+    .paragraphs-item-call-to-action-card-internal .cta-box__btn,
+    .paragraphs-item-call-to-action-card-external .cta-box__btn {
       width: 40.42415%; } }
-  .cta-box.cta-box--violet-turquoise {
+  .cta-box.cta-box--violet-turquoise,
+  .paragraphs-item-call-to-action-card-internal.cta-box--violet-turquoise,
+  .paragraphs-item-call-to-action-card-external.cta-box--violet-turquoise {
     background: #440099;
     color: #8ce2d0; }
-  .cta-box.cta-box--gray {
+  .cta-box.cta-box--gray,
+  .paragraphs-item-call-to-action-card-internal.cta-box--gray,
+  .paragraphs-item-call-to-action-card-external.cta-box--gray {
     background: #333333;
     color: #ffffff; }
-  .cta-box.cta-box--purple-peach {
+  .cta-box.cta-box--purple-peach,
+  .paragraphs-item-call-to-action-card-internal.cta-box--purple-peach,
+  .paragraphs-item-call-to-action-card-external.cta-box--purple-peach {
     background: #702082;
     color: #F3CFB3; }
-  .cta-box.cta-box--turquoise-violet {
+  .cta-box.cta-box--turquoise-violet,
+  .paragraphs-item-call-to-action-card-internal.cta-box--turquoise-violet,
+  .paragraphs-item-call-to-action-card-external.cta-box--turquoise-violet {
     background: #8ce2d0;
     color: #440099; }
 
@@ -5350,6 +5392,9 @@ ALERTS
 @media (min-width: 1200px) {
   .six-by-six .cta-box__btn {
     width: 60%; } }
+
+.container .row div div.cta-box:not(:first-child) {
+  height: auto; }
 
 /*------------------
 FIVE CARD LAYOUT
@@ -5534,33 +5579,6 @@ SECTION BACKGROUNDS
 .section-background--lightgray {
   background: #f5f5f5; }
 
-/* ------------------- THREE CARD LINK LAYOUT 
-Has pre-process class item-background on container, when three cards are present,
-Heights on cards set to flex sized parents.  This is because
-mutiple paragraph types have been enabled on this pattern's columns, in the
-grad prospectus.
-----------------------------------------*/
-.four-by-four-by-four.container .content,
-.four-by-four-by-four.container .entity-paragraphs-item {
-  height: auto; }
-
-.four-by-four-by-four.container.item-background a.card-link,
-.four-by-four-by-four.container.item-background .content,
-.four-by-four-by-four.container.item-background .paragraphs-item-card-link {
-  height: 100%; }
-
-.four-by-four-by-four.container .item-background .row > div {
-  margin-bottom: 1.5rem; }
-
-.four-by-four-by-four.container .item-background .four-by-four-by-four__middle h2,
-.four-by-four-by-four.container .item-background .four-by-four-by-four__right h2,
-.four-by-four-by-four.container .item-background .four-by-four-by-four__left h2 {
-  padding: 0;
-  margin-top: 0; }
-
-.four-by-four-by-four.container .item-background .card .forward-link {
-  margin-top: 1.5em; }
-
 /*-----------
 ACCORDION
 --------------------*/
@@ -5621,7 +5639,8 @@ dd.accordion__description {
         font-size: 2.25rem; } }
     .site-bartlett.node-type-hub-page .main-content .node-hub-page .four-by-four-by-four .accordion .accordion__title span {
       padding-left: 1rem;
-      border-left: #333333 5px solid; }
+      border-left: #333333 5px solid;
+      margin-left: 1px; }
       .site-bartlett.node-type-hub-page .main-content .node-hub-page .four-by-four-by-four .accordion .accordion__title span:hover {
         text-decoration: underline; }
     .site-bartlett.node-type-hub-page .main-content .node-hub-page .four-by-four-by-four .accordion .accordion__title span::after {
@@ -5946,6 +5965,9 @@ EVENTS HERO
   .event-hero .event-hero-location p {
     display: inline;
     font-size: 1rem; }
+  .event-hero .event-hero-location a {
+    color: inherit;
+    font-weight: normal; }
 
 .event-hero .btn-cta {
   text-align: center;
