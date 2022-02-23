@@ -104,9 +104,6 @@ HELPER CLASSES
 .greyout, .grayout {
   opacity: 0.5; }
 
-.align-to-self {
-  height: auto; }
-
 /*-------------------------------
 DEBUGGING AND BACKEND
 --------------------------------*/
@@ -2719,7 +2716,10 @@ TABS
 --------------------------*/
   /*---------------------------
 ACCORDIONS
-----------------------------*/ }
+----------------------------*/
+  /*-----------------------------
+DROP SHADOW FOR CONTACT BOX
+--------------------------------*/ }
   .site-prospective-students-graduate .header {
     border-bottom: #00818F 1em solid; }
     .site-prospective-students-graduate .header #logo {
@@ -2776,7 +2776,7 @@ ACCORDIONS
     color: #333; }
   .site-prospective-students-graduate .feature-list svg {
     stroke: #00818F; }
-  .site-prospective-students-graduate .paragraphs-item-card-link {
+  .site-prospective-students-graduate a.card-link {
     background: #00818F;
     color: #ffffff; }
   .site-prospective-students-graduate .feature-link .feature-link_title {
@@ -2785,9 +2785,7 @@ ACCORDIONS
     background-color: #F6BE00; }
   @media (min-width: 768px) {
     .site-prospective-students-graduate .feature-link.clearfix {
-      box-shadow: 3px 10px 10px -6px rgba(51, 51, 51, 0.75);
-      -webkit-box-shadow: 3px 10px 10px -6px rgba(51, 51, 51, 0.75);
-      -moz-box-shadow: 3px 10px 10px -6px rgba(51, 51, 51, 0.75); } }
+      box-shadow: 3px 10px 10px -6px rgba(51, 51, 51, 0.75); } }
   .site-prospective-students-graduate .card__icon {
     background-color: #F6BE00; }
   .site-prospective-students-graduate .section-background {
@@ -2801,6 +2799,8 @@ ACCORDIONS
       color: #ffffff; }
   .site-prospective-students-graduate .accordion .accordion__title span:after {
     color: #0D68CF; }
+  .site-prospective-students-graduate .contact-panel .card-wrapper {
+    box-shadow: 3px 10px 10px -6px rgba(51, 51, 51, 0.75); }
 
 .header__menu {
   position: relative;
@@ -3005,11 +3005,10 @@ FEATURE LIST
     float: left;
     width: 60%;
     margin-bottom: 0.5rem;
-    padding-top: 0.75rem; }
+    line-height: .7; }
     @media (min-width: 768px) {
       .feature-list h4 {
-        padding-top: 0;
-        vertical-align: top; } }
+        padding-top: 0; } }
     @media (min-width: 992px) {
       .feature-list h4 {
         width: 70%; } }
@@ -3211,6 +3210,14 @@ a.btn-cta__border--inline:hover {
 
 .btn-cta__border--inline {
   display: inline-block; }
+
+.site-bartlett .btn-cta {
+  background-color: #000000; }
+
+.site-bartlett .btn-cta__icon__svg {
+  background-color: #858585; }
+  .site-bartlett .btn-cta__icon__svg svg {
+    stroke-width: 1; }
 
 .uk-inter-switch {
   padding-bottom: 1.5em;
@@ -3988,7 +3995,10 @@ ol.alpha-list {
 .left-column .main-content .container .row div .entity h2 {
   border-top: 0; }
 
-/* --------------- 	RESUSABLE LAYOUTS --------------------------- */
+.node-type-hub-page .main-content .node-hub-page .container .row div h2 {
+  margin-top: 0; }
+
+/* ---------------  RESUSABLE LAYOUTS --------------------------- */
 /* -------------  TWO COLUMN SUB-LAYOUTs  ---------------------- */
 /*------------------- HALF AND HALF STANDARD LAYOUT  --------------------------*/
 .container.six-by-six {
@@ -4115,7 +4125,7 @@ ol.alpha-list {
   .four-by-eight__left {
     padding-right: 1rem; } }
 
-/*---------------------- THREE 	EQUAL COLUMNS SUB LAYOUT -------------------------*/
+/*---------------------- THREE  EQUAL COLUMNS SUB LAYOUT -------------------------*/
 .four-by-four-by-four.container {
   margin: 1rem  auto 1.5rem auto;
   padding: 0;
@@ -4123,6 +4133,9 @@ ol.alpha-list {
   @media (min-width: 576px) {
     .four-by-four-by-four.container {
       max-width: none; } }
+  .four-by-four-by-four.container .content,
+  .four-by-four-by-four.container .entity-paragraphs-item {
+    height: 100%; }
 
 .four-by-four-by-four__left,
 .four-by-four-by-four__middle,
@@ -4210,7 +4223,13 @@ FOUR EQUAL COLUMNS SUB LAYOUT
     padding-right: 0px;
     padding-left: 24px; } }
 
-/* --------------------- CUSTOM LAYOUTS ----------------------*/
+.three-by-three-by-three-by-three .content,
+.three-by-three-by-three-by-three .entity-paragraphs-item,
+.four-item-layout .content,
+.four-item-layout .entity-paragraphs-item {
+  height: 100%; }
+
+/* --------------------- CUSTOM LAYOUTS MICROSERVICE----------------------*/
 /*------------------- RELATED INFO PANEL  --------------------*/
 .container.site-width.related-info {
   padding: 2.5rem 1rem;
@@ -4273,10 +4292,7 @@ FOUR EQUAL COLUMNS SUB LAYOUT
   overflow-wrap: break-word;
   word-wrap: break-word;
   word-break: break-all;
-  word-break: break-word;
-  box-shadow: 3px 10px 10px -6px rgba(51, 51, 51, 0.75);
-  -webkit-box-shadow: 3px 10px 10px -6px rgba(51, 51, 51, 0.75);
-  -moz-box-shadow: 3px 10px 10px -6px rgba(51, 51, 51, 0.75); }
+  word-break: break-word; }
   @media (min-width: 768px) {
     .contact-panel .card-wrapper {
       padding-right: 1rem; } }
@@ -4337,10 +4353,10 @@ FOUR EQUAL COLUMNS SUB LAYOUT
       padding: 1.5rem 1.5rem 0 1.5rem;
       width: 57%; } }
 
-.node-type-event .contact-panel .responsive-square .contact-panel__image img, .node-type-news .contact-panel .responsive-square .contact-panel__image img {
+.site-bartlett .node-type-event .contact-panel .responsive-square .contact-panel__image img, .site-bartlett .node-type-news .contact-panel .responsive-square .contact-panel__image img {
   border-radius: 50%; }
 
-.node-type-event .contact-panel .card-wrapper, .node-type-news .contact-panel .card-wrapper {
+.site-bartlett .node-type-event .contact-panel .card-wrapper, .site-bartlett .node-type-news .contact-panel .card-wrapper {
   box-shadow: 0px 0px; }
 
 /*-------------- SIMILAR COURSES PANEL ---------------*/
@@ -4480,6 +4496,9 @@ FOUR EQUAL COLUMNS SUB LAYOUT
           display: inline; }
         .header .header__menu p .header-menu__sm-text {
           text-transform: none; } }
+
+.site-bartlett .header__menu svg.feather.feather-menu.icon {
+  stroke: #8ce2d0; }
 
 /*----------------------------------
  STANDARD UCL MENU FOOTER WITH LINKS ETC.
@@ -4842,48 +4861,46 @@ DOWNLOAD LINKS
 /*--------------------------------
 CARD LINK
 --------------------------------*/
-.paragraphs-item-card-link {
-  height: 100%; }
-  .paragraphs-item-card-link.align-to-self {
-    height: auto; }
-  .paragraphs-item-card-link a.card-link {
-    color: inherit;
+a.card-link {
+  background: #00818F;
+  color: #ffffff;
+  display: block;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  text-decoration: none;
+  height: auto;
+  padding: 1.875rem 1.875rem 2.5rem 1.875rem;
+  font-weight: bold;
+  overflow: hidden; }
+  a.card-link:hover {
+    text-decoration: underline; }
+  a.card-link svg {
     display: block;
-    font-size: 1.25rem;
-    line-height: 1.5;
-    text-decoration: none;
-    height: auto;
-    padding: 1.875rem 1.875rem 2.5rem 1.875rem;
-    font-weight: bold;
-    overflow: hidden; }
-    .paragraphs-item-card-link a.card-link:hover {
-      text-decoration: underline; }
-    .paragraphs-item-card-link a.card-link svg {
-      display: block;
-      margin-bottom: 1.875rem;
-      stroke: currentColor; }
-    @media (min-width: 768px) {
-      .paragraphs-item-card-link a.card-link {
-        font-size: 1rem;
-        line-height: 1.2; }
-        .paragraphs-item-card-link a.card-link svg {
-          width: 3.125rem;
-          height: 3.125rem;
-          margin-bottom: 1.875rem; } }
-    @media (min-width: 992px) {
-      .paragraphs-item-card-link a.card-link {
-        padding: 1.875rem 1.875rem 2.5rem 1.875rem;
-        font-size: 1.25rem;
-        line-height: 1.5;
-        font-weight: bold; }
-        .paragraphs-item-card-link a.card-link svg {
-          width: 70px;
-          height: 70px;
-          margin-bottom: 1.875rem; } }
+    margin-bottom: 1.875rem; }
+  @media (min-width: 768px) {
+    a.card-link {
+      font-size: 1rem;
+      line-height: 1.2; }
+      a.card-link svg {
+        width: 3.125rem;
+        height: 3.125rem;
+        margin-bottom: 1.875rem; } }
+  @media (min-width: 992px) {
+    a.card-link {
+      padding: 1.875rem 1.875rem 2.5rem 1.875rem;
+      font-size: 1.25rem;
+      line-height: 1.5;
+      font-weight: bold; }
+      a.card-link svg {
+        width: 70px;
+        height: 70px;
+        margin-bottom: 1.875rem; } }
 
-.site-bartlett .paragraphs-item-card-link {
+.site-bartlett a.card-link {
   background: #440099;
   color: #8ce2d0; }
+  .site-bartlett a.card-link svg {
+    stroke: currentColor; }
 
 /*-----------------------
 FEATURE LINK
@@ -4928,10 +4945,6 @@ FEATURE LINK
     .feature-link.container {
       margin-bottom: 3.5rem;
       margin-top: 1.5rem; }
-    .feature-link.clearfix {
-      box-shadow: 3px 10px 10px -6px rgba(51, 51, 51, 0.75);
-      -webkit-box-shadow: 3px 10px 10px -6px rgba(51, 51, 51, 0.75);
-      -moz-box-shadow: 3px 10px 10px -6px rgba(51, 51, 51, 0.75); }
     .feature-link .feature-link_title {
       position: relative; }
       .feature-link .feature-link_title h5 {
@@ -4990,7 +5003,8 @@ PROMO CARD
       max-width: 58.3333333333%; } }
 
 .full-width-promo-card {
-  padding: 0 1rem; }
+  padding: 0 1rem;
+  margin-bottom: 2rem; }
   .full-width-promo-card.promo-card--black-white {
     background: #000;
     color: #fff; }
@@ -5019,7 +5033,7 @@ PROMO CARD
       background: #fff;
       color: #000;
       width: 100%;
-      font-size: .8em;
+      font-size: 1rem;
       font-weight: 700;
       text-align: center;
       margin-bottom: 1rem; }
@@ -5143,7 +5157,7 @@ ALERTS
   border-color: #D50032; }
 
 /*---------------------
-	CARDS
+  CARDS
 ---------------*/
 .card {
   position: relative; }
@@ -5186,8 +5200,6 @@ ALERTS
   .highlight-card .highlight-card__pic {
     background-color: inherit;
     color: inherit; }
-  .highlight-card.align-to-self {
-    height: auto; }
   .highlight-card .card__icon {
     padding: 5px;
     width: 45px;
@@ -5258,42 +5270,24 @@ ALERTS
   margin-top: 0;
   padding-top: 0; }
 
-.cta-box,
-.paragraphs-item-call-to-action-card-internal,
-.paragraphs-item-call-to-action-card-external {
+.cta-box {
   height: 100%;
   padding: 1.5rem;
   margin-bottom: 1.5rem;
   display: flex;
   flex-direction: column; }
-  .cta-box.align-to-self,
-  .paragraphs-item-call-to-action-card-internal.align-to-self,
-  .paragraphs-item-call-to-action-card-external.align-to-self {
-    height: auto; }
-  .cta-box a,
-  .paragraphs-item-call-to-action-card-internal a,
-  .paragraphs-item-call-to-action-card-external a {
+  .cta-box a {
     text-decoration: none;
     color: inherit; }
   .cta-box p,
-  .cta-box .page-intro,
-  .paragraphs-item-call-to-action-card-internal p,
-  .paragraphs-item-call-to-action-card-internal .page-intro,
-  .paragraphs-item-call-to-action-card-external p,
-  .paragraphs-item-call-to-action-card-external .page-intro {
+  .cta-box .page-intro {
     font-size: 1rem;
     line-height: 1.5;
     margin-bottom: 1.5rem; }
   .cta-box p:hover,
-  .cta-box .cta-box__btn__text:hover,
-  .paragraphs-item-call-to-action-card-internal p:hover,
-  .paragraphs-item-call-to-action-card-internal .cta-box__btn__text:hover,
-  .paragraphs-item-call-to-action-card-external p:hover,
-  .paragraphs-item-call-to-action-card-external .cta-box__btn__text:hover {
+  .cta-box .cta-box__btn__text:hover {
     text-decoration: underline; }
-  .cta-box .cta-box__btn,
-  .paragraphs-item-call-to-action-card-internal .cta-box__btn,
-  .paragraphs-item-call-to-action-card-external .cta-box__btn {
+  .cta-box .cta-box__btn {
     width: 100%;
     border-color: inherit;
     border-width: 1px;
@@ -5301,56 +5295,36 @@ ALERTS
     margin-top: 2.5rem;
     display: flex;
     margin-top: auto; }
-  .cta-box .cta-box__btn__svg,
-  .paragraphs-item-call-to-action-card-internal .cta-box__btn__svg,
-  .paragraphs-item-call-to-action-card-external .cta-box__btn__svg {
+  .cta-box .cta-box__btn__svg {
     width: 19%;
     display: flex;
     align-items: center; }
-    .cta-box .cta-box__btn__svg svg,
-    .paragraphs-item-call-to-action-card-internal .cta-box__btn__svg svg,
-    .paragraphs-item-call-to-action-card-external .cta-box__btn__svg svg {
+    .cta-box .cta-box__btn__svg svg {
       stroke: currentColor;
       margin: auto; }
-  .cta-box .cta-box__btn__text,
-  .paragraphs-item-call-to-action-card-internal .cta-box__btn__text,
-  .paragraphs-item-call-to-action-card-external .cta-box__btn__text {
+  .cta-box .cta-box__btn__text {
     width: 80.5806%;
     border-style: solid;
     padding: 1rem 1rem 1rem 2rem; }
   @media (min-width: 576px) {
-    .cta-box,
-    .paragraphs-item-call-to-action-card-internal,
-    .paragraphs-item-call-to-action-card-external {
+    .cta-box {
       padding: 3rem; } }
   @media (min-width: 768px) {
-    .cta-box .cta-box__btn,
-    .paragraphs-item-call-to-action-card-internal .cta-box__btn,
-    .paragraphs-item-call-to-action-card-external .cta-box__btn {
+    .cta-box .cta-box__btn {
       width: 70.42415%; } }
   @media (min-width: 992px) {
-    .cta-box .cta-box__btn,
-    .paragraphs-item-call-to-action-card-internal .cta-box__btn,
-    .paragraphs-item-call-to-action-card-external .cta-box__btn {
+    .cta-box .cta-box__btn {
       width: 40.42415%; } }
-  .cta-box.cta-box--violet-turquoise,
-  .paragraphs-item-call-to-action-card-internal.cta-box--violet-turquoise,
-  .paragraphs-item-call-to-action-card-external.cta-box--violet-turquoise {
+  .cta-box.cta-box--violet-turquoise {
     background: #440099;
     color: #8ce2d0; }
-  .cta-box.cta-box--gray,
-  .paragraphs-item-call-to-action-card-internal.cta-box--gray,
-  .paragraphs-item-call-to-action-card-external.cta-box--gray {
+  .cta-box.cta-box--gray {
     background: #333333;
     color: #ffffff; }
-  .cta-box.cta-box--purple-peach,
-  .paragraphs-item-call-to-action-card-internal.cta-box--purple-peach,
-  .paragraphs-item-call-to-action-card-external.cta-box--purple-peach {
+  .cta-box.cta-box--purple-peach {
     background: #702082;
     color: #F3CFB3; }
-  .cta-box.cta-box--turquoise-violet,
-  .paragraphs-item-call-to-action-card-internal.cta-box--turquoise-violet,
-  .paragraphs-item-call-to-action-card-external.cta-box--turquoise-violet {
+  .cta-box.cta-box--turquoise-violet {
     background: #8ce2d0;
     color: #440099; }
 
@@ -5376,9 +5350,6 @@ ALERTS
 @media (min-width: 1200px) {
   .six-by-six .cta-box__btn {
     width: 60%; } }
-
-.container .row div div.cta-box:not(:first-child) {
-  height: auto; }
 
 /*------------------
 FIVE CARD LAYOUT
@@ -5540,7 +5511,7 @@ FORMS
   width: 100%; }
 
 /*-------------------------
-VISUAL STYLING FOR COMPONENTS - COLOURS ETC
+SECTION BACKGROUNDS
 -------------------------- */
 .section-background {
   position: relative;
@@ -5563,35 +5534,66 @@ VISUAL STYLING FOR COMPONENTS - COLOURS ETC
 .section-background--lightgray {
   background: #f5f5f5; }
 
+/* ------------------- THREE CARD LINK LAYOUT 
+Has pre-process class item-background on container, when three cards are present,
+Heights on cards set to flex sized parents.  This is because
+mutiple paragraph types have been enabled on this pattern's columns, in the
+grad prospectus.
+----------------------------------------*/
+.four-by-four-by-four.container .content,
+.four-by-four-by-four.container .entity-paragraphs-item {
+  height: auto; }
+
+.four-by-four-by-four.container.item-background a.card-link,
+.four-by-four-by-four.container.item-background .content,
+.four-by-four-by-four.container.item-background .paragraphs-item-card-link {
+  height: 100%; }
+
+.four-by-four-by-four.container .item-background .row > div {
+  margin-bottom: 1.5rem; }
+
+.four-by-four-by-four.container .item-background .four-by-four-by-four__middle h2,
+.four-by-four-by-four.container .item-background .four-by-four-by-four__right h2,
+.four-by-four-by-four.container .item-background .four-by-four-by-four__left h2 {
+  padding: 0;
+  margin-top: 0; }
+
+.four-by-four-by-four.container .item-background .card .forward-link {
+  margin-top: 1.5em; }
+
 /*-----------
 ACCORDION
 --------------------*/
-.accordion {
+dl.accordion {
+  padding-left: 0; }
+
+.accordion .accordion__title:first-of-type {
   border-top: #d6d6d6 solid 1px; }
-  .accordion .accordion__title {
-    font-size: 1rem;
-    line-height: 1.203;
-    font-weight: bold;
-    padding: 1.25rem 0;
-    border-bottom: solid 1px #d6d6d6; }
-    .accordion .accordion__title:hover {
-      cursor: pointer; }
-    .accordion .accordion__title.active {
-      border-bottom: 0; }
-      .accordion .accordion__title.active span:after {
-        content: "\02C4"; }
-    .accordion .accordion__title span {
-      display: block;
-      position: relative;
-      padding-right: 2.2rem; }
-      .accordion .accordion__title span:after {
-        content: "\02C5";
-        position: absolute;
-        right: 0;
-        font-size: 1.8rem;
-        top: -7px;
-        font-weight: normal;
-        padding-right: 1%; }
+
+.accordion .accordion__title {
+  font-size: 1rem;
+  line-height: 1.203;
+  font-weight: bold;
+  padding: 1.25rem 0;
+  border-bottom: solid 1px #d6d6d6; }
+  .accordion .accordion__title:hover {
+    cursor: pointer; }
+  .accordion .accordion__title.active {
+    border-bottom: 0; }
+    .accordion .accordion__title.active span:after {
+      content: "\02C4"; }
+  .accordion .accordion__title span {
+    display: block;
+    position: relative;
+    padding-right: 2.2rem; }
+    .accordion .accordion__title span:after {
+      content: "\02C5";
+      position: absolute;
+      right: 0;
+      font-size: 1.8rem;
+      top: -7px;
+      font-weight: normal;
+      padding-right: 1%; }
 
 dd.accordion__description {
   margin-left: 0; }
@@ -5603,41 +5605,42 @@ dd.accordion__description {
 .site-bartlett .accordion .accordion__title span:after {
   color: #000000; }
 
-.site-bartlett.node-type-hub-page .node-hub-page .four-by-four-by-four .accordion {
-  border-top: none;
-  border-bottom: none;
+.site-bartlett.node-type-hub-page .main-content .node-hub-page .four-by-four-by-four .accordion {
   margin-bottom: 0;
-  padding: 1.25rem  2.8125rem  0   2.8125rem; }
-  .site-bartlett.node-type-hub-page .node-hub-page .four-by-four-by-four .accordion .accordion__title {
+  padding-top: 1.25rem; }
+  .site-bartlett.node-type-hub-page .main-content .node-hub-page .four-by-four-by-four .accordion .accordion__title {
     font-size: 1.875rem;
     line-height: 1.2;
     margin-bottom: 1.5rem;
     font-weight: bold;
     color: #333;
-    border-bottom: none; }
+    border-bottom: none;
+    border-top: none; }
     @media (min-width: 992px) {
-      .site-bartlett.node-type-hub-page .node-hub-page .four-by-four-by-four .accordion .accordion__title {
+      .site-bartlett.node-type-hub-page .main-content .node-hub-page .four-by-four-by-four .accordion .accordion__title {
         font-size: 2.25rem; } }
-    .site-bartlett.node-type-hub-page .node-hub-page .four-by-four-by-four .accordion .accordion__title span {
+    .site-bartlett.node-type-hub-page .main-content .node-hub-page .four-by-four-by-four .accordion .accordion__title span {
       padding-left: 1rem;
       border-left: #333333 5px solid; }
-      .site-bartlett.node-type-hub-page .node-hub-page .four-by-four-by-four .accordion .accordion__title span:hover {
+      .site-bartlett.node-type-hub-page .main-content .node-hub-page .four-by-four-by-four .accordion .accordion__title span:hover {
         text-decoration: underline; }
-    .site-bartlett.node-type-hub-page .node-hub-page .four-by-four-by-four .accordion .accordion__title span::after {
+    .site-bartlett.node-type-hub-page .main-content .node-hub-page .four-by-four-by-four .accordion .accordion__title span::after {
       color: black;
       top: -3px;
       font-size: 2.5rem; }
 
-.site-bartlett.node-type-hub-page .node-hub-page .four-by-four-by-four dd.accordion__description.active {
+.site-bartlett.node-type-hub-page .main-content .node-hub-page .four-by-four-by-four dd.accordion__description.active {
   border-bottom: 0;
   padding-bottom: 0; }
 
 @media (min-width: 768px) {
-  .site-bartlett.node-type-hub-page .four-by-four-by-four .four-by-four-by-four__left {
+  .site-bartlett.node-type-hub-page .main-content .node-hub-page .four-by-four-by-four .accordion__title {
+    padding-right: 1rem; }
+  .site-bartlett.node-type-hub-page .main-content .node-hub-page .four-by-four-by-four .four-by-four-by-four__left {
     margin-bottom: 0; }
-  .site-bartlett.node-type-hub-page .four-by-four-by-four .four-by-four-by-four__middle {
+  .site-bartlett.node-type-hub-page .main-content .node-hub-page .four-by-four-by-four .four-by-four-by-four__middle {
     margin-bottom: 0; }
-  .site-bartlett.node-type-hub-page .four-by-four-by-four .four-by-four-by-four__right {
+  .site-bartlett.node-type-hub-page .main-content .node-hub-page .four-by-four-by-four .four-by-four-by-four__right {
     margin-bottom: 0; } }
 
 /*------------- 
@@ -5923,7 +5926,8 @@ EVENTS HERO
   .event-hero .event-hero-opento p {
     display: inline-block;
     font-size: 1em;
-    font-weight: normal; }
+    font-weight: normal;
+    margin-bottom: 0; }
   .event-hero .event-hero-opento ul {
     list-style: none;
     padding: 0;
@@ -5937,15 +5941,21 @@ EVENTS HERO
       .event-hero .event-hero-opento ul li:last-of-type::after {
         content: none; }
 
+.event-hero .event-hero-location {
+  margin-top: 1rem; }
+  .event-hero .event-hero-location p {
+    display: inline;
+    font-size: 1rem; }
+
 .event-hero .btn-cta {
   text-align: center;
-  margin-top: 1rem; }
+  margin-top: 3rem; }
   @media (min-width: 768px) {
     .event-hero .btn-cta {
       width: 40%; } }
   @media (min-width: 992px) {
     .event-hero .btn-cta {
-      width: 29.8271%; } }
+      width: 35.8271%; } }
 
 .hero--green-pink .btn-cta,
 .hero--green-pink .btn-cta:hover {
@@ -6015,7 +6025,7 @@ FULL WIDTH HOME HERO
     .hero-home {
       max-height: 550px; }
       .hero-home .hero-home__text {
-        width: 40.20667%; } }
+        width: 50%; } }
   @media (min-width: 992px) {
     .hero-home {
       max-height: 650px; }

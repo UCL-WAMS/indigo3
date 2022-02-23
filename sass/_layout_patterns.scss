@@ -42,13 +42,24 @@
 
 }
 
+// H2 MODIFICATIONS FOR LAYOUTS AND COMPONENTS IN LAYOUTS.
 // REMOVES BORDER FROM TOP OF H2 IN LAYOUT COLUMNS AND NESTED COMPONENTS ALL CONTENT TYPES
 
-.left-column .main-content .container .row div .entity h2
-{
+.left-column .main-content .container .row div .entity h2 {
 	border-top: 0;
-}
+	}
 
+// REMOVES TOP MARGIN GAP FOR LAYOUT COMPONENTS H2
+.node-type-hub-page {
+	.main-content {	
+		.node-hub-page {
+			.container .row div
+			h2 {
+				margin-top: 0;
+			}
+		 }
+	}
+}
 
 /* --------------- 	RESUSABLE LAYOUTS --------------------------- */	
 
@@ -346,7 +357,7 @@ FOUR EQUAL COLUMNS SUB LAYOUT
 
 
 
-/* --------------------- CUSTOM LAYOUTS ----------------------*/
+/* --------------------- CUSTOM LAYOUTS MICROSERVICE----------------------*/
 
 /*------------------- RELATED INFO PANEL  --------------------*/
 
@@ -428,10 +439,7 @@ FOUR EQUAL COLUMNS SUB LAYOUT
   		word-wrap: break-word;
   	    word-break: break-all;
   		word-break: break-word;
-  		box-shadow: 3px 10px 10px -6px rgba(51,51,51,0.75);
-		-webkit-box-shadow: 3px 10px 10px -6px rgba(51,51,51,0.75);
-		-moz-box-shadow: 3px 10px 10px -6px rgba(51,51,51,0.75);
-  		@include media-breakpoint-up(md) {
+  	  		@include media-breakpoint-up(md) {
   			padding-right: 1rem;
   		}
    	 }
@@ -509,18 +517,18 @@ FOUR EQUAL COLUMNS SUB LAYOUT
 
 }
 
-// PROFILE CARD FOR NEWS AND EVENTS - THIS IS A TEMP FIX AND WILL BE REPLACED
+// PROFILE CARD FOR NEWS AND EVENTS - THIS IS A TEMP FIX FOR BARTLETT AND WILL BE REPLACED WITH DEDICATED COMPONENT
 
-.node-type-event .contact-panel, .node-type-news .contact-panel {
-	.responsive-square .contact-panel__image img {
-		border-radius: 50%;
-	}
-
-	.card-wrapper {
+.site-bartlett {
+ 	.node-type-event .contact-panel, .node-type-news .contact-panel {
+		.responsive-square .contact-panel__image img {
+			border-radius: 50%;
+			}
+		.card-wrapper {
 		box-shadow: 0px 0px;
-	}
+		}
+ 	}
 }
-
 
 /*-------------- SIMILAR COURSES PANEL ---------------*/
 

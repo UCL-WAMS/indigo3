@@ -149,8 +149,6 @@ FEATURE LINK
 	@include media-breakpoint-up(md) {
 			&.clearfix {
 			box-shadow: 3px 10px 10px -6px rgba(51,51,51,0.75);
-			-webkit-box-shadow: 3px 10px 10px -6px rgba(51,51,51,0.75);
-			-moz-box-shadow: 3px 10px 10px -6px rgba(51,51,51,0.75);
 			}
 		}
 	}
@@ -204,5 +202,11 @@ ACCORDIONS
 		color: #0D68CF;
 		}
 
+/*-----------------------------
+DROP SHADOW FOR CONTACT BOX
+--------------------------------*/
+.contact-panel .card-wrapper {
+		box-shadow: 3px 10px 10px -6px rgba(51,51,51,0.75);
+		}
 }
 // SITE CLASS CLOSES HERE 
