@@ -258,10 +258,14 @@ EVENTS HERO
     }
     .event-hero-location {
       margin-top: 1rem;
-          p {
+        p {
         display: inline;
         font-size: 1rem;
-      }
+        }
+        a {
+          color: inherit;
+          font-weight: normal;
+          }
     }
 
   .btn-cta { 

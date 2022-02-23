@@ -128,11 +128,11 @@ CARD LINK
 --------------------------------*/
 
 // TEAL CARDLINK - CURRENTLY USED IN GRADUATE PROSPECTUS.  LS 1.22
+.paragraphs-item-card-link { 
+	background: $brightblue; 
+	color: #ffffff; 
+	}
 
-a.card-link {
-	background: $brightblue;
-	color: #ffffff;
-}
 
 /*----------------------
 FEATURE LINK
@@ -211,3 +211,15 @@ DROP SHADOW FOR CONTACT BOX
 		}
 }
 // SITE CLASS CLOSES HERE 
+
+
+
+// TEMPORARY OVERRIDE OF FLEX HEIGHT FOR CARDS ON HOMEPAGE
+
+#graduate-degrees  .paragraphs-item-card-link {
+	height: auto;
+	}
+
+#graduate-degrees .item-background .paragraphs-item-card-link {
+	height: 100%;
+	}

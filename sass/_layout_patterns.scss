@@ -249,12 +249,6 @@
  	@include media-breakpoint-up(sm) {
 	max-width: none;
 	}
-
-	// SETS DRUPAL CLASSES TO 100% TO ALLOW COMPONENT TO PICK UP FLEX HEIGHTS OF COLUMN
-	.content,
-	.entity-paragraphs-item {
-		height: 100%;
-		}
 	}
 
 	.four-by-four-by-four__left,
@@ -355,13 +349,6 @@ FOUR EQUAL COLUMNS SUB LAYOUT
 		padding-left: 24px;
 		} 
 	}
-
-// SETS DRUPAL CLASSES TO 100% TO ALLOW COMPONENT TO PICK UP FLEX HEIGHTS OF COLUMN
-.content,
-.entity-paragraphs-item {
-	height: 100%;
-	}
-
 
 }
 
@@ -532,8 +519,8 @@ FOUR EQUAL COLUMNS SUB LAYOUT
 
 // PROFILE CARD FOR NEWS AND EVENTS - THIS IS A TEMP FIX FOR BARTLETT AND WILL BE REPLACED WITH DEDICATED COMPONENT
 
-.site-bartlett {
- 	.node-type-event .contact-panel, .node-type-news .contact-panel {
+
+ 	.site-bartlett.node-type-event .contact-panel, .node-type-news .contact-panel {
 		.responsive-square .contact-panel__image img {
 			border-radius: 50%;
 			}
@@ -541,7 +528,7 @@ FOUR EQUAL COLUMNS SUB LAYOUT
 		box-shadow: 0px 0px;
 		}
  	}
-}
+
 
 /*-------------- SIMILAR COURSES PANEL ---------------*/
 
