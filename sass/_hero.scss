@@ -240,6 +240,7 @@ EVENTS HERO
       display:inline-block; 
       font-size: 1em; 
       font-weight: normal; 
+      margin-bottom: 0;
       }
     ul {
       list-style: none; 
@@ -255,21 +256,29 @@ EVENTS HERO
         }
       }
     }
+    .event-hero-location {
+      margin-top: 1rem;
+          p {
+        display: inline;
+        font-size: 1rem;
+      }
+    }
 
   .btn-cta { 
     text-align: center; 
-    margin-top: 1rem;
+    margin-top: 3rem;
     @include media-breakpoint-up(md) {
           width: 40%; 
           }  
     @include media-breakpoint-up(lg) {
-         width: 29.8271%;; 
+         width: 35.8271%;; 
           }
         
         }
   
    
 }
+
 
 
 // COLOURS BARTLETT FOR CTA BUTTON
@@ -369,7 +378,7 @@ FULL WIDTH HOME HERO
   @include media-breakpoint-up(md) {
      max-height: 550px; 
      .hero-home__text {
-         width: 40.20667%;
+         width: 50%;
        }
   } 
    @include media-breakpoint-up(lg) {
