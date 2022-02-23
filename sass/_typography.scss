@@ -134,10 +134,9 @@ FEATURE LIST
 		float: left;
 		width: 60%;
 		margin-bottom: 0.5rem;
-		padding-top: 0.75rem;
+		line-height: .7;
 	@include media-breakpoint-up(md){ 
 		padding-top: 0;
-		vertical-align: top;
 		}
 	@include media-breakpoint-up(lg){ 
 		width: 70%;
