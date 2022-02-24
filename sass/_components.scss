@@ -190,12 +190,14 @@ DOWNLOAD LINKS
 CARD LINK
 --------------------------------*/
 
-
 .paragraphs-item-card-link {
 	height: 100%;
 	&.align-to-self{
 		height: auto;
 	}
+}
+
+
 	a.card-link  {
 		color: inherit;
 		display: block;
@@ -239,7 +241,8 @@ CARD LINK
 	
 			}		
 	}
-}
+
+
 
 // BARTLETT CARD LINK COLOURS
 .site-bartlett .paragraphs-item-card-link { 
@@ -875,8 +878,7 @@ ALERTS
 			}
 		}
 }
-		
-.container .row div div.cta-box:not(:first-child) {height:auto;}
+
 
 
 /*------------------
@@ -889,6 +891,7 @@ FIVE CARD LAYOUT
 
 	.container {
 		padding: 0;
+		max-width: none;
 	}
 
 	.card__icon {
@@ -932,6 +935,14 @@ FIVE CARD LAYOUT
 	}
 
 }
+
+
+ @include media-breakpoint-between (sm, md) {
+ 	.five-card-layout h3 { 
+ 		font-size: 1.1rem; 
+ 		}
+
+ }
 
 
  @include media-breakpoint-up(md) {

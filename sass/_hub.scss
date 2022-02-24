@@ -5,17 +5,13 @@
 		margin-bottom: 1.5rem;
 	}
 
-
 	.single-full-width-column {
 		padding: 0 16px;
 		.main-content{
 			margin-top: 1rem;
 			} 
 		}	
-	
-	.five-card-layout .container {
-		max-width: 100%;
-		}
+
 @include media-breakpoint-up(md){
 	.single-full-width-column { 
 		padding-right: 0; 
@@ -24,18 +20,7 @@
 		.main-content {
 			margin-top: 2rem;
 			}
-		.section-five-item {
-		 	width: 123.3%; 
-		 	margin-left: -10.1%;
-		 	.container{
-		 		padding-left: 0;
-		 		}
-		}
-}	
-
-
-
-
+	}	
 }
 
 
