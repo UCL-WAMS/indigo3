@@ -2792,7 +2792,7 @@ DROP SHADOW FOR CONTACT BOX
   .site-prospective-students-graduate .card__icon {
     background-color: #F6BE00; }
   .site-prospective-students-graduate .section-background {
-    padding: 3.75rem 1.875rem 0; }
+    padding: 3.75rem 0; }
   .site-prospective-students-graduate .blockquote blockquote {
     color: #AC145A; }
   .site-prospective-students-graduate .tabs--active-blue .tabs__navigation {
@@ -3223,6 +3223,10 @@ a.btn-cta__border--inline:hover {
 .site-bartlett .btn-cta {
   background-color: #000000; }
 
+.site-bartlett a.btn-cta:hover {
+  background: #8ce2d0;
+  color: #000000; }
+
 .site-bartlett .btn-cta__icon__svg {
   background-color: #858585; }
   .site-bartlett .btn-cta__icon__svg svg {
@@ -3290,6 +3294,12 @@ a.btn-cta__border--inline:hover {
 .node-graduate-research-programme-page p:first-of-type .feather-map-pin,
 .node-type-graduate-ite-programme-page p:first-of-type .feather-map-pin {
   vertical-align: text-top; }
+
+.node-type-graduate-taught-programme-page a.card-link,
+.node-graduate-research-programme-page a.card-link,
+.node-type-graduate-ite-programme-page a.card-link {
+  background: #00818F;
+  color: #ffffff; }
 
 .prog-key-info {
   margin-bottom: 1.875rem;
@@ -4386,20 +4396,12 @@ FOUR EQUAL COLUMNS SUB LAYOUT
   .node-type-hub-page .single-full-width-column .main-content {
     margin-top: 1rem; }
 
-.node-type-hub-page .five-card-layout .container {
-  max-width: 100%; }
-
 @media (min-width: 768px) {
   .node-type-hub-page .single-full-width-column {
     padding-right: 0;
     padding-left: 0; }
   .node-type-hub-page .main-content {
-    margin-top: 2rem; }
-  .node-type-hub-page .section-five-item {
-    width: 123.3%;
-    margin-left: -10.1%; }
-    .node-type-hub-page .section-five-item .container {
-      padding-left: 0; } }
+    margin-top: 2rem; } }
 
 /* --------------------- HEADER ------------------------
 -----------------------*/
@@ -4865,40 +4867,41 @@ CARD LINK
   height: 100%; }
   .paragraphs-item-card-link.align-to-self {
     height: auto; }
-  .paragraphs-item-card-link a.card-link {
-    color: inherit;
+
+a.card-link {
+  color: inherit;
+  display: block;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  text-decoration: none;
+  height: auto;
+  padding: 1.875rem 1.875rem 2.5rem 1.875rem;
+  font-weight: bold;
+  overflow: hidden; }
+  a.card-link:hover {
+    text-decoration: underline; }
+  a.card-link svg {
     display: block;
-    font-size: 1.25rem;
-    line-height: 1.5;
-    text-decoration: none;
-    height: auto;
-    padding: 1.875rem 1.875rem 2.5rem 1.875rem;
-    font-weight: bold;
-    overflow: hidden; }
-    .paragraphs-item-card-link a.card-link:hover {
-      text-decoration: underline; }
-    .paragraphs-item-card-link a.card-link svg {
-      display: block;
-      margin-bottom: 1.875rem;
-      stroke: currentColor; }
-    @media (min-width: 768px) {
-      .paragraphs-item-card-link a.card-link {
-        font-size: 1rem;
-        line-height: 1.2; }
-        .paragraphs-item-card-link a.card-link svg {
-          width: 3.125rem;
-          height: 3.125rem;
-          margin-bottom: 1.875rem; } }
-    @media (min-width: 992px) {
-      .paragraphs-item-card-link a.card-link {
-        padding: 1.875rem 1.875rem 2.5rem 1.875rem;
-        font-size: 1.25rem;
-        line-height: 1.5;
-        font-weight: bold; }
-        .paragraphs-item-card-link a.card-link svg {
-          width: 70px;
-          height: 70px;
-          margin-bottom: 1.875rem; } }
+    margin-bottom: 1.875rem;
+    stroke: currentColor; }
+  @media (min-width: 768px) {
+    a.card-link {
+      font-size: 1rem;
+      line-height: 1.2; }
+      a.card-link svg {
+        width: 3.125rem;
+        height: 3.125rem;
+        margin-bottom: 1.875rem; } }
+  @media (min-width: 992px) {
+    a.card-link {
+      padding: 1.875rem 1.875rem 2.5rem 1.875rem;
+      font-size: 1.25rem;
+      line-height: 1.5;
+      font-weight: bold; }
+      a.card-link svg {
+        width: 70px;
+        height: 70px;
+        margin-bottom: 1.875rem; } }
 
 .site-bartlett .paragraphs-item-card-link {
   background: #440099;
@@ -5393,9 +5396,6 @@ ALERTS
   .six-by-six .cta-box__btn {
     width: 60%; } }
 
-.container .row div div.cta-box:not(:first-child) {
-  height: auto; }
-
 /*------------------
 FIVE CARD LAYOUT
 ----------------------------*/
@@ -5403,7 +5403,8 @@ FIVE CARD LAYOUT
   margin-top: 1.8rem;
   margin-bottom: 1.5rem; }
   .five-card-layout .container {
-    padding: 0; }
+    padding: 0;
+    max-width: none; }
   .five-card-layout .card__icon {
     display: none; }
   .five-card-layout .five-card__right {
@@ -5428,6 +5429,10 @@ FIVE CARD LAYOUT
   .five-card-layout .six-by-six__right {
     max-width: 100%;
     margin-bottom: 0; }
+
+@media (min-width: 576px) and (max-width: 991.98px) {
+  .five-card-layout h3 {
+    font-size: 1.1rem; } }
 
 @media (min-width: 768px) {
   .five-card-layout .five-card__left-top {
