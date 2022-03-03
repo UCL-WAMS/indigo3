@@ -64,19 +64,29 @@ PLACE - BEFORE LIVE LS 14.2
 	display: none;
 }
 
-/*-------------------- HUB CONTENT TYPE PAGE SINGLE COLUMN LAYOUT -------------------*/
 
-// ADD HUB BODY CLASS WHEN AVAILABLE
+/*---------------------------------------
+BARTLETT INDIGO PAGES SIDEBAR AND MAIN CONTENT SIZING 
+--------------------------------------------*/
 
-// .site-content {padding: 0;}
-// @media (max-width: 768px) {.hub .main-content h1 {padding-left: 1.5rem; padding-right: 1rem;}}
-
-.single-full-width-column {
-	width: 100%;
-	.main-content {
-		padding-right: 0;
+.site-bartlett.node-type-indigo-page {
+	.single-full-width-column {
+		padding: 0 16px;
+		@include media-breakpoint-up(md){
+			padding-left: 0;
+			padding-right: 0;
+		.main-content {			
+			flex: 0 0 75%;
+			max-width: 75%;
+			padding-left: 0;
+			padding-right: 9.11%;  
+			} 
+		}
 	}
-}        
+}
+
+
+
 
 
 
