@@ -3219,7 +3219,8 @@ PLACE - BEFORE LIVE LS 14.2
 BARTLETT INDIGO PAGES SIDEBAR AND MAIN CONTENT SIZING 
 --------------------------------------------*/
 .site-bartlett.node-type-indigo-page .single-full-width-column {
-  padding: 0 16px; }
+  padding: 0 16px;
+  width: 100%; }
   @media (min-width: 768px) {
     .site-bartlett.node-type-indigo-page .single-full-width-column {
       padding-left: 0;

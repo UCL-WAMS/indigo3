@@ -72,6 +72,7 @@ BARTLETT INDIGO PAGES SIDEBAR AND MAIN CONTENT SIZING
 .site-bartlett.node-type-indigo-page {
 	.single-full-width-column {
 		padding: 0 16px;
+		width:100%;
 		@include media-breakpoint-up(md){
 			padding-left: 0;
 			padding-right: 0;
