@@ -3207,25 +3207,17 @@ CUSTOM SITE WIDTH BOOTSTRAP CONTAINER
   .content-columns .right-column {
     padding-top: 7.5rem; } }
 
-/*-------------------------------
-TEMPORARILY HIDE SIDEBAR CONTENTS BARTLETT
-REMOVE WHEN DRUPAL PARAGRAPHS ARE IN 
-PLACE - BEFORE LIVE LS 14.2
--------------------------------*/
-.site-bartlett .content-columns .right-column {
-  display: none; }
-
 /*---------------------------------------
-BARTLETT INDIGO PAGES SIDEBAR AND MAIN CONTENT SIZING 
+BARTLETT (at the moment) INDIGO PAGES SIDEBAR AND MAIN CONTENT SIZING 
 --------------------------------------------*/
-.site-bartlett.node-type-indigo-page .single-full-width-column {
+.site-bartlett.node-type-indigo-page.no-sidebars .single-full-width-column {
   padding: 0 16px;
   width: 100%; }
   @media (min-width: 768px) {
-    .site-bartlett.node-type-indigo-page .single-full-width-column {
+    .site-bartlett.node-type-indigo-page.no-sidebars .single-full-width-column {
       padding-left: 0;
       padding-right: 0; }
-      .site-bartlett.node-type-indigo-page .single-full-width-column .main-content {
+      .site-bartlett.node-type-indigo-page.no-sidebars .single-full-width-column .main-content {
         flex: 0 0 75%;
         max-width: 75%;
         padding-left: 0;

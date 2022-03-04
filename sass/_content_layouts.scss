@@ -53,23 +53,11 @@ CUSTOM SITE WIDTH BOOTSTRAP CONTAINER
 }
 
 
-/*-------------------------------
-TEMPORARILY HIDE SIDEBAR CONTENTS BARTLETT
-REMOVE WHEN DRUPAL PARAGRAPHS ARE IN 
-PLACE - BEFORE LIVE LS 14.2
--------------------------------*/
-
-
-.site-bartlett .content-columns .right-column  {
-	display: none;
-}
-
-
 /*---------------------------------------
-BARTLETT INDIGO PAGES SIDEBAR AND MAIN CONTENT SIZING 
+BARTLETT (at the moment) INDIGO PAGES SIDEBAR AND MAIN CONTENT SIZING 
 --------------------------------------------*/
 
-.site-bartlett.node-type-indigo-page {
+.site-bartlett.node-type-indigo-page.no-sidebars {
 	.single-full-width-column {
 		padding: 0 16px;
 		width:100%;
