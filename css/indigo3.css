@@ -2682,17 +2682,23 @@ AND THIS FOLDER DELETED.  THESE ARE NOT CUSTOM STYLES!
 /*-----------------------
 HUB PAGE LAYOUT
 ------------------------*/
-.site-prospective-students-graduate.node-type-hub-page .site-content .main-content h2 {
+.site-prospective-students-graduate.node-type-hub-page .site-content .main-content h2,
+.site-prospective-students-undergraduate-redesign.node-type-hub-page .site-content .main-content h2,
+.site-prospective-students-undergraduate.node-type-hub-page .site-content .main-content h2 {
   border-top: 0;
   padding-top: 0;
   margin-top: 0; }
 
 @media (min-width: 768px) {
-  .site-prospective-students-graduate.node-type-hub-page .single-full-width-column {
+  .site-prospective-students-graduate.node-type-hub-page .single-full-width-column,
+  .site-prospective-students-undergraduate-redesign.node-type-hub-page .single-full-width-column,
+  .site-prospective-students-undergraduate.node-type-hub-page .single-full-width-column {
     padding-right: 8.522%;
     padding-left: 8.522%; } }
 
-.site-prospective-students-graduate {
+.site-prospective-students-graduate,
+.site-prospective-students-undergraduate-redesign,
+.site-prospective-students-undergraduate {
   /*--------------------------
 PLAIN LIST
 -------------------------*/
@@ -2723,86 +2729,150 @@ ACCORDIONS
   /*-----------------------------
 DROP SHADOW FOR CONTACT BOX
 --------------------------------*/ }
-  .site-prospective-students-graduate .header {
+  .site-prospective-students-graduate .header,
+  .site-prospective-students-undergraduate-redesign .header,
+  .site-prospective-students-undergraduate .header {
     border-bottom: #00818F 1em solid; }
-    .site-prospective-students-graduate .header #logo {
+    .site-prospective-students-graduate .header #logo,
+    .site-prospective-students-undergraduate-redesign .header #logo,
+    .site-prospective-students-undergraduate .header #logo {
       background: #00818F; }
-  .site-prospective-students-graduate .hero-content.text-only {
+  .site-prospective-students-graduate .hero-content.text-only,
+  .site-prospective-students-undergraduate-redesign .hero-content.text-only,
+  .site-prospective-students-undergraduate .hero-content.text-only {
     background-color: #00818F;
     color: #fff;
     padding: 2.5rem 1rem; }
-    .site-prospective-students-graduate .hero-content.text-only .hero-text {
+    .site-prospective-students-graduate .hero-content.text-only .hero-text,
+    .site-prospective-students-undergraduate-redesign .hero-content.text-only .hero-text,
+    .site-prospective-students-undergraduate .hero-content.text-only .hero-text {
       position: relative;
       width: 100%;
       padding-right: 16px;
       padding-left: 16px;
       padding: 0; }
       @media (min-width: 576px) {
-        .site-prospective-students-graduate .hero-content.text-only .hero-text {
+        .site-prospective-students-graduate .hero-content.text-only .hero-text,
+        .site-prospective-students-undergraduate-redesign .hero-content.text-only .hero-text,
+        .site-prospective-students-undergraduate .hero-content.text-only .hero-text {
           flex: 0 0 100%;
           max-width: 100%; } }
-    .site-prospective-students-graduate .hero-content.text-only h1 {
+    .site-prospective-students-graduate .hero-content.text-only h1,
+    .site-prospective-students-undergraduate-redesign .hero-content.text-only h1,
+    .site-prospective-students-undergraduate .hero-content.text-only h1 {
       font-size: 2.25rem;
       line-height: 1.2; }
-    .site-prospective-students-graduate .hero-content.text-only p {
+    .site-prospective-students-graduate .hero-content.text-only p,
+    .site-prospective-students-undergraduate-redesign .hero-content.text-only p,
+    .site-prospective-students-undergraduate .hero-content.text-only p {
       font-weight: bold;
       font-size: 1.5rem;
       line-height: 1.9rem; }
-    .site-prospective-students-graduate .hero-content.text-only .hero-pic {
+    .site-prospective-students-graduate .hero-content.text-only .hero-pic,
+    .site-prospective-students-undergraduate-redesign .hero-content.text-only .hero-pic,
+    .site-prospective-students-undergraduate .hero-content.text-only .hero-pic {
       display: none; }
     @media (min-width: 768px) {
-      .site-prospective-students-graduate .hero-content.text-only {
+      .site-prospective-students-graduate .hero-content.text-only,
+      .site-prospective-students-undergraduate-redesign .hero-content.text-only,
+      .site-prospective-students-undergraduate .hero-content.text-only {
         padding: 4.125rem 8.522% 4.125rem 8.522%; }
-        .site-prospective-students-graduate .hero-content.text-only h1 {
+        .site-prospective-students-graduate .hero-content.text-only h1,
+        .site-prospective-students-undergraduate-redesign .hero-content.text-only h1,
+        .site-prospective-students-undergraduate .hero-content.text-only h1 {
           font-size: 3.8rem;
           line-height: 1; }
-        .site-prospective-students-graduate .hero-content.text-only p {
+        .site-prospective-students-graduate .hero-content.text-only p,
+        .site-prospective-students-undergraduate-redesign .hero-content.text-only p,
+        .site-prospective-students-undergraduate .hero-content.text-only p {
           font-size: 1.875rem;
           line-height: 1.25; } }
   .site-prospective-students-graduate section ul,
-  .site-prospective-students-graduate .site-content ul {
+  .site-prospective-students-graduate .site-content ul,
+  .site-prospective-students-undergraduate-redesign section ul,
+  .site-prospective-students-undergraduate-redesign .site-content ul,
+  .site-prospective-students-undergraduate section ul,
+  .site-prospective-students-undergraduate .site-content ul {
     padding-left: 1rem; }
     @media (min-width: 576px) {
       .site-prospective-students-graduate section ul,
-      .site-prospective-students-graduate .site-content ul {
+      .site-prospective-students-graduate .site-content ul,
+      .site-prospective-students-undergraduate-redesign section ul,
+      .site-prospective-students-undergraduate-redesign .site-content ul,
+      .site-prospective-students-undergraduate section ul,
+      .site-prospective-students-undergraduate .site-content ul {
         padding-left: 4.6875rem; } }
     .site-prospective-students-graduate section ul li,
-    .site-prospective-students-graduate .site-content ul li {
+    .site-prospective-students-graduate .site-content ul li,
+    .site-prospective-students-undergraduate-redesign section ul li,
+    .site-prospective-students-undergraduate-redesign .site-content ul li,
+    .site-prospective-students-undergraduate section ul li,
+    .site-prospective-students-undergraduate .site-content ul li {
       font-size: 1rem;
       line-height: 1.5;
       padding-left: 1.25rem;
       margin-bottom: 1rem; }
       .site-prospective-students-graduate section ul li::marker,
-      .site-prospective-students-graduate .site-content ul li::marker {
+      .site-prospective-students-graduate .site-content ul li::marker,
+      .site-prospective-students-undergraduate-redesign section ul li::marker,
+      .site-prospective-students-undergraduate-redesign .site-content ul li::marker,
+      .site-prospective-students-undergraduate section ul li::marker,
+      .site-prospective-students-undergraduate .site-content ul li::marker {
         color: #00818F; }
-  .site-prospective-students-graduate .feature-list li {
+  .site-prospective-students-graduate .feature-list li,
+  .site-prospective-students-undergraduate-redesign .feature-list li,
+  .site-prospective-students-undergraduate .feature-list li {
     color: #333; }
-  .site-prospective-students-graduate .feature-list svg {
+  .site-prospective-students-graduate .feature-list svg,
+  .site-prospective-students-undergraduate-redesign .feature-list svg,
+  .site-prospective-students-undergraduate .feature-list svg {
     stroke: #00818F; }
-  .site-prospective-students-graduate .paragraphs-item-card-link {
+  .site-prospective-students-graduate .paragraphs-item-card-link,
+  .site-prospective-students-undergraduate-redesign .paragraphs-item-card-link,
+  .site-prospective-students-undergraduate .paragraphs-item-card-link {
     background: #00818F;
     color: #ffffff; }
-  .site-prospective-students-graduate .feature-link .feature-link_title {
+  .site-prospective-students-graduate .feature-link .feature-link_title,
+  .site-prospective-students-undergraduate-redesign .feature-link .feature-link_title,
+  .site-prospective-students-undergraduate .feature-link .feature-link_title {
     background: #F6BE00; }
-  .site-prospective-students-graduate .feature-link .feature-link__icon {
+  .site-prospective-students-graduate .feature-link .feature-link__icon,
+  .site-prospective-students-undergraduate-redesign .feature-link .feature-link__icon,
+  .site-prospective-students-undergraduate .feature-link .feature-link__icon {
     background-color: #F6BE00; }
   @media (min-width: 768px) {
-    .site-prospective-students-graduate .feature-link.clearfix {
+    .site-prospective-students-graduate .feature-link.clearfix,
+    .site-prospective-students-undergraduate-redesign .feature-link.clearfix,
+    .site-prospective-students-undergraduate .feature-link.clearfix {
       box-shadow: 3px 10px 10px -6px rgba(51, 51, 51, 0.75); } }
-  .site-prospective-students-graduate .card__icon {
+  .site-prospective-students-graduate .card__icon,
+  .site-prospective-students-undergraduate-redesign .card__icon,
+  .site-prospective-students-undergraduate .card__icon {
     background-color: #F6BE00; }
-  .site-prospective-students-graduate .section-background {
+  .site-prospective-students-graduate .section-background,
+  .site-prospective-students-undergraduate-redesign .section-background,
+  .site-prospective-students-undergraduate .section-background {
     padding: 3.75rem 0; }
-  .site-prospective-students-graduate .blockquote blockquote {
+  .site-prospective-students-graduate .blockquote blockquote,
+  .site-prospective-students-undergraduate-redesign .blockquote blockquote,
+  .site-prospective-students-undergraduate .blockquote blockquote {
     color: #AC145A; }
-  .site-prospective-students-graduate .tabs--active-blue .tabs__navigation {
+  .site-prospective-students-graduate .tabs--active-blue .tabs__navigation,
+  .site-prospective-students-undergraduate-redesign .tabs--active-blue .tabs__navigation,
+  .site-prospective-students-undergraduate .tabs--active-blue .tabs__navigation {
     background: #ebebeb; }
-    .site-prospective-students-graduate .tabs--active-blue .tabs__navigation a.active {
+    .site-prospective-students-graduate .tabs--active-blue .tabs__navigation a.active,
+    .site-prospective-students-undergraduate-redesign .tabs--active-blue .tabs__navigation a.active,
+    .site-prospective-students-undergraduate .tabs--active-blue .tabs__navigation a.active {
       background: #0D68CF;
       color: #ffffff; }
-  .site-prospective-students-graduate .accordion .accordion__title span:after {
+  .site-prospective-students-graduate .accordion .accordion__title span:after,
+  .site-prospective-students-undergraduate-redesign .accordion .accordion__title span:after,
+  .site-prospective-students-undergraduate .accordion .accordion__title span:after {
     color: #0D68CF; }
-  .site-prospective-students-graduate .contact-panel .card-wrapper {
+  .site-prospective-students-graduate .contact-panel .card-wrapper,
+  .site-prospective-students-undergraduate-redesign .contact-panel .card-wrapper,
+  .site-prospective-students-undergraduate .contact-panel .card-wrapper {
     box-shadow: 3px 10px 10px -6px rgba(51, 51, 51, 0.75); }
 
 #graduate-degrees .paragraphs-item-card-link {
@@ -3137,19 +3207,21 @@ CUSTOM SITE WIDTH BOOTSTRAP CONTAINER
   .content-columns .right-column {
     padding-top: 7.5rem; } }
 
-/*-------------------------------
-TEMPORARILY HIDE SIDEBAR CONTENTS BARTLETT
-REMOVE WHEN DRUPAL PARAGRAPHS ARE IN 
-PLACE - BEFORE LIVE LS 14.2
--------------------------------*/
-.site-bartlett .content-columns .right-column {
-  display: none; }
-
-/*-------------------- HUB CONTENT TYPE PAGE SINGLE COLUMN LAYOUT -------------------*/
-.single-full-width-column {
+/*---------------------------------------
+BARTLETT (at the moment) INDIGO PAGES SIDEBAR AND MAIN CONTENT SIZING 
+--------------------------------------------*/
+.site-bartlett.node-type-indigo-page.no-sidebars .single-full-width-column {
+  padding: 0 16px;
   width: 100%; }
-  .single-full-width-column .main-content {
-    padding-right: 0; }
+  @media (min-width: 768px) {
+    .site-bartlett.node-type-indigo-page.no-sidebars .single-full-width-column {
+      padding-left: 0;
+      padding-right: 0; }
+      .site-bartlett.node-type-indigo-page.no-sidebars .single-full-width-column .main-content {
+        flex: 0 0 75%;
+        max-width: 75%;
+        padding-left: 0;
+        padding-right: 9.29%; } }
 
 /* --------------------- INDIGO CONTENT TYPE STYLING TWO COLUMNS --------------------------- */
 .node-type-indigo-page div.field-content-summary {
@@ -3287,17 +3359,20 @@ a.btn-cta__border--inline:hover {
 
 .node-type-graduate-taught-programme-page .main-content h1,
 .node-graduate-research-programme-page .main-content h1,
-.node-type-graduate-ite-programme-page .main-content h1 {
+.node-type-graduate-ite-programme-page .main-content h1,
+.node-type-undergraduate-programme-page .main-content h1 {
   margin: 1.875rem 0 0.7rem 0; }
 
 .node-type-graduate-taught-programme-page p:first-of-type .feather-map-pin,
 .node-graduate-research-programme-page p:first-of-type .feather-map-pin,
-.node-type-graduate-ite-programme-page p:first-of-type .feather-map-pin {
+.node-type-graduate-ite-programme-page p:first-of-type .feather-map-pin,
+.node-type-undergraduate-programme-page p:first-of-type .feather-map-pin {
   vertical-align: text-top; }
 
 .node-type-graduate-taught-programme-page a.card-link,
 .node-graduate-research-programme-page a.card-link,
-.node-type-graduate-ite-programme-page a.card-link {
+.node-type-graduate-ite-programme-page a.card-link,
+.node-type-undergraduate-programme-page a.card-link {
   background: #00818F;
   color: #ffffff; }
 
@@ -4012,7 +4087,9 @@ ol.alpha-list {
     margin-right: 0.9375rem; }
 
 .left-column .main-content .container .row div .entity h2 {
-  border-top: 0; }
+  border-top: 0;
+  margin-top: 0;
+  padding-top: 0; }
 
 .node-type-hub-page .main-content .node-hub-page .container .row div h2 {
   margin-top: 0; }
@@ -4392,9 +4469,11 @@ FOUR EQUAL COLUMNS SUB LAYOUT
   margin-bottom: 1.5rem; }
 
 .node-type-hub-page .single-full-width-column {
+  width: 100%;
   padding: 0 16px; }
   .node-type-hub-page .single-full-width-column .main-content {
-    margin-top: 1rem; }
+    margin-top: 1rem;
+    padding-right: 0; }
 
 @media (min-width: 768px) {
   .node-type-hub-page .single-full-width-column {
