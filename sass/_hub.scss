@@ -1,14 +1,16 @@
-// UPDATE WITH BODY CLASSES ETC WHEN IN PLACE ON LIVE SANDBOX.
 
 .node-type-hub-page {
-	.site-content .main-content h1 {
+
+ .site-content .main-content h1 {
 		margin-bottom: 1.5rem;
 	}
 
 	.single-full-width-column {
+		width: 100%;
 		padding: 0 16px;
 		.main-content{
 			margin-top: 1rem;
+			padding-right: 0;
 			} 
 		}	
 
@@ -22,6 +24,3 @@
 			}
 	}	
 }
-
-
-

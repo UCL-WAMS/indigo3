@@ -53,30 +53,29 @@ CUSTOM SITE WIDTH BOOTSTRAP CONTAINER
 }
 
 
-/*-------------------------------
-TEMPORARILY HIDE SIDEBAR CONTENTS BARTLETT
-REMOVE WHEN DRUPAL PARAGRAPHS ARE IN 
-PLACE - BEFORE LIVE LS 14.2
--------------------------------*/
+/*---------------------------------------
+BARTLETT (at the moment) INDIGO PAGES SIDEBAR AND MAIN CONTENT SIZING 
+--------------------------------------------*/
 
-
-.site-bartlett .content-columns .right-column  {
-	display: none;
+.site-bartlett.node-type-indigo-page.no-sidebars {
+	.single-full-width-column {
+		padding: 0 16px;
+		width:100%;
+		@include media-breakpoint-up(md){
+			padding-left: 0;
+			padding-right: 0;
+		.main-content {			
+			flex: 0 0 75%;
+			max-width: 75%;
+			padding-left: 0;
+			padding-right: 9.29%;  
+			} 
+		}
+	}
 }
 
-/*-------------------- HUB CONTENT TYPE PAGE SINGLE COLUMN LAYOUT -------------------*/
 
-// ADD HUB BODY CLASS WHEN AVAILABLE
 
-// .site-content {padding: 0;}
-// @media (max-width: 768px) {.hub .main-content h1 {padding-left: 1.5rem; padding-right: 1rem;}}
-
-.single-full-width-column {
-	width: 100%;
-	.main-content {
-		padding-right: 0;
-	}
-}        
 
 
 
