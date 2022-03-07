@@ -3208,7 +3208,7 @@ CUSTOM SITE WIDTH BOOTSTRAP CONTAINER
     padding-top: 7.5rem; } }
 
 /*---------------------------------------
-BARTLETT (at the moment) INDIGO PAGES SIDEBAR AND MAIN CONTENT SIZING 
+BARTLETT (at the moment) INDIGO PAGES SIDEBAR AND MAIN CONTENT SIZING
 --------------------------------------------*/
 .site-bartlett.node-type-indigo-page.no-sidebars .single-full-width-column {
   padding: 0 16px;
@@ -3478,6 +3478,25 @@ a.btn-cta__border--inline:hover {
         max-width: 50%; } }
 
 /*--------------------------
+UNDERGRADUATE
+---------------------------*/
+.node-type-undergraduate-programme-page .prog-modules .tabs--active-grey .tabs__content {
+  background: #F5F5F5; }
+
+.node-type-undergraduate-programme-page div.dropdown {
+  margin-bottom: 1.5rem; }
+  .node-type-undergraduate-programme-page div.dropdown select {
+    outline: none;
+    border: #adadad solid 1px;
+    background-image: none;
+    background: #ffffff url("/indigo3/images/chevron-down.svg") no-repeat right 3% top 50%;
+    padding: 12px 20px;
+    font-size: 1.2rem;
+    color: #333333;
+    width: 100%;
+    appearance: none; }
+
+/*--------------------------
 TEACHER TRAINING
 ----------------------------*/
 .prog-double-list__content .feature-list svg.icon {
@@ -3560,7 +3579,7 @@ TEACHER TRAINING
     -moz-appearance: none;
     -o-appearance: none;
     appearance: none;
-    background: #ffffff url("img/chevron-down.svg") no-repeat right 3% top 50%;
+    background: #ffffff url("/indigo3/images/chevron-down.svg") no-repeat right 3% top 50%;
     border: #858585 1px solid;
     padding: 1rem;
     margin: 0;
@@ -3772,7 +3791,7 @@ IN PAGE NAV MENU
     background-color: #f5f5f5;
     color: #333;
     padding: 1rem;
-    background: #ffffff url("chevron-down.svg") no-repeat right 3% top 50%;
+    background: #ffffff url("/indigo3/images/chevron-down.svg") no-repeat right 3% top 50%;
     border: #858585 1px solid;
     width: 100%;
     font-family: inherit;

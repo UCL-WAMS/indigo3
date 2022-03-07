@@ -54,8 +54,12 @@ CUSTOM SITE WIDTH BOOTSTRAP CONTAINER
 
 
 /*---------------------------------------
-BARTLETT (at the moment) INDIGO PAGES SIDEBAR AND MAIN CONTENT SIZING 
+BARTLETT (at the moment) INDIGO PAGES SIDEBAR AND MAIN CONTENT SIZING
 --------------------------------------------*/
+
+//THIS WILL ADD A COLUMN IF THERE ARE NO PARAGRAPHS WHERE THE SIDEBAR
+//NEEDS TO BE ON A TWO COLUMN INDIGO PAGE.  (MAY WANT TO REMOVE BARTLETT BODY 
+//CLASS) IT WILL NOT AFFECT A STANDARD TWO COLUMN INDIGO PAGE.
 
 .site-bartlett.node-type-indigo-page.no-sidebars {
 	.single-full-width-column {
