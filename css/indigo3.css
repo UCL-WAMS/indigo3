@@ -4113,7 +4113,7 @@ ol.alpha-list {
 .node-type-hub-page .main-content .node-hub-page .container .row div h2 {
   margin-top: 0; }
 
-/* --------------- 	RESUSABLE LAYOUTS --------------------------- */
+/* ---------------  RESUSABLE LAYOUTS --------------------------- */
 /* -------------  TWO COLUMN SUB-LAYOUTs  ---------------------- */
 /*------------------- HALF AND HALF STANDARD LAYOUT  --------------------------*/
 .container.six-by-six {
@@ -4240,7 +4240,7 @@ ol.alpha-list {
   .four-by-eight__left {
     padding-right: 1rem; } }
 
-/*---------------------- THREE 	EQUAL COLUMNS SUB LAYOUT -------------------------*/
+/*---------------------- THREE  EQUAL COLUMNS SUB LAYOUT -------------------------*/
 .four-by-four-by-four.container {
   margin: 1rem  auto 1.5rem auto;
   padding: 0;
@@ -5260,7 +5260,7 @@ ALERTS
   border-color: #D50032; }
 
 /*---------------------
-	CARDS
+  CARDS
 ---------------*/
 .card {
   position: relative; }

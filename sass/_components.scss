@@ -846,6 +846,23 @@ ALERTS
 }
 
 
+
+// SIDEBAR MODIFICATIONS TO HEIGHT
+
+aside.right-column {
+.cta-box,
+.paragraphs-item-call-to-action-card-internal,
+.paragraphs-item-call-to-action-card-external {
+	height: auto;
+		.cta-box__btn {
+			width: 100%;
+		}
+	}	
+}
+
+
+
+
 // MODIFICATONS TO BUTTON RESPONSIVE BEHAVIOUR FOR COLUMN LAYOUTS.
 .four-by-four-by-four, .six-by-six { 
 	.cta-box {
@@ -1141,3 +1158,134 @@ SECTION BACKGROUNDS
 .section-background--lightgray {
 	background: $backgroundlightgray; 	
 	}
+
+
+// SELECTORS FOR SIDEBAR PARAGRAPH TYPES
+$sidebarpara: ".paragraphs-item-content-text-with-heading,.paragraphs-item-block-link,.paragraphs-item-testimonial";
+
+
+.node-type-indigo-page {
+	
+	aside.right-column {
+		#{$sidebarpara} {
+			padding: 1.5rem;
+			margin-bottom: 1.5rem;
+			}
+		}	
+
+// DEFAULT COLOURS 
+
+	aside.right-column {
+		#{$sidebarpara} {
+			background-color: #333;
+			color: #ffffff;
+				 a {
+      				color: $yellow;
+      				}
+      			svg {
+      				stroke: $yellow;
+      				}
+      			}
+      	}
+
+// BARTLETT COLOURS
+	&.site-bartlett {
+		aside.right-column {
+				#{$sidebarpara} {
+					background-color: $bartlettturquoise;
+				    color: $bartlettviolet;
+				    	a {
+      						color:inherit;
+      						}
+      					svg {
+      						stroke: currentcolor;
+      						}      						
+      				}
+ 				&.green-pink {
+ 					#{$sidebarpara}  {	
+  	     				background-color: $bartlettgreen;
+      					color: $bartlettpink;
+      					a {
+      						color:inherit;
+      						}
+      					svg {
+      						stroke: currentcolor;
+      						}  
+      					}
+      				}
+   				&.violet-turquoise {
+   					#{$sidebarpara}  {					  
+						background-color: $bartlettviolet;
+						color: $bartlettturquoise;
+						a {
+      						color:inherit;
+      						}
+      					svg {
+      						stroke: currentcolor;
+      						}  
+						}
+					}
+				&.purple-peach {
+					#{$sidebarpara}  {					 
+				    	background-color: $bartlettpurple;
+				    	color: $bartlettpeach;
+				    	a {
+      						color:inherit;
+      						}
+      					svg {
+      						stroke: currentcolor;
+      						}  
+				    	}
+				    }			
+				&.turquoise-violet {
+					#{$sidebarpara}  {					
+				    	background-color: $bartlettturquoise;
+				    	color: $bartlettviolet;
+				    	a {
+      						color:inherit;
+      						}
+      					svg {
+      						stroke: currentcolor;
+      						}  
+				    	}
+				    }				
+				&.orange-violet {
+					#{$sidebarpara}  {					  
+				    	background-color: $bartlettorange;
+				    	color: $bartlettviolet;
+				    	a {
+      						color:inherit;
+      						}
+      					svg {
+      						stroke: currentcolor;
+      						}  
+						}
+					 }				
+				&.yellow-violet {
+					#{$sidebarpara}  {				    
+				    	background-color: $bartlettyellow;
+				    	color: $bartlettviolet;
+				    	a {
+      						color:inherit;
+      						}
+      					svg {
+      						stroke: currentcolor;
+      						}  
+				       }
+				    }				
+				&.blue-peach {
+					#{$sidebarpara}  {					 
+				    	background-color: $bartlettblue;
+				    	color: $bartlettpeach;
+				    	a {
+      						color:inherit;
+      						}
+      					svg {
+      						stroke: currentcolor;
+      						}  
+				    	}
+				    }
+				}
+			}
+		}	
+	
