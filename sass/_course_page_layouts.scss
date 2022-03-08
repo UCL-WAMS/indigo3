@@ -1,5 +1,5 @@
 	
-// CUSTOM STYLING FOR MICROSERVICE PAGES AND CUSTOM BITS FOR PRE-LAUNCH
+// CUSTOM STYLING FOR MICROSERVICE PAGES 
 
 
 .uk-inter-switch {
@@ -63,7 +63,8 @@
 
 .node-type-graduate-taught-programme-page,
 .node-graduate-research-programme-page,
-.node-type-graduate-ite-programme-page  {
+.node-type-graduate-ite-programme-page,
+.node-type-undergraduate-programme-page  {
 	.main-content h1 {
 		margin: 1.875rem 0 0.7rem 0;
 	}
@@ -240,6 +241,37 @@
 }
 
 /*--------------------------
+UNDERGRADUATE
+---------------------------*/
+
+// BACKGROUND FOR PROGRAMME MODULE TABS.
+
+.node-type-undergraduate-programme-page {
+.prog-modules .tabs--active-grey {
+	.tabs__content {
+		background: #F5F5F5;
+		}
+	}
+}
+
+.node-type-undergraduate-programme-page {
+	div.dropdown { 
+		margin-bottom: 1.5rem;
+		select{ 
+			outline: none;
+  			border: #adadad solid 1px;
+  			background-image: none;
+  		    background: #ffffff url("/indigo3/images/chevron-down.svg") no-repeat right 3% top 50%;
+  			padding: 12px 20px;
+  			font-size: 1.2rem;
+  			color: #333333;
+  			width: 100%;
+  			appearance: none;
+  			}
+		}
+	}
+
+/*--------------------------
 TEACHER TRAINING
 ----------------------------*/
 
@@ -340,8 +372,7 @@ TEACHER TRAINING
 	-moz-appearance: none;
 	-o-appearance: none;
 	appearance: none;
-   	// background: #ffffff url("../images/chevron-down.svg") no-repeat right 3% top 50%; FOR LIVE
-   	background: #ffffff url("img/chevron-down.svg") no-repeat right 3% top 50%;
+   	background: #ffffff url("/indigo3/images/chevron-down.svg") no-repeat right 3% top 50%;
  	border: #858585 1px solid;
   	padding:1rem;
   	margin: 0;
@@ -519,6 +550,8 @@ IN PAGE NAV MENU
         top: 10px;     
        }
 
+
+
 // TEMPORARY 09/21 OPENDAYS EVENT FINDER - REPEATS SOME OF THE GLOBAL STYLES BUT ADDED HERE UNTIL FINAL STYLED PAGE IS DEPLOYED-DEVELOPED.
 
 
@@ -636,8 +669,7 @@ IN PAGE NAV MENU
 	background-color: #f5f5f5;
 	color: #333;
 	padding: 1rem;
-	// background: #ffffff url("../images/chevron-down.svg") no-repeat right 3% top 50%; FOR LIVE
-   	background: #ffffff url("chevron-down.svg") no-repeat right 3% top 50%;
+	background: #ffffff url("/indigo3/images/chevron-down.svg") no-repeat right 3% top 50%;
    	border: #858585 1px solid;
    	width: 100%;
    	font-family: inherit;
@@ -701,6 +733,8 @@ IN PAGE NAV MENU
 	 	}
 	 }
 }
+
+
 
 	
 
