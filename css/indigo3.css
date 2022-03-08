@@ -5471,6 +5471,15 @@ ALERTS
     background: #8ce2d0;
     color: #440099; }
 
+aside.right-column .cta-box,
+aside.right-column .paragraphs-item-call-to-action-card-internal,
+aside.right-column .paragraphs-item-call-to-action-card-external {
+  height: auto; }
+  aside.right-column .cta-box .cta-box__btn,
+  aside.right-column .paragraphs-item-call-to-action-card-internal .cta-box__btn,
+  aside.right-column .paragraphs-item-call-to-action-card-external .cta-box__btn {
+    width: 100%; }
+
 @media (min-width: 768px) {
   .four-by-four-by-four .cta-box, .six-by-six .cta-box {
     padding: 2rem; } }
@@ -5681,6 +5690,82 @@ SECTION BACKGROUNDS
 
 .section-background--lightgray {
   background: #f5f5f5; }
+
+.node-type-indigo-page aside.right-column .paragraphs-item-content-text-with-heading, .node-type-indigo-page aside.right-column .paragraphs-item-block-link, .node-type-indigo-page aside.right-column .paragraphs-item-testimonial {
+  padding: 1.5rem;
+  margin-bottom: 1.5rem; }
+
+.node-type-indigo-page aside.right-column .paragraphs-item-content-text-with-heading, .node-type-indigo-page aside.right-column .paragraphs-item-block-link, .node-type-indigo-page aside.right-column .paragraphs-item-testimonial {
+  background-color: #333;
+  color: #ffffff; }
+  .node-type-indigo-page aside.right-column .paragraphs-item-content-text-with-heading a, .node-type-indigo-page aside.right-column .paragraphs-item-block-link a, .node-type-indigo-page aside.right-column .paragraphs-item-testimonial a {
+    color: #F6BE00; }
+  .node-type-indigo-page aside.right-column .paragraphs-item-content-text-with-heading svg, .node-type-indigo-page aside.right-column .paragraphs-item-block-link svg, .node-type-indigo-page aside.right-column .paragraphs-item-testimonial svg {
+    stroke: #F6BE00; }
+
+.node-type-indigo-page.site-bartlett aside.right-column .paragraphs-item-content-text-with-heading, .node-type-indigo-page.site-bartlett aside.right-column .paragraphs-item-block-link, .node-type-indigo-page.site-bartlett aside.right-column .paragraphs-item-testimonial {
+  background-color: #8ce2d0;
+  color: #440099; }
+  .node-type-indigo-page.site-bartlett aside.right-column .paragraphs-item-content-text-with-heading a, .node-type-indigo-page.site-bartlett aside.right-column .paragraphs-item-block-link a, .node-type-indigo-page.site-bartlett aside.right-column .paragraphs-item-testimonial a {
+    color: inherit; }
+  .node-type-indigo-page.site-bartlett aside.right-column .paragraphs-item-content-text-with-heading svg, .node-type-indigo-page.site-bartlett aside.right-column .paragraphs-item-block-link svg, .node-type-indigo-page.site-bartlett aside.right-column .paragraphs-item-testimonial svg {
+    stroke: currentcolor; }
+
+.node-type-indigo-page.site-bartlett aside.right-column.green-pink .paragraphs-item-content-text-with-heading, .node-type-indigo-page.site-bartlett aside.right-column.green-pink .paragraphs-item-block-link, .node-type-indigo-page.site-bartlett aside.right-column.green-pink .paragraphs-item-testimonial {
+  background-color: #00534c;
+  color: #f9b5c4; }
+  .node-type-indigo-page.site-bartlett aside.right-column.green-pink .paragraphs-item-content-text-with-heading a, .node-type-indigo-page.site-bartlett aside.right-column.green-pink .paragraphs-item-block-link a, .node-type-indigo-page.site-bartlett aside.right-column.green-pink .paragraphs-item-testimonial a {
+    color: inherit; }
+  .node-type-indigo-page.site-bartlett aside.right-column.green-pink .paragraphs-item-content-text-with-heading svg, .node-type-indigo-page.site-bartlett aside.right-column.green-pink .paragraphs-item-block-link svg, .node-type-indigo-page.site-bartlett aside.right-column.green-pink .paragraphs-item-testimonial svg {
+    stroke: currentcolor; }
+
+.node-type-indigo-page.site-bartlett aside.right-column.violet-turquoise .paragraphs-item-content-text-with-heading, .node-type-indigo-page.site-bartlett aside.right-column.violet-turquoise .paragraphs-item-block-link, .node-type-indigo-page.site-bartlett aside.right-column.violet-turquoise .paragraphs-item-testimonial {
+  background-color: #440099;
+  color: #8ce2d0; }
+  .node-type-indigo-page.site-bartlett aside.right-column.violet-turquoise .paragraphs-item-content-text-with-heading a, .node-type-indigo-page.site-bartlett aside.right-column.violet-turquoise .paragraphs-item-block-link a, .node-type-indigo-page.site-bartlett aside.right-column.violet-turquoise .paragraphs-item-testimonial a {
+    color: inherit; }
+  .node-type-indigo-page.site-bartlett aside.right-column.violet-turquoise .paragraphs-item-content-text-with-heading svg, .node-type-indigo-page.site-bartlett aside.right-column.violet-turquoise .paragraphs-item-block-link svg, .node-type-indigo-page.site-bartlett aside.right-column.violet-turquoise .paragraphs-item-testimonial svg {
+    stroke: currentcolor; }
+
+.node-type-indigo-page.site-bartlett aside.right-column.purple-peach .paragraphs-item-content-text-with-heading, .node-type-indigo-page.site-bartlett aside.right-column.purple-peach .paragraphs-item-block-link, .node-type-indigo-page.site-bartlett aside.right-column.purple-peach .paragraphs-item-testimonial {
+  background-color: #702082;
+  color: #F3CFB3; }
+  .node-type-indigo-page.site-bartlett aside.right-column.purple-peach .paragraphs-item-content-text-with-heading a, .node-type-indigo-page.site-bartlett aside.right-column.purple-peach .paragraphs-item-block-link a, .node-type-indigo-page.site-bartlett aside.right-column.purple-peach .paragraphs-item-testimonial a {
+    color: inherit; }
+  .node-type-indigo-page.site-bartlett aside.right-column.purple-peach .paragraphs-item-content-text-with-heading svg, .node-type-indigo-page.site-bartlett aside.right-column.purple-peach .paragraphs-item-block-link svg, .node-type-indigo-page.site-bartlett aside.right-column.purple-peach .paragraphs-item-testimonial svg {
+    stroke: currentcolor; }
+
+.node-type-indigo-page.site-bartlett aside.right-column.turquoise-violet .paragraphs-item-content-text-with-heading, .node-type-indigo-page.site-bartlett aside.right-column.turquoise-violet .paragraphs-item-block-link, .node-type-indigo-page.site-bartlett aside.right-column.turquoise-violet .paragraphs-item-testimonial {
+  background-color: #8ce2d0;
+  color: #440099; }
+  .node-type-indigo-page.site-bartlett aside.right-column.turquoise-violet .paragraphs-item-content-text-with-heading a, .node-type-indigo-page.site-bartlett aside.right-column.turquoise-violet .paragraphs-item-block-link a, .node-type-indigo-page.site-bartlett aside.right-column.turquoise-violet .paragraphs-item-testimonial a {
+    color: inherit; }
+  .node-type-indigo-page.site-bartlett aside.right-column.turquoise-violet .paragraphs-item-content-text-with-heading svg, .node-type-indigo-page.site-bartlett aside.right-column.turquoise-violet .paragraphs-item-block-link svg, .node-type-indigo-page.site-bartlett aside.right-column.turquoise-violet .paragraphs-item-testimonial svg {
+    stroke: currentcolor; }
+
+.node-type-indigo-page.site-bartlett aside.right-column.orange-violet .paragraphs-item-content-text-with-heading, .node-type-indigo-page.site-bartlett aside.right-column.orange-violet .paragraphs-item-block-link, .node-type-indigo-page.site-bartlett aside.right-column.orange-violet .paragraphs-item-testimonial {
+  background-color: #FF8200;
+  color: #440099; }
+  .node-type-indigo-page.site-bartlett aside.right-column.orange-violet .paragraphs-item-content-text-with-heading a, .node-type-indigo-page.site-bartlett aside.right-column.orange-violet .paragraphs-item-block-link a, .node-type-indigo-page.site-bartlett aside.right-column.orange-violet .paragraphs-item-testimonial a {
+    color: inherit; }
+  .node-type-indigo-page.site-bartlett aside.right-column.orange-violet .paragraphs-item-content-text-with-heading svg, .node-type-indigo-page.site-bartlett aside.right-column.orange-violet .paragraphs-item-block-link svg, .node-type-indigo-page.site-bartlett aside.right-column.orange-violet .paragraphs-item-testimonial svg {
+    stroke: currentcolor; }
+
+.node-type-indigo-page.site-bartlett aside.right-column.yellow-violet .paragraphs-item-content-text-with-heading, .node-type-indigo-page.site-bartlett aside.right-column.yellow-violet .paragraphs-item-block-link, .node-type-indigo-page.site-bartlett aside.right-column.yellow-violet .paragraphs-item-testimonial {
+  background-color: #FCE300;
+  color: #440099; }
+  .node-type-indigo-page.site-bartlett aside.right-column.yellow-violet .paragraphs-item-content-text-with-heading a, .node-type-indigo-page.site-bartlett aside.right-column.yellow-violet .paragraphs-item-block-link a, .node-type-indigo-page.site-bartlett aside.right-column.yellow-violet .paragraphs-item-testimonial a {
+    color: inherit; }
+  .node-type-indigo-page.site-bartlett aside.right-column.yellow-violet .paragraphs-item-content-text-with-heading svg, .node-type-indigo-page.site-bartlett aside.right-column.yellow-violet .paragraphs-item-block-link svg, .node-type-indigo-page.site-bartlett aside.right-column.yellow-violet .paragraphs-item-testimonial svg {
+    stroke: currentcolor; }
+
+.node-type-indigo-page.site-bartlett aside.right-column.blue-peach .paragraphs-item-content-text-with-heading, .node-type-indigo-page.site-bartlett aside.right-column.blue-peach .paragraphs-item-block-link, .node-type-indigo-page.site-bartlett aside.right-column.blue-peach .paragraphs-item-testimonial {
+  background-color: #1A2BF2;
+  color: #F3CFB3; }
+  .node-type-indigo-page.site-bartlett aside.right-column.blue-peach .paragraphs-item-content-text-with-heading a, .node-type-indigo-page.site-bartlett aside.right-column.blue-peach .paragraphs-item-block-link a, .node-type-indigo-page.site-bartlett aside.right-column.blue-peach .paragraphs-item-testimonial a {
+    color: inherit; }
+  .node-type-indigo-page.site-bartlett aside.right-column.blue-peach .paragraphs-item-content-text-with-heading svg, .node-type-indigo-page.site-bartlett aside.right-column.blue-peach .paragraphs-item-block-link svg, .node-type-indigo-page.site-bartlett aside.right-column.blue-peach .paragraphs-item-testimonial svg {
+    stroke: currentcolor; }
 
 /*-----------
 ACCORDION
