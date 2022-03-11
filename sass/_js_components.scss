@@ -42,6 +42,11 @@ ACCORDION
 	}
 dd.accordion__description  {
 		margin-left: 0; 
+		h2 {
+			margin-top: 0;
+			border-top: none;
+			padding-top: 0;
+		}
 		&.active {
 			border-bottom: solid 1px #d6d6d6; 
 			padding-bottom: 1.875rem; 
@@ -52,7 +57,7 @@ dd.accordion__description  {
 
 // BARTLETT ACCORDION ARROW COLOUR
 
-.site-bartlett {
+body[class*=site-bartlett] {
 	.accordion .accordion__title span:after {
 		color: #000000;
 		}
@@ -148,6 +153,12 @@ TABS
 
 .tabs__content {
 	margin-bottom: 1.5rem;
+	h2 {
+		margin-top: 0;
+		border-top: none;
+		padding-top: 0;
+		}
+
 	.tab-content {
 		padding: 1.875rem 0 0 0;
 		// toggle classes
@@ -232,7 +243,7 @@ TABS
 
 
 // BARTLETT PALETTE BLUE BECOMES BLACK!
-.site-bartlett {
+body[class*=site-bartlett]{
 	.tabs--active-blue  {
 		.tabs__navigation {
 			background: $backgroundlightgray;

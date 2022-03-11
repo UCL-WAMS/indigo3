@@ -168,7 +168,7 @@
 }	
 
 
- .site-bartlett {
+ body[class*=site-bartlett] {
 	.header__menu svg.feather.feather-menu.icon {
 		 stroke: $bartlettturquoise;
 	}
