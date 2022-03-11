@@ -3131,12 +3131,6 @@ TEMPLATE CONTENT CUSTOM STYLES - SEE ALSO MIXINS
     .site-content .page-intro p {
       font-size: 1.25rem; } }
 
-.site-content .main-content h2 {
-  border-top: solid 1px #333;
-  padding-top: 1.875rem;
-  margin-top: 1.875rem;
-  clear: both; }
-
 .site-content .top-course-details {
   color: #5c5c5c;
   margin-bottom: 2.8125rem; }
@@ -3167,6 +3161,12 @@ TEMPLATE CONTENT CUSTOM STYLES - SEE ALSO MIXINS
     .site-content .view-list ul li:before,
     .site-content .right-page-nav ul li:before {
       content: none; }
+
+.main-content h2 {
+  border-top: solid 1px #333;
+  padding-top: 1.875rem;
+  margin-top: 1.875rem;
+  clear: both; }
 
 /*-----------------------
 HORIZONTAL RULES
@@ -3292,16 +3292,16 @@ a.btn-cta__border--inline:hover {
 .btn-cta__border--inline {
   display: inline-block; }
 
-.site-bartlett .btn-cta {
+body[class*=site-bartlett] .btn-cta {
   background-color: #000000; }
 
-.site-bartlett a.btn-cta:hover {
+body[class*=site-bartlett] a.btn-cta:hover {
   background: #8ce2d0;
   color: #000000; }
 
-.site-bartlett .btn-cta__icon__svg {
+body[class*=site-bartlett] .btn-cta__icon__svg {
   background-color: #858585; }
-  .site-bartlett .btn-cta__icon__svg svg {
+  body[class*=site-bartlett] .btn-cta__icon__svg svg {
     stroke-width: 1; }
 
 .uk-inter-switch {
@@ -3836,41 +3836,6 @@ IN PAGE NAV MENU
 .course-finder {
   padding-top: .7rem; }
 
-.course-search-box {
-  width: 100%; }
-  .course-search-box form input[type="search"] {
-    appearance: none;
-    -webkit-appearance: none;
-    padding: 0 10px 0 18px;
-    color: #333;
-    border: 0;
-    outline: none;
-    float: left;
-    width: 80%;
-    height: 3.8rem;
-    border: 1px solid #0D68CF;
-    font-size: 1.125rem; }
-  .course-search-box form input[type="submit"] {
-    float: right;
-    width: 20%;
-    appearance: none;
-    -webkit-appearance: none;
-    border: none;
-    height: 3.8rem;
-    background: #0D68CF;
-    color: #fff;
-    font-size: 1rem;
-    cursor: pointer; }
-  .course-search-box #autocomplete {
-    background: white;
-    padding-top: 1rem; }
-    .course-search-box #autocomplete div {
-      padding-left: 1.5%; }
-    .course-search-box #autocomplete li {
-      padding: 10px 0; }
-    .course-search-box #autocomplete.selected {
-      background: #0D68CF; }
-
 .tabs__content .course-search-box {
   margin-bottom: 1.8rem; }
 
@@ -3901,7 +3866,7 @@ html.js input.throbbing {
     float: right;
     background: #0D68CF;
     border-radius: 100%;
-    padding: .9rem 0.7rem 0.5rem 0.7rem;
+    padding: .9rem 0.9rem 0.5rem 0.9rem;
     width: auto; }
   .search-filter #facets-slider-icon {
     width: 25px;
@@ -4597,7 +4562,7 @@ FOUR EQUAL COLUMNS SUB LAYOUT
         .header .header__menu p .header-menu__sm-text {
           text-transform: none; } }
 
-.site-bartlett .header__menu svg.feather.feather-menu.icon {
+body[class*=site-bartlett] .header__menu svg.feather.feather-menu.icon {
   stroke: #8ce2d0; }
 
 /*----------------------------------
@@ -5001,7 +4966,7 @@ a.card-link {
         height: 70px;
         margin-bottom: 1.875rem; } }
 
-.site-bartlett .paragraphs-item-card-link {
+body[class*=site-bartlett] .paragraphs-item-card-link {
   background: #440099;
   color: #8ce2d0; }
 
@@ -5286,12 +5251,12 @@ ALERTS
   .card__icon svg {
     stroke-width: 2px; }
 
-.site-bartlett .card h3 a {
+body[class*=site-bartlett] .card h3 a {
   color: #333; }
 
-.site-bartlett .card__icon {
+body[class*=site-bartlett] .card__icon {
   background: #000; }
-  .site-bartlett .card__icon svg {
+  body[class*=site-bartlett] .card__icon svg {
     stroke: #fff; }
 
 /* -------------------------
@@ -5687,6 +5652,8 @@ SECTION BACKGROUNDS
     visibility: visible; }
   .section-background:after {
     left: 100%; }
+  .section-background h2 {
+    border-top: 0; }
 
 .section-background--lightgray {
   background: #f5f5f5; }
@@ -5703,68 +5670,68 @@ SECTION BACKGROUNDS
   .node-type-indigo-page aside.right-column .paragraphs-item-content-text-with-heading svg, .node-type-indigo-page aside.right-column .paragraphs-item-block-link svg, .node-type-indigo-page aside.right-column .paragraphs-item-testimonial svg {
     stroke: #F6BE00; }
 
-.node-type-indigo-page.site-bartlett aside.right-column .paragraphs-item-content-text-with-heading, .node-type-indigo-page.site-bartlett aside.right-column .paragraphs-item-block-link, .node-type-indigo-page.site-bartlett aside.right-column .paragraphs-item-testimonial {
+body[class*=site-bartlett].node-type-indigo-page aside.right-column .paragraphs-item-content-text-with-heading, body[class*=site-bartlett].node-type-indigo-page aside.right-column .paragraphs-item-block-link, body[class*=site-bartlett].node-type-indigo-page aside.right-column .paragraphs-item-testimonial {
   background-color: #8ce2d0;
   color: #440099; }
-  .node-type-indigo-page.site-bartlett aside.right-column .paragraphs-item-content-text-with-heading a, .node-type-indigo-page.site-bartlett aside.right-column .paragraphs-item-block-link a, .node-type-indigo-page.site-bartlett aside.right-column .paragraphs-item-testimonial a {
+  body[class*=site-bartlett].node-type-indigo-page aside.right-column .paragraphs-item-content-text-with-heading a, body[class*=site-bartlett].node-type-indigo-page aside.right-column .paragraphs-item-block-link a, body[class*=site-bartlett].node-type-indigo-page aside.right-column .paragraphs-item-testimonial a {
     color: inherit; }
-  .node-type-indigo-page.site-bartlett aside.right-column .paragraphs-item-content-text-with-heading svg, .node-type-indigo-page.site-bartlett aside.right-column .paragraphs-item-block-link svg, .node-type-indigo-page.site-bartlett aside.right-column .paragraphs-item-testimonial svg {
+  body[class*=site-bartlett].node-type-indigo-page aside.right-column .paragraphs-item-content-text-with-heading svg, body[class*=site-bartlett].node-type-indigo-page aside.right-column .paragraphs-item-block-link svg, body[class*=site-bartlett].node-type-indigo-page aside.right-column .paragraphs-item-testimonial svg {
     stroke: currentcolor; }
 
-.node-type-indigo-page.site-bartlett aside.right-column.green-pink .paragraphs-item-content-text-with-heading, .node-type-indigo-page.site-bartlett aside.right-column.green-pink .paragraphs-item-block-link, .node-type-indigo-page.site-bartlett aside.right-column.green-pink .paragraphs-item-testimonial {
+body[class*=site-bartlett].node-type-indigo-page aside.right-column.green-pink .paragraphs-item-content-text-with-heading, body[class*=site-bartlett].node-type-indigo-page aside.right-column.green-pink .paragraphs-item-block-link, body[class*=site-bartlett].node-type-indigo-page aside.right-column.green-pink .paragraphs-item-testimonial {
   background-color: #00534c;
   color: #f9b5c4; }
-  .node-type-indigo-page.site-bartlett aside.right-column.green-pink .paragraphs-item-content-text-with-heading a, .node-type-indigo-page.site-bartlett aside.right-column.green-pink .paragraphs-item-block-link a, .node-type-indigo-page.site-bartlett aside.right-column.green-pink .paragraphs-item-testimonial a {
+  body[class*=site-bartlett].node-type-indigo-page aside.right-column.green-pink .paragraphs-item-content-text-with-heading a, body[class*=site-bartlett].node-type-indigo-page aside.right-column.green-pink .paragraphs-item-block-link a, body[class*=site-bartlett].node-type-indigo-page aside.right-column.green-pink .paragraphs-item-testimonial a {
     color: inherit; }
-  .node-type-indigo-page.site-bartlett aside.right-column.green-pink .paragraphs-item-content-text-with-heading svg, .node-type-indigo-page.site-bartlett aside.right-column.green-pink .paragraphs-item-block-link svg, .node-type-indigo-page.site-bartlett aside.right-column.green-pink .paragraphs-item-testimonial svg {
+  body[class*=site-bartlett].node-type-indigo-page aside.right-column.green-pink .paragraphs-item-content-text-with-heading svg, body[class*=site-bartlett].node-type-indigo-page aside.right-column.green-pink .paragraphs-item-block-link svg, body[class*=site-bartlett].node-type-indigo-page aside.right-column.green-pink .paragraphs-item-testimonial svg {
     stroke: currentcolor; }
 
-.node-type-indigo-page.site-bartlett aside.right-column.violet-turquoise .paragraphs-item-content-text-with-heading, .node-type-indigo-page.site-bartlett aside.right-column.violet-turquoise .paragraphs-item-block-link, .node-type-indigo-page.site-bartlett aside.right-column.violet-turquoise .paragraphs-item-testimonial {
+body[class*=site-bartlett].node-type-indigo-page aside.right-column.violet-turquoise .paragraphs-item-content-text-with-heading, body[class*=site-bartlett].node-type-indigo-page aside.right-column.violet-turquoise .paragraphs-item-block-link, body[class*=site-bartlett].node-type-indigo-page aside.right-column.violet-turquoise .paragraphs-item-testimonial {
   background-color: #440099;
   color: #8ce2d0; }
-  .node-type-indigo-page.site-bartlett aside.right-column.violet-turquoise .paragraphs-item-content-text-with-heading a, .node-type-indigo-page.site-bartlett aside.right-column.violet-turquoise .paragraphs-item-block-link a, .node-type-indigo-page.site-bartlett aside.right-column.violet-turquoise .paragraphs-item-testimonial a {
+  body[class*=site-bartlett].node-type-indigo-page aside.right-column.violet-turquoise .paragraphs-item-content-text-with-heading a, body[class*=site-bartlett].node-type-indigo-page aside.right-column.violet-turquoise .paragraphs-item-block-link a, body[class*=site-bartlett].node-type-indigo-page aside.right-column.violet-turquoise .paragraphs-item-testimonial a {
     color: inherit; }
-  .node-type-indigo-page.site-bartlett aside.right-column.violet-turquoise .paragraphs-item-content-text-with-heading svg, .node-type-indigo-page.site-bartlett aside.right-column.violet-turquoise .paragraphs-item-block-link svg, .node-type-indigo-page.site-bartlett aside.right-column.violet-turquoise .paragraphs-item-testimonial svg {
+  body[class*=site-bartlett].node-type-indigo-page aside.right-column.violet-turquoise .paragraphs-item-content-text-with-heading svg, body[class*=site-bartlett].node-type-indigo-page aside.right-column.violet-turquoise .paragraphs-item-block-link svg, body[class*=site-bartlett].node-type-indigo-page aside.right-column.violet-turquoise .paragraphs-item-testimonial svg {
     stroke: currentcolor; }
 
-.node-type-indigo-page.site-bartlett aside.right-column.purple-peach .paragraphs-item-content-text-with-heading, .node-type-indigo-page.site-bartlett aside.right-column.purple-peach .paragraphs-item-block-link, .node-type-indigo-page.site-bartlett aside.right-column.purple-peach .paragraphs-item-testimonial {
+body[class*=site-bartlett].node-type-indigo-page aside.right-column.purple-peach .paragraphs-item-content-text-with-heading, body[class*=site-bartlett].node-type-indigo-page aside.right-column.purple-peach .paragraphs-item-block-link, body[class*=site-bartlett].node-type-indigo-page aside.right-column.purple-peach .paragraphs-item-testimonial {
   background-color: #702082;
   color: #F3CFB3; }
-  .node-type-indigo-page.site-bartlett aside.right-column.purple-peach .paragraphs-item-content-text-with-heading a, .node-type-indigo-page.site-bartlett aside.right-column.purple-peach .paragraphs-item-block-link a, .node-type-indigo-page.site-bartlett aside.right-column.purple-peach .paragraphs-item-testimonial a {
+  body[class*=site-bartlett].node-type-indigo-page aside.right-column.purple-peach .paragraphs-item-content-text-with-heading a, body[class*=site-bartlett].node-type-indigo-page aside.right-column.purple-peach .paragraphs-item-block-link a, body[class*=site-bartlett].node-type-indigo-page aside.right-column.purple-peach .paragraphs-item-testimonial a {
     color: inherit; }
-  .node-type-indigo-page.site-bartlett aside.right-column.purple-peach .paragraphs-item-content-text-with-heading svg, .node-type-indigo-page.site-bartlett aside.right-column.purple-peach .paragraphs-item-block-link svg, .node-type-indigo-page.site-bartlett aside.right-column.purple-peach .paragraphs-item-testimonial svg {
+  body[class*=site-bartlett].node-type-indigo-page aside.right-column.purple-peach .paragraphs-item-content-text-with-heading svg, body[class*=site-bartlett].node-type-indigo-page aside.right-column.purple-peach .paragraphs-item-block-link svg, body[class*=site-bartlett].node-type-indigo-page aside.right-column.purple-peach .paragraphs-item-testimonial svg {
     stroke: currentcolor; }
 
-.node-type-indigo-page.site-bartlett aside.right-column.turquoise-violet .paragraphs-item-content-text-with-heading, .node-type-indigo-page.site-bartlett aside.right-column.turquoise-violet .paragraphs-item-block-link, .node-type-indigo-page.site-bartlett aside.right-column.turquoise-violet .paragraphs-item-testimonial {
+body[class*=site-bartlett].node-type-indigo-page aside.right-column.turquoise-violet .paragraphs-item-content-text-with-heading, body[class*=site-bartlett].node-type-indigo-page aside.right-column.turquoise-violet .paragraphs-item-block-link, body[class*=site-bartlett].node-type-indigo-page aside.right-column.turquoise-violet .paragraphs-item-testimonial {
   background-color: #8ce2d0;
   color: #440099; }
-  .node-type-indigo-page.site-bartlett aside.right-column.turquoise-violet .paragraphs-item-content-text-with-heading a, .node-type-indigo-page.site-bartlett aside.right-column.turquoise-violet .paragraphs-item-block-link a, .node-type-indigo-page.site-bartlett aside.right-column.turquoise-violet .paragraphs-item-testimonial a {
+  body[class*=site-bartlett].node-type-indigo-page aside.right-column.turquoise-violet .paragraphs-item-content-text-with-heading a, body[class*=site-bartlett].node-type-indigo-page aside.right-column.turquoise-violet .paragraphs-item-block-link a, body[class*=site-bartlett].node-type-indigo-page aside.right-column.turquoise-violet .paragraphs-item-testimonial a {
     color: inherit; }
-  .node-type-indigo-page.site-bartlett aside.right-column.turquoise-violet .paragraphs-item-content-text-with-heading svg, .node-type-indigo-page.site-bartlett aside.right-column.turquoise-violet .paragraphs-item-block-link svg, .node-type-indigo-page.site-bartlett aside.right-column.turquoise-violet .paragraphs-item-testimonial svg {
+  body[class*=site-bartlett].node-type-indigo-page aside.right-column.turquoise-violet .paragraphs-item-content-text-with-heading svg, body[class*=site-bartlett].node-type-indigo-page aside.right-column.turquoise-violet .paragraphs-item-block-link svg, body[class*=site-bartlett].node-type-indigo-page aside.right-column.turquoise-violet .paragraphs-item-testimonial svg {
     stroke: currentcolor; }
 
-.node-type-indigo-page.site-bartlett aside.right-column.orange-violet .paragraphs-item-content-text-with-heading, .node-type-indigo-page.site-bartlett aside.right-column.orange-violet .paragraphs-item-block-link, .node-type-indigo-page.site-bartlett aside.right-column.orange-violet .paragraphs-item-testimonial {
+body[class*=site-bartlett].node-type-indigo-page aside.right-column.orange-violet .paragraphs-item-content-text-with-heading, body[class*=site-bartlett].node-type-indigo-page aside.right-column.orange-violet .paragraphs-item-block-link, body[class*=site-bartlett].node-type-indigo-page aside.right-column.orange-violet .paragraphs-item-testimonial {
   background-color: #FF8200;
   color: #440099; }
-  .node-type-indigo-page.site-bartlett aside.right-column.orange-violet .paragraphs-item-content-text-with-heading a, .node-type-indigo-page.site-bartlett aside.right-column.orange-violet .paragraphs-item-block-link a, .node-type-indigo-page.site-bartlett aside.right-column.orange-violet .paragraphs-item-testimonial a {
+  body[class*=site-bartlett].node-type-indigo-page aside.right-column.orange-violet .paragraphs-item-content-text-with-heading a, body[class*=site-bartlett].node-type-indigo-page aside.right-column.orange-violet .paragraphs-item-block-link a, body[class*=site-bartlett].node-type-indigo-page aside.right-column.orange-violet .paragraphs-item-testimonial a {
     color: inherit; }
-  .node-type-indigo-page.site-bartlett aside.right-column.orange-violet .paragraphs-item-content-text-with-heading svg, .node-type-indigo-page.site-bartlett aside.right-column.orange-violet .paragraphs-item-block-link svg, .node-type-indigo-page.site-bartlett aside.right-column.orange-violet .paragraphs-item-testimonial svg {
+  body[class*=site-bartlett].node-type-indigo-page aside.right-column.orange-violet .paragraphs-item-content-text-with-heading svg, body[class*=site-bartlett].node-type-indigo-page aside.right-column.orange-violet .paragraphs-item-block-link svg, body[class*=site-bartlett].node-type-indigo-page aside.right-column.orange-violet .paragraphs-item-testimonial svg {
     stroke: currentcolor; }
 
-.node-type-indigo-page.site-bartlett aside.right-column.yellow-violet .paragraphs-item-content-text-with-heading, .node-type-indigo-page.site-bartlett aside.right-column.yellow-violet .paragraphs-item-block-link, .node-type-indigo-page.site-bartlett aside.right-column.yellow-violet .paragraphs-item-testimonial {
+body[class*=site-bartlett].node-type-indigo-page aside.right-column.yellow-violet .paragraphs-item-content-text-with-heading, body[class*=site-bartlett].node-type-indigo-page aside.right-column.yellow-violet .paragraphs-item-block-link, body[class*=site-bartlett].node-type-indigo-page aside.right-column.yellow-violet .paragraphs-item-testimonial {
   background-color: #FCE300;
   color: #440099; }
-  .node-type-indigo-page.site-bartlett aside.right-column.yellow-violet .paragraphs-item-content-text-with-heading a, .node-type-indigo-page.site-bartlett aside.right-column.yellow-violet .paragraphs-item-block-link a, .node-type-indigo-page.site-bartlett aside.right-column.yellow-violet .paragraphs-item-testimonial a {
+  body[class*=site-bartlett].node-type-indigo-page aside.right-column.yellow-violet .paragraphs-item-content-text-with-heading a, body[class*=site-bartlett].node-type-indigo-page aside.right-column.yellow-violet .paragraphs-item-block-link a, body[class*=site-bartlett].node-type-indigo-page aside.right-column.yellow-violet .paragraphs-item-testimonial a {
     color: inherit; }
-  .node-type-indigo-page.site-bartlett aside.right-column.yellow-violet .paragraphs-item-content-text-with-heading svg, .node-type-indigo-page.site-bartlett aside.right-column.yellow-violet .paragraphs-item-block-link svg, .node-type-indigo-page.site-bartlett aside.right-column.yellow-violet .paragraphs-item-testimonial svg {
+  body[class*=site-bartlett].node-type-indigo-page aside.right-column.yellow-violet .paragraphs-item-content-text-with-heading svg, body[class*=site-bartlett].node-type-indigo-page aside.right-column.yellow-violet .paragraphs-item-block-link svg, body[class*=site-bartlett].node-type-indigo-page aside.right-column.yellow-violet .paragraphs-item-testimonial svg {
     stroke: currentcolor; }
 
-.node-type-indigo-page.site-bartlett aside.right-column.blue-peach .paragraphs-item-content-text-with-heading, .node-type-indigo-page.site-bartlett aside.right-column.blue-peach .paragraphs-item-block-link, .node-type-indigo-page.site-bartlett aside.right-column.blue-peach .paragraphs-item-testimonial {
+body[class*=site-bartlett].node-type-indigo-page aside.right-column.blue-peach .paragraphs-item-content-text-with-heading, body[class*=site-bartlett].node-type-indigo-page aside.right-column.blue-peach .paragraphs-item-block-link, body[class*=site-bartlett].node-type-indigo-page aside.right-column.blue-peach .paragraphs-item-testimonial {
   background-color: #1A2BF2;
   color: #F3CFB3; }
-  .node-type-indigo-page.site-bartlett aside.right-column.blue-peach .paragraphs-item-content-text-with-heading a, .node-type-indigo-page.site-bartlett aside.right-column.blue-peach .paragraphs-item-block-link a, .node-type-indigo-page.site-bartlett aside.right-column.blue-peach .paragraphs-item-testimonial a {
+  body[class*=site-bartlett].node-type-indigo-page aside.right-column.blue-peach .paragraphs-item-content-text-with-heading a, body[class*=site-bartlett].node-type-indigo-page aside.right-column.blue-peach .paragraphs-item-block-link a, body[class*=site-bartlett].node-type-indigo-page aside.right-column.blue-peach .paragraphs-item-testimonial a {
     color: inherit; }
-  .node-type-indigo-page.site-bartlett aside.right-column.blue-peach .paragraphs-item-content-text-with-heading svg, .node-type-indigo-page.site-bartlett aside.right-column.blue-peach .paragraphs-item-block-link svg, .node-type-indigo-page.site-bartlett aside.right-column.blue-peach .paragraphs-item-testimonial svg {
+  body[class*=site-bartlett].node-type-indigo-page aside.right-column.blue-peach .paragraphs-item-content-text-with-heading svg, body[class*=site-bartlett].node-type-indigo-page aside.right-column.blue-peach .paragraphs-item-block-link svg, body[class*=site-bartlett].node-type-indigo-page aside.right-column.blue-peach .paragraphs-item-testimonial svg {
     stroke: currentcolor; }
 
 /*-----------
@@ -5803,12 +5770,16 @@ dl.accordion {
 
 dd.accordion__description {
   margin-left: 0; }
+  dd.accordion__description h2 {
+    margin-top: 0;
+    border-top: none;
+    padding-top: 0; }
   dd.accordion__description.active {
     border-bottom: solid 1px #d6d6d6;
     padding-bottom: 1.875rem;
     margin-left: 0; }
 
-.site-bartlett .accordion .accordion__title span:after {
+body[class*=site-bartlett] .accordion .accordion__title span:after {
   color: #000000; }
 
 .site-bartlett.node-type-hub-page .main-content .node-hub-page .four-by-four-by-four .accordion {
@@ -5865,6 +5836,10 @@ TABS
 
 .tabs__content {
   margin-bottom: 1.5rem; }
+  .tabs__content h2 {
+    margin-top: 0;
+    border-top: none;
+    padding-top: 0; }
   .tabs__content .tab-content {
     padding: 1.875rem 0 0 0;
     display: none; }
@@ -5914,11 +5889,11 @@ TABS
   line-height: 1.203;
   font-weight: bold; }
 
-.site-bartlett .tabs--active-blue .tabs__navigation {
+body[class*=site-bartlett] .tabs--active-blue .tabs__navigation {
   background: #f5f5f5; }
-  .site-bartlett .tabs--active-blue .tabs__navigation a {
+  body[class*=site-bartlett] .tabs--active-blue .tabs__navigation a {
     color: #000000; }
-  .site-bartlett .tabs--active-blue .tabs__navigation a.active {
+  body[class*=site-bartlett] .tabs--active-blue .tabs__navigation a.active {
     background: #000000;
     color: #ffffff; }
 
@@ -6254,6 +6229,173 @@ FULL WIDTH HOME HERO
   @media (min-width: 2000px) {
     .hero-home {
       max-height: 1500px; } }
+
+/* ---------------------------- 
+FEED - LISTING - COURSE FINDER - SEARCH BOX
+------------------------------*/
+.course-search-box,
+.listing-search-box {
+  width: 100%; }
+  .course-search-box form input[type="search"],
+  .listing-search-box form input[type="search"] {
+    appearance: none;
+    -webkit-appearance: none;
+    padding: 0 10px 0 18px;
+    color: #333;
+    border: 0;
+    outline: none;
+    float: left;
+    width: 80%;
+    height: 3.8rem;
+    font-size: 1.125rem; }
+  .course-search-box form input[type="submit"],
+  .listing-search-box form input[type="submit"] {
+    float: right;
+    width: 20%;
+    appearance: none;
+    -webkit-appearance: none;
+    border: none;
+    height: 3.8rem;
+    font-size: 1rem;
+    cursor: pointer; }
+  .course-search-box #autocomplete,
+  .listing-search-box #autocomplete {
+    background: white;
+    padding-top: 1rem; }
+    .course-search-box #autocomplete div,
+    .listing-search-box #autocomplete div {
+      padding-left: 1.5%; }
+    .course-search-box #autocomplete li,
+    .listing-search-box #autocomplete li {
+      padding: 10px 0; }
+    .course-search-box #autocomplete.selected,
+    .listing-search-box #autocomplete.selected {
+      background: #0D68CF; }
+
+.course-search-box form input[type="search"] {
+  border: 1px solid #0D68CF; }
+
+.course-search-box form input[type="submit"] {
+  background: #0D68CF;
+  color: #fff; }
+
+.listing-search-box form input[type="search"] {
+  border: 1px solid #333333; }
+
+.listing-search-box form input[type="submit"] {
+  background: #333333;
+  color: #fff; }
+
+.listing-results-container {
+  padding: 0; }
+
+.listing-results-container.container {
+  max-width: none; }
+
+.listings-page .main-content h2 {
+  border-top: none;
+  margin-top: 0;
+  padding-top: 0; }
+
+.listing-left-column {
+  position: relative;
+  width: 100%;
+  padding-right: 16px;
+  padding-left: 16px;
+  padding: 0; }
+  @media (min-width: 768px) {
+    .listing-left-column {
+      flex: 0 0 66.6666666667%;
+      max-width: 66.6666666667%; } }
+
+.listing-right-column {
+  position: relative;
+  width: 100%;
+  padding-right: 16px;
+  padding-left: 16px;
+  padding: 0; }
+  @media (min-width: 768px) {
+    .listing-right-column {
+      flex: 0 0 33.3333333333%;
+      max-width: 33.3333333333%; } }
+
+.featured-story .featured-story__eyebrow {
+  text-transform: uppercase;
+  font-size: 1rem;
+  color: #5c5c5c;
+  margin-bottom: 0.5rem; }
+
+.featured-story h2 {
+  margin-bottom: 1rem; }
+
+.featured-story .forward-link {
+  margin-top: 2rem; }
+
+.featured-story img {
+  max-height: 387px; }
+
+.selected-stories .card .card__icon {
+  background: #000000; }
+  .selected-stories .card .card__icon svg {
+    stroke: #ffffff; }
+
+.selected-stories .card h3 a {
+  color: #333333; }
+  .selected-stories .card h3 a:hover {
+    color: #333333; }
+
+@media (min-width: 768px) {
+  .listings-search-filter {
+    margin-left: 25%; } }
+
+.listings-search-filter .search-filter__svg-dt {
+  background: #000000; }
+  .listings-search-filter .search-filter__svg-dt svg {
+    stroke: #ffffff;
+    color: #ffffff; }
+
+.search-filter.listings-search-filter {
+  border-top: #000000 1px solid; }
+
+@media (max-width: 991.98px) {
+  .site-content .main-content .search-filter {
+    border-bottom: #000000 1px solid; } }
+
+.listing-result__image {
+  position: relative;
+  width: 100%;
+  padding-right: 16px;
+  padding-left: 16px;
+  padding: 0; }
+  @media (min-width: 768px) {
+    .listing-result__image {
+      flex: 0 0 25%;
+      max-width: 25%; } }
+
+.listing-result__text-content {
+  position: relative;
+  width: 100%;
+  padding-right: 16px;
+  padding-left: 16px;
+  padding: 0; }
+  @media (min-width: 768px) {
+    .listing-result__text-content {
+      flex: 0 0 75%;
+      max-width: 75%; } }
+
+.listing-result__text-content {
+  margin-bottom: 2.1875rem;
+  padding-left: 32px; }
+  .listing-result__text-content h4 {
+    margin-bottom: 0.3rem; }
+  .listing-result__text-content .listing-meta {
+    margin-bottom: 0.5rem; }
+  .listing-result__text-content .listing-department {
+    color: #5c5c5c;
+    margin-bottom: 0.5rem; }
+
+.listing-search-box {
+  margin-bottom: 50px; }
 
 /* ------------------------ INPAGE FEED -------------------- */
 .inpage-feed__left {

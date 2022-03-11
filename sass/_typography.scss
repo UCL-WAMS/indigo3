@@ -185,18 +185,6 @@ TEMPLATE CONTENT CUSTOM STYLES - SEE ALSO MIXINS
 		margin-bottom: 1.8rem;
 		}
 
-
-// SECTION HEADER WITH BLACK TOP BORDER
-// NB SEE ALSO LAYOUT PATTERNS FOR MODIFICATIONS TO H2 STYLING 
-	.main-content h2 {
-		border-top: solid 1px #333;
-		padding-top: 1.875rem;
-		margin-top: 1.875rem;
-		clear: both;
-	}
-
-
-
 	// COURSE PAGE LOCATION DETAILS NOT USED IN CURRENT VERSION.
 
 	.top-course-details {
@@ -240,6 +228,21 @@ TEMPLATE CONTENT CUSTOM STYLES - SEE ALSO MIXINS
 		}
 	}
 }
+
+
+
+// SECTION HEADER WITH BLACK TOP BORDER
+// NB SEE ALSO LAYOUT PATTERNS FOR MODIFICATIONS TO H2 STYLING 
+// SEE ALSO PROSPECTUS 21 STYLING REMOVED FOR HUB PAGES
+
+.main-content h2 {
+	border-top: solid 1px #333;
+	padding-top: 1.875rem;
+	margin-top: 1.875rem;
+	clear: both;
+	}
+
+
 
 /*-----------------------
 HORIZONTAL RULES
