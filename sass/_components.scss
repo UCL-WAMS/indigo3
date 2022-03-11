@@ -245,7 +245,7 @@ CARD LINK
 
 
 // BARTLETT CARD LINK COLOURS
-.site-bartlett .paragraphs-item-card-link { 
+body[class*=site-bartlett] .paragraphs-item-card-link { 
 	background: $bartlettviolet; 
 	color: $bartlettturquoise; 
 }
@@ -637,7 +637,7 @@ ALERTS
 //ICON WITH BLACK BACKGROUND WHITE ARROW
 //USED ON BARTLETT
 
-.site-bartlett {
+body[class*=site-bartlett] {
 
 .card {
 	h3 a {
@@ -1154,6 +1154,9 @@ SECTION BACKGROUNDS
 	padding: 3.75rem 0;
 	margin-bottom: 3rem;
 	@include colour-breakout;
+	h2 {
+		border-top: 0;
+		}
 	}
 .section-background--lightgray {
 	background: $backgroundlightgray; 	
@@ -1187,9 +1190,10 @@ $sidebarpara: ".paragraphs-item-content-text-with-heading,.paragraphs-item-block
       				}
       			}
       	}
+	}
 
 // BARTLETT COLOURS
-	&.site-bartlett {
+	body[class*=site-bartlett].node-type-indigo-page{
 		aside.right-column {
 				#{$sidebarpara} {
 					background-color: $bartlettturquoise;
@@ -1287,5 +1291,5 @@ $sidebarpara: ".paragraphs-item-content-text-with-heading,.paragraphs-item-block
 				    }
 				}
 			}
-		}	
+		
 	
