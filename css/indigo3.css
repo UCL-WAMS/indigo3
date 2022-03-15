@@ -2672,10 +2672,9 @@ DEBUGGING AND BACKEND
 
 /*----------------------------------------------------------------------------------------------
 THESE STYLES WERE USED DURING THE DEVELOPMENT OF INDIGO3 
-IN THE PHASE ONE PILOT GRAD PROSPECTUS PAGES. 
-THEY ARE ALL NOW OBSOLETE IN INDIGO3 AND SHOULD NOT BE USED.
-HEROS USE DIFFERENT HTML
-WHERE POSSIBLE THEY NEED TO BE REPLACED IN THE PROSPECTUS BY 
+AND ARE A PARTIAL SET OF THE FULL SET OF STYLES NOW IN USE IN
+THE BARTLETT.
+WHERE POSSIBLE THEY NEED TO BE REPLACED IN THE PROSPECTUS HTML BY 
 GENERIC STYLES IN THE NEXT ITERATION OF THIS SITE
 AND THIS FOLDER DELETED.  THESE ARE NOT CUSTOM STYLES!
 --------------------------------------------------------------------------------------------*/
@@ -2711,6 +2710,12 @@ CARD LINK
   /*----------------------
 FEATURE LINK
 ---------------------*/
+  /* -------------------------
+BOXOUT PARAGRAPHS
+--------------------------*/
+  /*---------------------------
+HARD CODED SIDE BAR BOXOUTS
+----------------------------*/
   /*-----------------------------------
 CARD - NODE TEASER
 ------------------------------------*/
@@ -2845,6 +2850,85 @@ DROP SHADOW FOR CONTACT BOX
     .site-prospective-students-undergraduate-redesign .feature-link.clearfix,
     .site-prospective-students-undergraduate .feature-link.clearfix {
       box-shadow: 3px 10px 10px -6px rgba(51, 51, 51, 0.75); } }
+  .site-prospective-students-graduate .paragraphs-item-boxout.gray,
+  .site-prospective-students-undergraduate-redesign .paragraphs-item-boxout.gray,
+  .site-prospective-students-undergraduate .paragraphs-item-boxout.gray {
+    background: #333333;
+    color: #ffffff;
+    padding: 1.5rem; }
+    .site-prospective-students-graduate .paragraphs-item-boxout.gray h2,
+    .site-prospective-students-undergraduate-redesign .paragraphs-item-boxout.gray h2,
+    .site-prospective-students-undergraduate .paragraphs-item-boxout.gray h2 {
+      color: #ea7600; }
+    .site-prospective-students-graduate .paragraphs-item-boxout.gray svg,
+    .site-prospective-students-undergraduate-redesign .paragraphs-item-boxout.gray svg,
+    .site-prospective-students-undergraduate .paragraphs-item-boxout.gray svg {
+      stroke: #F6BE00; }
+    .site-prospective-students-graduate .paragraphs-item-boxout.gray a,
+    .site-prospective-students-undergraduate-redesign .paragraphs-item-boxout.gray a,
+    .site-prospective-students-undergraduate .paragraphs-item-boxout.gray a {
+      color: #F6BE00; }
+      .site-prospective-students-graduate .paragraphs-item-boxout.gray a:hover,
+      .site-prospective-students-undergraduate-redesign .paragraphs-item-boxout.gray a:hover,
+      .site-prospective-students-undergraduate .paragraphs-item-boxout.gray a:hover {
+        color: #F6BE00; }
+  .site-prospective-students-graduate .box-out,
+  .site-prospective-students-undergraduate-redesign .box-out,
+  .site-prospective-students-undergraduate .box-out {
+    padding: 24px;
+    margin-bottom: 30px; }
+    .site-prospective-students-graduate .box-out .box-out__content.div,
+    .site-prospective-students-undergraduate-redesign .box-out .box-out__content.div,
+    .site-prospective-students-undergraduate .box-out .box-out__content.div {
+      margin: 0; }
+    .site-prospective-students-graduate .box-out p,
+    .site-prospective-students-graduate .box-out a,
+    .site-prospective-students-undergraduate-redesign .box-out p,
+    .site-prospective-students-undergraduate-redesign .box-out a,
+    .site-prospective-students-undergraduate .box-out p,
+    .site-prospective-students-undergraduate .box-out a {
+      line-height: 1.5;
+      font-size: 1rem; }
+  .site-prospective-students-graduate .box-out--gray,
+  .site-prospective-students-undergraduate-redesign .box-out--gray,
+  .site-prospective-students-undergraduate .box-out--gray {
+    background: #333333; }
+    .site-prospective-students-graduate .box-out--gray h3,
+    .site-prospective-students-undergraduate-redesign .box-out--gray h3,
+    .site-prospective-students-undergraduate .box-out--gray h3 {
+      color: #ffffff; }
+    .site-prospective-students-graduate .box-out--gray p,
+    .site-prospective-students-undergraduate-redesign .box-out--gray p,
+    .site-prospective-students-undergraduate .box-out--gray p {
+      color: #d6d6d6; }
+    .site-prospective-students-graduate .box-out--gray a,
+    .site-prospective-students-undergraduate-redesign .box-out--gray a,
+    .site-prospective-students-undergraduate .box-out--gray a {
+      color: #F6BE00; }
+    .site-prospective-students-graduate .box-out--gray .forward-link svg,
+    .site-prospective-students-undergraduate-redesign .box-out--gray .forward-link svg,
+    .site-prospective-students-undergraduate .box-out--gray .forward-link svg {
+      stroke: #F6BE00; }
+  .site-prospective-students-graduate .box-out--yellow,
+  .site-prospective-students-undergraduate-redesign .box-out--yellow,
+  .site-prospective-students-undergraduate .box-out--yellow {
+    background-color: #F6BE00; }
+    .site-prospective-students-graduate .box-out--yellow a,
+    .site-prospective-students-undergraduate-redesign .box-out--yellow a,
+    .site-prospective-students-undergraduate .box-out--yellow a {
+      color: #333333; }
+  .site-prospective-students-graduate .box-out--gray-border,
+  .site-prospective-students-undergraduate-redesign .box-out--gray-border,
+  .site-prospective-students-undergraduate .box-out--gray-border {
+    border: solid 1px #d6d6d6;
+    padding: 2.5rem 2.5rem 0;
+    margin-bottom: 1.5rem; }
+    .site-prospective-students-graduate .box-out--gray-border img,
+    .site-prospective-students-undergraduate-redesign .box-out--gray-border img,
+    .site-prospective-students-undergraduate .box-out--gray-border img {
+      height: 62px;
+      float: left;
+      margin-right: 2rem; }
   .site-prospective-students-graduate .card__icon,
   .site-prospective-students-undergraduate-redesign .card__icon,
   .site-prospective-students-undergraduate .card__icon {
@@ -5140,44 +5224,6 @@ PROMO CARD
 .node-type-hub-page .full-width-promo-card .promo-text > h2 {
   padding-top: 1.5rem; }
 
-/*---------------------------
- BOXOUTS
-----------------------------*/
-.box-out {
-  padding: 24px;
-  margin-bottom: 30px; }
-  .box-out .box-out__content.div {
-    margin: 0; }
-  .box-out p,
-  .box-out a {
-    line-height: 1.5;
-    font-size: 1rem; }
-
-.box-out--gray {
-  background: #333333; }
-  .box-out--gray h3 {
-    color: #ffffff; }
-  .box-out--gray p {
-    color: #d6d6d6; }
-  .box-out--gray a {
-    color: #F6BE00; }
-  .box-out--gray .forward-link svg {
-    stroke: #F6BE00; }
-
-.box-out--yellow {
-  background-color: #F6BE00; }
-  .box-out--yellow a {
-    color: #333333; }
-
-.box-out--gray-border {
-  border: solid 1px #d6d6d6;
-  padding: 2.5rem 2.5rem 0;
-  margin-bottom: 1.5rem; }
-  .box-out--gray-border img {
-    height: 62px;
-    float: left;
-    margin-right: 2rem; }
-
 /* ------------ 
 
 ALERTS 
@@ -5468,6 +5514,122 @@ aside.right-column .paragraphs-item-call-to-action-card-external {
   .six-by-six .cta-box__btn {
     width: 60%; } }
 
+/*----------------------------
+BOX OUT PARAGRAPH
+----------------------------*/
+.paragraphs-item-boxout {
+  height: 100%;
+  padding: 3rem;
+  font-size: .9rem; }
+  .paragraphs-item-boxout h2 {
+    margin-top: 0;
+    padding-top: 0;
+    border-top: none;
+    font-size: 1.2rem; }
+  .paragraphs-item-boxout h3, .paragraphs-item-boxout h4 {
+    font-size: 1rem; }
+  .paragraphs-item-boxout.align-to-self {
+    height: auto; }
+  .paragraphs-item-boxout.gray {
+    background: #333333;
+    color: #ffffff; }
+    .paragraphs-item-boxout.gray a, .paragraphs-item-boxout.gray blockquote {
+      color: #ffffff; }
+    .paragraphs-item-boxout.gray svg {
+      stroke: #ffffff; }
+  .paragraphs-item-boxout.violet-turquoise {
+    background: #440099;
+    color: #8ce2d0; }
+    .paragraphs-item-boxout.violet-turquoise a, .paragraphs-item-boxout.violet-turquoise blockquote {
+      color: #8ce2d0; }
+    .paragraphs-item-boxout.violet-turquoise svg {
+      stroke: #8ce2d0; }
+  .paragraphs-item-boxout.violet-turquoise {
+    background: #440099;
+    color: #8ce2d0; }
+    .paragraphs-item-boxout.violet-turquoise a, .paragraphs-item-boxout.violet-turquoise blockquote {
+      color: #8ce2d0; }
+    .paragraphs-item-boxout.violet-turquoise svg {
+      stroke: #8ce2d0; }
+  .paragraphs-item-boxout.green-pink {
+    background: #00534c;
+    color: #f9b5c4; }
+    .paragraphs-item-boxout.green-pink a, .paragraphs-item-boxout.green-pink blockquote {
+      color: #f9b5c4; }
+    .paragraphs-item-boxout.green-pink svg {
+      stroke: #f9b5c4; }
+  .paragraphs-item-boxout.purple-peach {
+    background: #702082;
+    color: #F3CFB3; }
+    .paragraphs-item-boxout.purple-peach a, .paragraphs-item-boxout.purple-peach blockquote {
+      color: #F3CFB3; }
+    .paragraphs-item-boxout.purple-peach svg {
+      stroke: #F3CFB3; }
+  .paragraphs-item-boxout.turquoise-violet {
+    background: #8ce2d0;
+    color: #440099; }
+    .paragraphs-item-boxout.turquoise-violet a, .paragraphs-item-boxout.turquoise-violet blockquote {
+      color: #440099; }
+    .paragraphs-item-boxout.turquoise-violet svg {
+      stroke: #440099; }
+  .paragraphs-item-boxout.peach-purple {
+    background: #F3CFB3;
+    color: #702082; }
+    .paragraphs-item-boxout.peach-purple a, .paragraphs-item-boxout.peach-purple blockquote {
+      color: #702082; }
+    .paragraphs-item-boxout.peach-purple svg {
+      stroke: #702082; }
+  .paragraphs-item-boxout.pink-violet {
+    background: #f9b5c4;
+    color: #440099; }
+    .paragraphs-item-boxout.pink-violet a, .paragraphs-item-boxout.pink-violet blockquote {
+      color: #440099; }
+    .paragraphs-item-boxout.pink-violet svg {
+      stroke: #440099; }
+  .paragraphs-item-boxout.blue-peach {
+    background: #1A2BF2;
+    color: #F3CFB3; }
+    .paragraphs-item-boxout.blue-peach a, .paragraphs-item-boxout.blue-peach blockquote {
+      color: #F3CFB3; }
+    .paragraphs-item-boxout.blue-peach svg {
+      stroke: #F3CFB3; }
+  @media (min-width: 1200px) {
+    .paragraphs-item-boxout {
+      font-size: 1.125rem; }
+      .paragraphs-item-boxout h2 {
+        font-size: 1.8rem; }
+      .paragraphs-item-boxout h3, .paragraphs-item-boxout h4 {
+        font-size: 1.25rem; } }
+
+.node > .paragraphs-item-boxout {
+  margin-bottom: 1.5rem; }
+
+body.sidebar .three-card-layout .paragraphs-item-boxout,
+body.sidebar .eight-by-four .eight-by-four__left .paragraphs-item-boxout {
+  padding: 1.5rem 1rem; }
+  @media (min-width: 1200px) {
+    body.sidebar .three-card-layout .paragraphs-item-boxout,
+    body.sidebar .eight-by-four .eight-by-four__left .paragraphs-item-boxout {
+      padding: 3rem; } }
+
+body.sidebar .four-item-layout .paragraphs-item-boxout,
+body.sidebar .eight-by-four .eight-by-four__right .paragraphs-item-boxout {
+  padding: 1rem  0.5rem;
+  font-size: 1rem; }
+  body.sidebar .four-item-layout .paragraphs-item-boxout h2, body.sidebar .four-item-layout .paragraphs-item-boxout h3,
+  body.sidebar .eight-by-four .eight-by-four__right .paragraphs-item-boxout h2,
+  body.sidebar .eight-by-four .eight-by-four__right .paragraphs-item-boxout h3 {
+    font-size: 1rem; }
+  @media (min-width: 1200px) {
+    body.sidebar .four-item-layout .paragraphs-item-boxout,
+    body.sidebar .eight-by-four .eight-by-four__right .paragraphs-item-boxout {
+      padding: 1.5rem;
+      font-size: 1.125rem; }
+      body.sidebar .four-item-layout .paragraphs-item-boxout h2, body.sidebar .four-item-layout .paragraphs-item-boxout h3,
+      body.sidebar .eight-by-four .eight-by-four__right .paragraphs-item-boxout h2,
+      body.sidebar .eight-by-four .eight-by-four__right .paragraphs-item-boxout h3 {
+        font-size: 1.5rem; } }
+
 /*------------------
 FIVE CARD LAYOUT
 ----------------------------*/
@@ -5657,6 +5819,15 @@ SECTION BACKGROUNDS
 
 .section-background--lightgray {
   background: #f5f5f5; }
+
+.node-type-indigo-page aside.right-column h2 {
+  font-size: 1.25rem;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+  font-weight: bold; }
+  @media (min-width: 992px) {
+    .node-type-indigo-page aside.right-column h2 {
+      font-size: 1.5rem; } }
 
 .node-type-indigo-page aside.right-column .paragraphs-item-content-text-with-heading, .node-type-indigo-page aside.right-column .paragraphs-item-block-link, .node-type-indigo-page aside.right-column .paragraphs-item-testimonial {
   padding: 1.5rem;
@@ -6630,3 +6801,15 @@ td, td img {
     .blockquote blockquote .blockquote-detail__text .forward-link a {
       vertical-align: 0.2rem;
       padding-left: 0.5rem; }
+
+.three-card-layout .paragraphs-item-boxout .paragraphs-item-testimonial, .six-by-six .paragraphs-item-boxout .paragraphs-item-testimonial, .eight-by-four .paragraphs-item-boxout .paragraphs-item-testimonial {
+  padding-top: 2rem; }
+  .three-card-layout .paragraphs-item-boxout .paragraphs-item-testimonial .blockquote blockquote p.blockquote-quote, .six-by-six .paragraphs-item-boxout .paragraphs-item-testimonial .blockquote blockquote p.blockquote-quote, .eight-by-four .paragraphs-item-boxout .paragraphs-item-testimonial .blockquote blockquote p.blockquote-quote {
+    font-size: 1rem; }
+  .three-card-layout .paragraphs-item-boxout .paragraphs-item-testimonial .blockquote blockquote:before, .six-by-six .paragraphs-item-boxout .paragraphs-item-testimonial .blockquote blockquote:before, .eight-by-four .paragraphs-item-boxout .paragraphs-item-testimonial .blockquote blockquote:before {
+    top: -85px; }
+  .three-card-layout .paragraphs-item-boxout .paragraphs-item-testimonial .blockquote blockquote .blockquote-detail,
+  .three-card-layout .paragraphs-item-boxout .paragraphs-item-testimonial .blockquote blockquote .blockquote-quote, .six-by-six .paragraphs-item-boxout .paragraphs-item-testimonial .blockquote blockquote .blockquote-detail,
+  .six-by-six .paragraphs-item-boxout .paragraphs-item-testimonial .blockquote blockquote .blockquote-quote, .eight-by-four .paragraphs-item-boxout .paragraphs-item-testimonial .blockquote blockquote .blockquote-detail,
+  .eight-by-four .paragraphs-item-boxout .paragraphs-item-testimonial .blockquote blockquote .blockquote-quote {
+    margin-left: 0; }

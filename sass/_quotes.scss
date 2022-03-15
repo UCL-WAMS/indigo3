@@ -108,3 +108,26 @@
 
 
 	}	
+
+
+// RESPONSIVE STYLING FOR QUOTES IN BOXOUTS IN COLUMN LAYOUTS.
+.three-card-layout,.six-by-six,.eight-by-four {
+	.paragraphs-item-boxout {
+	.paragraphs-item-testimonial {
+		padding-top: 2rem;		
+		.blockquote blockquote p.blockquote-quote {
+			font-size: 1rem;
+			}
+	.blockquote  blockquote {
+		&:before {
+			top: -85px;
+			}
+		}
+		.blockquote blockquote .blockquote-detail, 
+		.blockquote blockquote .blockquote-quote{
+			margin-left: 0;
+			}
+		}
+	}
+	}
+
