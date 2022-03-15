@@ -1,9 +1,8 @@
 /*----------------------------------------------------------------------------------------------
 THESE STYLES WERE USED DURING THE DEVELOPMENT OF INDIGO3 
-IN THE PHASE ONE PILOT GRAD PROSPECTUS PAGES. 
-THEY ARE ALL NOW OBSOLETE IN INDIGO3 AND SHOULD NOT BE USED.
-HEROS USE DIFFERENT HTML
-WHERE POSSIBLE THEY NEED TO BE REPLACED IN THE PROSPECTUS BY 
+AND ARE A PARTIAL SET OF THE FULL SET OF STYLES NOW IN USE IN
+THE BARTLETT.
+WHERE POSSIBLE THEY NEED TO BE REPLACED IN THE PROSPECTUS HTML BY 
 GENERIC STYLES IN THE NEXT ITERATION OF THIS SITE
 AND THIS FOLDER DELETED.  THESE ARE NOT CUSTOM STYLES!
 --------------------------------------------------------------------------------------------*/
@@ -85,8 +84,6 @@ HUB PAGE LAYOUT
 		}
 
 	}
-
-
 
 
 /*--------------------------
@@ -180,6 +177,60 @@ BOXOUT PARAGRAPHS
 }
 
 
+/*---------------------------
+HARD CODED SIDE BAR BOXOUTS
+----------------------------*/
+
+.box-out { 
+	padding: 24px;
+	margin-bottom: 30px;
+	.box-out__content.div {
+		margin: 0;
+	}
+	p, 
+	a {
+	line-height: 1.5;
+	font-size: 1rem; 
+	}
+ }
+
+
+
+.box-out--gray {
+	background: $darkgray;
+	h3 {
+		color: #ffffff;
+	}
+	p {
+		color: #d6d6d6;
+	}
+	a {
+		color: $yellow;
+	}
+	.forward-link svg {
+		stroke: $yellow;
+	}
+}
+
+
+.box-out--yellow {
+	background-color: $yellow;
+	a {
+		color: $darkgray;
+	}
+}
+
+.box-out--gray-border {
+	border: solid 1px #d6d6d6;
+	padding: 2.5rem 2.5rem 0;
+	margin-bottom: 1.5rem;
+		img {
+		height: 62px;
+		float: left;
+		margin-right: 2rem;
+
+	}
+}
 
 /*-----------------------------------
 CARD - NODE TEASER
@@ -204,6 +255,8 @@ QUOTES AND TESTIMONIALS
 .blockquote  blockquote {
 		color: #AC145A;
 	}
+
+
 
 
 
