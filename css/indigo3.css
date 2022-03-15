@@ -2672,10 +2672,9 @@ DEBUGGING AND BACKEND
 
 /*----------------------------------------------------------------------------------------------
 THESE STYLES WERE USED DURING THE DEVELOPMENT OF INDIGO3 
-IN THE PHASE ONE PILOT GRAD PROSPECTUS PAGES. 
-THEY ARE ALL NOW OBSOLETE IN INDIGO3 AND SHOULD NOT BE USED.
-HEROS USE DIFFERENT HTML
-WHERE POSSIBLE THEY NEED TO BE REPLACED IN THE PROSPECTUS BY 
+AND ARE A PARTIAL SET OF THE FULL SET OF STYLES NOW IN USE IN
+THE BARTLETT.
+WHERE POSSIBLE THEY NEED TO BE REPLACED IN THE PROSPECTUS HTML BY 
 GENERIC STYLES IN THE NEXT ITERATION OF THIS SITE
 AND THIS FOLDER DELETED.  THESE ARE NOT CUSTOM STYLES!
 --------------------------------------------------------------------------------------------*/
@@ -2714,6 +2713,9 @@ FEATURE LINK
   /* -------------------------
 BOXOUT PARAGRAPHS
 --------------------------*/
+  /*---------------------------
+HARD CODED SIDE BAR BOXOUTS
+----------------------------*/
   /*-----------------------------------
 CARD - NODE TEASER
 ------------------------------------*/
@@ -2870,6 +2872,63 @@ DROP SHADOW FOR CONTACT BOX
       .site-prospective-students-undergraduate-redesign .paragraphs-item-boxout.gray a:hover,
       .site-prospective-students-undergraduate .paragraphs-item-boxout.gray a:hover {
         color: #F6BE00; }
+  .site-prospective-students-graduate .box-out,
+  .site-prospective-students-undergraduate-redesign .box-out,
+  .site-prospective-students-undergraduate .box-out {
+    padding: 24px;
+    margin-bottom: 30px; }
+    .site-prospective-students-graduate .box-out .box-out__content.div,
+    .site-prospective-students-undergraduate-redesign .box-out .box-out__content.div,
+    .site-prospective-students-undergraduate .box-out .box-out__content.div {
+      margin: 0; }
+    .site-prospective-students-graduate .box-out p,
+    .site-prospective-students-graduate .box-out a,
+    .site-prospective-students-undergraduate-redesign .box-out p,
+    .site-prospective-students-undergraduate-redesign .box-out a,
+    .site-prospective-students-undergraduate .box-out p,
+    .site-prospective-students-undergraduate .box-out a {
+      line-height: 1.5;
+      font-size: 1rem; }
+  .site-prospective-students-graduate .box-out--gray,
+  .site-prospective-students-undergraduate-redesign .box-out--gray,
+  .site-prospective-students-undergraduate .box-out--gray {
+    background: #333333; }
+    .site-prospective-students-graduate .box-out--gray h3,
+    .site-prospective-students-undergraduate-redesign .box-out--gray h3,
+    .site-prospective-students-undergraduate .box-out--gray h3 {
+      color: #ffffff; }
+    .site-prospective-students-graduate .box-out--gray p,
+    .site-prospective-students-undergraduate-redesign .box-out--gray p,
+    .site-prospective-students-undergraduate .box-out--gray p {
+      color: #d6d6d6; }
+    .site-prospective-students-graduate .box-out--gray a,
+    .site-prospective-students-undergraduate-redesign .box-out--gray a,
+    .site-prospective-students-undergraduate .box-out--gray a {
+      color: #F6BE00; }
+    .site-prospective-students-graduate .box-out--gray .forward-link svg,
+    .site-prospective-students-undergraduate-redesign .box-out--gray .forward-link svg,
+    .site-prospective-students-undergraduate .box-out--gray .forward-link svg {
+      stroke: #F6BE00; }
+  .site-prospective-students-graduate .box-out--yellow,
+  .site-prospective-students-undergraduate-redesign .box-out--yellow,
+  .site-prospective-students-undergraduate .box-out--yellow {
+    background-color: #F6BE00; }
+    .site-prospective-students-graduate .box-out--yellow a,
+    .site-prospective-students-undergraduate-redesign .box-out--yellow a,
+    .site-prospective-students-undergraduate .box-out--yellow a {
+      color: #333333; }
+  .site-prospective-students-graduate .box-out--gray-border,
+  .site-prospective-students-undergraduate-redesign .box-out--gray-border,
+  .site-prospective-students-undergraduate .box-out--gray-border {
+    border: solid 1px #d6d6d6;
+    padding: 2.5rem 2.5rem 0;
+    margin-bottom: 1.5rem; }
+    .site-prospective-students-graduate .box-out--gray-border img,
+    .site-prospective-students-undergraduate-redesign .box-out--gray-border img,
+    .site-prospective-students-undergraduate .box-out--gray-border img {
+      height: 62px;
+      float: left;
+      margin-right: 2rem; }
   .site-prospective-students-graduate .card__icon,
   .site-prospective-students-undergraduate-redesign .card__icon,
   .site-prospective-students-undergraduate .card__icon {
