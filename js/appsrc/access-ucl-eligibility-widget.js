@@ -365,7 +365,7 @@
                 
                 // HTML template
 var widget = '<p>Enter your details below to check your eligibility for Access UCL (you will need your home postcode and the postcode of the school where you took your A levels).</p>\
-<p>Please bear in mind that the results given here are indicative only.</p> \
+<p>Please bear in mind that the results given here are indicative only.</p>\
 \
 <form action="" method="get" id="checker-widget" autocomplete="off">\
     <fieldset>\
@@ -432,7 +432,7 @@ var widget = '<p>Enter your details below to check your eligibility for Access U
           A young adult carer is someone who provides ongoing unpaid support to a family member who could not manage without this help. This usually means looking after one of their parents or caring for a brother or sister.<br />\
           Young adult carers must be aged 20 or under on their first day of study at UCL.</p>\
           <p class="discreet">** This means you no longer have the support of your family due to a permanent breakdown in your relationship(s) which has led to ceased contact for at least a year. This might mean your biological, step or adoptive parents, or wider family members who have been responsible for supporting you in the past. Students estranged from their family must be aged under 25 on their first day of study at UCL.</p>\
-      </div>  \
+      </div>\
 \
       <div class="hiddenField" id="indeterminate">\
           <p class="darr">&darr;</p>\
@@ -509,7 +509,7 @@ var widget = '<p>Enter your details below to check your eligibility for Access U
               </div>\
           </div>\
       </div>\
-    </fieldset>        \
+    </fieldset>\
     <div class="field hiddenField" id="resetter">\
         <p class="darr">&nbsp;</p>\
         <input type="reset" class="access-button btn-cta" id="form-reset" value="Start again &olarr;" />\
