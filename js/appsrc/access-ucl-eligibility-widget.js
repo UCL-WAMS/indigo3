@@ -437,6 +437,9 @@ var widget = '<p>Enter your details below to check your eligibility for Access U
       <div class="hiddenField" id="indeterminate">\
           <p class="darr">&darr;</p>\
           <div class="entity entity-paragraphs-item paragraphs-item-alert-box alert alert-warn clearfix">\
+              <div class="alert__icon">\
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" fill="none" stroke="#0d68cf" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-alert-circle icon" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>\
+              </div>\
               <div class="alert__content">\
                   <h4>Sorry, we cannot determine whether you are eligible for Access UCL</h4>\
                   <div id="school-checked-indeterminate" class="hiddenField">\
@@ -454,6 +457,9 @@ var widget = '<p>Enter your details below to check your eligibility for Access U
       <div class="hiddenField" id="ineligible">\
           <p class="darr">&darr;</p>\
           <div class="entity entity-paragraphs-item paragraphs-item-alert-box alert alert-warn clearfix">\
+              <div class="alert__icon">\
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" fill="none" stroke="#0d68cf" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-alert-circle icon" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>\
+              </div>\
               <div class="alert__content">\
               <h4>Sorry, you are not eligible for Access UCL</h4>\
                   <div id="school-checked-nopass" class="hiddenField">\
@@ -472,6 +478,9 @@ var widget = '<p>Enter your details below to check your eligibility for Access U
       <div class="hiddenField" id="eligible">\
           <p class="darr">&darr;</p>\
           <div class="entity entity-paragraphs-item paragraphs-item-alert-box alert alert-success clearfix">\
+              <div class="alert__icon">\
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" fill="none" stroke="#0d68cf" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-alert-circle icon" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>\
+              </div>\
               <div class="alert__content">\
                   <h4>Great news! You are eligible for Access UCL</h4>\
                   <div id="school-checked-pass" class="hiddenField">\
@@ -491,6 +500,9 @@ var widget = '<p>Enter your details below to check your eligibility for Access U
       <div class="hiddenField" id="case-by-case">\
           <p class="darr">&darr;</p>\
           <div class="entity entity-paragraphs-item paragraphs-item-alert-box alert alert-info clearfix">\
+              <div class="alert__icon">\
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" fill="none" stroke="#0d68cf" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-alert-circle icon" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>\
+              </div>\
               <div class="alert__content">\
                   <h4>You may still be eligible for Access UCL</h4>\
                   <p id="maybe-text">Students who attend or attended a UK private school who are care leavers are considered on a case-by-case basis. Email <a href="mailto:wp.accessucl@ucl.ac.uk">wp.accessucl@ucl.ac.uk</a> with your personal details for a decision.</p>\
