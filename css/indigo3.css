@@ -5792,8 +5792,9 @@ FIVE CARD LAYOUT
  ACCESS UCL SCHEME WIDGET
 ---------------------------------*/
 #access-ucl-form {
-  font-size: 18px;
+  font-size: 1.125rem;
   line-height: 1.5;
+  font-weight: 400;
   color: #333333;
   background-color: #FFF;
   font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; }
@@ -5803,15 +5804,14 @@ FIVE CARD LAYOUT
     padding: 2rem;
     display: block; }
   #access-ucl-form .access-ucl_fieldset fieldset {
-    padding: 10px;
+    padding: 0.625rem;
     margin: 0;
     border: 0;
     min-width: 0; }
   #access-ucl-form .field {
-    padding: 10px; }
+    padding: 0.625rem; }
     #access-ucl-form .field label {
       margin-bottom: 0.1em;
-      font-size: 18px;
       font-weight: 400; }
     #access-ucl-form .field label input {
       position: relative;
@@ -5820,8 +5820,8 @@ FIVE CARD LAYOUT
     background: #0D68CF;
     border: 1px solid #86B3E7;
     border-radius: 3px;
-    padding: 13px;
-    font-size: 15px; }
+    padding: 0.813rem;
+    font-size: 1rem; }
   #access-ucl-form .access-button:hover {
     cursor: pointer;
     background: #86B3E7;
@@ -5845,7 +5845,7 @@ FIVE CARD LAYOUT
     display: none; }
   #access-ucl-form .noschool,
   #access-ucl-form .myoption {
-    padding: 5px 10px; }
+    padding: 0.313rem 0.625rem; }
   #access-ucl-form .myoption:hover {
     background: #0D68CF;
     color: #FFF;
@@ -5856,7 +5856,7 @@ FIVE CARD LAYOUT
     cursor: pointer;
     margin-top: 5px; }
   #access-ucl-form .submitter {
-    margin-top: 20px; }
+    margin-top: 1.25rem; }
   #access-ucl-form .discreet {
     color: #999999; }
   #access-ucl-form #ajax-spinner {
