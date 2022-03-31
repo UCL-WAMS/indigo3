@@ -1249,6 +1249,109 @@ FIVE CARD LAYOUT
 	height: 100%;
 }
 
+/*--------------------------------
+ ACCESS UCL SCHEME WIDGET
+---------------------------------*/
+
+#access-ucl-form {
+	font-size:1.125rem;
+	line-height: 1.5;
+	font-weight:400;
+	color: #333333;
+	background-color: #FFF;
+	font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	#checker-widget fieldset {
+		border-radius:3px;
+		background: #f5f5f5;
+		padding: 2rem;
+		display: block;
+	}
+	.access-ucl_fieldset fieldset {
+		padding: 0.625rem;
+		margin: 0;
+		border: 0;
+		min-width: 0;
+	}
+	.field {
+		padding:0.625rem;
+		label {
+			margin-bottom:0.1em;
+			font-weight:400;
+		}
+		label input {
+			position:relative;
+			top:-2px;
+		}
+	}
+	.access-button {
+		background:#0D68CF;
+		border:1px solid #86B3E7;
+		border-radius:3px;
+		padding:0.813rem;
+		font-size: 1rem;
+	}
+	.access-button:hover {
+		cursor:pointer;
+		background:#86B3E7;
+		border:1px solid #86B3E7;
+	}
+	.hiddenField {
+		display:none;
+	}
+	.postcodefield {
+		border:1px solid #858585;
+		padding: 1rem;
+	}
+	.errorField {
+		padding: 1.5rem;
+		background: #fbe6eb;
+		border-color: #D50032;
+	}
+	.optionholder {
+		position:relative;
+	}
+	.optiontext {
+		position:absolute;
+		z-index:10;
+		background:#FFF;
+		border:1px solid #BBB;
+		display:none;
+	}
+	.noschool,
+	.myoption {
+		padding:0.313rem 0.625rem
+	}
+	.myoption:hover {
+		background:#0D68CF;
+		color:#FFF;
+		cursor:pointer;
+	}
+	.myoption.selected {
+		background: white;
+		color: #238638;
+		cursor:pointer;
+		margin-top: 5px;
+	}
+	.submitter {
+		margin-top:1.25rem;
+	}
+	.discreet {
+		color:#999999;
+	}
+	#ajax-spinner {
+		z-index:9999;
+		text-align:center;
+		display:inline-block;
+	}
+	#lightbox {
+		position:absolute;
+		top:0;
+		left:0;
+		z-index:100;
+		background:#FFF;
+		opacity:0.7;
+	}
+}
 
 /*---------------------------
 FORMS
