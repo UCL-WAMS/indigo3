@@ -11,7 +11,7 @@
 *********************************************************************/
 
 (function ($) {
-    Drupal.behaviors.ucl_indigo_accordion = {
+    Drupal.behaviors.ucl_indigo_access_ucl = {
         attach: function (context, settings) {
             $(document).ready(function() {
                 // Initialise the widget.
