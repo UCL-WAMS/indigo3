@@ -3565,20 +3565,48 @@ body[class*=site-bartlett] .btn-cta__icon__svg {
 UNDERGRADUATE
 ---------------------------*/
 .node-type-undergraduate-programme-page .prog-modules .tabs--active-grey .tabs__content {
-  background: #F5F5F5; }
+  background: #f5f5f5; }
 
-.node-type-undergraduate-programme-page div.dropdown {
+.node-type-undergraduate-programme-page div.dropdown,
+.node-type-undergraduate-programme-page #ucl-programmes-international-equivalencies-form {
   margin-bottom: 1.5rem; }
-  .node-type-undergraduate-programme-page div.dropdown select {
+  .node-type-undergraduate-programme-page div.dropdown select,
+  .node-type-undergraduate-programme-page #ucl-programmes-international-equivalencies-form select {
     outline: none;
     border: #adadad solid 1px;
     background-image: none;
     background: #ffffff url("/indigo3/images/chevron-down.svg") no-repeat right 3% top 50%;
-    padding: 12px 20px;
+    padding: 0.75rem 1.25rem;
     font-size: 1.2rem;
     color: #333333;
     width: 100%;
     appearance: none; }
+
+.node-type-undergraduate-programme-page #ucl-programmes-international-equivalencies-form label {
+  margin-bottom: 1.5rem; }
+
+.node-type-undergraduate-programme-page .prog-requirements .tab-container dd {
+  padding: 0;
+  margin: 0; }
+
+.node-type-undergraduate-programme-page .prog-requirements .tab-container dt {
+  font-weight: bold;
+  margin-top: 0.5rem; }
+
+.node-type-undergraduate-programme-page .prog-requirements .tab-container h4 {
+  padding-left: 1rem;
+  font-size: 1.4rem; }
+
+.node-type-undergraduate-programme-page #course-overview .feature-list {
+  padding-top: 1.5rem; }
+  .node-type-undergraduate-programme-page #course-overview .feature-list h4 {
+    line-height: 1.2; }
+  .node-type-undergraduate-programme-page #course-overview .feature-list div {
+    clear: both; }
+
+.node-type-undergraduate-programme-page .prog-next .six-by-six__left,
+.node-type-undergraduate-programme-page .prog-next .six-by-six__right {
+  padding-bottom: 0; }
 
 /*--------------------------
 TEACHER TRAINING
