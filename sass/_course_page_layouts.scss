@@ -249,27 +249,69 @@ UNDERGRADUATE
 .node-type-undergraduate-programme-page {
 .prog-modules .tabs--active-grey {
 	.tabs__content {
-		background: #F5F5F5;
+		background: $backgroundlightgray;
 		}
 	}
 }
 
 .node-type-undergraduate-programme-page {
-	div.dropdown { 
+	
+	div.dropdown, 
+	#ucl-programmes-international-equivalencies-form { 
 		margin-bottom: 1.5rem;
 		select{ 
 			outline: none;
-  			border: #adadad solid 1px;
+  			border: $pxlinegraydark solid 1px;
   			background-image: none;
   		    background: #ffffff url("/indigo3/images/chevron-down.svg") no-repeat right 3% top 50%;
-  			padding: 12px 20px;
+  			padding: 0.75rem 1.25rem;
   			font-size: 1.2rem;
-  			color: #333333;
+  			color: $darkgray;
   			width: 100%;
   			appearance: none;
   			}
 		}
+
+	 #ucl-programmes-international-equivalencies-form label {
+	 	margin-bottom: 1.5rem;
+	 	}
+
+	 .prog-requirements .tab-container{
+		dd {
+		 	padding: 0;
+		 	margin: 0; 
+		 	}
+		dt {
+		 	font-weight: bold; 
+		 	margin-top: 0.5rem; 
+		 	}
+		h4 {
+		 	padding-left: 1rem; 
+		 	font-size: 1.4rem;
+		 	}
+		}
+		#course-overview {
+			.feature-list {
+				padding-top: 1.5rem;
+				h4 {
+					line-height: 1.2;
+					}
+				div {
+					clear: both;
+					}
+			}
+		}
+	.prog-next {
+		.six-by-six__left, 
+		.six-by-six__right {
+			padding-bottom: 0;
+			}
+
 	}
+	
+	}
+
+
 
 /*--------------------------
 TEACHER TRAINING
@@ -736,7 +778,7 @@ IN PAGE NAV MENU
 
 
 
-	
+
 
 
 
