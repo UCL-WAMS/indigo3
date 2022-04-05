@@ -252,3 +252,33 @@
 }
 
 
+// UG YEAR SWITCHER DROPDOWN
+
+#undergraduate-degrees .tabs__content .course-search-box {
+  margin-bottom: 0.5rem;
+  }
+
+.form-item-ucl-programme-search-year {
+  padding-top: 1.2rem; 
+  clear: both;
+  &.form-item {
+    margin-bottom: 0;
+    }
+  select{ 
+    outline: none;
+    border:  $utilityblue solid 1px;
+    background: $utilityblue url("/indigo3/images/chevron-down-white.svg") no-repeat right 10px top 50%;
+    padding:  0.625em 3rem 0.625em .8rem;
+    font-size: 1.2rem;
+    color: #fff;
+    width: auto;
+    appearance: none;
+    }
+  label {
+    padding-bottom: 0.8rem; 
+    color: $utilityblue;
+    }
+  .description {
+    display: none;
+    }
+}
