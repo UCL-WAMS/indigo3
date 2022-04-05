@@ -4152,6 +4152,26 @@ ol.alpha-list {
       background: unset;
       border: 3px solid #0D68CF; } }
 
+.form-item-ucl-programme-search-year {
+  padding-top: 1.2rem;
+  clear: both; }
+  .form-item-ucl-programme-search-year.form-item {
+    margin-bottom: 0; }
+  .form-item-ucl-programme-search-year select {
+    outline: none;
+    border: #0D68CF solid 1px;
+    background: #0D68CF url("/indigo3/images/chevron-down-white.svg") no-repeat right 10px top 50%;
+    padding: 0.625em 3rem 0.625em .8rem;
+    font-size: 1.2rem;
+    color: #fff;
+    width: auto;
+    appearance: none; }
+  .form-item-ucl-programme-search-year label {
+    padding-bottom: 0.8rem;
+    color: #0D68CF; }
+  .form-item-ucl-programme-search-year .description {
+    display: none; }
+
 /*-------------------------------------------------------------------
 
 // PATTERNS TO BE DEFINED AS GENERIC TYPES AND MOVED TO OWN PARTIALS
