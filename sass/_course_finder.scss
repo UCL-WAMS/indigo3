@@ -38,7 +38,7 @@
     float:left;
     margin-bottom: 0.5rem;
     margin-top: 0.5rem;
-    width: 70%;
+    width: 65%;
   }
   .search-filter__svg-dt {
     float: right;
@@ -280,5 +280,22 @@
     }
   .description {
     display: none;
+    }
+}
+
+
+// HIDE SEARCH AND BROWSE BY TABS.
+
+ #undergraduate-degrees.site-prospective-students-undergraduate-redesign, 
+ #undergraduate-degrees.site-prospective-students-undergraduate {
+ 
+  .tabs__navigation {
+    display: none;
+    }
+  .tabs__content .tab-content {
+    padding: 0;
+    }
+  .search-filter {
+    margin-top: 1.5em;  
     }
 }
