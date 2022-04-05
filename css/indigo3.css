@@ -4152,6 +4152,9 @@ ol.alpha-list {
       background: unset;
       border: 3px solid #0D68CF; } }
 
+#undergraduate-degrees .tabs__content .course-search-box {
+  margin-bottom: 0.5rem; }
+
 .form-item-ucl-programme-search-year {
   padding-top: 1.2rem;
   clear: both; }
