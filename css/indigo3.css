@@ -3973,7 +3973,7 @@ html.js input.throbbing {
     float: left;
     margin-bottom: 0.5rem;
     margin-top: 0.5rem;
-    width: 70%; }
+    width: 65%; }
   .search-filter .search-filter__svg-dt {
     float: right;
     background: #0D68CF;
@@ -4174,6 +4174,18 @@ ol.alpha-list {
     color: #0D68CF; }
   .form-item-ucl-programme-search-year .description {
     display: none; }
+
+#undergraduate-degrees.site-prospective-students-undergraduate-redesign .tabs__navigation,
+#undergraduate-degrees.site-prospective-students-undergraduate .tabs__navigation {
+  display: none; }
+
+#undergraduate-degrees.site-prospective-students-undergraduate-redesign .tabs__content .tab-content,
+#undergraduate-degrees.site-prospective-students-undergraduate .tabs__content .tab-content {
+  padding: 0; }
+
+#undergraduate-degrees.site-prospective-students-undergraduate-redesign .search-filter,
+#undergraduate-degrees.site-prospective-students-undergraduate .search-filter {
+  margin-top: 1.5em; }
 
 /*-------------------------------------------------------------------
 
