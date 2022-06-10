@@ -13,7 +13,7 @@ $(document).ready(function () {
 		var minLevel = $(this).attr("data-level");
 		var year = $(this).attr("data-year");
 		var fetchUrlRoot = (location.href.indexOf("micro.ucl.ac.uk") > -1?"":"/digital-presence-services");
-		var fetchUrl = fetchUrlRoot + "/prospectus/0.4/json/international-equivalencies.php";
+		var fetchUrl = fetchUrlRoot + "/prospectus/1.2/json/international-equivalencies.php";
 		var params = "countryISO=" + country + "&year=" + year + "&courseType=" + courseType;
 		if (country == 'default') {
 			$('.equiv-content').html('');
@@ -33,7 +33,7 @@ $(document).ready(function () {
 							"2:1":"secondHigher",
 							"2:2":"secondLower"
 						}
-						var html = "<h4>Equivalent qualifications for " + json["country"] + "</h4>";
+						var html = "<h4>Equivalent qualifications for " + json["country"].replace(/\&amp;/g, 'and').replace(/\&/g, 'and') + "</h4>";
 						if (json[levels[minLevel]]) {
 							html += "<div>" + json[levels[minLevel]] + "</div>";
 							if (typeof json["otherQuals"] != "undefined" && json["otherQuals"]) {
@@ -52,9 +52,11 @@ $(document).ready(function () {
 	});
 	// UK equivalencies select event handling.
 	// This may no longer be required??
-	$(".dropdown_uk_qualifications").on("change", function(){
+	$(".dropdown_uk_qualifications").on("change", function() {
 		$(".alt-qualifications__hidden").css("display","None");
-		if ($(this).val())
+		if ($(this).val()) {
+		    $("#info-heading-xx").fadeIn();
 			$("#info-" + $(this).val()).fadeIn();
+		}
 	});
 });
