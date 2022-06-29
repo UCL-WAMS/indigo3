@@ -3741,66 +3741,85 @@ TEACHER TRAINING
 /*------------------------------------
 IN PAGE NAV MENU
 --------------------------------------*/
-.site-prospective-students-graduate .floating-menu-widget {
+.site-prospective-students-graduate .floating-menu-widget,
+.site-prospective-students-undergraduate-redesign .floating-menu-widget {
   background: #333333;
   color: #fff;
   padding: 1rem 0.8rem 0;
   width: 10.5rem;
   position: fixed;
   top: 10%; }
-  .site-prospective-students-graduate .floating-menu-widget .feather-menu {
+  .site-prospective-students-graduate .floating-menu-widget .feather-menu,
+  .site-prospective-students-undergraduate-redesign .floating-menu-widget .feather-menu {
     vertical-align: -7px;
     stroke: #ea7600;
     display: inline-block;
     margin-right: 0.7rem; }
-  .site-prospective-students-graduate .floating-menu-widget a {
+  .site-prospective-students-graduate .floating-menu-widget a,
+  .site-prospective-students-undergraduate-redesign .floating-menu-widget a {
     color: #d6d6d6;
     text-decoration: none; }
-    .site-prospective-students-graduate .floating-menu-widget a:hover {
+    .site-prospective-students-graduate .floating-menu-widget a:hover,
+    .site-prospective-students-undergraduate-redesign .floating-menu-widget a:hover {
       text-decoration: underline; }
-  .site-prospective-students-graduate .floating-menu-widget h3 {
+  .site-prospective-students-graduate .floating-menu-widget h3,
+  .site-prospective-students-undergraduate-redesign .floating-menu-widget h3 {
     display: inline-block;
     font-size: 0.9rem; }
-  .site-prospective-students-graduate .floating-menu-widget ul {
+  .site-prospective-students-graduate .floating-menu-widget ul,
+  .site-prospective-students-undergraduate-redesign .floating-menu-widget ul {
     padding-left: 0.1rem;
     margin-top: -0.5rem;
     list-style: none; }
-    .site-prospective-students-graduate .floating-menu-widget ul li {
+    .site-prospective-students-graduate .floating-menu-widget ul li,
+    .site-prospective-students-undergraduate-redesign .floating-menu-widget ul li {
       font-size: 0.8rem;
       line-height: 2;
       margin-bottom: 0; }
-      .site-prospective-students-graduate .floating-menu-widget ul li .active a {
+      .site-prospective-students-graduate .floating-menu-widget ul li .active a,
+      .site-prospective-students-undergraduate-redesign .floating-menu-widget ul li .active a {
         padding-left: 10px; }
-      .site-prospective-students-graduate .floating-menu-widget ul li.active::before {
+      .site-prospective-students-graduate .floating-menu-widget ul li.active::before,
+      .site-prospective-students-undergraduate-redesign .floating-menu-widget ul li.active::before {
         content: "\2023";
         color: #ea7600;
         margin-right: 7px; }
   @media (min-width: 768px) {
-    .site-prospective-students-graduate .floating-menu-widget {
+    .site-prospective-students-graduate .floating-menu-widget,
+    .site-prospective-students-undergraduate-redesign .floating-menu-widget {
       position: static;
       border-bottom: #00818F 1em solid;
       padding: 1.5rem 1rem 0;
       width: 13rem; }
-      .site-prospective-students-graduate .floating-menu-widget ul li {
+      .site-prospective-students-graduate .floating-menu-widget ul li,
+      .site-prospective-students-undergraduate-redesign .floating-menu-widget ul li {
         font-size: 1rem;
         line-height: 1.5; }
-        .site-prospective-students-graduate .floating-menu-widget ul li.active::before {
+        .site-prospective-students-graduate .floating-menu-widget ul li.active::before,
+        .site-prospective-students-undergraduate-redesign .floating-menu-widget ul li.active::before {
           font-size: 1.5rem; }
-      .site-prospective-students-graduate .floating-menu-widget h3 {
+      .site-prospective-students-graduate .floating-menu-widget h3,
+      .site-prospective-students-undergraduate-redesign .floating-menu-widget h3 {
         font: 1rem; } }
   @media (max-width: 767.98px) {
-    .site-prospective-students-graduate .floating-menu-widget {
+    .site-prospective-students-graduate .floating-menu-widget,
+    .site-prospective-students-undergraduate-redesign .floating-menu-widget {
       display: none !important; } }
   @media (min-width: 576px) and (max-width: 991.98px) {
-    .site-prospective-students-graduate .floating-menu-widget {
+    .site-prospective-students-graduate .floating-menu-widget,
+    .site-prospective-students-undergraduate-redesign .floating-menu-widget {
       right: 0;
       top: 170px; } }
-  .site-prospective-students-graduate .floating-menu-widget .hidden-menu-links.hide {
+  .site-prospective-students-graduate .floating-menu-widget .hidden-menu-links.hide,
+  .site-prospective-students-undergraduate-redesign .floating-menu-widget .hidden-menu-links.hide {
     display: none; }
 
-.site-prospective-students-graduate .feature-list {
+.site-prospective-students-graduate .feature-list,
+.site-prospective-students-undergraduate-redesign .feature-list {
   margin-top: 2em; }
-  .site-prospective-students-graduate .feature-list div, .site-prospective-students-graduate .feature-list p {
+  .site-prospective-students-graduate .feature-list div, .site-prospective-students-graduate .feature-list p,
+  .site-prospective-students-undergraduate-redesign .feature-list div,
+  .site-prospective-students-undergraduate-redesign .feature-list p {
     clear: both; }
 
 .floating-menu {
