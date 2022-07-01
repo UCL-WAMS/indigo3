@@ -778,7 +778,28 @@ IN PAGE NAV MENU
 }
 
 
+// PROGRAMME CHOICE PG ADD-ON JULY 22
 
+.site-prospective-students-graduate {
+	.background__grey.prog-choice .btn-cta__icon {
+		width: 100%;
+		 @include media-breakpoint-up(md) {
+		 	width: 35%;
+		 }
+	}
+	section.background__grey {
+		background: $backgroundlightgray; 
+		padding: 3rem;
+	}
+	.application-form__input {
+		font-size: 1.125rem;
+		line-height: 1.5;
+		margin-bottom: .3rem;
+		label {
+			display: inline;
+		}
+	}
+}
 
 
 

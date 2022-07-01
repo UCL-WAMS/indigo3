@@ -3964,6 +3964,23 @@ IN PAGE NAV MENU
 .node-hub-page .tab-container .accordion__title.active:last-of-type {
   margin-bottom: 0; }
 
+.site-prospective-students-graduate .background__grey.prog-choice .btn-cta__icon {
+  width: 100%; }
+  @media (min-width: 768px) {
+    .site-prospective-students-graduate .background__grey.prog-choice .btn-cta__icon {
+      width: 35%; } }
+
+.site-prospective-students-graduate section.background__grey {
+  background: #f5f5f5;
+  padding: 3rem; }
+
+.site-prospective-students-graduate .application-form__input {
+  font-size: 1.125rem;
+  line-height: 1.5;
+  margin-bottom: .3rem; }
+  .site-prospective-students-graduate .application-form__input label {
+    display: inline; }
+
 .course-finder {
   padding-top: .7rem; }
 
