@@ -167,6 +167,12 @@
 }
 }	
 
+.header__menu button {
+  			all: unset;
+  		    box-sizing: border-box;
+  		    display: flex;
+  		}
+
 
  body[class*=site-bartlett] {
 	.header__menu svg.feather.feather-menu.icon {

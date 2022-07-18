@@ -2954,6 +2954,10 @@ DROP SHADOW FOR CONTACT BOX
   .site-prospective-students-undergraduate-redesign .accordion .accordion__title span:after,
   .site-prospective-students-undergraduate .accordion .accordion__title span:after {
     color: #0D68CF; }
+  .site-prospective-students-graduate .accordion .accordion__title button:after,
+  .site-prospective-students-undergraduate-redesign .accordion .accordion__title button:after,
+  .site-prospective-students-undergraduate .accordion .accordion__title button:after {
+    color: #0D68CF; }
   .site-prospective-students-graduate .contact-panel .card-wrapper,
   .site-prospective-students-undergraduate-redesign .contact-panel .card-wrapper,
   .site-prospective-students-undergraduate .contact-panel .card-wrapper {
@@ -4292,8 +4296,7 @@ ol.alpha-list {
       margin-bottom: 0; } }
 
 @media (min-width: 768px) {
-  .six-by-six__right,
-  .six-by-six__left {
+  .six-by-six__right, .six-by-six__left {
     padding-bottom: 1.875rem; }
   .six-by-six__left {
     padding-right: 1rem; }
@@ -4745,6 +4748,11 @@ FOUR EQUAL COLUMNS SUB LAYOUT
         .header .header__menu p .header-menu__sm-text {
           text-transform: none; } }
 
+.header__menu button {
+  all: unset;
+  box-sizing: border-box;
+  display: flex; }
+
 body[class*=site-bartlett] .header__menu svg.feather.feather-menu.icon {
   stroke: #8ce2d0; }
 
@@ -4931,6 +4939,8 @@ HAMBURGER MENU POPUP
     margin-left: 1.25rem;
     margin-bottom: 1rem;
     cursor: pointer; }
+    .in-this-section-menu .menu__accordion__title button {
+      all: unset; }
   .in-this-section-menu .menu__accordion__title:before {
     content: "\02C5";
     position: absolute;
@@ -5770,7 +5780,8 @@ FIVE CARD LAYOUT
 @media (min-width: 768px) {
   .five-card-layout .five-card__left-top {
     padding: 0 1rem 1.875rem; }
-  .five-card-layout .six-by-six__left, .five-card-layout .six-by-six__right {
+  .five-card-layout .six-by-six__left,
+  .five-card-layout .six-by-six__right {
     position: relative;
     width: 100%;
     flex: 0 0 50%;
@@ -6121,6 +6132,25 @@ dl.accordion {
       font-weight: normal;
       padding-right: 1%; }
 
+.accordion .accordion__title button {
+  all: unset;
+  display: block;
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+  padding-right: 2.2rem; }
+  .accordion .accordion__title button:after {
+    content: "\02C5";
+    position: absolute;
+    right: 0;
+    font-size: 1.8rem;
+    top: -7px;
+    font-weight: normal;
+    padding-right: 1%; }
+
+.accordion .accordion__title.active button:after {
+  content: "\02C4"; }
+
 dd.accordion__description {
   margin-left: 0; }
   dd.accordion__description h2 {
@@ -6156,6 +6186,16 @@ body[class*=site-bartlett] .accordion .accordion__title span:after {
       .site-bartlett.node-type-hub-page .main-content .node-hub-page .four-by-four-by-four .accordion .accordion__title span:hover {
         text-decoration: underline; }
     .site-bartlett.node-type-hub-page .main-content .node-hub-page .four-by-four-by-four .accordion .accordion__title span::after {
+      color: black;
+      top: -3px;
+      font-size: 2.5rem; }
+    .site-bartlett.node-type-hub-page .main-content .node-hub-page .four-by-four-by-four .accordion .accordion__title button {
+      padding-left: 1rem;
+      border-left: #333333 5px solid;
+      margin-left: 1px; }
+      .site-bartlett.node-type-hub-page .main-content .node-hub-page .four-by-four-by-four .accordion .accordion__title button:hover {
+        text-decoration: underline; }
+    .site-bartlett.node-type-hub-page .main-content .node-hub-page .four-by-four-by-four .accordion .accordion__title button::after {
       color: black;
       top: -3px;
       font-size: 2.5rem; }
