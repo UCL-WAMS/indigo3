@@ -4752,6 +4752,8 @@ FOUR EQUAL COLUMNS SUB LAYOUT
   all: unset;
   box-sizing: border-box;
   display: flex; }
+  .header__menu button:focus-visible {
+    outline: 2px solid #0060df; }
 
 body[class*=site-bartlett] .header__menu svg.feather.feather-menu.icon {
   stroke: #8ce2d0; }
@@ -4941,6 +4943,8 @@ HAMBURGER MENU POPUP
     cursor: pointer; }
     .in-this-section-menu .menu__accordion__title button {
       all: unset; }
+      .in-this-section-menu .menu__accordion__title button:focus-visible {
+        outline: 2px solid #0060df; }
   .in-this-section-menu .menu__accordion__title:before {
     content: "\02C5";
     position: absolute;
@@ -6139,6 +6143,8 @@ dl.accordion {
   width: 100%;
   box-sizing: border-box;
   padding-right: 2.2rem; }
+  .accordion .accordion__title button:focus-visible {
+    outline: 2px solid #0060df; }
   .accordion .accordion__title button:after {
     content: "\02C5";
     position: absolute;
