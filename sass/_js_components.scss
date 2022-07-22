@@ -24,6 +24,7 @@ ACCORDION
 				content: "\02C4";
 				}
 			}
+		// OLD CODE REPLACED BY BUTTON VERSION REMOVE ALL REFS TO SPAN AFTER RELEASE.
 		span {
 			display:block;
 			position: relative;
@@ -40,6 +41,37 @@ ACCORDION
 			}
 		}
 	}
+
+// ACCESSIBLE ACCORDIONS REPLACE SPAN VERSION ABOVE.
+  .accordion {
+  	.accordion__title {
+  		button {
+  			all: unset;
+  			display:block;
+				position: relative;
+				width: 100%;
+				box-sizing: border-box;
+				padding-right:2.2rem;	
+				&:focus-visible{
+  		    	outline:2px solid #0060df;
+  		    	}			
+						&:after{ 
+						content: "\02C5";
+						position: absolute;
+						right: 0;
+						font-size: 1.8rem;
+						top: -7px;
+	 					font-weight: normal;
+	 					padding-right: 1%;
+						}	
+  		}
+  		&.active button:after {
+  			content: "\02C4";
+  			}
+  	} 
+  }
+
+
 dd.accordion__description  {
 		margin-left: 0; 
 		h2 {
@@ -93,8 +125,20 @@ body[class*=site-bartlett] {
 						top: -3px;
 						font-size: 2.5rem;
 						}
-					}
-					 
+						button {
+							padding-left: 1rem; 
+							border-left: #333333 5px solid;
+							margin-left: 1px;
+							&:hover {
+								text-decoration: underline;
+								}	
+							}
+						& button::after {
+						color: black;
+						top: -3px;
+						font-size: 2.5rem;
+						}
+					}					 
 				}
 				dd.accordion__description  {
 					&.active {

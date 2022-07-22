@@ -100,6 +100,12 @@ ul.menu__accordion  {
 	margin-left: 1.25rem;
 	margin-bottom: 1rem;
 	cursor: pointer;
+		button {
+			all: unset;
+			&:focus-visible{
+  		    	outline:2px solid #0060df;
+  		    	}	
+		}
 }
 
 .menu__accordion__title {

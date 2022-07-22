@@ -167,6 +167,15 @@
 }
 }	
 
+.header__menu button {
+  			all: unset;
+  		    box-sizing: border-box;
+  		    display: flex;
+  		    &:focus-visible{
+  		    	outline:2px solid #0060df;
+  		    	}	
+  		}
+
 
  body[class*=site-bartlett] {
 	.header__menu svg.feather.feather-menu.icon {
