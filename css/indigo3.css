@@ -6685,13 +6685,16 @@ FEED - LISTING - COURSE FINDER - SEARCH BOX
   background: #333333;
   color: #fff; }
 
+/*-----------------------------------------------------------
+DEDICATED LISTING PAGES CONTENT TYPES ie BARTLETT NEWS
+------------------------------------------------------*/
 .listing-results-container {
   padding: 0; }
 
 .listing-results-container.container {
   max-width: none; }
 
-.listings-page .main-content h2 {
+.node-type-feed-listing-page h2 {
   border-top: none;
   margin-top: 0;
   padding-top: 0; }
@@ -6719,16 +6722,15 @@ FEED - LISTING - COURSE FINDER - SEARCH BOX
       max-width: 33.3333333333%; } }
 
 .featured-story .featured-story__eyebrow {
-  text-transform: uppercase;
-  font-size: 1rem;
-  color: #5c5c5c;
-  margin-bottom: 0.5rem; }
+  display: none; }
 
 .featured-story h2 {
   margin-bottom: 1rem; }
-
-.featured-story .forward-link {
-  margin-top: 2rem; }
+  .featured-story h2 a {
+    color: inherit;
+    text-decoration: none; }
+    .featured-story h2 a:hover {
+      text-decoration: underline; }
 
 .featured-story img {
   max-height: 387px; }
@@ -6784,7 +6786,7 @@ FEED - LISTING - COURSE FINDER - SEARCH BOX
 
 .listing-result__text-content {
   margin-bottom: 2.1875rem;
-  padding-left: 32px; }
+  padding-left: 1.5625rem; }
   .listing-result__text-content h4 {
     margin-bottom: 0.3rem; }
   .listing-result__text-content .listing-meta {
@@ -6792,11 +6794,19 @@ FEED - LISTING - COURSE FINDER - SEARCH BOX
   .listing-result__text-content .listing-department {
     color: #5c5c5c;
     margin-bottom: 0.5rem; }
+  .listing-result__text-content a {
+    color: inherit;
+    text-decoration: none; }
+    .listing-result__text-content a:hover {
+      text-decoration: underline; }
 
 .listing-search-box {
-  margin-bottom: 50px; }
+  margin-bottom: 3.125rem; }
 
-/* ------------------------ INPAGE FEED -------------------- */
+/* ------------------------ 
+INPAGE FEED 
+FEED COMPONENT FOR ALL NON DECICATED FEED PAGE LAYOUTS
+------------------------- */
 .inpage-feed__left {
   position: relative;
   width: 100%;
@@ -6823,7 +6833,6 @@ FEED - LISTING - COURSE FINDER - SEARCH BOX
   max-width: 100%;
   padding: 0 16px; }
 
-/*----------------- INDIGO STYLING -----------------*/
 .inpage-feed {
   padding: 0;
   margin-bottom: 1.5rem;

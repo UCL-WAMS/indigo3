@@ -68,7 +68,9 @@ FEED - LISTING - COURSE FINDER - SEARCH BOX
   	 }
   }
 
-// THEMES COLOURS AND SPACING ETC FOR DEDICATED LISTING PAGES.
+/*-----------------------------------------------------------
+DEDICATED LISTING PAGES CONTENT TYPES ie BARTLETT NEWS
+------------------------------------------------------*/
 
 // LISTING CORE LAYOUT
 
@@ -80,7 +82,7 @@ FEED - LISTING - COURSE FINDER - SEARCH BOX
 	max-width: none;
 	}
 
-.listings-page .main-content h2 {
+.node-type-feed-listing-page h2 {
 	border-top:none; 
 	margin-top: 0; 
 	padding-top: 0;
@@ -111,18 +113,24 @@ FEED - LISTING - COURSE FINDER - SEARCH BOX
 
 .featured-story {
 	.featured-story__eyebrow {
-		text-transform: uppercase;
-		font-size: 1rem;
-		color: #5c5c5c;
-		margin-bottom: 0.5rem;
-		}
+		display: none;
+	}
+
 	h2 {
 		margin-bottom: 1rem;
+		a {
+			color: inherit;
+			text-decoration: none;
+			&:hover {
+				text-decoration: underline
+			}
 		}
-	.forward-link {
-		margin-top: 2rem;
 	}
-	img {max-height:387px;}
+	img {
+		max-height: 387px;
+	}
+	// MAY NOT BE NEEDED NEW IMAGE TYPE NEEDS TO BE SET UP IN DRUPAL.  
+	// MAY NEED TO ADD NEW CODE FOR THIS LS 4.8
 }
 
 
@@ -133,19 +141,17 @@ FEED - LISTING - COURSE FINDER - SEARCH BOX
 		.card__icon{
 			background: #000000;
 			svg {
-				stroke : #ffffff;
+				stroke: #ffffff;
 				}			
 			}
 		h3 a {
 			color: #333333;
 			 	&:hover {
-				color:	#333333;
+				color: #333333;
 				}
 			}
 	}
 }
-
-
 
 
 .listings-search-filter {
@@ -193,10 +199,9 @@ FEED - LISTING - COURSE FINDER - SEARCH BOX
 
 
 
-
 .listing-result__text-content {
 	margin-bottom: 2.1875rem;
-	padding-left: 32px ;
+	padding-left: 1.5625rem ;
 
 	h4 {
 		margin-bottom: 0.3rem;
@@ -208,18 +213,48 @@ FEED - LISTING - COURSE FINDER - SEARCH BOX
 		color: #5c5c5c; 
 		margin-bottom: 0.5rem;
 		}
+		a {
+			color: inherit;
+			text-decoration: none;
+			&:hover {
+				text-decoration: underline
+			}
+		}
 	}
 
 .listing-search-box {
-	margin-bottom: 50px;
+	margin-bottom: 3.125rem;
 	}
 
+// // BARTLETT FEED LISTING PAGE 
+//!! THIS CHANGES LAYOUT TO SINGLE COLUMN LAYOUT ON DEV WITH CURRENT HTML LS 4/8
+// SHOULD NOT BE NEEDED ONCE GIDEON UPDATES CONTENT TYPE.
 
+// .node-type-feed-listing-page
+// .content-columns .left-column {
+// 	flex: 0 0 100%;
+// 	max-width: 100%;
+// 	padding-left: 0;
+//  .main-content {
+// 	padding: 0 16px;
+// 		width:100%;
+// 		@include media-breakpoint-up(md){
+// 			padding-left: 0;
+// 			padding-right: 0;
+// 		.main-content {			
+// 			flex: 0 0 75%;
+// 			max-width: 75%;
+// 			padding-left: 0;
+// 			padding-right: 9.29%;  
+// 			} 
+// 		}
+// 	}
+// }
 
-
-// .listings-search-filter .search-filter__svg-dt {padding: 0.9rem;}
-
-/* ------------------------ INPAGE FEED -------------------- */
+/* ------------------------ 
+INPAGE FEED 
+FEED COMPONENT FOR ALL NON DECICATED FEED PAGE LAYOUTS
+------------------------- */
 
 // BOOTSTRAP AND FLEX LAYOUT ELEMENTS
 
@@ -276,7 +311,7 @@ FEED - LISTING - COURSE FINDER - SEARCH BOX
 
 
 
-/*----------------- INDIGO STYLING -----------------*/
+// VISUAL NON LAYOUT INDIGO STYLING FOR FEED IE FONTS ETC.
 
 .inpage-feed {		
 		padding: 0;
@@ -377,5 +412,4 @@ FEED - LISTING - COURSE FINDER - SEARCH BOX
 .inpage-feed-content {
 	border-left: 0;
 	}
-
 }
