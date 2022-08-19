@@ -1,0 +1,103 @@
+//COLOUR THEME TEN
+.ucl-colour-theme--10,
+body[class*=site-bartlett] {
+
+ 	.paragraphs-item-card-link  {
+ 		background: $blueCeleste;
+ 		 color: $midPurple; 
+ 	}
+	// COLOUR PICKER CLASSES
+
+
+	.ucl-pik-colours--1 {
+		 background: $darkPurple;
+		 color: $brightBlue; 
+	}
+	.ucl-pik-colours--2 {
+		 background: $midPurple;
+		 color: $brightBlue; 
+	}
+	.ucl-pik-colours--3 {
+		 background: $brightBlue;
+		 color: $darkPurple; 
+	}
+	.ucl-pik-colours--4 {
+		 background: $blueCeleste;
+		 color: $midPurple; 		
+	}
+	.ucl-pik-colours--5 { 
+		background: $darkPurple;
+		color: $blueCeleste;
+	}
+	.ucl-pik-colours--6 {
+		 background: $midPurple;
+		 color: $blueCeleste;		
+	}
+	.ucl-pik-colours--7 {
+		 background: $brightBlue;
+		 color: $midPurple; 		
+	}
+
+
+
+// PAGE THEME CLASSES
+
+	&.ucl-pg-colours--1 {
+		.hero-content,
+		.paragraphs-item-boxout { 
+		 background: $darkPurple;
+		 color: $brightBlue; 
+		}
+
+	}
+	&.ucl-pg-colours--2 {
+		.hero-content,
+		.paragraphs-item-boxout { 
+		 background: $midPurple;
+		 color: $brightBlue; 
+		}
+	}
+	&.ucl-pg-colours--3 {
+		.hero-content,
+		.paragraphs-item-boxout { 
+		 background: $brightBlue;
+		 color: $darkPurple; 
+		}
+	}
+	&.ucl-pg-colours--4 {
+		.hero-content,
+		.paragraphs-item-boxout { 
+		 background: $blueCeleste;
+		 color: $midPurple; 
+		 }		
+	}
+	&.ucl-pg-colours--5 { 
+		.hero-content,
+		.paragraphs-item-boxout { 
+		background: $darkPurple;
+		color: $blueCeleste;
+		}
+	}
+	&.ucl-pg-colours--6 {
+		.hero-content,
+		.paragraphs-item-boxout { 
+		 background: $midPurple;
+		 color: $blueCeleste;
+		 }		
+	}
+	&.ucl-pg-colours--7 {
+		.hero-content,
+		.paragraphs-item-boxout { 
+		 background: $brightBlue;
+		 color: $midPurple; 
+		 }		
+	}
+
+
+}
+
+
+
+
+
+
