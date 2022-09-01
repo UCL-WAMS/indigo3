@@ -186,7 +186,7 @@
                 });
 
                 var eligibilityData = {};
-                var get_url = (location.href.indexOf("micro.ucl.ac.uk") > -1?"http://micro.ucl.ac.uk/access-ucl/www/eligibility-2022.php":(location.href.indexOf("wwwapps-uat.ucl.ac.uk") > -1?"https://wwwapps-uat.ucl.ac.uk/digital-presence-services/access-ucl/www/eligibility-2022.php":"https://www.ucl.ac.uk/digital-presence-services/access-ucl/www/eligibility-2022.php"));
+                var get_url = (location.href.indexOf("local-micro.lndo.site") > -1?"https://local-micro.lndo.site/access-ucl/www/eligibility-2023.php":(location.href.indexOf("wwwapps-uat.ucl.ac.uk") > -1?"https://wwwapps-uat.ucl.ac.uk/digital-presence-services/access-ucl/www/eligibility-2023.php":"https://www.ucl.ac.uk/digital-presence-services/access-ucl/www/eligibility-2023.php"));
                 $("body").on("keyup", ".selector-widget", function() {
                     var schooltype_postcode = $(this).attr("name").replace(/-/g,"_");
                     var parts = schooltype_postcode.split("_");
@@ -200,7 +200,7 @@
                          // The list will appear as they type, allowing the user to select their school by name.
                         eligibilityData[schooltype_postcode] = school_postcode;
                         $.get(get_url, eligibilityData, function(data) {
-                            html = "";
+                            var html = "";
                             if (data) {
                                 for (var i = 0; i < data.length; i++) {
                                     html += "<div class='myoption'><span class='schoolname'>" + data[i]["school_name"] + "</span> (<span class='school-postcode'>" + data[i]["postcode"] + "</span>)</div>";
@@ -282,21 +282,21 @@
                                             messages.acorn = "Your postcode Acorn score is not relevant as you attended an Independent school for A-level."
                                         } else {
                                             messages.school = "Your A-Level school is an eligible school.";
-                                            if (data["polar_4_quintile"] === "" || data["polar_4_quintile"] === 0 || data["polar_4_quintile"] == "0") {
+                                            if (data["polar_4_quintile"] === null || data["polar_4_quintile"] === "" || data["polar_4_quintile"] === 0 || data["polar_4_quintile"] == "0" || data["polar_4_quintile"] == "NULL") {
                                                 indeterminate = true;
                                                 messages.polar = "Your postcode is not available in our POLAR 4 database.";
                                             } else if (data["polar_4_quintile"] !== "" && data["polar_4_quintile"] != "0" && data["polar_4_quintile"] > 0 && data["polar_4_quintile"] < 2) {
                                                 pass = true;
                                                 messages.polar = "Your postcode is POLAR eligible.";
                                             }
-                                            if (data["imd_decile"] === "" || data["imd_decile"] === 0 || data["imd_decile"] == "0") {
+                                            if (data["imd_decile"] === null || data["imd_decile"] === "" || data["imd_decile"] === 0 || data["imd_decile"] == "0" || data["imd_decile"] == "NULL") {
                                                 indeterminate = true;
                                                 messages.imd = "Your postcode is not available in our IMD database.";
                                             } else if (data["imd_decile"] !== "" && data["imd_decile"] != "0" && data["imd_decile"] > 0 && data["imd_decile"] < 3) {
                                                 pass = true;
                                                 messages.imd = "Your postcode is IMD eligible.";
                                             }
-                                            if (data["acorn_group"] === "" || data["acorn_group"] === 0 || data["acorn_group"] == "0") {
+                                            if (data["acorn_group"] === null || data["acorn_group"] === "" || data["acorn_group"] === 0 || data["acorn_group"] == "0" || data["acorn_group"] == "NULL") {
                                                 indeterminate = true;
                                                 messages.acorn = "Your postcode is not available in our Acorn database.";
                                             } else if (data["acorn_group"] !== "" && data["acorn_group"] != "0" && acorns.includes(data["acorn_group"])) {
@@ -492,7 +492,7 @@ var widget = '<p>Enter your details below to check your eligibility for Access U
                       </ul>\
                       <p>As you meet at least one of the three home postcode criteria, and attended a state school, you are eligible for Access UCL.</p>\
                   </div>\
-                  <p>Based on the information you\'ve provided, if your application to UCL is successful, you will receive an Access UCL offer.’</p>\
+                  <p>Based on the information you\'ve provided, if your application to UCL is successful, you will receive an Access UCL offer.</p>\
                   <p id="time-in-care" class="hiddenField">Please ensure you tick the \'time in care\' box on your UCAS application.</p>\
               </div>\
           </div>\
