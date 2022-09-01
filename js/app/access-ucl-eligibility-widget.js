@@ -262,7 +262,6 @@
                                 var indeterminate = false;
                                 const acorns = ["L","M","O","P","Q"];
                                 if (data) {
-                                    console.log(data);
                                     if (data["polar_4_quintile"] == 6 && data["imd_decile"] == 11) {
                                         // The home postcode is in neither IMD nor POLAR data tables.
                                         // 6 and 11 are illegal values set deliberately if there is no match.
