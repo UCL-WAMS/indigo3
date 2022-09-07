@@ -4296,7 +4296,8 @@ ol.alpha-list {
       margin-bottom: 0; } }
 
 @media (min-width: 768px) {
-  .six-by-six__right, .six-by-six__left {
+  .six-by-six__right,
+  .six-by-six__left {
     padding-bottom: 1.875rem; }
   .six-by-six__left {
     padding-right: 1rem; }
@@ -5784,8 +5785,7 @@ FIVE CARD LAYOUT
 @media (min-width: 768px) {
   .five-card-layout .five-card__left-top {
     padding: 0 1rem 1.875rem; }
-  .five-card-layout .six-by-six__left,
-  .five-card-layout .six-by-six__right {
+  .five-card-layout .six-by-six__left, .five-card-layout .six-by-six__right {
     position: relative;
     width: 100%;
     flex: 0 0 50%;
@@ -7082,11 +7082,11 @@ CRM Form embed
   color: #003CA8
 }
 
-.paragraphs-item-msd-form-embed button:hover{
+.paragraphs-item-msd-form-embed button:hover {
   cursor: pointer
 }
 
-.lp-radioButton label{
+.lp-radioButton label {
   font-weight:400;
 }
 
@@ -7094,15 +7094,15 @@ CRM Form embed
   margin-top: 16px
 }
 
-#lookup-popup-ul-0{
+#lookup-popup-ul-0 {
   padding-left: 0;
 }
 
-.paragraphs-item-msd-form-embed input[type=date]{
+.paragraphs-item-msd-form-embed input[type=date] {
   font-family: Arial;
 }
 
-#ms_captcha_holder{
+#ms_captcha_holder {
   margin: 10px 0;
 }
 
