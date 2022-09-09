@@ -6028,6 +6028,29 @@ CRM Form embed
 .paragraphs-item-msd-form-embed button:hover {
   cursor: pointer; }
 
+#nextBtn {
+  background: #0055F0;
+  width: 148px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 16px;
+  border: 1px solid;
+  height: 51px; }
+
+#exitwithoutsaving, #prevBtn {
+  background: #Ffffff;
+  font-family: Arial;
+  color: #0055F0;
+  font-size: 16px;
+  border: 1px solid;
+  height: 51px; }
+
+#nextBtn:hover {
+  background: #003CA8; }
+
+#exitwithoutsaving:hover, #prevBtn:hover {
+  color: #003CA8; }
+
 .lp-radioButton label {
   font-weight: 400; }
 
