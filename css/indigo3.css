@@ -6079,6 +6079,51 @@ div[data-form-block-id] .lookup-behavior {
 .paragraphs-item-msd-form-embed select:focus {
   border: 2px solid #0055F0; }
 
+label.lp-ellipsis {
+  font-family: Arial;
+  font-size: 0.85rem !important;
+  font-weight: 700; }
+
+.lp-radioButton label.lp-ellipsis {
+  font-weight: 400; }
+
+.lp-form-field span {
+  font-family: Arial;
+  font-size: 0.75rem; }
+
+input:not(:focus):not(:placeholder-shown):invalid,
+select:not(:focus):not(:placeholder-shown):invalid,
+textarea:not(:focus):not(:placeholder-shown):invalid {
+  border-color: 1px solid #CA0007; }
+
+.error {
+  font-size: 0.75rem;
+  font-weight: 400; }
+
+input.lp-form-fieldInput.error[type=email] {
+  color: inherit;
+  font-size: 0.83rem; }
+
+.paragraphs-item-msd-form-embed button[type=submit]:disabled,
+#nextBtn:disabled {
+  background: #EBEBEB;
+  color: #5C5C5C;
+  opacity: 0.3;
+  pointer-events: none; }
+
+.lp-form-field label.lp-ellipsis {
+  display: inline; }
+
+div[data-form-block-id] .lookup-behavior, select.lp-form-fieldInput {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%0A%3Csvg width='50' height='50' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%0A%3E%3Cpath d='M6.34317 7.75732L4.92896 9.17154L12 16.2426L19.0711 9.17157L17.6569 7.75735L12 13.4142L6.34317 7.75732Z' fill='%230055F0' /%3E%3C/svg%3E");
+  background-repeat: no-repeat, repeat;
+  background-position: right .9em top 50%, 0 0;
+  background-size: 1.3em auto, 100%;
+  cursor: pointer; }
+
 /*-------------------------
 SECTION BACKGROUNDS
 -------------------------- */
