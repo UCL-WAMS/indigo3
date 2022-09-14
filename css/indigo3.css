@@ -6109,7 +6109,7 @@ textarea:not(:focus):not(:placeholder-shown):invalid {
 
 input.lp-form-fieldInput.error[type=email] {
   color: inherit;
-  font-size: inherit; }
+  font-size: 14px; }
 
 .paragraphs-item-msd-form-embed button[type=submit]:disabled,
 #nextBtn:disabled {
@@ -6171,6 +6171,41 @@ dialog div p.lp-ellipsis {
   height: 51px;
   width: max-content;
   padding: 0 20px; }
+
+form div {
+  padding-left: 0 !important; }
+
+input, textarea {
+  font-family: Arial;
+  font-size: 14px; }
+
+input[type="date"]::-webkit-clear-button {
+  -webkit-appearance: none;
+  display: none; }
+
+.paragraphs-item-msd-form-embed button[type="submit"], #exitwithoutsaving, #nextBtn, #prevBtn {
+  width: auto; }
+
+.columnContainer p span.header {
+  background: none;
+  font-size: 24px !important;
+  font-weight: 700;
+  font-family: Arial; }
+
+#errorList {
+  list-style: none;
+  padding: 0; }
+
+#nonMandatoryFields {
+  padding: 0; }
+
+.lp-ellipsis {
+  font-family: Arial;
+  font-size: 16px; }
+
+.lp-form-fieldInput {
+  font-family: Arial;
+  font-size: 16px; }
 
 /*-------------------------
 SECTION BACKGROUNDS
