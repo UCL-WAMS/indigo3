@@ -1391,13 +1391,13 @@ form div {
 	border: 1px solid #ADADAD;
 }
 
-.paragraphs-item-msd-form-embed input:focus,  ,
-.paragraphs-item-msd-form-embed textarea:focus {
-	border: 1.5px solid #0055F0;
+.paragraphs-item-msd-form-embed input:focus-visible,  ,
+.paragraphs-item-msd-form-embed textarea:focus-visible {
+	outline: 1.5px solid #0055F0;
 }
 
-.paragraphs-item-msd-form-embed select:focus {
-	border: 3px solid #0055F0;
+.paragraphs-item-msd-form-embed select:focus-visible {
+	outline: 3px solid #0055F0;
 }
 
 // Placeholder and input text
@@ -1406,7 +1406,7 @@ input, textarea, select,
 input.lp-form-fieldInput.error[type=email],
 .paragraphs-item-msd-form-embed input[type=date],
 a #website {
-	font-size: 1rem;
+	font-size: 1rem !important;
 	color: inherit;
 }
 
@@ -1466,12 +1466,16 @@ dialog div p.lp-ellipsis {
 	width: 50%;
 	box-shadow: 0 0 16px rgba(0, 0, 0, 0.12);
 }
+dialog#confirmCloseDialog {
+	border: none;
+}
+
 
 // Buttons
 .paragraphs-item-msd-form-embed button[type="submit"],
 .onFormSubmittedFeedbackButton,
 .onFormSubmittedFeedbackButtonSuccess,
-#nextBtn {
+#nextBtn, #confirmClose {
 	background: #0055F0;
 	color: #ffffff;
 	font-size: 1rem;
@@ -1503,7 +1507,7 @@ dialog div p.lp-ellipsis {
 }
 
 .paragraphs-item-msd-form-embed button[type=reset],
-#exitwithoutsaving, #prevBtn, #CloseGuide {
+#exitwithoutsaving, #prevBtn, #CloseGuide, #cancelClose {
 	background: #ffffff;
 	color: #0055F0;
 	font-size: 1rem;
@@ -1514,13 +1518,14 @@ dialog div p.lp-ellipsis {
 }
 
 .paragraphs-item-msd-form-embed button[type=submit]:hover,
-#nextBtn:hover {
+#nextBtn:hover, #confirmClose:hover {
 	background: #003CA8;
 	cursor: pointer;
 }
 
 .paragraphs-item-msd-form-embed button[type=reset]:hover,
-#exitwithoutsaving:hover, #prevBtn:hover, #CloseGuide:hover {
+#exitwithoutsaving:hover, #prevBtn:hover, #CloseGuide:hover,
+#cancelClose:hover {
 	color: #003CA8;
 	cursor: pointer;
 }
