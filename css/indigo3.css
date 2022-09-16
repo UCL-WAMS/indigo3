@@ -5994,7 +5994,7 @@ FORMS
 /*---------------------------
 CRM Form embed
 --------------------------*/
-body, .columnContainer p, .lp-ellipsis, .lp-form-fieldInput {
+body, .columnContainer p, .lp-ellipsis, .lp-form-fieldInput, span {
   font-family: "Helvetica Neue",Helvetica, Arial,"Lucida Grande",sans-serif !important; }
 
 .paragraphs-item-msd-form-embed form [data-layout="true"] {
@@ -6013,23 +6013,18 @@ form div {
   background: #ffffff;
   border: 1px solid #ADADAD; }
 
-.paragraphs-item-msd-form-embed.lp-form-field select.lp-form-fieldInput:active,
-.paragraphs-item-msd-form-embed.lp-form-field select.lp-form-fieldInput:focus-within,
-.paragraphs-item-msd-form-embed input:active,
-.paragraphs-item-msd-form-embed input:focus-within,
-.paragraphs-item-msd-form-embed textarea:active,
-.paragraphs-item-msd-form-embed textarea:focus-within {
-  border: 2px solid #0055F0;
-  box-sizing: border-box !important; }
+.paragraphs-item-msd-form-embed input:focus,
+.paragraphs-item-msd-form-embed textarea:focus {
+  border: 1.5px solid #0055F0; }
 
-.paragraphs-item-msd-form-embed input,
-.paragraphs-item-msd-form-embed select {
-  box-sizing: border-box !important; }
+.paragraphs-item-msd-form-embed select:focus {
+  border: 3px solid #0055F0; }
 
 ::placeholder,
 input, textarea, select,
 input.lp-form-fieldInput.error[type=email],
-.paragraphs-item-msd-form-embed input[type=date] {
+.paragraphs-item-msd-form-embed input[type=date],
+a #website {
   font-size: 1rem;
   color: inherit; }
 
@@ -6050,6 +6045,9 @@ div[data-form-block-id] .lookup-behavior, select.lp-form-fieldInput {
 #lookup-popup-ul-0, #errorList {
   list-style: none;
   padding: 0; }
+
+#nonMandatoryFields {
+  padding-left: 0; }
 
 .columnContainer p span.header, p span strong {
   background: none;
