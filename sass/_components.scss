@@ -1481,10 +1481,15 @@ CRM Form embed
 		border: none;
 	}
 
+	dialog#confirmSubmit {
+		border: none;
+	}
+
 	// Buttons
 	button[type="submit"],
 	div[data-form-block-id]
 	.onFormSubmittedFeedbackButton.onFormSubmittedFeedbackButtonSuccess,
+	dialog#confirmSubmit button#confirm,
 	#nextBtn, #confirmClose {
 		background: #0055F0;
 		color: #ffffff;

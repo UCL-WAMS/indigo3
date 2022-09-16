@@ -6082,8 +6082,12 @@ CRM Form embed
 .paragraphs-item-msd-form-embed dialog#confirmCloseDialog {
   border: none; }
 
+.paragraphs-item-msd-form-embed dialog#confirmSubmit {
+  border: none; }
+
 .paragraphs-item-msd-form-embed button[type="submit"],
 .paragraphs-item-msd-form-embed div[data-form-block-id] .onFormSubmittedFeedbackButton.onFormSubmittedFeedbackButtonSuccess,
+.paragraphs-item-msd-form-embed dialog#confirmSubmit button#confirm,
 .paragraphs-item-msd-form-embed #nextBtn, .paragraphs-item-msd-form-embed #confirmClose {
   background: #0055F0;
   color: #ffffff;
