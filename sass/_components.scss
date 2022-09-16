@@ -1393,11 +1393,11 @@ form div {
 
 .paragraphs-item-msd-form-embed input:focus-visible,  ,
 .paragraphs-item-msd-form-embed textarea:focus-visible {
-	outline: 1.5px solid #0055F0;
+	outline: 2px solid #0055F0;
 }
 
 .paragraphs-item-msd-form-embed select:focus-visible {
-	outline: 3px solid #0055F0;
+	outline: 2px solid #0055F0;
 }
 
 // Placeholder and input text
@@ -1420,6 +1420,10 @@ div[data-form-block-id] .lookup-behavior, select.lp-form-fieldInput {
 	background-position: right .9em top 50%, 0 0;
 	background-size: 1.3em auto, 100%;
 	cursor: pointer
+}
+
+#ref_guide {
+	display: none;
 }
 
 // Error messages
