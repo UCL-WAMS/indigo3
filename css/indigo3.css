@@ -6014,10 +6014,9 @@ form div {
   border: 1px solid #ADADAD; }
 
 .paragraphs-item-msd-form-embed input:focus-visible,
+.paragraphs-item-msd-form-embed select:focus-visible,
+.paragraphs-item-msd-form-embed select:focus,
 .paragraphs-item-msd-form-embed textarea:focus-visible {
-  outline: 2px solid #0055F0; }
-
-.paragraphs-item-msd-form-embed select:focus-visible {
   outline: 2px solid #0055F0; }
 
 ::placeholder,
