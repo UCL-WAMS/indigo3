@@ -1479,7 +1479,7 @@ dialog#confirmCloseDialog {
 	background: #0055F0;
 	color: #ffffff;
 	font-size: 1rem;
-	border: 1px solid;
+	border: 1px solid #0055F0;
 	height: 51px;
 	border-radius: 1px;
 	width: auto;
@@ -1489,6 +1489,18 @@ dialog#confirmCloseDialog {
 .onFormSubmittedFeedbackButton,
 .onFormSubmittedFeedbackButtonSuccess{
 	padding: 16px;
+}
+
+#cancelClose, #confirmClose {
+	padding: 0 36px;
+}
+
+#cancelClose {
+	margin: 10px;
+}
+
+#confirmClose {
+	margin: 10px 0;
 }
 
 #submit_button:enabled {
@@ -1511,7 +1523,7 @@ dialog#confirmCloseDialog {
 	background: #ffffff;
 	color: #0055F0;
 	font-size: 1rem;
-	border: 1px solid;
+	border: 1px solid #0055F0;
 	height: 51px;
 	border-radius: 1px;
 	width:auto;
