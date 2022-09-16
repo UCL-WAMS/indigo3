@@ -1365,7 +1365,8 @@ width: 100%;
 CRM Form embed
 --------------------------*/
 .paragraphs-item-msd-form-embed {
-	.columnContainer p, .lp-ellipsis, .lp-form-fieldInput, span {
+	.columnContainer p, .lp-ellipsis, .lp-form-fieldInput, span,
+	.onFormSubmittedFeedbackMessage {
 		font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif !important;
 	}
 
@@ -1396,6 +1397,11 @@ CRM Form embed
 	select:focus,
 	textarea:focus-visible {
 		outline: 2px solid #0055F0;
+	}
+
+	#personal_dateils div.emptyContainer,
+	div.emptyContainer .columnContainer {
+		padding: 0 !important;
 	}
 
 	// Placeholder and input text
@@ -1452,10 +1458,6 @@ CRM Form embed
 		font-weight: 700;
 	}
 
-	.lp-form-field label.lp-ellipsis {
-		display: inline;
-	}
-
 	.columnContainer span.header {
 		border-bottom: none;
 	}
@@ -1481,8 +1483,8 @@ CRM Form embed
 
 	// Buttons
 	button[type="submit"],
-	.onFormSubmittedFeedbackButton,
-	.onFormSubmittedFeedbackButtonSuccess,
+	div[data-form-block-id]
+	.onFormSubmittedFeedbackButton.onFormSubmittedFeedbackButtonSuccess,
 	#nextBtn, #confirmClose {
 		background: #0055F0;
 		color: #ffffff;
@@ -1493,13 +1495,14 @@ CRM Form embed
 		width: auto;
 	}
 
-	button[type="submit"],
-	.onFormSubmittedFeedbackButton,
-	.onFormSubmittedFeedbackButtonSuccess {
+	button[type="submit"] {
 		padding: 16px;
 	}
 
-	#cancelClose, #confirmClose {
+	#cancelClose, #confirmClose,
+	div[data-editorblocktype="SubmitButtonBlock"] #exitwithoutsaving,
+	div[data-form-block-id]
+	.onFormSubmittedFeedbackButton.onFormSubmittedFeedbackButtonSuccess {
 		padding: 0 36px;
 	}
 
@@ -1540,7 +1543,9 @@ CRM Form embed
 	}
 
 	button[type=submit]:hover,
-	#nextBtn:hover, #confirmClose:hover {
+	#nextBtn:hover, #confirmClose:hover,
+	div[data-form-block-id]
+	.onFormSubmittedFeedbackButton.onFormSubmittedFeedbackButtonSuccess:hover {
 		background: #003CA8;
 		cursor: pointer;
 	}
@@ -1559,6 +1564,19 @@ CRM Form embed
 	// Radio buttons
 	.lp-radioButton label.lp-ellipsis {
 		font-weight: 400;
+	}
+
+	// Checkboxes
+	div[data-editorblocktype="Field-checkbox"]
+	.marketing-field .lp-form-field .lp-ellipsis {
+		font-weight:400;
+		color: inherit;
+		display: inline;
+	}
+
+	div[data-editorblocktype="Field-checkbox"]
+	.marketing-field .lp-form-field input {
+		margin-bottom: 5px;
 	}
 }
 
