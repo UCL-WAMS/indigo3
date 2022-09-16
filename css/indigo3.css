@@ -5994,7 +5994,7 @@ FORMS
 /*---------------------------
 CRM Form embed
 --------------------------*/
-body {
+body, .columnContainer p, .lp-ellipsis, .lp-form-fieldInput {
   font-family: "Helvetica Neue",Helvetica, Arial,"Lucida Grande",sans-serif !important; }
 
 .paragraphs-item-msd-form-embed form [data-layout="true"] {
@@ -6028,6 +6028,7 @@ form div {
 
 ::placeholder,
 input, textarea, select,
+input.lp-form-fieldInput.error[type=email],
 .paragraphs-item-msd-form-embed input[type=date] {
   font-size: 1rem;
   color: inherit; }
@@ -6041,11 +6042,6 @@ div[data-form-block-id] .lookup-behavior, select.lp-form-fieldInput {
   background-position: right .9em top 50%, 0 0;
   background-size: 1.3em auto, 100%;
   cursor: pointer; }
-
-input:not(:focus):not(:placeholder-shown):invalid,
-select:not(:focus):not(:placeholder-shown):invalid,
-textarea:not(:focus):not(:placeholder-shown):invalid {
-  border: 1px solid #CA0007; }
 
 .error {
   font-size: 1rem;
@@ -6077,9 +6073,10 @@ dialog div p.lp-ellipsis {
   width: 50%;
   box-shadow: 0 0 16px rgba(0, 0, 0, 0.12); }
 
-.paragraphs-item-msd-form-embed button[type=submit],
+.paragraphs-item-msd-form-embed button[type="submit"],
+.onFormSubmittedFeedbackButton,
+.onFormSubmittedFeedbackButtonSuccess,
 #nextBtn {
-  background: #0055F0;
   color: #ffffff;
   font-size: 1rem;
   border: 1px solid;
@@ -6087,13 +6084,10 @@ dialog div p.lp-ellipsis {
   border-radius: 1px;
   width: auto; }
 
-.paragraphs-item-msd-form-embed button[type="submit"] {
-  color: #ffffff;
-  font-size: 1rem;
-  border: 1px solid;
-  height: 51px;
-  border-radius: 1px;
-  width: auto; }
+.paragraphs-item-msd-form-embed button[type="submit"],
+.onFormSubmittedFeedbackButton,
+.onFormSubmittedFeedbackButtonSuccess {
+  padding: 16px; }
 
 #submit_button:enabled {
   background: #0055F0 !important; }
