@@ -6068,8 +6068,17 @@ CRM Form embed
 .paragraphs-item-msd-form-embed .columnContainer span.header {
   border-bottom: none; }
 
-.paragraphs-item-msd-form-embed .columnContainer div[data-editorblocktype=Text]:first-of-type {
+.paragraphs-item-msd-form-embed .columnContainer div[data-editorblocktype="Text"] p span:first-of-type {
   margin-top: 40px; }
+
+.paragraphs-item-msd-form-embed .columnContainer div[data-editorblocktype="Text"] p span strong {
+  margin-top: 0 !important; }
+
+.paragraphs-item-msd-form-embed div[data-editorblocktype="Text"] p {
+  text-align: left !important; }
+
+.paragraphs-item-msd-form-embed div.containerWrapper div.columnContainer {
+  margin-top: 0 !important; }
 
 .paragraphs-item-msd-form-embed dialog div p.lp-ellipsis {
   font-size: 1rem; }
@@ -6077,13 +6086,16 @@ CRM Form embed
 .paragraphs-item-msd-form-embed #reference_type_guide {
   border: 0;
   width: 50%;
-  box-shadow: 0 0 16px rgba(0, 0, 0, 0.12); }
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.12);
+  padding: 30px; }
 
 .paragraphs-item-msd-form-embed dialog#confirmCloseDialog {
-  border: none; }
+  border: none;
+  padding: 25px; }
 
 .paragraphs-item-msd-form-embed dialog#confirmSubmit {
-  border: none; }
+  border: none;
+  padding: 25px; }
 
 .paragraphs-item-msd-form-embed button[type="submit"],
 .paragraphs-item-msd-form-embed div[data-form-block-id] .onFormSubmittedFeedbackButton.onFormSubmittedFeedbackButtonSuccess,
@@ -6100,7 +6112,7 @@ CRM Form embed
 .paragraphs-item-msd-form-embed button[type="submit"] {
   padding: 16px; }
 
-.paragraphs-item-msd-form-embed #cancelClose, .paragraphs-item-msd-form-embed #confirmClose,
+.paragraphs-item-msd-form-embed #cancelClose, .paragraphs-item-msd-form-embed #confirmClose, .paragraphs-item-msd-form-embed #CloseGuide, .paragraphs-item-msd-form-embed button#confirm,
 .paragraphs-item-msd-form-embed div[data-editorblocktype="SubmitButtonBlock"] #exitwithoutsaving,
 .paragraphs-item-msd-form-embed div[data-form-block-id] .onFormSubmittedFeedbackButton.onFormSubmittedFeedbackButtonSuccess {
   padding: 0 36px; }

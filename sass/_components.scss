@@ -1462,8 +1462,21 @@ CRM Form embed
 		border-bottom: none;
 	}
 
-	.columnContainer div[data-editorblocktype=Text]:first-of-type {
+	.columnContainer div[data-editorblocktype="Text"] p span:first-of-type {
 		margin-top: 40px;
+	}
+
+	.columnContainer div[data-editorblocktype="Text"] p span strong  {
+		margin-top: 0 !important;;
+	}
+
+	div[data-editorblocktype="Text"] p {
+		text-align: left !important;
+	}
+
+	div.containerWrapper div.columnContainer {
+		margin-top:  0 !important;;
+
 	}
 
 	// Dialog pop-up
@@ -1475,14 +1488,17 @@ CRM Form embed
 		border: 0;
 		width: 50%;
 		box-shadow: 0 0 16px rgba(0, 0, 0, 0.12);
+		padding:30px;
 	}
 
 	dialog#confirmCloseDialog {
 		border: none;
+		padding: 25px;
 	}
 
 	dialog#confirmSubmit {
 		border: none;
+		padding: 25px;
 	}
 
 	// Buttons
@@ -1504,7 +1520,7 @@ CRM Form embed
 		padding: 16px;
 	}
 
-	#cancelClose, #confirmClose,
+	#cancelClose, #confirmClose, #CloseGuide, button#confirm,
 	div[data-editorblocktype="SubmitButtonBlock"] #exitwithoutsaving,
 	div[data-form-block-id]
 	.onFormSubmittedFeedbackButton.onFormSubmittedFeedbackButtonSuccess {
