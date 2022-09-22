@@ -5992,9 +5992,12 @@ FORMS
   width: 100%; }
 
 /*---------------------------
-CRM Form embed
+CRM form embed
 --------------------------*/
-.paragraphs-item-msd-form-embed .columnContainer p, .paragraphs-item-msd-form-embed .lp-ellipsis, .paragraphs-item-msd-form-embed .lp-form-fieldInput, .paragraphs-item-msd-form-embed span,
+.paragraphs-item-msd-form-embed span,
+.paragraphs-item-msd-form-embed .columnContainer p,
+.paragraphs-item-msd-form-embed .lp-ellipsis,
+.paragraphs-item-msd-form-embed .lp-form-fieldInput,
 .paragraphs-item-msd-form-embed .onFormSubmittedFeedbackMessage {
   font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif !important; }
 
@@ -6024,8 +6027,12 @@ CRM Form embed
 .paragraphs-item-msd-form-embed div.emptyContainer .columnContainer {
   padding: 0 !important; }
 
-.paragraphs-item-msd-form-embed ::placeholder, .paragraphs-item-msd-form-embed input, .paragraphs-item-msd-form-embed textarea, .paragraphs-item-msd-form-embed select,
-.paragraphs-item-msd-form-embed input[type=date], .paragraphs-item-msd-form-embed a #website,
+.paragraphs-item-msd-form-embed ::placeholder,
+.paragraphs-item-msd-form-embed input,
+.paragraphs-item-msd-form-embed textarea,
+.paragraphs-item-msd-form-embed select,
+.paragraphs-item-msd-form-embed input[type=date],
+.paragraphs-item-msd-form-embed a #website,
 .paragraphs-item-msd-form-embed input.lp-form-fieldInput.error[type=email] {
   font-size: 1rem !important;
   color: inherit; }
@@ -6047,19 +6054,22 @@ CRM Form embed
   font-size: 1rem;
   font-weight: 400; }
 
-.paragraphs-item-msd-form-embed #lookup-popup-ul-0, .paragraphs-item-msd-form-embed #errorList {
+.paragraphs-item-msd-form-embed #lookup-popup-ul-0,
+.paragraphs-item-msd-form-embed #errorList {
   list-style: none;
   padding: 0; }
 
 .paragraphs-item-msd-form-embed #nonMandatoryFields {
   padding-left: 0; }
 
-.paragraphs-item-msd-form-embed .columnContainer p span.header, .paragraphs-item-msd-form-embed p span strong {
+.paragraphs-item-msd-form-embed p span strong,
+.paragraphs-item-msd-form-embed .columnContainer p span.header {
   background: none;
   font-size: 1.5rem !important;
   font-weight: 700; }
 
-.paragraphs-item-msd-form-embed .lp-ellipsis, .paragraphs-item-msd-form-embed .lp-form-field span {
+.paragraphs-item-msd-form-embed .lp-ellipsis,
+.paragraphs-item-msd-form-embed .lp-form-field span {
   font-size: 1rem; }
 
 .paragraphs-item-msd-form-embed label.lp-ellipsis {
@@ -6067,12 +6077,6 @@ CRM Form embed
 
 .paragraphs-item-msd-form-embed .columnContainer span.header {
   border-bottom: none; }
-
-.paragraphs-item-msd-form-embed .columnContainer div[data-editorblocktype="Text"] p span:first-of-type {
-  margin-top: 40px; }
-
-.paragraphs-item-msd-form-embed .columnContainer div[data-editorblocktype="Text"] p span strong {
-  margin-top: 0 !important; }
 
 .paragraphs-item-msd-form-embed div[data-editorblocktype="Text"] p {
   text-align: left !important; }
@@ -6099,8 +6103,10 @@ CRM Form embed
 
 .paragraphs-item-msd-form-embed button[type="submit"],
 .paragraphs-item-msd-form-embed div[data-form-block-id] .onFormSubmittedFeedbackButton.onFormSubmittedFeedbackButtonSuccess,
-.paragraphs-item-msd-form-embed dialog#confirmSubmit button#confirm,
-.paragraphs-item-msd-form-embed #nextBtn, .paragraphs-item-msd-form-embed #confirmClose {
+.paragraphs-item-msd-form-embed dialog#confirmSubmit,
+.paragraphs-item-msd-form-embed button#confirm,
+.paragraphs-item-msd-form-embed #nextBtn,
+.paragraphs-item-msd-form-embed #confirmClose {
   background: #0055F0;
   color: #ffffff;
   font-size: 1rem;
@@ -6112,7 +6118,10 @@ CRM Form embed
 .paragraphs-item-msd-form-embed button[type="submit"] {
   padding: 16px; }
 
-.paragraphs-item-msd-form-embed #cancelClose, .paragraphs-item-msd-form-embed #confirmClose, .paragraphs-item-msd-form-embed #CloseGuide, .paragraphs-item-msd-form-embed button#confirm,
+.paragraphs-item-msd-form-embed #cancelClose,
+.paragraphs-item-msd-form-embed #confirmClose,
+.paragraphs-item-msd-form-embed #CloseGuide,
+.paragraphs-item-msd-form-embed button#confirm,
 .paragraphs-item-msd-form-embed div[data-editorblocktype="SubmitButtonBlock"] #exitwithoutsaving,
 .paragraphs-item-msd-form-embed div[data-form-block-id] .onFormSubmittedFeedbackButton.onFormSubmittedFeedbackButtonSuccess {
   padding: 0 36px; }
@@ -6138,7 +6147,10 @@ CRM Form embed
   cursor: pointer; }
 
 .paragraphs-item-msd-form-embed button[type=reset],
-.paragraphs-item-msd-form-embed #exitwithoutsaving, .paragraphs-item-msd-form-embed #prevBtn, .paragraphs-item-msd-form-embed #CloseGuide, .paragraphs-item-msd-form-embed #cancelClose {
+.paragraphs-item-msd-form-embed #exitwithoutsaving,
+.paragraphs-item-msd-form-embed #prevBtn,
+.paragraphs-item-msd-form-embed #CloseGuide,
+.paragraphs-item-msd-form-embed #cancelClose {
   background: #ffffff;
   color: #0055F0;
   font-size: 1rem;
@@ -6148,13 +6160,16 @@ CRM Form embed
   width: auto; }
 
 .paragraphs-item-msd-form-embed button[type=submit]:hover,
-.paragraphs-item-msd-form-embed #nextBtn:hover, .paragraphs-item-msd-form-embed #confirmClose:hover,
+.paragraphs-item-msd-form-embed #nextBtn:hover,
+.paragraphs-item-msd-form-embed #confirmClose:hover,
 .paragraphs-item-msd-form-embed div[data-form-block-id] .onFormSubmittedFeedbackButton.onFormSubmittedFeedbackButtonSuccess:hover {
   background: #003CA8;
   cursor: pointer; }
 
 .paragraphs-item-msd-form-embed button[type=reset]:hover,
-.paragraphs-item-msd-form-embed #exitwithoutsaving:hover, .paragraphs-item-msd-form-embed #prevBtn:hover, .paragraphs-item-msd-form-embed #CloseGuide:hover,
+.paragraphs-item-msd-form-embed #exitwithoutsaving:hover,
+.paragraphs-item-msd-form-embed #prevBtn:hover,
+.paragraphs-item-msd-form-embed #CloseGuide:hover,
 .paragraphs-item-msd-form-embed #cancelClose:hover {
   color: #003CA8;
   cursor: pointer; }
@@ -6172,6 +6187,15 @@ CRM Form embed
 
 .paragraphs-item-msd-form-embed div[data-editorblocktype="Field-checkbox"] .marketing-field .lp-form-field input {
   margin-bottom: 5px; }
+
+@media (min-width: 768px) {
+  .paragraphs-item-msd-form-embed textarea,
+  .paragraphs-item-msd-form-embed input,
+  .paragraphs-item-msd-form-embed select {
+    border: 1px solid #ADADAD;
+    padding: 13.5px 16px; }
+  .paragraphs-item-msd-form-embed .lp-radioButton {
+    width: 200%; } }
 
 /*-------------------------
 SECTION BACKGROUNDS

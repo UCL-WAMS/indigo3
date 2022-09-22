@@ -1362,10 +1362,13 @@ width: 100%;
 }
 
 /*---------------------------
-CRM Form embed
+CRM form embed
 --------------------------*/
 .paragraphs-item-msd-form-embed {
-	.columnContainer p, .lp-ellipsis, .lp-form-fieldInput, span,
+	span,
+	.columnContainer p,
+	.lp-ellipsis,
+	.lp-form-fieldInput,
 	.onFormSubmittedFeedbackMessage {
 		font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif !important;
 	}
@@ -1405,14 +1408,18 @@ CRM Form embed
 	}
 
 	// Placeholder and input text
-	::placeholder, input, textarea, select,
-	input[type=date], a #website,
+	::placeholder,
+	input,
+	textarea,
+	select,
+	input[type=date],
+	a #website,
 	input.lp-form-fieldInput.error[type=email] {
 		font-size: 1rem !important;
 		color: inherit;
 	}
 
-	// Calender and chevron icons
+	// Icons
 	div[data-form-block-id] .lookup-behavior, select.lp-form-fieldInput {
 		-moz-appearance: none;
 		-webkit-appearance: none;
@@ -1434,7 +1441,8 @@ CRM Form embed
 		font-weight: 400;
 	}
 
-	#lookup-popup-ul-0, #errorList {
+	#lookup-popup-ul-0,
+	#errorList {
 		list-style: none;
 		padding: 0;
 	}
@@ -1444,13 +1452,16 @@ CRM Form embed
 	}
 
 	// Labels and headings
-	.columnContainer p span.header, p span strong {
+	p span strong,
+	.columnContainer p span.header
+	 {
 		background: none;
 		font-size: 1.5rem !important;
 		font-weight: 700;
 	}
 
-	.lp-ellipsis, .lp-form-field span {
+	.lp-ellipsis,
+	.lp-form-field span {
 		font-size: 1rem;
 	}
 
@@ -1462,13 +1473,13 @@ CRM Form embed
 		border-bottom: none;
 	}
 
-	.columnContainer div[data-editorblocktype="Text"] p span:first-of-type {
-		margin-top: 40px;
-	}
-
-	.columnContainer div[data-editorblocktype="Text"] p span strong  {
-		margin-top: 0 !important;;
-	}
+	//.columnContainer div[data-editorblocktype="Text"] p span:first-of-type {
+	//	margin-top: 40px;
+	//}
+	//
+	//.columnContainer div[data-editorblocktype="Text"] p span strong  {
+	//	margin-top: 0 !important;;
+	//}
 
 	div[data-editorblocktype="Text"] p {
 		text-align: left !important;
@@ -1503,10 +1514,11 @@ CRM Form embed
 
 	// Buttons
 	button[type="submit"],
-	div[data-form-block-id]
-	.onFormSubmittedFeedbackButton.onFormSubmittedFeedbackButtonSuccess,
-	dialog#confirmSubmit button#confirm,
-	#nextBtn, #confirmClose {
+	div[data-form-block-id] .onFormSubmittedFeedbackButton.onFormSubmittedFeedbackButtonSuccess,
+	dialog#confirmSubmit,
+	button#confirm,
+	#nextBtn,
+	#confirmClose {
 		background: #0055F0;
 		color: #ffffff;
 		font-size: 1rem;
@@ -1520,10 +1532,12 @@ CRM Form embed
 		padding: 16px;
 	}
 
-	#cancelClose, #confirmClose, #CloseGuide, button#confirm,
+	#cancelClose,
+	#confirmClose,
+	#CloseGuide,
+	button#confirm,
 	div[data-editorblocktype="SubmitButtonBlock"] #exitwithoutsaving,
-	div[data-form-block-id]
-	.onFormSubmittedFeedbackButton.onFormSubmittedFeedbackButtonSuccess {
+	div[data-form-block-id]	.onFormSubmittedFeedbackButton.onFormSubmittedFeedbackButtonSuccess {
 		padding: 0 36px;
 	}
 
@@ -1553,7 +1567,10 @@ CRM Form embed
 	}
 
 	button[type=reset],
-	#exitwithoutsaving, #prevBtn, #CloseGuide, #cancelClose {
+	#exitwithoutsaving,
+	#prevBtn,
+	#CloseGuide,
+	#cancelClose {
 		background: #ffffff;
 		color: #0055F0;
 		font-size: 1rem;
@@ -1564,15 +1581,17 @@ CRM Form embed
 	}
 
 	button[type=submit]:hover,
-	#nextBtn:hover, #confirmClose:hover,
-	div[data-form-block-id]
-	.onFormSubmittedFeedbackButton.onFormSubmittedFeedbackButtonSuccess:hover {
+	#nextBtn:hover,
+	#confirmClose:hover,
+	div[data-form-block-id]	.onFormSubmittedFeedbackButton.onFormSubmittedFeedbackButtonSuccess:hover {
 		background: #003CA8;
 		cursor: pointer;
 	}
 
 	button[type=reset]:hover,
-	#exitwithoutsaving:hover, #prevBtn:hover, #CloseGuide:hover,
+	#exitwithoutsaving:hover,
+	#prevBtn:hover,
+	#CloseGuide:hover,
 	#cancelClose:hover {
 		color: #003CA8;
 		cursor: pointer;
@@ -1599,7 +1618,22 @@ CRM Form embed
 	.marketing-field .lp-form-field input {
 		margin-bottom: 5px;
 	}
+
+	@include media-breakpoint-up(md) {
+		textarea,
+		input,
+		select {
+			border: 1px solid #ADADAD;
+			padding: 13.5px 16px;
+		}
+
+		.lp-radioButton {
+			width: 200%;
+		}
+	}
 }
+
+
 
 /*-------------------------
 SECTION BACKGROUNDS
