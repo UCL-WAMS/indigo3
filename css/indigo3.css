@@ -2850,27 +2850,27 @@ DROP SHADOW FOR CONTACT BOX
     .site-prospective-students-undergraduate-redesign .feature-link.clearfix,
     .site-prospective-students-undergraduate .feature-link.clearfix {
       box-shadow: 3px 10px 10px -6px rgba(51, 51, 51, 0.75); } }
-  .site-prospective-students-graduate .paragraphs-item-boxout,
-  .site-prospective-students-undergraduate-redesign .paragraphs-item-boxout,
-  .site-prospective-students-undergraduate .paragraphs-item-boxout {
+  .site-prospective-students-graduate .paragraphs-item-boxout.gray,
+  .site-prospective-students-undergraduate-redesign .paragraphs-item-boxout.gray,
+  .site-prospective-students-undergraduate .paragraphs-item-boxout.gray {
     background: #333333;
     color: #ffffff;
     padding: 1.5rem; }
-    .site-prospective-students-graduate .paragraphs-item-boxout h2,
-    .site-prospective-students-undergraduate-redesign .paragraphs-item-boxout h2,
-    .site-prospective-students-undergraduate .paragraphs-item-boxout h2 {
+    .site-prospective-students-graduate .paragraphs-item-boxout.gray h2,
+    .site-prospective-students-undergraduate-redesign .paragraphs-item-boxout.gray h2,
+    .site-prospective-students-undergraduate .paragraphs-item-boxout.gray h2 {
       color: #ea7600; }
-    .site-prospective-students-graduate .paragraphs-item-boxout svg,
-    .site-prospective-students-undergraduate-redesign .paragraphs-item-boxout svg,
-    .site-prospective-students-undergraduate .paragraphs-item-boxout svg {
+    .site-prospective-students-graduate .paragraphs-item-boxout.gray svg,
+    .site-prospective-students-undergraduate-redesign .paragraphs-item-boxout.gray svg,
+    .site-prospective-students-undergraduate .paragraphs-item-boxout.gray svg {
       stroke: #F6BE00; }
-    .site-prospective-students-graduate .paragraphs-item-boxout a,
-    .site-prospective-students-undergraduate-redesign .paragraphs-item-boxout a,
-    .site-prospective-students-undergraduate .paragraphs-item-boxout a {
+    .site-prospective-students-graduate .paragraphs-item-boxout.gray a,
+    .site-prospective-students-undergraduate-redesign .paragraphs-item-boxout.gray a,
+    .site-prospective-students-undergraduate .paragraphs-item-boxout.gray a {
       color: #F6BE00; }
-      .site-prospective-students-graduate .paragraphs-item-boxout a:hover,
-      .site-prospective-students-undergraduate-redesign .paragraphs-item-boxout a:hover,
-      .site-prospective-students-undergraduate .paragraphs-item-boxout a:hover {
+      .site-prospective-students-graduate .paragraphs-item-boxout.gray a:hover,
+      .site-prospective-students-undergraduate-redesign .paragraphs-item-boxout.gray a:hover,
+      .site-prospective-students-undergraduate .paragraphs-item-boxout.gray a:hover {
         color: #F6BE00; }
   .site-prospective-students-graduate .box-out,
   .site-prospective-students-undergraduate-redesign .box-out,
