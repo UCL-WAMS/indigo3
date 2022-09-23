@@ -2872,6 +2872,28 @@ DROP SHADOW FOR CONTACT BOX
       .site-prospective-students-undergraduate-redesign .paragraphs-item-boxout.gray a:hover,
       .site-prospective-students-undergraduate .paragraphs-item-boxout.gray a:hover {
         color: #F6BE00; }
+  .site-prospective-students-graduate .paragraphs-item-boxout,
+  .site-prospective-students-undergraduate-redesign .paragraphs-item-boxout,
+  .site-prospective-students-undergraduate .paragraphs-item-boxout {
+    background: #333333;
+    color: #ffffff;
+    padding: 1.5rem; }
+    .site-prospective-students-graduate .paragraphs-item-boxout h2,
+    .site-prospective-students-undergraduate-redesign .paragraphs-item-boxout h2,
+    .site-prospective-students-undergraduate .paragraphs-item-boxout h2 {
+      color: #ea7600; }
+    .site-prospective-students-graduate .paragraphs-item-boxout svg,
+    .site-prospective-students-undergraduate-redesign .paragraphs-item-boxout svg,
+    .site-prospective-students-undergraduate .paragraphs-item-boxout svg {
+      stroke: #F6BE00; }
+    .site-prospective-students-graduate .paragraphs-item-boxout a,
+    .site-prospective-students-undergraduate-redesign .paragraphs-item-boxout a,
+    .site-prospective-students-undergraduate .paragraphs-item-boxout a {
+      color: #F6BE00; }
+      .site-prospective-students-graduate .paragraphs-item-boxout a:hover,
+      .site-prospective-students-undergraduate-redesign .paragraphs-item-boxout a:hover,
+      .site-prospective-students-undergraduate .paragraphs-item-boxout a:hover {
+        color: #F6BE00; }
   .site-prospective-students-graduate .box-out,
   .site-prospective-students-undergraduate-redesign .box-out,
   .site-prospective-students-undergraduate .box-out {
@@ -4296,7 +4318,8 @@ ol.alpha-list {
       margin-bottom: 0; } }
 
 @media (min-width: 768px) {
-  .six-by-six__right, .six-by-six__left {
+  .six-by-six__right,
+  .six-by-six__left {
     padding-bottom: 1.875rem; }
   .six-by-six__left {
     padding-right: 1rem; }
@@ -5784,8 +5807,7 @@ FIVE CARD LAYOUT
 @media (min-width: 768px) {
   .five-card-layout .five-card__left-top {
     padding: 0 1rem 1.875rem; }
-  .five-card-layout .six-by-six__left,
-  .five-card-layout .six-by-six__right {
+  .five-card-layout .six-by-six__left, .five-card-layout .six-by-six__right {
     position: relative;
     width: 100%;
     flex: 0 0 50%;
