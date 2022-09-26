@@ -1628,13 +1628,13 @@ CRM form embed
 		input[type="date"] {
 			border: 1px solid #ADADAD;
 			padding: 13.5px 16px;
-			width:100%;
+			width:100% !important;
 			border-radius: 1px;
 		}
 
 		// Radio buttons
-		form span.lp-radioButton {
-			float: end;
+		form div.lp-radioButtonsContainer {
+			width: 100%;
 		}
 
 		// Buttons
@@ -1643,15 +1643,15 @@ CRM form embed
 		}
 
 		button[type="submit"],
+		#exitwithoutsaving,
 		#submit_button,
 		#submit_button:disabled {
 			width:100%;
 		}
 
 		// Checkboxes
-		div[data-editorblocktype="Field-checkbox"]
-		.marketing-field .lp-form-field .lp-ellipsis {
-			margin-bottom: 30px;
+		form div.marketing-field input[type="checkbox"] {
+			vertical-align: bottom;
 		}
 	}
 }
