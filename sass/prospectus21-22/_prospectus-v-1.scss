@@ -176,6 +176,22 @@ BOXOUT PARAGRAPHS
 	 }
 }
 
+.paragraphs-item-boxout {
+	background: $darkgray;
+	color: #ffffff;
+	padding: 1.5rem;
+	h2 {
+		color: $orange;
+	}
+	svg {
+		stroke: $yellow;
+	}
+	a {color: $yellow;
+		&:hover {
+			color: $yellow;
+		}
+	}
+}
 
 /*---------------------------
 HARD CODED SIDE BAR BOXOUTS
