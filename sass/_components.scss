@@ -1620,16 +1620,39 @@ CRM form embed
 	}
 
 	@include media-breakpoint-up(md) {
+
+		// Form fields
 		textarea,
 		input,
-		select {
+		select,
+		input[type="date"] {
 			border: 1px solid #ADADAD;
 			padding: 13.5px 16px;
+			background-color: red;
+			border-radius: 1px;
 		}
 
-		.lp-radioButton {
+		// Radio buttons
+		form span.lp-radioButton {
 			width: 200%;
 		}
+
+		// Buttons
+		.button {
+			padding: 10px 25px
+		}
+
+		.button[type="submit"],
+		#exitwithoutsaving {
+			width:100%;
+		}
+
+		// Checkboxes
+		div[data-editorblocktype="Field-checkbox"]
+		.marketing-field .lp-form-field .lp-ellipsis {
+			margin-bottom: 10px;
+		}
+
 	}
 }
 

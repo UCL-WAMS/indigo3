@@ -6213,11 +6213,21 @@ CRM form embed
 @media (min-width: 768px) {
   .paragraphs-item-msd-form-embed textarea,
   .paragraphs-item-msd-form-embed input,
-  .paragraphs-item-msd-form-embed select {
+  .paragraphs-item-msd-form-embed select,
+  .paragraphs-item-msd-form-embed input[type="date"] {
     border: 1px solid #ADADAD;
-    padding: 13.5px 16px; }
-  .paragraphs-item-msd-form-embed .lp-radioButton {
-    width: 200%; } }
+    padding: 13.5px 16px;
+    background-color: red;
+    border-radius: 1px; }
+  .paragraphs-item-msd-form-embed form span.lp-radioButton {
+    width: 200%; }
+  .paragraphs-item-msd-form-embed .button {
+    padding: 10px 25px; }
+  .paragraphs-item-msd-form-embed .button[type="submit"],
+  .paragraphs-item-msd-form-embed #exitwithoutsaving {
+    width: 100%; }
+  .paragraphs-item-msd-form-embed div[data-editorblocktype="Field-checkbox"] .marketing-field .lp-form-field .lp-ellipsis {
+    margin-bottom: 10px; } }
 
 /*-------------------------
 SECTION BACKGROUNDS
