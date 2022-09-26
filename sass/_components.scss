@@ -1619,7 +1619,7 @@ CRM form embed
 		margin-bottom: 5px;
 	}
 
-	@include media-breakpoint-up(md) {
+	@include media-breakpoint-down(md) {
 
 		// Form fields
 		textarea,

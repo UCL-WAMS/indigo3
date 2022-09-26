@@ -6210,7 +6210,7 @@ CRM form embed
 .paragraphs-item-msd-form-embed div[data-editorblocktype="Field-checkbox"] .marketing-field .lp-form-field input {
   margin-bottom: 5px; }
 
-@media (min-width: 768px) {
+@media (max-width: 991.98px) {
   .paragraphs-item-msd-form-embed textarea,
   .paragraphs-item-msd-form-embed input,
   .paragraphs-item-msd-form-embed select,
