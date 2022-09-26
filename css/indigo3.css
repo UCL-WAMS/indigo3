@@ -6217,17 +6217,18 @@ CRM form embed
   .paragraphs-item-msd-form-embed input[type="date"] {
     border: 1px solid #ADADAD;
     padding: 13.5px 16px;
-    background-color: red;
+    width: 100%;
     border-radius: 1px; }
   .paragraphs-item-msd-form-embed form span.lp-radioButton {
-    width: 200%; }
+    float: end; }
   .paragraphs-item-msd-form-embed .button {
     padding: 10px 25px; }
-  .paragraphs-item-msd-form-embed .button[type="submit"],
-  .paragraphs-item-msd-form-embed #exitwithoutsaving {
+  .paragraphs-item-msd-form-embed button[type="submit"],
+  .paragraphs-item-msd-form-embed #submit_button,
+  .paragraphs-item-msd-form-embed #submit_button:disabled {
     width: 100%; }
   .paragraphs-item-msd-form-embed div[data-editorblocktype="Field-checkbox"] .marketing-field .lp-form-field .lp-ellipsis {
-    margin-bottom: 10px; } }
+    margin-bottom: 30px; } }
 
 /*-------------------------
 SECTION BACKGROUNDS
