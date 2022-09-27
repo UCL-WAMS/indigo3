@@ -1622,8 +1622,10 @@ CRM form embed
 
 		// Form fields
 		textarea,
-		input[type="text"],
 		select,
+		input[type="text"],
+		input[type="tel"],
+		input[type="email"],
 		input[type="date"] {
 			border: 1px solid #ADADAD;
 			padding: 13.5px 16px;

@@ -6212,8 +6212,10 @@ CRM form embed
 
 @media (max-width: 991.98px) {
   .paragraphs-item-msd-form-embed textarea,
-  .paragraphs-item-msd-form-embed input[type="text"],
   .paragraphs-item-msd-form-embed select,
+  .paragraphs-item-msd-form-embed input[type="text"],
+  .paragraphs-item-msd-form-embed input[type="tel"],
+  .paragraphs-item-msd-form-embed input[type="email"],
   .paragraphs-item-msd-form-embed input[type="date"] {
     border: 1px solid #ADADAD;
     padding: 13.5px 16px;
