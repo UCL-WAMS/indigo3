@@ -6032,9 +6032,12 @@ CRM form embed
 .paragraphs-item-msd-form-embed .marketing-field {
   margin-top: 1rem; }
 
-.paragraphs-item-msd-form-embed input[type="text"],
 .paragraphs-item-msd-form-embed select,
-.paragraphs-item-msd-form-embed textarea {
+.paragraphs-item-msd-form-embed textarea,
+.paragraphs-item-msd-form-embed input[type="text"],
+.paragraphs-item-msd-form-embed input[type="tel"],
+.paragraphs-item-msd-form-embed input[type="email"],
+.paragraphs-item-msd-form-embed input[type="date"] {
   padding: 13.5px 16px;
   background: #ffffff;
   border: 1px solid #ADADAD; }
@@ -6079,7 +6082,8 @@ CRM form embed
 .paragraphs-item-msd-form-embed #lookup-popup-ul-0,
 .paragraphs-item-msd-form-embed #errorList {
   list-style: none;
-  padding: 0; }
+  padding: 0;
+  margin: 0; }
 
 .paragraphs-item-msd-form-embed #nonMandatoryFields {
   padding-left: 0; }
@@ -6202,6 +6206,12 @@ CRM form embed
 .paragraphs-item-msd-form-embed .lp-radioButton label.lp-ellipsis {
   font-weight: 400; }
 
+.paragraphs-item-msd-form-embed form div.lp-radioButtonsContainer {
+  width: 100%; }
+
+.paragraphs-item-msd-form-embed form span.lp-radioButton input[type="radio"] {
+  float: left; }
+
 .paragraphs-item-msd-form-embed div[data-editorblocktype="Field-checkbox"] .marketing-field .lp-form-field .lp-ellipsis {
   font-weight: 400;
   color: inherit;
@@ -6211,8 +6221,8 @@ CRM form embed
   margin-bottom: 5px; }
 
 @media (max-width: 991.98px) {
-  .paragraphs-item-msd-form-embed textarea,
   .paragraphs-item-msd-form-embed select,
+  .paragraphs-item-msd-form-embed textarea,
   .paragraphs-item-msd-form-embed input[type="text"],
   .paragraphs-item-msd-form-embed input[type="tel"],
   .paragraphs-item-msd-form-embed input[type="email"],

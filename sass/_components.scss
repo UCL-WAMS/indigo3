@@ -1387,9 +1387,12 @@ CRM form embed
 		margin-top: 1rem
 	}
 
-	input[type="text"],
 	select,
-	textarea {
+	textarea,
+	input[type="text"],
+	input[type="tel"],
+	input[type="email"],
+	input[type="date"] {
 		padding: 13.5px 16px;
 		background: #ffffff;
 		border: 1px solid #ADADAD;
@@ -1445,6 +1448,7 @@ CRM form embed
 	#errorList {
 		list-style: none;
 		padding: 0;
+		margin: 0;
 	}
 
 	#nonMandatoryFields {
@@ -1472,14 +1476,6 @@ CRM form embed
 	.columnContainer span.header {
 		border-bottom: none;
 	}
-
-	//.columnContainer div[data-editorblocktype="Text"] p span:first-of-type {
-	//	margin-top: 40px;
-	//}
-	//
-	//.columnContainer div[data-editorblocktype="Text"] p span strong  {
-	//	margin-top: 0 !important;;
-	//}
 
 	div[data-editorblocktype="Text"] p {
 		text-align: left !important;
@@ -1605,6 +1601,14 @@ CRM form embed
 		font-weight: 400;
 	}
 
+	form div.lp-radioButtonsContainer {
+		width: 100%;
+	}
+
+	form span.lp-radioButton input[type="radio"] {
+		float:left;
+	}
+
 	// Checkboxes
 	div[data-editorblocktype="Field-checkbox"]
 	.marketing-field .lp-form-field .lp-ellipsis {
@@ -1619,10 +1623,9 @@ CRM form embed
 	}
 
 	@include media-breakpoint-down(md) {
-
 		// Form fields
-		textarea,
 		select,
+		textarea,
 		input[type="text"],
 		input[type="tel"],
 		input[type="email"],
@@ -1672,7 +1675,6 @@ CRM form embed
 		}
 	}
 }
-
 
 /*-------------------------
 SECTION BACKGROUNDS
