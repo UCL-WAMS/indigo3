@@ -1486,8 +1486,7 @@ CRM form embed
 	}
 
 	div.containerWrapper div.columnContainer {
-		margin-top:  0 !important;;
-
+		margin-top:  0 !important;
 	}
 
 	// Dialog pop-up
@@ -1623,7 +1622,6 @@ CRM form embed
 
 		// Form fields
 		textarea,
-		input,
 		select,
 		input[type="date"] {
 			border: 1px solid #ADADAD;
@@ -1635,6 +1633,18 @@ CRM form embed
 		// Radio buttons
 		form div.lp-radioButtonsContainer {
 			width: 100%;
+		}
+
+		form span.lp-radioButton input[type="radio"] {
+			float:left;
+			width: auto !important;
+		}
+
+		// Checkboxes
+		input[type="checkbox"] {
+			-webkit-border-radius: 1px;
+			-moz-border-radius: 1px;
+			border-radius: 1px;
 		}
 
 		// Buttons
@@ -1649,9 +1659,14 @@ CRM form embed
 			width:100%;
 		}
 
-		// Checkboxes
-		form div.marketing-field input[type="checkbox"] {
-			vertical-align: bottom;
+		#submit_button,
+		#submit_button:disabled {
+			padding-top: 0;
+			padding-bottom: 0;
+		}
+
+		.columnContainer div[data-editorblocktype="SubmitButtonBlock"] {
+			margin-top: 0;
 		}
 	}
 }
