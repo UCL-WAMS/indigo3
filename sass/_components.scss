@@ -1387,7 +1387,7 @@ CRM form embed
 		margin-top: 1rem
 	}
 
-	input,
+	input[type="text"],
 	select,
 	textarea {
 		padding: 13.5px 16px;
@@ -1622,6 +1622,7 @@ CRM form embed
 
 		// Form fields
 		textarea,
+		input[type="text"]
 		select,
 		input[type="date"] {
 			border: 1px solid #ADADAD;
@@ -1637,14 +1638,13 @@ CRM form embed
 
 		form span.lp-radioButton input[type="radio"] {
 			float:left;
-			width: auto !important;
 		}
 
 		// Checkboxes
 		input[type="checkbox"] {
-			-webkit-border-radius: 1px;
-			-moz-border-radius: 1px;
-			border-radius: 1px;
+			-webkit-border-radius: 1px !important;
+			-moz-border-radius: 1px !important;
+			border-radius: 1px !important;
 		}
 
 		// Buttons
