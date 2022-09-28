@@ -1361,6 +1361,320 @@ FORMS
 width: 100%;
 }
 
+/*---------------------------
+CRM form embed
+--------------------------*/
+.paragraphs-item-msd-form-embed {
+	span,
+	.columnContainer p,
+	.lp-ellipsis,
+	.lp-form-fieldInput,
+	.onFormSubmittedFeedbackMessage {
+		font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif !important;
+	}
+
+	// Page layout
+	form [data-layout="true"] {
+		margin: 0 !important;
+	}
+
+	form div {
+		padding-left: 0 !important;
+	}
+
+	// Form fields
+	.marketing-field {
+		margin-top: 1rem
+	}
+
+	select,
+	textarea,
+	input[type="text"],
+	input[type="tel"],
+	input[type="email"],
+	input[type="date"] {
+		padding: 13.5px 16px;
+		background: #ffffff;
+		border: 1px solid #ADADAD;
+	}
+
+	input:focus-visible,
+	select:focus-visible,
+	select:focus,
+	textarea:focus-visible {
+		outline: 2px solid #0055F0;
+	}
+
+	#personal_dateils div.emptyContainer,
+	div.emptyContainer .columnContainer {
+		padding: 0 !important;
+	}
+
+	// Placeholder and input text
+	::placeholder,
+	input,
+	textarea,
+	select,
+	input[type=date],
+	a #website,
+	input.lp-form-fieldInput.error[type=email] {
+		font-size: 1rem !important;
+		color: inherit;
+	}
+
+	// Icons
+	div[data-form-block-id] .lookup-behavior, select.lp-form-fieldInput {
+		-moz-appearance: none;
+		-webkit-appearance: none;
+		appearance: none;
+		background-image: url("data:image/svg+xml,%0A%3Csvg width='50' height='50' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%0A%3E%3Cpath d='M6.34317 7.75732L4.92896 9.17154L12 16.2426L19.0711 9.17157L17.6569 7.75735L12 13.4142L6.34317 7.75732Z' fill='%230055F0' /%3E%3C/svg%3E");
+		background-repeat: no-repeat, repeat;
+		background-position: right .9em top 50%, 0 0;
+		background-size: 1.3em auto, 100%;
+		cursor: pointer
+	}
+
+	#ref_guide {
+		display: none;
+	}
+
+	// Error messages
+	.error {
+		font-size: 1rem;
+		font-weight: 400;
+	}
+
+	#lookup-popup-ul-0,
+	#errorList {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+	}
+
+	#nonMandatoryFields {
+		padding-left: 0;
+	}
+
+	// Labels and headings
+	p span strong,
+	.columnContainer p span.header
+	 {
+		background: none;
+		font-size: 1.5rem !important;
+		font-weight: 700;
+	}
+
+	.lp-ellipsis,
+	.lp-form-field span {
+		font-size: 1rem;
+	}
+
+	label.lp-ellipsis {
+		font-weight: 700;
+	}
+
+	.columnContainer span.header {
+		border-bottom: none;
+	}
+
+	div[data-editorblocktype="Text"] p {
+		text-align: left !important;
+	}
+
+	div.containerWrapper div.columnContainer {
+		margin-top:  0 !important;
+	}
+
+	// Dialog pop-up
+	dialog div p.lp-ellipsis {
+		font-size: 1rem;
+	}
+
+	#reference_type_guide {
+		border: 0;
+		width: 50%;
+		box-shadow: 0 0 16px rgba(0, 0, 0, 0.12);
+		padding:30px;
+	}
+
+	dialog#confirmCloseDialog {
+		border: none;
+		padding: 25px;
+	}
+
+	dialog#confirmSubmit {
+		border: none;
+		padding: 25px;
+	}
+
+	// Buttons
+	button[type="submit"],
+	div[data-form-block-id] .onFormSubmittedFeedbackButton.onFormSubmittedFeedbackButtonSuccess,
+	dialog#confirmSubmit,
+	button#confirm,
+	#nextBtn,
+	#confirmClose {
+		background: #0055F0;
+		color: #ffffff;
+		font-size: 1rem;
+		border: 1px solid #0055F0;
+		height: 51px;
+		border-radius: 1px;
+		width: auto;
+	}
+
+	button[type="submit"] {
+		padding: 16px;
+	}
+
+	#cancelClose,
+	#confirmClose,
+	#CloseGuide,
+	button#confirm,
+	div[data-editorblocktype="SubmitButtonBlock"] #exitwithoutsaving,
+	div[data-form-block-id]	.onFormSubmittedFeedbackButton.onFormSubmittedFeedbackButtonSuccess {
+		padding: 0 36px;
+	}
+
+	#cancelClose {
+		margin: 10px;
+	}
+
+	#confirmClose {
+		margin: 10px 0;
+	}
+
+	#submit_button:enabled {
+		background: #0055F0 !important;
+	}
+
+	#submit_button:disabled {
+		background: #EBEBEB;
+		color: #5C5C5C;
+		opacity: 0.3;
+		pointer-events: none;
+		border: 1px solid #5C5C5C
+	}
+
+	#submit_button:enabled:hover {
+		background: #003CA8 !important;
+		cursor: pointer;
+	}
+
+	button[type=reset],
+	#exitwithoutsaving,
+	#prevBtn,
+	#CloseGuide,
+	#cancelClose {
+		background: #ffffff;
+		color: #0055F0;
+		font-size: 1rem;
+		border: 1px solid #0055F0;
+		height: 51px;
+		border-radius: 1px;
+		width: auto;
+	}
+
+	button[type=submit]:hover,
+	#nextBtn:hover,
+	#confirmClose:hover,
+	div[data-form-block-id]	.onFormSubmittedFeedbackButton.onFormSubmittedFeedbackButtonSuccess:hover {
+		background: #003CA8;
+		cursor: pointer;
+	}
+
+	button[type=reset]:hover,
+	#exitwithoutsaving:hover,
+	#prevBtn:hover,
+	#CloseGuide:hover,
+	#cancelClose:hover {
+		color: #003CA8;
+		cursor: pointer;
+	}
+
+	.columnContainer div[data-editorblocktype="SubmitButtonBlock"] {
+		margin-top: 40px;
+	}
+
+	// Radio buttons
+	.lp-radioButton label.lp-ellipsis {
+		font-weight: 400;
+	}
+
+	form div.lp-radioButtonsContainer {
+		width: 100%;
+	}
+
+	form span.lp-radioButton input[type="radio"] {
+		float:left;
+	}
+
+	// Checkboxes
+	div[data-editorblocktype="Field-checkbox"]
+	.marketing-field .lp-form-field .lp-ellipsis {
+		font-weight:400;
+		color: inherit;
+		display: inline;
+	}
+
+	div[data-editorblocktype="Field-checkbox"]
+	.marketing-field .lp-form-field input {
+		margin-bottom: 5px;
+	}
+
+	@include media-breakpoint-down(md) {
+		// Form fields
+		select,
+		textarea,
+		input[type="text"],
+		input[type="tel"],
+		input[type="email"],
+		input[type="date"] {
+			border: 1px solid #ADADAD;
+			padding: 13.5px 16px;
+			width:100% !important;
+			border-radius: 1px;
+		}
+
+		// Radio buttons
+		form div.lp-radioButtonsContainer {
+			width: 100%;
+		}
+
+		form span.lp-radioButton input[type="radio"] {
+			float:left;
+		}
+
+		// Checkboxes
+		input[type="checkbox"] {
+			-webkit-border-radius: 1px !important;
+			-moz-border-radius: 1px !important;
+			border-radius: 1px !important;
+		}
+
+		// Buttons
+		.button {
+			padding: 10px 25px
+		}
+
+		button[type="submit"],
+		#exitwithoutsaving,
+		#submit_button,
+		#submit_button:disabled {
+			width:100%;
+		}
+
+		#submit_button,
+		#submit_button:disabled {
+			padding-top: 0;
+			padding-bottom: 0;
+		}
+
+		.columnContainer div[data-editorblocktype="SubmitButtonBlock"] {
+			margin-top: 0;
+		}
+	}
+}
 
 /*-------------------------
 SECTION BACKGROUNDS
