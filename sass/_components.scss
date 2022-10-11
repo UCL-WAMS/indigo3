@@ -242,14 +242,11 @@ CARD LINK
 			}		
 	}
 
-
-
-// BARTLETT CARD LINK COLOURS
-body[class*=site-bartlett] .paragraphs-item-card-link { 
-	background: $bartlettviolet; 
-	color: $bartlettturquoise; 
-}
-
+// TEAL CARDLINK - CURRENTLY USED IN GRADUATE PROSPECTUS.  LS 1.22
+.paragraphs-item-card-link { 
+	background: $brightblue; 
+	color: #ffffff; 
+	}
 
 /*-----------------------
 FEATURE LINK
@@ -324,23 +321,33 @@ FEATURE LINK
 }
 }
 
-.site-bartlett { 
+
+/*----------------------
+FEATURE LINK COLOURS AND BOX SHADOW 
+CURRENTLY IN USE IN PROSPECTUS.
+---------------------*/
+
 	.feature-link {
-		.feature-link__icon,
 		.feature-link_title {
-			background: #000; 
-			color: #fff;
-			}	
-			svg {
-			stroke: currentColor;
+			background: $yellow; 
+			}
+		.feature-link__icon {
+			background-color: $yellow;
+			}
+	
+		
+	@include media-breakpoint-up(md) {
+			&.clearfix {
+			box-shadow: 3px 10px 10px -6px rgba(51,51,51,0.75);
 			}
 		}
-		
-	 }
+	}
+
 
 
 /*----------------------------
-PROMO CARD
+PROMO CARD - CREATED FOR BARTLETT
+NOW INCLUDED IN DESIGN SYSTEM
 -----------------------------*/
 
 .promo-text {
@@ -581,34 +588,25 @@ ALERTS
 		}
 	}
 
-//ICON WITH BLACK BACKGROUND WHITE ARROW
-//USED ON BARTLETT
-
-body[class*=site-bartlett] {
-
-.card {
-	h3 a {
-		color: #333;
-		}
-}
-
+/*-----------------------------------
+CARD - NODE TEASER 
+PROSPECTUS D
+------------------------------------*/
 
 .card__icon {
-	background: #000;
-	svg {
-		stroke: #fff;
-		}
+	background-color: $yellow;
 	}
-}
-
 
 /* -------------------------
  HIGHLIGHT CARD
+ NOT SURE WHERE THIS WILL BE
  --------------------------*/
 
 .highlight-card  {
 	position: relative;
 	height: 100%;
+	color: #ffffff;
+	background-color: $brightblue;
 	.highlight-card__pic {
 		background-color: inherit; 
 		color: inherit;
@@ -666,39 +664,11 @@ body[class*=site-bartlett] {
 	
 }
 
-	// COLORS
-	&.highlight-card--violet-turquoise {
-       background-color: $bartlettviolet;
-       color: $bartlettturquoise;
-       }
-     &.highlight-card--peach-purple {
-       background-color: $bartlettpeach;
-       color: $bartlettpurple;
-       }
-     &.highlight-card--purple-peach {
-       background-color: $bartlettpurple;
-       color: $bartlettpeach;
-       }
-     &.highlight-card--green-pink {
-       background-color: $bartlettgreen;
-       color: $bartlettpink;
-       }
-     &.highlight-card--pink-violet {
-       background-color: $bartlettpink;
-       color: $bartlettviolet;
-       }
-    &.highlight-card--blue-peach {
-       background-color: $bartlettblue;
-       color: $bartlettpeach;
-       }
-    &.highlight-card--turquoise-violet {
-       background-color: $bartlettturquoise;
-       color: $bartlettviolet;
-       }	
 }
 
 /*------------------
  CTA CARD/BOXES
+ DESIGN SYSTEM
  ---------------------*/
 
 .paragraphs-item-call-to-action a {
@@ -721,6 +691,8 @@ body[class*=site-bartlett] {
 	margin-bottom: 1.5rem;
 	display:flex;
 	flex-direction: column;
+	color: #ffffff;
+	background-color: $brightblue;
 	a {
 		text-decoration: none; 
 		color: inherit;
@@ -773,23 +745,6 @@ body[class*=site-bartlett] {
  		width: 40.42415%; 
  		} 
  	}
- 	//COLORS
- 	&.cta-box--violet-turquoise {
- 		background: $bartlettviolet ;
- 		color: $bartlettturquoise ;
- 		}
- 	&.cta-box--gray {
- 		background: $darkgray ;
- 		color: #ffffff ;
- 		}
- 	&.cta-box--purple-peach {
- 		background: $bartlettpurple ;
- 		color: $bartlettpeach ;
- 		}
- 	&.cta-box--turquoise-violet {
- 		background: $bartlettturquoise;
- 		color: $bartlettviolet;
- 		}
 }
 
 
@@ -850,13 +805,16 @@ BOX OUT PARAGRAPH
 
 .paragraphs-item-boxout {
 	height: 100%;
-	padding: 3rem;
 	font-size:.9rem;
+	background: $darkgray;
+	color: #ffffff;
+	padding: 1.5rem;
 	h2 {
 		margin-top:0;
 		padding-top: 0;
 		border-top: none;
-		font-size: 1.2rem;		
+		font-size: 1.2rem;
+		color: $orange;		
 		}
 	h3, h4 {
 		font-size: 1rem;
@@ -864,97 +822,18 @@ BOX OUT PARAGRAPH
 	&.align-to-self  {
 		height:auto;
 		}
-// COLORS
-	&.gray {
-		background: $darkgray;
-		color : #ffffff;
-		a, blockquote {
-			color: #ffffff;
+	svg {
+		stroke: $orange;
 		}
-		svg {
-			stroke: #ffffff;
-		}	
-	}
-	&.violet-turquoise  {
-		background: $bartlettviolet;
-		color: $bartlettturquoise;
-		a, blockquote {
-			color: $bartlettturquoise;
+	a {
+		color: $yellow;
+		text-decoration: none;
+		&:hover {
+			text-decoration: underline;
+			}
 		}
-		svg {
-			stroke: $bartlettturquoise;
-		}
-	}
-	&.violet-turquoise  {
-		background: $bartlettviolet;
-		color: $bartlettturquoise;
-		a, blockquote {
-			color: $bartlettturquoise;
-		}
-		svg {
-			stroke: $bartlettturquoise;
-		}
-	}
-	&.green-pink  {
-		background: $bartlettgreen;
-		color: $bartlettpink;
-		a, blockquote {
-			color: $bartlettpink;
-		}
-		svg {
-			stroke: $bartlettpink;
-		}
-	}
-	&.purple-peach  {
-		background: $bartlettpurple;
-		color: $bartlettpeach;
-		a, blockquote {
-			color: $bartlettpeach
-		}
-		svg {
-			stroke: $bartlettpeach;
-		}
-	}
-	&.turquoise-violet  {
-		background: $bartlettturquoise;
-		color: $bartlettviolet;
-		a, blockquote {
-			color: $bartlettviolet;
-		}
-		svg {
-			stroke: $bartlettviolet;
-		}
-	}
-	&.peach-purple  {
-		background: $bartlettpeach;
-		color: $bartlettpurple;
-		a, blockquote {
-			color: $bartlettpurple;
-		}
-		svg {
-			stroke: $bartlettpurple;
-		}
-	}
-	&.pink-violet  {
-		background: $bartlettpink;
-		color: $bartlettviolet;
-		a, blockquote {
-			color: $bartlettviolet;
-		}
-		svg {
-			stroke: $bartlettviolet;
-		}
-	}
-	&.blue-peach  {
-		background: $bartlettblue;
-		color: $bartlettpeach;
-		a, blockquote {
-			color: $bartlettpeach;
-		}
-		svg {
-			stroke: $bartlettpeach;
-		}
-	}
+		
+
 	@include media-breakpoint-up(xl) {
 		font-size: 1.125rem;
 		h2 {
@@ -965,7 +844,6 @@ BOX OUT PARAGRAPH
 			} 
 	}
 }
-
 
 
 
@@ -1014,6 +892,7 @@ body.sidebar {
 
 /*------------------
 FIVE CARD LAYOUT
+PROSPECTUS AND DESIGN SYSTEM
 ----------------------------*/
 
 .five-card-layout {
@@ -1727,104 +1606,60 @@ $sidebarpara: ".paragraphs-item-content-text-with-heading,.paragraphs-item-block
       	}
 	}
 
-// BARTLETT COLOURS
-	body[class*=site-bartlett].node-type-indigo-page{
-		aside.right-column {
-				#{$sidebarpara} {
-					background-color: $bartlettturquoise;
-				    color: $bartlettviolet;
-				    	a {
-      						color:inherit;
-      						}
-      					svg {
-      						stroke: currentcolor;
-      						}      						
-      				}
- 				&.green-pink {
- 					#{$sidebarpara}  {	
-  	     				background-color: $bartlettgreen;
-      					color: $bartlettpink;
-      					a {
-      						color:inherit;
-      						}
-      					svg {
-      						stroke: currentcolor;
-      						}  
-      					}
-      				}
-   				&.violet-turquoise {
-   					#{$sidebarpara}  {					  
-						background-color: $bartlettviolet;
-						color: $bartlettturquoise;
-						a {
-      						color:inherit;
-      						}
-      					svg {
-      						stroke: currentcolor;
-      						}  
-						}
-					}
-				&.purple-peach {
-					#{$sidebarpara}  {					 
-				    	background-color: $bartlettpurple;
-				    	color: $bartlettpeach;
-				    	a {
-      						color:inherit;
-      						}
-      					svg {
-      						stroke: currentcolor;
-      						}  
-				    	}
-				    }			
-				&.turquoise-violet {
-					#{$sidebarpara}  {					
-				    	background-color: $bartlettturquoise;
-				    	color: $bartlettviolet;
-				    	a {
-      						color:inherit;
-      						}
-      					svg {
-      						stroke: currentcolor;
-      						}  
-				    	}
-				    }				
-				&.orange-violet {
-					#{$sidebarpara}  {					  
-				    	background-color: $bartlettorange;
-				    	color: $bartlettviolet;
-				    	a {
-      						color:inherit;
-      						}
-      					svg {
-      						stroke: currentcolor;
-      						}  
-						}
-					 }				
-				&.yellow-violet {
-					#{$sidebarpara}  {				    
-				    	background-color: $bartlettyellow;
-				    	color: $bartlettviolet;
-				    	a {
-      						color:inherit;
-      						}
-      					svg {
-      						stroke: currentcolor;
-      						}  
-				       }
-				    }				
-				&.blue-peach {
-					#{$sidebarpara}  {					 
-				    	background-color: $bartlettblue;
-				    	color: $bartlettpeach;
-				    	a {
-      						color:inherit;
-      						}
-      					svg {
-      						stroke: currentcolor;
-      						}  
-				    	}
-				    }
-				}
-			}
+
+/*---------------------------
+HARD CODED SIDE BAR BOXOUTS
+----------------------------*/
+
+.box-out { 
+	padding: 24px;
+	margin-bottom: 30px;
+	.box-out__content.div {
+		margin: 0;
+	}
+	p, 
+	a {
+	line-height: 1.5;
+	font-size: 1rem; 
+	}
+ }
+
+
+
+.box-out--gray {
+	background: $darkgray;
+	h3 {
+		color: #ffffff;
+	}
+	p {
+		color: #d6d6d6;
+	}
+	a {
+		color: $yellow;
+	}
+	.forward-link svg {
+		stroke: $yellow;
+	}
+}
+
+
+.box-out--yellow {
+	background-color: $yellow;
+	a {
+		color: $darkgray;
+	}
+}
+
+.box-out--gray-border {
+	border: solid 1px #d6d6d6;
+	padding: 2.5rem 2.5rem 0;
+	margin-bottom: 1.5rem;
+		img {
+		height: 62px;
+		float: left;
+		margin-right: 2rem;
+
+	}
+}
 		
 	
