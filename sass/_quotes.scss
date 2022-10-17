@@ -1,5 +1,7 @@
 
 // IN TEXT FLOW QUOTE.
+// NB BLOCKQUOTE PARAGRAPH TYPE HAS NOT BEEN STYLED
+// STYLING COVERS TESTIMONALS ONLY.
 
 .blockquote.container {
 	max-width: 100%;
@@ -130,4 +132,20 @@
 		}
 	}
 	}
+
+
+
+/*-----------------------------------
+QUOTES AND TESTIMONIALS PINK PROSPECTUS STYLE
+----------------------------------*/
+
+
+.site-prospective-students-graduate,
+.site-prospective-students-undergraduate-redesign,
+.site-prospective-students-undergraduate { 
+.blockquote  blockquote {
+		color: $brightpink;
+	}
+}
+
 

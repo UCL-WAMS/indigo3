@@ -24,25 +24,17 @@ ACCORDION
 				content: "\02C4";
 				}
 			}
-		// OLD CODE REPLACED BY BUTTON VERSION REMOVE ALL REFS TO SPAN AFTER RELEASE.
-		span {
-			display:block;
-			position: relative;
-			padding-right: 2.2rem;
-			&:after{ 
-				content: "\02C5";
-				position: absolute;
-				right: 0;
-				font-size: 1.8rem;
-				top: -7px;
-	 			font-weight: normal; 
-	 			padding-right: 1%;
-				}	
-			}
 		}
 	}
 
-// ACCESSIBLE ACCORDIONS REPLACE SPAN VERSION ABOVE.
+/*---------------------------
+ACCORDION ARROW COLOUR
+----------------------------*/
+
+.accordion .accordion__title button:after {
+		color: $linkblue;
+		}
+
   .accordion {
   	.accordion__title {
   		button {
@@ -87,87 +79,6 @@ dd.accordion__description  {
 
 }
 
-// BARTLETT ACCORDION ARROW COLOUR
-
-body[class*=site-bartlett] {
-	.accordion .accordion__title span:after {
-		color: #000000;
-		}
-}
-
-
-// BARTLETT TOP HOMEPAGE MENU - THREE COLUMNS ON A HUB PAGE.
-// IDEALLY THIS SHOULD BE REPLACED WITH A DEDICATED COMPONENT 
-
-.site-bartlett.node-type-hub-page {
-	.main-content {	
-		.node-hub-page {
-			.four-by-four-by-four {	
-				.accordion {
-					margin-bottom: 0;
-					padding-top:  1.25rem ;
-					
-					.accordion__title{
-						@include bold-four;
-						color: #333;
-						border-bottom: none;
-						border-top: none;									
-						span {
-							padding-left: 1rem; 
-							border-left: #333333 5px solid;
-							margin-left: 1px;
-							&:hover {
-								text-decoration: underline;
-								}	
-							}
-						& span::after {
-						color: black;
-						top: -3px;
-						font-size: 2.5rem;
-						}
-						button {
-							padding-left: 1rem; 
-							border-left: #333333 5px solid;
-							margin-left: 1px;
-							&:hover {
-								text-decoration: underline;
-								}	
-							}
-						& button::after {
-						color: black;
-						top: -3px;
-						font-size: 2.5rem;
-						}
-					}					 
-				}
-				dd.accordion__description  {
-					&.active {
-						border-bottom: 0; 
-						padding-bottom: 0			
-					}
-				}
-			}
-			@include media-breakpoint-up(md){ 
-				.four-by-four-by-four {
-					.accordion__title {
-						padding-right: 1rem;
-						}
-					.four-by-four-by-four__left { 
-						margin-bottom: 0;						
-						}
-					.four-by-four-by-four__middle { 
-						margin-bottom: 0;
-						}
-					.four-by-four-by-four__right {
-						margin-bottom: 0;
-						}
-				}
-	
-			}
-		}
-	}	
-	
-}
 
 
 
@@ -286,20 +197,18 @@ TABS
 }
 
 
-// BARTLETT PALETTE BLUE BECOMES BLACK!
-body[class*=site-bartlett]{
-	.tabs--active-blue  {
-		.tabs__navigation {
-			background: $backgroundlightgray;
-			a { 
-				color: #000000;
-				}
+/*---------------------------
+TABS  COLOURS USED IN PROSPECTUS
+--------------------------*/
+
+.tabs--active-blue  {
+	.tabs__navigation {
+		background: #ebebeb;
 			a.active {
-				background: #000000; 
-				color: #ffffff;
-			}
-	
+			background: $utilityblue; 
+			color: #ffffff;
 		}
+
 	}
 }
 
