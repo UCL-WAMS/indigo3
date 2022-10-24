@@ -1314,7 +1314,12 @@ CRM form embed
 	}
 
 	#ref_guide {
-		display: none;
+		cursor: pointer;
+		color: #0055F0;
+		position: relative;
+		left: 1em;
+		top: 0.35em;
+		font-size: 0.7em;
 	}
 
 	// Error messages
