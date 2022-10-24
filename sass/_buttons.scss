@@ -89,20 +89,3 @@ a.btn-cta__border--inline:hover {
 }
 
 
-body[class*=site-bartlett] {
-	
-	.btn-cta {
-		background-color: #000000; 
-				}
-	a.btn-cta:hover {
-		background: $bartlettturquoise;
-		color: #000000;
-		}
-	 .btn-cta__icon__svg {
-	 	background-color: #858585;
-	 	svg {
-	 		stroke-width: 1;
-	 	}
-	 }
-	
-}
