@@ -4076,7 +4076,8 @@ ol.alpha-list {
       margin-bottom: 0; } }
 
 @media (min-width: 768px) {
-  .six-by-six__right, .six-by-six__left {
+  .six-by-six__right,
+  .six-by-six__left {
     padding-bottom: 1.875rem; }
   .six-by-six__left {
     padding-right: 1rem; }
@@ -5483,8 +5484,7 @@ PROSPECTUS AND DESIGN SYSTEM
 @media (min-width: 768px) {
   .five-card-layout .five-card__left-top {
     padding: 0 1rem 1.875rem; }
-  .five-card-layout .six-by-six__left,
-  .five-card-layout .six-by-six__right {
+  .five-card-layout .six-by-six__left, .five-card-layout .six-by-six__right {
     position: relative;
     width: 100%;
     flex: 0 0 50%;
@@ -5750,7 +5750,16 @@ CRM form embed
   cursor: pointer; }
 
 .paragraphs-item-msd-form-embed #ref_guide {
-  display: none; }
+  cursor: pointer;
+  color: #0055F0;
+  position: relative;
+  left: 0.2em;
+  top: 0.35em; }
+
+.paragraphs-item-msd-form-embed .gg-info {
+  width: 1.3em;
+  height: 1.3em;
+  transform: scale(var(--ggs, 0.7)); }
 
 .paragraphs-item-msd-form-embed .error {
   font-size: 1rem;
