@@ -1,5 +1,5 @@
 /* -------------------
-INDIGO RESET 
+INDIGO RESET
 --------------------- */
 html {
   box-sizing: border-box;
@@ -2878,7 +2878,7 @@ ul.primary {
   margin-bottom: 1.5rem; }
 
 /*--------------------------------
-FEATURE LIST 
+FEATURE LIST
 --------------------------- */
 .feature-list {
   padding-right: 5%;
@@ -2981,8 +2981,8 @@ FEATURE LIST
   .site-prospective-students-undergraduate .feature-list svg {
     stroke: #00818F; }
 
-/*----------------------------------------------  
-TEMPLATE CONTENT CUSTOM STYLES - SEE ALSO MIXINS 
+/*----------------------------------------------
+TEMPLATE CONTENT CUSTOM STYLES - SEE ALSO MIXINS
 ------------------------------------------------*/
 .site-content p,
 .site-content .eight-by-four,
@@ -3055,7 +3055,7 @@ hr.hr-line--dark-grey {
   border-top: 1px solid #333333;
   margin-bottom: 1.5em; }
 
-/*----------------------------------- 
+/*-----------------------------------
 CUSTOM SITE WIDTH BOOTSTRAP CONTAINER
 --------------------------------*/
 .site-width.container, .site-width {
@@ -3759,11 +3759,13 @@ IN PAGE NAV MENU
   padding: 3rem; }
 
 .site-prospective-students-graduate .application-form__input {
-  font-size: 1.125rem;
   line-height: 1.5;
   margin-bottom: .3rem; }
+  .site-prospective-students-graduate #application-form h4 {
+    margin-top: 1.5rem; }
   .site-prospective-students-graduate .application-form__input label {
-    display: inline; }
+    display: inline;
+    font-weight: normal; }
 
 .course-finder {
   padding-top: .7rem; }
@@ -4857,7 +4859,7 @@ VIDEO WITH CAPTION
       margin-right: -1rem; } }
 
 /*--------------------------------
-LINKS 
+LINKS
 ----------------------------------*/
 /*---------------------------------
 ARROW BACK AND FORWARD LINK
@@ -4889,8 +4891,8 @@ a.forward-link__anchor {
   a.forward-link__anchor:hover {
     text-decoration: underline; }
 
-/* ------------------- 
-DOWNLOAD LINKS 
+/* -------------------
+DOWNLOAD LINKS
 ------------------------------------------*/
 .download-prospectus-link,
 .paragraphs-item-file-download {
@@ -5008,7 +5010,7 @@ FEATURE LINK
       width: 50%; } }
 
 /*----------------------
-FEATURE LINK COLOURS AND BOX SHADOW 
+FEATURE LINK COLOURS AND BOX SHADOW
 CURRENTLY IN USE IN PROSPECTUS.
 ---------------------*/
 .feature-link .feature-link_title {
@@ -5125,9 +5127,9 @@ NOW INCLUDED IN DESIGN SYSTEM
 .node-type-hub-page .full-width-promo-card .promo-text > h2 {
   padding-top: 1.5rem; }
 
-/* ------------ 
+/* ------------
 
-ALERTS 
+ALERTS
 
 ----------- */
 .alert {
@@ -5199,7 +5201,7 @@ ALERTS
     stroke-width: 2px; }
 
 /*-----------------------------------
-CARD - NODE TEASER 
+CARD - NODE TEASER
 PROSPECTUS D
 ------------------------------------*/
 .card__icon {
@@ -6084,8 +6086,8 @@ dd.accordion__description {
     padding-bottom: 1.875rem;
     margin-left: 0; }
 
-/*------------- 
-TABS 
+/*-------------
+TABS
 --------------- */
 .tabs__navigation span {
   display: block; }
@@ -6373,7 +6375,7 @@ TEXT HERO
     .hero-content.image-block .hero-pic {
       display: none; } }
 
-/* ---------------------------- 
+/* ----------------------------
 FEED - LISTING - COURSE FINDER - SEARCH BOX
 ------------------------------*/
 .course-search-box,
