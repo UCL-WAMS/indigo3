@@ -791,18 +791,18 @@ IN PAGE NAV MENU
 		background: $backgroundlightgray; 
 		padding: 3rem;
 	}
+	#application-form h4 {
+		margin-top: 1.5rem;
+	}
 	.application-form__input {
-		font-size: 1.125rem;
 		line-height: 1.5;
 		margin-bottom: .3rem;
 		label {
 			display: inline;
+			font-weight: normal;
 		}
 	}
 }
-
-
-
 
 
 
