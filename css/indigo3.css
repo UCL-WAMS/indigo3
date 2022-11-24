@@ -3763,10 +3763,14 @@ IN PAGE NAV MENU
 
 .site-prospective-students-graduate .application-form__input {
   line-height: 1.5;
-  margin-bottom: .3rem; }
+  margin-bottom: .3rem;
+  display: flex; }
+  .site-prospective-students-graduate .application-form__input input {
+    margin: .3rem; }
   .site-prospective-students-graduate .application-form__input label {
     display: inline;
-    font-weight: normal; }
+    font-weight: normal;
+    padding-left: .5rem; }
 
 .course-finder {
   padding-top: .7rem; }

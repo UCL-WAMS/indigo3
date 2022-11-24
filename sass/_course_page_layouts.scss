@@ -797,9 +797,14 @@ IN PAGE NAV MENU
 	.application-form__input {
 		line-height: 1.5;
 		margin-bottom: .3rem;
+		display: flex;
+		input {
+			margin: .3rem;
+		}
 		label {
 			display: inline;
 			font-weight: normal;
+			padding-left: .5rem;
 		}
 	}
 }
