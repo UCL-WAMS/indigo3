@@ -3758,12 +3758,19 @@ IN PAGE NAV MENU
   background: #f5f5f5;
   padding: 3rem; }
 
+.site-prospective-students-graduate #application-form h4 {
+  margin-top: 1.5rem; }
+
 .site-prospective-students-graduate .application-form__input {
-  font-size: 1.125rem;
   line-height: 1.5;
-  margin-bottom: .3rem; }
+  margin-bottom: .3rem;
+  display: flex; }
+  .site-prospective-students-graduate .application-form__input input {
+    margin: .3rem; }
   .site-prospective-students-graduate .application-form__input label {
-    display: inline; }
+    display: inline;
+    font-weight: normal;
+    padding-left: .5rem; }
 
 .course-finder {
   padding-top: .7rem; }
