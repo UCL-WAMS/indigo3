@@ -3759,7 +3759,8 @@ IN PAGE NAV MENU
   padding: 3rem; }
 
 .site-prospective-students-graduate #application-form h4 {
-  margin-top: 1.5rem; }
+  margin-top: 1.5rem;
+  margin-bottom: .7rem; }
 
 .site-prospective-students-graduate .application-form__input {
   line-height: 1.5;
