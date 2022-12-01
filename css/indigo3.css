@@ -3273,6 +3273,10 @@ a.btn-cta__border--inline:hover {
       font-weight: bold; }
     .prog-key-info .prog-key-info__text .prog-key-info__details {
       font-weight: normal; }
+    .prog-key-info .prog-key-info__text .prog-key-info__time {
+      font-size: 1rem;
+      color: #5c5c5c;
+      font-weight: normal; }
     .prog-key-info .prog-key-info__text h5 {
       color: #5c5c5c;
       font-weight: normal; }
