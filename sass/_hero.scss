@@ -216,5 +216,77 @@ TEXT HERO
     
 
  
+/* ---------------------------------
+FULL WIDTH HOME HERO
+-----------------------------------*/
+
+
+.hero-home {
+  height: 100vh;
+
+  max-height: 450px;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+   .hero-home__container { 
+    color: #fff;
+    max-width: 1408px; 
+    margin: 0 auto; 
+    width: 90%;
+    height: 100%; 
+    overflow: hidden;
+    }
+  .hero-home__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    padding-top: 2.5rem;
+    h1 {
+      font-size: 2.5rem;
+      line-height: 1.2;
+      }
+    p {
+      font-size: 1rem;
+      line-height: 1.5;
+      }
+
+    }
+  // image sizing across screen sizes
+
+  @include media-breakpoint-up(md) {
+     max-height: 550px; 
+     .hero-home__text {
+         width: 50%;
+       }
+  } 
+   @include media-breakpoint-up(lg) {
+      max-height: 650px;
+      .hero-home__text {
+      h1 {
+        font-size: 3.75rem;
+        line-height: 1.2;
+        } 
+      p {
+        font-size: 1.125rem;
+        line-height: 1.556;
+        }
+      }
+  } 
+   @include media-breakpoint-up(xl) {
+      max-height: 750px;
+      }        
+
+  @media (min-width: 1675px) {
+          max-height: 950px;          
+          }
+
+  @media (min-width: 2000px) {
+          max-height: 1500px;
+         }
+
+ }
+
 
 

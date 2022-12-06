@@ -147,3 +147,17 @@ DEBUGGING AND BACKEND
   font-family: arial;
   font-size: 14px;
 }
+
+
+/* --------------------
+COOKIE BANNER ACCESSIBILITY 
+------------------------*/
+
+body {
+#sliding-popup.sliding-popup-bottom, 
+#sliding-popup.sliding-popup-bottom 
+.eu-cookie-withdraw-banner, 
+.eu-cookie-withdraw-tab {
+  background-color: #797067;
+  }
+}
