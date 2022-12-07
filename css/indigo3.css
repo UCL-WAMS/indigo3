@@ -118,6 +118,14 @@ DEBUGGING AND BACKEND
   font-family: arial;
   font-size: 14px; }
 
+/* --------------------
+COOKIE BANNER ACCESSIBILITY 
+------------------------*/
+body #sliding-popup.sliding-popup-bottom,
+body #sliding-popup.sliding-popup-bottom .eu-cookie-withdraw-banner,
+body .eu-cookie-withdraw-tab {
+  background-color: #797067; }
+
 .container,
 .container-fluid,
 .container-sm,
@@ -4088,8 +4096,7 @@ ol.alpha-list {
       margin-bottom: 0; } }
 
 @media (min-width: 768px) {
-  .six-by-six__right,
-  .six-by-six__left {
+  .six-by-six__right, .six-by-six__left {
     padding-bottom: 1.875rem; }
   .six-by-six__left {
     padding-right: 1rem; }
@@ -5496,7 +5503,8 @@ PROSPECTUS AND DESIGN SYSTEM
 @media (min-width: 768px) {
   .five-card-layout .five-card__left-top {
     padding: 0 1rem 1.875rem; }
-  .five-card-layout .six-by-six__left, .five-card-layout .six-by-six__right {
+  .five-card-layout .six-by-six__left,
+  .five-card-layout .six-by-six__right {
     position: relative;
     width: 100%;
     flex: 0 0 50%;
@@ -6384,6 +6392,59 @@ TEXT HERO
   @media (max-width: 767.98px) {
     .hero-content.image-block .hero-pic {
       display: none; } }
+
+/* ---------------------------------
+FULL WIDTH HOME HERO
+-----------------------------------*/
+.hero-home {
+  height: 100vh;
+  max-height: 450px;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat; }
+  .hero-home .hero-home__container {
+    color: #fff;
+    max-width: 1408px;
+    margin: 0 auto;
+    width: 90%;
+    height: 100%;
+    overflow: hidden; }
+  .hero-home .hero-home__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    padding-top: 2.5rem; }
+    .hero-home .hero-home__text h1 {
+      font-size: 2.5rem;
+      line-height: 1.2; }
+    .hero-home .hero-home__text p {
+      font-size: 1rem;
+      line-height: 1.5; }
+  @media (min-width: 768px) {
+    .hero-home {
+      max-height: 550px; }
+      .hero-home .hero-home__text {
+        width: 50%; } }
+  @media (min-width: 992px) {
+    .hero-home {
+      max-height: 650px; }
+      .hero-home .hero-home__text h1 {
+        font-size: 3.75rem;
+        line-height: 1.2; }
+      .hero-home .hero-home__text p {
+        font-size: 1.125rem;
+        line-height: 1.556; } }
+  @media (min-width: 1200px) {
+    .hero-home {
+      max-height: 750px; } }
+  @media (min-width: 1675px) {
+    .hero-home {
+      max-height: 950px; } }
+  @media (min-width: 2000px) {
+    .hero-home {
+      max-height: 1500px; } }
 
 /* ---------------------------- 
 FEED - LISTING - COURSE FINDER - SEARCH BOX
