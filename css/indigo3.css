@@ -2863,8 +2863,13 @@ dl {
 
 ul {
   font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
   padding-left: 0;
   line-height: 1.5; }
+  @media (min-width: 992px) {
+    ul {
+      font-size: 1.125rem; } }
 
 .main-content ul,
 .main-content dl {
@@ -2969,7 +2974,6 @@ FEATURE LIST
     .site-prospective-students-undergraduate-redesign .site-content ul li,
     .site-prospective-students-undergraduate section ul li,
     .site-prospective-students-undergraduate .site-content ul li {
-      font-size: 1rem;
       line-height: 1.5;
       padding-left: 1.25rem;
       margin-bottom: 1rem; }
