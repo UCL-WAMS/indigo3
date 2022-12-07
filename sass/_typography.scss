@@ -55,7 +55,7 @@ dl {
 // BULLET LIST USE SMALLER FONT SIZE - OL DL USE BODY TEXT SIZE.
 
 ul { 
-	font-size: 1rem; 
+	@include prose-zero; 
 	padding-left: 0;
 	line-height: 1.5;	
 	}
@@ -177,11 +177,11 @@ PLAIN LIST
 		   	padding-left: 4.6875rem;
 		   }
 		   li {
-			font-size: 1rem; 
+			
 			line-height: 1.5; 
 			padding-left: 1.25rem;
 			margin-bottom: 1rem;
-			&::marker {
+			 &::marker {
 				color: $brightblue;
 				}
 				

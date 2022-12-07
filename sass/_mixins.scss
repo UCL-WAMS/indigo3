@@ -150,7 +150,7 @@
 		font-size: 1.25rem;	
 		}		
 }
-//20px 18px  min-prose-step one (18) used for body text
+//20px 18px  min-prose-step one 
 
 @mixin prose-zero {
 	font-size: 1rem;
@@ -160,7 +160,7 @@
 		font-size: 1.125rem;
 		}
 }
-// 16px 18px prose one in components
+// 16px 18px used for body text
 
 @mixin prose-minus-one {
 	font-size: 0.75rem;
