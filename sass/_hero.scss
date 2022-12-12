@@ -165,10 +165,10 @@ TEXT HERO
       .hero-text {
           padding: 1.25rem 1rem;
         @include media-breakpoint-up(md) { 
-           padding: 1.5625rem 6.33% 1.25rem 0;             
+           padding: 2.5rem 6.33% 1.25rem 0;             
             }
         @include media-breakpoint-up(lg) { 
-            padding: 2.5rem 8.33% 1.875rem 0;
+            padding: 4rem 8.33% 1.875rem 0;
             }      
           }
 

@@ -6356,10 +6356,10 @@ TEXT HERO
   padding: 1.25rem 1rem; }
   @media (min-width: 768px) {
     .hero-content.image-block .hero-text {
-      padding: 1.5625rem 6.33% 1.25rem 0; } }
+      padding: 2.5rem 6.33% 1.25rem 0; } }
   @media (min-width: 992px) {
     .hero-content.image-block .hero-text {
-      padding: 2.5rem 8.33% 1.875rem 0; } }
+      padding: 4rem 8.33% 1.875rem 0; } }
 
 .hero-content.image-block .hero-pic {
   padding: 0;
