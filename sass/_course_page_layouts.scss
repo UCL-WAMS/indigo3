@@ -121,6 +121,11 @@
 		 {
 		 	font-weight: normal;
 		 }
+		.prog-key-info__time {
+			font-size: 1rem;
+			color: #5c5c5c;
+			font-weight: normal;
+		}
 		h5 {
 			color: #5c5c5c;
 			font-weight: normal;
@@ -791,12 +796,21 @@ IN PAGE NAV MENU
 		background: $backgroundlightgray; 
 		padding: 3rem;
 	}
+	#application-form h4 {
+		margin-top: 1.5rem;
+		margin-bottom: .7rem;
+	}
 	.application-form__input {
-		font-size: 1.125rem;
 		line-height: 1.5;
 		margin-bottom: .3rem;
+		display: flex;
+		input {
+			margin: .3rem;
+		}
 		label {
 			display: inline;
+			font-weight: normal;
+			padding-left: .5rem;
 		}
 	}
 }

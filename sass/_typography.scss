@@ -55,7 +55,7 @@ dl {
 // BULLET LIST USE SMALLER FONT SIZE - OL DL USE BODY TEXT SIZE.
 
 ul { 
-	font-size: 1rem; 
+	@include prose-zero; 
 	padding-left: 0;
 	line-height: 1.5;	
 	}
@@ -153,6 +153,56 @@ FEATURE LIST
 		vertical-align: top;
 		padding-left: 0.5rem;
 	}
+
+}
+
+
+// PROSPECTUS LAYOUT AND BULLET AND ICON COLOUR
+
+
+.site-prospective-students-graduate,
+.site-prospective-students-undergraduate-redesign,
+.site-prospective-students-undergraduate { 
+
+
+/*--------------------------
+PLAIN LIST
+-------------------------*/
+	section, 
+	.site-content {
+	
+		ul {
+			padding-left: 1rem;
+		   @include media-breakpoint-up(sm) {
+		   	padding-left: 4.6875rem;
+		   }
+		   li {
+			
+			line-height: 1.5; 
+			padding-left: 1.25rem;
+			margin-bottom: 1rem;
+			 &::marker {
+				color: $brightblue;
+				}
+				
+			}
+		}
+		
+	}
+	
+/*-----------------------------
+FEATURE LIST
+------------------------------*/
+	
+	// feature list icon colour
+	.feature-list {
+		li {color: #333;
+		}
+		svg {
+		stroke: $brightblue;
+		}
+	}
+
 
 }
 

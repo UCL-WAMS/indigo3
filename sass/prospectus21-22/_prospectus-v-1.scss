@@ -1,11 +1,7 @@
-/*----------------------------------------------------------------------------------------------
-THESE STYLES WERE USED DURING THE DEVELOPMENT OF INDIGO3 
-AND ARE A PARTIAL SET OF THE FULL SET OF STYLES NOW IN USE IN
-THE BARTLETT.
-WHERE POSSIBLE THEY NEED TO BE REPLACED IN THE PROSPECTUS HTML BY 
-GENERIC STYLES IN THE NEXT ITERATION OF THIS SITE
-AND THIS FOLDER DELETED.  THESE ARE NOT CUSTOM STYLES!
---------------------------------------------------------------------------------------------*/
+// CUSTOM LAYOUT TWEAKS FOR PROSPECTUS
+// MOSTLY RELATES TO THE DIFFERENT LEFT AND RIGHT CONTENT MARGINS
+
+
 /*-----------------------
 HUB PAGE LAYOUT
 ------------------------*/
@@ -29,216 +25,9 @@ HUB PAGE LAYOUT
 	}
 }
 
-
-
 .site-prospective-students-graduate,
 .site-prospective-students-undergraduate-redesign,
 .site-prospective-students-undergraduate { 
-
-//BLUE HEADER 
-
-	.header {
-		border-bottom: $brightblue 1em solid;
-		#logo {  
-			background: $brightblue;
-			}
-		}
-// HERO
-	.hero-content.text-only {
-		background-color: $brightblue;
-		color: #fff;
-		padding: 2.5rem 1rem; 	
- 		
- 		.hero-text{
-   	 	@include make-col-ready();
-
-    	@include media-breakpoint-up(sm) {
-      	@include make-col(12);
-    	}
-    	padding: 0;
-    
-  		}
-		h1 {
-			font-size: 2.25rem;
-			line-height: 1.2
-		}
-		 p {
-		 	font-weight: bold;
-		 	font-size: 1.5rem;
-			line-height: 1.9rem;
-		}
-	   .hero-pic {
-	   		display: none;
-	   	}
-
- 	@include media-breakpoint-up(md) { 
-		padding: 4.125rem 8.522% 4.125rem 8.522%;
-		 	h1 {
-	 		font-size: 3.8rem;
-			line-height:  1;
-			}
-			p {
-			font-size: 1.875rem;
-			line-height: 1.25;
-			}	
-		}
-
-	}
-
-
-/*--------------------------
-PLAIN LIST
--------------------------*/
-section, 
-.site-content {
-
-	ul {
-		padding-left: 1rem;
-	   @include media-breakpoint-up(sm) {
-	   	padding-left: 4.6875rem;
-	   }
-	   li {
-		font-size: 1rem; 
-		line-height: 1.5; 
-		padding-left: 1.25rem;
-		margin-bottom: 1rem;
-		&::marker {
-			color: $brightblue;
-			}
-			
-		}
-	}
-	
-}
-
-/*-----------------------------
-FEATURE LIST
-------------------------------*/
-
-// feature list icon colour
-.feature-list {
-	li {color: #333;
-	}
-	svg {
-	stroke: $brightblue;
-	}
-}
-
-/*-------------------------------
-CARD LINK
---------------------------------*/
-
-// TEAL CARDLINK - CURRENTLY USED IN GRADUATE PROSPECTUS.  LS 1.22
-.paragraphs-item-card-link { 
-	background: $brightblue; 
-	color: #ffffff; 
-	}
-
-
-/*----------------------
-FEATURE LINK
----------------------*/
-
-	.feature-link {
-		.feature-link_title {
-			background: $yellow; 
-			}
-		.feature-link__icon {
-			background-color: $yellow;
-			}
-	
-		
-	@include media-breakpoint-up(md) {
-			&.clearfix {
-			box-shadow: 3px 10px 10px -6px rgba(51,51,51,0.75);
-			}
-		}
-	}
-
-/* -------------------------
-BOXOUT PARAGRAPHS
---------------------------*/
-
-.paragraphs-item-boxout.gray {
-	background: $darkgray;
-	color: #ffffff;
-	 padding: 1.5rem;
-	 h2 {
-	 	color: $orange;
-	 }
-	 svg {
-	 	stroke: $yellow;
-	 }
-	 a {color: $yellow;
-	 	&:hover {
-	 		color: $yellow;
-	 	}
-	 }
-}
-
-
-/*---------------------------
-HARD CODED SIDE BAR BOXOUTS
-----------------------------*/
-
-.box-out { 
-	padding: 24px;
-	margin-bottom: 30px;
-	.box-out__content.div {
-		margin: 0;
-	}
-	p, 
-	a {
-	line-height: 1.5;
-	font-size: 1rem; 
-	}
- }
-
-
-
-.box-out--gray {
-	background: $darkgray;
-	h3 {
-		color: #ffffff;
-	}
-	p {
-		color: #d6d6d6;
-	}
-	a {
-		color: $yellow;
-	}
-	.forward-link svg {
-		stroke: $yellow;
-	}
-}
-
-
-.box-out--yellow {
-	background-color: $yellow;
-	a {
-		color: $darkgray;
-	}
-}
-
-.box-out--gray-border {
-	border: solid 1px #d6d6d6;
-	padding: 2.5rem 2.5rem 0;
-	margin-bottom: 1.5rem;
-		img {
-		height: 62px;
-		float: left;
-		margin-right: 2rem;
-
-	}
-}
-
-/*-----------------------------------
-CARD - NODE TEASER
-------------------------------------*/
-
-.card__icon {
-	background-color: $yellow;
-	}
 
 /*---------------------------------
 SECTION PADDING
@@ -248,45 +37,6 @@ SECTION PADDING
 	padding: 3.75rem 0;
 }
 
-/*-----------------------------------
-QUOTES AND TESTIMONIALS
-----------------------------------*/
-
-.blockquote  blockquote {
-		color: #AC145A;
-	}
-
-
-
-
-
-/*---------------------------
-TABS
---------------------------*/
-
-.tabs--active-blue  {
-	.tabs__navigation {
-		background: #ebebeb;
-			a.active {
-			background: $utilityblue; 
-			color: #ffffff;
-		}
-
-	}
-}
-
-
-/*---------------------------
-ACCORDIONS
-----------------------------*/
-
-.accordion .accordion__title span:after {
-		color: #0D68CF;
-		}
-.accordion .accordion__title button:after {
-		color: #0D68CF;
-		}
-
 
 /*-----------------------------
 DROP SHADOW FOR CONTACT BOX
@@ -295,11 +45,9 @@ DROP SHADOW FOR CONTACT BOX
 		box-shadow: 3px 10px 10px -6px rgba(51,51,51,0.75);
 		}
 }
-// SITE CLASS CLOSES HERE 
 
-
-
-// TEMPORARY OVERRIDE OF FLEX HEIGHT FOR CARDS ON HOMEPAGE
+// TEMPORARY OVERRIDE OF FLEX HEIGHT FOR CARDS ON HOMEPAGE 
+// THESE WERE ADDED BEFORE HEIGHT OPTION
 
 #graduate-degrees  .paragraphs-item-card-link {
 	height: auto;

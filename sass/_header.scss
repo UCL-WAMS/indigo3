@@ -3,42 +3,6 @@
 -----------------------*/
 
 
-// REMOVED FOR NOW MENU LINKS IN FOOTER MENU
-
-// .top-menu-tab {
-// 	position: absolute;
-// 	top: 0;
-// 	left: 35%;
-// 	text-align: center;
-// 	background: #fff;
-// 	z-index: 100;
-// 	border-radius: 0 0 20px 20px; 
-// 	padding: 11px 23px;
-// 	color: #0D68CF;
-// 	font-weight: bold;
-// 	box-shadow: 0px 5px 5px -1px rgba(64,64,64,0.75);
-// 	font-size: .8rem;
-// 		.top-menu-tab__dt {
-// 			display: none;
-// 		}
-// 		svg, span {
-// 			vertical-align: middle;
-// 		}
-// @include media-breakpoint-up(md) {
-// 	left: 42.8%;
-// 	.top-menu-tab__sm {
-// 		display: none;
-// 		}
-// 	.top-menu-tab__dt {
-// 		display: inline-block;
-// 		}
-// 	.masthead svg{
-// 		display: none;
-// 		}
-// 	}
-// }
-
-
 .top-menu-tab {
 	display: none;
 }
@@ -176,9 +140,15 @@
   		    	}	
   		}
 
+.site-prospective-students-graduate,
+.site-prospective-students-undergraduate-redesign,
+.site-prospective-students-undergraduate { 
 
- body[class*=site-bartlett] {
-	.header__menu svg.feather.feather-menu.icon {
-		 stroke: $bartlettturquoise;
+//BLUE HEADER FOR PROSPECTUS
+	.header {
+		border-bottom: $brightblue 1em solid;
+		#logo {  
+			background: $brightblue;
+			}
+		}
 	}
-}
