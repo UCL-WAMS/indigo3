@@ -4100,7 +4100,8 @@ ol.alpha-list {
       margin-bottom: 0; } }
 
 @media (min-width: 768px) {
-  .six-by-six__right, .six-by-six__left {
+  .six-by-six__right,
+  .six-by-six__left {
     padding-bottom: 1.875rem; }
   .six-by-six__left {
     padding-right: 1rem; }
@@ -5507,8 +5508,7 @@ PROSPECTUS AND DESIGN SYSTEM
 @media (min-width: 768px) {
   .five-card-layout .five-card__left-top {
     padding: 0 1rem 1.875rem; }
-  .five-card-layout .six-by-six__left,
-  .five-card-layout .six-by-six__right {
+  .five-card-layout .six-by-six__left, .five-card-layout .six-by-six__right {
     position: relative;
     width: 100%;
     flex: 0 0 50%;
@@ -5727,7 +5727,7 @@ CRM form embed
 .paragraphs-item-msd-form-embed form [data-layout="true"] {
   margin: 0 !important; }
 
-.paragraphs-item-msd-form-embed form div {
+.paragraphs-item-msd-form-embed form > div {
   padding-left: 0 !important; }
 
 .paragraphs-item-msd-form-embed .marketing-field {
@@ -5748,10 +5748,6 @@ CRM form embed
 .paragraphs-item-msd-form-embed select:focus,
 .paragraphs-item-msd-form-embed textarea:focus-visible {
   outline: 2px solid #0055F0; }
-
-.paragraphs-item-msd-form-embed #personal_dateils div.emptyContainer,
-.paragraphs-item-msd-form-embed div.emptyContainer .columnContainer {
-  padding: 0 !important; }
 
 .paragraphs-item-msd-form-embed ::placeholder,
 .paragraphs-item-msd-form-embed input,
@@ -5820,6 +5816,9 @@ CRM form embed
 .paragraphs-item-msd-form-embed div.containerWrapper div.columnContainer {
   margin-top: 0 !important; }
 
+.paragraphs-item-msd-form-embed .alert .alert__content {
+  width: 92%; }
+
 .paragraphs-item-msd-form-embed dialog div p.lp-ellipsis {
   font-size: 1rem; }
 
@@ -5842,7 +5841,7 @@ CRM form embed
 .paragraphs-item-msd-form-embed dialog#confirmSubmit,
 .paragraphs-item-msd-form-embed button#confirm,
 .paragraphs-item-msd-form-embed #nextBtn,
-.paragraphs-item-msd-form-embed #confirmClose {
+.paragraphs-item-msd-form-embed .closePopup {
   background: #0055F0;
   color: #ffffff;
   font-size: 1rem;
@@ -5854,8 +5853,8 @@ CRM form embed
 .paragraphs-item-msd-form-embed button[type="submit"] {
   padding: 16px; }
 
+.paragraphs-item-msd-form-embed .closePopup,
 .paragraphs-item-msd-form-embed #cancelClose,
-.paragraphs-item-msd-form-embed #confirmClose,
 .paragraphs-item-msd-form-embed #CloseGuide,
 .paragraphs-item-msd-form-embed button#confirm,
 .paragraphs-item-msd-form-embed div[data-editorblocktype="SubmitButtonBlock"] #exitwithoutsaving,
@@ -5864,9 +5863,6 @@ CRM form embed
 
 .paragraphs-item-msd-form-embed #cancelClose {
   margin: 10px; }
-
-.paragraphs-item-msd-form-embed #confirmClose {
-  margin: 10px 0; }
 
 .paragraphs-item-msd-form-embed #submit_button:enabled {
   background: #0055F0 !important; }
@@ -5897,7 +5893,7 @@ CRM form embed
 
 .paragraphs-item-msd-form-embed button[type=submit]:hover,
 .paragraphs-item-msd-form-embed #nextBtn:hover,
-.paragraphs-item-msd-form-embed #confirmClose:hover,
+.paragraphs-item-msd-form-embed .closePopup:hover,
 .paragraphs-item-msd-form-embed div[data-form-block-id] .onFormSubmittedFeedbackButton.onFormSubmittedFeedbackButtonSuccess:hover {
   background: #003CA8;
   cursor: pointer; }
@@ -5949,6 +5945,8 @@ CRM form embed
     -webkit-border-radius: 1px !important;
     -moz-border-radius: 1px !important;
     border-radius: 1px !important; }
+  .paragraphs-item-msd-form-embed .alert .alert__icon {
+    width: 5%; }
   .paragraphs-item-msd-form-embed .button {
     padding: 10px 25px; }
   .paragraphs-item-msd-form-embed button[type="submit"],

@@ -1257,7 +1257,7 @@ CRM form embed
 		margin: 0 !important;
 	}
 
-	form div {
+	form > div {
 		padding-left: 0 !important;
 	}
 
@@ -1282,11 +1282,6 @@ CRM form embed
 	select:focus,
 	textarea:focus-visible {
 		outline: 2px solid #0055F0;
-	}
-
-	#personal_dateils div.emptyContainer,
-	div.emptyContainer .columnContainer {
-		padding: 0 !important;
 	}
 
 	// Placeholder and input text
@@ -1374,6 +1369,11 @@ CRM form embed
 		margin-top:  0 !important;
 	}
 
+	// Alert boxes
+	.alert .alert__content {
+		width:92%
+	}
+
 	// Dialog pop-up
 	dialog div p.lp-ellipsis {
 		font-size: 1rem;
@@ -1402,7 +1402,7 @@ CRM form embed
 	dialog#confirmSubmit,
 	button#confirm,
 	#nextBtn,
-	#confirmClose {
+	.closePopup {
 		background: #0055F0;
 		color: #ffffff;
 		font-size: 1rem;
@@ -1416,8 +1416,8 @@ CRM form embed
 		padding: 16px;
 	}
 
+	.closePopup,
 	#cancelClose,
-	#confirmClose,
 	#CloseGuide,
 	button#confirm,
 	div[data-editorblocktype="SubmitButtonBlock"] #exitwithoutsaving,
@@ -1427,10 +1427,6 @@ CRM form embed
 
 	#cancelClose {
 		margin: 10px;
-	}
-
-	#confirmClose {
-		margin: 10px 0;
 	}
 
 	#submit_button:enabled {
@@ -1466,7 +1462,7 @@ CRM form embed
 
 	button[type=submit]:hover,
 	#nextBtn:hover,
-	#confirmClose:hover,
+	.closePopup:hover,
 	div[data-form-block-id]	.onFormSubmittedFeedbackButton.onFormSubmittedFeedbackButtonSuccess:hover {
 		background: #003CA8;
 		cursor: pointer;
@@ -1539,6 +1535,11 @@ CRM form embed
 			-webkit-border-radius: 1px !important;
 			-moz-border-radius: 1px !important;
 			border-radius: 1px !important;
+		}
+
+		// Alert box
+		.alert .alert__icon {
+			width: 5%;
 		}
 
 		// Buttons
