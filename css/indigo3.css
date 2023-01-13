@@ -5822,7 +5822,7 @@ CRM form embed
 .paragraphs-item-msd-form-embed dialog div p.lp-ellipsis {
   font-size: 1rem; }
 
-.paragraphs-item-msd-form-embed #reference_type_guide {
+.paragraphs-item-msd-form-embed dialog.dialogPopup {
   border: 0;
   width: 50%;
   box-shadow: 0 0 16px rgba(0, 0, 0, 0.12);
