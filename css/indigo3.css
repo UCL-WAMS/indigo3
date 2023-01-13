@@ -5769,7 +5769,7 @@ CRM form embed
   background-size: 1.3em auto, 100%;
   cursor: pointer; }
 
-.paragraphs-item-msd-form-embed #ref_guide {
+.paragraphs-item-msd-form-embed .infoIcon {
   cursor: pointer;
   color: #0055F0;
   position: relative;
