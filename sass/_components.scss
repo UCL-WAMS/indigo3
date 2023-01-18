@@ -1257,7 +1257,8 @@ CRM form embed
 		margin: 0 !important;
 	}
 
-	form > div {
+	form > div,
+	.emptyContainer, div.columnContainer {
 		padding-left: 0 !important;
 	}
 

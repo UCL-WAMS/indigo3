@@ -5727,7 +5727,8 @@ CRM form embed
 .paragraphs-item-msd-form-embed form [data-layout="true"] {
   margin: 0 !important; }
 
-.paragraphs-item-msd-form-embed form > div {
+.paragraphs-item-msd-form-embed form > div,
+.paragraphs-item-msd-form-embed .emptyContainer, .paragraphs-item-msd-form-embed div.columnContainer {
   padding-left: 0 !important; }
 
 .paragraphs-item-msd-form-embed .marketing-field {
