@@ -14,14 +14,6 @@
     Drupal.behaviors.ucl_indigo_access_ucl = {
         attach: function (context, settings) {
             $(document).ready(function() {
-                // Initialise the widget.
-                $("#access-ucl-widget").after("<div id=\"access-ucl-form\">Access UCL widget loading</div>");
-
-                var maybe = {
-                    "care-leaver":"Students who attend or attended a UK private school who are care leavers are considered on a case-by-case basis. Email <a href=\"mailto:wp.accessucl@ucl.ac.uk\">wp.accessucl@ucl.ac.uk</a> with your personal details for a decision.",
-                    "estranged":"You may be eligible for Access UCL, please contact <a href=\"mailto:wp.accessucl@ucl.ac.uk\">wp.accessucl@ucl.ac.uk</a> for further information."
-                }
-
                 // Utility functions 
                 // Trim shim, for older browsers.
                 if (typeof(String.prototype.trim) === "undefined") {
@@ -81,6 +73,18 @@
                 }
                 // End utility functions.
 
+                // check for EFY widget version.
+                var isEFY = $("#access-ucl-widget").attr("data-wid") == "efy";
+                var text1 = (isEFY ? "Engineering Foundation Year" : "Access UCL");
+                var text2 = (isEFY ? "to apply for the Engineering Foundation Year" : "for Access UCL");
+
+                // Initialise the widget.
+                $("#access-ucl-widget").after("<div id=\"access-ucl-form\">" + text1 + " widget loading</div>");
+
+                var maybe = {
+                    "care-leaver":"Students who attend or attended a UK private school who are care leavers are considered on a case-by-case basis. Email <a href=\"mailto:wp.accessucl@ucl.ac.uk\">wp.accessucl@ucl.ac.uk</a> with your personal details for a decision.",
+                    "estranged":"You may be eligible " + text2 + ", please contact <a href=\"mailto:wp.accessucl@ucl.ac.uk\">wp.accessucl@ucl.ac.uk</a> for further information."
+                }
 
                 // Event handling from here.
     
@@ -364,7 +368,7 @@
                 // End event handling.
                 
                 // HTML template
-var widget = '<p>Enter your details below to check your eligibility for Access UCL (you will need your home postcode and the postcode of the school where you took your A levels).</p>\
+var widget = '<p>Enter your details below to check your eligibility ' + text2 + ' (you will need your home postcode and the postcode of the school where you took your A levels).</p>\
 <p>Please bear in mind that the results given here are indicative only.</p>\
 \
 <form action="" method="get" id="checker-widget" autocomplete="off">\
@@ -441,7 +445,7 @@ var widget = '<p>Enter your details below to check your eligibility for Access U
                   <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" fill="none" stroke="#0d68cf" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-alert-circle icon" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>\
               </div>\
               <div class="alert__content">\
-                  <h4>Sorry, we cannot determine whether you are eligible for Access UCL</h4>\
+                  <h4>Sorry, we cannot determine whether you are eligible ' + text2 + '</h4>\
                   <div id="school-checked-indeterminate" class="hiddenField">\
                       <ul>\
                           <li class="imd"></li>\
@@ -461,7 +465,7 @@ var widget = '<p>Enter your details below to check your eligibility for Access U
                   <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" fill="none" stroke="#0d68cf" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-alert-circle icon" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>\
               </div>\
               <div class="alert__content">\
-              <h4>Sorry, you are not eligible for Access UCL</h4>\
+              <h4>Sorry, you are not eligible ' + text2 + '</h4>\
                   <div id="school-checked-nopass" class="hiddenField">\
                       <ul>\
                           <li class="imd"></li>\
@@ -469,10 +473,10 @@ var widget = '<p>Enter your details below to check your eligibility for Access U
                           <li class="acorn"></li>\
                           <li class="school"></li>\
                       </ul>\
-                      <p id="postcode-criteria-msg">As you do not meet any of the three home postcode criteria you are not eligible for Access UCL.</p>\
-                  </div>\
-                  <p>Based on the information you\'ve provided, if your application to UCL is successful, you will only receive the standard UCL offer. You will not receive an Access UCL offer.</p>\
-              </div>\
+                      <p id="postcode-criteria-msg">As you do not meet any of the three home postcode criteria you are not eligible ' + text2 + '.</p>\
+                  </div>' +
+                  (isEFY ? '' : '<p>Based on the information you\'ve provided, if your application to UCL is successful, you will only receive the standard UCL offer. You will not receive an Access UCL offer.</p>') +
+              '</div>\
           </div>\
       </div>\
       <div class="hiddenField" id="eligible">\
@@ -482,7 +486,7 @@ var widget = '<p>Enter your details below to check your eligibility for Access U
                   <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" fill="none" stroke="#0d68cf" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-alert-circle icon" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>\
               </div>\
               <div class="alert__content">\
-                  <h4>Great news! You are eligible for Access UCL</h4>\
+                  <h4>Great news! You are eligible ' + text2 + '</h4>\
                   <div id="school-checked-pass" class="hiddenField">\
                       <ul>\
                           <li class="imd"></li>\
@@ -490,10 +494,10 @@ var widget = '<p>Enter your details below to check your eligibility for Access U
                           <li class="acorn"></li>\
                           <li class="school"></li>\
                       </ul>\
-                      <p>As you meet at least one of the three home postcode criteria, and attended a state school, you are eligible for Access UCL.</p>\
-                  </div>\
-                  <p>Based on the information you\'ve provided, if your application to UCL is successful, you will receive an Access UCL offer.</p>\
-                  <p id="time-in-care" class="hiddenField">Please ensure you tick the \'time in care\' box on your UCAS application.</p>\
+                      <p>As you meet at least one of the three home postcode criteria, and attended a state school, you are eligible ' + text2 + '.</p>\
+                  </div>' +
+                  (isEFY ? '' : '<p>Based on the information you\'ve provided, if your application to UCL is successful, you will receive an Access UCL offer.</p>') +
+                  '<p id="time-in-care" class="hiddenField">Please ensure you tick the \'time in care\' box on your UCAS application.</p>\
               </div>\
           </div>\
       </div>\
@@ -504,7 +508,7 @@ var widget = '<p>Enter your details below to check your eligibility for Access U
                   <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" fill="none" stroke="#0d68cf" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-alert-circle icon" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>\
               </div>\
               <div class="alert__content">\
-                  <h4>You may still be eligible for Access UCL</h4>\
+                  <h4>You may still be eligible ' + text2 + '</h4>\
                   <p id="maybe-text">Students who attend or attended a UK private school who are care leavers are considered on a case-by-case basis. Email <a href="mailto:wp.accessucl@ucl.ac.uk">wp.accessucl@ucl.ac.uk</a> with your personal details for a decision.</p>\
               </div>\
           </div>\
