@@ -189,8 +189,9 @@
                     }
                 });
 
+                var year = '2024';
                 var eligibilityData = {};
-                var get_url = (location.href.indexOf("local-micro.lndo.site") > -1?"https://local-micro.lndo.site/access-ucl/www/eligibility-2023.php":(location.href.indexOf("wwwapps-uat.ucl.ac.uk") > -1?"https://wwwapps-uat.ucl.ac.uk/digital-presence-services/access-ucl/www/eligibility-2023.php":"https://www.ucl.ac.uk/digital-presence-services/access-ucl/www/eligibility-2023.php"));
+                var get_url = (location.href.indexOf("local-micro.lndo.site") > -1?"https://local-micro.lndo.site/access-ucl/www/eligibility-" + year + ".php":(location.href.indexOf("wwwapps-uat.ucl.ac.uk") > -1?"https://wwwapps-uat.ucl.ac.uk/digital-presence-services/access-ucl/www/eligibility-" + year + ".php":"https://www.ucl.ac.uk/digital-presence-services/access-ucl/www/eligibility-" + year + ".php"));
                 $("body").on("keyup", ".selector-widget", function() {
                     var schooltype_postcode = $(this).attr("name").replace(/-/g,"_");
                     var parts = schooltype_postcode.split("_");
@@ -199,6 +200,7 @@
                     var namestring = schooltype + "_name";
                     var school_postcode = $(this).val();
                     eligibilityData["schoolsearch"] = schooltype;
+                    eligibilityData["year"] = year;
                     if (school_postcode.length > 1) {
                         // Start the AJAX lookup after two characters, to catch postcodes like N3, G5 etc.
                          // The list will appear as they type, allowing the user to select their school by name.
@@ -206,6 +208,9 @@
                         $.get(get_url, eligibilityData, function(data) {
                             var html = "";
                             if (data) {
+                                data.sort(function(a, b) {
+                                    return a["school_name"] < b["school_name"] ? -1 : (a["school_name"] > b["school_name"] ? 1 : 0);
+                                });
                                 for (var i = 0; i < data.length; i++) {
                                     html += "<div class='myoption'><span class='schoolname'>" + data[i]["school_name"] + "</span> (<span class='school-postcode'>" + data[i]["postcode"] + "</span>)</div>";
                                 }
@@ -286,7 +291,7 @@
                                             messages.acorn = "Your postcode Acorn score is not relevant as you attended an Independent school for A-level."
                                         } else {
                                             messages.school = "Your A-Level school is an eligible school.";
-                                            if (data["polar_4_quintile"] === null || data["polar_4_quintile"] === "" || data["polar_4_quintile"] === 0 || data["polar_4_quintile"] == "0" || data["polar_4_quintile"] == "NULL") {
+                                            if (data["polar_4_quintile"] === null || data["polar_4_quintile"] === "" || data["polar_4_quintile"] === 0 || data["polar_4_quintile"] == "0" || data["polar_4_quintile"] == "NULL" || data["polar_4_quintile"] == "R") {
                                                 indeterminate = true;
                                                 messages.polar = "Your postcode is not available in our POLAR 4 database.";
                                             } else if (data["polar_4_quintile"] !== "" && data["polar_4_quintile"] != "0" && data["polar_4_quintile"] > 0 && data["polar_4_quintile"] < 2) {
@@ -368,10 +373,10 @@
                 // End event handling.
                 
                 // HTML template
-var widget = '<p>Enter your details below to check your eligibility ' + text2 + ' (you will need your home postcode and the postcode of the school where you took your A levels).</p>\
+/*var widget = '<p>Enter your details below to check your eligibility ' + text2 + ' (you will need your home postcode and the postcode of the school where you took your A levels).</p>\
 <p>Please bear in mind that the results given here are indicative only.</p>\
-\
-<form action="" method="get" id="checker-widget" autocomplete="off">\
+\*/
+var widget = '<form action="" method="get" id="checker-widget" autocomplete="off">\
     <fieldset>\
       <h3 class="darr">Start here &darr;</h3>\
       <div class="field" id="domiciled-uk">\
@@ -432,10 +437,8 @@ var widget = '<p>Enter your details below to check your eligibility ' + text2 + 
           <div>Are you a young adult carer* or estranged from your family**?</div>\
           <div><label><input type="radio" name="estranged" value="Y"> Yes</label></div>\
           <div><label><input type="radio" name="estranged" value="N"> No</label></div>\
-          <p class="discreet">* A young adult carer is someone whose life is adversely affected by caring for a family member who has a chronic physical or sensory disability, learning disability, medical conditions, mental health difficulties, or has an addiction.<br />\
-          A young adult carer is someone who provides ongoing unpaid support to a family member who could not manage without this help. This usually means looking after one of their parents or caring for a brother or sister.<br />\
-          Young adult carers must be aged 20 or under on their first day of study at UCL.</p>\
-          <p class="discreet">** This means you no longer have the support of your family due to a permanent breakdown in your relationship(s) which has led to ceased contact for at least a year. This might mean your biological, step or adoptive parents, or wider family members who have been responsible for supporting you in the past. Students estranged from their family must be aged under 25 on their first day of study at UCL.</p>\
+          <p class="discreet">* For Access UCL eligibility purposes, we define a young carer as someone whose life is adversely affected by providing substantial, ongoing care for a parent/guardian that they live with and who has a chronic illness or condition. To be eligible, young carers must be aged under 21 on their first day at UCL and be attending, or have attended a state school for their A levels, or equivalent qualifications.</p>\
+          <p class="discreet">** For Access UCL eligibility purposes, we define an applicant estranged from their family as someone who has no relationship with, or support from, their family.  The estrangement must be permanent, with no contact for at least a year. To be eligible, students estranged from their family must be aged under 25 on their first day of study at UCL and be attending, or have attended a state school for their A levels, or equivalent qualifications.</p>\
       </div>\
 \
       <div class="hiddenField" id="indeterminate">\
