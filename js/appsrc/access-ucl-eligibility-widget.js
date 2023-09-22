@@ -73,17 +73,12 @@
                 }
                 // End utility functions.
 
-                // check for EFY widget version.
-                var isEFY = $("#access-ucl-widget").attr("data-wid") == "efy";
-                var text1 = (isEFY ? "Engineering Foundation Year" : "Access UCL");
-                var text2 = (isEFY ? "to apply for the Engineering Foundation Year" : "for Access UCL");
-
                 // Initialise the widget.
-                $("#access-ucl-widget").after("<div id=\"access-ucl-form\">" + text1 + " widget loading</div>");
+                $("#access-ucl-widget").after("<div id=\"access-ucl-form\">Access UCL widget loading</div>");
 
                 var maybe = {
                     "care-leaver":"Students who attend or attended a UK private school who are care leavers are considered on a case-by-case basis. Email <a href=\"mailto:wp.accessucl@ucl.ac.uk\">wp.accessucl@ucl.ac.uk</a> with your personal details for a decision.",
-                    "estranged":"You may be eligible " + text2 + ", please contact <a href=\"mailto:wp.accessucl@ucl.ac.uk\">wp.accessucl@ucl.ac.uk</a> for further information."
+                    "estranged":"You may be eligible for Access UCL. Please read the definitions and additional information below."
                 }
 
                 // Event handling from here.
@@ -189,8 +184,9 @@
                     }
                 });
 
+                var year = '2024';
                 var eligibilityData = {};
-                var get_url = (location.href.indexOf("local-micro.lndo.site") > -1?"https://local-micro.lndo.site/access-ucl/www/eligibility-2023.php":(location.href.indexOf("wwwapps-uat.ucl.ac.uk") > -1?"https://wwwapps-uat.ucl.ac.uk/digital-presence-services/access-ucl/www/eligibility-2023.php":"https://www.ucl.ac.uk/digital-presence-services/access-ucl/www/eligibility-2023.php"));
+                var get_url = (location.href.indexOf("local-micro.lndo.site") > -1?"https://local-micro.lndo.site/access-ucl/www/eligibility-" + year + ".php":(location.href.indexOf("wwwapps-uat.ucl.ac.uk") > -1?"https://wwwapps-uat.ucl.ac.uk/digital-presence-services/access-ucl/www/eligibility-" + year + ".php":"https://www.ucl.ac.uk/digital-presence-services/access-ucl/www/eligibility-" + year + ".php"));
                 $("body").on("keyup", ".selector-widget", function() {
                     var schooltype_postcode = $(this).attr("name").replace(/-/g,"_");
                     var parts = schooltype_postcode.split("_");
@@ -199,6 +195,7 @@
                     var namestring = schooltype + "_name";
                     var school_postcode = $(this).val();
                     eligibilityData["schoolsearch"] = schooltype;
+                    eligibilityData["year"] = year;
                     if (school_postcode.length > 1) {
                         // Start the AJAX lookup after two characters, to catch postcodes like N3, G5 etc.
                          // The list will appear as they type, allowing the user to select their school by name.
@@ -206,6 +203,9 @@
                         $.get(get_url, eligibilityData, function(data) {
                             var html = "";
                             if (data) {
+                                data.sort(function(a, b) {
+                                    return a["school_name"] < b["school_name"] ? -1 : (a["school_name"] > b["school_name"] ? 1 : 0);
+                                });
                                 for (var i = 0; i < data.length; i++) {
                                     html += "<div class='myoption'><span class='schoolname'>" + data[i]["school_name"] + "</span> (<span class='school-postcode'>" + data[i]["postcode"] + "</span>)</div>";
                                 }
@@ -286,7 +286,7 @@
                                             messages.acorn = "Your postcode Acorn score is not relevant as you attended an Independent school for A-level."
                                         } else {
                                             messages.school = "Your A-Level school is an eligible school.";
-                                            if (data["polar_4_quintile"] === null || data["polar_4_quintile"] === "" || data["polar_4_quintile"] === 0 || data["polar_4_quintile"] == "0" || data["polar_4_quintile"] == "NULL") {
+                                            if (data["polar_4_quintile"] === null || data["polar_4_quintile"] === "" || data["polar_4_quintile"] === 0 || data["polar_4_quintile"] == "0" || data["polar_4_quintile"] == "NULL" || data["polar_4_quintile"] == "R") {
                                                 indeterminate = true;
                                                 messages.polar = "Your postcode is not available in our POLAR 4 database.";
                                             } else if (data["polar_4_quintile"] !== "" && data["polar_4_quintile"] != "0" && data["polar_4_quintile"] > 0 && data["polar_4_quintile"] < 2) {
@@ -300,10 +300,8 @@
                                                 pass = true;
                                                 messages.imd = "Your postcode is IMD eligible.";
                                             }
-                                            if (data["acorn_group"] === null || data["acorn_group"] === "" || data["acorn_group"] === 0 || data["acorn_group"] == "0" || data["acorn_group"] == "NULL") {
-                                                indeterminate = true;
-                                                messages.acorn = "Your postcode is not available in our Acorn database.";
-                                            } else if (data["acorn_group"] !== "" && data["acorn_group"] != "0" && acorns.includes(data["acorn_group"])) {
+                                            // Blank or null Acorn data counts as not eligible
+                                            if (data["acorn_group"] !== "" && data["acorn_group"] != "0" && data["acorn_group"] != null && acorns.includes(data["acorn_group"])) {
                                                 pass = true;
                                                 messages.acorn = "Your postcode is Acorn eligible.";
                                             }
@@ -368,10 +366,10 @@
                 // End event handling.
                 
                 // HTML template
-var widget = '<p>Enter your details below to check your eligibility ' + text2 + ' (you will need your home postcode and the postcode of the school where you took your A levels).</p>\
+/*var widget = '<p>Enter your details below to check your eligibility for Access UCL (you will need your home postcode and the postcode of the school where you took your A levels).</p>\
 <p>Please bear in mind that the results given here are indicative only.</p>\
-\
-<form action="" method="get" id="checker-widget" autocomplete="off">\
+\*/
+var widget = '<form action="" method="get" id="checker-widget" autocomplete="off">\
     <fieldset>\
       <h3 class="darr">Start here &darr;</h3>\
       <div class="field" id="domiciled-uk">\
@@ -432,10 +430,8 @@ var widget = '<p>Enter your details below to check your eligibility ' + text2 + 
           <div>Are you a young adult carer* or estranged from your family**?</div>\
           <div><label><input type="radio" name="estranged" value="Y"> Yes</label></div>\
           <div><label><input type="radio" name="estranged" value="N"> No</label></div>\
-          <p class="discreet">* A young adult carer is someone whose life is adversely affected by caring for a family member who has a chronic physical or sensory disability, learning disability, medical conditions, mental health difficulties, or has an addiction.<br />\
-          A young adult carer is someone who provides ongoing unpaid support to a family member who could not manage without this help. This usually means looking after one of their parents or caring for a brother or sister.<br />\
-          Young adult carers must be aged 20 or under on their first day of study at UCL.</p>\
-          <p class="discreet">** This means you no longer have the support of your family due to a permanent breakdown in your relationship(s) which has led to ceased contact for at least a year. This might mean your biological, step or adoptive parents, or wider family members who have been responsible for supporting you in the past. Students estranged from their family must be aged under 25 on their first day of study at UCL.</p>\
+          <p class="discreet">* For Access UCL eligibility purposes, we define a young carer as someone whose life is adversely affected by providing substantial, ongoing care for a parent/guardian that they live with and who has a chronic illness or condition. To be eligible, young carers must be aged under 21 on their first day at UCL and be attending, or have attended a state school for their A levels, or equivalent qualifications.</p>\
+          <p class="discreet">** For Access UCL eligibility purposes, we define an applicant estranged from their family as someone who has no relationship with, or support from, their family.  The estrangement must be permanent, with no contact for at least a year. To be eligible, students estranged from their family must be aged under 25 on their first day of study at UCL and be attending, or have attended a state school for their A levels, or equivalent qualifications.</p>\
       </div>\
 \
       <div class="hiddenField" id="indeterminate">\
@@ -445,7 +441,7 @@ var widget = '<p>Enter your details below to check your eligibility ' + text2 + 
                   <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" fill="none" stroke="#0d68cf" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-alert-circle icon" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>\
               </div>\
               <div class="alert__content">\
-                  <h4>Sorry, we cannot determine whether you are eligible ' + text2 + '</h4>\
+                  <h4>Sorry, we cannot determine whether you are eligible for Access UCL</h4>\
                   <div id="school-checked-indeterminate" class="hiddenField">\
                       <ul>\
                           <li class="imd"></li>\
@@ -465,7 +461,7 @@ var widget = '<p>Enter your details below to check your eligibility ' + text2 + 
                   <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" fill="none" stroke="#0d68cf" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-alert-circle icon" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>\
               </div>\
               <div class="alert__content">\
-              <h4>Sorry, you are not eligible ' + text2 + '</h4>\
+              <h4>Sorry, you are not eligible for Access UCL</h4>\
                   <div id="school-checked-nopass" class="hiddenField">\
                       <ul>\
                           <li class="imd"></li>\
@@ -473,10 +469,10 @@ var widget = '<p>Enter your details below to check your eligibility ' + text2 + 
                           <li class="acorn"></li>\
                           <li class="school"></li>\
                       </ul>\
-                      <p id="postcode-criteria-msg">As you do not meet any of the three home postcode criteria you are not eligible ' + text2 + '.</p>\
-                  </div>' +
-                  (isEFY ? '' : '<p>Based on the information you\'ve provided, if your application to UCL is successful, you will only receive the standard UCL offer. You will not receive an Access UCL offer.</p>') +
-              '</div>\
+                      <p id="postcode-criteria-msg">As you do not meet any of the three home postcode criteria you are not eligible for Access UCL.</p>\
+                  </div>\
+                  <p>Based on the information you\'ve provided, if your application to UCL is successful, you will only receive the standard UCL offer. You will not receive an Access UCL offer.</p>\
+              </div>\
           </div>\
       </div>\
       <div class="hiddenField" id="eligible">\
@@ -486,7 +482,7 @@ var widget = '<p>Enter your details below to check your eligibility ' + text2 + 
                   <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" fill="none" stroke="#0d68cf" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-alert-circle icon" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>\
               </div>\
               <div class="alert__content">\
-                  <h4>Great news! You are eligible ' + text2 + '</h4>\
+                  <h4>Great news! You are eligible for Access UCL</h4>\
                   <div id="school-checked-pass" class="hiddenField">\
                       <ul>\
                           <li class="imd"></li>\
@@ -494,10 +490,10 @@ var widget = '<p>Enter your details below to check your eligibility ' + text2 + 
                           <li class="acorn"></li>\
                           <li class="school"></li>\
                       </ul>\
-                      <p>As you meet at least one of the three home postcode criteria, and attended a state school, you are eligible ' + text2 + '.</p>\
-                  </div>' +
-                  (isEFY ? '' : '<p>Based on the information you\'ve provided, if your application to UCL is successful, you will receive an Access UCL offer.</p>') +
-                  '<p id="time-in-care" class="hiddenField">Please ensure you tick the \'time in care\' box on your UCAS application.</p>\
+                      <p>As you meet at least one of the three home postcode criteria, and attended a state school, you are eligible for Access UCL.</p>\
+                  </div>\
+                  <p>Based on the information you\'ve provided, if your application to UCL is successful, you will receive an Access UCL offer.</p>\
+                  <p id="time-in-care" class="hiddenField">Please ensure you tick the \'time in care\' box on your UCAS application.</p>\
               </div>\
           </div>\
       </div>\
@@ -508,7 +504,7 @@ var widget = '<p>Enter your details below to check your eligibility ' + text2 + 
                   <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" fill="none" stroke="#0d68cf" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-alert-circle icon" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>\
               </div>\
               <div class="alert__content">\
-                  <h4>You may still be eligible ' + text2 + '</h4>\
+                  <h4>You may still be eligible for Access UCL</h4>\
                   <p id="maybe-text">Students who attend or attended a UK private school who are care leavers are considered on a case-by-case basis. Email <a href="mailto:wp.accessucl@ucl.ac.uk">wp.accessucl@ucl.ac.uk</a> with your personal details for a decision.</p>\
               </div>\
           </div>\
