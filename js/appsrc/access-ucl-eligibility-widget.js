@@ -270,7 +270,7 @@
                                         // The home postcode is in neither IMD nor POLAR data tables.
                                         // 6 and 11 are illegal values set deliberately if there is no match.
                                         $("input[name='postcode']").parent().addClass("errorField");
-                                        alert("Your home postcode does not appear in our database. Please check it and try again.");
+                                        alert("Your home postcode does not appear in our database. Please double-check it and contact us at wp.accessucl@ucl.ac.uk if it is still not recognised.");
                                         showMe("","#ajax-spinner,#lightbox");
                                     } else if (!data["state_independent"]) {
                                         // There is a problem with the school data, probably caused by a duplicate school.

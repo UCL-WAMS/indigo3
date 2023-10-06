@@ -82,7 +82,7 @@
                 }
 
                 // Event handling from here.
-    
+
                 // This handler resets all fields after a radio button change in the app flow.
                 $("body").on("change", "input[type='radio']", function() {
                     var ls = ["domiciled","attend","history","attend-private","care-leaver","estranged"];
@@ -97,7 +97,7 @@
                         }
                     }
                 });
-    
+
                 // Handle specific radio button selections.
                 $("body").on("click", "input[name='domiciled']", function() {
                     if ($(this).val() == "N") {
@@ -270,7 +270,7 @@
                                         // The home postcode is in neither IMD nor POLAR data tables.
                                         // 6 and 11 are illegal values set deliberately if there is no match.
                                         $("input[name='postcode']").parent().addClass("errorField");
-                                        alert("Your home postcode does not appear in our database. Please check it and try again.");
+                                        alert("Your home postcode does not appear in our database. Please double-check it and contact us at wp.accessucl@ucl.ac.uk if it is still not recognised.");
                                         showMe("","#ajax-spinner,#lightbox");
                                     } else if (!data["state_independent"]) {
                                         // There is a problem with the school data, probably caused by a duplicate school.
@@ -364,7 +364,7 @@
                     eligibilityData = {};
                 });
                 // End event handling.
-                
+
                 // HTML template
 /*var widget = '<p>Enter your details below to check your eligibility for Access UCL (you will need your home postcode and the postcode of the school where you took your A levels).</p>\
 <p>Please bear in mind that the results given here are indicative only.</p>\
