@@ -1,5 +1,5 @@
 (function ($) {
-    Drupal.behaviors.pg_application = {
+    Drupal.behaviors.ps_international_equivalencies_reset = {
         attach: function (context, settings) {
             $(document).ready(function() {
                 if ($("#edit-ucl-international-equivalencies").val() && !$("#international-equivalencies-content").html().trim()) {
