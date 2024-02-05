@@ -4,7 +4,7 @@
             $(document).ready(function() {
                 var focusElement = null;
                 function checkAndAddTabIndex() {
-                    counter = 0;
+                    var counter = 0;
                     if ($(".owl-dot").is("div")) {
                         $(".owl-dot, .owl-prev, .owl-next").attr("tabindex", "0");
                         $(".owl-dot, .owl-prev, .owl-next").on("focus", function() {
