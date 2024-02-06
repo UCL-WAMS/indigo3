@@ -12,6 +12,11 @@
                             $(this).css("outline", "#0549b5 solid 2px");
                             focusElement = $(this);
                         });
+                        // Remove outline once element is clicked.
+                        // This prevents the outline from slightly spoiling the normal click look and feel.
+                        $(".owl-dot, .owl-prev, .owl-next").on("click", function() {
+                            $(this).css("outline", "none");
+                        });
                     } else if (counter < 9) {
                         // In case the Owl script hasn't loaded (but only nine attempts).
                         counter++; 
