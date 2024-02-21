@@ -31,8 +31,10 @@
                 var elementlist = ["home-fees","level4","forced-migrant","over21","care","attend","young-carer","estranged","educational-gap","free-meals","postcode-test","ucas","grades","ineligible","eligible","case-by-case","indeterminate","ajax-spinner","lightbox"];
                 // This is the list of items in the path. It grows dynamically as we move along the path.
                 var pathlist = ["home-fees"];
-                // This array is required to allow the twoCriteria array to be reset if an earlier radio button value is changed
+                // This array is required to allow the twoCriteria array to be reset if a radio button value prior to the two criteria path is changed.
                 var early_elements = ["home-fees","level4","forced-migrant","over21","care","attend"];
+                // This array is required to allow the twoCriteria array to be reset if a radio button value in the two criteria path is changed
+                var two_criteria_elements = ["estranged","educational-gap","free-meals","postcode-test"];
 
                 // Utility functions 
                 // Trim shim, for older browsers.
@@ -49,15 +51,15 @@
                 }
                 
                 function resetCriteria(elementid) {
-                    console.log("twoCriteria: initial");
-                    console.log(twoCriteria);
+                    var newCriteria = [];
+                    var change_element_index = two_criteria_elements.indexOf(elementid);
                     for (var i = 0; i < twoCriteria.length; i++) {
-                        if (twoCriteria[i] == elementid) {
-                            twoCriteria = twoCriteria.slice(0, i);
-                            console.log("twoCriteria: post-slice");
-                            console.log(twoCriteria);
+                        var other_element_index = two_criteria_elements.indexOf(twoCriteria[i]);
+                        if (change_element_index > other_element_index) {
+                            newCriteria.push(twoCriteria[i]);
                         }
                     }
+                    twoCriteria = newCriteria;
                 }
                 
                 function checkCriteria(elementid) {
@@ -67,8 +69,6 @@
                         }
                     }
                     twoCriteria.push(elementid);
-                    console.log("twoCriteria: after check");
-                    console.log(twoCriteria);
                 }
                 
                 function resetRadios(arr) {
