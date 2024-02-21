@@ -13,7 +13,7 @@
         attach: function (context, settings) {
             $(document).ready(function() {
                 // Initialise the widget.
-                $("#access-ucl-widget").after("<div id=\"access-ucl-form\">Access UCL widget loading</div>");
+                $("#access-ucl-widget").after("<div id=\"access-ucl-form\" style=\"background-color:transparent\">Access UCL widget loading</div>");
 
                 var maybe = {
                     "equivalent-overseas":"<strong>Applications equivalent overseas level 3 qualification</strong> will be assessed on a case-by-case basis. Please email <a href=\"mailto:EFY@ucl.ac.uk\">EFY@ucl.ac.uk</a> to determine confirm whether you meet the entry requirements.",
@@ -372,8 +372,7 @@
                 // End event handling.
 
                 // HTML template
-var widget = '<h3>UCL Engineering Foundation Year – Eligibility Checker</h3>\
-<form action="" method="get" id="checker-widget" autocomplete="off">\
+var widget = '<form action="" method="get" id="checker-widget" autocomplete="off">\
     <fieldset>\
       <h3 class="darr">Start here &darr;</h3>\
       <div class="field" id="home-fees">\
