@@ -485,7 +485,7 @@ var widget = '<form action="" method="get" id="checker-widget" autocomplete="off
 \
       <div class="field hiddenField" id="grades">\
           <p class="darr">&darr;</p>\
-          <div>Did you achieve a minimum of Grades 5 or C in Maths and English Language GCSE?</div>\
+          <div>Did you achieve a minimum of Grades 4 or C in Mathematics and English Language GCSE?</div>\
           <div><label><input type="radio" name="grades" value="Y"> Yes</label></div>\
           <div><label><input type="radio" name="grades" value="N"> No</label></div>\
       </div>\
