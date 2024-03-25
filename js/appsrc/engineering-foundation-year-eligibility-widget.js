@@ -372,7 +372,8 @@
                 // End event handling.
 
                 // HTML template
-var widget = '<form action="" method="get" id="checker-widget" autocomplete="off">\
+var widget = '  <p><strong>The outcome of this checker is indicative, and your eligibility will be reviewed upon receipt of your UCAS application.</strong></p>\
+  <form action="" method="get" id="checker-widget" autocomplete="off">\
     <fieldset>\
       <h3 class="darr">Start here &darr;</h3>\
       <div class="field" id="home-fees">\
