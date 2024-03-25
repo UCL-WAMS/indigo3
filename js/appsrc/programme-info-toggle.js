@@ -63,23 +63,26 @@ to cover the UG programme content type when that becomes an indigo 3 type.
                 $(".prog-key-info .international").css("paddingTop", "0");
             }
             
-            // Check the event isn't already bound
-            var jqObject = $(".uk-overseas-button");
-            var rawDOMElement = jqObject.get(0);
-            var eventObject = $._data(rawDOMElement, "events");
-            if (typeof eventObject == "undefined" || typeof eventObject.click == "undefined") {
-                $(".uk-overseas-button").on("click", function(event) {
-                    event.preventDefault();
-                    if ($(this).hasClass("uk-button")) {
-                        $(".international").css("display", "none");
-                        $(".uk").fadeIn();
-                    } else if ($(this).hasClass("overseas-button")) {
-                        $(".uk").css("display", "none");
-                        $(".international").fadeIn();
-                    }
-                    $(".uk-overseas-button").toggleClass("highlight");
-                    setButtons();
-                });
+            // Check the event isn't already bound, but only if we have the uk/overseas buttons,
+            // if we don't this causes an error and the page breaks.
+            if ($(".uk-overseas-button").is("span")) {
+                var jqObject = $(".uk-overseas-button");
+                var rawDOMElement = jqObject.get(0);
+                var eventObject = $._data(rawDOMElement, "events");
+                if (typeof eventObject == "undefined" || typeof eventObject.click == "undefined") {
+                    $(".uk-overseas-button").on("click", function(event) {
+                        event.preventDefault();
+                        if ($(this).hasClass("uk-button")) {
+                            $(".international").css("display", "none");
+                            $(".uk").fadeIn();
+                        } else if ($(this).hasClass("overseas-button")) {
+                            $(".uk").css("display", "none");
+                            $(".international").fadeIn();
+                        }
+                        $(".uk-overseas-button").toggleClass("highlight");
+                        setButtons();
+                    });
+                }
             }
             // Set the initialisation variable, so the modes code doesn't run again.
             Drupal.behaviors.ucl_indigo_uk_toggle_initialised = true;
