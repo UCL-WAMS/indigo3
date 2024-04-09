@@ -433,7 +433,7 @@ var widget = '  <p><strong>The outcome of this checker is indicative, and your e
           <div>Are you a young carer?</div>\
           <div><label><input type="radio" name="young-carer" value="Y"> Yes</label></div>\
           <div><label><input type="radio" name="young-carer" value="N"> No</label></div>\
-          <div class="discreet">A young adult carer is someone whose life is adversely affected by providing ongoing care for a parent or guardian (that they live with) who has a chronic illness. You must be under 21 on your first day at UCL.</div>\
+          <div class="discreet">A young carer is someone whose life is adversely affected by providing ongoing care for a parent or guardian (that they live with) who has a chronic illness. You must be under 21 on your first day at UCL.</div>\
       </div>\
 \
       <div class="field hiddenField" id="estranged">\
