@@ -136,6 +136,7 @@
                             var indeterminate = false;
                             var indeterminate_alt = false;
                             if (data) {
+                                console.log(data);
                                 if (data["tundra"] == 6 && data["imd_decile"] == 11) {
                                     // The home postcode is in neither IMD nor POLAR data tables.
                                     // 6 and 11 are illegal values set deliberately if there is no match.
@@ -161,6 +162,7 @@
                                     } 
                                     // We now have a pass/fail for any complete set of data which we can use to 
                                     // determine which messages to display or further questions to ask.
+                                    console.log(indeterminate_alt);
                                     if (pass) {
                                         // This person seems eligible.
                                         showMe("#eligible","#ineligible,#ineligible-school,#indeterminate,#indeterminate-alt,#case-by-case,#ajax-spinner,#lightbox");
@@ -251,7 +253,7 @@ var widget = '<form action="" method="get" id="checker-widget" autocomplete="off
                   <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" fill="none" stroke="#0d68cf" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-alert-circle icon" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>\
               </div>\
               <div class="alert__content">\
-                  <h4>Sorry, we cannot determine whether you are eligible for Access UCL</h4>\
+                  <h4>Please read the information below</h4>\
                   <div id="postcode-checked-indeterminate-alt" class="hiddenField">\
                       <ul>\
                           <li class="imd"></li>\
