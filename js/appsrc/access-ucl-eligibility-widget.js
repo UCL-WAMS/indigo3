@@ -98,9 +98,9 @@
                 $("body").on("click", "input[name='attend']", function() {
                     eligibilityData = {};
                     if ($(this).val() == "N") {
-                        showMe("#ineligible-school,#resetter","#postcode-test,#eligible,#ineligible,#indeterminate,#estranged,#case-by-case");
+                        showMe("#ineligible-school,#resetter","#postcode-test,#eligible,#ineligible,#indeterminate,#indeterminate-alt,#estranged,#case-by-case");
                     } else {
-                        showMe("#postcode-test,#resetter","#eligible,#ineligible,#indeterminate,#case-by-case,#ineligible-school");
+                        showMe("#postcode-test,#resetter","#eligible,#ineligible,#indeterminate,#indeterminate-alt,#case-by-case,#ineligible-school");
                     }
                 });
 
@@ -124,8 +124,8 @@
                         showMe("#ajax-spinner,#lightbox");
                         // These are the default messages to display after checking the DB.
                         messages = {
-                            imd:"Your postcode isn't IMD eligible.",
-                            tundra:"Your postcode isn't TUNDRA eligible.",
+                            imd:"Your postcode is not IMD eligible.",
+                            tundra:"Your postcode is not TUNDRA eligible.",
                         }
                         $(".errorField").removeClass("errorField");
                         eligibilityData["pc"] = ValidateAndFixPostcode($("input[name='postcode']").val());//$("input[name='postcode']").val().replace(/ /g,"");
@@ -134,6 +134,7 @@
                         $.get(get_url, eligibilityData, function(data) {
                             var pass = false;
                             var indeterminate = false;
+                            var indeterminate_alt = false;
                             if (data) {
                                 console.log(data);
                                 if (data["tundra"] == 6 && data["imd_decile"] == 11) {
@@ -145,6 +146,7 @@
                                 } else {
                                     if (data["tundra"] === null || data["tundra"] === "" || data["tundra"] === 0 || data["tundra"] == "0" || data["tundra"] == "NULL" || data["tundra"] == "R") {
                                         indeterminate = true;
+                                        indeterminate_alt = true;
                                         messages.tundra = "Your postcode is not available in our TUNDRA database.";
                                     } else if (data["tundra"] !== "" && data["tundra"] != "0" && data["tundra"] > 0 && data["tundra"] < 2) {
                                         pass = true;
@@ -152,26 +154,33 @@
                                     }
                                     if (data["imd_decile"] === null || data["imd_decile"] === "" || data["imd_decile"] === 0 || data["imd_decile"] == "0" || data["imd_decile"] == "NULL") {
                                         indeterminate = true;
+                                        indeterminate_alt = false;
                                         messages.imd = "Your postcode is not available in our IMD database.";
                                     } else if (data["imd_decile"] !== "" && data["imd_decile"] != "0" && data["imd_decile"] > 0 && data["imd_decile"] < 3) {
                                         pass = true;
                                         messages.imd = "Your postcode is IMD eligible.";
-                                    }
+                                    } 
                                     // We now have a pass/fail for any complete set of data which we can use to 
                                     // determine which messages to display or further questions to ask.
+                                    console.log(indeterminate_alt);
                                     if (pass) {
                                         // This person seems eligible.
-                                        showMe("#eligible","#ineligible,#ineligible-school,#indeterminate,#case-by-case,#ajax-spinner,#lightbox");
+                                        showMe("#eligible","#ineligible,#ineligible-school,#indeterminate,#indeterminate-alt,#case-by-case,#ajax-spinner,#lightbox");
                                         // Set messages after search.
                                         setEligibilityMessages("#postcode-checked-pass");
+                                    } else if (indeterminate_alt) {
+                                        // This person might be eligible if their TUNDRA or IMD value were properly defined, so set a special message
+                                        showMe("#indeterminate-alt","#indeterminate,#eligible,#ineligible,#case-by-case,#ajax-spinner,#lightbox");
+                                        // Set messages after search.
+                                        setEligibilityMessages("#postcode-checked-indeterminate-alt");
                                     } else if (indeterminate) {
-                                        // This person might be eligible if their POLAR_4, Acorn or IMD value were properly defined, so set a special message
-                                        showMe("#indeterminate","#eligible,#ineligible,#case-by-case,#ajax-spinner,#lightbox");
+                                        // This person might be eligible if their TUNDRA or IMD value were properly defined, so set a special message
+                                        showMe("#indeterminate","#eligible,#ineligible,#indeterminate-alt,#case-by-case,#ajax-spinner,#lightbox");
                                         // Set messages after search.
                                         setEligibilityMessages("#postcode-checked-indeterminate");
                                     } else {
                                         // This doesn't match TUNDRA or IMD.
-                                        showMe("#ineligible","#eligible,#indeterminate,#case-by-case,#ajax-spinner,#lightbox,#postcode-criteria-msg");
+                                        showMe("#ineligible","#eligible,#indeterminate,#indeterminate-alt,#case-by-case,#ajax-spinner,#lightbox,#postcode-criteria-msg");
                                         // Set messages on the page in appropriate pass/fail box.
                                         setEligibilityMessages("#postcode-checked-nopass");
                                     }
@@ -187,7 +196,7 @@
                 $("body").on("click", "#form-reset", function() {
                     // Reset everything else to init state (the form data is taken care of by default action of the click).
                     var showstring = "#attend-uk";
-                    var hidestring = "#postcode-test,#eligible,#ineligible,#indeterminate,#case-by-case,#ineligible-school,#resetter"
+                    var hidestring = "#postcode-test,#eligible,#ineligible,#indeterminate,#indeterminate-alt,#case-by-case,#ineligible-school,#resetter"
                     showMe(showstring,hidestring);
                     eligibilityData = {};
                 });
@@ -232,7 +241,26 @@ var widget = '<form action="" method="get" id="checker-widget" autocomplete="off
                           <li class="imd"></li>\
                           <li class="tundra"></li>\
                       </ul>\
-                      <p>Your postcode is not available in our database, please contact <a href="mailto:wp.accessucl@ucl.ac.uk">wp.accessucl@ucl.ac.uk</a> to check your eligibility.</p>\
+                      <p style="padding-top:10px;">Your postcode is not available in our database, please contact <a href="mailto:wp.accessucl@ucl.ac.uk">wp.accessucl@ucl.ac.uk</a> to check your eligibility.</p>\
+                  </div>\
+              </div>\
+          </div>\
+      </div>\
+      <div class="hiddenField" id="indeterminate-alt">\
+          <p class="darr">&darr;</p>\
+          <div class="entity entity-paragraphs-item paragraphs-item-alert-box alert alert-warn clearfix">\
+              <div class="alert__icon">\
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" fill="none" stroke="#0d68cf" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-alert-circle icon" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>\
+              </div>\
+              <div class="alert__content">\
+                  <h4>Please read the information below</h4>\
+                  <div id="postcode-checked-indeterminate-alt" class="hiddenField">\
+                      <ul>\
+                          <li class="imd"></li>\
+                          <li class="tundra"></li>\
+                      </ul>\
+                      <p style="padding-top:10px;"><strong>If you live in England:</strong> Please contact us at <a href="mailto:wp.accessucl@ucl.ac.uk">wp.accessucl@ucl.ac.uk</a> to tell us your postcode has not been found in our database, and we will look into your eligibility for Access UCL.</p>\
+                      <p style="padding-top:10px;"><strong>If you live in Wales, Northern Ireland, or Scotland:</strong> TUNDRA does not apply, and you can only meet the Access UCL postcode eligibility criteria through the IMD value. Your postcode is not eligible through IMD, therefore you will not be eligible for Access UCL unless you are care experienced or estranged from your parents. Please see the information below for the full eligibility criteria for Access UCL through these routes.</p>\
                   </div>\
               </div>\
           </div>\
@@ -252,9 +280,9 @@ var widget = '<form action="" method="get" id="checker-widget" autocomplete="off
                           <li class="tundra"></li>\
                       </ul>\
                   </div>\
-                  <p>As you do not meet either of the home postcode criteria you are not eligible for Access UCL through this route.</p>\
-                  <p>If you are care experienced, or estranged from both parents, you may be eligible for Access UCL.  Please see the information below for the full eligibility criteria for Access UCL through these routes.</p>\
-                  <p>If you do not meet the care experienced or estranged criteria, based on the information you\'ve provided, if your application to UCL is successful, you will receive the standard UCL offer, not an Access UCL offer.</p>\
+                  <p style="padding-top:10px;">As you do not meet either of the home postcode criteria you are not eligible for Access UCL through this route.</p>\
+                  <p style="padding-top:10px;">If you are care experienced, or estranged from both parents, you may be eligible for Access UCL.  Please see the information below for the full eligibility criteria for Access UCL through these routes.</p>\
+                  <p style="padding-top:10px;">If you do not meet the care experienced or estranged criteria, based on the information you\'ve provided, if your application to UCL is successful, you will receive the standard UCL offer, not an Access UCL offer.</p>\
               </div>\
           </div>\
       </div>\
@@ -266,9 +294,9 @@ var widget = '<form action="" method="get" id="checker-widget" autocomplete="off
               </div>\
               <div class="alert__content">\
               <h4>Sorry, you are not eligible for Access UCL</h4>\
-                  <p>Unfortunately, the answer you have provided indicates that you do not meet the postcode eligibility of the Access UCL scheme.  To meet the eligibility requirements of Access UCL through home postcode, applicants who live in an eligible postcode must also attend a UK state school to complete their A levels (or equivalent qualifications).</p>\
-                  <p>If you are care experienced and attend a UK independent school, you may be eligible for Access UCL.  Please see the information below for the full eligibility criteria for Access UCL for applicants who are care experienced.</p>\
-                  <p>If you have any questions, you can contact us at <a href="mailto:wp.accessucl@ucl.ac.uk">wp.accessucl@ucl.ac.uk</a>.</p>\
+                  <p style="padding-top:10px;">Unfortunately, the answer you have provided indicates that you do not meet the postcode eligibility of the Access UCL scheme.  To meet the eligibility requirements of Access UCL through home postcode, applicants who live in an eligible postcode must also attend a UK state school to complete their A levels (or equivalent qualifications).</p>\
+                  <p style="padding-top:10px;">If you are care experienced and attend a UK independent school, you may be eligible for Access UCL.  Please see the information below for the full eligibility criteria for Access UCL for applicants who are care experienced.</p>\
+                  <p style="padding-top:10px;">If you have any questions, you can contact us at <a href="mailto:wp.accessucl@ucl.ac.uk">wp.accessucl@ucl.ac.uk</a>.</p>\
               </div>\
           </div>\
       </div>\
@@ -288,7 +316,7 @@ var widget = '<form action="" method="get" id="checker-widget" autocomplete="off
                       </ul>\
                       <p>As you meet at least one of the home postcode criteria, and attended a UK state school, you are eligible for Access UCL.</p>\
                   </div>\
-                  <p>Based on the information you\'ve provided, if your application to UCL is successful, you will receive an Access UCL offer.</p>\
+                  <p style="padding-top:10px;">Based on the information you\'ve provided, if your application to UCL is successful, you will receive an Access UCL offer.</p>\
               </div>\
           </div>\
       </div>\
