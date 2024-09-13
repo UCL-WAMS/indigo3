@@ -136,7 +136,6 @@
                             var indeterminate = false;
                             var indeterminate_alt = false;
                             if (data) {
-                                console.log(data);
                                 if (data["tundra"] == 6 && data["imd_decile"] == 11) {
                                     // The home postcode is in neither IMD nor POLAR data tables.
                                     // 6 and 11 are illegal values set deliberately if there is no match.
@@ -162,7 +161,6 @@
                                     } 
                                     // We now have a pass/fail for any complete set of data which we can use to 
                                     // determine which messages to display or further questions to ask.
-                                    console.log(indeterminate_alt);
                                     if (pass) {
                                         // This person seems eligible.
                                         showMe("#eligible","#ineligible,#ineligible-school,#indeterminate,#indeterminate-alt,#case-by-case,#ajax-spinner,#lightbox");
