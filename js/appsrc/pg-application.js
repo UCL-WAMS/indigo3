@@ -14,7 +14,7 @@
                     var mode_of_attendance = encodeURIComponent($("input[name=application_option]:checked", "#application-form").attr("data-mode_of_attendance"));
                     var academic_year = $("input[name=application_option]:checked", "#application-form").attr("data-academic_year");
                     academic_year = (academic_year.indexOf("-") > -1 ? academic_year.substring(0,4) : academic_year);
-                    location.assign("https://ucl-rm-cubase.powerappsportals.com/selection_summary/?route_code=" + route_code + "&marketed_course_code=" + marketed_course_code + "&academic_year=" + academic_year + "&mode_of_attendance=" + mode_of_attendance);
+                    location.assign("https://ucl-rm-atpuat.powerappsportals.com/selection_summary/?route_code=" + route_code + "&marketed_course_code=" + marketed_course_code + "&academic_year=" + academic_year + "&mode_of_attendance=" + mode_of_attendance);
                 } else {
                     alert("Please pick a course option and tell us whether you need a visa to study at UCL before clicking the apply button.");
                 }
