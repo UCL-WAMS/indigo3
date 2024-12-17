@@ -3,17 +3,28 @@
         attach: function (context, settings) {
             $("#application-button").on("click", function(e) {
                 e.preventDefault();
-                var now = new Date();
-                var start = new Date(2024, 3, 12, 17, 0);
-                var end = new Date(2024, 3, 15, 12, 0);
+                const now = new Date();
+                const start = new Date(2024, 3, 12, 17, 0);
+                const end = new Date(2024, 3, 15, 12, 0);
+                let declared_visa_required = "";
+                let msg = "Please pick a course option and tell us whether you need a visa to study at UCL before clicking the apply button."
+                if ($("#application-form input[name=DeclaredVisaRequired]").attr("type") == "hidden") {
+                    declared_visa_required = $("#application-form input[name=DeclaredVisaRequired]").val();
+                    msg = "Please pick a course option before clicking the apply button."
+                } else {
+                    declared_visa_required = $("#application-form input[name=DeclaredVisaRequired]:checked").val();
+                }
                 if (now > start && now < end) {
                     alert("*********************************************************\nUCL's graduate application system will be unavailable \nbetween 17:00 (UK time) on Friday, 12 April until 12:00\n (UK time) on Monday, 15 April 2024 for upgrading work. \nWe value your application and understand this may be \nfrustrating, especially if you have an application under \nway. Do return when the system is live again - we look \nforward to receiving it.\n\nIf you see this message outside those times, please \ncheck your computer's clock is showing the correct \ndate and time.\n*********************************************************");  
-                } else if ($("input[name=application_option]:checked", "#application-form").is("input")) {
-                    var code1 = $("input[name=application_option]:checked", "#application-form").attr("data-code1");
-                    var code2 = $("input[name=application_option]:checked", "#application-form").attr("data-code2");
-                    location.assign("https://evision.ucl.ac.uk/urd/sits.urd/run/siw_ipp_lgn.login?process=siw_ipp_app&code1=" + code1 + "&code2=" + code2);
+                } else if ($("#application-form input[name=application_option]:checked").is("input") && declared_visa_required) {
+                    const route_code = $("#application-form input[name=application_option]:checked").attr("data-route_code");
+                    const marketed_course_code = $("#application-form input[name=application_option]:checked").attr("data-marketed_course_code");
+                    const mode_of_attendance = encodeURIComponent($("#application-form input[name=application_option]:checked").attr("data-mode_of_attendance"));
+                    let academic_year = $("#application-form input[name=application_option]:checked").attr("data-academic_year");
+                    academic_year = (academic_year.indexOf("-") > -1 ? academic_year.substring(0,4) : academic_year);
+                    location.assign("https://ucl-rm-atpuat.powerappsportals.com/selection_summary/?route_code=" + route_code + "&marketed_course_code=" + marketed_course_code + "&academic_year=" + academic_year + "&mode_of_attendance=" + mode_of_attendance + "&DeclaredVisaRequired=" + declared_visa_required);
                 } else {
-                    alert("Please pick a course option before clicking the apply button.");
+                    alert(msg);
                 }
             });
         }
