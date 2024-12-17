@@ -22,7 +22,7 @@
                     const mode_of_attendance = encodeURIComponent($("#application-form input[name=application_option]:checked").attr("data-mode_of_attendance"));
                     let academic_year = $("#application-form input[name=application_option]:checked").attr("data-academic_year");
                     academic_year = (academic_year.indexOf("-") > -1 ? academic_year.substring(0,4) : academic_year);
-                    location.assign("https://ucl-rm-cubase.powerappsportals.com/selection_summary/?route_code=" + route_code + "&marketed_course_code=" + marketed_course_code + "&academic_year=" + academic_year + "&mode_of_attendance=" + mode_of_attendance + "&DeclaredVisaRequired=" + declared_visa_required);
+                    location.assign("https://ucl-rm-atpuat.powerappsportals.com/selection_summary/?route_code=" + route_code + "&marketed_course_code=" + marketed_course_code + "&academic_year=" + academic_year + "&mode_of_attendance=" + mode_of_attendance + "&DeclaredVisaRequired=" + declared_visa_required);
                 } else {
                     alert(msg);
                 }
