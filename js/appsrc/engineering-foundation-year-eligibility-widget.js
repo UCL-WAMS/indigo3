@@ -13,28 +13,25 @@
         attach: function (context, settings) {
             $(document).ready(function() {
                 // Initialise the widget.
-                $("#access-ucl-widget").after("<div id=\"access-ucl-form\" style=\"background-color:transparent\">Access UCL widget loading</div>");
+                $("#access-ucl-widget").after("<div id=\"access-ucl-form\" style=\"background-color:transparent\">Engineering Foundation Year widget loading</div>");
 
                 var maybe = {
-                    "equivalent-overseas":"<strong>Applications equivalent overseas level 3 qualification</strong> will be assessed on a case-by-case basis. Please email <a href=\"mailto:EFY@ucl.ac.uk\">EFY@ucl.ac.uk</a> to determine confirm whether you meet the entry requirements.",
-                    "forced-migrant":"<strong>Applications from forced migrants</strong> will be assessed on a case-by-case basis. Please email <a href=\"mailto:EFY@ucl.ac.uk\">EFY@ucl.ac.uk</a> to determine if your qualifications meet the criteria.",
-                    "over21":"<strong>Applications from mature applicants</strong> will be assessed on a case-by-case basis. It is expected that both your work experience and your educational qualifications will contribute to your academic eligibility for the programme. Please email <a href=\"mailto:EFY@ucl.ac.uk\">EFY@ucl.ac.uk</a> to confirm whether you meet the entry requirements."
+                    "equivalent-overseas":"<strong>Applications with an equivalent overseas level 3 qualification</strong> will be assessed on a case-by-case basis. Please email <a href=\"mailto:EFY@ucl.ac.uk\">EFY@ucl.ac.uk</a> to determine confirm whether you meet the entry requirements.",
+                    "forced-migrant":"<p>Based on your answers, you meet the non-academic eligibility criteria for the Engineering Foundation Year. Applications from forced migrants will be assessed on a case-by-case basis.</p><p>You may wish to contact <a href=\"mailto:efy@ucl.ac.uk\">efy@ucl.ac.uk</a> to discuss your suitability for the programme. However, please note that we cannot always confirm your academic eligibility until we have received an application from you.</p>",
+                    "over21":"<p>Based on your answers, you meet the non-academic eligibility criteria for the Engineering Foundation Year. Applications from mature students will be assessed on a case-by-case basis. If you are a mature applicant, it is expected that both your work experience and your educational qualifications will contribute to your academic eligibility for the programme.</p><p>You may wish to contact <a href=\"mailto:efy@ucl.ac.uk\">efy@ucl.ac.uk</a> to discuss your suitability for the programme. However, please note that we cannot always confirm your academic eligibility until we have received an application from you.</p>"
                 }
-                var year = '2024';
+                var year = '2025';
                 // This holds postcode eligibility data.
                 var eligibilityData = {};
-                // If you reach the two-criteria stage, this stores the criteria you pass, allowing the JS to count them.
-                var twoCriteria = [];
+                // Display a special "may be eligible" message.
+                var specialMayBe = false;
+                
                 
                 // This is a list of all elements that might need to be hidden.
                 // At each step we iterate this and hide them all, except the new one to be revealed, and any already in the 'path' of the user journey.
-                var elementlist = ["home-fees","level4","forced-migrant","over21","care","attend","young-carer","estranged","educational-gap","free-meals","postcode-test","ucas","grades","ineligible","eligible","case-by-case","indeterminate","ajax-spinner","lightbox"];
+                var elementlist = ["home-fees","level4","forced-migrant","over21","care","attend","estranged","educational-gap","free-meals","postcode-test","ucas","grades","ineligible","eligible","case-by-case","indeterminate","ajax-spinner","lightbox"];
                 // This is the list of items in the path. It grows dynamically as we move along the path.
                 var pathlist = ["home-fees"];
-                // This array is required to allow the twoCriteria array to be reset if a radio button value prior to the two criteria path is changed.
-                var early_elements = ["home-fees","level4","forced-migrant","over21","care","attend"];
-                // This array is required to allow the twoCriteria array to be reset if a radio button value in the two criteria path is changed
-                var two_criteria_elements = ["estranged","educational-gap","free-meals","postcode-test"];
 
                 // Utility functions 
                 // Trim shim, for older browsers.
@@ -42,33 +39,6 @@
                     String.prototype.trim = function() {
                         return String(this).replace(/^\s+|\s+$/g, '');
                     }
-                }
-                
-                function resetTwoCriteriaIfRelevant(elementid) {
-                    if (early_elements.includes(elementid)) {
-                        twoCriteria = [];
-                    }
-                }
-                
-                function resetCriteria(elementid) {
-                    var newCriteria = [];
-                    var change_element_index = two_criteria_elements.indexOf(elementid);
-                    for (var i = 0; i < twoCriteria.length; i++) {
-                        var other_element_index = two_criteria_elements.indexOf(twoCriteria[i]);
-                        if (change_element_index > other_element_index) {
-                            newCriteria.push(twoCriteria[i]);
-                        }
-                    }
-                    twoCriteria = newCriteria;
-                }
-                
-                function checkCriteria(elementid) {
-                    for (var i = 0; i < twoCriteria.length; i++) {
-                        if (twoCriteria[i] == elementid) {
-                            return;
-                        }
-                    }
-                    twoCriteria.push(elementid);
                 }
                 
                 function resetRadios(arr) {
@@ -90,7 +60,6 @@
                 function showMe(myid, elementid) {
                     if (elementid != "resetter") {
                         resetPath(myid);
-                        resetTwoCriteriaIfRelevant(myid);
                         if (typeof elementid == "string") {
                             pathlist.push(elementid);
                         } else {
@@ -170,127 +139,120 @@
                     var el = $(elementToMove).detach();
                     $(insertAfter).after(el);
                 }
+                
+                function handleClicks(name, val) {
+                    switch(name) {
+                        case "home-fees":
+                            specialMayBe = false;
+                            showMe("home-fees", "resetter");
+                            if (val == "N") {
+                                showMe(name, "ineligible");
+                            } else {
+                                showMe(name, "level4");
+                            }
+                            break;
+                        case "level4":
+                            specialMayBe = false;
+                            if (val == "N") {
+                                showMe(name, "forced-migrant");
+                            } else {
+                                showMe(name, "ineligible");
+                            }
+                            break;
+                        case "forced-migrant":
+                            if (val == "N") {
+                                specialMayBe = false;
+                                showMe(name, "over21");
+                            } else {
+                                showMe(name, "ucas");
+                                // This has to be reset if you go back or reset the widget.
+                                specialMayBe = "forced-migrant";
+                            }
+                            break;
+                        case "over21":
+                            if (val == "N") {
+                                specialMayBe = false;
+                                showMe(name, "care");
+                            } else {
+                                showMe(name, "ucas");
+                                // This has to be reset if you go back or reset the widget.
+                                specialMayBe = "over21";
+                            }
+                            break;
+                        case "care":
+                            if (val == "N") {
+                                showMe(name, "attend");
+                            } else {
+                                showMe(name, "ucas");
+                            }
+                            break;
+                        case "attend":
+                            if (val == "N") {
+                                showMe(name, "ineligible");
+                            } else {
+                                showMe(name, "estranged");
+                            }
+                            break;
+                        case "estranged":
+                            if (val == "N") {
+                                showMe(name, "educational-gap");
+                            } else {
+                                showMe(name, "ucas");
+                            }
+                            break;
+                        case "educational-gap":
+                            if (val == "N") {
+                                showMe(name, "free-meals");
+                            } else {
+                                showMe(name, "ucas");
+                            }
+                            break;
+                        case "free-meals":
+                            if (val == "N") {
+                                showMe(name, "postcode-test");
+                            } else {
+                                showMe(name, "ucas");
+                            }
+                            break;
+                        case "ucas":
+                            if (val == "N") {
+                                if (specialMayBe) {
+                                    $("#maybe-text").html(maybe[specialMayBe]);
+                                    showMe(name, "case-by-case");
+                                } else {
+                                    showMe(name, "ineligible");
+                                }
+                            } else {
+                                showMe(name, "grades");
+                            }
+                            break;
+                        case "grades":
+                            if (val == "N") {
+                                if (specialMayBe) {
+                                    $("#maybe-text").html(maybe[specialMayBe]);
+                                    showMe(name, "case-by-case");
+                                } else {
+                                    showMe(name, "ineligible");
+                                }
+                            } else {
+                                showMe(name, "eligible");
+                            }
+                            break;
+                    }
+                }
                 // End utility functions.
 
 
                 // Event handling from here.
 
                 // Handle specific radio button selections.
-                $("body").on("click", "input[name='home-fees']", function() {
-                    if ($(this).val() == "N") {
-                        showMe("home-fees", "ineligible");
-                    } else {
-                        showMe("home-fees", "level4");
-                    }
-                    showMe("home-fees", "resetter");
+                
+                $("body").on("click", ".widget-checker", function() {
+                    handleClicks($(this).attr("name"), $(this).val());
                 });
-                $("body").on("click", "input[name='level4']", function() {
-                    if ($(this).val() == "Y") {
-                        showMe("level4", "ineligible");
-                    } else {
-                        showMe("level4", "forced-migrant");
-                    }
-                });
-                $("body").on("click", "input[name='forced-migrant']", function() {
-                    if ($(this).val() == "N") {
-                        showMe("forced-migrant", "over21");
-                    } else {
-                        $("#maybe-text").html(maybe["forced-migrant"]);
-                        showMe("forced-migrant", "case-by-case");
-                    }
-                });
-                $("body").on("click", "input[name='over21']", function() {
-                    if ($(this).val() == "N") {
-                        showMe("over21", "care");
-                    } else {
-                        $("#maybe-text").html(maybe["over21"]);
-                        showMe("over21", "case-by-case");
-                    }
-                });
-                $("body").on("click", "input[name='care']", function() {
-                    if ($(this).val() == "N") {
-                        showMe("care", "attend");
-                    } else {
-                        showMe("care", "ucas");
-                    }
-                });
-                $("body").on("click", "input[name='attend']", function() {
-                    if ($(this).val() == "N") {
-                        showMe("attend", "ineligible");
-                    } else {
-                        showMe("attend", "young-carer");
-                    }
-                });
-                $("body").on("click", "input[name='young-carer']", function() {
-                    resetCriteria("young-carer");
-                    if ($(this).val() == "N") {
-                        showMe("young-carer", "estranged");
-                    } else {
-                        checkCriteria("young-carer");
-                        if (twoCriteria.length > 1) {
-                            showMe("young-carer", "ucas");
-                        } else {
-                            showMe("young-carer", "estranged");
-                        }
-                    }
-                });
-                $("body").on("click", "input[name='estranged']", function() {
-                    resetCriteria("estranged");
-                    if ($(this).val() == "N") {
-                        showMe("estranged", "educational-gap");
-                    } else {
-                        checkCriteria("estranged");
-                        if (twoCriteria.length > 1) {
-                            showMe("estranged", "ucas");
-                        } else {
-                            showMe("estranged", "educational-gap");
-                        }
-                    }
-                });
-                $("body").on("click", "input[name='educational-gap']", function() {
-                    resetCriteria("educational-gap");
-                    if ($(this).val() == "N") {
-                        showMe("educational-gap", "free-meals");
-                    } else {
-                        checkCriteria("educational-gap");
-                        if (twoCriteria.length > 1) {
-                            showMe("educational-gap", "ucas");
-                        } else {
-                            showMe("educational-gap", "free-meals");
-                        }
-                    }
-                });
-                $("body").on("click", "input[name='free-meals']", function() {
-                    resetCriteria("free-meals");
-                    if ($(this).val() == "N") {
-                        showMe("free-meals", "postcode-test");
-                    } else {
-                        checkCriteria("free-meals");
-                        if (twoCriteria.length > 1) {
-                            showMe("free-meals", "ucas");
-                        } else {
-                            showMe("free-meals", "postcode-test");
-                        }
-                    }
-                });
-                $("body").on("click", "input[name='ucas']", function() {
-                    if ($(this).val() == "N") {
-                        showMe("ucas", "ineligible");
-                    } else {
-                        showMe("ucas", "grades");
-                    }
-                });
-                $("body").on("click", "input[name='grades']", function() {
-                    if ($(this).val() == "N") {
-                        showMe("grades", "ineligible");
-                    } else {
-                        showMe("grades", "eligible");
-                    }
-                });
-
+                
                 var get_url = (location.href.indexOf("local-micro.lndo.site") > -1?"https://local-micro.lndo.site/access-ucl/www/eligibility-" + year + ".php":(location.href.indexOf("wwwapps-uat.ucl.ac.uk") > -1?"https://wwwapps-uat.ucl.ac.uk/digital-presence-services/access-ucl/www/eligibility-" + year + ".php":"https://www.ucl.ac.uk/digital-presence-services/access-ucl/www/eligibility-" + year + ".php"));
                 $("body").on("submit", "#checker-widget", function(e) {
-                    resetCriteria("postcode-test")
                     showMe("postcode-test", "#postcode-criteria-msg");
                     e.preventDefault();
                     if (!$("#ajax-spinner").is("div")) {
@@ -350,11 +312,11 @@
                                     // We now have a pass/fail for any complete set of data which we can use to 
                                     // determine which messages to display or further questions to ask.
                                     if (pass) {
-                                        checkCriteria("postcode-test");
+                                        showMe("postcode-test", "ucas");
                                         // Set messages after search.
+                                    } else {
+                                        showMe("postcode-test", "ineligible");
                                     }
-                                    // This is the check to see if the user hits the two criteria score and may proceed.
-                                    checkEligibilityAfterPostcodeChecker(indeterminate);
                                 }
                             } else {
                                 $("input[name='postcode']").parent().addClass("errorField");
@@ -372,36 +334,37 @@
                 // End event handling.
 
                 // HTML template
-var widget = '  <p><strong>The outcome of this checker is indicative, and your eligibility will be reviewed upon receipt of your UCAS application.</strong></p>\
+var widget = '<p><strong>Important:</strong> UCL Admissions review and where necessary update definitions to the below criteria annually. Applications for 2026 entry will be assessed based on the review due in September 2025. Once this review has taken place, this notice (and if necessary, the definitions) will be updated.</p>\
+<p><strong>The outcome of this checker is indicative, and your eligibility will be reviewed upon receipt of your UCAS application.</strong></p>\
   <form action="" method="get" id="checker-widget" autocomplete="off">\
     <fieldset>\
       <h3 class="darr">Start here &darr;</h3>\
       <div class="field" id="home-fees">\
           <p class="darr hiddenField">&darr;</p>\
           <div>Are you eligible for UK/home fee status?</div>\
-          <div><label><input type="radio" name="home-fees" value="Y"> Yes</label></div>\
-          <div><label><input type="radio" name="home-fees" value="N"> No</label></div>\
+          <div><label><input type="radio" name="home-fees" value="Y" class="widget-checker"> Yes</label></div>\
+          <div><label><input type="radio" name="home-fees" value="N" class="widget-checker"> No</label></div>\
           <div class="discreet">If you are not sure, please check <a target="_blank" href="https://www.ucl.ac.uk/students/fees-and-funding/pay-your-fees/fee-schedules/student-fee-status#assessment">UCL\'s guidance on student fee status.</a></div>\
       </div>\
 \
       <div class="field hiddenField" id="level4">\
           <p class="darr">&darr;</p>\
           <div>Have you completed study at or above Level 4?</div>\
-          <div><label><input type="radio" name="level4" value="Y"> Yes</label></div>\
-          <div><label><input type="radio" name="level4" value="N"> No</label></div>\
+          <div><label><input type="radio" name="level4" value="Y" class="widget-checker"> Yes</label></div>\
+          <div><label><input type="radio" name="level4" value="N" class="widget-checker"> No</label></div>\
           <div class="discreet">Examples of <a target="_blank" href="https://www.gov.uk/what-different-qualification-levels-mean/list-of-qualification-levels">Level 4 qualifications</a> include but are not limited to Higher National Certificates and Certificates of Higher Education. The first year of an undergraduate degree is equivalent to a Level 4 qualification.</div>\
       </div>\
 \
       <div class="field hiddenField" id="forced-migrant">\
           <p class="darr">&darr;</p>\
           <div>Are you a forced migrant?</div>\
-          <div><label><input type="radio" name="forced-migrant" value="Y"> Yes</label></div>\
-          <div><label><input type="radio" name="forced-migrant" value="N"> No</label></div>\
+          <div><label><input type="radio" name="forced-migrant" value="Y" class="widget-checker"> Yes</label></div>\
+          <div><label><input type="radio" name="forced-migrant" value="N" class="widget-checker"> No</label></div>\
           <div class="discreet">We use the term \'forced migrant\' to mean one of the following:<br\>\
               <ul>\
                   <li>Refugee</li>\
                   <li>Asylum seeker</li>\
-                  <li>Those who have been granted a temporary form of leave as the result of an asylum or human rights application (e.g. limited leave to remain, discretionary leave to remain, humanitarian protection, UASC leave)</li>\
+                  <li>Those who have been granted a temporary form of leave as the result of an asylum or human rights application (e.g. limited leave to remain, discretionary leave to remain, humanitarian protection, UASC leave).</li>\
               </ul>\
           </div>\
       </div>\
@@ -409,55 +372,47 @@ var widget = '  <p><strong>The outcome of this checker is indicative, and your e
       <div class="field hiddenField" id="over21">\
           <p class="darr">&darr;</p>\
           <div>Would you be 21 or older on the day you start your first undergraduate degree?</div>\
-          <div><label><input type="radio" name="over21" value="Y"> Yes</label></div>\
-          <div><label><input type="radio" name="over21" value="N"> No</label></div>\
+          <div><label><input type="radio" name="over21" value="Y" class="widget-checker"> Yes</label></div>\
+          <div><label><input type="radio" name="over21" value="N" class="widget-checker"> No</label></div>\
       </div>\
 \
       <div class="field hiddenField" id="care">\
           <p class="darr">&darr;</p>\
-          <div>Are you care experienced?</div>\
-          <div><label><input type="radio" name="care" value="Y"> Yes</label></div>\
-          <div><label><input type="radio" name="care" value="N"> No</label></div>\
-          <div class="discreet">We define this as meaning you were looked after by or were in kinship care as a formal agreement with a local authority, for three (not necessarily consecutive) months. You would need to be under 25 on your first day at UCL.</div>\
+          <div>Are you care-experienced, and did you go to a UK school?</div>\
+          <div><label><input type="radio" name="care" value="Y" class="widget-checker"> Yes</label></div>\
+          <div><label><input type="radio" name="care" value="N" class="widget-checker"> No</label></div>\
+          <div class="discreet"><p>We define someone as care-experienced if they have studied at a UK school and been looked after by a local authority or been in kinship care as a formal agreement with the local authority, for three months (at least 84 days) in their life. The months do not need to be consecutive. You must be under 25 on your first day at UCL.<p></div>\
       </div>\
 \
       <div class="field hiddenField" id="attend">\
           <p class="darr">&darr;</p>\
           <div>Did you attend/are you attending a UK state school for your Level 3 qualifications?</div>\
-          <div><label><input type="radio" name="attend" value="Y"> Yes</label></div>\
-          <div><label><input type="radio" name="attend" value="N"> No</label></div>\
-      </div>\
-\
-      <div class="field hiddenField" id="young-carer">\
-          <p class="darr">&darr;</p>\
-          <div>Are you a young carer?</div>\
-          <div><label><input type="radio" name="young-carer" value="Y"> Yes</label></div>\
-          <div><label><input type="radio" name="young-carer" value="N"> No</label></div>\
-          <div class="discreet">A young carer is someone whose life is adversely affected by providing ongoing care for a parent or guardian (that they live with) who has a chronic illness. You must be under 21 on your first day at UCL.</div>\
+          <div><label><input type="radio" name="attend" value="Y" class="widget-checker"> Yes</label></div>\
+          <div><label><input type="radio" name="attend" value="N" class="widget-checker"> No</label></div>\
       </div>\
 \
       <div class="field hiddenField" id="estranged">\
           <p class="darr">&darr;</p>\
-          <div>Are you estranged from your family?</div>\
-          <div><label><input type="radio" name="estranged" value="Y"> Yes</label></div>\
-          <div><label><input type="radio" name="estranged" value="N"> No</label></div>\
-          <div class="discreet">UCL\'s definition of estrangement is not communicating with or receiving support from any and all family members. This will apply if an applicant is permanently estranged from their family and has been for at least a year.</div>\
+          <div>Are you estranged from both your parents?</div>\
+          <div><label><input type="radio" name="estranged" value="Y" class="widget-checker"> Yes</label></div>\
+          <div><label><input type="radio" name="estranged" value="N" class="widget-checker"> No</label></div>\
+          <div class="discreet"><p>UCL\'s definition of estrangement is that you must be permanently estranged from both parents with no support from, or contact with, either parent for at least a year. This does not apply to single-parent families, where you are still in contact with one parent. You must be under 25 on your first day at UCL.</p><p><strong>Note:</strong> If you have been in local authority care, you may be considered \'care experienced\' rather than \'estranged\'.</p></div>\
       </div>\
 \
       <div class="field hiddenField" id="educational-gap">\
           <p class="darr">&darr;</p>\
           <div>Have you had an educational gap of at least a year?</div>\
-          <div><label><input type="radio" name="educational-gap" value="Y"> Yes</label></div>\
-          <div><label><input type="radio" name="educational-gap" value="N"> No</label></div>\
-          <div class="discreet">An example of an educational gap is leaving school at 16 but returning to complete a Level 3 qualification after several years in work. Please note that deferred or \'gap\' years between school and university are not considered under this criterion.</div>\
+          <div><label><input type="radio" name="educational-gap" value="Y" class="widget-checker"> Yes</label></div>\
+          <div><label><input type="radio" name="educational-gap" value="N" class="widget-checker"> No</label></div>\
+          <div class="discreet">Applicants who have experienced an educational gap of more than one year (e.g. leaving school at 16 but returning to complete a Level 3 qualifications after several years in work). Deferred or \'gap\' years between school and university are not considered under this criterion.</div>\
       </div>\
 \
       <div class="field hiddenField" id="free-meals">\
           <p class="darr">&darr;</p>\
-          <div>Are you eligible for free school meals?</div>\
-          <div><label><input type="radio" name="free-meals" value="Y"> Yes</label></div>\
-          <div><label><input type="radio" name="free-meals" value="N"> No</label></div>\
-          <div class="discreet">Applicants who were known to be eligible for free school meals (FSMs) at the end of Key Stage 4 (Year 11) and/or six years prior to this point (England); were known to be eligible for FSMs in the 6 years prior to Year 12 (Northern Ireland); or were known to have been eligible for FSMs between the start of Year 11 and the January five years prior to this (Wales).</div>\
+          <div>Are/were you eligible for free school meals?</div>\
+          <div><label><input type="radio" name="free-meals" value="Y" class="widget-checker"> Yes</label></div>\
+          <div><label><input type="radio" name="free-meals" value="N" class="widget-checker"> No</label></div>\
+          <div class="discreet"><p>England: Applicants who were known to be eligible for free school meals at the end of Key Stage 4 (Year 11) and/or six years prior to this point.</p><p>Northern Ireland: Applicants who were known to be eligible for free school meals in the 6 years prior to Year 12.</p><p>Wales: Applicants who were known to be eligible for free school meals between the start of Year 11 and the January five years prior to this.</p></div>\
       </div>\
 \
       <div id="postcode-test" class="hiddenField">\
@@ -471,24 +426,23 @@ var widget = '  <p><strong>The outcome of this checker is indicative, and your e
               <input type="submit" class="access-button btn-cta" value="Check my eligibility &rsaquo;" />\
           </div>\
           <div class="discreet">\
-              <p><br/>This checks for applicants who live in an area that has a high level of financial, social or economic deprivation, or low progression to higher education.<br/>\
-              We use the <a target="_blank" href="https://www.gov.uk/government/statistics/english-indices-of-deprivation-2019">Index of Multiple of Deprivation</a> and <a target="_blank" href="https://acorn.caci.co.uk/">Acorn data</a> to identify levels of financial, social or economic deprivation. We use POLAR classification to look at how likely young people are to participate in HE across the UK.</p>\
+              <p><br/>Applicants who live in an area that has a high level of financial, social or economic deprivation, or low participation in higher education.</p><p>UCL use the <a target="_blank" href="https://www.gov.uk/government/collections/english-indices-of-deprivation">Index of Multiple of Deprivation</a> to identify levels of financial, social or economic deprivation, and TUNDRA to measure participation rates.</p>\
           </div>\
       </div>\
 \
       <div class="field hiddenField" id="ucas">\
           <p class="darr">&darr;</p>\
           <div>Do you have or are predicted to have a minimum of 100 UCAS points?</div>\
-          <div><label><input type="radio" name="ucas" value="Y"> Yes</label></div>\
-          <div><label><input type="radio" name="ucas" value="N"> No</label></div>\
+          <div><label><input type="radio" name="ucas" value="Y" class="widget-checker"> Yes</label></div>\
+          <div><label><input type="radio" name="ucas" value="N" class="widget-checker"> No</label></div>\
           <div class="discreet">Please see the Engineering Foundation Year\'s <a target="_blank" href="https://www.ucl.ac.uk/prospective-students/undergraduate/degrees/engineering-foundation-year#entry-requirements">academic entry requirements</a> for details of which Level 3 qualifications we accept (examples include A-Levels and IB Diplomas). If you are not sure how many UCAS points your qualifications are worth, you can use <a target="_blank" href="https://www.ucas.com/ucas/tariff-calculator">UCAS\' Tariff Calculator</a>.</div>\
       </div>\
 \
       <div class="field hiddenField" id="grades">\
           <p class="darr">&darr;</p>\
           <div>Did you achieve a minimum of Grades 4 or C in Mathematics and English Language GCSE?</div>\
-          <div><label><input type="radio" name="grades" value="Y"> Yes</label></div>\
-          <div><label><input type="radio" name="grades" value="N"> No</label></div>\
+          <div><label><input type="radio" name="grades" value="Y" class="widget-checker"> Yes</label></div>\
+          <div><label><input type="radio" name="grades" value="N" class="widget-checker"> No</label></div>\
       </div>\
 \
       <div class="hiddenField" id="indeterminate">\
@@ -536,7 +490,7 @@ var widget = '  <p><strong>The outcome of this checker is indicative, and your e
                   <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" fill="none" stroke="#0d68cf" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-alert-circle icon" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>\
               </div>\
               <div class="alert__content">\
-                  <h4>You may be eligible for the EFY</h4>\
+                  <h4>You may be eligible for the UCL Engineering Foundation Year</h4>\
                   <p id="maybe-text"></p>\
               </div>\
           </div>\
