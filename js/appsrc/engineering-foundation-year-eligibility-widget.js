@@ -20,7 +20,7 @@
                     "forced-migrant":"<p>Based on your answers, you meet the non-academic eligibility criteria for the Engineering Foundation Year. Applications from forced migrants will be assessed on a case-by-case basis.</p><p>You may wish to contact <a href=\"mailto:efy@ucl.ac.uk\">efy@ucl.ac.uk</a> to discuss your suitability for the programme. However, please note that we cannot always confirm your academic eligibility until we have received an application from you.</p>",
                     "over21":"<p>Based on your answers, you meet the non-academic eligibility criteria for the Engineering Foundation Year. Applications from mature students will be assessed on a case-by-case basis. If you are a mature applicant, it is expected that both your work experience and your educational qualifications will contribute to your academic eligibility for the programme.</p><p>You may wish to contact <a href=\"mailto:efy@ucl.ac.uk\">efy@ucl.ac.uk</a> to discuss your suitability for the programme. However, please note that we cannot always confirm your academic eligibility until we have received an application from you.</p>"
                 }
-                var year = '2025';
+                var year = '2026';
                 // This holds postcode eligibility data.
                 var eligibilityData = {};
                 // Display a special "may be eligible" message.
