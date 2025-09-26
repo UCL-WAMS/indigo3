@@ -60,7 +60,6 @@
                 function showMe(myid, elementid) {
                     if (elementid != "resetter") {
                         resetPath(myid);
-//                        resetTwoCriteriaIfRelevant(myid);
                         if (typeof elementid == "string") {
                             pathlist.push(elementid);
                         } else {
