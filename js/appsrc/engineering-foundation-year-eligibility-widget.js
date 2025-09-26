@@ -17,8 +17,8 @@
 
                 var maybe = {
                     "equivalent-overseas":"<strong>Applications with an equivalent overseas level 3 qualification</strong> will be assessed on a case-by-case basis. Please email <a href=\"mailto:EFY@ucl.ac.uk\">EFY@ucl.ac.uk</a> to determine confirm whether you meet the entry requirements.",
-                    "forced-migrant":"<p>Based on your answers, you meet the non-academic eligibility criteria for the Engineering Foundation Year. Applications from forced migrants will be assessed on a case-by-case basis.</p><p>You may wish to contact <a href=\"mailto:efy@ucl.ac.uk\">efy@ucl.ac.uk</a> to discuss your suitability for the programme. However, please note that we cannot always confirm your academic eligibility until we have received an application from you.</p>",
-                    "over21":"<p>Based on your answers, you meet the non-academic eligibility criteria for the Engineering Foundation Year. Applications from mature students will be assessed on a case-by-case basis. If you are a mature applicant, it is expected that both your work experience and your educational qualifications will contribute to your academic eligibility for the programme.</p><p>You may wish to contact <a href=\"mailto:efy@ucl.ac.uk\">efy@ucl.ac.uk</a> to discuss your suitability for the programme. However, please note that we cannot always confirm your academic eligibility until we have received an application from you.</p>"
+                    "forced-migrant":"<p>Based on your answers, you meet the non-academic eligibility criteria for the Engineering Foundation Year. Applications from forced migrants will be assessed on a case-by-case basis. </p><p>You may wish to contact <a href=\"mailto:efy@ucl.ac.uk\">efy@ucl.ac.uk</a> to discuss your suitability for the programme. However, please note that we cannot always confirm your academic eligibility until we have received an application from you.</p>",
+                    "over21":"<p>Based on your answers, you meet the non-academic eligibility criteria for the Engineering Foundation Year. Applications from mature students will be assessed on a case-by-case basis. If you are a mature applicant, it is expected that both your work experience and your educational qualifications will contribute to your academic eligibility for the programme. </p><p>You may wish to contact <a href=\"mailto:efy@ucl.ac.uk\">efy@ucl.ac.uk</a> to discuss your suitability for the programme. However, please note that we cannot always confirm your academic eligibility until we have received an application from you.</p>"
                 }
                 var year = '2026';
                 // This holds postcode eligibility data.
@@ -378,10 +378,10 @@ var widget = '<p><strong>Important:</strong> UCL Admissions review and where n
 \
       <div class="field hiddenField" id="care">\
           <p class="darr">&darr;</p>\
-          <div>Are you care-experienced, and did you go to a UK school?</div>\
+          <div>Are you care-experienced, and did you go to a UK school for your Level 3 qualifications?</div>\
           <div><label><input type="radio" name="care" value="Y" class="widget-checker"> Yes</label></div>\
           <div><label><input type="radio" name="care" value="N" class="widget-checker"> No</label></div>\
-          <div class="discreet"><p>We define someone as care-experienced if they have studied at a UK school and been looked after by a local authority or been in kinship care as a formal agreement with the local authority, for three months (at least 84 days) in their life. The months do not need to be consecutive. You must be under 25 on your first day at UCL.<p></div>\
+          <div class="discreet"><p>We define someone as care-experienced if they have studied at a UK school for their A levels (or equivalent Level 3 qualifications) and been looked after by a local authority or been in kinship care as a formal agreement with the local authority, for three months (at least 84 days) in their life. The months do not need to be consecutive. They must also be under 25 on your first day at UCL.<p></div>\
       </div>\
 \
       <div class="field hiddenField" id="attend">\
@@ -409,10 +409,10 @@ var widget = '<p><strong>Important:</strong> UCL Admissions review and where n
 \
       <div class="field hiddenField" id="free-meals">\
           <p class="darr">&darr;</p>\
-          <div>Are/were you eligible for free school meals?</div>\
+          <div>Were you previously eligible for free school meals?</div>\
           <div><label><input type="radio" name="free-meals" value="Y" class="widget-checker"> Yes</label></div>\
           <div><label><input type="radio" name="free-meals" value="N" class="widget-checker"> No</label></div>\
-          <div class="discreet"><p>England: Applicants who were known to be eligible for free school meals at the end of Key Stage 4 (Year 11) and/or six years prior to this point.</p><p>Northern Ireland: Applicants who were known to be eligible for free school meals in the 6 years prior to Year 12.</p><p>Wales: Applicants who were known to be eligible for free school meals between the start of Year 11 and the January five years prior to this.</p></div>\
+          <div class="discreet"><p>To meet this criterion, applicants must have been eligible for free schools during specified timeframes in their education, as outlined below.</p><p>England: Applicants who were known to be eligible for free school meals at the end of Key Stage 4 (Year 11) and/or six years prior to this point.</p><p>Northern Ireland: Applicants who were known to be eligible for free school meals in the 6 years prior to Year 12.</p><p>Wales: Applicants who were known to be eligible for free school meals between the start of Year 11 and the January five years prior to this.</p></div>\
       </div>\
 \
       <div id="postcode-test" class="hiddenField">\
@@ -435,7 +435,7 @@ var widget = '<p><strong>Important:</strong> UCL Admissions review and where n
           <div>Do you have or are predicted to have a minimum of 100 UCAS points?</div>\
           <div><label><input type="radio" name="ucas" value="Y" class="widget-checker"> Yes</label></div>\
           <div><label><input type="radio" name="ucas" value="N" class="widget-checker"> No</label></div>\
-          <div class="discreet">Please see the Engineering Foundation Year\'s <a target="_blank" href="https://www.ucl.ac.uk/prospective-students/undergraduate/degrees/engineering-foundation-year#entry-requirements">academic entry requirements</a> for details of which Level 3 qualifications we accept (examples include A-Levels and IB Diplomas). If you are not sure how many UCAS points your qualifications are worth, you can use <a target="_blank" href="https://www.ucas.com/ucas/tariff-calculator">UCAS\' Tariff Calculator</a>.</div>\
+          <div class="discreet">Please see the Engineering Foundation Year\'s <a target="_blank" href="https://www.ucl.ac.uk/prospective-students/undergraduate/degrees/engineering-foundation-year#entry-requirements">academic entry requirements</a> for details of which Level 3 qualifications we accept (examples include A levels and the IB Diploma). If you are not sure how many UCAS points your qualifications are worth, you can use <a target="_blank" href="https://www.ucas.com/ucas/tariff-calculator">UCAS\' Tariff Calculator</a>.</div>\
       </div>\
 \
       <div class="field hiddenField" id="grades">\
