@@ -1693,7 +1693,7 @@ HARD CODED SIDE BAR BOXOUTS
 }
 
 @media (max-width: 576px) {
-	.embedded-video .player {
+	.embedded-video .player:has(.ucl-privacy-placeholder.ucl-consent-gate) {
 		padding-bottom: 60% !important;
 	}
 	.embedded-video .player .ucl-privacy-placeholder.ucl-consent-gate {
