@@ -6892,7 +6892,7 @@ QUOTES AND TESTIMONIALS PINK PROSPECTUS STYLE
   overflow-y: auto !important; }
 
 @media (max-width: 576px) {
-  .embedded-video .player {
+  .embedded-video .player:has(.ucl-privacy-placeholder.ucl-consent-gate) {
     padding-bottom: 60% !important; }
   .embedded-video .player .ucl-privacy-placeholder.ucl-consent-gate {
     justify-content: flex-start !important;
