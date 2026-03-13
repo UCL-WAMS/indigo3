@@ -6870,3 +6870,47 @@ QUOTES AND TESTIMONIALS PINK PROSPECTUS STYLE
 .site-prospective-students-undergraduate-redesign .blockquote blockquote,
 .site-prospective-students-undergraduate .blockquote blockquote {
   color: #AC145A; }
+
+
+/* Cookie consent gate in video player. */
+
+.embedded-video .player .ucl-privacy-placeholder.ucl-consent-gate {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: center !important;
+  padding: 15px !important;
+  box-sizing: border-box !important;
+  background: #000;
+  color: #fff;
+  text-align: center;
+  overflow-y: auto !important; }
+
+@media (max-width: 576px) {
+  .embedded-video .player {
+    padding-bottom: 60% !important; }
+  .embedded-video .player .ucl-privacy-placeholder.ucl-consent-gate {
+    justify-content: flex-start !important;
+    padding: 30px 20px !important; }
+  .ucl-consent-gate__link {
+    margin-top: 20px !important;
+    font-size: 0.9rem !important;
+    display: block !important; } }
+
+/* Override to ensure consent gate is never clipped. */
+.embedded-video .player .ucl-privacy-placeholder.ucl-consent-gate {
+  min-height: 100%;
+  height: auto !important; }
+
+/* Mobile fix — allow player to grow to show full consent gate. */
+@media (max-width: 767px) {
+  .embedded-video .player:has(.ucl-privacy-placeholder.ucl-consent-gate) {
+    height: auto !important;
+    padding-bottom: 0 !important;
+    min-height: 380px;
+    overflow: visible !important; } }
