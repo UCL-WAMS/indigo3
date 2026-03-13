@@ -6897,7 +6897,7 @@ QUOTES AND TESTIMONIALS PINK PROSPECTUS STYLE
   .embedded-video .player .ucl-privacy-placeholder.ucl-consent-gate {
     justify-content: flex-start !important;
     padding: 30px 20px !important; }
-  .ucl-consent-gate__link {
+  .embedded-video .player .ucl-privacy-placeholder.ucl-consent-gate .ucl-consent-gate__link {
     margin-top: 20px !important;
     font-size: 0.9rem !important;
     display: block !important; } }
